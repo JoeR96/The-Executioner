@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Joe\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Joe\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_TheExecutioner.82083740.00" t="ExcludeRecursive" />
+    <e p="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="ImportedAssets" t="Include">
+          <e p="PolygonSciFiCity" t="Include">
+            <e p="_Shaders" t="Include">
+              <e p="Polygon_Triplanar.shader" t="Include" />
+              <e p="Polygon_UVScroll.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="CharacterAiming.cs" t="Include" />
+          <e p="CharacterLocomotion.cs" t="Include" />
+          <e p="ThirdPersonController.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="TheExecutioner.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
