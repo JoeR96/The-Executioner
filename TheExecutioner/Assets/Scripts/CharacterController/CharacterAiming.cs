@@ -5,7 +5,6 @@ using UnityEngine.Animations.Rigging;
 public class CharacterAiming : MonoBehaviour
 {
     public float TurnSpeed = 15f;
-    public Rig RigLayer;
     public float AimDuration = 0.15f;
     private Camera _camera;
 
@@ -21,16 +20,7 @@ public class CharacterAiming : MonoBehaviour
 
     private void LateUpdate()
     {
-        // if (Input.GetKey(KeyCode.Mouse1))
-        // {
-        //     RigLayer.weight += Time.deltaTime / AimDuration;
-        // }
-        // else
-        // {
-        //     RigLayer.weight -= Time.deltaTime / AimDuration;
-        // }
-
-    
+        
     }
     // Update is called once per frame
     void FixedUpdate()

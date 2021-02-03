@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class RaycastWeapon : MonoBehaviour
 {
+    public ActiveWeapon.WeaponSlot weaponSlot;
     public bool IsFiring;
     public Transform RaycastOrigin;
     public ParticleSystem MuzzleFlash;
@@ -13,8 +14,13 @@ public class RaycastWeapon : MonoBehaviour
     public Transform RaycastDestination;
     private Ray ray;
     private RaycastHit hitInfo;
-    public AnimationClip WeaponAnimation;
-    
+    public string WeaponName;
+    public weaponRecoil recoil;
+
+    private void Start()
+    {
+        recoil = GetComponent<weaponRecoil>();
+    }
     public void StartFiring()
     {
         IsFiring = true;
@@ -31,6 +37,7 @@ public class RaycastWeapon : MonoBehaviour
             HitEffect.Emit(1);
 
             tracer.transform.position = hitInfo.point;
+            recoil.GenerateRecoil();
         }
     }
 
