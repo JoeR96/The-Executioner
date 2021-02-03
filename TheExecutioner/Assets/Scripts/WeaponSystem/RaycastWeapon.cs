@@ -13,7 +13,7 @@ public class RaycastWeapon : MonoBehaviour
     public Transform RaycastDestination;
     private Ray ray;
     private RaycastHit hitInfo;
-    
+    public AnimationClip WeaponAnimation;
     
     public void StartFiring()
     {

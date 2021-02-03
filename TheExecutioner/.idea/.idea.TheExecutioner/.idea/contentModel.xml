@@ -43,6 +43,7 @@
             <e p="ThirdPersonController.cs" t="Include" />
           </e>
           <e p="WeaponSystem" t="Include">
+            <e p="ActiveWeapon.cs" t="Include" />
             <e p="RaycastWeapon.cs" t="Include" />
           </e>
         </e>
@@ -91,6 +92,7 @@
             <e p="Readme.cs" t="Include" />
           </e>
         </e>
+        <e p="WeaponPickup.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />

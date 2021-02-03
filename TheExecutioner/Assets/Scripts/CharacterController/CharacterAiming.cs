@@ -21,24 +21,16 @@ public class CharacterAiming : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (Input.GetKey(KeyCode.Mouse1))
-        {
-            RigLayer.weight += Time.deltaTime / AimDuration;
-        }
-        else
-        {
-            RigLayer.weight -= Time.deltaTime / AimDuration;
-        }
+        // if (Input.GetKey(KeyCode.Mouse1))
+        // {
+        //     RigLayer.weight += Time.deltaTime / AimDuration;
+        // }
+        // else
+        // {
+        //     RigLayer.weight -= Time.deltaTime / AimDuration;
+        // }
 
-        if (Input.GetKey(KeyCode.Mouse0))
-        {
-            _weapon.StartFiring();
-        }
-
-        if (Input.GetKeyUp(KeyCode.Mouse0))
-        {
-            _weapon.StopFiring();
-        }
+    
     }
     // Update is called once per frame
     void FixedUpdate()
