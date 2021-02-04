@@ -9,7 +9,7 @@ public class Ragdoll : MonoBehaviour
     private void Start()
     {
         rigidbodies = GetComponentsInChildren<Rigidbody>();
-        DeactivateRagdoll();
+        ActivateRagDoll();
     }
     public void ActivateRagDoll()
     {

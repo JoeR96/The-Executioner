@@ -68,11 +68,8 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
         _healthSystem.TakeDamage(damage);
         if (_healthSystem.CurrentHealth < 0)
         {
-            Debug.Log("Dead");
             Die(direction);
             PlayDeathParticles();
-            _animator.SetBool("IsDead",true);
-            StartCoroutine(WaitForSecond(2.2f ,-1f));
         }
     }
     
@@ -88,7 +85,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     private void Die(Vector3 direction)
     {
         DeathState deathState = _aiAgent.StateMachine.GetState(StateId.DeathState) as DeathState;
-        deathState.Direction = direction;
+        if (deathState != null) deathState.Direction = direction;
         _aiAgent.StateMachine.ChangeState(StateId.DeathState);
     }
 
@@ -131,18 +128,13 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
             if (random == 1)
             {
                 _animator.SetBool("DiedByHeadshot", true);
-                StartCoroutine(WaitForSecond(2f, 0.9f));
+                
             }
         }
 
         PlayParticleAtLimb(name);
     }
-
-    private IEnumerator WaitForSecond(float time,float targetSize)
-    {
-        yield return new WaitForSeconds(time);
-        _navMeshAgent.baseOffset = targetSize;
-    }
+    
     private void PlayDeathParticles()
     {
         foreach (var particle in _particleSystem)

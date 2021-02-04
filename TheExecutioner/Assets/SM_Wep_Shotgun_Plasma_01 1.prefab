@@ -19179,7 +19179,7 @@ MonoBehaviour:
   CameraShake: {fileID: 0}
   RigController: {fileID: 0}
   RecoilPattern:
-  - {x: 10, y: 10}
+  - {x: 7, y: 10}
   - {x: 7, y: 10}
   - {x: 5, y: 10}
   - {x: 2, y: 10}

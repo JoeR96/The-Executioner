@@ -12,10 +12,12 @@ public class DeathState : IState
 
     public void Enter(AiAgent agent)
     {
-        agent.Ragdoll.ActivateRagDoll();
+        agent.navMeshAgent.enabled = false;
+        agent.Ragdoll.DeactivateRagdoll();
         Direction.y = 1;
         agent.Ragdoll.ApplyForce(Direction * agent.AgentConfig.DieForce);
         agent.Mesh.updateWhenOffscreen = true;
+        Debug.Log("Entered");
     }
 
     public void Update(AiAgent agent)
@@ -26,5 +28,11 @@ public class DeathState : IState
     public void Exit(AiAgent agent)
     {
         
+    }
+
+    private IEnumerator Die(AiAgent agent)
+    {
+        yield return new WaitForSeconds(1f);
+        Object.Destroy(agent.gameObject);
     }
 }
