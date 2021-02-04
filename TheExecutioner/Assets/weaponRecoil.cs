@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class weaponRecoil : MonoBehaviour
 {
-    [HideInInspector]public CinemachineFreeLook Playercamera;
+    [HideInInspector]public CharacterAiming CharacterAiming;
     [HideInInspector] public CinemachineImpulseSource CameraShake;
     [HideInInspector] public Animator RigController;
     public Vector2[] RecoilPattern;
@@ -44,8 +44,8 @@ public class weaponRecoil : MonoBehaviour
     {
         if (time > 0)
         {
-            Playercamera.m_YAxis.Value -= ((verticalRecoil/1000)* Time.deltaTime) / duration;
-            Playercamera.m_XAxis.Value -= ((horizontalRecoil/10)* Time.deltaTime) / duration;
+            CharacterAiming.yAxis.Value -= ((verticalRecoil/10)* Time.deltaTime) / duration;
+            CharacterAiming.xAxis.Value -= ((horizontalRecoil/10)* Time.deltaTime) / duration;
             time -= Time.deltaTime;
         }
     }

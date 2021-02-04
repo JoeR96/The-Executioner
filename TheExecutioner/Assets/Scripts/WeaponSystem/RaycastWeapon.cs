@@ -42,7 +42,7 @@ public class RaycastWeapon : MonoBehaviour
             Debug.Log(hitInfo.collider.name);
             if (hitInfo.collider.GetComponentInParent<ITakeDamage>() != null)
             {
-                hitInfo.collider.GetComponentInParent<ITakeDamage>().TakeDamage(100);
+                hitInfo.collider.GetComponentInParent<ITakeDamage>().TakeDamage(100, ray.direction);
                 if (hitInfo.collider.CompareTag("DestructibleLimb"))
                 {
                     hitInfo.collider.GetComponentInParent<IDestroyLimb>().DestroyLimb(name, hitInfo.point);   

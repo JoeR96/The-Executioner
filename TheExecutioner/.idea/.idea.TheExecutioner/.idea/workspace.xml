@@ -13,16 +13,23 @@
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NoiseSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NoiseSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SM_Wep_Pistol_01 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SM_Wep_Pistol_01 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimationControllers/NPC_Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationControllers/NPC_Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimationControllers/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationControllers/PlayerController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EffectExamples/Goop Effects/Materials/GoopSplatParticle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EffectExamples/Goop Effects/Materials/GoopSplatParticle.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SM_Wep_Shotgun_Plasma_01 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SM_Wep_Shotgun_Plasma_01 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/NewBehaviourScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/NewBehaviourScript.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/weaponRecoil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/weaponRecoil.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,17 +45,21 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Scripts/Enemy/BasicEnemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CrosshairTarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zombies/Lerper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../ExecutionerTestBench/Assets/Scripts/CageSpawner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/weaponRecoil.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LimbSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Documents/PizzaPrototype01062020/Library/PackageCache/com.unity.probuilder@4.2.3/Runtime/Core/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgentConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/WeaponPickup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZombieSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -61,16 +72,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterAiming.cs" />
         <option value="$PROJECT_DIR$/Assets/CrosshairTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/WeaponPickup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Singleton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ZombieSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LimbSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/weaponRecoil.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgentConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/weaponRecoil.cs" />
       </list>
     </option>
   </component>
@@ -97,7 +113,7 @@
       <updated>1612299579973</updated>
       <workItem from="1612299584298" duration="4117000" />
       <workItem from="1612361288597" duration="432000" />
-      <workItem from="1612373384636" duration="5330000" />
+      <workItem from="1612373384636" duration="11767000" />
     </task>
     <servers />
   </component>
@@ -120,6 +136,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1534" y="312" key="RiderGenerateDialog" timestamp="1612410867016">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1534" y="312" key="RiderGenerateDialog/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612410867016" />
     <state x="380" y="139" width="2166" height="1200" key="VCS.FileHistoryDialog" timestamp="1612326827980">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -128,5 +148,9 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="829" y="410" width="732" height="658" key="find.popup/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612384909971" />
+    <state x="1383" y="325" width="672" height="678" key="search.everywhere.popup" timestamp="1612408039049">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1383" y="325" width="672" height="678" key="search.everywhere.popup/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612408039049" />
   </component>
 </project>

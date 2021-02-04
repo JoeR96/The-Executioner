@@ -19175,7 +19175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b123f54f4c1c0e64bb01c56534c360bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Playercamera: {fileID: 0}
+  CharacterAiming: {fileID: 0}
   CameraShake: {fileID: 0}
   RigController: {fileID: 0}
   RecoilPattern:
@@ -19187,7 +19187,7 @@ MonoBehaviour:
   - {x: -2, y: 10}
   - {x: -5, y: 10}
   - {x: -2, y: 10}
-  - {x: 10, y: 10}
+  - {x: -5, y: 10}
   - {x: -7, y: 10}
   - {x: -5, y: 10}
   - {x: -2, y: 10}

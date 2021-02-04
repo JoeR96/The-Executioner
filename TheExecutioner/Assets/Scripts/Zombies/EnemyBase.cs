@@ -19,8 +19,8 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     private Dictionary<String,ParticleSystem> _destructibleLimbParticle = new Dictionary<string, ParticleSystem>();
     protected Animator _animator;
     protected HealthSystem _healthSystem;
-    
-    
+
+    private AiAgent _aiAgent;
     protected NavMeshAgent _navMeshAgent;
     private StateMachine _stateMachine;
  
@@ -28,7 +28,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
 
     private void Awake()
     {
-        
+        _aiAgent = GetComponent<AiAgent>();
         _healthSystem = new HealthSystem(_maxHealth,_maxHealth);
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
@@ -49,7 +49,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
         {
             Debug.Log(IsAgentOnNavMesh());
         }
-
+        
         // if (IsAgentOnNavMesh())
         // {
         //     ActivateZombie();
@@ -63,11 +63,13 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
         GetComponent<Ragdoll>().DeactivateRagdoll();
     }
     
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Vector3 direction)
     {
         _healthSystem.TakeDamage(damage);
         if (_healthSystem.CurrentHealth < 0)
         {
+            Debug.Log("Dead");
+            Die(direction);
             PlayDeathParticles();
             _animator.SetBool("IsDead",true);
             StartCoroutine(WaitForSecond(2.2f ,-1f));
@@ -81,7 +83,35 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
             _destructibleLimbs.Add(gameobject.transform.name,gameobject.transform);
         }
     }
-    
+
+
+    private void Die(Vector3 direction)
+    {
+        DeathState deathState = _aiAgent.StateMachine.GetState(StateId.DeathState) as DeathState;
+        deathState.Direction = direction;
+        _aiAgent.StateMachine.ChangeState(StateId.DeathState);
+    }
+
+    public LimbParticleLocation[] _LimbParticleLocations;
+    public ParticleSystem _bloodSplat;
+    private void PlayParticleAtLimb(string name)
+    {
+        var limb = Array.Find(_LimbParticleLocations, 
+            zombieLimb => zombieLimb.Name == name);
+        var t = limb.Location;
+        
+        _bloodSplat.transform.SetParent(t);
+        _bloodSplat.transform.SetPositionAndRotation(t.position,t.rotation);
+        _bloodSplat.Play();
+
+    }
+
+    [Serializable]
+    public struct LimbParticleLocation
+    {
+        public string Name;
+        public Transform Location;
+    }
     public void DestroyLimb(string name,Vector3 direction)
     {
  
@@ -104,6 +134,8 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
                 StartCoroutine(WaitForSecond(2f, 0.9f));
             }
         }
+
+        PlayParticleAtLimb(name);
     }
 
     private IEnumerator WaitForSecond(float time,float targetSize)
@@ -123,13 +155,11 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     //Scale the limb to size 0 so it is removed from the body and the animation still functions
     private IEnumerator ScaleComponent(Transform target, Vector3 targetSize, float speed)
     {
-        Debug.Log("Hi");
         var startSize = target.localScale;
         float timer = 0;
         float duration = _explosionScaleTime;
         while (timer < duration)
         {
-            Debug.Log("Hi");
             float percentage = Mathf.Min(timer / duration, 1);
             timer += Time.deltaTime;
             target.localScale = Vector3.Lerp(startSize, targetSize,percentage);
@@ -176,7 +206,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
 }
 public interface ITakeDamage
 { 
-    void TakeDamage(float damage);
+    void TakeDamage(float damage, Vector3 direction);
 }
 
 public interface IDestroyLimb

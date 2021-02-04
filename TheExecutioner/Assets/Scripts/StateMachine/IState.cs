@@ -4,7 +4,8 @@ using UnityEngine;
 
 public enum StateId
 {
-ChasePlayer
+ChasePlayer,
+DeathState
 }
 
 public interface IState

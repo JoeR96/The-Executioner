@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Ragdoll : MonoBehaviour
 {
-    private Animator _animator;
+    [SerializeField] private Animator _animator;
     private Rigidbody[] rigidbodies;
     private void Start()
     {
         rigidbodies = GetComponentsInChildren<Rigidbody>();
         DeactivateRagdoll();
-        _animator = GetComponent<Animator>();
     }
     public void ActivateRagDoll()
     {
@@ -30,5 +29,11 @@ public class Ragdoll : MonoBehaviour
         }
 
         _animator.enabled = false;
+    }
+
+    public void ApplyForce(Vector3 agentConfigDieForce)
+    {
+        var rigidbody = _animator.GetBoneTransform(HumanBodyBones.Hips).GetComponent<Rigidbody>();
+        rigidbody.AddForce(agentConfigDieForce,ForceMode.VelocityChange);
     }
 }

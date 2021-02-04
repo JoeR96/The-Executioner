@@ -19,7 +19,7 @@ public class ActiveWeapon : MonoBehaviour
         Grenade = 3
     }
 
-    public CinemachineFreeLook PlayerCamera;
+    public CharacterAiming CharacterAiming;
     public Transform CrossHairTarget;
     private RaycastWeapon[] _equippedWeapons = new RaycastWeapon[2];
     private int activeWeaponIndex;
@@ -103,7 +103,7 @@ public class ActiveWeapon : MonoBehaviour
         }
         weapon = newWeapon;
         weapon.RaycastDestination = CrossHairTarget;
-        weapon.recoil.Playercamera = PlayerCamera;
+        weapon.recoil.CharacterAiming = CharacterAiming;
         weapon.recoil.RigController = RigController;
         weapon.transform.SetParent(WeaponSlots[weaponSlotIndex],false);
         _equippedWeapons[weaponSlotIndex] = weapon;

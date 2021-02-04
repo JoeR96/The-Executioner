@@ -9,13 +9,20 @@ public class AiAgent : MonoBehaviour
     public StateId InitialState;
     public NavMeshAgent navMeshAgent;
     private Transform _playerTransform;
+    public AiAgentConfig AgentConfig;
+
+    public Ragdoll Ragdoll;
+    public SkinnedMeshRenderer Mesh;
+    
     
     // Start is called before the first frame update
     void Start()
     {
+        Ragdoll = GetComponent<Ragdoll>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         StateMachine = new StateMachine(this);
         StateMachine.SetState(new ChaseState());
+        StateMachine.SetState(new DeathState());
         StateMachine.ChangeState(InitialState);
     }
 
