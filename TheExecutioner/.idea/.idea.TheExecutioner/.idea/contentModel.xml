@@ -35,17 +35,45 @@
               <e p="Polygon_UVScroll.shader" t="Include" />
             </e>
           </e>
+          <e p="PolygonZombies" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="POLYGON_Zombies.shader" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AudioManager.cs" t="Include" />
           <e p="CharacterController" t="Include">
             <e p="CharacterAiming.cs" t="Include" />
             <e p="CharacterLocomotion.cs" t="Include" />
             <e p="ThirdPersonController.cs" t="Include" />
           </e>
+          <e p="GameManager.cs" t="Include" />
+          <e p="HealthSystem.cs" t="Include" />
+          <e p="LimbSpawner.cs" t="Include" />
+          <e p="Singleton.cs" t="Include" />
+          <e p="StateMachine" t="Include">
+            <e p="AiAgent.cs" t="Include" />
+            <e p="IState.cs" t="Include" />
+            <e p="StateMachine.cs" t="Include" />
+            <e p="States" t="Include">
+              <e p="AttackState.cs" t="Include" />
+              <e p="Chase.cs" t="Include" />
+              <e p="ChaseState.cs" t="Include" />
+              <e p="IdleState.cs" t="Include" />
+              <e p="NewBehaviourScript.cs" t="Include" />
+            </e>
+          </e>
           <e p="WeaponSystem" t="Include">
             <e p="ActiveWeapon.cs" t="Include" />
             <e p="RaycastWeapon.cs" t="Include" />
           </e>
+          <e p="Zombies" t="Include">
+            <e p="EnemyBase.cs" t="Include" />
+            <e p="Lerper.cs" t="Include" />
+            <e p="Ragdoll.cs" t="Include" />
+          </e>
+          <e p="ZombieSpawner.cs" t="Include" />
         </e>
         <e p="Shared" t="Include">
           <e p="Ramps" t="Include">

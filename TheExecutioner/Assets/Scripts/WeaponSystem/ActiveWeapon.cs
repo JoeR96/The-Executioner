@@ -53,7 +53,7 @@ public class ActiveWeapon : MonoBehaviour
         if (weapon)
         {
             
-            if (Input.GetKey(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 weapon.StartFiring();
             }
@@ -104,6 +104,7 @@ public class ActiveWeapon : MonoBehaviour
         weapon = newWeapon;
         weapon.RaycastDestination = CrossHairTarget;
         weapon.recoil.Playercamera = PlayerCamera;
+        weapon.recoil.RigController = RigController;
         weapon.transform.SetParent(WeaponSlots[weaponSlotIndex],false);
         _equippedWeapons[weaponSlotIndex] = weapon;
         

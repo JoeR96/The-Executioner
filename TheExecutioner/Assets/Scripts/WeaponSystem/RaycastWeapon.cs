@@ -23,6 +23,7 @@ public class RaycastWeapon : MonoBehaviour
     }
     public void StartFiring()
     {
+        recoil.Reset();
         IsFiring = true;
         MuzzleFlash.Emit(1);
         ray.origin = RaycastOrigin.position;
@@ -35,9 +36,19 @@ public class RaycastWeapon : MonoBehaviour
             HitEffect.transform.position = hitInfo.point;
             HitEffect.transform.forward = hitInfo.normal;
             HitEffect.Emit(1);
-
+            string name = hitInfo.collider.name;
             tracer.transform.position = hitInfo.point;
-            recoil.GenerateRecoil();
+            recoil.GenerateRecoil(WeaponName);
+            Debug.Log(hitInfo.collider.name);
+            if (hitInfo.collider.GetComponentInParent<ITakeDamage>() != null)
+            {
+                hitInfo.collider.GetComponentInParent<ITakeDamage>().TakeDamage(100);
+                if (hitInfo.collider.CompareTag("DestructibleLimb"))
+                {
+                    hitInfo.collider.GetComponentInParent<IDestroyLimb>().DestroyLimb(name, hitInfo.point);   
+                }
+            }
+           
         }
     }
 

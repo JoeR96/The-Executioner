@@ -19162,7 +19162,7 @@ MonoBehaviour:
     type: 3}
   RaycastDestination: {fileID: 0}
   WeaponName: shotgun
-  recoil: {fileID: 0}
+  recoil: {fileID: -3799850126085536459}
 --- !u!114 &-3799850126085536459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19177,8 +19177,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Playercamera: {fileID: 0}
   CameraShake: {fileID: 0}
-  verticalRecoil: 10
-  horizontalRecoil: 10
+  RigController: {fileID: 0}
+  RecoilPattern:
+  - {x: 10, y: 10}
+  - {x: 7, y: 10}
+  - {x: 5, y: 10}
+  - {x: 2, y: 10}
+  - {x: 1, y: 10}
+  - {x: -2, y: 10}
+  - {x: -5, y: 10}
+  - {x: -2, y: 10}
+  - {x: 10, y: 10}
+  - {x: -7, y: 10}
+  - {x: -5, y: 10}
+  - {x: -2, y: 10}
+  - {x: -1, y: 10}
+  - {x: 2, y: 10}
+  - {x: 5, y: 10}
   duration: 0.1
 --- !u!114 &-3176177355629625875
 MonoBehaviour:
