@@ -11,7 +11,8 @@ public class ZombieSpawner : MonoBehaviour
     public GameObject SpawnZombie(Transform location)
     {
         
-        var t = Instantiate(_zombiePrefab, location.position, Quaternion.identity);
+        var t = Instantiate(_zombiePrefab, navmeshPos.position, Quaternion.identity);
+        t.transform.position = location.position;
         return t;
     }
     

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ZombieOverflowEvent : MonoBehaviour
 {
     [SerializeField] private Transform[] _overflowSpawns;
-
+    [SerializeField] private GameObject[] _jailSpotsLights;
     [SerializeField] private Transform[] _jailCells;
     // Start is called before the first frame update
 
@@ -32,6 +32,11 @@ public class ZombieOverflowEvent : MonoBehaviour
         {
             cell.GetComponent<Animator>().SetBool("JailBreakActive", true);
             
+        }
+
+        foreach (var light  in _jailSpotsLights)
+        {
+            light.GetComponent<Animator>().SetBool("JailBreakActive", true);
         }
     }
     public void PlayOverFlowEvent()

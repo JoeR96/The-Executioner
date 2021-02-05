@@ -43,6 +43,7 @@
           </e>
         </e>
         <e p="JailBreakEvent.cs" t="Include" />
+        <e p="MovingZombieDumper.cs" t="Include" />
         <e p="PolygonApocalypse" t="Include">
           <e p="Shader" t="Include">
             <e p="Polygon_Triplanar.shader" t="Include" />

@@ -28,7 +28,7 @@ public class RaycastWeapon : MonoBehaviour
         MuzzleFlash.Emit(1);
         ray.origin = RaycastOrigin.position;
         ray.direction = RaycastDestination.position - RaycastOrigin.position;
-
+        AudioManager.Instance.PlaySound("ShotgunFire");
         var tracer = Instantiate(TracerEffect, ray.origin,quaternion.identity);
         tracer.AddPosition(ray.origin);
         if(Physics.Raycast(ray,out hitInfo))

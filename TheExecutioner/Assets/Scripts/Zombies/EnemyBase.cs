@@ -62,7 +62,6 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
 
     public void ActivateZombie( )
     {
-        Debug.Log("HERE");
         _navMeshAgent.enabled = true;
         GetComponent<Ragdoll>().DeactivateRagdoll();
         
@@ -97,7 +96,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
 
     private IEnumerator Die()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         Destroy(gameObject);
     }
     
