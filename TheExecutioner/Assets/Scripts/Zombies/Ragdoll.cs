@@ -1,27 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Ragdoll : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
-    private Rigidbody[] rigidbodies;
+    public Rigidbody[] rigidbodies;
     private void Start()
     {
         rigidbodies = GetComponentsInChildren<Rigidbody>();
+        _animator = GetComponent<Animator>();
         ActivateRagDoll();
     }
-    public void ActivateRagDoll()
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.F2))
+        {
+            DeactivateRagdoll();
+            
+        }if (Input.GetKey(KeyCode.F3))
+        {
+            ActivateRagDoll();
+        }
+    }
+    public void DeactivateRagdoll()
     {
         foreach (Rigidbody rb in rigidbodies)
         {
             rb.isKinematic = true;
         }
-
+    
         _animator.enabled = true;
     }
 
-    public void DeactivateRagdoll()
+    public void ActivateRagDoll()
     {
         foreach (Rigidbody rb in rigidbodies)
         {

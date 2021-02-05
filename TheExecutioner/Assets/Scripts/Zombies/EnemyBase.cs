@@ -39,28 +39,33 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     {
         PopulateLimbDictionary();
     }
+    bool isOnMesh;
     protected void Update()
     {
         if (Input.GetKey(KeyCode.F1))
         {
             _navMeshAgent.enabled = true;
         }
-        if (Input.GetKey(KeyCode.F5))
+        if (Input.GetKeyDown(KeyCode.F5))
         {
             Debug.Log(IsAgentOnNavMesh());
         }
+
         
-        // if (IsAgentOnNavMesh())
-        // {
-        //     ActivateZombie();
-        // }
+        if (IsAgentOnNavMesh() && isOnMesh == false)
+        {
+            isOnMesh = true;
+              ActivateZombie();
+          }
         
     }
 
     public void ActivateZombie( )
     {
-        GetComponent<EnemyBase>().ActivateEnemy();
+        Debug.Log("HERE");
+        _navMeshAgent.enabled = true;
         GetComponent<Ragdoll>().DeactivateRagdoll();
+        
     }
     
     public void TakeDamage(float damage, Vector3 direction)
@@ -87,8 +92,15 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
         DeathState deathState = _aiAgent.StateMachine.GetState(StateId.DeathState) as DeathState;
         if (deathState != null) deathState.Direction = direction;
         _aiAgent.StateMachine.ChangeState(StateId.DeathState);
+        StartCoroutine(Die());
     }
 
+    private IEnumerator Die()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
+    }
+    
     public LimbParticleLocation[] _LimbParticleLocations;
     public ParticleSystem _bloodSplat;
     private void PlayParticleAtLimb(string name)
@@ -169,16 +181,11 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
         StartCoroutine(ScaleComponent(root, _explosionScaleSize, 1f));
     }
 
-    public void ActivateEnemy()
-    {
-        _animator.enabled = true;
-        _navMeshAgent.enabled = true;
-    }
-
+  
     public bool IsAgentOnNavMesh()
     {
         float onMeshThreshold = 3;
-        Vector3 agentPosition = transform.position;
+        Vector3 agentPosition = transform.position; 
         NavMeshHit hit;
 
         // Check for nearest point on navmesh to agent, within onMeshThreshold

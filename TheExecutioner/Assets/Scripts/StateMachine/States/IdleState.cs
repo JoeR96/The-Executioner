@@ -7,21 +7,32 @@ public class IdleState : IState
 {
     public StateId GetId()
     {
-        throw new System.NotImplementedException();
+        return StateId.Idle;
     }
 
     public void Enter(AiAgent agent)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void Update(AiAgent agent)
     {
-        throw new System.NotImplementedException();
+        Vector3 playerDirection = agent.Player.position - agent.transform.position;
+        if(playerDirection.magnitude > agent.AgentConfig.maxsightDistance)
+        {return;}
+
+        Vector3 agentDirection = agent.transform.forward;
+        
+        playerDirection.Normalize();
+        float result = Vector3.Dot(playerDirection, agentDirection);
+        if (result > 0.0f)
+        {
+            agent.StateMachine.ChangeState(StateId.ChasePlayer);
+        }
     }
 
     public void Exit(AiAgent agent)
     {
-        throw new System.NotImplementedException();
+        
     }
 }

@@ -2,13 +2,29 @@
 using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ZombieSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _zombiePrefab;
-
-    public void SpawnZombie(Transform location)
+    [SerializeField] private Transform navmeshPos;
+    public GameObject SpawnZombie(Transform location)
     {
-        Instantiate(_zombiePrefab, location.position, Quaternion.identity);
+        
+        var t = Instantiate(_zombiePrefab, location.position, Quaternion.identity);
+        return t;
+    }
+    
+    public void SpawnZombiesAtLocations(Transform[] location)
+    {
+        
+        for (int i = 0; i < location.Length; i++)
+        {
+            var t = SpawnZombie(navmeshPos);
+             t.transform.position = location[i].position;
+             t.GetComponent<NavMeshAgent>().enabled = false;
+             t.GetComponent<Ragdoll>().ActivateRagDoll();
+        }
+        
     }
 }

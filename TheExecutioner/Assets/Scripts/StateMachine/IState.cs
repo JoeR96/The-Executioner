@@ -5,10 +5,11 @@ using UnityEngine;
 public enum StateId
 {
 ChasePlayer,
-DeathState
+DeathState,
+Idle
 }
 
-public interface IState
+public interface IState 
 {
     StateId GetId();
     void Enter(AiAgent agent);
