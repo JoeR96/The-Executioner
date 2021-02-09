@@ -10,11 +10,11 @@ public class Lerper : EnemyBase
     [SerializeField] protected float _jumpSpeed;
     private bool _isJumping;
 
-    private void Update()
-    {
-        base.Update();
-        SetState();
-    }
+    // private void Update()
+    // {
+    //     base.Update();
+    //     SetState();
+    // }
     // Update is called once per frame
     protected void SetState()
     {
