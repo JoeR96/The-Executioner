@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,14 +11,15 @@ public class AiAgent : MonoBehaviour
     public NavMeshAgent navMeshAgent;
     public Transform Player;
     public AiAgentConfig AgentConfig;
-
+    public Animator Animator;
     public Ragdoll Ragdoll;
     public SkinnedMeshRenderer Mesh;
     
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        Animator = GetComponent<Animator>();
         Player = GameObject.FindWithTag("Player").transform;
         Ragdoll = GetComponent<Ragdoll>();
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -25,6 +27,8 @@ public class AiAgent : MonoBehaviour
         StateMachine.RegisterState(new ChaseState());
         StateMachine.RegisterState(new DeathState());
         StateMachine.RegisterState(new IdleState());
+        StateMachine.RegisterState(new AttackState());
+        StateMachine.RegisterState(new TargetState());
         StateMachine.ChangeState(InitialState);
     }
 
@@ -33,8 +37,5 @@ public class AiAgent : MonoBehaviour
     {
         StateMachine.Update();
     }
-    
-    void OnAnimatorMove()
-    {
-    }
+
 }

@@ -6,7 +6,9 @@ public enum StateId
 {
 ChasePlayer,
 DeathState,
-Idle
+Idle,
+Attack,
+Target
 }
 
 public interface IState 

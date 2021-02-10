@@ -5,8 +5,6 @@ using UnityEngine.AI;
 
 public class ChaseState : IState
 {
-    
-
     private float _timer = 00f;
     
     public StateId GetId()

@@ -20,7 +20,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     protected Animator _animator;
     protected HealthSystem _healthSystem;
 
-    private AiAgent _aiAgent;
+    protected AiAgent _aiAgent;
     protected NavMeshAgent _navMeshAgent;
     private StateMachine _stateMachine;
  
@@ -39,6 +39,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     {
         PopulateLimbDictionary();
     }
+    
     bool isOnMesh;
     protected void Update()
     {
@@ -86,7 +87,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     }
 
 
-    private void Die(Vector3 direction)
+    protected virtual void Die(Vector3 direction)
     {
         DeathState deathState = _aiAgent.StateMachine.GetState(StateId.DeathState) as DeathState;
         if (deathState != null) deathState.Direction = direction;

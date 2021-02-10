@@ -7,7 +7,7 @@ public class Ragdoll : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
     public Rigidbody[] rigidbodies;
-    private void Start()
+    private void Awake()
     {
         rigidbodies = GetComponentsInChildren<Rigidbody>();
         _animator = GetComponent<Animator>();

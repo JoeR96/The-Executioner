@@ -4,26 +4,39 @@ using UnityEngine;
 
 public class MovingZombieDumper : MonoBehaviour
 {
-    public Transform PlayerTransform;
-    public Transform DumperSpawnPoint;
+    [SerializeField] private float _spawnRate;
+    [SerializeField] private Transform _playerTransform;
+    [SerializeField] private Transform _dumperSpawnPoint;
+    private bool _isActive;
     
     // Start is called before the first frame update
     void Start()
-    {
-        InvokeRepeating("SpawnZombie",2f,3.5f);
+    { 
+        _isActive = false;
+        InvokeRepeating("SpawnZombie",2f,_spawnRate);
     }
 
     // Update is called once per frame
     void Update()
     {
-        MoveTowardsTarget();
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            _isActive = !_isActive;
+            Debug.Log(_isActive);
+        }
+
+        if (_isActive)
+        {
+            MoveTowardsTarget();
+        }
+                
     }
 
     private void MoveTowardsTarget() {
         //the speed, in units per second, we want to move towards the target
         float speed = 5;
         //move towards the center of the world (or where ever you like)
-        Vector3 targetPosition = PlayerTransform.position;
+        Vector3 targetPosition = _playerTransform.position;
 
         Vector3 currentPosition = this.transform.position;
         //first, check to see if we're close enough to the target
@@ -40,9 +53,9 @@ public class MovingZombieDumper : MonoBehaviour
                 Space.World);
         }
     }
-
+    
     private void SpawnZombie()
     {
-        GameManager.instance.ZombieSpawner.SpawnZombie(DumperSpawnPoint);
+        GameManager.instance.ZombieSpawner.SpawnZombie(_dumperSpawnPoint);
     }
 }
