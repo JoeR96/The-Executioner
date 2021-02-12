@@ -46,6 +46,7 @@
             <e p="Polygon_Triplanar.shader" t="Include" />
           </e>
         </e>
+        <e p="RotatingPlatform.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AnimatorMove.cs" t="Include" />
           <e p="AudioManager.cs" t="Include" />
@@ -65,6 +66,7 @@
           <e p="LimbSpawner.cs" t="Include" />
           <e p="MovingZombieDumper.cs" t="Include" />
           <e p="RandomEventManager.cs" t="Include" />
+          <e p="RotationManager.cs" t="Include" />
           <e p="Singleton.cs" t="Include" />
           <e p="StateMachine" t="Include">
             <e p="AiAgent.cs" t="Include" />
@@ -130,6 +132,7 @@
             </e>
           </e>
         </e>
+        <e p="Timer.cs" t="Include" />
         <e p="TutorialInfo" t="Include">
           <e p="Scripts" t="Include">
             <e p="Editor" t="Include">
