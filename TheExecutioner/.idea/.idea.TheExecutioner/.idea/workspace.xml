@@ -11,11 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,8 +102,8 @@
         <option value="$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Timer.cs" />
         <option value="$PROJECT_DIR$/Assets/Timer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RotationManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/RotatingPlatform.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/RotatingPlatform.cs" />
       </list>
     </option>
   </component>
@@ -140,7 +137,7 @@
       <workItem from="1612888143846" duration="3945000" />
       <workItem from="1612911450610" duration="6217000" />
       <workItem from="1612926671776" duration="1841000" />
-      <workItem from="1613087753111" duration="8493000" />
+      <workItem from="1613087753111" duration="10382000" />
     </task>
     <servers />
   </component>
