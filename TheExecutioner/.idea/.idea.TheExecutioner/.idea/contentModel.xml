@@ -66,6 +66,7 @@
           <e p="LimbSpawner.cs" t="Include" />
           <e p="MovingZombieDumper.cs" t="Include" />
           <e p="RandomEventManager.cs" t="Include" />
+          <e p="RandomRoomGenerator.cs" t="Include" />
           <e p="RotationManager.cs" t="Include" />
           <e p="Singleton.cs" t="Include" />
           <e p="StateMachine" t="Include">

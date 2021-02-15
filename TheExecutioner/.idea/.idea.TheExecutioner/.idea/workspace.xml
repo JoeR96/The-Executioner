@@ -11,8 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +30,7 @@
     <setting file="file://$PROJECT_DIR$/../../ExecutionerTestBench/Assets/Scripts/CageSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZombieSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController/ThirdPersonController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RandomRoomGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Scripts/Enemy/BasicEnemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" root0="FORCE_HIGHLIGHTING" />
@@ -102,8 +106,9 @@
         <option value="$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Timer.cs" />
         <option value="$PROJECT_DIR$/Assets/Timer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RotationManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
         <option value="$PROJECT_DIR$/Assets/RotatingPlatform.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RandomRoomGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
       </list>
     </option>
   </component>
@@ -138,6 +143,7 @@
       <workItem from="1612911450610" duration="6217000" />
       <workItem from="1612926671776" duration="1841000" />
       <workItem from="1613087753111" duration="10382000" />
+      <workItem from="1613342676883" duration="2704000" />
     </task>
     <servers />
   </component>
@@ -168,10 +174,11 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1221" y="344" key="SettingsEditor/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612467806390" />
-    <state x="380" y="139" width="2166" height="1200" key="VCS.FileHistoryDialog" timestamp="1612889884885">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="2940" y="139" width="2166" height="1200" key="VCS.FileHistoryDialog" timestamp="1613349904905">
+      <screen x="2560" y="0" width="3440" height="1400" />
     </state>
     <state x="380" y="139" width="2166" height="1200" key="VCS.FileHistoryDialog/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612889884885" />
+    <state x="2940" y="139" width="2166" height="1200" key="VCS.FileHistoryDialog/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613349904905" />
     <state x="1509" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612486050145">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
