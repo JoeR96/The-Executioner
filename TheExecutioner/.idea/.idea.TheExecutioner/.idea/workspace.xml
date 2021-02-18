@@ -13,9 +13,12 @@
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Material Palette.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Material Palette.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +32,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../ExecutionerTestBench/Assets/Scripts/CageSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZombieSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shared/Scripts/SimpleCharacterMotor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController/ThirdPersonController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RandomRoomGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Scripts/Enemy/BasicEnemy.cs" root0="SKIP_HIGHLIGHTING" />
@@ -41,13 +45,16 @@
     <setting file="file://$PROJECT_DIR$/Assets/EffectExamples/Misc Effects/Scripts/SpawnEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/States/AttackState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/States/Chase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgentConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@8.2.0/Editor/QuaternionPropertyDrawer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../ThirdYear/AsteroidsWeekNine/Assets/NewHealthScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Timer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RotationManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlatformState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zombies/Lerper.cs" root0="FORCE_HIGHLIGHTING" />
@@ -57,8 +64,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/RotatingPlatform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovingZombieDumper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ObstacleSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Scripts/UI/ColourLerp.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Scripts/Enemy/SpacePirates/SpacePirateBoss.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/TileMapPractice (1).cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TargetState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Timer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -80,7 +89,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LimbSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/weaponRecoil.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/StateMachine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgentConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/IdleState.cs" />
@@ -89,7 +97,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ZombieSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/MovingZombieDumper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Lerper.cs" />
@@ -101,13 +108,17 @@
         <option value="$PROJECT_DIR$/Assets/TargetState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyTargetZombie.cs" />
         <option value="$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Timer.cs" />
         <option value="$PROJECT_DIR$/Assets/Timer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RotationManager.cs" />
         <option value="$PROJECT_DIR$/Assets/RotatingPlatform.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RandomRoomGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlatformState.cs" />
+        <option value="$PROJECT_DIR$/Assets/ObstacleSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
       </list>
     </option>
@@ -119,6 +130,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -143,7 +155,8 @@
       <workItem from="1612911450610" duration="6217000" />
       <workItem from="1612926671776" duration="1841000" />
       <workItem from="1613087753111" duration="10382000" />
-      <workItem from="1613342676883" duration="2704000" />
+      <workItem from="1613342676883" duration="17478000" />
+      <workItem from="1613508811588" duration="28789000" />
     </task>
     <servers />
   </component>
@@ -166,6 +179,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="3695" y="361" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613597998511">
+      <screen x="2560" y="0" width="3440" height="1400" />
+    </state>
+    <state x="3695" y="361" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613597998511" />
     <state x="1534" y="312" key="RiderGenerateDialog" timestamp="1612915030298">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -174,23 +191,38 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1221" y="344" key="SettingsEditor/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612467806390" />
-    <state x="2940" y="139" width="2166" height="1200" key="VCS.FileHistoryDialog" timestamp="1613349904905">
+    <state x="2940" y="139" width="2166" height="1200" key="VCS.FileHistoryDialog" timestamp="1613594990136">
       <screen x="2560" y="0" width="3440" height="1400" />
     </state>
     <state x="380" y="139" width="2166" height="1200" key="VCS.FileHistoryDialog/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612889884885" />
-    <state x="2940" y="139" width="2166" height="1200" key="VCS.FileHistoryDialog/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613349904905" />
-    <state x="1509" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612486050145">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="2940" y="139" width="2166" height="1200" key="VCS.FileHistoryDialog/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613594990136" />
+    <state x="4069" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613541773553">
+      <screen x="2560" y="0" width="3440" height="1400" />
     </state>
     <state x="1509" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612486050145" />
-    <state x="760" y="410" width="732" height="658" key="find.popup" timestamp="1613092488528">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="1123" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.0.3440.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613498351914" />
+    <state x="4069" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613541773553" />
+    <state x="3699" y="0" width="1160" height="1407" key="dock-window-1" timestamp="1613605082338">
+      <screen x="2560" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1575" y="0" width="992" height="1380" key="dock-window-1/0.0.2560.1400@0.0.2560.1400" timestamp="1613538868158" />
+    <state x="311" y="14" width="992" height="1380" key="dock-window-1/2560.0.3440.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613572976756" />
+    <state x="3699" y="0" width="1160" height="1407" key="dock-window-1/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613605082338" />
+    <state x="3320" y="410" width="732" height="852" key="find.popup" timestamp="1613599346390">
+      <screen x="2560" y="0" width="3440" height="1400" />
     </state>
     <state x="-1943" y="410" width="716" height="658" key="find.popup/-2560.0.2560.1400/0.0.3440.1400@-2560.0.2560.1400" timestamp="1612478958283" />
     <state x="760" y="410" width="732" height="658" key="find.popup/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1613092488528" />
-    <state x="1383" y="325" width="672" height="678" key="search.everywhere.popup" timestamp="1612408039049">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="566" y="410" width="716" height="852" key="find.popup/2560.0.3440.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613506494236" />
+    <state x="3320" y="410" width="732" height="852" key="find.popup/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613599346390" />
+    <state x="3935" y="334" key="run.anything.popup" timestamp="1613507407221">
+      <screen x="2560" y="0" width="3440" height="1400" />
+    </state>
+    <state x="3935" y="334" key="run.anything.popup/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613507407221" />
+    <state x="3943" y="325" width="672" height="678" key="search.everywhere.popup" timestamp="1613604787761">
+      <screen x="2560" y="0" width="3440" height="1400" />
     </state>
     <state x="1383" y="325" width="672" height="678" key="search.everywhere.popup/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612408039049" />
+    <state x="3943" y="325" width="672" height="678" key="search.everywhere.popup/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613604787761" />
   </component>
 </project>

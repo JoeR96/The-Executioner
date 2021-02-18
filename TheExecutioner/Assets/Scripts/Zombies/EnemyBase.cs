@@ -15,6 +15,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     [SerializeField] protected Vector3 _explosionScaleSize;
     [SerializeField] protected float _explosionScaleTime;
     [SerializeField] protected float _maxHealth;
+    
     private Dictionary<string,Transform> _destructibleLimbs = new Dictionary<string, Transform>();
     private Dictionary<String,ParticleSystem> _destructibleLimbParticle = new Dictionary<string, ParticleSystem>();
     protected Animator _animator;
@@ -123,11 +124,10 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     }
     public void DestroyLimb(string name,Vector3 direction)
     {
- 
-             Debug.Log(name);
         var transformTarget = _destructibleLimbs[name];
         Debug.Log(transformTarget);
-        StartCoroutine(ScaleComponent(transformTarget, new Vector3(0,0,0), 0.25f));
+        StartCoroutine(ScaleComponent(transformTarget, 
+            new Vector3(0,0,0), 0.25f));
         var t = _destructibleLimbs[name];
         var limb = GameManager.instance.LimbSpawner.ReturnLimb(name);
         limb.transform.position = _destructibleLimbs[name].transform.position;

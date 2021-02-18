@@ -28,17 +28,28 @@ public class ZombieOverflowEvent : MonoBehaviour
     public void PlayJailBreakEvent()
     {
         GameManager.instance.ZombieSpawner.SpawnZombiesAtLocations(_jailCells);
+        ActivateJailCells();
+        ACtivateLights();
+
+    }
+
+    private void ActivateJailCells()
+    {
         foreach (var cell in _jailCells)
         {
             cell.GetComponent<Animator>().SetBool("JailBreakActive", true);
-            
         }
+    }
 
+    private void ACtivateLights()
+    {
         foreach (var light  in _jailSpotsLights)
         {
             light.GetComponent<Animator>().SetBool("JailBreakActive", true);
         }
     }
+    
+
     public void PlayOverFlowEvent()
     {
         Overflow();
