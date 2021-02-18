@@ -37,17 +37,6 @@ public class ObstacleSpawner : MonoBehaviour
 
     private float _distanceBetweenPoints = 2f;
     
-    private void SetPosition(int x, int z)
-    {
-        var tiles = environmentManager.tileArray;
-        var position = tiles[x,z].transform.position;
-        var offsetPosition =  new Vector3(position.x, 45f, position.z);
-         _raycastHolder.transform.position = offsetPosition;
-    }
-
-
-    
-    
     private IEnumerator RaisePlatform(int pathLength)
     {
         for (int i = 0; i < pathLength; i++)
@@ -70,7 +59,7 @@ public class ObstacleSpawner : MonoBehaviour
             var x = coords.Item1;
             var z = coords.Item2;
             
-            SetPosition(x,z);
+           // SetPosition(x,z);
             RaisePlatforms(platform.transform);
             platformState.SetState();
             yield return new WaitForSeconds(0.125f);

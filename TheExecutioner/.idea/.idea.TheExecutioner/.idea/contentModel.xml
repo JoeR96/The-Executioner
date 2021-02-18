@@ -8,6 +8,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="CellularAutomata.cs" t="Include" />
+        <e p="EdgeSpawnPlatform.cs" t="Include" />
         <e p="EffectExamples" t="Include">
           <e p="Magic Effects" t="Include">
             <e p="Shaders" t="Include">
@@ -68,6 +69,7 @@
             <e p="Polygon_Triplanar.shader" t="Include" />
           </e>
         </e>
+        <e p="RoomManager.cs" t="Include" />
         <e p="RotatingPlatform.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AnimatorMove.cs" t="Include" />
@@ -79,6 +81,7 @@
           </e>
           <e p="CrosshairTarget.cs" t="Include" />
           <e p="EnvironmentManager.cs" t="Include" />
+          <e p="EnvironmentSpawner.cs" t="Include" />
           <e p="Events" t="Include">
             <e p="ZombieOverflowEvent.cs" t="Include" />
           </e>
@@ -104,6 +107,7 @@
               <e p="IdleState.cs" t="Include" />
             </e>
           </e>
+          <e p="WallManager.cs" t="Include" />
           <e p="WeaponPickup.cs" t="Include" />
           <e p="weaponRecoil.cs" t="Include" />
           <e p="WeaponSystem" t="Include">
