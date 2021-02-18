@@ -20,7 +20,6 @@ public class ObstacleSpawner : MonoBehaviour
         //StartCoroutine(RaisePlatform(pathLength));
     }
 
-
     private GameObject FireRay()
     {
         RaycastHit hit;

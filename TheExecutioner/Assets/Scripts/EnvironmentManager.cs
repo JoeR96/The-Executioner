@@ -3,11 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 
 public class EnvironmentManager : MonoBehaviour
 {
+    public NavMeshSurface[] surfaces;
+    public Transform[] objectsToRotate;
+    
     public Transform SpawnPoint;
     public int gridX;
     public int gridZ;
@@ -40,6 +44,10 @@ public class EnvironmentManager : MonoBehaviour
         {
             SpawnWall();
         }
+        for (int i = 0; i < surfaces.Length; i++) 
+        {
+            surfaces [i].BuildNavMesh ();    
+        }    
     }
 
     private void Update()

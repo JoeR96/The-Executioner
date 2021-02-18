@@ -29,6 +29,24 @@
           </e>
         </e>
         <e p="EnemyTargetZombie.cs" t="Include" />
+        <e p="ImportAnimations" t="Include">
+          <e p="NavMeshComponents" t="Include">
+            <e p="Editor" t="Include">
+              <e p="NavMeshAssetManager.cs" t="Include" />
+              <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
+              <e p="NavMeshLinkEditor.cs" t="Include" />
+              <e p="NavMeshModifierEditor.cs" t="Include" />
+              <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
+              <e p="NavMeshSurfaceEditor.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="NavMeshLink.cs" t="Include" />
+              <e p="NavMeshModifier.cs" t="Include" />
+              <e p="NavMeshModifierVolume.cs" t="Include" />
+              <e p="NavMeshSurface.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="ImportedAssets" t="Include">
           <e p="PolygonSciFiCity" t="Include">
             <e p="_Shaders" t="Include">
@@ -42,6 +60,7 @@
             </e>
           </e>
         </e>
+        <e p="NavigationBaker.cs" t="Include" />
         <e p="ObstacleSpawner.cs" t="Include" />
         <e p="PlatformState.cs" t="Include" />
         <e p="PolygonApocalypse" t="Include">
@@ -146,6 +165,8 @@
           </e>
         </e>
       </e>
+      <e p="NavMeshComponents.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsEditor.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />

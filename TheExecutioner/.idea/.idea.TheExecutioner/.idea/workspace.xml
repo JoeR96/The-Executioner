@@ -13,12 +13,10 @@
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Material Palette.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Material Palette.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ObstacleSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ObstacleSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +72,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LimbSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Documents/PizzaPrototype01062020/Library/PackageCache/com.unity.probuilder@4.2.3/Runtime/Core/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/NavigationBaker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterLocomotion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -118,8 +117,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/PlatformState.cs" />
-        <option value="$PROJECT_DIR$/Assets/ObstacleSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/NavigationBaker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/ObstacleSpawner.cs" />
       </list>
     </option>
   </component>
@@ -157,6 +157,7 @@
       <workItem from="1613087753111" duration="10382000" />
       <workItem from="1613342676883" duration="17478000" />
       <workItem from="1613508811588" duration="28789000" />
+      <workItem from="1613655278413" duration="1485000" />
     </task>
     <servers />
   </component>
@@ -187,10 +188,11 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1534" y="312" key="RiderGenerateDialog/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612915030298" />
-    <state x="1221" y="344" key="SettingsEditor" timestamp="1612467806390">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="3781" y="344" key="SettingsEditor" timestamp="1613655712596">
+      <screen x="2560" y="0" width="3440" height="1400" />
     </state>
     <state x="1221" y="344" key="SettingsEditor/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612467806390" />
+    <state x="3781" y="344" key="SettingsEditor/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613655712596" />
     <state x="2940" y="139" width="2166" height="1200" key="VCS.FileHistoryDialog" timestamp="1613594990136">
       <screen x="2560" y="0" width="3440" height="1400" />
     </state>
@@ -202,12 +204,12 @@
     <state x="1509" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612486050145" />
     <state x="1123" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.0.3440.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613498351914" />
     <state x="4069" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613541773553" />
-    <state x="3699" y="0" width="1160" height="1407" key="dock-window-1" timestamp="1613605082338">
+    <state x="4822" y="0" width="1185" height="1405" key="dock-window-1" timestamp="1613656234274">
       <screen x="2560" y="0" width="3440" height="1400" />
     </state>
     <state x="1575" y="0" width="992" height="1380" key="dock-window-1/0.0.2560.1400@0.0.2560.1400" timestamp="1613538868158" />
     <state x="311" y="14" width="992" height="1380" key="dock-window-1/2560.0.3440.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613572976756" />
-    <state x="3699" y="0" width="1160" height="1407" key="dock-window-1/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613605082338" />
+    <state x="4822" y="0" width="1185" height="1405" key="dock-window-1/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613656234274" />
     <state x="3320" y="410" width="732" height="852" key="find.popup" timestamp="1613599346390">
       <screen x="2560" y="0" width="3440" height="1400" />
     </state>
