@@ -20,14 +20,7 @@ public class Pathfinding : MonoBehaviour
     {
         InitializePath();
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            SetSpawnPositions();
-        }
-    }
+    
     private void SetSpawnPositions()
     {
 
@@ -88,9 +81,9 @@ public class Pathfinding : MonoBehaviour
             }
         }
     }
-    
-    void RetracePath(Node startNode, Node endNode) {
-        List<Node> path = new List<Node>();
+    List<Node> path = new List<Node>();
+    public List<Node> RetracePath(Node startNode, Node endNode) {
+        
         Node currentNode = endNode;
 
         while (currentNode != startNode) {
@@ -98,11 +91,14 @@ public class Pathfinding : MonoBehaviour
             currentNode = currentNode.parent;
         }
         path.Reverse();
-
-        grid.pathMaster.Add(path);
+        return path;
         //grid.Path = path;
     }
 
+    public List<Node> ReturnPath()
+    {
+        return path;
+    }
     int GetDistance(Node nodeA, Node nodeB) {
         int dstX = Mathf.Abs(nodeA.gridX - nodeB.gridX);
         int dstY = Mathf.Abs(nodeA.gridY - nodeB.gridY);

@@ -11,14 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Grid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Grid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pathfinding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pathfinding.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PlatformState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlatformState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,13 +135,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MovingZombieDumper.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlatformState.cs" />
         <option value="$PROJECT_DIR$/Assets/Node.cs" />
         <option value="$PROJECT_DIR$/Assets/PathFinding.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlatformState.cs" />
         <option value="$PROJECT_DIR$/Assets/Pathfinding.cs" />
         <option value="$PROJECT_DIR$/Assets/Grid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
       </list>
     </option>
   </component>
@@ -186,7 +184,7 @@
       <workItem from="1613674673031" duration="14414000" />
       <workItem from="1613690131157" duration="7293000" />
       <workItem from="1613697545188" duration="37839000" />
-      <workItem from="1613766017256" duration="3675000" />
+      <workItem from="1613766017256" duration="6112000" />
     </task>
     <servers />
   </component>
@@ -243,12 +241,12 @@
     <state x="1575" y="0" width="992" height="1380" key="dock-window-1/0.0.2560.1400@0.0.2560.1400" timestamp="1613538868158" />
     <state x="311" y="14" width="992" height="1380" key="dock-window-1/2560.0.3440.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613572976756" />
     <state x="4120" y="0" width="1887" height="1405" key="dock-window-1/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613659032737" />
-    <state x="2686" y="428" width="739" height="852" key="find.popup" timestamp="1613772876951">
-      <screen x="2560" y="0" width="3440" height="1400" />
+    <state x="566" y="410" width="739" height="852" key="find.popup" timestamp="1613775815876">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="-1943" y="410" width="716" height="658" key="find.popup/-2560.0.2560.1400/0.0.3440.1400@-2560.0.2560.1400" timestamp="1612478958283" />
     <state x="760" y="410" width="732" height="658" key="find.popup/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1613092488528" />
-    <state x="566" y="410" width="739" height="852" key="find.popup/2560.0.3440.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613766340189" />
+    <state x="566" y="410" width="739" height="852" key="find.popup/2560.0.3440.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613775815876" />
     <state x="2686" y="428" width="739" height="852" key="find.popup/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613772876951" />
     <state x="3935" y="334" key="run.anything.popup" timestamp="1613507407221">
       <screen x="2560" y="0" width="3440" height="1400" />

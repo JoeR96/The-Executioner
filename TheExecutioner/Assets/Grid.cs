@@ -49,16 +49,7 @@ public class Grid : MonoBehaviour
 		{
 			ClearPaths();
 		}
-		if (Input.GetKey(KeyCode.V))
-		{
-			foreach (var go in pathMaster)
-			{
-				foreach (var VARIABLE in go)
-				{
-					GameManager.instance.EnvironmentManager.RaisePlatform(VARIABLE.platform);
-				}
-			}
-		}
+		
 	}
 
 	public List<Node> GetNeighbours(Node node)

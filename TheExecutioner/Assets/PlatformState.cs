@@ -42,11 +42,7 @@ public class PlatformState : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            SpawnStairs();
 
-        }
     }
 
     
@@ -76,40 +72,8 @@ public class PlatformState : MonoBehaviour
     {
         raycastHolder.transform.position = new Vector3(x,transform.position.y,z);
     }
-    public void SpawnStairs()
-    {
-        StartCoroutine(SpawnStair());
 
-    }
-
-    private IEnumerator SpawnStair()
-    {
-        var possibleSpawns = new List<GameObject>();
-        float y = transform.position.y;
-        var adjacent = CheckAdjacentPositions();
-        foreach (var go in adjacent)
-        {
-            var distance = y - go.transform.position.y;
-
-           
-            if (distance > 4 & distance <= 6)
-            {
-                possibleSpawns.Add(go.GetComponent<PlatformState>().spawnPoint);
-            }
-            
-            //GameManager.instance.EnvironmentManager.BuildNavMesh();
-            yield return null;
-        }
-        var spawn = Random.Range(0, possibleSpawns.Count -1);
-        var spawnPosition = possibleSpawns[spawn];
-        var transformPosition = spawnPosition.transform.position;
-        transformPosition.y = transformPosition.y - 5f;
-        
-        var stair = Instantiate(stairs, transformPosition, quaternion.identity);
-        SpawnInUse = true;
-        stair.transform.SetParent(transform);
-        GameManager.instance.EnvironmentManager.RaisePlatform(stair);
-    }
+    
 
     private GameObject FireRay(int xPos, int zPos)
     {
