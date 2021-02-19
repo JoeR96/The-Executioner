@@ -21,14 +21,14 @@ public class RoomManager : MonoBehaviour
         return room;
     }
     
-    private GameObject[,] SpawnArena(GameObject[,] tileArray)
+    public GameObject[,] SpawnArena(GameObject[,] tileArray)
     {
 
-        int xSpawn = Random.Range(3, 7);
-        int zSpawn = Random.Range(3, 7);
+        int xSpawn = Random.Range(2, 13);
+        int zSpawn = Random.Range(2, 13);
 
-        int xSize = Random.Range(7, 10);
-        int zSize = Random.Range(8, 14);
+        int xSize = Random.Range(4, 6);
+        int zSize = Random.Range(4, 6);
 
         var room = FillRoomArray(tileArray,xSpawn, zSpawn, xSize, zSize);
         return room;

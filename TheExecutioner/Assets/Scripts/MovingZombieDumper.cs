@@ -12,7 +12,7 @@ public class MovingZombieDumper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     { 
-        _isActive = false;
+        _isActive = true;
         InvokeRepeating("SpawnZombie",2f,_spawnRate);
     }
 

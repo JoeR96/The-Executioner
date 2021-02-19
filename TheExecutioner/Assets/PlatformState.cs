@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 
 public class PlatformState : MonoBehaviour
 {
+    [SerializeField] private List<GameObject> randomSpawnPickups = new List<GameObject>();
     [SerializeField] private GameObject stairs;
     [SerializeField] private GameObject raycastHolder;
     [SerializeField] public GameObject spawnPoint;
@@ -23,7 +24,19 @@ public class PlatformState : MonoBehaviour
 
     private void Start()
     {
+        var x = Random.Range(0, 16);
+        if (x == 15)
+        {
+            var t = Instantiate(randomSpawnPickups[0],spawnPoint.transform.position,Quaternion.identity);
+            t.transform.SetParent(spawnPoint.transform);
+        }
 
+        if (x == 10)
+        {
+            var t = Instantiate(randomSpawnPickups[1],spawnPoint.transform.position,Quaternion.identity);
+            t.transform.SetParent(spawnPoint.transform);
+        }
+            
         connectingPlatforms[1, 1] = gameObject;
     }
     
@@ -31,7 +44,7 @@ public class PlatformState : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.U))
         {
-            Iterate();
+            SpawnStairs();
 
         }
     }
@@ -63,13 +76,13 @@ public class PlatformState : MonoBehaviour
     {
         raycastHolder.transform.position = new Vector3(x,transform.position.y,z);
     }
-    private void Iterate()
+    public void SpawnStairs()
     {
-        StartCoroutine(SpawnInGap());
+        StartCoroutine(SpawnStair());
 
     }
 
-    private IEnumerator SpawnInGap()
+    private IEnumerator SpawnStair()
     {
         var possibleSpawns = new List<GameObject>();
         float y = transform.position.y;
@@ -78,24 +91,26 @@ public class PlatformState : MonoBehaviour
         {
             var distance = y - go.transform.position.y;
 
-            if (distance >0 & distance <= 8)
+           
+            if (distance > 4 & distance <= 6)
             {
                 possibleSpawns.Add(go.GetComponent<PlatformState>().spawnPoint);
             }
+            
+            //GameManager.instance.EnvironmentManager.BuildNavMesh();
+            yield return null;
         }
-
-        if (Random.value < 0.125f)
-        {
-            var spawn = Random.Range(0, possibleSpawns.Count);
-            var spawnPosition = possibleSpawns[spawn];
-            var stair = Instantiate(stairs, spawnPosition.transform.position, quaternion.identity);
-            SpawnInUse = true; stair.transform.SetParent(transform);
-        }
-
+        var spawn = Random.Range(0, possibleSpawns.Count -1);
+        var spawnPosition = possibleSpawns[spawn];
+        var transformPosition = spawnPosition.transform.position;
+        transformPosition.y = transformPosition.y - 5f;
         
-        //GameManager.instance.EnvironmentManager.BuildNavMesh();
-        yield return null;
+        var stair = Instantiate(stairs, transformPosition, quaternion.identity);
+        SpawnInUse = true;
+        stair.transform.SetParent(transform);
+        GameManager.instance.EnvironmentManager.RaisePlatform(stair);
     }
+
     private GameObject FireRay(int xPos, int zPos)
     {
         raycastHolder.transform.position = new Vector3(xPos,transform.position.y,zPos);
@@ -107,7 +122,6 @@ public class PlatformState : MonoBehaviour
         
         if (Physics.SphereCast(origin, thickness, direction, out hit))
         {
-            Debug.DrawRay(origin,hit.point,Color.red,Mathf.Infinity);
             return hit.collider.gameObject;
         }
 

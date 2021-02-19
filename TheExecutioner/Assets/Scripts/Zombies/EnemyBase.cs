@@ -145,8 +145,14 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
         }
 
         PlayParticleAtLimb(name);
+        StartCoroutine(DestroyObject(limb,5f));
     }
-    
+
+    private IEnumerator DestroyObject(GameObject toDestroy,float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        Destroy(toDestroy);
+    }
     private void PlayDeathParticles()
     {
         foreach (var particle in _particleSystem)

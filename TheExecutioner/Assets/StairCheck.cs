@@ -6,27 +6,26 @@ public class StairCheck : MonoBehaviour
 {
     [SerializeField] private GameObject stair;
     [SerializeField] private GameObject raycastHolder;
+
+    private int[] rotations = new int[4];
     // Start is called before the first frame update
     void Start()
     {
-        SetRandomRotation();
-        //Invoke("CheckDistance",0.5f);
+        rotations[0] = 0;
+        rotations[1] = 90;
+        rotations[2] = 180;
+        rotations[3] = 270;
+       // Invoke("SetRandomRotation",1f);
+     
     }
 
     private void SetRandomRotation()
     {
-        List<Quaternion> list = new List<Quaternion>();
-        var quartenionOne = new Quaternion(0,90,0,0);
-        var quartenionTwo = new Quaternion(0,180,0,0);
-        var quartenionThree = new Quaternion(0,270,0,0);
-        var quartenionFour = new Quaternion(0,0,0,0);
-        list.Add(quartenionOne);
-        list.Add(quartenionTwo);
-        list.Add(quartenionFour);
-        list.Add(quartenionThree);
-        var random = Random.Range(0, list.Count);
-        var yRotation = list[random];
-        stair.transform.rotation = yRotation;
+        Debug.Log("SET");
+        var random = Random.Range(0, rotations.Length);
+        var yRotation = rotations[random];
+        transform.localRotation = Quaternion.Euler(0, yRotation, 0);
+
     }
     private void CheckDistance()
     {

@@ -29065,7 +29065,7 @@ MonoBehaviour:
     type: 3}
   RaycastDestination: {fileID: 0}
   WeaponName: pistol
-  recoil: {fileID: 0}
+  recoil: {fileID: -8355773726005243995}
 --- !u!114 &-1267916783267072871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29120,7 +29120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b123f54f4c1c0e64bb01c56534c360bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Playercamera: {fileID: 0}
+  CharacterAiming: {fileID: 0}
   CameraShake: {fileID: 0}
   RigController: {fileID: 0}
   RecoilPattern:

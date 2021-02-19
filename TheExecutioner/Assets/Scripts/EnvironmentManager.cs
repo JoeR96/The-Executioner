@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
 using Unity.Mathematics;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -32,6 +35,7 @@ public class EnvironmentManager : MonoBehaviour
     private List<GameObject[,]> LevelWalls = new List<GameObject[,]>();
     private List<GameObject[,]> LevelRooms = new List<GameObject[,]>();
     private List<GameObject[,]> RandomPlatforms = new List<GameObject[,]>();
+    private List<GameObject> Stairs = new List<GameObject>();
     private List<List<GameObject[,]>> LevelPlatforms = new List<List<GameObject[,]>>();
     
     private void Awake()
@@ -57,6 +61,10 @@ public class EnvironmentManager : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F11))
+        {
+            LowerGroupOfPlatform();
+        }
         if (Input.GetKeyDown(KeyCode.F12))
         {
             navmeshSurface.BuildNavMesh();
@@ -88,12 +96,43 @@ public class EnvironmentManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F5))
         {
-            
+            SpawnStairs();
         }
         if (Input.GetKeyDown(KeyCode.F6))
         {
             StartCoroutine(LowerAllPlatforms());
         }
+
+        if (Input.GetKeyDown(KeyCode.F10))
+        {
+            StartCoroutine(SpawnArenaEvent());
+        }
+    }
+
+    private IEnumerator SpawnArenaEvent()
+    {
+        var arena = roomManager.SpawnArena(_tileArray);
+        LevelRooms.Add(arena);
+        foreach (var VARIABLE in arena)
+        {
+            StartCoroutine(LerpTransformPosition(VARIABLE.transform,
+                    new Vector3(VARIABLE.transform.position.x, 4f, VARIABLE.transform.position.z), 0.66f));
+        }
+        yield return new WaitForSeconds(0.75f);
+        navmeshSurface.BuildNavMesh();
+
+            for (int x = 0; x < Random.Range(2,3); x++)
+            {
+                for (int z = 0; z < Random.Range(2,3); z++)
+                { 
+                    var spawn = arena[x, z].GetComponent<PlatformState>().spawnPoint;
+                    
+                    var t = GameManager.instance.ZombieSpawner.SpawnZombie(spawn.transform);
+                    NavMeshObject.transform.position  = arena[x, z].gameObject.transform.position;
+                    t.transform.position = NavMeshObject.transform.position;
+                }
+            }
+
     }
 
     public GameObject[,] ReturnMap()
@@ -143,16 +182,31 @@ public class EnvironmentManager : MonoBehaviour
             }
         }
     }
+    
     private IEnumerator LowerAllPlatforms()
     {
         foreach (var raisedPlatformGroup in LevelPlatforms)
         {
-            Debug.Log("1");
             foreach (var go in raisedPlatformGroup)
             {
-                Debug.Log("2");
-                LowerPlatformSection(go);
+                LowerPlatformSection(go); ;
             }
+        }
+        
+        foreach (var raisedPlatformGroup in LevelPlatforms)
+        {
+            foreach (var go in raisedPlatformGroup)
+            {
+                BalanceSection(go);
+            }
+        }
+
+
+        foreach (var go in Stairs)
+        {
+            var targetVector = go.transform.position;
+            targetVector.y = -5f;
+            StartCoroutine(LerpTransformPosition(go.transform, targetVector, 0.125f));
         }
         yield return new WaitForSeconds(0.25f);
         navmeshSurface.BuildNavMesh();
@@ -165,7 +219,49 @@ public class EnvironmentManager : MonoBehaviour
                  0f, platform.transform.position.z), 1f));
         }
     }
+    private void BalanceSection(GameObject[,] platforms)
+    {
+        float v;
+        foreach (var platform in platforms)
+        {
+            var transformPosition = platform.transform.position;
+            v = transformPosition.y;
+            float x =Mathf.Round(v);
+            transformPosition.y = x;
+            platform.transform.position = transformPosition;
+        }
+    }
 
+    private void LowerGroupOfPlatform()
+    {
+        var length = LevelWalls.Count;
+        var toRemove = length / 3;
+
+        for (int i = 0; i < toRemove; i++)
+        {
+            var number = Random.Range(0, LevelWalls.Count);
+            LowerPlatformSection(LevelWalls[i]);
+            LevelWalls.RemoveAt(i);
+        }
+    }
+    public void AddStairToList(GameObject stair)
+    {
+        Stairs.Add(stair);
+    }
+    private void SpawnStairs()
+    {
+        foreach (var go in LevelPlatforms)
+        {
+            for (int i = 0; i < Random.Range(3,5); i++)
+            {
+                var random = Random.Range(0, LevelWalls.Count );
+                var randomX = Random.Range(0, LevelWalls[random].GetLength(0));
+                var randomZ = Random.Range(0, LevelWalls[random].GetLength(1));
+                LevelWalls[random][randomX,randomZ].GetComponent<PlatformState>().SpawnStairs();
+            }
+        }
+
+    }
     
     
     
