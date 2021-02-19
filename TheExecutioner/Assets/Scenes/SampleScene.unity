@@ -7079,6 +7079,8 @@ MonoBehaviour:
   _gameClips:
   - name: ShotgunFire
     audioClip: {fileID: 8300000, guid: e1b6aede700663e4c8520ca118b81b8e, type: 3}
+  - name: HeadshotSplat
+    audioClip: {fileID: 8300000, guid: 13df004749c429c4d8e9f5091e2c34e3, type: 3}
   GameAudioSource: {fileID: 1566612672}
   GameMusicSource: {fileID: 1566612674}
 --- !u!82 &1566612674

@@ -140,7 +140,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
             if (random == 1)
             {
                 _animator.SetBool("DiedByHeadshot", true);
-                
+                AudioManager.Instance.PlaySound("HeadshotSplat");
             }
         }
 

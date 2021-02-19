@@ -12,20 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Material 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Material 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlatformState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlatformState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/SM_Wep_Pistol_01 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/SM_Wep_Pistol_01 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Zombie_Paramedic_Female_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Zombie_Paramedic_Female_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RoomManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RoomManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovingZombieDumper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MovingZombieDumper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WallManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WallManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StairCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StairCheck.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +125,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ZombieSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WeaponPickup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
         <option value="$PROJECT_DIR$/Assets/StairCheck.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WallManager.cs" />
@@ -145,6 +132,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
         <option value="$PROJECT_DIR$/Assets/PlatformState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovingZombieDumper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
       </list>
     </option>
   </component>
@@ -186,7 +174,7 @@
       <workItem from="1613673997443" duration="48000" />
       <workItem from="1613674673031" duration="14414000" />
       <workItem from="1613690131157" duration="7293000" />
-      <workItem from="1613697545188" duration="20027000" />
+      <workItem from="1613697545188" duration="21942000" />
     </task>
     <servers />
   </component>
