@@ -37,7 +37,8 @@ public class EnvironmentManager : MonoBehaviour
     private List<GameObject[,]> RandomPlatforms = new List<GameObject[,]>();
     private List<GameObject> Stairs = new List<GameObject>();
     private List<List<GameObject[,]>> LevelPlatforms = new List<List<GameObject[,]>>();
-    
+    //public GameObject floorContainer;
+    //Instantiate(floorContainer, n.worldPosition, quaternion.identity);
     private void Awake()
     {
         navmeshSurface = NavMeshObject.GetComponent<NavMeshSurface>();
@@ -56,8 +57,8 @@ public class EnvironmentManager : MonoBehaviour
     }
     private void Start()
     {
-        _tileArray = environmentSpawner.SpawnGrid(floorContainer, gridX, gridZ, 0, gridSpaceOffset,CubeParent);
-        navmeshSurface.BuildNavMesh();
+        //_tileArray = environmentSpawner.SpawnGrid(floorContainer, gridX, gridZ, 0, gridSpaceOffset,CubeParent);
+        //navmeshSurface.BuildNavMesh();
     }
     private void Update()
     {

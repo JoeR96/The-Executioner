@@ -25,19 +25,19 @@ public class PlatformState : MonoBehaviour
     private void Start()
     {
         var x = Random.Range(0, 16);
-        if (x == 15)
-        {
-            var t = Instantiate(randomSpawnPickups[0],spawnPoint.transform.position,Quaternion.identity);
-            t.transform.SetParent(spawnPoint.transform);
-        }
-
-        if (x == 10)
-        {
-            var t = Instantiate(randomSpawnPickups[1],spawnPoint.transform.position,Quaternion.identity);
-            t.transform.SetParent(spawnPoint.transform);
-        }
+        // if (x == 15)
+        // {
+        //     var t = Instantiate(randomSpawnPickups[0],spawnPoint.transform.position,Quaternion.identity);
+        //     t.transform.SetParent(spawnPoint.transform);
+        // }
+        //
+        // if (x == 10)
+        // {
+        //     var t = Instantiate(randomSpawnPickups[1],spawnPoint.transform.position,Quaternion.identity);
+        //     t.transform.SetParent(spawnPoint.transform);
+        // }
             
-        connectingPlatforms[1, 1] = gameObject;
+       // connectingPlatforms[1, 1] = gameObject;
     }
     
     private void Update()

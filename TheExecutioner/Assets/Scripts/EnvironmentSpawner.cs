@@ -8,7 +8,7 @@ public class EnvironmentSpawner : MonoBehaviour
     public GameObject[,] SpawnGrid(GameObject floor, int gridX, int gridZ, int y, int gridSpaceOffset,
         Transform cubeParent)
     {
-        Vector3 gridOrigin = new Vector3(-2,0,-2); 
+        Vector3 gridOrigin = new Vector3(0,0,0); 
         GameObject[,] tileArray = new GameObject[gridX,gridZ];;
 
         for (int x = 0; x < gridX; x++)
