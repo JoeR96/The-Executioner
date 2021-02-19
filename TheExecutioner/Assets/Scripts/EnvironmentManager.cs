@@ -10,7 +10,8 @@ using Random = UnityEngine.Random;
 public class EnvironmentManager : MonoBehaviour
 {
     public NavMeshSurface[] surfaces;
-    public Transform objectsToRotate;
+    public Transform NavMeshObject;
+    public Transform CubeParent;
     
     public GameObject floorContainer;
     private GameObject[,] _tileArray;
@@ -35,7 +36,7 @@ public class EnvironmentManager : MonoBehaviour
     
     private void Awake()
     {
-        navmeshSurface = objectsToRotate.GetComponent<NavMeshSurface>();
+        navmeshSurface = NavMeshObject.GetComponent<NavMeshSurface>();
         wallManager = GetComponent<WallManager>();
         environmentSpawner = GetComponent<EnvironmentSpawner>();
         roomManager = GetComponent<RoomManager>();
@@ -44,14 +45,22 @@ public class EnvironmentManager : MonoBehaviour
         LevelPlatforms.Add(LevelRooms);
         LevelPlatforms.Add(LevelWalls);
     }
-    
+
+    public void BuildNavMesh()
+    {
+        navmeshSurface.BuildNavMesh();
+    }
     private void Start()
     {
-        _tileArray = environmentSpawner.SpawnGrid(floorContainer, gridX, gridZ, 0, gridSpaceOffset);
+        _tileArray = environmentSpawner.SpawnGrid(floorContainer, gridX, gridZ, 0, gridSpaceOffset,CubeParent);
         navmeshSurface.BuildNavMesh();
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F12))
+        {
+            navmeshSurface.BuildNavMesh();
+        }
         if(Input.GetKeyDown(KeyCode.F1))
         {
             StartCoroutine(RaisePlatforms());
@@ -87,6 +96,10 @@ public class EnvironmentManager : MonoBehaviour
         }
     }
 
+    public GameObject[,] ReturnMap()
+    {
+        return _tileArray;
+    }
     private IEnumerator RaisePlatforms()
     {
         for (int i = 0; i < Random.Range(9,15); i++)
@@ -112,12 +125,19 @@ public class EnvironmentManager : MonoBehaviour
         }
     }
 
+    public void RaisePlatform(GameObject wall)
+    {
+        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,
+            wall.transform.position.y + 5f, wall.transform.position.z), 1f));
+            
+}
     private void RaiseAllPlatforms(GameObject[,] wall)
     {
         foreach (var go in wall)
         {
             if (go)
             {
+                go.GetComponent<PlatformState>().SetState(true);
                 StartCoroutine(LerpTransformPosition(go.transform, new Vector3(go.transform.position.x,
                     go.transform.position.y + 5f
                     , go.transform.position.z), 1f));

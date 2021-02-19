@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnvironmentSpawner : MonoBehaviour
 {
 
-    public GameObject[,] SpawnGrid(GameObject floor,int gridX,int gridZ,int y, int gridSpaceOffset)
+    public GameObject[,] SpawnGrid(GameObject floor, int gridX, int gridZ, int y, int gridSpaceOffset,
+        Transform cubeParent)
     {
         GameObject[,] tileArray = new GameObject[gridX,gridZ];;
         for (int x = 0; x < gridX; x++)
@@ -13,7 +14,9 @@ public class EnvironmentSpawner : MonoBehaviour
             for (int z = 0; z < gridZ; z++)
             {
                 Vector3 spawnPosition = new Vector3(x * gridSpaceOffset,y, z * gridSpaceOffset );
-                tileArray[x,z] = SpawnChunk(floor,spawnPosition,Quaternion.identity);
+                var _  = SpawnChunk(floor,spawnPosition,Quaternion.identity);
+                _.transform.SetParent(cubeParent);
+                tileArray[x, z] = _;
                 tileArray[x,z].GetComponent<PlatformState>().Setint(x,z);
             }
             

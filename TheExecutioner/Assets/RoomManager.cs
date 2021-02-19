@@ -13,14 +13,8 @@ public class RoomManager : MonoBehaviour
         
         for (int x = 0; x < roomXsize; x++)
         {
-            Debug.Log(roomXsize);
-            Debug.Log(roomZsize);
             for (int z = 0; z < roomZsize; z++)
             {
-                Debug.Log(targetX);
-                Debug.Log(targetZ);
-                Debug.Log(targetX + x);
-                Debug.Log(x);
                 room[x, z] = tileArray[targetX + x , targetZ + z];
             }
         }

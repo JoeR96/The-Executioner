@@ -137,6 +137,7 @@
             <e p="SimpleCharacterMotor.cs" t="Include" />
           </e>
         </e>
+        <e p="StairCheck.cs" t="Include" />
         <e p="TargetState.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">
