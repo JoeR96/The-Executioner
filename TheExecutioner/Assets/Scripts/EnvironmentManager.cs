@@ -102,7 +102,7 @@ public class EnvironmentManager : MonoBehaviour
     }
     private IEnumerator RaisePlatforms()
     {
-        for (int i = 0; i < Random.Range(9,15); i++)
+        for (int i = 0; i < Random.Range(6,12); i++)
         {
             var t = wallManager.SpawnRandomWall(_tileArray);
             LevelWalls.Add(t);
@@ -137,7 +137,6 @@ public class EnvironmentManager : MonoBehaviour
         {
             if (go)
             {
-                go.GetComponent<PlatformState>().SetState(true);
                 StartCoroutine(LerpTransformPosition(go.transform, new Vector3(go.transform.position.x,
                     go.transform.position.y + 5f
                     , go.transform.position.z), 1f));
@@ -182,6 +181,8 @@ public class EnvironmentManager : MonoBehaviour
             transform.position = Vector3.Lerp(startPosition.position, target, percentage);
             yield return null;
         }
+
+        transform.position = target;
     }
 
     

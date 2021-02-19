@@ -10,12 +10,12 @@ public class WallManager : MonoBehaviour
     {
         GameObject[,] wall;
         int startX; 
-        startX = Random.Range(2, 14);
+        startX = Random.Range(2, 12);
         int startZ; 
-        startZ = Random.Range(2, 14);
+        startZ = Random.Range(2, 12);
         //get length of wall
-        int wallOneLength = Random.Range(1, 5);
-        int wallTwoLength = Random.Range(1, 5);
+        int wallOneLength = Random.Range(2, 8);
+        int wallTwoLength = Random.Range(2, 8);
         wall = FillWallArray(tileArray,wallOneLength, wallTwoLength, startX, startZ);
         return wall;
     }

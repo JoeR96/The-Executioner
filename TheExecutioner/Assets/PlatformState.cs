@@ -10,7 +10,10 @@ public class PlatformState : MonoBehaviour
 {
     [SerializeField] private GameObject stairs;
     [SerializeField] private GameObject raycastHolder;
+    [SerializeField] public GameObject spawnPoint;
     [SerializeField] private int boundarySize;
+
+    public bool SpawnInUse;
     public int X;
     public int Z;
 
@@ -23,48 +26,18 @@ public class PlatformState : MonoBehaviour
 
         connectingPlatforms[1, 1] = gameObject;
     }
-
-    private void SpawnStairs()
-    {
-        var adjacent = CheckAdjacentPositions();
-        foreach (var VARIABLE in adjacent)
-        {
-            VARIABLE.transform.position = Vector3.zero;
-        }
-    }
-    public bool clicked = false;
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.U))
         {
-            FillGaps();
+            Iterate();
 
         }
     }
 
-    private void FillGaps()
-    {
-        if (PlatformInUse)
-        {
-            var t = CheckAdjacentPositions();
-            if (Random.value < 0.25)
-            {
-                Iterate(t);
-            }
-            
-        }
-
-    }
-    public void SetState(bool b)
-    {
-        PlatformInUse = b;
-    }
-
-    public bool ReturnState()
-    {
-        return PlatformInUse;
-    }
     
+
     private GameObject[,] CheckAdjacentPositions()
     {
         var tileMap = GameManager.instance.EnvironmentManager.ReturnMap();
@@ -82,6 +55,7 @@ public class PlatformState : MonoBehaviour
                 adjacent[x, z] = tileMap[startX +x, startZ + z];
             }
         }
+        
         return adjacent;
     }
 
@@ -89,55 +63,38 @@ public class PlatformState : MonoBehaviour
     {
         raycastHolder.transform.position = new Vector3(x,transform.position.y,z);
     }
-    private void Iterate(GameObject[,] tileArray)
+    private void Iterate()
     {
-        int counter = 0;
-        List<GameObject> tempList = new List<GameObject>();
+        StartCoroutine(SpawnInGap());
 
-        for (int row = 0; row < tileArray.GetLength(0); row++)
-        {
-            for (int column = 0; column < tileArray.GetLength(1); column++)
-            {
-                GameObject adjacentPlatform = tileArray[row, column];
-                tempList.Add(adjacentPlatform);
-            }
-        }
-        
-        StartCoroutine(SpawnInGap(tempList));
-        
-        for (int i = 0; i < tempList.Count; i++)
-        {
-            tempList.RemoveAt(i);
-        }
-        
-        
     }
 
-    private IEnumerator SpawnInGap(List<GameObject> tempList)
+    private IEnumerator SpawnInGap()
     {
-        for (int i = 0; i < tempList.Count -1; i++)
+        var possibleSpawns = new List<GameObject>();
+        float y = transform.position.y;
+        var adjacent = CheckAdjacentPositions();
+        foreach (var go in adjacent)
         {
-            if (Math.Abs(tempList[i].transform.position.y - transform.position.y) > 0.25f)
-            {
-                raycastHolder.transform.position = tempList[i].transform.position;
-                if (Random.value > 0.0625f)
-                {
-                    GameManager.instance.EnvironmentManager.RaisePlatform(tempList[i]);
-                }
-                else
-                {
-                    var targetPosition = tempList[i].transform.position;
-                    targetPosition.y += 18f;
-                    var stair = Instantiate(stairs, targetPosition, quaternion.identity);
-                    stair.GetComponent<StairCheck>().InvokeStairs();
+            var distance = y - go.transform.position.y;
 
-                }
-                raycastHolder.transform.position = tempList[i].transform.position;
-                
+            if (distance >0 & distance <= 8)
+            {
+                possibleSpawns.Add(go.GetComponent<PlatformState>().spawnPoint);
             }
         }
-        yield return new WaitForSeconds(0.5f);
-        GameManager.instance.EnvironmentManager.BuildNavMesh();
+
+        if (Random.value < 0.125f)
+        {
+            var spawn = Random.Range(0, possibleSpawns.Count);
+            var spawnPosition = possibleSpawns[spawn];
+            var stair = Instantiate(stairs, spawnPosition.transform.position, quaternion.identity);
+            SpawnInUse = true; stair.transform.SetParent(transform);
+        }
+
+        
+        //GameManager.instance.EnvironmentManager.BuildNavMesh();
+        yield return null;
     }
     private GameObject FireRay(int xPos, int zPos)
     {

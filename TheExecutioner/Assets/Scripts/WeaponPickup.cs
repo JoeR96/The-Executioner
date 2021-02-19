@@ -5,7 +5,6 @@ using UnityEngine;
 public class WeaponPickup : MonoBehaviour
 {
     public RaycastWeapon weaponPrefab;
-
     void OnTriggerEnter(Collider other)
     {
         ActiveWeapon activeWeapon = other.GetComponent<ActiveWeapon>();

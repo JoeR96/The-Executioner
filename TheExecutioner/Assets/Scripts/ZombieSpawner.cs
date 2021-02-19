@@ -22,9 +22,10 @@ public class ZombieSpawner : MonoBehaviour
         for (int i = 0; i < location.Length; i++)
         {
             var t = SpawnZombie(navmeshPos);
-             t.transform.position = location[i].position;
+             
              t.GetComponent<NavMeshAgent>().enabled = false;
              t.GetComponent<Ragdoll>().ActivateRagDoll();
+             t.transform.position = location[i].position;
         }
         
     }
