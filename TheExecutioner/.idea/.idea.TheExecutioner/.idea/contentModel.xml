@@ -65,6 +65,7 @@
         <e p="NavigationBaker.cs" t="Include" />
         <e p="ObstacleSpawner.cs" t="Include" />
         <e p="PathFinding.cs" t="Include" />
+        <e p="PlatformManager.cs" t="Include" />
         <e p="PlatformState.cs" t="Include" />
         <e p="PolygonApocalypse" t="Include">
           <e p="Shader" t="Include">

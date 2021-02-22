@@ -7,6 +7,8 @@ public class StairCheck : MonoBehaviour
     [SerializeField] private GameObject stair;
     [SerializeField] private GameObject raycastHolder;
 
+    public int X;
+    public int Y;
     private int[] rotations = new int[4];
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,11 @@ public class StairCheck : MonoBehaviour
      
     }
 
+    public void SetInt(int x, int z)
+    {
+        X = x;
+        Y = z;
+    }
     private void SetRandomRotation()
     {
         Debug.Log("SET");

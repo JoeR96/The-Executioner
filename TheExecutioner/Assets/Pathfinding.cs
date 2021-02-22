@@ -13,24 +13,24 @@ public class Pathfinding : MonoBehaviour
 
     void Awake() 
     {
-        grid = GetComponent<Grid> ();
+        grid = GetComponent<Grid>();
     }
 
     private void Start()
     {
-        InitializePath();
+        
     }
     
     private void SetSpawnPositions()
     {
-
         seeker = ReturnTransform();
         target = ReturnTransform();
     }
     public void InitializePath()
     {
-        
         FindPath (ReturnTransform().position, ReturnTransform().position);
+        Debug.Log(grid.grid);
+
     }
     private Transform ReturnTransform()
     {
@@ -64,7 +64,13 @@ public class Pathfinding : MonoBehaviour
                 return;
             }
 
-            foreach (Node neighbour in grid.GetNeighbours(node)) {
+            var t = grid.GetNeighbour(node);
+            foreach (var go in t)
+            {
+            
+            }
+            foreach (var neighbour in t) {
+                
                 if (!neighbour.walkable || closedSet.Contains(neighbour)) {
                     continue;
                 }
@@ -97,6 +103,10 @@ public class Pathfinding : MonoBehaviour
 
     public List<Node> ReturnPath()
     {
+        foreach (var node in path)
+        {
+            node.InUse = true;
+        }
         return path;
     }
     int GetDistance(Node nodeA, Node nodeB) {
@@ -107,4 +117,6 @@ public class Pathfinding : MonoBehaviour
             return 14*dstY + 10* (dstX-dstY);
         return 14*dstX + 10 * (dstY-dstX);
     }
+
+    
 }

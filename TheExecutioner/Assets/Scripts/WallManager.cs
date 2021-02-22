@@ -5,7 +5,10 @@ using UnityEngine;
 [HideInInspector]
 public class WallManager : MonoBehaviour
 {
-
+    [SerializeField] private GameObject Stair;
+    [SerializeField] private Transform[] raycastOut;
+    public LayerMask Layer;
+    Ray ray;
     public GameObject[,] SpawnRandomWall(GameObject[,] tileArray)
     {
         GameObject[,] wall;
@@ -36,5 +39,36 @@ public class WallManager : MonoBehaviour
         }
 
         return wall;
+    }
+
+    private void SpawnStair()
+    {
+        bool canSpawn = true;
+        
+        for (int i = 0; i < raycastOut.Length; i++)
+        {
+            if (CheckRayCast(raycastOut[i]) == false)
+                canSpawn = false;
+        }
+
+        if (canSpawn)
+        {
+            var t = Random.Range(0, 50);
+
+        }
+            
+                
+   
+    }
+    private bool CheckRayCast(Transform raycastOut)
+    {
+        
+        RaycastHit hit;
+        if (Physics.Raycast(raycastOut.position, -Vector3.up, out hit, 2f, Layer))
+            return false;
+
+        return true;
+
+    
     }
 }

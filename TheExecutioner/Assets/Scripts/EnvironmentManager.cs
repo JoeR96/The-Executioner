@@ -10,287 +10,371 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
+
+
 [HideInInspector]
 public class EnvironmentManager : MonoBehaviour
 {
-    public NavMeshSurface[] surfaces;
-    public Transform NavMeshObject;
-    public Transform CubeParent;
-    
-    public GameObject floorContainer;
-    private GameObject[,] _tileArray;
 
-    private EdgeSpawnPlatform edgeSpawnPlatform;
-    private EnvironmentSpawner environmentSpawner;
+    public GameObject stairs;
+    public Transform NavMeshObject;
+    private GameObject[,] _tileArray;
     private WallManager wallManager;
     private RoomManager roomManager;
     private Pathfinding pathFinding;
-    //coordinates for grid spawner
-    public int gridX;
-    public int gridZ;
-    public int y;
-    public int gridSpaceOffset;
-
     private NavMeshSurface navmeshSurface;
+    private PlatformManager platformManager;
+    private EnvironmentSpawner environmentSpawner;
+    private Grid grid;
+
     private List<GameObject[,]> EntranceSpawnTile = new List<GameObject[,]>();
     private List<GameObject[,]> LevelWalls = new List<GameObject[,]>();
     private List<GameObject[,]> LevelRooms = new List<GameObject[,]>();
     private List<GameObject[,]> RandomPlatforms = new List<GameObject[,]>();
     private List<GameObject> Stairs = new List<GameObject>();
     private List<List<GameObject[,]>> LevelPlatforms = new List<List<GameObject[,]>>();
-    private List<List<Node>> LevelPaths = new List<List<Node>>();
+    public List<List<Node>> LevelPaths = new List<List<Node>>();
+    public List<List<Node>> LevelBunkers = new List<List<Node>>();
+
+    public Material Blue;
+    public Material Yellow;
+
+
     //public GameObject floorContainer;
     //Instantiate(floorContainer, n.worldPosition, quaternion.identity);
     private void Awake()
     {
+        environmentSpawner = GetComponent<EnvironmentSpawner>();
         pathFinding = GetComponent<Pathfinding>();
         navmeshSurface = NavMeshObject.GetComponent<NavMeshSurface>();
         wallManager = GetComponent<WallManager>();
-        environmentSpawner = GetComponent<EnvironmentSpawner>();
         roomManager = GetComponent<RoomManager>();
-        edgeSpawnPlatform = GetComponent<EdgeSpawnPlatform>();
-        
+        platformManager = GetComponent<PlatformManager>();
         LevelPlatforms.Add(LevelRooms);
         LevelPlatforms.Add(LevelWalls);
+        grid = GetComponent<Grid>();
+    }
+
+ 
+    private void Start()
+    {
+        for (int i = 0; i < Random.Range(2,5); i++)
+        {
+            SpawnBunkers();
+        }
+         // for (int i = 0; i < Random.Range(2,5); i++)
+         // {
+         //     SpawnPaths();
+         // }
+        
+
+        
+        
+
+        // _tileArray = environmentSpawner.SpawnGrid(floorContainer, gridX, gridZ, 0, gridSpaceOffset,CubeParent);
+        //navmeshSurface.BuildNavMesh();
+    }
+
+ 
+
+    private void ChangePathColor(Material material,List<List<Node>> list)
+    {
+        foreach (var go in list)
+        {
+            foreach (var g in go)
+            {
+                g.platform.GetComponent<MeshRenderer>().material = material;
+            }
+        }
+    }
+    private void SpawnPaths()
+    {
+        GetPath(LevelPaths);
+        pathFinding.InitializePath();
+        SpawnStairs();
+        ChangePathColor(Blue, LevelBunkers);
+        foreach (var go in LevelPaths)
+        {
+            foreach (var VARIABLE in go)
+            {
+                platformManager.LowerPlatform(VARIABLE.platform);
+                var nodeInUse = VARIABLE.platform.GetComponent<PlatformState>();
+                nodeInUse.PlatformIsActive = true;
+            }
+        }
+       
+    }
+    
+    private void SpawnBunkers()
+    {
+        GetPath(LevelBunkers);
+        pathFinding.InitializePath();
+        SpawnStairs();
+        ChangePathColor(Yellow,LevelPaths);
+        foreach (var go in LevelBunkers)
+        {
+            foreach (var VARIABLE in go)
+            {
+                platformManager.RaisePlatform(VARIABLE.platform);
+                var nodeInUse = VARIABLE.platform.GetComponent<PlatformState>();
+                nodeInUse.PlatformIsActive = true;
+            }
+        }
+    }
+    private void Update()
+    {
+
+
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            SpawnPaths();
+        }
+
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+            SpawnBunkers();
+        }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            platformManager.LowerMultiplePlatformSection(LevelPaths);
+            platformManager.LowerMultiplePlatformSection(LevelBunkers);
+        }
+
+        if (Input.GetKeyDown(KeyCode.F12))
+        {
+            navmeshSurface.BuildNavMesh();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+    
+        }
+
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+
+            foreach (var go in LevelPaths)
+            {
+                foreach (var VARIABLE in go)
+                {
+                    platformManager.RaisePlatform(VARIABLE.platform);
+                    var nodeInUse = VARIABLE.platform.GetComponent<PlatformState>();
+                    nodeInUse.PlatformIsActive = true;
+                }
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            SmoothMap();
+        }
+
+    }
+
+    void SmoothMap()
+    {
+
+        List<Node> platformsToSmooth = new List<Node>();
+
+
+       
+        for (int x = 0; x < grid.gridSizeX - 1; x++)
+        {
+            for (int y = 0; y < grid.gridSizeY - 1; y++)
+            {
+                var centre = grid.grid[x, y].platform.transform.position.y;
+                var t = grid.GetNeighbours(grid.grid[x, y]);
+                var temp = t;
+
+                foreach (var node in temp)
+                {
+                    //check surrounding nodes are lower than current Y positions
+                    var adjacent = node.platform.transform.position.y;
+                    var nodeInUse = node.platform.GetComponent<PlatformState>();
+                    Debug.Log(nodeInUse.PlatformIsActive);
+                    Debug.Log(adjacent < centre && !nodeInUse.PlatformIsActive);
+                    if (adjacent > centre && !nodeInUse.PlatformIsActive)
+                    {
+                        platformsToSmooth.Add(node);
+                        nodeInUse.PlatformIsActive = true;
+                    }
+                }
+
+                //if more than 4 nodes raise the platform to the same level
+                //will need to check the height of the node 
+                if (platformsToSmooth.Count > 4)
+                {
+
+                    platformManager.RaisePath(platformsToSmooth);
+                }
+
+            }
+        }
+    }
+
+    private bool IsplatformIsBelow()
+    {
+
+        {
+            return false;
+        }
     }
 
     public void BuildNavMesh()
     {
         navmeshSurface.BuildNavMesh();
     }
-    private void Start()
-    {
-        //_tileArray = environmentSpawner.SpawnGrid(floorContainer, gridX, gridZ, 0, gridSpaceOffset,CubeParent);
-        //navmeshSurface.BuildNavMesh();
-    }
-    private void Update()
-    {
-  
-        if (Input.GetKeyDown(KeyCode.F12))
-        {
-            navmeshSurface.BuildNavMesh();
-        }
-        if(Input.GetKeyDown(KeyCode.F1))
-        {
-            StartCoroutine(RaisePlatforms());
 
-        }
-        if(Input.GetKeyDown(KeyCode.F2))
-        {
-            StartCoroutine((SpawnWallPlatforms()));
-        }
-        if (Input.GetKeyDown(KeyCode.F3))
-        {
-            foreach (var go in LevelPaths)
-            {
-                foreach (var VARIABLE in go)
-                {
-                    GameManager.instance.EnvironmentManager.LowerPlatform(VARIABLE.platform);
-                }
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            GetPath();
-            pathFinding.InitializePath();
-        }
-        if (Input.GetKey(KeyCode.V))
-        {
-            foreach (var go in LevelPaths)
-            {
-                foreach (var VARIABLE in go)
-                {
-                    GameManager.instance.EnvironmentManager.RaisePlatform(VARIABLE.platform);
-                }
-            }
-        }
-    }
-
-    private IEnumerator SpawnWallPlatforms()
+    private void SpawnStairs()
     {
-        yield return null;
-    }
-    private IEnumerator SpawnArenaEvent()
-    {
-        var arena = roomManager.SpawnArena(_tileArray);
-        LevelRooms.Add(arena);
-        foreach (var VARIABLE in arena)
+        List<Node> stairSpawns = new List<Node>();
+        for (int i = 0; i < LevelPaths.Count; i++)
         {
-            StartCoroutine(LerpTransformPosition(VARIABLE.transform,
-                    new Vector3(VARIABLE.transform.position.x, 4f, VARIABLE.transform.position.z), 0.66f));
-        }
-        yield return new WaitForSeconds(0.75f);
-        navmeshSurface.BuildNavMesh();
-
-            for (int x = 0; x < Random.Range(2,3); x++)
-            {
-                for (int z = 0; z < Random.Range(2,3); z++)
-                { 
-                    var spawn = arena[x, z].GetComponent<PlatformState>().spawnPoint;
+            var path = ReturnRandomPath();
+                var node = GetRandomNode(path);
+                var adjacent = CheckAdjacentPositions(node);
+                
+                //The purpose of checking twice here is to ensure there is nothing blocking the platform leading to the stairs
+                    if (!ReturnStairSpawnStatus(2, 1, adjacent))
+                    {
+                        if(!ReturnStairSpawnStatus(2,0,adjacent))
+                        {
+                            var t = Instantiate(stairs, adjacent[2,1].platform.GetComponent<PlatformState>().spawnPoint.transform.position, 
+                                quaternion.identity);
+                            t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x, transform.localRotation.eulerAngles.y , transform.localRotation.eulerAngles.z);
+                        }
+                    }
+                    if (!ReturnStairSpawnStatus(1, 2, adjacent))
+                    {
+                        if(!ReturnStairSpawnStatus(0,2,adjacent))
+                        {
+                            var t = Instantiate(stairs, adjacent[1,2].platform.GetComponent<PlatformState>().spawnPoint.transform.position, 
+                                quaternion.identity);
+                            t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x, transform.localRotation.eulerAngles.y + 90, transform.localRotation.eulerAngles.z);
+                        }
+                    }
+                    if (!ReturnStairSpawnStatus(3, 2, adjacent))
+                    {
+                        if(!ReturnStairSpawnStatus(4,2,adjacent))
+                        {
+                           var t = Instantiate(stairs, adjacent[3,2].platform.GetComponent<PlatformState>().spawnPoint.transform.position, 
+                                quaternion.identity);
+                           t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x, transform.localRotation.eulerAngles.y + 180, transform.localRotation.eulerAngles.z);
+                        }
+                    }
+                    if (!ReturnStairSpawnStatus(2, 3, adjacent))
+                    {
+                        if(!ReturnStairSpawnStatus(2,4,adjacent))
+                        {
+                           var t = Instantiate(stairs, adjacent[2,3].platform.GetComponent<PlatformState>().spawnPoint.transform.position, 
+                                quaternion.identity);
+                           t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x, transform.localRotation.eulerAngles.y + 270, transform.localRotation.eulerAngles.z);
+                        }
+                    }
+                
+                
+             
                     
-                    var t = GameManager.instance.ZombieSpawner.SpawnZombie(spawn.transform);
-                    NavMeshObject.transform.position  = arena[x, z].gameObject.transform.position;
-                    t.transform.position = NavMeshObject.transform.position;
-                }
-            }
+                    //GameManager.instance.EnvironmentManager.platformManager.RaisePlatform(go.platform);
+                
+                //Vector3 spawnPosition = new Vector3(spawnPos.GridPosition.x +3f, 20f, spawnPos.GridPosition.y);
+                
+                //y.transform.rotation *= Quaternion.Euler(0,90,0);
+            
+        }
+    }
 
+    private bool ReturnStairSpawnStatus(int x,int y,Node[,] platformGroup)
+    {
+        return platformGroup[ x,  y].InUse;
+    }
+    private static Vector3 SpawnPos(List<Node> stairSpawns, int random)
+    {
+        var spawnPos = stairSpawns[random].worldPosition;
+        return spawnPos;
+    }
+
+    private Node[,] CheckAdjacentPosition(Node node)
+    {
+      
+        Node[,] adjacent;
+        adjacent = new Node[3, 3];
+
+        int counterr = 0;
+        var gridX = node.gridX -1;
+        var gridY = node.gridY -1;
+
+
+        int counter = 0;
+        for (int x = 0; x < adjacent.GetLength(0) ; x++)
+        {
+            for (int z = 0; z < adjacent.GetLength(1); z++)
+            {
+                Debug.Log(grid.grid.Length);
+                var t  = grid.grid[x + gridX, z + gridY];
+                adjacent[z, x] = t;
+                // Debug.Log(grid.grid[x,z].gridX + " + " + grid.grid[x,z].gridY);
+                // Debug.Log(gridX + " " + gridY);
+                    counter++;
+
+            }
+        }
+
+        return adjacent;
+    }
+
+    private Node[,] CheckAdjacentPositions(Node node)
+    {
+        
+        Node[,] adjacent = new Node[5,5];
+
+        var startX = node.platform.GetComponent<PlatformState>().X -1;
+        var startZ = node.platform.GetComponent<PlatformState>().Z -1;
+        
+        for (int x = 0; x < adjacent.GetLength(0) ; x++)
+        {
+            for (int z = 0; z < adjacent.GetLength(1); z++)
+            {
+                adjacent[x , z ] = grid.grid[startX +x, startZ + z];
+            }
+        }
+        return adjacent;
+    }
+    
+
+private Node GetRandomNode(List<Node> nodes)
+    {
+        var random = Random.Range(0, nodes.Count);
+        var node = nodes[random];
+        return node;
+    }
+    private List<Node> ReturnRandomPath()
+    {
+        var random = Random.Range(0, LevelPaths.Count);
+        var path = LevelPaths[random];
+        return path;
     }
 
     public GameObject[,] ReturnMap()
     {
         return _tileArray;
     }
-    private IEnumerator RaisePlatforms()
-    {
-        for (int i = 0; i < Random.Range(6,12); i++)
-        {
-            var t = wallManager.SpawnRandomWall(_tileArray);
-            LevelWalls.Add(t);
-            RaiseAllPlatforms(t);
-        }
-        yield return new WaitForSeconds(0.4f);
-        navmeshSurface.BuildNavMesh();  
-    }
 
-    private IEnumerator LowerPlatforms()
+    private void GetPath(List<List<Node>> nodes)
     {
-        foreach (var go in LevelPaths)
+        nodes.Add(pathFinding.ReturnPath());
+        foreach (var go in nodes)
         {
             foreach (var node in go)
             {
-                LowerPlatform(node.platform);
+                node.InUse = true;
+           
             }
             
         }
-        yield return new WaitForSeconds(0.4f);
-        navmeshSurface.BuildNavMesh(); 
     }
-
-    private void ResetPlatforms()
-    {
-        foreach (var go in LevelWalls)
-        {
-            LowerPlatformSection(go);
-        }
-
-        foreach (var go in LevelRooms)
-        {
-            LowerPlatformSection(go);
-        }
-    }
-
-    public void RaisePlatform(GameObject wall)
-    {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,
-            wall.transform.position.y + 5f, wall.transform.position.z), 1f));
-            
 }
-    public void LowerPlatform(GameObject wall)
-    {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,0f, wall.transform.position.z), 1f));
-            
-    }
-    private void RaiseAllPlatforms(GameObject[,] wall)
-    {
-        foreach (var go in wall)
-        {
-            if (go)
-            {
-                StartCoroutine(LerpTransformPosition(go.transform, new Vector3(go.transform.position.x,
-                    go.transform.position.y + 5f
-                    , go.transform.position.z), 1f));
-            }
-        }
-    }
     
-    private IEnumerator LowerAllPlatforms()
-    {
-        foreach (var raisedPlatformGroup in LevelPlatforms)
-        {
-            foreach (var go in raisedPlatformGroup)
-            {
-                LowerPlatformSection(go); ;
-            }
-        }
-        
-        foreach (var raisedPlatformGroup in LevelPlatforms)
-        {
-            foreach (var go in raisedPlatformGroup)
-            {
-                BalanceSection(go);
-            }
-        }
-
-
-        foreach (var go in Stairs)
-        {
-            var targetVector = go.transform.position;
-            targetVector.y = -5f;
-            StartCoroutine(LerpTransformPosition(go.transform, targetVector, 0.125f));
-        }
-        yield return new WaitForSeconds(0.25f);
-        navmeshSurface.BuildNavMesh();
-    }
-    private void LowerPlatformSection(GameObject[,] platforms)
-    {
-        foreach (var platform in platforms)
-        {
-            StartCoroutine(LerpTransformPosition(platform.transform, new Vector3(platform.transform.position.x,
-                 0f, platform.transform.position.z), 1f));
-        }
-    }
-    private void BalanceSection(GameObject[,] platforms)
-    {
-        float v;
-        foreach (var platform in platforms)
-        {
-            var transformPosition = platform.transform.position;
-            v = transformPosition.y;
-            float x =Mathf.Round(v);
-            transformPosition.y = x;
-            platform.transform.position = transformPosition;
-        }
-    }
-
-    private void LowerGroupOfPlatform()
-    {
-        var length = LevelWalls.Count;
-        var toRemove = length / 3;
-
-        for (int i = 0; i < toRemove; i++)
-        {
-            var number = Random.Range(0, LevelWalls.Count);
-            LowerPlatformSection(LevelWalls[i]);
-            LevelWalls.RemoveAt(i);
-        }
-    }
-    public void AddStairToList(GameObject stair)
-    {
-        Stairs.Add(stair);
-    }
-
-    private void GetPath()
-    {
-        LevelPaths.Add(pathFinding.ReturnPath());
-    }
-    protected IEnumerator LerpTransformPosition(Transform transform, Vector3 target, float duration)
-    {
-        Transform startPosition = transform;
-        float timer = 0f;
-        float _duration = duration;
-        while (timer < _duration)
-        {
-            timer += Time.deltaTime;
-            float percentage = Mathf.Min(timer / _duration, 1);
-            transform.position = Vector3.Lerp(startPosition.position, target, percentage);
-            yield return null;
-        }
-
-        transform.position = target;
-    }
-
-    
-  
-}
 
 
