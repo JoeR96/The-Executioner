@@ -20,6 +20,7 @@ public class Pathfinding : MonoBehaviour
     {
         InitializePath();
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
     [SerializeField] private Material[] Colours;
     public void SpawnPaths()
@@ -43,6 +44,8 @@ public class Pathfinding : MonoBehaviour
         
 =======
 >>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
+=======
+>>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
     }
     private void SetSpawnPositions()
     {
@@ -54,8 +57,13 @@ public class Pathfinding : MonoBehaviour
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         var t = FindPath (ReturnTransform().position, ReturnTransform().position);
         return t;
+=======
+        
+        FindPath (ReturnTransform().position, ReturnTransform().position);
+>>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
 =======
         
         FindPath (ReturnTransform().position, ReturnTransform().position);
@@ -99,9 +107,13 @@ public class Pathfinding : MonoBehaviour
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             var t = grid.GetNeighbour(node);
             foreach (var neighbour in t) {
                 
+=======
+            foreach (Node neighbour in grid.GetNeighbours(node)) {
+>>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
 =======
             foreach (Node neighbour in grid.GetNeighbours(node)) {
 >>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
