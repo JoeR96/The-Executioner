@@ -19,6 +19,7 @@ public class Pathfinding : MonoBehaviour
     private void Start()
     {
         InitializePath();
+<<<<<<< HEAD
     }
     [SerializeField] private Material[] Colours;
     public void SpawnPaths()
@@ -40,6 +41,8 @@ public class Pathfinding : MonoBehaviour
             g.platform.GetComponent<MeshRenderer>().material = material;
         }
         
+=======
+>>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
     }
     private void SetSpawnPositions()
     {
@@ -50,8 +53,13 @@ public class Pathfinding : MonoBehaviour
     public List<Node> InitializePath()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         var t = FindPath (ReturnTransform().position, ReturnTransform().position);
         return t;
+=======
+        
+        FindPath (ReturnTransform().position, ReturnTransform().position);
+>>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
 =======
         
         FindPath (ReturnTransform().position, ReturnTransform().position);
@@ -90,9 +98,13 @@ public class Pathfinding : MonoBehaviour
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             var t = grid.GetNeighbour(node);
             foreach (var neighbour in t) {
                 
+=======
+            foreach (Node neighbour in grid.GetNeighbours(node)) {
+>>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
 =======
             foreach (Node neighbour in grid.GetNeighbours(node)) {
 >>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)

@@ -93,7 +93,10 @@
     <option name="CHANGED_PATHS">
       <list>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
         <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterLocomotion.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterAiming.cs" />
@@ -143,12 +146,18 @@
         <option value="$PROJECT_DIR$/Assets/PathFinding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Assets/StairCheck.cs" />
         <option value="$PROJECT_DIR$/Assets/Grid.cs" />
         <option value="$PROJECT_DIR$/Assets/PlatformState.cs" />
         <option value="$PROJECT_DIR$/Assets/PlatformManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Pathfinding.cs" />
+=======
+        <option value="$PROJECT_DIR$/Assets/PlatformState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Pathfinding.cs" />
+        <option value="$PROJECT_DIR$/Assets/Grid.cs" />
+>>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
 =======
         <option value="$PROJECT_DIR$/Assets/PlatformState.cs" />
         <option value="$PROJECT_DIR$/Assets/Pathfinding.cs" />
@@ -199,6 +208,7 @@
       <workItem from="1613697545188" duration="37839000" />
       <workItem from="1613766017256" duration="6112000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1613856326037" duration="6581000" />
       <workItem from="1613874085337" duration="10194000" />
       <workItem from="1613933080025" duration="7573000" />
@@ -206,6 +216,8 @@
       <workItem from="1613952320403" duration="1696000" />
       <workItem from="1613955244224" duration="8308000" />
       <workItem from="1614103318633" duration="7312000" />
+=======
+>>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
 =======
 >>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
     </task>
@@ -265,8 +277,13 @@
     <state x="311" y="14" width="992" height="1380" key="dock-window-1/2560.0.3440.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613572976756" />
     <state x="4120" y="0" width="1887" height="1405" key="dock-window-1/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613659032737" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <state x="503" y="251" width="2291" height="877" key="find.popup" timestamp="1614106907051">
       <screen x="0" y="0" width="3440" height="1440" />
+=======
+    <state x="566" y="410" width="739" height="852" key="find.popup" timestamp="1613775815876">
+      <screen x="0" y="0" width="2560" height="1400" />
+>>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
 =======
     <state x="566" y="410" width="739" height="852" key="find.popup" timestamp="1613775815876">
       <screen x="0" y="0" width="2560" height="1400" />
