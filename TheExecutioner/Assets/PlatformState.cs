@@ -14,27 +14,28 @@ public class PlatformState : MonoBehaviour
     [SerializeField] public GameObject spawnPoint;
     [SerializeField] private int boundarySize;
 
-    public bool PlatformIsActive = false;
+    public bool SpawnInUse;
     public int X;
     public int Z;
 
     public GameObject[,] connectingPlatforms = new GameObject[2,2];
-    
+
+    public bool PlatformInUse = false;
 
     private void Start()
     {
         var x = Random.Range(0, 16);
-        if (x == 18)
-        {
-            var t = Instantiate(randomSpawnPickups[0],spawnPoint.transform.position,Quaternion.identity);
-            t.transform.SetParent(spawnPoint.transform);
-        }
-        
-        if (x == 10)
-        {
-            var t = Instantiate(randomSpawnPickups[1],spawnPoint.transform.position,Quaternion.identity);
-            t.transform.SetParent(spawnPoint.transform);
-        }
+        // if (x == 15)
+        // {
+        //     var t = Instantiate(randomSpawnPickups[0],spawnPoint.transform.position,Quaternion.identity);
+        //     t.transform.SetParent(spawnPoint.transform);
+        // }
+        //
+        // if (x == 10)
+        // {
+        //     var t = Instantiate(randomSpawnPickups[1],spawnPoint.transform.position,Quaternion.identity);
+        //     t.transform.SetParent(spawnPoint.transform);
+        // }
             
        // connectingPlatforms[1, 1] = gameObject;
     }
@@ -44,10 +45,7 @@ public class PlatformState : MonoBehaviour
 
     }
 
-    public void SetPlatformState(bool state)
-    {
-        PlatformIsActive = state;
-    }
+    
 
     private GameObject[,] CheckAdjacentPositions()
     {
@@ -75,15 +73,8 @@ public class PlatformState : MonoBehaviour
         raycastHolder.transform.position = new Vector3(x,transform.position.y,z);
     }
 
-    public void ActivateStairs()
-    {
-        stairs.gameObject.SetActive(true);
-    }
-    public Node Node;
-    public void SetNode(Node node)
-    {
-        Node = node;
-    }
+    
+
     private GameObject FireRay(int xPos, int zPos)
     {
         raycastHolder.transform.position = new Vector3(xPos,transform.position.y,zPos);

@@ -7,16 +7,14 @@ using System.Security.Cryptography;
 public class Grid : MonoBehaviour
 {
 
-	
 	public Transform CubeParent;
 	public LayerMask unwalkableMask;
 	public Vector2 gridWorldSize;
 	public float nodeRadius;
-	public Node[,] grid;
-	public GameObject stairs;
-	float nodeDiameter;
-	public int gridSizeX, gridSizeY;
+	Node[,] grid;
 
+	float nodeDiameter;
+	int gridSizeX, gridSizeY;
 
 	void Awake()
 	{
@@ -54,25 +52,28 @@ public class Grid : MonoBehaviour
 		
 	}
 
-	public Node[,] GetNeighbours(Node node) {
-		Node[,] adjacent = new Node[3,3];
+	public List<Node> GetNeighbours(Node node)
+	{
+		List<Node> neighbours = new List<Node>();
 
-		for (int x = -1; x <= 1; x++) {
-			for (int y = -1; y <= 1; y++) {
+		for (int x = -1; x <= 1; x++)
+		{
+			for (int y = -1; y <= 1; y++)
+			{
 				if (x == 0 && y == 0)
 					continue;
 
 				int checkX = node.gridX + x;
 				int checkY = node.gridY + y;
 
-				if (checkX >= 0 && checkX < gridSizeX && checkY >= 0 && checkY < gridSizeY) {
-					adjacent[x +1, y +1] = grid[checkX , checkY];
-
+				if (checkX >= 0 && checkX < gridSizeX && checkY >= 0 && checkY < gridSizeY)
+				{
+					neighbours.Add(grid[checkX, checkY]);
 				}
 			}
 		}
-        adjacent[1, 1] = node;
-		return adjacent;
+
+		return neighbours;
 	}
 
 
@@ -108,33 +109,23 @@ public class Grid : MonoBehaviour
 		Vector3 spawnPosition;
 		foreach (Node n in grid)
 		{
-			Debug.Log(grid.Length);
-			Debug.Log(pathMaster.Count);
-			for (int i = 0; i < GameManager.instance.EnvironmentManager.LevelPaths.Count; i++)
+			foreach (var path in pathMaster)
 			{
-	
-				if (GameManager.instance.EnvironmentManager.LevelPaths[i] != null)
+
+				if (path != null)
 				{
-					spawnPosition = GameManager.instance.EnvironmentManager.LevelPaths[i][0].worldPosition;
-					var stair =Instantiate(stairs, spawnPosition, Quaternion.identity);
-					SpawnedObjects.Add(stair);
-
-
-					if (GameManager.instance.EnvironmentManager.LevelPaths[i].Contains(n))
+					if (path.Contains(n))
 					{
 						spawnPosition = n.worldPosition;
-						spawnPosition.y = 18f;
-				
-						var t = Instantiate(testCube, spawnPosition, Quaternion.identity);
-							SpawnedObjects.Add(t);
-
+						spawnPosition.y = 0f;
+						var t =Instantiate(testCube, spawnPosition, Quaternion.identity);
+						SpawnedObjects.Add(t);
 					}
 				}
 			}
-			
 		}
 	}
-	void SpawnPlatform()
+void SpawnPlatform()
 	{
 		Vector3 spawnPosition;
 		foreach (Node n in grid)
@@ -146,36 +137,12 @@ public class Grid : MonoBehaviour
 			_.transform.SetParent(CubeParent);
 			_.GetComponent<PlatformState>().Setint(n.gridX, n.gridY);
 			n.SetPlatformToNode(_.gameObject);
-			_.GetComponent<PlatformState>().SetNode(n);
 		}
 	}
-	public List<Node> GetNeighbour(Node node) {
-		List<Node> neighbours = new List<Node>();
+}
 
-		for (int x = -1; x <= 1; x++) {
-			for (int y = -1; y <= 1; y++) {
-				if (x == 0 && y == 0)
-					continue;
-
-				int checkX = node.gridX + x;
-				int checkY = node.gridY + y;
-
-				if (checkX >= 0 && checkX < gridSizeX && checkY >= 0 && checkY < gridSizeY) {
-					neighbours.Add(grid[checkX,checkY]);
-				}
-			}
-		}
-
-		return neighbours;
-	}
-
-	}
-
-public class Node
-{
-
-
-	public bool InUse;
+public class Node {
+	
 	public bool walkable;
 	public Vector3 worldPosition;
 	public Vector2 GridPosition;

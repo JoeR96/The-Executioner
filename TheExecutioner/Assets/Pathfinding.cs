@@ -13,12 +13,12 @@ public class Pathfinding : MonoBehaviour
 
     void Awake() 
     {
-        grid = GetComponent<Grid>();
+        grid = GetComponent<Grid> ();
     }
 
     private void Start()
     {
-        
+        InitializePath();
     }
     [SerializeField] private Material[] Colours;
     public void SpawnPaths()
@@ -43,13 +43,19 @@ public class Pathfinding : MonoBehaviour
     }
     private void SetSpawnPositions()
     {
+
         seeker = ReturnTransform();
         target = ReturnTransform();
     }
     public List<Node> InitializePath()
     {
+<<<<<<< HEAD
         var t = FindPath (ReturnTransform().position, ReturnTransform().position);
         return t;
+=======
+        
+        FindPath (ReturnTransform().position, ReturnTransform().position);
+>>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
     }
     private Transform ReturnTransform()
     {
@@ -83,9 +89,13 @@ public class Pathfinding : MonoBehaviour
                 RetracePath(startNode,targetNode);
             }
 
+<<<<<<< HEAD
             var t = grid.GetNeighbour(node);
             foreach (var neighbour in t) {
                 
+=======
+            foreach (Node neighbour in grid.GetNeighbours(node)) {
+>>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
                 if (!neighbour.walkable || closedSet.Contains(neighbour)) {
                     continue;
                 }
@@ -118,7 +128,14 @@ public class Pathfinding : MonoBehaviour
         return path;
     }
 
+<<<<<<< HEAD
 
+=======
+    public List<Node> ReturnPath()
+    {
+        return path;
+    }
+>>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
     int GetDistance(Node nodeA, Node nodeB) {
         int dstX = Mathf.Abs(nodeA.gridX - nodeB.gridX);
         int dstY = Mathf.Abs(nodeA.gridY - nodeB.gridY);
@@ -127,6 +144,4 @@ public class Pathfinding : MonoBehaviour
             return 14*dstY + 10* (dstX-dstY);
         return 14*dstX + 10 * (dstY-dstX);
     }
-
-    
 }
