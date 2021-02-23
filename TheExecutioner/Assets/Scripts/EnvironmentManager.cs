@@ -23,7 +23,7 @@ public class EnvironmentManager : MonoBehaviour
     private RoomManager roomManager;
     private Pathfinding pathFinding;
     private NavMeshSurface navmeshSurface;
-    private PlatformManager platformManager;
+    public PlatformManager platformManager;
     private EnvironmentSpawner environmentSpawner;
     private Grid grid;
 
@@ -34,11 +34,12 @@ public class EnvironmentManager : MonoBehaviour
     private List<GameObject> Stairs = new List<GameObject>();
     private List<List<GameObject[,]>> LevelPlatforms = new List<List<GameObject[,]>>();
     public List<List<Node>> LevelPaths = new List<List<Node>>();
-    public List<List<Node>> LevelBunkers = new List<List<Node>>();
 
-    public Material Blue;
-    public Material Yellow;
-
+    public void ClearPaths()
+    {
+        LowerAllPathPlatforms();
+        LevelPaths.Clear();
+    }
 
     //public GameObject floorContainer;
     //Instantiate(floorContainer, n.worldPosition, quaternion.identity);
@@ -54,92 +55,35 @@ public class EnvironmentManager : MonoBehaviour
         LevelPlatforms.Add(LevelWalls);
         grid = GetComponent<Grid>();
     }
-
- 
-    private void Start()
-    {
-        for (int i = 0; i < Random.Range(2,5); i++)
-        {
-            SpawnBunkers();
-        }
-         // for (int i = 0; i < Random.Range(2,5); i++)
-         // {
-         //     SpawnPaths();
-         // }
-        
-
-        
-        
-
-        // _tileArray = environmentSpawner.SpawnGrid(floorContainer, gridX, gridZ, 0, gridSpaceOffset,CubeParent);
-        //navmeshSurface.BuildNavMesh();
-    }
-
- 
-
-    private void ChangePathColor(Material material,List<List<Node>> list)
-    {
-        foreach (var go in list)
-        {
-            foreach (var g in go)
-            {
-                g.platform.GetComponent<MeshRenderer>().material = material;
-            }
-        }
-    }
-    private void SpawnPaths()
-    {
-        GetPath(LevelPaths);
-        pathFinding.InitializePath();
-        SpawnStairs();
-        ChangePathColor(Blue, LevelBunkers);
-        foreach (var go in LevelPaths)
-        {
-            foreach (var VARIABLE in go)
-            {
-                platformManager.LowerPlatform(VARIABLE.platform);
-                var nodeInUse = VARIABLE.platform.GetComponent<PlatformState>();
-                nodeInUse.PlatformIsActive = true;
-            }
-        }
-       
-    }
     
-    private void SpawnBunkers()
+    private void ChangePathColor(Material material,List<Node> list)
     {
-        GetPath(LevelBunkers);
-        pathFinding.InitializePath();
-        SpawnStairs();
-        ChangePathColor(Yellow,LevelPaths);
-        foreach (var go in LevelBunkers)
-        {
-            foreach (var VARIABLE in go)
+        foreach (var g in list)
             {
-                platformManager.RaisePlatform(VARIABLE.platform);
-                var nodeInUse = VARIABLE.platform.GetComponent<PlatformState>();
-                nodeInUse.PlatformIsActive = true;
+                g.platform.GetComponent<MeshRenderer>().material.color = material.color;
             }
+        
+    }
+
+    [SerializeField] private Material[] Colours;
+    public void SpawnPaths()
+    {
+        var random = Random.Range(0, Colours.Length);
+        var path = GetPath(LevelPaths);
+        foreach (var t in path)
+        {
+            if (t.InUse)
+            {
+                path.
+            }
+            t.InUse = true;
         }
+        pathFinding.InitializePath();
+        ChangePathColor(Colours[random], path);
     }
     private void Update()
     {
 
-
-        if (Input.GetKeyDown(KeyCode.F1))
-        {
-            SpawnPaths();
-        }
-
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
-            SpawnBunkers();
-        }
-
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            platformManager.LowerMultiplePlatformSection(LevelPaths);
-            platformManager.LowerMultiplePlatformSection(LevelBunkers);
-        }
 
         if (Input.GetKeyDown(KeyCode.F12))
         {
@@ -153,16 +97,7 @@ public class EnvironmentManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.V))
         {
-
-            foreach (var go in LevelPaths)
-            {
-                foreach (var VARIABLE in go)
-                {
-                    platformManager.RaisePlatform(VARIABLE.platform);
-                    var nodeInUse = VARIABLE.platform.GetComponent<PlatformState>();
-                    nodeInUse.PlatformIsActive = true;
-                }
-            }
+            RaiseAllPathPlatforms();
         }
 
         if (Input.GetKeyDown(KeyCode.B))
@@ -171,7 +106,30 @@ public class EnvironmentManager : MonoBehaviour
         }
 
     }
-
+    public void RaiseAllPathPlatforms()
+    {
+        foreach (var go in LevelPaths)
+        {
+            foreach (var VARIABLE in go)
+            {
+                platformManager.RaisePlatform(VARIABLE.platform);
+                var nodeInUse = VARIABLE.platform.GetComponent<PlatformState>();
+                nodeInUse.PlatformIsActive = true;
+            }
+        }
+    }
+    public void LowerAllPathPlatforms()
+    {
+        foreach (var go in LevelPaths)
+        {
+            foreach (var VARIABLE in go)
+            {
+                platformManager.LowerPlatform(VARIABLE.platform);
+                var nodeInUse = VARIABLE.platform.GetComponent<PlatformState>();
+                nodeInUse.PlatformIsActive = true;
+            }
+        }
+    }
     void SmoothMap()
     {
 
@@ -212,21 +170,11 @@ public class EnvironmentManager : MonoBehaviour
             }
         }
     }
-
-    private bool IsplatformIsBelow()
-    {
-
-        {
-            return false;
-        }
-    }
-
     public void BuildNavMesh()
     {
         navmeshSurface.BuildNavMesh();
     }
-
-    private void SpawnStairs()
+    public void SpawnStairs()
     {
         List<Node> stairSpawns = new List<Node>();
         for (int i = 0; i < LevelPaths.Count; i++)
@@ -234,8 +182,7 @@ public class EnvironmentManager : MonoBehaviour
             var path = ReturnRandomPath();
                 var node = GetRandomNode(path);
                 var adjacent = CheckAdjacentPositions(node);
-                
-                //The purpose of checking twice here is to ensure there is nothing blocking the platform leading to the stairs
+
                     if (!ReturnStairSpawnStatus(2, 1, adjacent))
                     {
                         if(!ReturnStairSpawnStatus(2,0,adjacent))
@@ -272,58 +219,13 @@ public class EnvironmentManager : MonoBehaviour
                            t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x, transform.localRotation.eulerAngles.y + 270, transform.localRotation.eulerAngles.z);
                         }
                     }
-                
-                
-             
-                    
-                    //GameManager.instance.EnvironmentManager.platformManager.RaisePlatform(go.platform);
-                
-                //Vector3 spawnPosition = new Vector3(spawnPos.GridPosition.x +3f, 20f, spawnPos.GridPosition.y);
-                
-                //y.transform.rotation *= Quaternion.Euler(0,90,0);
-            
+
         }
     }
-
     private bool ReturnStairSpawnStatus(int x,int y,Node[,] platformGroup)
     {
         return platformGroup[ x,  y].InUse;
     }
-    private static Vector3 SpawnPos(List<Node> stairSpawns, int random)
-    {
-        var spawnPos = stairSpawns[random].worldPosition;
-        return spawnPos;
-    }
-
-    private Node[,] CheckAdjacentPosition(Node node)
-    {
-      
-        Node[,] adjacent;
-        adjacent = new Node[3, 3];
-
-        int counterr = 0;
-        var gridX = node.gridX -1;
-        var gridY = node.gridY -1;
-
-
-        int counter = 0;
-        for (int x = 0; x < adjacent.GetLength(0) ; x++)
-        {
-            for (int z = 0; z < adjacent.GetLength(1); z++)
-            {
-                Debug.Log(grid.grid.Length);
-                var t  = grid.grid[x + gridX, z + gridY];
-                adjacent[z, x] = t;
-                // Debug.Log(grid.grid[x,z].gridX + " + " + grid.grid[x,z].gridY);
-                // Debug.Log(gridX + " " + gridY);
-                    counter++;
-
-            }
-        }
-
-        return adjacent;
-    }
-
     private Node[,] CheckAdjacentPositions(Node node)
     {
         
@@ -343,7 +245,7 @@ public class EnvironmentManager : MonoBehaviour
     }
     
 
-private Node GetRandomNode(List<Node> nodes)
+    private Node GetRandomNode(List<Node> nodes)
     {
         var random = Random.Range(0, nodes.Count);
         var node = nodes[random];
@@ -353,6 +255,10 @@ private Node GetRandomNode(List<Node> nodes)
     {
         var random = Random.Range(0, LevelPaths.Count);
         var path = LevelPaths[random];
+        foreach (var go in path)
+        {
+            go.InUse = true;
+        }
         return path;
     }
 
@@ -361,18 +267,24 @@ private Node GetRandomNode(List<Node> nodes)
         return _tileArray;
     }
 
-    private void GetPath(List<List<Node>> nodes)
+    private List<Node> GetPath(List<List<Node>> nodes)
     {
-        nodes.Add(pathFinding.ReturnPath());
+        var t = pathFinding.ReturnPath();
+        
         foreach (var go in nodes)
         {
             foreach (var node in go)
             {
                 node.InUse = true;
-           
             }
-            
         }
+        
+        return t;
+    }
+
+    public void RaiseAllPaths()
+    {
+        
     }
 }
     

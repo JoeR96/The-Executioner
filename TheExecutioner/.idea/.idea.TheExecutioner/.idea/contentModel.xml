@@ -83,6 +83,9 @@
             <e p="ThirdPersonController.cs" t="Include" />
           </e>
           <e p="CrosshairTarget.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="EnvironmentManagerEditor.cs" t="Include" />
+          </e>
           <e p="EnvironmentManager.cs" t="Include" />
           <e p="EnvironmentSpawner.cs" t="Include" />
           <e p="Events" t="Include">

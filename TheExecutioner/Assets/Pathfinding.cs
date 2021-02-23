@@ -20,17 +20,36 @@ public class Pathfinding : MonoBehaviour
     {
         
     }
-    
+    [SerializeField] private Material[] Colours;
+    public void SpawnPaths()
+    {
+        var random = Random.Range(0, Colours.Length);
+        var path = InitializePath();
+        
+        foreach (var node in path)
+        {
+            Debug.Log(path.Count);
+            node.InUse = true;
+        }
+        ChangePathColor(Colours[random],path);
+    }
+    private void ChangePathColor(Material material,List<Node> list)
+    {
+        foreach (var g in list)
+        {
+            g.platform.GetComponent<MeshRenderer>().material = material;
+        }
+        
+    }
     private void SetSpawnPositions()
     {
         seeker = ReturnTransform();
         target = ReturnTransform();
     }
-    public void InitializePath()
+    public List<Node> InitializePath()
     {
-        FindPath (ReturnTransform().position, ReturnTransform().position);
-        Debug.Log(grid.grid);
-
+        var t = FindPath (ReturnTransform().position, ReturnTransform().position);
+        return t;
     }
     private Transform ReturnTransform()
     {
@@ -38,8 +57,9 @@ public class Pathfinding : MonoBehaviour
         return targets[random];
     }
 
-    void FindPath(Vector3 startPos, Vector3 targetPos)
+    List<Node> FindPath(Vector3 startPos, Vector3 targetPos)
      {
+         List<Node> path = new List<Node>();
         Node startNode = grid.NodeFromWorldPoint(startPos);
         Node targetNode = grid.NodeFromWorldPoint(targetPos);
 
@@ -61,14 +81,9 @@ public class Pathfinding : MonoBehaviour
 
             if (node == targetNode) {
                 RetracePath(startNode,targetNode);
-                return;
             }
 
             var t = grid.GetNeighbour(node);
-            foreach (var go in t)
-            {
-            
-            }
             foreach (var neighbour in t) {
                 
                 if (!neighbour.walkable || closedSet.Contains(neighbour)) {
@@ -86,29 +101,24 @@ public class Pathfinding : MonoBehaviour
                 }
             }
         }
-    }
-    List<Node> path = new List<Node>();
+
+        return null;
+     }
+    
     public List<Node> RetracePath(Node startNode, Node endNode) {
         
         Node currentNode = endNode;
-
+        List<Node> path = new List<Node>();
+        
         while (currentNode != startNode) {
             path.Add(currentNode);
             currentNode = currentNode.parent;
         }
         path.Reverse();
         return path;
-        //grid.Path = path;
     }
 
-    public List<Node> ReturnPath()
-    {
-        foreach (var node in path)
-        {
-            node.InUse = true;
-        }
-        return path;
-    }
+
     int GetDistance(Node nodeA, Node nodeB) {
         int dstX = Mathf.Abs(nodeA.gridX - nodeB.gridX);
         int dstY = Mathf.Abs(nodeA.gridY - nodeB.gridY);
