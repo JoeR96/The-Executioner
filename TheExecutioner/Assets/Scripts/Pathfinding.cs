@@ -13,73 +13,33 @@ public class Pathfinding : MonoBehaviour
 
     void Awake() 
     {
-        grid = GetComponent<Grid> ();
+        grid = GetComponent<Grid>();
     }
 
     private void Start()
     {
-        InitializePath();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-    [SerializeField] private Material[] Colours;
-    public void SpawnPaths()
-    {
-        var random = Random.Range(0, Colours.Length);
-        var path = InitializePath();
         
-        foreach (var node in path)
-        {
-            Debug.Log(path.Count);
-            node.InUse = true;
-        }
-        ChangePathColor(Colours[random],path);
     }
-    private void ChangePathColor(Material material,List<Node> list)
-    {
-        foreach (var g in list)
-        {
-            g.platform.GetComponent<MeshRenderer>().material = material;
-        }
-        
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-    }
+    
     private void SetSpawnPositions()
     {
-
         seeker = ReturnTransform();
         target = ReturnTransform();
     }
-    public List<Node> InitializePath()
+
+    public Vector3 StartPosition;
+    public Vector3 EndPosition;
+    public void InitializePath()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        var t = FindPath (ReturnTransform().position, ReturnTransform().position);
-        return t;
-=======
+        path.Clear();
         
-        FindPath (ReturnTransform().position, ReturnTransform().position);
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
+         StartPosition = new Vector3(Random.Range(-45,45),0,Random.Range(-45,45));
+         EndPosition = new Vector3(Random.Range(-45,45),0,Random.Range(-45,45));
         
-        FindPath (ReturnTransform().position, ReturnTransform().position);
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
+         FindPath (StartPosition, EndPosition);
+
         
-        FindPath (ReturnTransform().position, ReturnTransform().position);
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
         
-        FindPath (ReturnTransform().position, ReturnTransform().position);
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
     }
     private Transform ReturnTransform()
     {
@@ -87,9 +47,8 @@ public class Pathfinding : MonoBehaviour
         return targets[random];
     }
 
-    List<Node> FindPath(Vector3 startPos, Vector3 targetPos)
+    void FindPath(Vector3 startPos, Vector3 targetPos)
      {
-         List<Node> path = new List<Node>();
         Node startNode = grid.NodeFromWorldPoint(startPos);
         Node targetNode = grid.NodeFromWorldPoint(targetPos);
 
@@ -111,27 +70,16 @@ public class Pathfinding : MonoBehaviour
 
             if (node == targetNode) {
                 RetracePath(startNode,targetNode);
+                return;
             }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             var t = grid.GetNeighbour(node);
+            foreach (var go in t)
+            {
+            
+            }
             foreach (var neighbour in t) {
                 
-=======
-            foreach (Node neighbour in grid.GetNeighbours(node)) {
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-            foreach (Node neighbour in grid.GetNeighbours(node)) {
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-            foreach (Node neighbour in grid.GetNeighbours(node)) {
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-            foreach (Node neighbour in grid.GetNeighbours(node)) {
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
                 if (!neighbour.walkable || closedSet.Contains(neighbour)) {
                     continue;
                 }
@@ -147,31 +95,29 @@ public class Pathfinding : MonoBehaviour
                 }
             }
         }
-
-        return null;
-     }
-    
+    }
+    List<Node> path = new List<Node>();
     public List<Node> RetracePath(Node startNode, Node endNode) {
         
         Node currentNode = endNode;
-        List<Node> path = new List<Node>();
-        
+
         while (currentNode != startNode) {
             path.Add(currentNode);
             currentNode = currentNode.parent;
         }
         path.Reverse();
         return path;
+        //grid.Path = path;
     }
 
-<<<<<<< HEAD
-
-=======
     public List<Node> ReturnPath()
     {
+        foreach (var node in path)
+        {
+            node.InUse = true;
+        }
         return path;
     }
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
     int GetDistance(Node nodeA, Node nodeB) {
         int dstX = Mathf.Abs(nodeA.gridX - nodeB.gridX);
         int dstY = Mathf.Abs(nodeA.gridY - nodeB.gridY);
@@ -180,4 +126,6 @@ public class Pathfinding : MonoBehaviour
             return 14*dstY + 10* (dstX-dstY);
         return 14*dstX + 10 * (dstY-dstX);
     }
+
+    
 }

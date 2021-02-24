@@ -7,18 +7,17 @@ public class StairCheck : MonoBehaviour
     [SerializeField] private GameObject stair;
     [SerializeField] private GameObject raycastHolder;
 
+    public int X;
+    public int Y;
     private int[] rotations = new int[4];
     // Start is called before the first frame update
-    void Start()
-    {
-        rotations[0] = 0;
-        rotations[1] = 90;
-        rotations[2] = 180;
-        rotations[3] = 270;
-       // Invoke("SetRandomRotation",1f);
-     
-    }
 
+
+    public void SetInt(int x, int z)
+    {
+        X = x;
+        Y = z;
+    }
     private void SetRandomRotation()
     {
         Debug.Log("SET");
@@ -44,16 +43,4 @@ public class StairCheck : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("TRIGGA");
-        if (other.CompareTag("Cube"))
-        {
-            Debug.Log("HERE");
-            stair.transform.position = new Vector3(stair.transform.position.x, stair.transform.position.y + 5f,
-                stair.transform.position.z);
-
-        }
-    }
-    
 }

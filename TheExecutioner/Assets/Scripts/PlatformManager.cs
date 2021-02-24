@@ -18,7 +18,7 @@ using UnityEngine;
     }
     public void LowerPlatform(GameObject wall)
     {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,0f, wall.transform.position.z), 1f));
+        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,transform.position.y -5f, wall.transform.position.z), 1f));
             
     }
     public void LowerMultiplePlatformSection(List<List<Node>> PlatformArray)

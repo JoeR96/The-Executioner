@@ -8,877 +8,340 @@ using Unity.Mathematics;
 using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.ProBuilder;
 using Random = UnityEngine.Random;
+
+
 
 [HideInInspector]
 public class EnvironmentManager : MonoBehaviour
 {
-    public NavMeshSurface[] surfaces;
-    public Transform NavMeshObject;
-    public Transform CubeParent;
-    
-    public GameObject floorContainer;
-    private GameObject[,] _tileArray;
 
-    private EdgeSpawnPlatform edgeSpawnPlatform;
-    private EnvironmentSpawner environmentSpawner;
+    public GameObject stairs;
+    public Transform NavMeshObject;
+    private GameObject[,] _tileArray;
     private WallManager wallManager;
     private RoomManager roomManager;
     private Pathfinding pathFinding;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     private NavMeshSurface navmeshSurface;
-    public PlatformManager platformManager;
+    public PlatformManager PlatformManager;
     private EnvironmentSpawner environmentSpawner;
     private Grid grid;
-=======
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-    //coordinates for grid spawner
-    public int gridX;
-    public int gridZ;
-    public int y;
-    public int gridSpaceOffset;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
 
-    private NavMeshSurface navmeshSurface;
     private List<GameObject[,]> EntranceSpawnTile = new List<GameObject[,]>();
     private List<GameObject[,]> LevelWalls = new List<GameObject[,]>();
     private List<GameObject[,]> LevelRooms = new List<GameObject[,]>();
     private List<GameObject[,]> RandomPlatforms = new List<GameObject[,]>();
     private List<GameObject> Stairs = new List<GameObject>();
     private List<List<GameObject[,]>> LevelPlatforms = new List<List<GameObject[,]>>();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     public List<List<Node>> LevelPaths = new List<List<Node>>();
+    public List<List<Node>> LevelBunkers = new List<List<Node>>();
 
-    public void ClearPaths()
+    public Material Blue;
+    public Material Yellow;
+
+
+    public void LowerAll()
     {
-        LowerAllPathPlatforms();
-        LevelPaths.Clear();
+        PlatformManager.LowerMultiplePlatformSection(LevelBunkers);
+        PlatformManager.LowerMultiplePlatformSection(LevelPaths);
     }
 
-=======
-    private List<List<Node>> LevelPaths = new List<List<Node>>();
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-    private List<List<Node>> LevelPaths = new List<List<Node>>();
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-    private List<List<Node>> LevelPaths = new List<List<Node>>();
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-    private List<List<Node>> LevelPaths = new List<List<Node>>();
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-    //public GameObject floorContainer;
-    //Instantiate(floorContainer, n.worldPosition, quaternion.identity);
     private void Awake()
     {
+        environmentSpawner = GetComponent<EnvironmentSpawner>();
         pathFinding = GetComponent<Pathfinding>();
         navmeshSurface = NavMeshObject.GetComponent<NavMeshSurface>();
         wallManager = GetComponent<WallManager>();
-        environmentSpawner = GetComponent<EnvironmentSpawner>();
         roomManager = GetComponent<RoomManager>();
-        edgeSpawnPlatform = GetComponent<EdgeSpawnPlatform>();
-        
+        PlatformManager = GetComponent<PlatformManager>();
         LevelPlatforms.Add(LevelRooms);
         LevelPlatforms.Add(LevelWalls);
-<<<<<<< HEAD
+        grid = GetComponent<Grid>();
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     
-    private void ChangePathColor(Material material,List<Node> list)
+    private void ChangePathColor(Material material,List<List<Node>> list)
     {
-        foreach (var g in list)
+        foreach (var go in list)
+        {
+            foreach (var g in go)
             {
-                g.platform.GetComponent<MeshRenderer>().material.color = material.color;
+                g.platform.GetComponent<MeshRenderer>().material = material;
             }
+        }
+    }
+
+    public Material[] Materials;
+
+    public void StartBunkers()
+    {
+        SpawnBunkers(LevelBunkers);
+    }
+    public void SpawnBunkers(List<List<Node>> Levels)
+    {
+        var path = GetPath();
+
+        Levels.Add(path);
+        pathFinding.InitializePath();
+        var material = Random.Range(0, Materials.Length);
+        //ChangePathColor(Materials[material],LevelBunkers);
+        foreach (var go in Levels)
+        {    
+            foreach (var VARIABLE in go)
+            {
+                if (!VARIABLE.InUse)
+                {
+                    VARIABLE.platform.GetComponent<PlatformState>().PlatformIsActive = true;
+                    VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material]; 
+                    PlatformManager.RaisePlatform(VARIABLE.platform);
+                }
+                    
+            }
+        }
+        SpawnStairs(path);
         
     }
 
-    [SerializeField] private Material[] Colours;
-    public void SpawnPaths()
-    {
-        var random = Random.Range(0, Colours.Length);
-        var path = GetPath(LevelPaths);
-        foreach (var t in path)
-        {
-            if (t.InUse)
-            {
-                path.
-            }
-            t.InUse = true;
-        }
-        pathFinding.InitializePath();
-        ChangePathColor(Colours[random], path);
-    }
     private void Update()
     {
-
-
-        if (Input.GetKeyDown(KeyCode.F12))
-=======
-
-    public void BuildNavMesh()
-    {
-=======
-
-    public void BuildNavMesh()
-    {
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-
-    public void BuildNavMesh()
-    {
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-        navmeshSurface.BuildNavMesh();
-    }
-    private void Start()
-    {
-        //_tileArray = environmentSpawner.SpawnGrid(floorContainer, gridX, gridZ, 0, gridSpaceOffset,CubeParent);
-        //navmeshSurface.BuildNavMesh();
-    }
-    private void Update()
-    {
-  
-        if (Input.GetKeyDown(KeyCode.F12))
+        
+        if (Input.GetKeyDown(KeyCode.X))
         {
-            navmeshSurface.BuildNavMesh();
-        }
-        if(Input.GetKeyDown(KeyCode.F1))
-        {
-            StartCoroutine(RaisePlatforms());
-
-        }
-        if(Input.GetKeyDown(KeyCode.F2))
-        {
-            StartCoroutine((SpawnWallPlatforms()));
-        }
-        if (Input.GetKeyDown(KeyCode.F3))
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-        {
-            foreach (var go in LevelPaths)
-            {
-                foreach (var VARIABLE in go)
-                {
-                    GameManager.instance.EnvironmentManager.LowerPlatform(VARIABLE.platform);
-                }
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            GetPath();
-            pathFinding.InitializePath();
-        }
-        if (Input.GetKey(KeyCode.V))
-        {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            RaiseAllPathPlatforms();
-=======
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-            foreach (var go in LevelPaths)
-            {
-                foreach (var VARIABLE in go)
-                {
-                    GameManager.instance.EnvironmentManager.RaisePlatform(VARIABLE.platform);
-                }
-            }
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-        }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-<<<<<<< HEAD
-    public void RaiseAllPathPlatforms()
-    {
-        foreach (var go in LevelPaths)
-        {
-            foreach (var VARIABLE in go)
-            {
-                platformManager.RaisePlatform(VARIABLE.platform);
-                var nodeInUse = VARIABLE.platform.GetComponent<PlatformState>();
-                nodeInUse.PlatformIsActive = true;
-            }
-        }
-    }
-    public void LowerAllPathPlatforms()
-    {
-        foreach (var go in LevelPaths)
-        {
-            foreach (var VARIABLE in go)
-            {
-                platformManager.LowerPlatform(VARIABLE.platform);
-                var nodeInUse = VARIABLE.platform.GetComponent<PlatformState>();
-                nodeInUse.PlatformIsActive = true;
-            }
-        }
-    }
-    void SmoothMap()
-=======
-
-    private IEnumerator SpawnWallPlatforms()
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-    {
-        yield return null;
-    }
-    private IEnumerator SpawnArenaEvent()
-    {
-        var arena = roomManager.SpawnArena(_tileArray);
-        LevelRooms.Add(arena);
-        foreach (var VARIABLE in arena)
-        {
-=======
-    }
-
-    private IEnumerator SpawnWallPlatforms()
-    {
-        yield return null;
-    }
-    private IEnumerator SpawnArenaEvent()
-    {
-        var arena = roomManager.SpawnArena(_tileArray);
-        LevelRooms.Add(arena);
-        foreach (var VARIABLE in arena)
-        {
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-    }
-
-    private IEnumerator SpawnWallPlatforms()
-    {
-        yield return null;
-    }
-    private IEnumerator SpawnArenaEvent()
-    {
-        var arena = roomManager.SpawnArena(_tileArray);
-        LevelRooms.Add(arena);
-        foreach (var VARIABLE in arena)
-        {
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-            StartCoroutine(LerpTransformPosition(VARIABLE.transform,
-                    new Vector3(VARIABLE.transform.position.x, 4f, VARIABLE.transform.position.z), 0.66f));
-        }
-        yield return new WaitForSeconds(0.75f);
-        navmeshSurface.BuildNavMesh();
-
-            for (int x = 0; x < Random.Range(2,3); x++)
-            {
-                for (int z = 0; z < Random.Range(2,3); z++)
-                { 
-                    var spawn = arena[x, z].GetComponent<PlatformState>().spawnPoint;
-                    
-                    var t = GameManager.instance.ZombieSpawner.SpawnZombie(spawn.transform);
-                    NavMeshObject.transform.position  = arena[x, z].gameObject.transform.position;
-                    t.transform.position = NavMeshObject.transform.position;
-                }
-            }
-
-=======
-    }
-
-    public void BuildNavMesh()
-    {
-        navmeshSurface.BuildNavMesh();
-    }
-    private void Start()
-    {
-        //_tileArray = environmentSpawner.SpawnGrid(floorContainer, gridX, gridZ, 0, gridSpaceOffset,CubeParent);
-        //navmeshSurface.BuildNavMesh();
-    }
-    private void Update()
-    {
-  
-        if (Input.GetKeyDown(KeyCode.F12))
-        {
-            navmeshSurface.BuildNavMesh();
-        }
-        if(Input.GetKeyDown(KeyCode.F1))
-        {
-            StartCoroutine(RaisePlatforms());
-
-        }
-        if(Input.GetKeyDown(KeyCode.F2))
-        {
-            StartCoroutine((SpawnWallPlatforms()));
-        }
-        if (Input.GetKeyDown(KeyCode.F3))
-        {
-            foreach (var go in LevelPaths)
-            {
-                foreach (var VARIABLE in go)
-                {
-                    GameManager.instance.EnvironmentManager.LowerPlatform(VARIABLE.platform);
-                }
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            GetPath();
-            pathFinding.InitializePath();
-        }
-        if (Input.GetKey(KeyCode.V))
-        {
-            foreach (var go in LevelPaths)
-            {
-                foreach (var VARIABLE in go)
-                {
-                    GameManager.instance.EnvironmentManager.RaisePlatform(VARIABLE.platform);
-                }
-            }
-        }
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-    }
-<<<<<<< HEAD
-    public void BuildNavMesh()
-=======
-
-<<<<<<< HEAD
-    public GameObject[,] ReturnMap()
-    {
-        return _tileArray;
-    }
-    private IEnumerator RaisePlatforms()
-    {
-=======
-    private IEnumerator SpawnWallPlatforms()
-    {
-        yield return null;
-    }
-    private IEnumerator SpawnArenaEvent()
-    {
-        var arena = roomManager.SpawnArena(_tileArray);
-        LevelRooms.Add(arena);
-        foreach (var VARIABLE in arena)
-        {
-            StartCoroutine(LerpTransformPosition(VARIABLE.transform,
-                    new Vector3(VARIABLE.transform.position.x, 4f, VARIABLE.transform.position.z), 0.66f));
-        }
-        yield return new WaitForSeconds(0.75f);
-        navmeshSurface.BuildNavMesh();
-
-            for (int x = 0; x < Random.Range(2,3); x++)
-            {
-                for (int z = 0; z < Random.Range(2,3); z++)
-                { 
-                    var spawn = arena[x, z].GetComponent<PlatformState>().spawnPoint;
-                    
-                    var t = GameManager.instance.ZombieSpawner.SpawnZombie(spawn.transform);
-                    NavMeshObject.transform.position  = arena[x, z].gameObject.transform.position;
-                    t.transform.position = NavMeshObject.transform.position;
-                }
-            }
-
-    }
-
-    public GameObject[,] ReturnMap()
-    {
-        return _tileArray;
-    }
-    private IEnumerator RaisePlatforms()
-    {
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-        for (int i = 0; i < Random.Range(6,12); i++)
-        {
-            var t = wallManager.SpawnRandomWall(_tileArray);
-            LevelWalls.Add(t);
-            RaiseAllPlatforms(t);
-        }
-        yield return new WaitForSeconds(0.4f);
-        navmeshSurface.BuildNavMesh();  
-    }
-
-    private IEnumerator LowerPlatforms()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-    {
-        foreach (var go in LevelPaths)
-        {
-            foreach (var node in go)
-            {
-                LowerPlatform(node.platform);
-            }
             
         }
-        yield return new WaitForSeconds(0.4f);
-        navmeshSurface.BuildNavMesh(); 
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public void SpawnStairs()
-=======
 
-    private void ResetPlatforms()
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-    {
-        foreach (var go in LevelWalls)
+        if (Input.GetKeyDown(KeyCode.F12))
         {
-<<<<<<< HEAD
-            var path = ReturnRandomPath();
-                var node = GetRandomNode(path);
-                var adjacent = CheckAdjacentPositions(node);
+            navmeshSurface.BuildNavMesh();
+        }
 
-                    if (!ReturnStairSpawnStatus(2, 1, adjacent))
-                    {
-                        if(!ReturnStairSpawnStatus(2,0,adjacent))
-                        {
-                            var t = Instantiate(stairs, adjacent[2,1].platform.GetComponent<PlatformState>().spawnPoint.transform.position, 
-                                quaternion.identity);
-                            t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x, transform.localRotation.eulerAngles.y , transform.localRotation.eulerAngles.z);
-                        }
-                    }
-                    if (!ReturnStairSpawnStatus(1, 2, adjacent))
-                    {
-                        if(!ReturnStairSpawnStatus(0,2,adjacent))
-                        {
-                            var t = Instantiate(stairs, adjacent[1,2].platform.GetComponent<PlatformState>().spawnPoint.transform.position, 
-                                quaternion.identity);
-                            t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x, transform.localRotation.eulerAngles.y + 90, transform.localRotation.eulerAngles.z);
-                        }
-                    }
-                    if (!ReturnStairSpawnStatus(3, 2, adjacent))
-                    {
-                        if(!ReturnStairSpawnStatus(4,2,adjacent))
-                        {
-                           var t = Instantiate(stairs, adjacent[3,2].platform.GetComponent<PlatformState>().spawnPoint.transform.position, 
-                                quaternion.identity);
-                           t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x, transform.localRotation.eulerAngles.y + 180, transform.localRotation.eulerAngles.z);
-                        }
-                    }
-                    if (!ReturnStairSpawnStatus(2, 3, adjacent))
-                    {
-                        if(!ReturnStairSpawnStatus(2,4,adjacent))
-                        {
-                           var t = Instantiate(stairs, adjacent[2,3].platform.GetComponent<PlatformState>().spawnPoint.transform.position, 
-                                quaternion.identity);
-                           t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x, transform.localRotation.eulerAngles.y + 270, transform.localRotation.eulerAngles.z);
-                        }
-                    }
 
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+
+            foreach (var go in LevelPaths)
+            {
+                foreach (var VARIABLE in go)
+                {
+                    PlatformManager.RaisePlatform(VARIABLE.platform);
+                    var nodeInUse = VARIABLE.platform.GetComponent<PlatformState>();
+                    nodeInUse.PlatformIsActive = true;
+                }
+            }
+        }
+
+    }
+
+    public void SmoothMap()
+    {
+
+        List<Node> platformsToSmooth = new List<Node>();
+        
+        for (int x = 0; x < grid.gridSizeX - 1 ; x++)
+        {
+            for (int y = 0; y < grid.gridSizeY - 1  ; y++)
+            {
+                var centre = grid.grid[x, y].platform.transform.position.y;
+                var t = CheckAdjacentPositions(grid.grid[x, y]);
+                var temp = t;
+
+                foreach (var node in temp)
+                {
+                    //check surrounding nodes are lower than current Y positions
+                    var adjacent = node.platform.transform.position.y;
+                    var nodeInUse = node.platform.GetComponent<PlatformState>();
+
+                    if (adjacent > centre && !nodeInUse.PlatformIsActive)
+                    {
+                        platformsToSmooth.Add(node);
+                        //n1odeInUse.PlatformIsActive = true;
+                    }
+                }
+                
+                if (platformsToSmooth.Count > 4)
+                {
+                    PlatformManager.RaisePath(platformsToSmooth);
+                }
+
+            }
         }
     }
+
+    private bool IsplatformIsBelow()
+    {
+        {
+            return false;
+        }
+    }
+
+    public void BuildNavMesh()
+    {
+        navmeshSurface.BuildNavMesh();
+    }
+
+    public void SpawnStairs(List<Node> path)
+    {
+        List<Tuple<Vector2, float>> spawnPositions = new List<Tuple<Vector2, float>>();
+
+        Tuple<Vector2, float> GetStairSpawn(Vector2 position, float rotation)
+        {
+            float quaternion = rotation;
+            var vector = position;
+            return new Tuple<Vector2, float>(vector, quaternion);
+        }
+
+        var node = GetNode(path);
+        var adjacent = CheckAdjacentPositions(node);
+
+        //The purpose of checking twice here is to ensure there is nothing blocking the platform leading to the stairs
+        if (!ReturnStairSpawnStatus(2, 1, adjacent))
+        {
+            if (!ReturnStairSpawnStatus(2, 0, adjacent))
+            {
+                spawnPositions.Add(GetStairSpawn(new Vector2(2, 1), 0));
+            }
+        }
+        if (!ReturnStairSpawnStatus(1, 2, adjacent))
+        {
+            if (!ReturnStairSpawnStatus(0, 2, adjacent))
+            {
+                spawnPositions.Add(GetStairSpawn(new Vector2(1, 2), 90));
+            }
+        }
+        if (!ReturnStairSpawnStatus(3, 2, adjacent))
+        {
+            if (!ReturnStairSpawnStatus(4, 2, adjacent))
+            {
+                spawnPositions.Add(GetStairSpawn(new Vector2(3, 2), 270));
+            }
+        }
+        if (!ReturnStairSpawnStatus(2, 3, adjacent))
+        {
+            if (!ReturnStairSpawnStatus(2, 4, adjacent))
+            {
+                spawnPositions.Add(GetStairSpawn(new Vector2(2, 3), 180));
+            }
+        }
+
+
+        if (spawnPositions.Count != 0)
+        {
+            var random = Random.Range(0, spawnPositions.Count);
+            var spawnPosition = spawnPositions[random];
+            var pos = spawnPosition.Item1;
+
+            var t = Instantiate(stairs,
+                adjacent[(int) pos.x, (int) pos.y].worldPosition,
+                quaternion.identity);
+
+            var x = t.GetComponent<PlatformState>();
+            x.PlatformIsActive = true;
+            foreach (var adjacentt in adjacent)
+            {
+                adjacentt.platform.GetComponent<MeshRenderer>().material = Materials[2];
+                if(!adjacentt.platform.GetComponent<PlatformState>().PlatformIsActive)
+                {
+                    adjacentt.platform.GetComponent<MeshRenderer>().material = Materials[3];
+                }
+            }
+            adjacent[2, 2].platform.GetComponent<MeshRenderer>().material = Materials[2];
+            x.Setint(adjacent[0,0].gridX -1 +(int)pos.x,adjacent[0,0].gridY+(int)pos.y -1);
+             t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
+                transform.localRotation.eulerAngles.y + spawnPosition.Item2,
+                transform.localRotation.eulerAngles.z);
+             var newPos = new Vector3(t.transform.position.x + 2, t.transform.position.y +2.5f, t.transform.position.z - 2);
+             t.transform.position = newPos;
+        }
+    }
+    private Node GetNode(List<Node> path)
+    {
+        return GetRandomNode(path);
+    }
+
     private bool ReturnStairSpawnStatus(int x,int y,Node[,] platformGroup)
     {
-        return platformGroup[ x,  y].InUse;
+        if (platformGroup[x, y] == null)
+        {
+            foreach(var go in platformGroup)
+                Debug.Log(go.GridPosition);
+            
+            Debug.Log(platformGroup[2,2]);
+            Debug.Log(x);
+            Debug.Log(y);
+        }
+        return platformGroup[ x,  y].platform.GetComponent<PlatformState>().PlatformIsActive;
     }
+    
+    
     private Node[,] CheckAdjacentPositions(Node node)
-=======
-            LowerPlatformSection(go);
-        }
+    {
+        
+        Node[,] adjacent = new Node[5,5];
 
-        foreach (var go in LevelRooms)
+        var startX = node.gridX -2;
+        var startZ = node.gridY -2;
+        
+        for (int x = 0; x < adjacent.GetLength(0) ; x++)
         {
-            LowerPlatformSection(go);
-        }
-    }
-
-    public void RaisePlatform(GameObject wall)
-    {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,
-            wall.transform.position.y + 5f, wall.transform.position.z), 1f));
-            
-}
-    public void LowerPlatform(GameObject wall)
-    {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,0f, wall.transform.position.z), 1f));
-            
-    }
-    private void RaiseAllPlatforms(GameObject[,] wall)
-    {
-=======
-    {
-        foreach (var go in LevelWalls)
-        {
-            LowerPlatformSection(go);
-        }
-
-        foreach (var go in LevelRooms)
-        {
-            LowerPlatformSection(go);
-        }
-    }
-
-    public void RaisePlatform(GameObject wall)
-    {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,
-            wall.transform.position.y + 5f, wall.transform.position.z), 1f));
-            
-}
-    public void LowerPlatform(GameObject wall)
-    {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,0f, wall.transform.position.z), 1f));
-            
-    }
-    private void RaiseAllPlatforms(GameObject[,] wall)
-    {
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-    {
-        foreach (var go in LevelWalls)
-        {
-            LowerPlatformSection(go);
-        }
-
-        foreach (var go in LevelRooms)
-        {
-            LowerPlatformSection(go);
-        }
-    }
-
-    public void RaisePlatform(GameObject wall)
-    {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,
-            wall.transform.position.y + 5f, wall.transform.position.z), 1f));
-            
-}
-    public void LowerPlatform(GameObject wall)
-    {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,0f, wall.transform.position.z), 1f));
-            
-    }
-    private void RaiseAllPlatforms(GameObject[,] wall)
-    {
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-        foreach (var go in wall)
-        {
-            if (go)
+            for (int z = 0; z < adjacent.GetLength(1) ; z++)
             {
-                StartCoroutine(LerpTransformPosition(go.transform, new Vector3(go.transform.position.x,
-                    go.transform.position.y + 5f
-                    , go.transform.position.z), 1f));
+      
+                adjacent[x , z ] = grid.grid[startX +x, startZ + z];
+                if(grid.grid[startX + x, startZ + z] == null)
+                {
+                    Debug.Log(startX);
+                    Debug.Log(x);
+                    Debug.Log(startZ);
+                    Debug.Log(z);
+                }
             }
         }
+        return adjacent;
     }
     
-    private IEnumerator LowerAllPlatforms()
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-    {
-        foreach (var raisedPlatformGroup in LevelPlatforms)
-        {
-            foreach (var go in raisedPlatformGroup)
-            {
-                LowerPlatformSection(go); ;
-            }
-        }
-        
-        foreach (var raisedPlatformGroup in LevelPlatforms)
-        {
-            foreach (var go in raisedPlatformGroup)
-            {
-                BalanceSection(go);
-            }
-        }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     private Node GetRandomNode(List<Node> nodes)
-=======
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-
-    private void ResetPlatforms()
     {
-        foreach (var go in LevelWalls)
+        var random = Random.Range(0, nodes.Count);
+        var node = nodes[random];
+        if (node == null)
         {
-            LowerPlatformSection(go);
+            Debug.Log(nodes.Count);
+            Debug.Log(random);
         }
-
-        foreach (var go in LevelRooms)
-        {
-            LowerPlatformSection(go);
-        }
+        return node;
     }
-
-    public void RaisePlatform(GameObject wall)
+    private List<Node> ReturnRandomPath()
     {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,
-            wall.transform.position.y + 5f, wall.transform.position.z), 1f));
-            
-}
-    public void LowerPlatform(GameObject wall)
-    {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,0f, wall.transform.position.z), 1f));
-            
-    }
-    private void RaiseAllPlatforms(GameObject[,] wall)
-    {
-        foreach (var go in wall)
-        {
-            if (go)
-            {
-                StartCoroutine(LerpTransformPosition(go.transform, new Vector3(go.transform.position.x,
-                    go.transform.position.y + 5f
-                    , go.transform.position.z), 1f));
-            }
-        }
-    }
-    
-    private IEnumerator LowerAllPlatforms()
-    {
-        foreach (var raisedPlatformGroup in LevelPlatforms)
-        {
-            foreach (var go in raisedPlatformGroup)
-            {
-                LowerPlatformSection(go); ;
-            }
-        }
-        
-        foreach (var raisedPlatformGroup in LevelPlatforms)
-        {
-            foreach (var go in raisedPlatformGroup)
-            {
-                BalanceSection(go);
-            }
-        }
-
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-
-        foreach (var go in Stairs)
-        {
-            var targetVector = go.transform.position;
-            targetVector.y = -5f;
-            StartCoroutine(LerpTransformPosition(go.transform, targetVector, 0.125f));
-        }
-        yield return new WaitForSeconds(0.25f);
-        navmeshSurface.BuildNavMesh();
-    }
-    private void LowerPlatformSection(GameObject[,] platforms)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-    {
-        foreach (var platform in platforms)
-        {
-            StartCoroutine(LerpTransformPosition(platform.transform, new Vector3(platform.transform.position.x,
-                 0f, platform.transform.position.z), 1f));
-        }
-    }
-    private void BalanceSection(GameObject[,] platforms)
-    {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        var random = Random.Range(0, LevelPaths.Count);
-        var path = LevelPaths[random];
-        foreach (var go in path)
-        {
-            go.InUse = true;
-        }
+        var random = Random.Range(0, LevelBunkers.Count);
+        var path = LevelBunkers[random];
         return path;
-=======
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-        float v;
-        foreach (var platform in platforms)
-        {
-            var transformPosition = platform.transform.position;
-            v = transformPosition.y;
-            float x =Mathf.Round(v);
-            transformPosition.y = x;
-            platform.transform.position = transformPosition;
-        }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
     }
 
-    private void LowerGroupOfPlatform()
+    public GameObject[,] ReturnMap()
     {
-        var length = LevelWalls.Count;
-        var toRemove = length / 3;
-
-        for (int i = 0; i < toRemove; i++)
-        {
-            var number = Random.Range(0, LevelWalls.Count);
-            LowerPlatformSection(LevelWalls[i]);
-            LevelWalls.RemoveAt(i);
-        }
-    }
-    public void AddStairToList(GameObject stair)
-    {
-        Stairs.Add(stair);
+        return _tileArray;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    private List<Node> GetPath(List<List<Node>> nodes)
+    private List<Node> GetPath()
     {
-        var t = pathFinding.ReturnPath();
-        
-        foreach (var go in nodes)
-        {
-            foreach (var node in go)
-            {
-                node.InUse = true;
-            }
-        }
-        
-        return t;
+        var path = pathFinding.ReturnPath();
+        return path;
     }
-
-    public void RaiseAllPaths()
-    {
-        
-=======
-    private void GetPath()
-    {
-        LevelPaths.Add(pathFinding.ReturnPath());
-    }
-    protected IEnumerator LerpTransformPosition(Transform transform, Vector3 target, float duration)
-    {
-        Transform startPosition = transform;
-        float timer = 0f;
-        float _duration = duration;
-        while (timer < _duration)
-        {
-            timer += Time.deltaTime;
-            float percentage = Mathf.Min(timer / _duration, 1);
-            transform.position = Vector3.Lerp(startPosition.position, target, percentage);
-            yield return null;
-        }
-
-        transform.position = target;
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-    }
-
-=======
-    private void GetPath()
-    {
-        LevelPaths.Add(pathFinding.ReturnPath());
-    }
-    protected IEnumerator LerpTransformPosition(Transform transform, Vector3 target, float duration)
-    {
-        Transform startPosition = transform;
-        float timer = 0f;
-        float _duration = duration;
-        while (timer < _duration)
-        {
-            timer += Time.deltaTime;
-            float percentage = Mathf.Min(timer / _duration, 1);
-            transform.position = Vector3.Lerp(startPosition.position, target, percentage);
-            yield return null;
-        }
-
-        transform.position = target;
-    }
-
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-    private void GetPath()
-    {
-        LevelPaths.Add(pathFinding.ReturnPath());
-    }
-    protected IEnumerator LerpTransformPosition(Transform transform, Vector3 target, float duration)
-    {
-        Transform startPosition = transform;
-        float timer = 0f;
-        float _duration = duration;
-        while (timer < _duration)
-        {
-            timer += Time.deltaTime;
-            float percentage = Mathf.Min(timer / _duration, 1);
-            transform.position = Vector3.Lerp(startPosition.position, target, percentage);
-            yield return null;
-        }
-
-        transform.position = target;
-    }
-
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-    private void GetPath()
-    {
-        LevelPaths.Add(pathFinding.ReturnPath());
-    }
-    protected IEnumerator LerpTransformPosition(Transform transform, Vector3 target, float duration)
-    {
-        Transform startPosition = transform;
-        float timer = 0f;
-        float _duration = duration;
-        while (timer < _duration)
-        {
-            timer += Time.deltaTime;
-            float percentage = Mathf.Min(timer / _duration, 1);
-            transform.position = Vector3.Lerp(startPosition.position, target, percentage);
-            yield return null;
-        }
-
-        transform.position = target;
-    }
-
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
     
-  
+    public void LowerLastPlatform()
+    {
+        StartCoroutine(LowerNegativePlatform());
+    }
+    public IEnumerator LowerNegativePlatform()
+    {
+        var path = ReturnRandomPath();
+        for (int i = path.Count - 1; i >= 0; i--)
+        {
+            PlatformManager.LowerPlatform(path[i].platform);
+            yield return new WaitForSeconds(0.25f);
+        }
+    }
 }
+    
 
 

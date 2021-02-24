@@ -10,13 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pathfinding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pathfinding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlatformManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlatformManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,164 +20,67 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../ExecutionerTestBench/Assets/Scripts/CageSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZombieSpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Shared/Scripts/SimpleCharacterMotor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Shared/Scripts/SimpleCameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponPickup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgentConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EffectExamples/Misc Effects/Scripts/SpawnEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Shared/Ramps/Editor/RampAssetEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@8.2.0/Editor/QuaternionPropertyDrawer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Timer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Pathfinding.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ImportAnimations/NavMeshComponents/Scripts/NavMeshSurface.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Scripts/UI/ColourLerp.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Timer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Grid.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ImportAnimations/NavMeshComponents/Editor/NavMeshSurfaceEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ImportAnimations/NavMeshComponents/Editor/NavMeshModifierVolumeEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/NavigationBaker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterLocomotion.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController/ThirdPersonController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RandomRoomGenerator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Scripts/Enemy/BasicEnemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/States/IdleState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/States/AttackState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/States/Chase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgentConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../../ThirdYear/AsteroidsWeekNine/Assets/NewHealthScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/StairCheck.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RotationManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PlatformState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zombies/Lerper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EdgeSpawnPlatform.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EnemyTargetZombie.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WallManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RotatingPlatform.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovingZombieDumper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ObstacleSpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Scripts/Enemy/SpacePirates/SpacePirateBoss.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/TileMapPractice (1).cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/RoomManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TargetState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LimbSpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Scripts/Editor/ObjectPoolerEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Documents/PizzaPrototype01062020/Library/PackageCache/com.unity.probuilder@4.2.3/Runtime/Core/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/States/Chase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AnimatorMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/States/IdleState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObstacleSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ImportAnimations/NavMeshComponents/Scripts/NavMeshSurface.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController/ThirdPersonController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pathfinding.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterLocomotion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Grid.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlatformManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CrosshairTarget.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WallManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovingZombieDumper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponPickup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZombieSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RotationManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RandomRoomGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LimbSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ImportAnimations/NavMeshComponents/Editor/NavMeshSurfaceEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ImportAnimations/NavMeshComponents/Editor/NavMeshAssetManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ImportAnimations/NavMeshComponents/Editor/NavMeshModifierVolumeEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@8.2.0/Editor/QuaternionPropertyDrawer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/TileMapPractice (1).cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StairCheck.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shared/Ramps/Editor/RampAssetEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shared/Scripts/SimpleCharacterMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shared/Scripts/SimpleCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zombies/Lerper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shared/Scripts/AdjustTimeScale.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shared/Scripts/ProximityActivate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-        <option value="$PROJECT_DIR$/Assets/Scripts/ThirdPersonController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CharacterLocomotion.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CharacterAiming.cs" />
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-        <option value="$PROJECT_DIR$/Assets/CrosshairTarget.cs" />
-        <option value="$PROJECT_DIR$/Assets/WeaponPickup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Singleton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LimbSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/weaponRecoil.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/StateMachine.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgentConfig.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/IdleState.cs" />
-        <option value="$PROJECT_DIR$/Assets/AnimatorMove.cs" />
-        <option value="$PROJECT_DIR$/Assets/JailBreakEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/MovingZombieDumper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Lerper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/AttackState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" />
-        <option value="$PROJECT_DIR$/Assets/TargetState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" />
-        <option value="$PROJECT_DIR$/Assets/EnemyTargetZombie.cs" />
-        <option value="$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Timer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Timer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RotationManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/RotatingPlatform.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RandomRoomGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/NavigationBaker.cs" />
-        <option value="$PROJECT_DIR$/Assets/EdgeSpawnPlatform.cs" />
-        <option value="$PROJECT_DIR$/Assets/ObstacleSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ZombieSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponPickup.cs" />
-        <option value="$PROJECT_DIR$/Assets/StairCheck.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WallManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/RoomManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MovingZombieDumper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Node.cs" />
-        <option value="$PROJECT_DIR$/Assets/PathFinding.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/Assets/StairCheck.cs" />
-        <option value="$PROJECT_DIR$/Assets/Grid.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlatformState.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlatformManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Pathfinding.cs" />
-=======
-        <option value="$PROJECT_DIR$/Assets/PlatformState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Pathfinding.cs" />
-        <option value="$PROJECT_DIR$/Assets/Grid.cs" />
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-        <option value="$PROJECT_DIR$/Assets/PlatformState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Pathfinding.cs" />
-        <option value="$PROJECT_DIR$/Assets/Grid.cs" />
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-        <option value="$PROJECT_DIR$/Assets/PlatformState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Pathfinding.cs" />
-        <option value="$PROJECT_DIR$/Assets/Grid.cs" />
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-        <option value="$PROJECT_DIR$/Assets/PlatformState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Pathfinding.cs" />
-        <option value="$PROJECT_DIR$/Assets/Grid.cs" />
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/Grid.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -193,11 +90,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34987593" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30024815" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -225,30 +126,21 @@
       <workItem from="1613690131157" duration="7293000" />
       <workItem from="1613697545188" duration="37839000" />
       <workItem from="1613766017256" duration="6112000" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       <workItem from="1613856326037" duration="6581000" />
       <workItem from="1613874085337" duration="10194000" />
       <workItem from="1613933080025" duration="7573000" />
       <workItem from="1613945372752" duration="6498000" />
       <workItem from="1613952320403" duration="1696000" />
       <workItem from="1613955244224" duration="8308000" />
-      <workItem from="1614103318633" duration="7312000" />
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
+      <workItem from="1614115297371" duration="17273000" />
+      <workItem from="1614172929807" duration="3538000" />
+      <workItem from="1614186348897" duration="2000" />
+      <workItem from="1614186372696" duration="8158000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -265,77 +157,36 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="3695" y="361" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613597998511">
-      <screen x="2560" y="0" width="3440" height="1400" />
-    </state>
-    <state x="3695" y="361" key="#com.intellij.execution.impl.EditConfigurationsDialog/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613597998511" />
-    <state x="1534" y="312" key="RiderGenerateDialog" timestamp="1612915030298">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state x="1534" y="312" key="RiderGenerateDialog/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612915030298" />
-    <state x="4034" y="339" key="RollbackChangesDialog" timestamp="1613663095823">
-      <screen x="2560" y="0" width="3440" height="1400" />
-    </state>
-    <state x="4034" y="339" key="RollbackChangesDialog/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613663095823" />
-    <state x="3781" y="344" key="SettingsEditor" timestamp="1613655712596">
-      <screen x="2560" y="0" width="3440" height="1400" />
-    </state>
-    <state x="1221" y="344" key="SettingsEditor/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612467806390" />
-    <state x="3781" y="344" key="SettingsEditor/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613655712596" />
-    <state x="2940" y="139" width="2166" height="1200" key="VCS.FileHistoryDialog" timestamp="1613689047617">
-      <screen x="2560" y="0" width="3440" height="1400" />
-    </state>
-    <state x="380" y="139" width="2166" height="1200" key="VCS.FileHistoryDialog/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612889884885" />
-    <state x="2940" y="139" width="2166" height="1200" key="VCS.FileHistoryDialog/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613689047617" />
-    <state x="4069" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613541773553">
-      <screen x="2560" y="0" width="3440" height="1400" />
-    </state>
-    <state x="1509" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612486050145" />
-    <state x="1123" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.0.3440.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613498351914" />
-    <state x="4069" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613541773553" />
-    <state x="4120" y="0" width="1887" height="1405" key="dock-window-1" timestamp="1613659032737">
-      <screen x="2560" y="0" width="3440" height="1400" />
-    </state>
-    <state x="1575" y="0" width="992" height="1380" key="dock-window-1/0.0.2560.1400@0.0.2560.1400" timestamp="1613538868158" />
-    <state x="311" y="14" width="992" height="1380" key="dock-window-1/2560.0.3440.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613572976756" />
-    <state x="4120" y="0" width="1887" height="1405" key="dock-window-1/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613659032737" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <state x="503" y="251" width="2291" height="877" key="find.popup" timestamp="1614106907051">
-      <screen x="0" y="0" width="3440" height="1440" />
-=======
-    <state x="566" y="410" width="739" height="852" key="find.popup" timestamp="1613775815876">
-      <screen x="0" y="0" width="2560" height="1400" />
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-    <state x="566" y="410" width="739" height="852" key="find.popup" timestamp="1613775815876">
-      <screen x="0" y="0" width="2560" height="1400" />
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-    <state x="566" y="410" width="739" height="852" key="find.popup" timestamp="1613775815876">
-      <screen x="0" y="0" width="2560" height="1400" />
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-=======
-    <state x="566" y="410" width="739" height="852" key="find.popup" timestamp="1613775815876">
-      <screen x="0" y="0" width="2560" height="1400" />
->>>>>>> parent of 0475716 (Stairs spawn in proper position + added 2 deep check)
-    </state>
-    <state x="-1943" y="410" width="716" height="658" key="find.popup/-2560.0.2560.1400/0.0.3440.1400@-2560.0.2560.1400" timestamp="1612478958283" />
-    <state x="760" y="410" width="732" height="658" key="find.popup/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1613092488528" />
-    <state x="503" y="251" width="2291" height="877" key="find.popup/-2560.0.2560.1440/0.0.3440.1440@0.0.3440.1440" timestamp="1614106907051" />
-    <state x="566" y="410" width="739" height="852" key="find.popup/2560.0.3440.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1613775815876" />
-    <state x="2686" y="428" width="739" height="852" key="find.popup/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613772876951" />
-    <state x="3935" y="334" key="run.anything.popup" timestamp="1613507407221">
-      <screen x="2560" y="0" width="3440" height="1400" />
-    </state>
-    <state x="3935" y="334" key="run.anything.popup/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613507407221" />
-    <state x="3943" y="325" width="672" height="678" key="search.everywhere.popup" timestamp="1613754018486">
-      <screen x="2560" y="0" width="3440" height="1400" />
-    </state>
-    <state x="1383" y="325" width="672" height="678" key="search.everywhere.popup/-2560.0.2560.1400/0.0.3440.1400@0.0.3440.1400" timestamp="1612408039049" />
-    <state x="3943" y="325" width="672" height="678" key="search.everywhere.popup/2560.0.3440.1400/0.0.2560.1400@2560.0.3440.1400" timestamp="1613754018486" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/ImportAnimations/NavMeshComponents/Editor/NavMeshAssetManager.cs</url>
+          <line>81</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/ImportAnimations/NavMeshComponents/Editor/NavMeshAssetManager.cs" initialLine="81">
+            <startOffsets>
+              <option value="3291" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3292" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs</url>
+          <line>223</line>
+          <properties documentPath="C:\Users\Joe\Desktop\12345\The-Executioner-04757166270da61332a9c7b95d3d2f094657c9cb\TheExecutioner\Assets\Scripts\EnvironmentManager.cs" initialLine="227" containingFunctionPresentation="method 'SpawnStairs'">
+            <startOffsets>
+              <option value="6776" />
+            </startOffsets>
+            <endOffsets>
+              <option value="6777" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -34,11 +34,6 @@ public class GameManager : Singleton<GameManager>
         {
             ZombieOverFlowEvent.PlayJailBreakEvent();
         }
-        if (Input.GetKey(KeyCode.Z))
-        {
-            pathfinding.InitializePath();
-            Grid.SpawnTest();
-        }
     }
 
 

@@ -1,58 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEditor;
 using UnityEngine;
 [CustomEditor(typeof(EnvironmentManager))]
 public class EnvironmentManagerEditor : Editor
 {
-    public override void OnInspectorGUI() //2
+    public override void OnInspectorGUI()
     {
-        base.DrawDefaultInspector();
-        GUILayout.BeginHorizontal();
-        // Call base class method
-        
-        // Custom form for Player Preferences
-        EnvironmentManager  environmentManager = (EnvironmentManager)target;
-        
-
-        if (GUILayout.Button("Spawn Paths")) //8
+        DrawDefaultInspector();
+        EnvironmentManager environmentManager = (EnvironmentManager)target;
+        if (GUILayout.Button("Create Path"))
         {
-            environmentManager.pathFinding.SpawnPaths();
-        }
-
-        if (GUILayout.Button("Raise Paths")) //10
-        {
-            
+            for (int i = 0; i < Random.Range(6,12); i++)
+            {
+                environmentManager.StartBunkers();
+            }
             
         }
-        if (GUILayout.Button("Clear Paths")) //10
+        if (GUILayout.Button("Reset Platforms"))
         {
-            environmentManager.ClearPaths();
-            
-        }
-        if (GUILayout.Button("Spawn stairs")) //10
-        {
-            environmentManager.SpawnStairs();
-            
-        }
-        if (GUILayout.Button("Lower Paths")) //10
-        {
-            
-            environmentManager.LowerAllPathPlatforms();
-        }
-        
-        if (GUILayout.Button("Raise Random")) //10
-        {
-            //ObjectPooler.Instance.ReturnObject();
-        }
-        
-        if (GUILayout.Button("Reset Random")) //10
-        {
-            //ObjectPooler.Instance.ReturnObject();
+            environmentManager.LowerAll();
         }
 
-        GUILayout.EndHorizontal();
-        
-        // Custom Button with Image as Thumbnail
+        if (GUILayout.Button("Lower Last Platform"))
+        {
+            environmentManager.LowerLastPlatform();
+        }
+        if (GUILayout.Button("Smooth Platforms"))
+        {
+            environmentManager.SmoothMap();
+        }
     }
 }
