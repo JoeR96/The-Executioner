@@ -82,18 +82,18 @@ public class Grid : MonoBehaviour
 		{
 			Debug.Log(grid.Length);
 			Debug.Log(pathMaster.Count);
-			for (int i = 0; i < GameManager.instance.EnvironmentManager.LevelPaths.Count; i++)
+			for (int i = 0; i < GameManager.instance.EnvironmentManager.environmentSpawner.LevelPaths.Count; i++)
 			{
 	
-				if (GameManager.instance.EnvironmentManager.LevelPaths[i] != null)
+				if (GameManager.instance.EnvironmentManager.environmentSpawner.LevelPaths[i] != null)
 				{
-					spawnPosition = GameManager.instance.EnvironmentManager.LevelPaths[i][0].worldPosition;
-					Debug.Log(GameManager.instance.EnvironmentManager.LevelPaths[i][0]);
+					spawnPosition = GameManager.instance.EnvironmentManager.environmentSpawner.LevelPaths[i][0][0].worldPosition;
+					Debug.Log(GameManager.instance.EnvironmentManager.environmentSpawner.LevelPaths[i][0]);
 					var stair =Instantiate(stairs, spawnPosition, Quaternion.identity);
 					SpawnedObjects.Add(stair);
 
 
-					if (GameManager.instance.EnvironmentManager.LevelPaths[i].Contains(n))
+					if (GameManager.instance.EnvironmentManager.environmentSpawner.LevelPaths[i][i].Contains(n))
 					{
 						spawnPosition = n.worldPosition;
 						spawnPosition.y = 18f;

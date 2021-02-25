@@ -10,12 +10,19 @@ public class EnvironmentManagerEditor : Editor
     {
         DrawDefaultInspector();
         EnvironmentManager environmentManager = (EnvironmentManager)target;
-        if (GUILayout.Button("Create Path"))
+        if (GUILayout.Button("Create Low Path"))
         {
-            for (int i = 0; i < Random.Range(6,12); i++)
-            {
-                environmentManager.StartBunkers();
-            }
+           
+            environmentManager.StartBunkers();
+            
+            
+        }
+        if (GUILayout.Button("Create High Path"))
+        {
+
+            environmentManager.StartHighBunkers();
+                
+            
             
         }
         if (GUILayout.Button("Reset Platforms"))
@@ -25,11 +32,11 @@ public class EnvironmentManagerEditor : Editor
 
         if (GUILayout.Button("Lower Last Platform"))
         {
-            environmentManager.LowerLastPlatform();
+            
         }
         if (GUILayout.Button("Smooth Platforms"))
         {
-            environmentManager.SmoothMap();
+            
         }
     }
 }

@@ -5,8 +5,7 @@ using System.Collections.Generic;
 
 public class Pathfinding : MonoBehaviour
 {
-
-    public List<Transform> targets = new List<Transform>();
+    
     public Transform seeker;
     public Transform target;
     Grid grid;
@@ -21,11 +20,7 @@ public class Pathfinding : MonoBehaviour
         
     }
     
-    private void SetSpawnPositions()
-    {
-        seeker = ReturnTransform();
-        target = ReturnTransform();
-    }
+
 
     public Vector3 StartPosition;
     public Vector3 EndPosition;
@@ -33,21 +28,25 @@ public class Pathfinding : MonoBehaviour
     {
         path.Clear();
         
-         StartPosition = new Vector3(Random.Range(-45,45),0,Random.Range(-45,45));
-         EndPosition = new Vector3(Random.Range(-45,45),0,Random.Range(-45,45));
+         StartPosition = new Vector3(Random.Range(-35,35),0,Random.Range(-35,35));
+         EndPosition = new Vector3(Random.Range(-35,35),0,Random.Range(-35,35));
         
          FindPath (StartPosition, EndPosition);
-
-        
-        
     }
-    private Transform ReturnTransform()
+    public void InitializeConnectingPath(Node node, Node connectingPath)
     {
-        var random = Random.Range(0, targets.Count - 1);
-        return targets[random];
+        path.Clear();
+
+        StartPosition = node.worldPosition;
+        EndPosition = connectingPath.worldPosition;
+    
+        FindPath (StartPosition, EndPosition);
+
+
     }
 
-    void FindPath(Vector3 startPos, Vector3 targetPos)
+
+    public void FindPath(Vector3 startPos, Vector3 targetPos)
      {
         Node startNode = grid.NodeFromWorldPoint(startPos);
         Node targetNode = grid.NodeFromWorldPoint(targetPos);

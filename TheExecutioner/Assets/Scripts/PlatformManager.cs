@@ -8,17 +8,18 @@ using UnityEngine;
     
     public void RaisePlatform(GameObject wall)
     {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x, Mathf.Round(wall.transform.position.y + 5f), wall.transform.position.z), 1f));
+        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x, Mathf.Round(wall.transform.position.y)  + 5f, wall.transform.position.z), 1f));
             
     }
-    public void RaisePlatformToLevelTwo(GameObject wall)
+    public void RaiseHighPlatform(GameObject wall)
     {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x, Mathf.Round(wall.transform.position.y + 10f), wall.transform.position.z), 1f));
+        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x, Mathf.Round(wall.transform.position.y ) + 10f, wall.transform.position.z), 1f));
             
     }
+
     public void LowerPlatform(GameObject wall)
     {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,transform.position.y -5f, wall.transform.position.z), 1f));
+        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,  555, wall.transform.position.z), 1f));
             
     }
     public void LowerMultiplePlatformSection(List<List<Node>> PlatformArray)
@@ -45,7 +46,7 @@ using UnityEngine;
         }
     }
 
-    public void ResetPlatformSections(List<List<GameObject[,]>> LevelPlatforms)
+    public void ResetPlatformSections(List<List<Node[,]>> LevelPlatforms)
     {
         foreach (var platformGroups in LevelPlatforms)
         {
@@ -72,12 +73,12 @@ using UnityEngine;
         }
     }
     
-    public void LowerPlatformSection(GameObject[,] platforms)
+    public void LowerPlatformSection(Node[,] platforms)
     {
         foreach (var platform in platforms)
         {
-            StartCoroutine(LerpTransformPosition(platform.transform, new Vector3(platform.transform.position.x,
-                0f, platform.transform.position.z), 1f));
+            StartCoroutine(LerpTransformPosition(platform.platform.transform, new Vector3(platform.platform.transform.position.x,
+                0f, platform.platform.transform.position.z), 1f));
         }
     }
 

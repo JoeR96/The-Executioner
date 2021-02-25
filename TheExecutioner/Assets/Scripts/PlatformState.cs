@@ -14,6 +14,7 @@ public class PlatformState : MonoBehaviour
     [SerializeField] public GameObject spawnPoint;
     [SerializeField] private int boundarySize;
 
+    public bool PlatformIsPlatform = true;
     public bool PlatformIsActive = false;
     public int X;
     public int Z;
@@ -24,31 +25,66 @@ public class PlatformState : MonoBehaviour
     private void Start()
     {
         var x = Random.Range(0, 16);
-        // if (x == 18)
-        // {
-        //     var t = Instantiate(randomSpawnPickups[0],spawnPoint.transform.position,Quaternion.identity);
-        //     t.transform.SetParent(spawnPoint.transform);
-        // }
-        //
-        // if (x == 10)
-        // {
-        //     var t = Instantiate(randomSpawnPickups[1],spawnPoint.transform.position,Quaternion.identity);
-        //     t.transform.SetParent(spawnPoint.transform);
-        // }
-        //     
-       // connectingPlatforms[1, 1] = gameObject;
+        if (x == 14)
+        {
+            var t = Instantiate(randomSpawnPickups[0],spawnPoint.transform.position,Quaternion.identity);
+            t.transform.SetParent(spawnPoint.transform);
+        }
+        
+        if (x == 10)
+        {
+            var t = Instantiate(randomSpawnPickups[1],spawnPoint.transform.position,Quaternion.identity);
+            t.transform.SetParent(spawnPoint.transform);
+        }
+        
     }
-    
+
+    [SerializeField] private GameObject cubeTing;
     private void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Y) && !PlatformIsPlatform)
+        {
+            FireSphere();
+            
+        }
     }
+    private GameObject FireSphere()
+    {
+        RaycastHit hit;
+        float thickness = 24f; //<-- Desired thickness here.
+        Vector3 origin = raycastHolder.transform.position;
+        Vector3 direction = transform.TransformDirection(Vector3.down);
+        
+        if (Physics.SphereCast(origin, thickness, direction, out hit))
+        {
+            Instantiate(cubeTing, hit.point, quaternion.identity);
+            return hit.collider.gameObject;
+        }
 
+        return null;
+    }
     public void SetPlatformState(bool state)
     {
         PlatformIsActive = state;
     }
+    
+    public List<Node> SpawnPath()
+    {
+        stairs.gameObject.SetActive(false);
+        var platform = FireRay();
+        GameManager.instance.EnvironmentManager.PlatformManager.RaisePlatform(platform.gameObject);
 
+      
+      var t = GameManager.instance.pathfinding.ReturnPath();
+      var l = GameManager.instance.EnvironmentManager.environmentSpawner.GetNode(t);
+      GameManager.instance.EnvironmentManager.pathFinding.InitializeConnectingPath(platform.Node,l);
+      foreach (var go in t)
+        {
+            GameManager.instance.EnvironmentManager.PlatformManager.RaisePlatform(go.platform);
+        }
+        stairs.gameObject.SetActive(true);
+        return t;
+    }
     private GameObject[,] CheckAdjacentPositions()
     {
         var tileMap = GameManager.instance.EnvironmentManager.ReturnMap();
@@ -79,23 +115,24 @@ public class PlatformState : MonoBehaviour
     {
         stairs.gameObject.SetActive(true);
     }
+    
     public Node Node;
     public void SetNode(Node node)
     {
         Node = node;
     }
-    private GameObject FireRay(int xPos, int zPos)
+    private PlatformState FireRay()
     {
-        raycastHolder.transform.position = new Vector3(xPos,transform.position.y,zPos);
-        
         RaycastHit hit;
+        Ray ray = default;
         float thickness = 1f; //<-- Desired thickness here.
         Vector3 origin = raycastHolder.transform.position;
         Vector3 direction = transform.TransformDirection(Vector3.down);
         
-        if (Physics.SphereCast(origin, thickness, direction, out hit))
+        if (Physics.Raycast(origin, direction, out hit, 25f))
         {
-            return hit.collider.gameObject;
+            if(hit.collider.GetComponent<PlatformState>())
+                return hit.collider.GetComponent<PlatformState>();
         }
 
         return null;
