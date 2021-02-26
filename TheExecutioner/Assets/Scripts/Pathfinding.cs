@@ -5,19 +5,28 @@ using System.Collections.Generic;
 
 public class Pathfinding : MonoBehaviour
 {
-    
+    EnvironmentManager environmentManager;
     public Transform seeker;
     public Transform target;
     Grid grid;
-
-    void Awake() 
+    public List<Transform> targets = new List<Transform>();
+    void Awake()
     {
-        grid = GetComponent<Grid>();
+        environmentManager = GetComponent<EnvironmentManager>();
+        grid = GameManager.instance.gameObject.GetComponent<Grid>();
     }
-
+    private PlatformManager _platformManager;
     private void Start()
     {
+        _platformManager = GetComponent<PlatformManager>();
+        Debug.Log(targets.Count);
+        // for (int i = 0; i < targets.Count; i++)
+        // {
+        //     FindPath(targets[targets.Count -1].position,targets[i].position);
+        //     
+        // }
         
+        //_platformManager.RaisePath(path);
     }
     
 
@@ -32,7 +41,10 @@ public class Pathfinding : MonoBehaviour
          EndPosition = new Vector3(Random.Range(-35,35),0,Random.Range(-35,35));
         
          FindPath (StartPosition, EndPosition);
+         
     }
+
+    
     public void InitializeConnectingPath(Node node, Node connectingPath)
     {
         path.Clear();
@@ -48,6 +60,7 @@ public class Pathfinding : MonoBehaviour
 
     public void FindPath(Vector3 startPos, Vector3 targetPos)
      {
+         Debug.Log(grid);
         Node startNode = grid.NodeFromWorldPoint(startPos);
         Node targetNode = grid.NodeFromWorldPoint(targetPos);
 
@@ -68,6 +81,10 @@ public class Pathfinding : MonoBehaviour
             closedSet.Add(node);
 
             if (node == targetNode) {
+                foreach (var tile in path)
+                {
+                    
+                }
                 RetracePath(startNode,targetNode);
                 return;
             }
@@ -105,6 +122,19 @@ public class Pathfinding : MonoBehaviour
             currentNode = currentNode.parent;
         }
         path.Reverse();
+        Debug.Log(path.Count);
+        var temp = new List<Node>();
+        foreach (var go in path)
+        {
+            var t = GameManager.instance.EnvironmentManager.environmentSpawner.CheckAdjacentPositions(go);
+            temp.Add(t[1,2]);
+        }
+
+        for (int i = 0; i < temp.Count; i++)
+        {
+            path.Add(temp[i]);
+        }
+        Debug.Log(path.Count);
         return path;
         //grid.Path = path;
     }

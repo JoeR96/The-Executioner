@@ -27,7 +27,7 @@ public class EnvironmentManager : MonoBehaviour
     private NavMeshSurface navmeshSurface;
     public PlatformManager PlatformManager;
     public EnvironmentSpawner environmentSpawner;
-    private Grid grid;
+    public Grid grid;
 
 
 

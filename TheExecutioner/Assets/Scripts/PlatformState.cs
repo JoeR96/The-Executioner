@@ -24,7 +24,7 @@ public class PlatformState : MonoBehaviour
 
     private void Start()
     {
-        var x = Random.Range(0, 16);
+        var x = Random.Range(0, 25);
         if (x == 14)
         {
             var t = Instantiate(randomSpawnPickups[0],spawnPoint.transform.position,Quaternion.identity);

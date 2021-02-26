@@ -194,6 +194,10 @@ public class EnvironmentSpawner : MonoBehaviour
             }
         }
         SpawnHighStairs(path);
+        if (Random.value < 0.5f)
+        {
+            SpawnHighStairs(path);
+        }
     }
     public Node GetNode(List<Node> path)
     {
@@ -249,6 +253,10 @@ public class EnvironmentSpawner : MonoBehaviour
                 
         }
         SpawnStairs(path);
+        if (Random.value < 0.5f)
+        {
+            SpawnStairs(path);
+        }
         Debug.Log(path.Count);
     }
     
@@ -440,7 +448,7 @@ public class EnvironmentSpawner : MonoBehaviour
              t.GetComponent<PlatformState>().Setint(adjacent[0,0].gridX -1 +(int)pos.x,adjacent[0,0].gridY+(int)pos.y);
         }
     }
-    private Node[,] CheckAdjacentPositions(Node node)
+    public Node[,] CheckAdjacentPositions(Node node)
     {
         
         Node[,] adjacent = new Node[5,5];

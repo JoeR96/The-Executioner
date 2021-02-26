@@ -4,8 +4,10 @@ using UnityEngine;
 
 
    public class PlatformManager : MonoBehaviour
-{
-    
+   {
+       public List<Node> OuterWalls = new List<Node>();
+
+
     public void RaisePlatform(GameObject wall)
     {
         StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x, Mathf.Round(wall.transform.position.y)  + 5f, wall.transform.position.z), 1f));
