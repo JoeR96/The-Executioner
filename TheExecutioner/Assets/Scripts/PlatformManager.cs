@@ -8,73 +8,25 @@ using UnityEngine;
        public List<Node> OuterWalls = new List<Node>();
 
 
-    public void RaisePlatform(GameObject wall)
-    {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x, Mathf.Round(wall.transform.position.y)  + 5f, wall.transform.position.z), 1f));
-            
-    }
-    public void RaiseHighPlatform(GameObject wall)
-    {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x, Mathf.Round(wall.transform.position.y ) + 10f, wall.transform.position.z), 1f));
-            
-    }
 
-    public void LowerPlatform(GameObject wall)
-    {
-        StartCoroutine(LerpTransformPosition(wall.transform, new Vector3(wall.transform.position.x,  555, wall.transform.position.z), 1f));
-            
-    }
+
+
     public void LowerMultiplePlatformSection(List<List<Node>> PlatformArray)
     {
         foreach (var go in PlatformArray)
         {
             foreach (var node in go)
             {
-                LowerPlatform(node.platform);
+                node.platform.GetComponent<PlatformState>().SetPlatformHeight(PlatformHeight.Flat);
             }
             
         }
     }
-    private void RaisePlatformSection(GameObject[,] wall)
-    {
-        foreach (var go in wall)
-        {
-            if (go)
-            {
-                StartCoroutine(LerpTransformPosition(go.transform, new Vector3(go.transform.position.x,
-                    go.transform.position.y + 5f
-                    , go.transform.position.z), 1f));
-            }
-        }
-    }
 
-    public void ResetPlatformSections(List<List<Node[,]>> LevelPlatforms)
-    {
-        foreach (var platformGroups in LevelPlatforms)
-        {
-            foreach (var nodes in platformGroups)
-            {
-                LowerPlatformSection(nodes);
-            }
-        }
-    }
 
-    public void RaisePath(List<Node> path)
-    {
-        foreach (var node in path)
-        {
-            RaisePlatform(node.platform);
-        }
-    }
+
     
-    public void LowerPath(List<Node> path)
-    {
-        foreach (var node in path)
-        {
-            LowerPlatform(node.platform);
-        }
-    }
-    
+
     public void LowerPlatformSection(Node[,] platforms)
     {
         foreach (var platform in platforms)

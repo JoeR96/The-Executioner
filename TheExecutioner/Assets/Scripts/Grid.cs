@@ -16,8 +16,11 @@ public class Grid : MonoBehaviour
 	public GameObject stairs;
 	float nodeDiameter;
 	public int gridSizeX, gridSizeY;
-
-
+	public List<GameObject> SpawnedObjects = new List<GameObject>();
+	public List<List<Node>> pathMaster = new List<List<Node>>();
+	public GameObject floorContainer;
+	public GameObject testCube;
+	
 	void Awake()
 	{
 		nodeDiameter = nodeRadius * 2;
@@ -26,7 +29,6 @@ public class Grid : MonoBehaviour
 		CreateGrid();
 		SpawnPlatform();
 	}
-
 	void CreateGrid()
 	{
 		grid = new Node[gridSizeX, gridSizeY];
@@ -44,27 +46,20 @@ public class Grid : MonoBehaviour
 			}
 		}
 	}
-	
-	
-
-
 	public Node NodeFromWorldPoint(Vector3 worldPosition)
 	{
 
 		float percentX = (worldPosition.x + gridWorldSize.x / 2) / gridWorldSize.x;
 		float percentY = (worldPosition.z + gridWorldSize.y / 2) / gridWorldSize.y;
+		
 		percentX = Mathf.Clamp01(percentX);
 		percentY = Mathf.Clamp01(percentY);
 
 		int x = Mathf.RoundToInt((gridSizeX - 1) * percentX);
 		int y = Mathf.RoundToInt((gridSizeY - 1) * percentY);
+		
 		return grid[x, y];
 	}
-
-	public List<List<Node>> pathMaster = new List<List<Node>>();
-	
-	public GameObject floorContainer;
-	public GameObject testCube;
 
 	public void ClearPaths()
 	{
@@ -74,7 +69,7 @@ public class Grid : MonoBehaviour
 			Destroy(go);
 		}
 	}
-	public List<GameObject> SpawnedObjects = new List<GameObject>();
+	
 	public void SpawnTest()
 	{
 		Vector3 spawnPosition;
@@ -158,6 +153,7 @@ public class Node
 	public int gCost;
 	public int hCost;
 	public Node parent;
+	public PlatformState PlatformState;
 	
 	public Node(bool _walkable, Vector3 _worldPos, int _gridX, int _gridY) {
 		walkable = _walkable;
@@ -167,14 +163,12 @@ public class Node
 		GridPosition = new Vector2(_gridX, _gridY);
 	}
 
-	public int fCost {
-		get {
-			return gCost + hCost;
-		}
-	}
+	
+	public int fCost => gCost + hCost;
 
 	public void SetPlatformToNode(GameObject go)
 	{
 		platform = go;
+		PlatformState = go.GetComponent<PlatformState>();
 	}
 }

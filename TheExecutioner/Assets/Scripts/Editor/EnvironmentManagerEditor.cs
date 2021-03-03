@@ -12,18 +12,19 @@ public class EnvironmentManagerEditor : Editor
         EnvironmentManager environmentManager = (EnvironmentManager)target;
         if (GUILayout.Button("Create Low Path"))
         {
-           
             environmentManager.StartBunkers();
-            
-            
         }
         if (GUILayout.Button("Create High Path"))
         {
 
             environmentManager.StartHighBunkers();
-                
-            
-            
+
+        }
+        if (GUILayout.Button("Create High Path"))
+        {
+
+            environmentManager.StartLowBunkers();
+
         }
         if (GUILayout.Button("Reset Platforms"))
         {
@@ -37,6 +38,11 @@ public class EnvironmentManagerEditor : Editor
         if (GUILayout.Button("Smooth Platforms"))
         {
             environmentManager.BuildNavMesh();
+        }
+
+        if (GUILayout.Button("Raise Walls"))
+        {
+            environmentManager.RaiseWall();
         }
     }
 }

@@ -19,7 +19,7 @@ public class EnvironmentSpawner : MonoBehaviour
     public List<List<List<Node>>> LevelPaths = new List<List<List<Node>>>();
     public List<List<Node>> LevelBunkers = new List<List<Node>>();
     public List<List<Node>> LevelHighBunkers = new List<List<Node>>();
-
+    public List<List<Node>> LevelLowBunkers = new List<List<Node>>();
     private void Start()
     {
         platformManager = GetComponent<PlatformManager>();
@@ -184,10 +184,10 @@ public class EnvironmentSpawner : MonoBehaviour
             {
                 if (!VARIABLE.InUse)
                 {
-                    
-                    VARIABLE.platform.GetComponent<PlatformState>().PlatformIsActive = true;
+                    var t = VARIABLE.platform.GetComponent<PlatformState>();
+                    t.PlatformIsActive = true;
                     VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material]; 
-                    platformManager.RaiseHighPlatform(VARIABLE.platform);
+                    t.SetPlatformHeight(PlatformHeight.RaisedTwice);
                     VARIABLE.platform.layer = 11;
                     LevelBunkers.Add(go);
                 }
@@ -201,6 +201,47 @@ public class EnvironmentSpawner : MonoBehaviour
         }
         
     }
+    public void SpawnLowBunkers(List<List<Node>> Levels)
+    {
+        var path = GetPath();
+        var toAdd = SmoothPath(path);
+        
+        for (int i = 0; i < toAdd.Count; i++)
+        {
+            path[i].platform.GetComponent<PlatformState>().PlatformIsActive = false;
+            path.Add(toAdd[i]);
+
+        }
+        
+        Levels.Add(path);
+        pathfinding.InitializePath();
+        var material = Random.Range(0, Materials.Length);
+        //ChangePathColor(Materials[material],LevelBunkers);
+        foreach (var go in Levels)
+        {    
+       
+            foreach (var VARIABLE in go)
+            {
+                if (!VARIABLE.InUse)
+                {
+                    var t = VARIABLE.platform.GetComponent<PlatformState>();
+                    t.PlatformIsActive = true;
+                    VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material]; 
+                    t.SetPlatformHeight(PlatformHeight.Underground);
+                    VARIABLE.platform.layer = 11;
+                    LevelBunkers.Add(go);
+                }
+                
+            }
+        }
+        // SpawnHighStairs(path);
+        // if (Random.value < 0.5f)
+        // {
+        //     SpawnHighStairs(path);
+        // }
+        
+    }
+  
     public Node GetNode(List<Node> path)
     {
         return GetRandomNode(path);
@@ -246,10 +287,11 @@ public class EnvironmentSpawner : MonoBehaviour
         {
             if (!VARIABLE.InUse)
             {
-                VARIABLE.platform.GetComponent<PlatformState>().PlatformIsActive = true;
+                var t = VARIABLE.platform.GetComponent<PlatformState>();
+                t.PlatformIsActive = true;
                 VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material];
                 VARIABLE.platform.layer = 11;
-                platformManager.RaisePlatform(VARIABLE.platform);
+                t.SetPlatformHeight(PlatformHeight.Raised);
                 LevelBunkers.Add(path);
             }
                 
@@ -276,9 +318,10 @@ public class EnvironmentSpawner : MonoBehaviour
             {
                 if (!VARIABLE.InUse)
                 {
-                    VARIABLE.platform.GetComponent<PlatformState>().PlatformIsActive = true;
+                    var t = VARIABLE.platform.GetComponent<PlatformState>();
+                   t.PlatformIsActive = true;
                     VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material]; 
-                    platformManager.RaisePlatform(VARIABLE.platform);
+                    t.SetPlatformHeight(PlatformHeight.Raised);
                 }
                     
             }
@@ -355,15 +398,74 @@ public class EnvironmentSpawner : MonoBehaviour
      
                  var x = t.GetComponent<PlatformState>();
                  x.PlatformIsActive = true;
-                 foreach (var adjacentt in adjacent)
+                 
+                 x.Setint(adjacent[0,0].gridX -1 +(int)pos.x,adjacent[0,0].gridY+(int)pos.y -1);
+                  t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
+                     transform.localRotation.eulerAngles.y + spawnPosition.Item2,
+                     transform.localRotation.eulerAngles.z);
+                  var newPos = new Vector3(t.transform.position.x + 2, t.transform.position.y +2.5f, t.transform.position.z - 2);
+                  t.transform.position = newPos;
+                  t.GetComponent<PlatformState>().PlatformIsPlatform = false;
+             }
+         }
+     public void SpawnLowStairs(List<Node> path)
+         {
+             List<Tuple<Vector2, float>> spawnPositions = new List<Tuple<Vector2, float>>();
+     
+             Tuple<Vector2, float> GetStairSpawn(Vector2 position, float rotation)
+             {
+                 float quaternion = rotation;
+                 var vector = position;
+                 return new Tuple<Vector2, float>(vector, quaternion);
+             }
+     
+             var node = GetNode(path);
+             var adjacent = CheckAdjacentPositions(node);
+     
+             //The purpose of checking twice here is to ensure there is nothing blocking the platform leading to the stairs
+             if (!ReturnStairSpawnStatus(2, 1, adjacent))
+             {
+                 if (!ReturnStairSpawnStatus(2, 0, adjacent))
                  {
-                     adjacentt.platform.GetComponent<MeshRenderer>().material = Materials[2];
-                     if(!adjacentt.platform.GetComponent<PlatformState>().PlatformIsActive)
-                     {
-                         adjacentt.platform.GetComponent<MeshRenderer>().material = Materials[3];
-                     }
+                     spawnPositions.Add(GetStairSpawn(new Vector2(2, 1), 0));
                  }
-                 adjacent[2, 2].platform.GetComponent<MeshRenderer>().material = Materials[2];
+             }
+             if (!ReturnStairSpawnStatus(1, 2, adjacent))
+             {
+                 if (!ReturnStairSpawnStatus(0, 2, adjacent))
+                 {
+                     spawnPositions.Add(GetStairSpawn(new Vector2(1, 2), 90));
+                 }
+             }
+             if (!ReturnStairSpawnStatus(3, 2, adjacent))
+             {
+                 if (!ReturnStairSpawnStatus(4, 2, adjacent))
+                 {
+                     spawnPositions.Add(GetStairSpawn(new Vector2(3, 2), 270));
+                 }
+             }
+             if (!ReturnStairSpawnStatus(2, 3, adjacent))
+             {
+                 if (!ReturnStairSpawnStatus(2, 4, adjacent))
+                 {
+                     spawnPositions.Add(GetStairSpawn(new Vector2(2, 3), 180));
+                 }
+             }
+     
+     
+             if (spawnPositions.Count != 0)
+             {
+                 var random = Random.Range(0, spawnPositions.Count);
+                 var spawnPosition = spawnPositions[random];
+                 var pos = spawnPosition.Item1;
+     
+                 var t = Instantiate(stairs,
+                     adjacent[(int) pos.x, (int) pos.y].worldPosition,
+                     quaternion.identity);
+     
+                 var x = t.GetComponent<PlatformState>();
+                 x.PlatformIsActive = true;
+                 
                  x.Setint(adjacent[0,0].gridX -1 +(int)pos.x,adjacent[0,0].gridY+(int)pos.y -1);
                   t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
                      transform.localRotation.eulerAngles.y + spawnPosition.Item2,
@@ -423,30 +525,28 @@ public class EnvironmentSpawner : MonoBehaviour
             var random = Random.Range(0, spawnPositions.Count);
             var spawnPosition = spawnPositions[random];
             var pos = spawnPosition.Item1;
-            GameManager.instance.EnvironmentManager.PlatformManager.RaisePlatform(adjacent[(int) spawnPosition.Item1.x,(int) spawnPosition.Item1.y].platform);
+            
+            var platformState = adjacent[(int) spawnPosition.Item1.x, (int) spawnPosition.Item1.y].platform.GetComponent<PlatformState>();
+            platformState.SetPlatformHeight(PlatformHeight.Raised);
+
             var t = Instantiate(stairs,
                 adjacent[(int) pos.x, (int) pos.y].worldPosition,
                 quaternion.identity);
 
+            var stairPlatform = adjacent[(int) pos.x, (int) pos.y].platform.GetComponent<PlatformState>();
+            stairPlatform.ActivateStairs();
+            Debug.Log(stairPlatform.PlatformStairActive);
             var x = t.GetComponent<PlatformState>();
             x.PlatformIsActive = true;
             
-            foreach (var adjacentt in adjacent)
-            {
-                adjacentt.platform.GetComponent<MeshRenderer>().material = Materials[2];
-                if(!adjacentt.platform.GetComponent<PlatformState>().PlatformIsActive)
-                {
-                    adjacentt.platform.GetComponent<MeshRenderer>().material = Materials[3];
-                }
-            }
-            adjacent[2, 2].platform.GetComponent<MeshRenderer>().material = Materials[2];
+           
             x.Setint(adjacent[0,0].gridX -1 +(int)pos.x,adjacent[0,0].gridY+(int)pos.y -1);
              t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
                 transform.localRotation.eulerAngles.y + spawnPosition.Item2,
                 transform.localRotation.eulerAngles.z);
              var newPos = new Vector3(t.transform.position.x + 2, t.transform.position.y +7.5f, t.transform.position.z - 2);
              t.transform.position = newPos;
-             t.GetComponent<PlatformState>().SpawnPath();
+             stairPlatform.GetComponent<PlatformState>().SpawnPath();
              t.GetComponent<PlatformState>().Setint(adjacent[0,0].gridX -1 +(int)pos.x,adjacent[0,0].gridY+(int)pos.y);
         }
     }

@@ -5,104 +5,76 @@ using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+public enum PlatformHeight
+{
+    Raised,
+    RaisedTwice,
+    Underground,
+    Flat
+}
 
+public enum PlatformStairState
+{
+    One,
+    Two,
+    Three,
+    Four
+}
 public class PlatformState : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> randomSpawnPickups = new List<GameObject>();
-    [SerializeField] private GameObject stairs;
+
+    [SerializeField] public GameObject stairs;
     [SerializeField] private GameObject raycastHolder;
     [SerializeField] public GameObject spawnPoint;
     [SerializeField] private int boundarySize;
-
+    
+    public GameObject[,] connectingPlatforms = new GameObject[2,2];
+    public bool PlatformStairActive;
     public bool PlatformIsPlatform = true;
     public bool PlatformIsActive = false;
     public int X;
     public int Z;
+    public PlatformHeight currentHeight;
+    private Vector3 startPosition;
 
-    public GameObject[,] connectingPlatforms = new GameObject[2,2];
-    
-
+    private float[] rotations = new[] {0f, 90f, 180f, 270f};
     private void Start()
     {
-
-        
-    }
-
-    [SerializeField] private GameObject cubeTing;
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Y) && !PlatformIsPlatform)
-        {
-            FireSphere();
-            
-        }
-    }
-    private GameObject FireSphere()
-    {
-        RaycastHit hit;
-        float thickness = 24f; //<-- Desired thickness here.
-        Vector3 origin = raycastHolder.transform.position;
-        Vector3 direction = transform.TransformDirection(Vector3.down);
-        
-        if (Physics.SphereCast(origin, thickness, direction, out hit))
-        {
-            Instantiate(cubeTing, hit.point, quaternion.identity);
-            return hit.collider.gameObject;
-        }
-
-        return null;
-    }
-    public void SetPlatformState(bool state)
-    {
-        PlatformIsActive = state;
+        PlatformIsActive = false;
+        startPosition = transform.position;
+        currentHeight = PlatformHeight.Flat;
     }
     
     public List<Node> SpawnPath()
-    {
-        stairs.gameObject.SetActive(false);
-        var platform = FireRay();
-        GameManager.instance.EnvironmentManager.PlatformManager.RaisePlatform(platform.gameObject);
-
-      
-      var t = GameManager.instance.pathfinding.ReturnPath();
+    { 
+        SetPlatformHeight(PlatformHeight.Raised);
+        var t = GameManager.instance.pathfinding.ReturnPath();
       var l = GameManager.instance.EnvironmentManager.environmentSpawner.GetNode(t);
-      GameManager.instance.EnvironmentManager.pathFinding.InitializeConnectingPath(platform.Node,l);
+      GameManager.instance.EnvironmentManager.pathFinding.InitializeConnectingPath(Node,l);
       foreach (var go in t)
         {
-            GameManager.instance.EnvironmentManager.PlatformManager.RaisePlatform(go.platform);
+            go.platform.GetComponent<PlatformState>().SetPlatformHeight(PlatformHeight.Raised);
         }
         stairs.gameObject.SetActive(true);
         return t;
     }
-    private GameObject[,] CheckAdjacentPositions()
-    {
-        var tileMap = GameManager.instance.EnvironmentManager.ReturnMap();
-        GameObject[,] adjacent = new GameObject[3,3];
-        int tracker = 0;
-        
-        
-        var startX = X - 1;
-        var startZ = Z - 1;
-        
-        for (int x = 0; x < adjacent.GetLength(0) ; x++)
-        {
-            for (int z = 0; z < adjacent.GetLength(1); z++)
-            {
-                adjacent[x, z] = tileMap[startX +x, startZ + z];
-            }
-        }
-        
-        return adjacent;
-    }
-
-    private void SetPosition(int x, int z)
-    {
-        raycastHolder.transform.position = new Vector3(x,transform.position.y,z);
-    }
-
+    
     public void ActivateStairs()
     {
-        stairs.gameObject.SetActive(true);
+        bool active = ReturnStairValue();
+        Debug.Log(active);
+        stairs.GetComponent<MeshRenderer>().enabled = active;
+        stairs.GetComponent<MeshCollider>().enabled = active;
+    }
+
+    public void SetState()
+    {
+        SetPlatformHeight(currentHeight);
+    }
+    public bool ReturnStairValue()
+    {
+        PlatformStairActive = !PlatformStairActive;
+        return PlatformStairActive;
     }
     
     public Node Node;
@@ -131,6 +103,65 @@ public class PlatformState : MonoBehaviour
     {
         X = x;
         Z = z;
+    }
+
+    public void SetPlatformHeight(PlatformHeight height)
+    {
+        Vector3 targetPosition;
+        if (height == PlatformHeight.Flat)
+        {
+            SetPosition(-25,PlatformHeight.Flat);
+        }
+        if (height == PlatformHeight.Raised)
+        {
+            SetPosition(-5,PlatformHeight.Raised);
+        }
+        if (height == PlatformHeight.RaisedTwice)
+        {
+            SetPosition(-10, PlatformHeight.RaisedTwice);
+        }
+        if (height == PlatformHeight.Underground)
+        {
+            SetPosition(5, PlatformHeight.Underground);
+        }
+
+        currentHeight = height;
+    }
+
+    private void SetPosition(float targetHeight,PlatformHeight state)
+    {
+        Vector3 targetPosition;
+        targetPosition = new Vector3(transform.position.x, startPosition.y - targetHeight, transform.position.z);
+        if (state == PlatformHeight.Flat)
+        {
+            targetPosition = startPosition;
+        }
+        StartCoroutine(LerpPosition(targetPosition, 0.25f));
+        currentHeight = state;
+ 
+    }
+
+    private IEnumerator LerpPosition( Vector3 targetPosition, float duration)
+    {
+        Transform startPosition = transform;
+        float timer = 0f;
+        float _duration = duration;
+         
+        while (timer < _duration)
+        {
+            timer += Time.deltaTime;
+            float percentage = Mathf.Min(timer / _duration, 1);
+            transform.position = Vector3.Lerp(startPosition.position,  targetPosition, percentage);
+            yield return null;
+        }
+
+    }
+
+    public void SetStairRotation(int i)
+    {
+        stairs.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
+            transform.localRotation.eulerAngles.y + rotations[i],
+            transform.localRotation.eulerAngles.z);
     }
 }
 

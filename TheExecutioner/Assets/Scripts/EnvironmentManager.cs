@@ -29,30 +29,25 @@ public class EnvironmentManager : MonoBehaviour
     public EnvironmentSpawner environmentSpawner;
     public Grid grid;
 
-
-
- 
-
+    public List<Node[,]> Levels = new List<Node[,]>();
 
 
 
     public void LowerAll()
     {
 
-        foreach (var go in environmentSpawner.LevelPaths)
+        foreach (var node in grid.grid)
         {
-            foreach (var t in go)
+            node.PlatformState.SetPlatformHeight(PlatformHeight.Flat);
+            if (node.PlatformState.PlatformStairActive)
             {
-                foreach (var x in t)
-                {
-                 GameManager.instance.EnvironmentManager.PlatformManager.LowerPlatform(x.platform);   
-                }
+                node.PlatformState.PlatformStairActive = false;
+                node.PlatformState.stairs.SetActive(false);
             }
             
         }
 
     }
-
     private void Awake()
     {
         
@@ -66,11 +61,6 @@ public class EnvironmentManager : MonoBehaviour
 
         grid = GetComponent<Grid>();
     }
-    
-    
-
-    
-
     public void StartBunkers()
     {
         environmentSpawner.SpawnBunkers(environmentSpawner.LevelBunkers);
@@ -80,16 +70,20 @@ public class EnvironmentManager : MonoBehaviour
        environmentSpawner.SpawnHighBunkers(environmentSpawner.LevelHighBunkers);
     }
 
-
-    
-    
-    private void DiagonalCheck()
+    public void StartLowBunkers()
     {
-
+        environmentSpawner.SpawnLowBunkers(environmentSpawner.LevelLowBunkers);
     }
-    
-    
-    
+    public void RaiseWall()
+    {   
+        for (int i = 0; i < 23; i++)
+        {
+            grid.grid[6+ i,28].PlatformState.SetPlatformHeight(PlatformHeight.RaisedTwice);
+            grid.grid[28, 6+ i].PlatformState.SetPlatformHeight(PlatformHeight.RaisedTwice);
+            grid.grid[6+ i,6].PlatformState.SetPlatformHeight(PlatformHeight.RaisedTwice);
+            grid.grid[6, 6+ i].PlatformState.SetPlatformHeight(PlatformHeight.RaisedTwice);
+        }
+    }
     public void BuildNavMesh()
     {
         navmeshSurface.BuildNavMesh();
@@ -104,27 +98,6 @@ public class EnvironmentManager : MonoBehaviour
     
 
     
-
-    public GameObject[,] ReturnMap()
-    {
-        return _tileArray;
-    }
-
-    
-    
-    // public void LowerLastPlatform()
-    // {
-    //     StartCoroutine(LowerNegativePlatform());
-    // }
-    // public IEnumerator LowerNegativePlatform()
-    // {
-    //     var path = ReturnRandomPath();
-    //     for (int i = path.Count - 1; i >= 0; i--)
-    //     {
-    //         PlatformManager.LowerPlatform(path[i].platform);
-    //         yield return new WaitForSeconds(0.25f);
-    //     }
-    // }
 }
     
 
