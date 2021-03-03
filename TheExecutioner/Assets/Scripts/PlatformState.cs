@@ -24,18 +24,7 @@ public class PlatformState : MonoBehaviour
 
     private void Start()
     {
-        var x = Random.Range(0, 25);
-        if (x == 14)
-        {
-            var t = Instantiate(randomSpawnPickups[0],spawnPoint.transform.position,Quaternion.identity);
-            t.transform.SetParent(spawnPoint.transform);
-        }
-        
-        if (x == 10)
-        {
-            var t = Instantiate(randomSpawnPickups[1],spawnPoint.transform.position,Quaternion.identity);
-            t.transform.SetParent(spawnPoint.transform);
-        }
+
         
     }
 

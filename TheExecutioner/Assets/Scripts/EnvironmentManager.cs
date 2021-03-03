@@ -77,7 +77,7 @@ public class EnvironmentManager : MonoBehaviour
     }
     public void StartHighBunkers()
     {
-        environmentSpawner.SpawnHighBunkers(environmentSpawner.LevelHighBunkers);
+       environmentSpawner.SpawnHighBunkers(environmentSpawner.LevelHighBunkers);
     }
 
 

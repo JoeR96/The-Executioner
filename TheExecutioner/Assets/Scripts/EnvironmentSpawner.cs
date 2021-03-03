@@ -184,13 +184,14 @@ public class EnvironmentSpawner : MonoBehaviour
             {
                 if (!VARIABLE.InUse)
                 {
+                    
                     VARIABLE.platform.GetComponent<PlatformState>().PlatformIsActive = true;
                     VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material]; 
                     platformManager.RaiseHighPlatform(VARIABLE.platform);
                     VARIABLE.platform.layer = 11;
                     LevelBunkers.Add(go);
                 }
-                    
+                
             }
         }
         SpawnHighStairs(path);
@@ -198,6 +199,7 @@ public class EnvironmentSpawner : MonoBehaviour
         {
             SpawnHighStairs(path);
         }
+        
     }
     public Node GetNode(List<Node> path)
     {

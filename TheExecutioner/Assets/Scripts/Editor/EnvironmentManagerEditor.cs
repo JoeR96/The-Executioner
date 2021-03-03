@@ -36,7 +36,7 @@ public class EnvironmentManagerEditor : Editor
         }
         if (GUILayout.Button("Smooth Platforms"))
         {
-            
+            environmentManager.BuildNavMesh();
         }
     }
 }
