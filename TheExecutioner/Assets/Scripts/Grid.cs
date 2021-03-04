@@ -136,7 +136,10 @@ public class Grid : MonoBehaviour
 
 		return neighbours;
 	}
-
+	public void SetMap(Node[,] newLevel)
+	{
+		grid = newLevel;
+	}
 	}
 
 public class Node

@@ -15,10 +15,12 @@ public enum PlatformHeight
 
 public enum PlatformStairState
 {
+    Zero,
     One,
     Two,
     Three,
-    Four
+
+    
 }
 public class PlatformState : MonoBehaviour
 {
@@ -34,15 +36,23 @@ public class PlatformState : MonoBehaviour
     public bool PlatformIsActive = false;
     public int X;
     public int Z;
-    public PlatformHeight currentHeight;
+    public PlatformHeight CurrentHeight;
+    public PlatformStairState CurrentRotation;
     private Vector3 startPosition;
 
     private float[] rotations = new[] {0f, 90f, 180f, 270f};
+
+    public PlatformState(bool platformStairActive, PlatformHeight height, PlatformStairState currentRotation)
+    {
+        PlatformStairActive = platformStairActive;
+        CurrentHeight = height;
+        CurrentRotation = currentRotation;
+    }
     private void Start()
     {
         PlatformIsActive = false;
         startPosition = transform.position;
-        currentHeight = PlatformHeight.Flat;
+        CurrentHeight = PlatformHeight.Flat;
     }
     
     public List<Node> SpawnPath()
@@ -59,18 +69,30 @@ public class PlatformState : MonoBehaviour
         return t;
     }
     
-    public void ActivateStairs()
+    public void ActivateStairs(bool active)
     {
-        bool active = ReturnStairValue();
-        Debug.Log(active);
         stairs.GetComponent<MeshRenderer>().enabled = active;
         stairs.GetComponent<MeshCollider>().enabled = active;
     }
 
+    public void SetStateFromExternal(PlatformHeight height, PlatformStairState stairState, bool stairActive)
+    {
+        PlatformStairActive = stairActive;
+        CurrentHeight = height;
+        CurrentRotation = stairState;
+    }
     public void SetState()
     {
-        SetPlatformHeight(currentHeight);
+        SetPlatformHeight(CurrentHeight);
+        SetStairRotation(CurrentRotation);
+        if(PlatformStairActive)
+        {
+            ActivateStairs(true);
+        }
+        
     }
+    
+    
     public bool ReturnStairValue()
     {
         PlatformStairActive = !PlatformStairActive;
@@ -125,7 +147,7 @@ public class PlatformState : MonoBehaviour
             SetPosition(5, PlatformHeight.Underground);
         }
 
-        currentHeight = height;
+        CurrentHeight = height;
     }
 
     private void SetPosition(float targetHeight,PlatformHeight state)
@@ -137,7 +159,7 @@ public class PlatformState : MonoBehaviour
             targetPosition = startPosition;
         }
         StartCoroutine(LerpPosition(targetPosition, 0.25f));
-        currentHeight = state;
+        CurrentHeight = state;
  
     }
 
@@ -157,11 +179,16 @@ public class PlatformState : MonoBehaviour
 
     }
 
-    public void SetStairRotation(int i)
+    public void SetStairRotation( PlatformStairState stairState)
     {
-        stairs.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
-            transform.localRotation.eulerAngles.y + rotations[i],
-            transform.localRotation.eulerAngles.z);
+        
+            stairs.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
+                transform.localRotation.eulerAngles.y + rotations[(int)stairState],
+                transform.localRotation.eulerAngles.z);
+            CurrentRotation = stairState;
+
+        
+        
     }
 }
 

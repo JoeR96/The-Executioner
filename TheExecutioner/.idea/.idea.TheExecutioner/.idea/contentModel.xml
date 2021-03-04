@@ -27,6 +27,7 @@
             </e>
           </e>
         </e>
+        <e p="EventManager.cs" t="Include" />
         <e p="ImportAnimations" t="Include">
           <e p="NavMeshComponents" t="Include">
             <e p="Editor" t="Include">

@@ -29,7 +29,7 @@ public class PlatformEditor : Editor
 
         if (GUILayout.Button("Toggle Stair"))
         {
-            platformState.ActivateStairs();
+            platformState.ActivateStairs(platformState.ReturnStairValue());
         }
         if (GUILayout.Button("Stair Position One"))
         {
@@ -37,15 +37,15 @@ public class PlatformEditor : Editor
         }
         if (GUILayout.Button("Stair Position Two"))
         {
-            platformState.SetStairRotation(1);
+            platformState.SetStairRotation((PlatformStairState) 1);
         }
         if (GUILayout.Button("Stair Position Three"))
         {
-            platformState.SetStairRotation(2);
+            platformState.SetStairRotation((PlatformStairState) 2);
         }
         if (GUILayout.Button("Stair Position Four"))
         {
-            platformState.SetStairRotation(3);
+            platformState.SetStairRotation((PlatformStairState) 3);
         }
     }
 }

@@ -13,12 +13,13 @@
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelSo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Grid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Grid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlatformManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlatformManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
@@ -101,16 +102,16 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlatformManager.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelSO.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Grid.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelSo.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Grid.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelSo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelManager.cs" />
     </changedPaths>
@@ -173,7 +174,8 @@
       <workItem from="1614201519068" duration="7417000" />
       <workItem from="1614209765952" duration="12161000" />
       <workItem from="1614334088799" duration="4791000" />
-      <workItem from="1614737425482" duration="16219000" />
+      <workItem from="1614737425482" duration="17973000" />
+      <workItem from="1614822856503" duration="3449000" />
     </task>
     <servers />
   </component>

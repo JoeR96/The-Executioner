@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField]
     private LevelSo levelSo;
+
     private Grid grid;
     // Start is called before the first frame update
     void Start()
@@ -15,31 +16,39 @@ public class LevelManager : MonoBehaviour
 
     public void SaveStageOne()
     {
-        Node[,] newLevel = new Node[grid.gridSizeX, grid.gridSizeY];
-        for (int i = 0; i < grid.grid.GetLength(0); i++)
+        PlatformState[,] platformStates = new PlatformState[grid.gridSizeX, grid.gridSizeY];
+        for (int i = 0; i < grid.gridSizeX; i++)
         {
-            for (int j = 0; j < grid.grid.GetLength(1); j++)
+            for (int j = 0; j < grid.gridSizeY; j++)
             {
-                newLevel[i, j] = grid.grid[i, j];
+                platformStates[i, j] = grid.grid[i, j].PlatformState;
             }
         }
-        Debug.Log(levelSo.Levels.Count);
-        levelSo.Levels.Add(newLevel);
+        
+        levelSo.Levels.Add(platformStates);
         levelSo.LevelCount = levelSo.Levels.Count;
     }
 
+    public void ClearSo()
+    {
+        levelSo.Levels.Clear();
+        levelSo.LevelCount = 0;
+    }
     public void LoadStage(int index)
     {
-        Node[,] levelToSet = levelSo.Levels[index];
-        grid.grid = levelToSet;
-        for (int i = 0; i < grid.grid.GetLength(0); i++)
+        PlatformState[,] levelToSet = levelSo.Levels[index];
+        for (int i = 0; i < grid.gridSizeX; i++)
         {
-            for (int j = 0; j < grid.grid.GetLength(1); j++)
+            for (int j = 0; j < grid.gridSizeY; j++)
             {
-                grid.grid[i, j].PlatformState.currentHeight 
-                    = levelToSet[i, j].PlatformState.currentHeight;
-       
-                grid.grid[i,j].PlatformState.SetState();
+                var t = levelToSet[i, j];
+                grid.grid[i,j].PlatformState.SetStateFromExternal(
+                    t.CurrentHeight,t.CurrentRotation,t.PlatformStairActive);
+                if (t.CurrentHeight != PlatformHeight.Flat)
+                {
+                    Debug.Log(t.CurrentHeight + " TITS");
+                }
+                t.SetState();
             }
         }
 

@@ -534,7 +534,7 @@ public class EnvironmentSpawner : MonoBehaviour
                 quaternion.identity);
 
             var stairPlatform = adjacent[(int) pos.x, (int) pos.y].platform.GetComponent<PlatformState>();
-            stairPlatform.ActivateStairs();
+            stairPlatform.ActivateStairs(true);
             Debug.Log(stairPlatform.PlatformStairActive);
             var x = t.GetComponent<PlatformState>();
             x.PlatformIsActive = true;

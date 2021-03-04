@@ -17,7 +17,7 @@ public class LevelManagerEditor : Editor
 
         if (GUILayout.Button("Load Layout One"))
         {
-            levelManager.LoadStage(1);
+            levelManager.LoadStage(0);
         }
         if (GUILayout.Button("Load Layout One"))
         {
@@ -26,6 +26,12 @@ public class LevelManagerEditor : Editor
         if (GUILayout.Button("Load Layout One"))
         {
             levelManager.LoadStage(2);
+        }
+
+        if (GUILayout.Button("Clear Levels"))
+        {
+            levelManager.ClearSo();
+            
         }
     }
     
