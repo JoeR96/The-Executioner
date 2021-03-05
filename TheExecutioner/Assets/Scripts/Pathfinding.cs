@@ -30,8 +30,8 @@ public class Pathfinding : MonoBehaviour
     {
         path.Clear();
         
-         StartPosition = new Vector3(Random.Range(-40,20),0,Random.Range(-40,20));
-         EndPosition = new Vector3(Random.Range(-40,20),0,Random.Range(-40,20));
+         StartPosition = new Vector3(Random.Range(-40,40),0,Random.Range(-40,40));
+         EndPosition = new Vector3(Random.Range(-40,40),0, Random.Range(-40, 40));
         
          FindPath (StartPosition, EndPosition);
          

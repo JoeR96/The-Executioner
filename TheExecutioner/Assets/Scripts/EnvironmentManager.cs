@@ -17,13 +17,15 @@ using Random = UnityEngine.Random;
 public class EnvironmentManager : MonoBehaviour
 {
 
-    
+    public List<GameObject> SpawnPoints = new List<GameObject>();
     public Transform NavMeshObject;
+    public Transform NavMeshObjectTwo;
     private GameObject[,] _tileArray;
     private WallManager wallManager;
     private RoomManager roomManager;
     public Pathfinding pathFinding;
     private NavMeshSurface navmeshSurface;
+    private NavMeshSurface navmeshSurfaceTwo;
     public PlatformManager PlatformManager;
     public EnvironmentSpawner environmentSpawner;
     public Grid grid;
@@ -40,6 +42,7 @@ public class EnvironmentManager : MonoBehaviour
             node.PlatformState.SetPlatformHeight((int)PlatformHeight.Flat);
             if (node.PlatformState.stairs.GetComponent<MeshRenderer>().enabled)
             {
+                
                 node.PlatformState.PlatformStairActive = false;
                 node.PlatformState.ActivateStairs(false);
             }
@@ -50,11 +53,11 @@ public class EnvironmentManager : MonoBehaviour
     }
     private void Awake()
     {
-        
-        
+
         environmentSpawner = GetComponent<EnvironmentSpawner>();
         pathFinding = GetComponent<Pathfinding>();
         navmeshSurface = NavMeshObject.GetComponent<NavMeshSurface>();
+        navmeshSurfaceTwo = NavMeshObjectTwo.GetComponent<NavMeshSurface>();
         wallManager = GetComponent<WallManager>();
         roomManager = GetComponent<RoomManager>();
         PlatformManager = GetComponent<PlatformManager>();
@@ -74,22 +77,36 @@ public class EnvironmentManager : MonoBehaviour
     {
         environmentSpawner.SpawnLowBunkers(environmentSpawner.LevelLowBunkers);
     }
+    
     public void RaiseWall()
-    {   
-        for (int i = 0; i < 23; i++)
+    {
+        SpawnPoints.Clear();
+        foreach (var go in grid.grid)
         {
-            grid.grid[6+ i,28].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedFour);
-            grid.grid[28, 6+ i].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedFour);
-            grid.grid[6+ i,6].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedFour);
-            grid.grid[6, 6+ i].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedFour);
+            if (go.PlatformState.PlatformIsWall)
+            {
+                go.PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedFour);
+                SpawnPoints.Add(go.PlatformState.spawnPoint);
+                go.platform.layer = 13;
+            }
+            go.PlatformState.SetState();
         }
+
+        for (int i = 10; i < 30; i++)
+        {
+            for (int j = 10; j < 30; j++)
+            {
+                grid.grid[i, j].PlatformState.SetPlatformHeight((int)PlatformHeight.Flat);
+                grid.grid[i,j].platform.layer = 0;
+            }
+        }
+        navmeshSurface.BuildNavMesh();
     }
     public void BuildNavMesh()
     {
         navmeshSurface.BuildNavMesh();
+        navmeshSurfaceTwo.BuildNavMesh();
     }
-
-    
 
     
     

@@ -36,6 +36,7 @@ public class PlatformState : MonoBehaviour
     public GameObject[,] connectingPlatforms = new GameObject[2,2];
     public bool PlatformStairActive;
     public bool PlatformBridgeActive;
+    public bool PlatformIsWall;
     public bool PlatformIsPlatform = true;
     public bool PlatformIsActive = false;
     public int X;
@@ -49,6 +50,7 @@ public class PlatformState : MonoBehaviour
     
     private void Start()
     {
+        PlatformIsWall = true;
         PlatformIsActive = false;
         startPosition = transform.position;
         bridgeStartPosition = bridge.transform.position;
@@ -95,7 +97,7 @@ public class PlatformState : MonoBehaviour
         
         SetPlatformHeight(CurrentHeight);
         SetStairRotation(CurrentRotation);
-        SetPlatformColour(CurrentColour);
+        //SetPlatformColour(CurrentColour);
         ActivateStairs(PlatformStairActive);
         ActivateBridge(PlatformBridgeActive);
         SetBridgeHeight(CurrentBridgeHeight);

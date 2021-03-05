@@ -25,10 +25,30 @@ public class ZombieOverflowEvent : MonoBehaviour
     }
     public void PlayJailBreakEvent()
     {
-        GameManager.instance.ZombieSpawner.SpawnZombiesAtLocations(_jailCells);
-        ActivateJailCells();
-        ACtivateLights();
+        var spawnArray = GameManager.instance.EnvironmentManager.SpawnPoints;
+        var tempList = new List<Transform>();
+        var tempHolder = new List<GameObject>();
+        for (int i = 0; i < Random.Range(10,15); i++)
+        {
+            var random = Random.Range(0, spawnArray.Count);
+            tempList.Add(spawnArray[random].transform);
+            tempHolder.Add(spawnArray[random]);
+            spawnArray.RemoveAt(random);
+        }
 
+        foreach (var go in tempHolder)
+        {
+            spawnArray.Add(go);
+        }
+
+        Transform[] spawnPosition = new Transform[tempList.Count];
+
+        for (int i = 0; i < spawnPosition.Length; i++)
+        {
+            spawnPosition[i] = tempList[i];
+        }
+        GameManager.instance.ZombieSpawner.SpawnZombiesAtLocations(spawnPosition);
+        
     }
 
     private void ActivateJailCells()

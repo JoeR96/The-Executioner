@@ -62,6 +62,20 @@
         </e>
         <e p="LevelManager.cs" t="Include" />
         <e p="LevelSO.cs" t="Include" />
+        <e p="Number2_Screenspace" t="Include">
+          <e p="ScreenspaceObject.shader" t="Include" />
+          <e p="UIScreenspace.shader" t="Include" />
+        </e>
+        <e p="Number3_MirrorReflection" t="Include">
+          <e p="Mirror.shader" t="Include" />
+          <e p="MirrorReflection.cs" t="Include" />
+        </e>
+        <e p="Number4_JoepieShaderWobble" t="Include">
+          <e p="JoepieShaderWobble.shader" t="Include" />
+        </e>
+        <e p="Number5_Skybox" t="Include">
+          <e p="Horizontal Skybox.shader" t="Include" />
+        </e>
         <e p="PlatformInformation.cs" t="Include" />
         <e p="PolygonApocalypse" t="Include">
           <e p="Shader" t="Include">
