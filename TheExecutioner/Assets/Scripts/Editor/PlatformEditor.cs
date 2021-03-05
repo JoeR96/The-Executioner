@@ -47,5 +47,23 @@ public class PlatformEditor : Editor
         {
             platformState.SetStairRotation(3);
         }
+        if (GUILayout.Button("Toggle Bridge"))
+        {
+            platformState.ActivateBridge(platformState.ReturnBridgeValue());
+        }
+        if (GUILayout.Button("Set Low Bridge"))
+        {
+            platformState.SetBridgeHeight((int)PlatformHeight.Raised);
+        }
+        if (GUILayout.Button("Set Medium Bridge"))
+        {
+            platformState.SetBridgeHeight((int)PlatformHeight.RaisedTwice);
+        }
+        if (GUILayout.Button("Set High Bridge"))
+        {
+            platformState.SetBridgeHeight((int)PlatformHeight.Underground);
+        }
+   
+
     }
 }

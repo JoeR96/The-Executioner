@@ -20,7 +20,7 @@ public class EnvironmentManagerEditor : Editor
             environmentManager.StartHighBunkers();
 
         }
-        if (GUILayout.Button("Create High Path"))
+        if (GUILayout.Button("Create Underground Path"))
         {
 
             environmentManager.StartLowBunkers();
