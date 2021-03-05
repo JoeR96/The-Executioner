@@ -111,8 +111,8 @@ NavMeshSettings:
     agentHeight: 3
     agentSlope: 45.8
     agentClimb: 2
-    ledgeDropHeight: 0
-    maxJumpAcrossDistance: 0
+    ledgeDropHeight: 15
+    maxJumpAcrossDistance: 15
     minRegionArea: 2
     manualCellSize: 0
     cellSize: 0.083333336
@@ -4531,12 +4531,13 @@ GameObject:
   - component: {fileID: 917113088}
   - component: {fileID: 917113091}
   - component: {fileID: 917113089}
+  - component: {fileID: 917113090}
   m_Layer: 0
   m_Name: NavMeshSurface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 40
   m_IsActive: 1
 --- !u!65 &917113088
 BoxCollider:
@@ -4580,6 +4581,26 @@ MonoBehaviour:
   m_VoxelSize: 0.083333336
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: b32a070a156d3ee46a77390e31dce47c, type: 2}
+--- !u!114 &917113090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917113087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eeb5dc026fdf4b488bc7ae0138ab719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_StartPoint: {x: 0, y: 0, z: -2.5}
+  m_EndPoint: {x: 0, y: 0, z: 2.5}
+  m_Width: 0
+  m_CostModifier: -1
+  m_Bidirectional: 1
+  m_AutoUpdatePosition: 0
+  m_Area: 0
 --- !u!33 &917113091
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -6559,7 +6580,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1110734860}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: RaycastObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7243,17 +7264,9 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 1770446862}
   m_IsSelectable: 1
-  m_SelectedFaces: 01000000
-  m_SelectedEdges:
-  - a: 4
-    b: 5
-  - a: 6
-    b: 4
-  - a: 5
-    b: 7
-  - a: 7
-    b: 6
-  m_SelectedVertices: 04000000050000000600000007000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!4 &1217088869
 Transform:
   m_ObjectHideFlags: 0
@@ -12914,17 +12927,9 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 669525874}
   m_IsSelectable: 1
-  m_SelectedFaces: 26000000
-  m_SelectedEdges:
-  - a: 152
-    b: 153
-  - a: 154
-    b: 152
-  - a: 153
-    b: 155
-  - a: 155
-    b: 154
-  m_SelectedVertices: 98000000990000009a0000009b000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!4 &1807744695
 Transform:
   m_ObjectHideFlags: 0
@@ -13941,7 +13946,8 @@ GameObject:
   - component: {fileID: 2053539583}
   - component: {fileID: 2053539586}
   - component: {fileID: 2053539587}
-  m_Layer: 0
+  - component: {fileID: 2053539588}
+  m_Layer: 10
   m_Name: EnvironmentManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14058,6 +14064,19 @@ MonoBehaviour:
   - {fileID: 1255622836}
   StartPosition: {x: 0, y: 0, z: 0}
   EndPosition: {x: 0, y: 0, z: 0}
+--- !u!65 &2053539588
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053539581}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 82, y: 5, z: 80.17556}
+  m_Center: {x: 1.9753933, y: 15.03463, z: -1.8328819}
 --- !u!4 &2079144244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1015873664190309323, guid: 8fa5ffab670c1db4fa557e789e53b0df,
@@ -14566,7 +14585,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 40
   m_IsActive: 1
 --- !u!4 &2144910588
 Transform:
@@ -25069,7 +25088,7 @@ GameObject:
   - component: {fileID: 7190312662042531691}
   - component: {fileID: 7102172114420939822}
   - component: {fileID: 5420029193869641721}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Stairs (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

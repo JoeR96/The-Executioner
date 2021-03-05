@@ -108,7 +108,16 @@ public class EnvironmentManager : MonoBehaviour
         navmeshSurfaceTwo.BuildNavMesh();
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+ 
+            var zombie = other.GetComponentInParent<Ragdoll>();
+            zombie.ActivateRagDoll();
+        
+        
+        
+
+    }
     
     
     
