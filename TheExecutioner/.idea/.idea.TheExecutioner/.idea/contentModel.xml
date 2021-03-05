@@ -28,6 +28,7 @@
           </e>
         </e>
         <e p="EventManager.cs" t="Include" />
+        <e p="GameSaveLoad.cs" t="Include" />
         <e p="ImportAnimations" t="Include">
           <e p="NavMeshComponents" t="Include">
             <e p="Editor" t="Include">
@@ -61,6 +62,7 @@
         </e>
         <e p="LevelManager.cs" t="Include" />
         <e p="LevelSO.cs" t="Include" />
+        <e p="PlatformInformation.cs" t="Include" />
         <e p="PolygonApocalypse" t="Include">
           <e p="Shader" t="Include">
             <e p="Polygon_Triplanar.shader" t="Include" />

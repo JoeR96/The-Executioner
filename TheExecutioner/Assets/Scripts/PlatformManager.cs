@@ -17,7 +17,7 @@ using UnityEngine;
         {
             foreach (var node in go)
             {
-                node.platform.GetComponent<PlatformState>().SetPlatformHeight(PlatformHeight.Flat);
+                node.platform.GetComponent<PlatformState>().SetPlatformHeight((int)PlatformHeight.Flat);
             }
             
         }

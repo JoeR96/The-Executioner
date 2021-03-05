@@ -14,7 +14,6 @@ using Random = UnityEngine.Random;
 
 
 
-[HideInInspector]
 public class EnvironmentManager : MonoBehaviour
 {
 
@@ -38,12 +37,13 @@ public class EnvironmentManager : MonoBehaviour
 
         foreach (var node in grid.grid)
         {
-            node.PlatformState.SetPlatformHeight(PlatformHeight.Flat);
-            if (node.PlatformState.PlatformStairActive)
+            node.PlatformState.SetPlatformHeight((int)PlatformHeight.Flat);
+            if (node.PlatformState.stairs.GetComponent<MeshRenderer>().enabled)
             {
                 node.PlatformState.PlatformStairActive = false;
-                node.PlatformState.stairs.SetActive(false);
+                node.PlatformState.ActivateStairs(false);
             }
+            
             
         }
 
@@ -78,10 +78,10 @@ public class EnvironmentManager : MonoBehaviour
     {   
         for (int i = 0; i < 23; i++)
         {
-            grid.grid[6+ i,28].PlatformState.SetPlatformHeight(PlatformHeight.RaisedTwice);
-            grid.grid[28, 6+ i].PlatformState.SetPlatformHeight(PlatformHeight.RaisedTwice);
-            grid.grid[6+ i,6].PlatformState.SetPlatformHeight(PlatformHeight.RaisedTwice);
-            grid.grid[6, 6+ i].PlatformState.SetPlatformHeight(PlatformHeight.RaisedTwice);
+            grid.grid[6+ i,28].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedTwice);
+            grid.grid[28, 6+ i].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedTwice);
+            grid.grid[6+ i,6].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedTwice);
+            grid.grid[6, 6+ i].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedTwice);
         }
     }
     public void BuildNavMesh()

@@ -13,15 +13,19 @@
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/LevelSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelSo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Grid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Grid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pathfinding.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlatformManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlatformManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +96,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/TileMapPractice (1).cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlatformInformation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/bf/c6e0f3d8/Int32.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameSaveLoad.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZombieSpawner.cs" root0="FORCE_HIGHLIGHTING" />
@@ -101,18 +108,21 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlatformManager.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelSO.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Grid.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelSo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlatformManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Grid.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/PlatformInofmration.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/PlatformInformation.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelSo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelManager.cs" />
     </changedPaths>
   </component>
@@ -176,6 +186,7 @@
       <workItem from="1614334088799" duration="4791000" />
       <workItem from="1614737425482" duration="17973000" />
       <workItem from="1614822856503" duration="3449000" />
+      <workItem from="1614868207419" duration="21945000" />
     </task>
     <servers />
   </component>

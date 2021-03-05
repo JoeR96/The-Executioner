@@ -11,20 +11,17 @@ public class EnvironmentSpawner : MonoBehaviour
     public Material[] Materials;
     public GameObject stairs;
     private Pathfinding pathfinding;
-    private PlatformManager platformManager;
     private Grid grid;
     
-    private List<GameObject> Stairs = new List<GameObject>();
-    private List<List<GameObject[,]>> LevelPlatforms = new List<List<GameObject[,]>>();
     public List<List<List<Node>>> LevelPaths = new List<List<List<Node>>>();
     public List<List<Node>> LevelBunkers = new List<List<Node>>();
     public List<List<Node>> LevelHighBunkers = new List<List<Node>>();
     public List<List<Node>> LevelLowBunkers = new List<List<Node>>();
     private void Start()
     {
-        platformManager = GetComponent<PlatformManager>();
         grid = GetComponent<Grid>();
     }
+    
     public List<Node> ReturnRandomPath()
     {
         var random = Random.Range(0, LevelBunkers.Count);
@@ -187,7 +184,7 @@ public class EnvironmentSpawner : MonoBehaviour
                     var t = VARIABLE.platform.GetComponent<PlatformState>();
                     t.PlatformIsActive = true;
                     VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material]; 
-                    t.SetPlatformHeight(PlatformHeight.RaisedTwice);
+                    t.SetPlatformHeight((int)PlatformHeight.RaisedTwice);
                     VARIABLE.platform.layer = 11;
                     LevelBunkers.Add(go);
                 }
@@ -227,7 +224,7 @@ public class EnvironmentSpawner : MonoBehaviour
                     var t = VARIABLE.platform.GetComponent<PlatformState>();
                     t.PlatformIsActive = true;
                     VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material]; 
-                    t.SetPlatformHeight(PlatformHeight.Underground);
+                    t.SetPlatformHeight((int)PlatformHeight.Underground);
                     VARIABLE.platform.layer = 11;
                     LevelBunkers.Add(go);
                 }
@@ -291,7 +288,7 @@ public class EnvironmentSpawner : MonoBehaviour
                 t.PlatformIsActive = true;
                 VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material];
                 VARIABLE.platform.layer = 11;
-                t.SetPlatformHeight(PlatformHeight.Raised);
+                t.SetPlatformHeight((int)PlatformHeight.Raised);
                 LevelBunkers.Add(path);
             }
                 
@@ -321,7 +318,7 @@ public class EnvironmentSpawner : MonoBehaviour
                     var t = VARIABLE.platform.GetComponent<PlatformState>();
                    t.PlatformIsActive = true;
                     VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material]; 
-                    t.SetPlatformHeight(PlatformHeight.Raised);
+                    t.SetPlatformHeight((int)PlatformHeight.Raised);
                 }
                     
             }
@@ -527,27 +524,16 @@ public class EnvironmentSpawner : MonoBehaviour
             var pos = spawnPosition.Item1;
             
             var platformState = adjacent[(int) spawnPosition.Item1.x, (int) spawnPosition.Item1.y].platform.GetComponent<PlatformState>();
-            platformState.SetPlatformHeight(PlatformHeight.Raised);
+            platformState.SetPlatformHeight((int)PlatformHeight.Raised);
 
-            var t = Instantiate(stairs,
-                adjacent[(int) pos.x, (int) pos.y].worldPosition,
-                quaternion.identity);
-
+            
             var stairPlatform = adjacent[(int) pos.x, (int) pos.y].platform.GetComponent<PlatformState>();
             stairPlatform.ActivateStairs(true);
-            Debug.Log(stairPlatform.PlatformStairActive);
-            var x = t.GetComponent<PlatformState>();
-            x.PlatformIsActive = true;
+
+            stairPlatform.PlatformIsActive = true;
             
-           
-            x.Setint(adjacent[0,0].gridX -1 +(int)pos.x,adjacent[0,0].gridY+(int)pos.y -1);
-             t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
-                transform.localRotation.eulerAngles.y + spawnPosition.Item2,
-                transform.localRotation.eulerAngles.z);
-             var newPos = new Vector3(t.transform.position.x + 2, t.transform.position.y +7.5f, t.transform.position.z - 2);
-             t.transform.position = newPos;
              stairPlatform.GetComponent<PlatformState>().SpawnPath();
-             t.GetComponent<PlatformState>().Setint(adjacent[0,0].gridX -1 +(int)pos.x,adjacent[0,0].gridY+(int)pos.y);
+             
         }
     }
     public Node[,] CheckAdjacentPositions(Node node)

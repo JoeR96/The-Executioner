@@ -13,20 +13,13 @@ public class Pathfinding : MonoBehaviour
     void Awake()
     {
         environmentManager = GetComponent<EnvironmentManager>();
-        grid = GameManager.instance.gameObject.GetComponent<Grid>();
+        grid = GetComponent<Grid>();
     }
     private PlatformManager _platformManager;
     private void Start()
     {
         _platformManager = GetComponent<PlatformManager>();
         Debug.Log(targets.Count);
-        // for (int i = 0; i < targets.Count; i++)
-        // {
-        //     FindPath(targets[targets.Count -1].position,targets[i].position);
-        //     
-        // }
-        
-        //_platformManager.RaisePath(path);
     }
     
 
@@ -37,8 +30,8 @@ public class Pathfinding : MonoBehaviour
     {
         path.Clear();
         
-         StartPosition = new Vector3(Random.Range(-35,35),0,Random.Range(-35,35));
-         EndPosition = new Vector3(Random.Range(-35,35),0,Random.Range(-35,35));
+         StartPosition = new Vector3(Random.Range(-0,40),0,Random.Range(-0,40));
+         EndPosition = new Vector3(Random.Range(-40,0),0,Random.Range(-40,0));
         
          FindPath (StartPosition, EndPosition);
          

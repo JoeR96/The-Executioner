@@ -1,20 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/SpawnManagerScriptableObject", order = 1)]
+[Serializable]
 public class LevelSo : ScriptableObject
 {
-    public List<PlatformState[,]> Levels = new List<PlatformState[,]>();
-    public Node[,] Level;
-    public int LevelCount;
+    
+    public List<PlatformInformation[,]> Levels = new List<PlatformInformation[,]>();
 
-    private void Start()
+    public int LevelCount;
+    
+    private void OnEnable()
     {
-        
+        LevelCount = Levels.Count;
     }
 
-    public void AddLevel(PlatformState[,] level)
+    
+    public void AddLevel(PlatformInformation[,] level)
     {
         Levels.Add(level);
         LevelCount = Levels.Count;

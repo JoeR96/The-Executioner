@@ -22,6 +22,7 @@ public enum PlatformStairState
 
     
 }
+
 public class PlatformState : MonoBehaviour
 {
 
@@ -29,41 +30,34 @@ public class PlatformState : MonoBehaviour
     [SerializeField] private GameObject raycastHolder;
     [SerializeField] public GameObject spawnPoint;
     [SerializeField] private int boundarySize;
-    
+    [SerializeField] private List<float> rotations = new List<float>();
     public GameObject[,] connectingPlatforms = new GameObject[2,2];
     public bool PlatformStairActive;
     public bool PlatformIsPlatform = true;
     public bool PlatformIsActive = false;
     public int X;
     public int Z;
-    public PlatformHeight CurrentHeight;
-    public PlatformStairState CurrentRotation;
+    public int CurrentHeight;
+    public int CurrentRotation;
     private Vector3 startPosition;
 
-    private float[] rotations = new[] {0f, 90f, 180f, 270f};
-
-    public PlatformState(bool platformStairActive, PlatformHeight height, PlatformStairState currentRotation)
-    {
-        PlatformStairActive = platformStairActive;
-        CurrentHeight = height;
-        CurrentRotation = currentRotation;
-    }
+    
     private void Start()
     {
         PlatformIsActive = false;
         startPosition = transform.position;
-        CurrentHeight = PlatformHeight.Flat;
+        CurrentHeight = (int)PlatformHeight.Flat;
     }
     
     public List<Node> SpawnPath()
     { 
-        SetPlatformHeight(PlatformHeight.Raised);
+        SetPlatformHeight((int)PlatformHeight.Raised);
         var t = GameManager.instance.pathfinding.ReturnPath();
       var l = GameManager.instance.EnvironmentManager.environmentSpawner.GetNode(t);
       GameManager.instance.EnvironmentManager.pathFinding.InitializeConnectingPath(Node,l);
       foreach (var go in t)
         {
-            go.platform.GetComponent<PlatformState>().SetPlatformHeight(PlatformHeight.Raised);
+            go.platform.GetComponent<PlatformState>().SetPlatformHeight((int)PlatformHeight.Raised);
         }
         stairs.gameObject.SetActive(true);
         return t;
@@ -75,11 +69,12 @@ public class PlatformState : MonoBehaviour
         stairs.GetComponent<MeshCollider>().enabled = active;
     }
 
-    public void SetStateFromExternal(PlatformHeight height, PlatformStairState stairState, bool stairActive)
+    public void SetStateFromExternal(int height, int stairState, bool stairActive)
     {
         PlatformStairActive = stairActive;
         CurrentHeight = height;
         CurrentRotation = stairState;
+        SetState();
     }
     public void SetState()
     {
@@ -127,27 +122,27 @@ public class PlatformState : MonoBehaviour
         Z = z;
     }
 
-    public void SetPlatformHeight(PlatformHeight height)
+    public void SetPlatformHeight(int height)
     {
         Vector3 targetPosition;
-        if (height == PlatformHeight.Flat)
+        if (height == (int)PlatformHeight.Flat)
         {
             SetPosition(-25,PlatformHeight.Flat);
         }
-        if (height == PlatformHeight.Raised)
+        if (height == (int)PlatformHeight.Raised)
         {
             SetPosition(-5,PlatformHeight.Raised);
         }
-        if (height == PlatformHeight.RaisedTwice)
+        if (height == (int)PlatformHeight.RaisedTwice)
         {
             SetPosition(-10, PlatformHeight.RaisedTwice);
         }
-        if (height == PlatformHeight.Underground)
+        if (height == (int)PlatformHeight.Underground)
         {
             SetPosition(5, PlatformHeight.Underground);
         }
 
-        CurrentHeight = height;
+        CurrentHeight = (int)height;
     }
 
     private void SetPosition(float targetHeight,PlatformHeight state)
@@ -159,7 +154,7 @@ public class PlatformState : MonoBehaviour
             targetPosition = startPosition;
         }
         StartCoroutine(LerpPosition(targetPosition, 0.25f));
-        CurrentHeight = state;
+        CurrentHeight = (int)state;
  
     }
 
@@ -179,17 +174,15 @@ public class PlatformState : MonoBehaviour
 
     }
 
-    public void SetStairRotation( PlatformStairState stairState)
+    
+    public void SetStairRotation( int stairState)
     {
-        
-            stairs.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
-                transform.localRotation.eulerAngles.y + rotations[(int)stairState],
+        stairs.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
+                transform.localRotation.eulerAngles.y + rotations[stairState],
                 transform.localRotation.eulerAngles.z);
             CurrentRotation = stairState;
-
-        
-        
     }
+    
 }
 
 

@@ -16,12 +16,12 @@ public class GameManager : Singleton<GameManager>
     void Awake()
     {
         
-        EnvironmentManager = GetComponent<EnvironmentManager>();
-        ZombieOverFlowEvent = GetComponent<ZombieOverflowEvent>();
-        ZombieSpawner = GetComponent<ZombieSpawner>();
-        LimbSpawner = GetComponent<LimbSpawner>();
-        pathfinding = GetComponent<Pathfinding>();
-        Grid = GetComponent<Grid>();
+        EnvironmentManager = GetComponentInChildren<EnvironmentManager>();
+        ZombieOverFlowEvent = GetComponentInChildren<ZombieOverflowEvent>();
+        ZombieSpawner = GetComponentInChildren<ZombieSpawner>();
+        LimbSpawner = GetComponentInChildren<LimbSpawner>();
+        pathfinding = GetComponentInChildren<Pathfinding>();
+        Grid = GetComponentInChildren<Grid>();
     }
     
     private void Update()

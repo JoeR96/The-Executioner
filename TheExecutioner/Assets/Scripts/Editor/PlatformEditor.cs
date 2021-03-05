@@ -12,19 +12,19 @@ public class PlatformEditor : Editor
         PlatformState platformState = (PlatformState)target;
         if (GUILayout.Button("Create Low Path"))
         {
-            platformState.SetPlatformHeight(PlatformHeight.Raised);
+            platformState.SetPlatformHeight((int)PlatformHeight.Raised);
         }
         if (GUILayout.Button("Create High Path"))
         {
-            platformState.SetPlatformHeight(PlatformHeight.RaisedTwice);
+            platformState.SetPlatformHeight((int)PlatformHeight.RaisedTwice);
         }
         if (GUILayout.Button("Lower Platform Underground"))
         {
-            platformState.SetPlatformHeight(PlatformHeight.Underground);
+            platformState.SetPlatformHeight((int)PlatformHeight.Underground);
         }
         if (GUILayout.Button("Reset Platform"))
         {
-            platformState.SetPlatformHeight(PlatformHeight.Flat);
+            platformState.SetPlatformHeight((int)PlatformHeight.Flat);
         }
 
         if (GUILayout.Button("Toggle Stair"))
@@ -37,15 +37,15 @@ public class PlatformEditor : Editor
         }
         if (GUILayout.Button("Stair Position Two"))
         {
-            platformState.SetStairRotation((PlatformStairState) 1);
+            platformState.SetStairRotation(1);
         }
         if (GUILayout.Button("Stair Position Three"))
         {
-            platformState.SetStairRotation((PlatformStairState) 2);
+            platformState.SetStairRotation(2);
         }
         if (GUILayout.Button("Stair Position Four"))
         {
-            platformState.SetStairRotation((PlatformStairState) 3);
+            platformState.SetStairRotation(3);
         }
     }
 }
