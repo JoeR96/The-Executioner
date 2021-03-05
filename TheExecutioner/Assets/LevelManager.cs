@@ -35,7 +35,9 @@ public class LevelManager : MonoBehaviour
                 platformStates[i, j].CurrentHeight = grid.grid[i, j].PlatformState.CurrentHeight;
                 platformStates[i, j].CurrentRotation = grid.grid[i, j].PlatformState.CurrentRotation;
                 platformStates[i, j].PlatformStairActive = grid.grid[i, j].PlatformState.PlatformStairActive;
+                platformStates[i, j].BridgeIsActive = grid.grid[i, j].PlatformState.PlatformBridgeActive;
                 platformStates[i, j].CurrentColour = grid.grid[i, j].PlatformState.CurrentColour;
+                platformStates[i, j].CurrentBridgeHeight = grid.grid[i, j].PlatformState.CurrentBridgeHeight;
                 platformStates[i, j].X = grid.grid[i, j].PlatformState.X;
                 platformStates[i, j].Z = grid.grid[i, j].PlatformState.Z;
             }
@@ -67,15 +69,16 @@ public class LevelManager : MonoBehaviour
     public void LoadStage(int index)
     {
         var levelToSet = levelSo.ReturnLevel(index);
+        Debug.Log(levelToSet.Count);
         foreach (var go in levelToSet)
         {
             grid.grid[go.X,go.Z].PlatformState.SetStateFromExternal(go.CurrentHeight,go.CurrentRotation,
                 go.PlatformStairActive,go.CurrentBridgeHeight,go.BridgeIsActive,go.CurrentColour);
-            
             grid.grid[go.X,go.Z].PlatformState.SetState();
         }
-        
 
-    }
+    } 
+    
+
     
 }

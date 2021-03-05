@@ -10,7 +10,8 @@ public enum PlatformHeight
     Raised,
     RaisedTwice,
     Underground,
-    Flat
+    Flat,
+    RaisedFour
 }
 
 public enum PlatformBridgeHeight
@@ -44,12 +45,13 @@ public class PlatformState : MonoBehaviour
     public int CurrentBridgeHeight;
     public int CurrentRotation;
     private Vector3 startPosition;
-
+    private Vector3 bridgeStartPosition;
     
     private void Start()
     {
         PlatformIsActive = false;
         startPosition = transform.position;
+        bridgeStartPosition = bridge.transform.position;
         CurrentHeight = (int)PlatformHeight.Flat;
     }
     
@@ -75,8 +77,8 @@ public class PlatformState : MonoBehaviour
 
     public void ActivateBridge(bool active)
     {
-        bridge.GetComponent<MeshRenderer>().enabled = active;
-        bridge.GetComponent<MeshCollider>().enabled = active;
+        bridge.GetComponentInChildren<MeshRenderer>().enabled = active;
+        bridge.GetComponentInChildren<BoxCollider>().enabled = active;
     }
 
     public void SetStateFromExternal(int height, int stairState, bool stairActive,int platformHeight, bool platformBridgeActive,int currentColour)
@@ -94,21 +96,16 @@ public class PlatformState : MonoBehaviour
         SetPlatformHeight(CurrentHeight);
         SetStairRotation(CurrentRotation);
         SetPlatformColour(CurrentColour);
-        if(PlatformStairActive)
-        {
-            ActivateStairs(true);
-        }
-
-        if (PlatformBridgeActive)
-        {
-            ActivateBridge(true);
-        }
+        ActivateStairs(PlatformStairActive);
+        ActivateBridge(PlatformBridgeActive);
+        SetBridgeHeight(CurrentBridgeHeight);
+        
     }
 
     private void SetPlatformColour(int index)
     {
         var t = GetComponent<MeshRenderer>();
-        t.materials[0] = GameManager.instance.EnvironmentManager.environmentSpawner.Materials[index];
+        t.material = GameManager.instance.EnvironmentManager.environmentSpawner.Materials[index];
     }
     public bool ReturnStairValue()
     {
@@ -153,21 +150,24 @@ public class PlatformState : MonoBehaviour
         Vector3 targetPosition;
         if (height == (int)PlatformHeight.Flat)
         {
-            SetPosition(gameObject,-25,PlatformHeight.Flat);
+            SetPosition(gameObject,-25,PlatformHeight.Flat,true);
         }
         if (height == (int)PlatformHeight.Raised)
         {
-            SetPosition(gameObject,-5,PlatformHeight.Raised);
+            SetPosition(gameObject,-5,PlatformHeight.Raised,true);
         }
         if (height == (int)PlatformHeight.RaisedTwice)
         {
-            SetPosition(gameObject,-10, PlatformHeight.RaisedTwice);
+            SetPosition(gameObject,-10, PlatformHeight.RaisedTwice,true);
         }
         if (height == (int)PlatformHeight.Underground)
         {
-            SetPosition(gameObject,5, PlatformHeight.Underground);
+            SetPosition(gameObject,5, PlatformHeight.Underground,true);
         }
-
+        if (height == (int)PlatformHeight.RaisedFour)
+        {
+            SetPosition(gameObject,-16, PlatformHeight.Underground,true);
+        }
         CurrentHeight = (int)height;
     }
 
@@ -176,31 +176,39 @@ public class PlatformState : MonoBehaviour
         Vector3 targetPosition;
         if (height == (int)PlatformBridgeHeight.LowBridge)
         {
-            SetPosition(bridge,-25,PlatformHeight.Flat);
+            SetPosition(bridge,-25,PlatformHeight.Flat,false);
         }
         if (height == (int)PlatformBridgeHeight.Middlebridge)
         {
-            SetPosition(bridge,-5,PlatformHeight.Raised);
+            SetPosition(bridge,-5,PlatformHeight.Raised,false);
         }
         if (height == (int)PlatformBridgeHeight.HighBridge)
         {
-            SetPosition(bridge,-10, PlatformHeight.RaisedTwice);
+            SetPosition(bridge,-10, PlatformHeight.RaisedTwice,false);
         }
 
 
         CurrentBridgeHeight = (int)height;
     }
     
-    private void SetPosition(GameObject go,float targetHeight,PlatformHeight state)
+    private void SetPosition(GameObject go,float targetHeight,PlatformHeight state,bool isPlatform)
     {
         Vector3 targetPosition;
-        targetPosition = new Vector3(transform.position.x, startPosition.y - targetHeight, transform.position.z);
+        targetPosition = new Vector3(go.transform.position.x, startPosition.y - targetHeight, go.transform.position.z);
         if (state == PlatformHeight.Flat)
         {
             targetPosition = startPosition;
         }
         StartCoroutine(LerpPosition(go,targetPosition, 0.25f));
-        CurrentHeight = (int)state;
+        if (isPlatform)
+        {
+            CurrentHeight = (int)state;
+        }
+        else
+        {
+            CurrentBridgeHeight = (int) state;
+        }
+        
  
     }
 

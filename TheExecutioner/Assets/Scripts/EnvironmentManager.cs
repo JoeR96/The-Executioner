@@ -78,10 +78,10 @@ public class EnvironmentManager : MonoBehaviour
     {   
         for (int i = 0; i < 23; i++)
         {
-            grid.grid[6+ i,28].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedTwice);
-            grid.grid[28, 6+ i].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedTwice);
-            grid.grid[6+ i,6].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedTwice);
-            grid.grid[6, 6+ i].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedTwice);
+            grid.grid[6+ i,28].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedFour);
+            grid.grid[28, 6+ i].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedFour);
+            grid.grid[6+ i,6].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedFour);
+            grid.grid[6, 6+ i].PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedFour);
         }
     }
     public void BuildNavMesh()

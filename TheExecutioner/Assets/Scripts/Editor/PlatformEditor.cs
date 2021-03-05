@@ -63,7 +63,7 @@ public class PlatformEditor : Editor
         {
             platformState.SetBridgeHeight((int)PlatformHeight.Underground);
         }
-   
+ 
 
     }
 }
