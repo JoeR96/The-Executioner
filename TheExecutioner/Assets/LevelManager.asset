@@ -2526,2756 +2526,20 @@ MonoBehaviour:
     X: 8
     Z: 9
   - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 10
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 11
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 12
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 13
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 14
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 15
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 16
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 17
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 18
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 19
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 20
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 21
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 22
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 23
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 24
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 25
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 26
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 27
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 28
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 29
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 30
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 31
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 32
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 33
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 34
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 35
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 36
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 8
-    Z: 37
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 0
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 1
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 2
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 3
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 4
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 5
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 6
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 7
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 8
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 9
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 10
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 11
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 12
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 13
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 14
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 1
-    CurrentRotation: 0
-    CurrentColour: 2
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 15
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 16
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 17
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 18
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 19
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 20
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 21
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 22
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 23
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 24
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 25
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 26
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 27
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 28
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 29
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 30
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 31
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 32
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 33
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 34
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 35
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 36
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 9
-    Z: 37
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 0
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 1
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 2
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 3
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 4
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 5
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 6
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 7
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 8
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 9
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 10
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 11
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 12
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 13
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 14
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 1
-    CurrentRotation: 0
-    CurrentColour: 2
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 15
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 16
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 17
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 18
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 19
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 20
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 21
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 22
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 23
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 24
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 25
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 26
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 27
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 28
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 29
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 30
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 31
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 32
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 33
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 34
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 35
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 36
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 10
-    Z: 37
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 0
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 1
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 2
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 3
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 4
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 5
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 6
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 7
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 8
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 9
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 10
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 11
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 12
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 13
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 14
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 1
-    CurrentRotation: 0
-    CurrentColour: 2
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 15
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 16
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 17
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 18
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 19
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 20
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 21
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 22
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 23
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 24
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 25
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 26
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 27
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 28
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 29
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 30
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 31
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 32
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 33
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 34
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 35
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 36
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 11
-    Z: 37
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 0
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 1
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 2
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 3
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 4
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 5
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 6
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 7
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 8
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 9
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 10
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 11
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 12
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 13
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 14
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 15
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 16
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 17
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 18
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 19
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 20
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 21
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 22
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 23
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 24
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 25
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 26
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 27
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 28
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 29
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 30
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 31
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 32
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 33
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 34
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 35
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 36
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 12
-    Z: 37
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 0
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 1
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 2
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 3
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 4
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 5
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 6
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 7
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 8
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 9
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 10
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 11
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 12
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 13
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 14
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 15
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 16
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 1
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 17
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 18
-  - BridgeIsActive: 0
     PlatformStairActive: 1
     CurrentHeight: 2
-    CurrentRotation: 1
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 19
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 20
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 21
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 22
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 23
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 24
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 25
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 26
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 27
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 28
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 29
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 30
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 31
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 32
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 33
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 34
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 35
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 36
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 13
-    Z: 37
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 0
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 1
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 2
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 3
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 4
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 5
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 6
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 7
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 8
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 9
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 10
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 11
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 12
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 13
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 14
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 15
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 16
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 1
-    CurrentRotation: 0
-    CurrentColour: 2
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 17
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 1
-    CurrentRotation: 0
-    CurrentColour: 2
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 18
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 19
-  - BridgeIsActive: 1
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 20
-  - BridgeIsActive: 0
-    PlatformStairActive: 1
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 21
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 22
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 23
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 24
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 25
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 26
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 27
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 28
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 29
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 30
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 31
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 32
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 33
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 34
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 35
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 36
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 14
-    Z: 37
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 0
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 1
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 2
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 3
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 4
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 5
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 6
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 7
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 8
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 9
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 10
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 11
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 12
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 13
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 14
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 15
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 16
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 17
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 1
-    CurrentRotation: 0
-    CurrentColour: 2
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 18
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 19
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 20
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 1
-    CurrentRotation: 0
-    CurrentColour: 3
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 21
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 22
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 23
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 24
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 25
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 26
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 27
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 28
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 29
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 30
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 31
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 32
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 33
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 34
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 35
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 36
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 37
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 0
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 1
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 2
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 3
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 4
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 5
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 6
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 7
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 8
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 9
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 10
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 11
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 12
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 13
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 14
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 15
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 16
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 17
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 18
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 19
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 20
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 1
-    CurrentRotation: 0
-    CurrentColour: 3
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 21
-  - BridgeIsActive: 0
-    PlatformStairActive: 1
-    CurrentHeight: 0
     CurrentRotation: 2
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 16
-    Z: 22
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 23
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 24
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 25
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 26
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 27
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 28
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 29
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 30
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 31
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 32
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 33
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 34
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 35
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 36
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 37
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 17
-    Z: 0
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 17
-    Z: 1
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 17
-    Z: 2
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 17
-    Z: 3
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 17
-    Z: 4
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 17
-    Z: 5
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 17
-    Z: 6
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 17
-    Z: 7
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 17
-    Z: 8
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 17
-    Z: 9
+    X: 8
+    Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
     CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
-    Z: 10
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 1
-    CurrentRotation: 0
-    CurrentColour: 3
-    CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 11
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5283,39 +2547,39 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 12
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 13
   - BridgeIsActive: 0
     PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 8
+    Z: 14
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
     CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
-    Z: 14
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 16
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5323,7 +2587,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5331,15 +2595,15 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 18
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 19
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5347,15 +2611,15 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 20
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 1
+    CurrentHeight: 3
     CurrentRotation: 0
-    CurrentColour: 3
+    CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 21
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5363,7 +2627,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 22
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5371,7 +2635,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 23
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5379,7 +2643,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 24
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5387,7 +2651,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 25
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5395,7 +2659,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 26
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5403,7 +2667,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 27
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5411,7 +2675,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 28
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5419,7 +2683,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 29
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5427,7 +2691,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 30
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5435,7 +2699,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 31
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5443,7 +2707,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 32
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5451,7 +2715,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 33
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5459,7 +2723,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 34
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5467,7 +2731,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 35
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5475,7 +2739,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 36
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5483,7 +2747,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 17
+    X: 8
     Z: 37
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5491,7 +2755,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 0
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5499,7 +2763,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 1
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5507,7 +2771,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 2
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5515,7 +2779,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 3
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5523,7 +2787,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 4
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5531,7 +2795,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 5
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5539,7 +2803,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 6
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5547,7 +2811,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 7
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5555,7 +2819,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 8
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5563,23 +2827,23 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 9
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 11
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5587,15 +2851,15 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 12
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 1
+    CurrentHeight: 2
     CurrentRotation: 0
-    CurrentColour: 3
+    CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 13
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5603,7 +2867,7 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5611,31 +2875,31 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 16
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 18
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5643,23 +2907,631 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
     Z: 19
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 20
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 21
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 22
   - BridgeIsActive: 0
     PlatformStairActive: 0
     CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
-    Z: 20
+    X: 9
+    Z: 23
   - BridgeIsActive: 0
-    PlatformStairActive: 1
-    CurrentHeight: 0
-    CurrentRotation: 3
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 18
+    X: 9
+    Z: 24
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 25
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 26
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 27
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 28
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 29
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 30
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 31
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 32
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 33
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 34
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 35
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 36
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 9
+    Z: 37
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 0
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 1
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 2
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 3
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 4
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 5
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 6
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 7
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 8
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 9
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 10
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 11
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 12
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 13
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 14
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 15
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 16
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 17
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 18
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 19
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 20
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 21
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 22
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 23
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 24
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 25
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 26
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 27
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 28
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 29
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 30
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 31
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 32
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 33
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 34
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 35
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 36
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 10
+    Z: 37
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 0
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 1
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 2
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 3
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 4
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 5
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 6
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 7
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 8
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 9
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 10
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 11
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 12
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 13
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 14
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 15
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 16
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 17
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 18
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 19
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 20
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
     Z: 21
   - BridgeIsActive: 0
     PlatformStairActive: 0
@@ -5667,11 +3539,2139 @@ MonoBehaviour:
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
+    X: 11
+    Z: 22
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 23
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 24
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 25
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 26
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 27
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 28
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 29
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 30
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 31
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 32
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 33
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 34
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 35
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 36
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 11
+    Z: 37
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 0
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 1
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 2
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 3
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 4
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 5
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 6
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 7
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 8
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 9
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 10
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 1
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 11
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 12
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 13
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 14
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 15
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 16
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 17
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 18
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 19
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 20
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 21
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 22
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 23
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 24
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 25
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 26
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 27
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 28
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 29
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 30
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 31
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 32
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 33
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 34
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 35
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 36
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 12
+    Z: 37
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 0
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 1
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 2
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 3
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 4
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 5
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 6
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 7
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 8
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 9
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 10
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 1
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 11
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 12
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 13
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 1
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 14
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 15
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 16
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 17
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 18
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 19
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 20
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 21
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 22
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 23
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 24
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 25
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 26
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 27
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 28
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 29
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 30
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 31
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 32
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 33
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 34
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 35
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 36
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 13
+    Z: 37
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 0
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 1
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 2
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 3
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 4
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 5
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 6
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 7
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 8
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 9
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 10
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 11
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 12
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 13
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 14
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 15
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 16
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 17
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 18
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 19
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 20
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 21
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 22
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 23
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 24
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 25
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 26
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 27
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 28
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 29
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 30
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 31
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 32
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 33
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 34
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 35
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 36
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 14
+    Z: 37
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 0
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 1
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 2
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 3
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 4
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 5
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 6
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 7
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 8
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 9
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 10
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 11
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 12
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 13
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 14
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 15
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 16
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 17
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 18
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 19
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 20
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 21
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 22
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 23
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 24
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 25
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 26
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 27
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 28
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 29
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 30
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 31
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 32
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 33
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 34
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 35
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 36
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 37
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 0
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 1
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 2
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 3
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 4
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 5
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 6
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 7
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 8
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 9
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 10
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 11
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 12
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 13
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 14
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 15
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 16
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 17
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 18
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 19
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 20
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 21
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 22
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 23
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 24
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 25
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 26
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 27
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 28
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 29
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 30
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 31
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 32
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 33
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 34
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 35
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 36
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 37
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 0
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 1
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 2
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 3
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 4
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 5
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 6
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 7
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 8
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 9
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 10
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 11
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 12
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 13
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 14
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 15
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 16
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 17
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 18
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 19
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 20
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 21
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 22
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 23
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 24
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 25
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 26
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 27
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 28
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 29
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 30
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 31
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 32
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 33
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 34
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 35
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 36
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 17
+    Z: 37
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 0
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 1
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 2
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 3
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 4
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 5
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 6
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 7
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 8
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 9
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 10
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 11
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 12
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 13
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 14
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 15
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 16
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 17
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 18
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 19
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 20
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 18
+    Z: 21
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
     X: 18
     Z: 22
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -5871,7 +5871,7 @@ MonoBehaviour:
     Z: 9
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -5879,7 +5879,7 @@ MonoBehaviour:
     Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -5887,7 +5887,7 @@ MonoBehaviour:
     Z: 11
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -5895,9 +5895,9 @@ MonoBehaviour:
     Z: 12
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 1
+    CurrentHeight: 0
     CurrentRotation: 0
-    CurrentColour: 3
+    CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 19
     Z: 13
@@ -5911,7 +5911,7 @@ MonoBehaviour:
     Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -5919,7 +5919,7 @@ MonoBehaviour:
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -5927,23 +5927,23 @@ MonoBehaviour:
     Z: 16
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 1
+    CurrentHeight: 0
     CurrentRotation: 0
-    CurrentColour: 2
+    CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 19
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 1
+    CurrentHeight: 0
     CurrentRotation: 0
-    CurrentColour: 2
+    CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 19
     Z: 18
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -5951,7 +5951,7 @@ MonoBehaviour:
     Z: 19
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -5968,14 +5968,14 @@ MonoBehaviour:
   - BridgeIsActive: 0
     PlatformStairActive: 0
     CurrentHeight: 3
-    CurrentRotation: 2
+    CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 19
     Z: 22
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -6167,7 +6167,7 @@ MonoBehaviour:
     Z: 8
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -6175,7 +6175,7 @@ MonoBehaviour:
     Z: 9
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -6183,7 +6183,7 @@ MonoBehaviour:
     Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -6199,7 +6199,7 @@ MonoBehaviour:
     Z: 12
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -6207,7 +6207,7 @@ MonoBehaviour:
     Z: 13
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -6215,7 +6215,7 @@ MonoBehaviour:
     Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -6223,7 +6223,7 @@ MonoBehaviour:
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -6239,7 +6239,7 @@ MonoBehaviour:
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -6263,15 +6263,15 @@ MonoBehaviour:
     Z: 20
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
-    CurrentColour: 3
+    CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 20
     Z: 21
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -6279,7 +6279,7 @@ MonoBehaviour:
     Z: 22
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -6471,388 +6471,236 @@ MonoBehaviour:
     Z: 8
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 21
     Z: 9
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 10
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 11
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 12
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 13
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 14
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 15
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 16
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 17
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 18
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 19
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 20
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 3
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 21
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 22
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 23
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 24
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 25
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 26
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 27
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 28
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 29
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 30
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 31
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 32
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 33
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 34
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 35
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 36
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 21
-    Z: 37
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 0
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 1
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 2
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 3
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 4
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 5
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 6
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 7
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 8
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 9
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 10
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 11
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 12
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 13
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 14
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 15
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 2
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 22
-    Z: 16
   - BridgeIsActive: 0
     PlatformStairActive: 0
     CurrentHeight: 1
     CurrentRotation: 0
-    CurrentColour: 3
+    CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 22
+    X: 21
+    Z: 10
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 11
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 12
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 13
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 14
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 15
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 16
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 18
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 19
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 20
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 21
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 22
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 23
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
     CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
-    X: 22
-    Z: 18
+    X: 21
+    Z: 24
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 25
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 26
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 27
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 28
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 29
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 30
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 31
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 32
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 33
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 34
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 35
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 36
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 21
+    Z: 37
   - BridgeIsActive: 0
     PlatformStairActive: 0
     CurrentHeight: 3
@@ -6860,15 +6708,119 @@ MonoBehaviour:
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 22
-    Z: 19
+    Z: 0
   - BridgeIsActive: 0
-    PlatformStairActive: 1
-    CurrentHeight: 2
-    CurrentRotation: 1
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 22
-    Z: 20
+    Z: 1
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 2
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 3
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 4
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 5
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 6
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 7
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 8
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 9
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 1
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 10
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 11
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 12
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 13
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 1
     CurrentHeight: 3
@@ -6876,10 +6828,58 @@ MonoBehaviour:
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 22
+    Z: 15
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 16
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 17
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 18
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 19
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
+    Z: 20
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 22
     Z: 21
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -6887,7 +6887,7 @@ MonoBehaviour:
     Z: 22
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -7087,7 +7087,7 @@ MonoBehaviour:
     Z: 9
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -7095,7 +7095,7 @@ MonoBehaviour:
     Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -7103,7 +7103,7 @@ MonoBehaviour:
     Z: 11
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 2
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -7151,7 +7151,7 @@ MonoBehaviour:
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -7159,7 +7159,7 @@ MonoBehaviour:
     Z: 18
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -7167,15 +7167,15 @@ MonoBehaviour:
     Z: 19
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 23
     Z: 20
   - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
+    PlatformStairActive: 1
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -17759,7 +17759,7 @@ MonoBehaviour:
     X: 20
     Z: 13
   - BridgeIsActive: 0
-    PlatformStairActive: 1
+    PlatformStairActive: 0
     CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 2
@@ -18064,7 +18064,7 @@ MonoBehaviour:
     Z: 13
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -25625,7 +25625,7 @@ MonoBehaviour:
     Z: 8
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -25633,7 +25633,7 @@ MonoBehaviour:
     Z: 9
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -25929,7 +25929,7 @@ MonoBehaviour:
     Z: 8
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -25937,7 +25937,7 @@ MonoBehaviour:
     Z: 9
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -25945,7 +25945,7 @@ MonoBehaviour:
     Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -25969,7 +25969,7 @@ MonoBehaviour:
     Z: 13
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -25993,7 +25993,7 @@ MonoBehaviour:
     Z: 16
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26009,7 +26009,7 @@ MonoBehaviour:
     Z: 18
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26025,7 +26025,7 @@ MonoBehaviour:
     Z: 20
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26233,7 +26233,7 @@ MonoBehaviour:
     Z: 8
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26241,7 +26241,7 @@ MonoBehaviour:
     Z: 9
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26249,7 +26249,7 @@ MonoBehaviour:
     Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26257,7 +26257,7 @@ MonoBehaviour:
     Z: 11
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26273,7 +26273,7 @@ MonoBehaviour:
     Z: 13
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26281,7 +26281,7 @@ MonoBehaviour:
     Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26289,7 +26289,7 @@ MonoBehaviour:
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26297,7 +26297,7 @@ MonoBehaviour:
     Z: 16
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26305,7 +26305,7 @@ MonoBehaviour:
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26313,7 +26313,7 @@ MonoBehaviour:
     Z: 18
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26321,7 +26321,7 @@ MonoBehaviour:
     Z: 19
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26329,7 +26329,7 @@ MonoBehaviour:
     Z: 20
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26537,7 +26537,7 @@ MonoBehaviour:
     Z: 8
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26545,23 +26545,23 @@ MonoBehaviour:
     Z: 9
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 1
+    CurrentHeight: 3
     CurrentRotation: 0
-    CurrentColour: 1
+    CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 11
     Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 1
+    CurrentHeight: 3
     CurrentRotation: 0
-    CurrentColour: 1
+    CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 11
     Z: 11
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26585,7 +26585,7 @@ MonoBehaviour:
     Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26593,7 +26593,7 @@ MonoBehaviour:
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26601,7 +26601,7 @@ MonoBehaviour:
     Z: 16
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26609,7 +26609,7 @@ MonoBehaviour:
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26617,7 +26617,7 @@ MonoBehaviour:
     Z: 18
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26625,7 +26625,7 @@ MonoBehaviour:
     Z: 19
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26841,7 +26841,7 @@ MonoBehaviour:
     Z: 8
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26849,31 +26849,31 @@ MonoBehaviour:
     Z: 9
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 1
+    CurrentHeight: 3
     CurrentRotation: 0
-    CurrentColour: 1
+    CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 12
     Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 1
+    CurrentHeight: 2
     CurrentRotation: 0
-    CurrentColour: 1
+    CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 12
     Z: 11
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 1
+    CurrentHeight: 2
     CurrentRotation: 0
-    CurrentColour: 1
+    CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 12
     Z: 12
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26881,7 +26881,7 @@ MonoBehaviour:
     Z: 13
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26889,7 +26889,7 @@ MonoBehaviour:
     Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26897,7 +26897,7 @@ MonoBehaviour:
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26905,7 +26905,7 @@ MonoBehaviour:
     Z: 16
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26913,7 +26913,7 @@ MonoBehaviour:
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26921,7 +26921,7 @@ MonoBehaviour:
     Z: 18
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26929,7 +26929,7 @@ MonoBehaviour:
     Z: 19
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -26937,7 +26937,7 @@ MonoBehaviour:
     Z: 20
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27145,7 +27145,7 @@ MonoBehaviour:
     Z: 8
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27153,7 +27153,7 @@ MonoBehaviour:
     Z: 9
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27161,7 +27161,7 @@ MonoBehaviour:
     Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27169,23 +27169,23 @@ MonoBehaviour:
     Z: 11
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 1
+    CurrentHeight: 2
     CurrentRotation: 0
-    CurrentColour: 1
+    CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 13
     Z: 12
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 1
+    CurrentHeight: 2
     CurrentRotation: 0
-    CurrentColour: 1
+    CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 13
     Z: 13
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27193,7 +27193,7 @@ MonoBehaviour:
     Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27201,7 +27201,7 @@ MonoBehaviour:
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27209,7 +27209,7 @@ MonoBehaviour:
     Z: 16
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27217,7 +27217,7 @@ MonoBehaviour:
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27225,7 +27225,7 @@ MonoBehaviour:
     Z: 18
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27233,7 +27233,7 @@ MonoBehaviour:
     Z: 19
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27241,7 +27241,7 @@ MonoBehaviour:
     Z: 20
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27449,7 +27449,7 @@ MonoBehaviour:
     Z: 8
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27457,7 +27457,7 @@ MonoBehaviour:
     Z: 9
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27473,7 +27473,7 @@ MonoBehaviour:
     Z: 11
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27481,23 +27481,23 @@ MonoBehaviour:
     Z: 12
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 1
+    CurrentHeight: 2
     CurrentRotation: 0
-    CurrentColour: 1
+    CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 14
     Z: 13
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 2
+    CurrentHeight: 2
+    CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 14
     Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27505,7 +27505,7 @@ MonoBehaviour:
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27521,7 +27521,7 @@ MonoBehaviour:
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27529,7 +27529,7 @@ MonoBehaviour:
     Z: 18
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27537,7 +27537,7 @@ MonoBehaviour:
     Z: 19
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27545,7 +27545,7 @@ MonoBehaviour:
     Z: 20
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27553,7 +27553,7 @@ MonoBehaviour:
     Z: 21
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27753,7 +27753,7 @@ MonoBehaviour:
     Z: 8
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27769,7 +27769,7 @@ MonoBehaviour:
     Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -27777,335 +27777,335 @@ MonoBehaviour:
     Z: 11
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 15
-    Z: 12
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 1
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 13
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 1
-    CurrentRotation: 0
-    CurrentColour: 1
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 14
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 1
-    CurrentRotation: 0
-    CurrentColour: 1
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 15
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 16
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 17
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 18
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 19
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 20
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 21
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 22
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 23
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 24
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 25
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 26
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 27
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 28
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 29
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 30
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 31
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 32
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 33
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 34
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 35
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 36
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 15
-    Z: 37
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 0
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 1
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 2
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 3
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 4
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 5
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 6
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 7
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 8
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 9
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 10
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
-    Z: 11
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
-    X: 16
     Z: 12
   - BridgeIsActive: 0
     PlatformStairActive: 0
     CurrentHeight: 1
     CurrentRotation: 0
-    CurrentColour: 1
+    CurrentColour: 3
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 13
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 14
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 15
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 16
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 0
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 17
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 18
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 19
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 20
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 21
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 22
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 23
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 24
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 25
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 26
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 27
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 28
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 29
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 30
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 31
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 32
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 33
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 34
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 35
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 36
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 15
+    Z: 37
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 16
-    Z: 13
+    Z: 0
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 1
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 2
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 3
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 4
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 5
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 4
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 6
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 7
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 8
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 9
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 10
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 11
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 3
+    CurrentRotation: 0
+    CurrentColour: 0
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 12
   - BridgeIsActive: 0
     PlatformStairActive: 0
     CurrentHeight: 1
     CurrentRotation: 0
-    CurrentColour: 1
+    CurrentColour: 3
+    CurrentBridgeHeight: 0
+    X: 16
+    Z: 13
+  - BridgeIsActive: 0
+    PlatformStairActive: 0
+    CurrentHeight: 2
+    CurrentRotation: 0
+    CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 16
     Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28113,7 +28113,7 @@ MonoBehaviour:
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28129,7 +28129,7 @@ MonoBehaviour:
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28145,7 +28145,7 @@ MonoBehaviour:
     Z: 19
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28377,7 +28377,7 @@ MonoBehaviour:
     Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28393,15 +28393,15 @@ MonoBehaviour:
     Z: 12
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 1
     CurrentRotation: 0
-    CurrentColour: 1
+    CurrentColour: 3
     CurrentBridgeHeight: 0
     X: 17
     Z: 13
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28409,7 +28409,7 @@ MonoBehaviour:
     Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28417,7 +28417,7 @@ MonoBehaviour:
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28425,7 +28425,7 @@ MonoBehaviour:
     Z: 16
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28433,15 +28433,15 @@ MonoBehaviour:
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 1
     CurrentRotation: 0
-    CurrentColour: 0
+    CurrentColour: 3
     CurrentBridgeHeight: 0
     X: 17
     Z: 18
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28449,7 +28449,7 @@ MonoBehaviour:
     Z: 19
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28457,7 +28457,7 @@ MonoBehaviour:
     Z: 20
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28465,7 +28465,7 @@ MonoBehaviour:
     Z: 21
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28673,7 +28673,7 @@ MonoBehaviour:
     Z: 9
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28681,7 +28681,7 @@ MonoBehaviour:
     Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28697,15 +28697,15 @@ MonoBehaviour:
     Z: 12
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 1
     CurrentRotation: 0
-    CurrentColour: 0
+    CurrentColour: 3
     CurrentBridgeHeight: 0
     X: 18
     Z: 13
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28713,7 +28713,7 @@ MonoBehaviour:
     Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28721,7 +28721,7 @@ MonoBehaviour:
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28729,7 +28729,7 @@ MonoBehaviour:
     Z: 16
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28737,39 +28737,39 @@ MonoBehaviour:
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 1
     CurrentRotation: 0
-    CurrentColour: 0
+    CurrentColour: 3
     CurrentBridgeHeight: 0
     X: 18
     Z: 18
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 1
     CurrentRotation: 0
-    CurrentColour: 0
+    CurrentColour: 3
     CurrentBridgeHeight: 0
     X: 18
     Z: 19
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 1
     CurrentRotation: 0
-    CurrentColour: 0
+    CurrentColour: 3
     CurrentBridgeHeight: 0
     X: 18
     Z: 20
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 1
     CurrentRotation: 0
-    CurrentColour: 0
+    CurrentColour: 3
     CurrentBridgeHeight: 0
     X: 18
     Z: 21
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -28985,7 +28985,7 @@ MonoBehaviour:
     Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29001,15 +29001,15 @@ MonoBehaviour:
     Z: 12
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 1
     CurrentRotation: 0
-    CurrentColour: 0
+    CurrentColour: 3
     CurrentBridgeHeight: 0
     X: 19
     Z: 13
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29017,7 +29017,7 @@ MonoBehaviour:
     Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29025,7 +29025,7 @@ MonoBehaviour:
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29033,7 +29033,7 @@ MonoBehaviour:
     Z: 16
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29049,25 +29049,25 @@ MonoBehaviour:
     Z: 18
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
-    CurrentColour: 0
+    CurrentColour: 3
     CurrentBridgeHeight: 0
     X: 19
     Z: 19
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 1
     CurrentRotation: 0
-    CurrentColour: 0
+    CurrentColour: 3
     CurrentBridgeHeight: 0
     X: 19
     Z: 20
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 1
     CurrentRotation: 0
-    CurrentColour: 0
+    CurrentColour: 3
     CurrentBridgeHeight: 0
     X: 19
     Z: 21
@@ -29289,7 +29289,7 @@ MonoBehaviour:
     Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29297,23 +29297,23 @@ MonoBehaviour:
     Z: 11
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 20
     Z: 12
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     CurrentHeight: 0
     CurrentRotation: 0
-    CurrentColour: 0
-    CurrentBridgeHeight: 0
+    CurrentColour: 3
+    CurrentBridgeHeight: 2
     X: 20
     Z: 13
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29321,7 +29321,7 @@ MonoBehaviour:
     Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29329,7 +29329,7 @@ MonoBehaviour:
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29337,7 +29337,7 @@ MonoBehaviour:
     Z: 16
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29353,7 +29353,7 @@ MonoBehaviour:
     Z: 18
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29361,7 +29361,7 @@ MonoBehaviour:
     Z: 19
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29593,7 +29593,7 @@ MonoBehaviour:
     Z: 10
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29601,7 +29601,7 @@ MonoBehaviour:
     Z: 11
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29609,15 +29609,15 @@ MonoBehaviour:
     Z: 12
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 1
     CurrentRotation: 0
-    CurrentColour: 0
+    CurrentColour: 3
     CurrentBridgeHeight: 0
     X: 21
     Z: 13
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29625,7 +29625,7 @@ MonoBehaviour:
     Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29633,7 +29633,7 @@ MonoBehaviour:
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29641,7 +29641,7 @@ MonoBehaviour:
     Z: 16
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29649,7 +29649,7 @@ MonoBehaviour:
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29665,7 +29665,7 @@ MonoBehaviour:
     Z: 19
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29905,9 +29905,9 @@ MonoBehaviour:
     Z: 11
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 1
     CurrentRotation: 0
-    CurrentColour: 0
+    CurrentColour: 3
     CurrentBridgeHeight: 0
     X: 22
     Z: 12
@@ -29921,7 +29921,7 @@ MonoBehaviour:
     Z: 13
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29929,7 +29929,7 @@ MonoBehaviour:
     Z: 14
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29937,7 +29937,7 @@ MonoBehaviour:
     Z: 15
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29945,7 +29945,7 @@ MonoBehaviour:
     Z: 16
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29953,7 +29953,7 @@ MonoBehaviour:
     Z: 17
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29961,7 +29961,7 @@ MonoBehaviour:
     Z: 18
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -29969,7 +29969,7 @@ MonoBehaviour:
     Z: 19
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -30209,9 +30209,9 @@ MonoBehaviour:
     Z: 11
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
-    CurrentColour: 0
+    CurrentColour: 3
     CurrentBridgeHeight: 0
     X: 23
     Z: 12
@@ -30513,7 +30513,7 @@ MonoBehaviour:
     Z: 11
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    CurrentHeight: 3
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0

@@ -11,12 +11,10 @@ public class ZombieOverflowEvent : MonoBehaviour
 
     public IEnumerator OverflowEvent()
     {
-        
         InvokeRepeating("Overflow",0f,0.5f);
         yield return new WaitForSeconds(2f);
         CancelInvoke();
         yield return null;
-        
     }
 
     
