@@ -27,17 +27,21 @@ public class PlatformState : MonoBehaviour
 {
 
     [SerializeField] public GameObject stairs;
+    [SerializeField] public GameObject bridge;
     [SerializeField] private GameObject raycastHolder;
     [SerializeField] public GameObject spawnPoint;
     [SerializeField] private int boundarySize;
     [SerializeField] private List<float> rotations = new List<float>();
     public GameObject[,] connectingPlatforms = new GameObject[2,2];
     public bool PlatformStairActive;
+    public bool PlatformBridgeActive;
     public bool PlatformIsPlatform = true;
     public bool PlatformIsActive = false;
     public int X;
     public int Z;
+    public int CurrentColour;
     public int CurrentHeight;
+    public int CurrentBridgeHeight;
     public int CurrentRotation;
     private Vector3 startPosition;
 
@@ -69,8 +73,16 @@ public class PlatformState : MonoBehaviour
         stairs.GetComponent<MeshCollider>().enabled = active;
     }
 
-    public void SetStateFromExternal(int height, int stairState, bool stairActive)
+    public void ActivateBridge(bool active)
     {
+        bridge.GetComponent<MeshRenderer>().enabled = active;
+        bridge.GetComponent<MeshCollider>().enabled = active;
+    }
+
+    public void SetStateFromExternal(int height, int stairState, bool stairActive,int platformHeight, bool platformBridgeActive,int currentColour)
+    {
+        CurrentColour = currentColour;
+        PlatformBridgeActive = platformBridgeActive;
         PlatformStairActive = stairActive;
         CurrentHeight = height;
         CurrentRotation = stairState;
@@ -78,16 +90,26 @@ public class PlatformState : MonoBehaviour
     }
     public void SetState()
     {
+        
         SetPlatformHeight(CurrentHeight);
         SetStairRotation(CurrentRotation);
+        SetPlatformColour(CurrentColour);
         if(PlatformStairActive)
         {
             ActivateStairs(true);
         }
-        
+
+        if (PlatformBridgeActive)
+        {
+            ActivateBridge(true);
+        }
     }
-    
-    
+
+    private void SetPlatformColour(int index)
+    {
+        var t = GetComponent<MeshRenderer>();
+        t.materials[0] = GameManager.instance.EnvironmentManager.environmentSpawner.Materials[index];
+    }
     public bool ReturnStairValue()
     {
         PlatformStairActive = !PlatformStairActive;

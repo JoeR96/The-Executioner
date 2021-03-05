@@ -183,7 +183,8 @@ public class EnvironmentSpawner : MonoBehaviour
                 {
                     var t = VARIABLE.platform.GetComponent<PlatformState>();
                     t.PlatformIsActive = true;
-                    VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material]; 
+                    VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material];
+                    t.CurrentColour = material;
                     t.SetPlatformHeight((int)PlatformHeight.RaisedTwice);
                     VARIABLE.platform.layer = 11;
                     LevelBunkers.Add(go);

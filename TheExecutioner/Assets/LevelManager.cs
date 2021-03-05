@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour
     
     
 
-    [SerializeField] LevelSo levelSo;
+    public LevelSo levelSo;
     private Grid grid;
     // Start is called before the first frame update
     void Start()
@@ -19,9 +19,10 @@ public class LevelManager : MonoBehaviour
         grid = GetComponent<Grid>();
         Debug.Log(grid);
     }
+
     
     
-    public void SaveStageOne()
+    public PlatformInformation[,] SaveStageOne()
     {
         PlatformInformation[,] platformStates = new PlatformInformation[grid.gridSizeX, grid.gridSizeY];
         
@@ -34,35 +35,44 @@ public class LevelManager : MonoBehaviour
                 platformStates[i, j].CurrentHeight = grid.grid[i, j].PlatformState.CurrentHeight;
                 platformStates[i, j].CurrentRotation = grid.grid[i, j].PlatformState.CurrentRotation;
                 platformStates[i, j].PlatformStairActive = grid.grid[i, j].PlatformState.PlatformStairActive;
+                platformStates[i, j].CurrentColour = grid.grid[i, j].PlatformState.CurrentColour;
                 platformStates[i, j].X = grid.grid[i, j].PlatformState.X;
                 platformStates[i, j].Z = grid.grid[i, j].PlatformState.Z;
             }
         }
-        levelSo.AddLevel(platformStates);
-        AssetDatabase.SaveAssets();
+        return platformStates;
+    }
+    public List<PlatformInformation> ConvertToList(PlatformInformation[,] platformInformation)
+    {
+        var list = new List<PlatformInformation>();
+        foreach (var go in platformInformation)
+        {
+            list.Add(go);
+        }
+
+        return list;
     }
 
+    public void SaveToList(int index)
+    {
+        //
+        var _ = SaveStageOne();
+        var converted = ConvertToList(_);
+        levelSo.AddLevel(converted,index);
+    }
     public void ClearSo()
     {
-        levelSo.Levels.Clear();
-        levelSo.LevelCount = 0;
+        levelSo.ClearSo();
     }
     public void LoadStage(int index)
     {
-        PlatformInformation[,] levelToSet = levelSo.Levels[index];
-        
-        for (int i = 0; i < grid.gridSizeX; i++)
+        var levelToSet = levelSo.ReturnLevel(index);
+        foreach (var go in levelToSet)
         {
-            for (int j = 0; j < grid.gridSizeY; j++)
-            {
-                var newPlatformState = levelToSet[i, j];
-                
-                grid.grid[i,j].PlatformState.SetStateFromExternal(  
-                    newPlatformState.CurrentHeight,
-                    newPlatformState.CurrentRotation,
-                    newPlatformState.PlatformStairActive);
-                grid.grid[i,j].PlatformState.SetState();
-            }
+            grid.grid[go.X,go.Z].PlatformState.SetStateFromExternal(go.CurrentHeight,go.CurrentRotation,
+                go.PlatformStairActive,go.CurrentBridgeHeight,go.BridgeIsActive,go.CurrentColour);
+            
+            grid.grid[go.X,go.Z].PlatformState.SetState();
         }
         
 

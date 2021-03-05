@@ -11,39 +11,42 @@ public class LevelManagerEditor : Editor
     [SerializeField] private LevelSo levelSo;
     private void Start()
     {
-        levelSo = (LevelSo)target;
-        EditorUtility.SetDirty(levelSo);
+        
     }
     
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
         LevelManager levelManager = (LevelManager)target;
-        
-        if (GUILayout.Button("Save "))
+        levelSo = levelManager.levelSo;
+        if (GUILayout.Button("Save Level One",GUILayout.Width(250), GUILayout.Height(50)))
         {
-            levelManager.SaveStageOne();
-            if (GUI.changed) EditorUtility.SetDirty(levelSo);
+            levelManager.SaveToList(0);
+            EditorUtility.SetDirty(levelSo);
         }
-
-        if (GUILayout.Button("Load Layout One"))
+        if (GUILayout.Button("Save Level Two",GUILayout.Width(250), GUILayout.Height(50)))
+        {
+            levelManager.SaveToList(1);
+            EditorUtility.SetDirty(levelSo);
+        }
+        if (GUILayout.Button("Save Level Three",GUILayout.Width(250), GUILayout.Height(50)))
+        {
+            levelManager.SaveToList(2);
+            EditorUtility.SetDirty(levelSo);
+        }
+        if (GUILayout.Button("Load Layout One",GUILayout.Width(250), GUILayout.Height(50)))
         {
             levelManager.LoadStage(0);
         }
-        if (GUILayout.Button("Load Layout One"))
+        if (GUILayout.Button("Load Layout Two",GUILayout.Width(250), GUILayout.Height(50)))
         {
             levelManager.LoadStage(1);
         }
-        if (GUILayout.Button("Load Layout One"))
+        if (GUILayout.Button("Load Layout Three",GUILayout.Width(250), GUILayout.Height(50)))
         {
             levelManager.LoadStage(2);
         }
-
-        if (GUILayout.Button("Clear Levels"))
-        {
-            levelManager.ClearSo();
-            
-        }
+        
     }
     
 }

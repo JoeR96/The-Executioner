@@ -13,7 +13,7 @@ public class MovingZombieDumper : MonoBehaviour
     void Start()
     { 
         _isActive = true;
-        InvokeRepeating("SpawnZombie",2f,_spawnRate);
+            //InvokeRepeating("SpawnZombie",2f,_spawnRate);
     }
 
     // Update is called once per frame

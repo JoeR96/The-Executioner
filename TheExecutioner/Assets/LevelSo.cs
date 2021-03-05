@@ -9,19 +9,52 @@ using UnityEngine;
 public class LevelSo : ScriptableObject
 {
     
-    public List<PlatformInformation[,]> Levels = new List<PlatformInformation[,]>();
-
+    public List<PlatformInformation> LevelOne = new List<PlatformInformation>();
+    public List<PlatformInformation> LevelTwo = new List<PlatformInformation>();
+    public List<PlatformInformation> LevelThree = new List<PlatformInformation>();
     public int LevelCount;
     
-    private void OnEnable()
-    {
-        LevelCount = Levels.Count;
-    }
+
 
     
-    public void AddLevel(PlatformInformation[,] level)
+    public void AddLevel(List<PlatformInformation> level,int index)
     {
-        Levels.Add(level);
-        LevelCount = Levels.Count;
+        if (index == 0)
+        {
+            LevelOne = level;
+        }
+
+        if (index == 1)
+        {
+            LevelTwo = level;
+        }
+
+        if (index == 2)
+        {
+            LevelThree = level;
+        }
+    }
+
+    public void ClearSo()
+    {
+        LevelOne.Clear();
+        LevelTwo.Clear();
+        LevelThree.Clear();
+    }
+
+    public List<PlatformInformation> ReturnLevel(int index)
+    {
+        if (index == 0)
+            return LevelOne;
+
+        if (index == 1)
+            return LevelTwo;
+
+        if (index == 2)
+            return LevelThree;
+        
+        
+        return null;
+        
     }
 }
