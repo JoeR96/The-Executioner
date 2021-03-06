@@ -193,11 +193,6 @@ public class EnvironmentSpawner : MonoBehaviour
             }
         }
         SpawnHighStairs(path);
-        if (Random.value < 0.5f)
-        {
-            SpawnHighStairs(path);
-        }
-        
     }
     public void SpawnLowBunkers(List<List<Node>> Levels)
     {
@@ -485,8 +480,8 @@ public class EnvironmentSpawner : MonoBehaviour
 
         var node = GetNode(path);
         var adjacent = CheckAdjacentPositions(node);
-
-        //The purpose of checking twice here is to ensure there is nothing blocking the platform leading to the stairs
+        
+        //The check of the second adjacent position is to check if the stairs can be accessed
         if (!ReturnStairSpawnStatus(2, 1, adjacent))
         {
             if (!ReturnStairSpawnStatus(2, 0, adjacent))

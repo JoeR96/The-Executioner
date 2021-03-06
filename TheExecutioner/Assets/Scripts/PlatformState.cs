@@ -65,7 +65,14 @@ public class PlatformState : MonoBehaviour
       GameManager.instance.EnvironmentManager.pathFinding.InitializeConnectingPath(Node,l);
       foreach (var go in t)
         {
-            go.platform.GetComponent<PlatformState>().SetPlatformHeight((int)PlatformHeight.Raised);
+            var state = go.platform.GetComponent<PlatformState>();
+            if (!state.PlatformIsActive)
+            {
+                state.SetPlatformHeight((int) PlatformHeight.RaisedTwice);
+            }
+            else
+                state.SetBridgeHeight((int)PlatformBridgeHeight.HighBridge);
+            
         }
         stairs.gameObject.SetActive(true);
         return t;
