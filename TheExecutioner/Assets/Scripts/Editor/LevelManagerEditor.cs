@@ -19,21 +19,26 @@ public class LevelManagerEditor : Editor
         DrawDefaultInspector();
         LevelManager levelManager = (LevelManager)target;
         levelSo = levelManager.levelSo;
-        if (GUILayout.Button("Save Level One",GUILayout.Width(250), GUILayout.Height(50)))
+        if (levelManager.BuildMode)
         {
-            levelManager.SaveToList(0);
-            EditorUtility.SetDirty(levelSo);
+            if (GUILayout.Button("Save Level One",GUILayout.Width(250), GUILayout.Height(50)))
+            {
+                levelManager.SaveToList(0);
+                EditorUtility.SetDirty(levelSo);
+            }
+            if (GUILayout.Button("Save Level Two",GUILayout.Width(250), GUILayout.Height(50)))
+            {
+                levelManager.SaveToList(1);
+                EditorUtility.SetDirty(levelSo);
+            }
+            if (GUILayout.Button("Save Level Three",GUILayout.Width(250), GUILayout.Height(50)))
+            {
+                levelManager.SaveToList(2);
+                EditorUtility.SetDirty(levelSo);
+            }
         }
-        if (GUILayout.Button("Save Level Two",GUILayout.Width(250), GUILayout.Height(50)))
-        {
-            levelManager.SaveToList(1);
-            EditorUtility.SetDirty(levelSo);
-        }
-        if (GUILayout.Button("Save Level Three",GUILayout.Width(250), GUILayout.Height(50)))
-        {
-            levelManager.SaveToList(2);
-            EditorUtility.SetDirty(levelSo);
-        }
+      
+        
         if (GUILayout.Button("Load Layout One",GUILayout.Width(250), GUILayout.Height(50)))
         {
             levelManager.LoadStage(0);

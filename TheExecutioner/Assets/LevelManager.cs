@@ -8,9 +8,10 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    
-    
 
+
+
+    public bool BuildMode;
     public LevelSo levelSo;
     private Grid grid;
     // Start is called before the first frame update

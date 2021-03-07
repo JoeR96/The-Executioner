@@ -11,7 +11,8 @@ public enum PlatformHeight
     RaisedTwice,
     Underground,
     Flat,
-    RaisedFour
+    RaisedFour,
+    RaisedSix
 }
 
 public enum PlatformBridgeHeight
@@ -111,6 +112,21 @@ public class PlatformState : MonoBehaviour
         
     }
 
+    public void ResetState()
+    {
+        PlatformStairActive = false;
+        PlatformBridgeActive = false;
+        
+        SetPlatformHeight((int) PlatformHeight.Flat);
+        SetBridgeHeight((int) PlatformBridgeHeight.Disabled);
+        
+        SetStairRotation(CurrentRotation);
+        //SetPlatformColour(CurrentColour);
+        ActivateStairs(PlatformStairActive);
+        ActivateBridge(PlatformBridgeActive);
+        
+    }
+    
     private void SetPlatformColour(int index)
     {
         var t = GetComponent<MeshRenderer>();
@@ -159,23 +175,27 @@ public class PlatformState : MonoBehaviour
         Vector3 targetPosition;
         if (height == (int)PlatformHeight.Flat)
         {
-            SetPosition(gameObject,-25,PlatformHeight.Flat,true);
+            SetPosition(gameObject,25,PlatformHeight.Flat,true);
         }
         if (height == (int)PlatformHeight.Raised)
         {
-            SetPosition(gameObject,-5,PlatformHeight.Raised,true);
+            SetPosition(gameObject,15,PlatformHeight.Raised,true);
         }
         if (height == (int)PlatformHeight.RaisedTwice)
         {
-            SetPosition(gameObject,-10, PlatformHeight.RaisedTwice,true);
+            SetPosition(gameObject,20, PlatformHeight.RaisedTwice,true);
         }
         if (height == (int)PlatformHeight.Underground)
         {
-            SetPosition(gameObject,5, PlatformHeight.Underground,true);
+            SetPosition(gameObject,-5, PlatformHeight.Underground,true);
         }
         if (height == (int)PlatformHeight.RaisedFour)
         {
-            SetPosition(gameObject,-16, PlatformHeight.Underground,true);
+            SetPosition(gameObject,26, PlatformHeight.RaisedFour,true);
+        }
+        if (height == (int)PlatformHeight.RaisedSix)
+        {
+            SetPosition(gameObject,-32, PlatformHeight.RaisedSix,true);
         }
         CurrentHeight = (int)height;
     }
@@ -185,21 +205,34 @@ public class PlatformState : MonoBehaviour
         Vector3 targetPosition;
         if (height == (int)PlatformBridgeHeight.LowBridge)
         {
-            SetPosition(bridge,-25,PlatformHeight.Flat,false);
+            SetBridgePosition(bridge,-35,PlatformBridgeHeight.LowBridge,false);
         }
         if (height == (int)PlatformBridgeHeight.Middlebridge)
         {
-            SetPosition(bridge,-5,PlatformHeight.Raised,false);
+            SetBridgePosition(bridge,-15,PlatformBridgeHeight.Middlebridge,false);
         }
         if (height == (int)PlatformBridgeHeight.HighBridge)
         {
-            SetPosition(bridge,-10, PlatformHeight.RaisedTwice,false);
+            SetBridgePosition(bridge,-20, PlatformBridgeHeight.HighBridge,false);
         }
 
 
         CurrentBridgeHeight = (int)height;
     }
-    
+    private void SetBridgePosition(GameObject go,float targetHeight,PlatformBridgeHeight state,bool isPlatform)
+    {
+        Vector3 targetPosition;
+        targetPosition = new Vector3(go.transform.position.x, startPosition.y - targetHeight, go.transform.position.z);
+        if (state == PlatformBridgeHeight.Disabled)
+        {
+            targetPosition = startPosition;
+        }
+        CurrentBridgeHeight = (int) state;
+        StartCoroutine(LerpPosition(go,targetPosition, 0.25f));
+        
+        
+        
+    }
     private void SetPosition(GameObject go,float targetHeight,PlatformHeight state,bool isPlatform)
     {
         Vector3 targetPosition;
@@ -218,7 +251,6 @@ public class PlatformState : MonoBehaviour
             CurrentBridgeHeight = (int) state;
         }
         
- 
     }
 
     private IEnumerator LerpPosition( GameObject go,Vector3 targetPosition, float duration)
@@ -236,7 +268,6 @@ public class PlatformState : MonoBehaviour
         }
 
     }
-
     
     public void SetStairRotation( int stairState)
     {

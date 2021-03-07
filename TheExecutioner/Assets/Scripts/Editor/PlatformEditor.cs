@@ -31,37 +31,46 @@ public class PlatformEditor : Editor
         {
             platformState.ActivateStairs(platformState.ReturnStairValue());
         }
-        if (GUILayout.Button("Stair Position One"))
+
+        if (platformState.PlatformStairActive)
         {
-            platformState.SetStairRotation(0);
+            if (GUILayout.Button("Stair Position One"))
+            {
+                platformState.SetStairRotation(0);
+            }
+            if (GUILayout.Button("Stair Position Two"))
+            {
+                platformState.SetStairRotation(1);
+            }
+            if (GUILayout.Button("Stair Position Three"))
+            {
+                platformState.SetStairRotation(2);
+            }
+            if (GUILayout.Button("Stair Position Four"))
+            {
+                platformState.SetStairRotation(3);
+            }
         }
-        if (GUILayout.Button("Stair Position Two"))
-        {
-            platformState.SetStairRotation(1);
-        }
-        if (GUILayout.Button("Stair Position Three"))
-        {
-            platformState.SetStairRotation(2);
-        }
-        if (GUILayout.Button("Stair Position Four"))
-        {
-            platformState.SetStairRotation(3);
-        }
+        
         if (GUILayout.Button("Toggle Bridge"))
         {
             platformState.ActivateBridge(platformState.ReturnBridgeValue());
         }
-        if (GUILayout.Button("Set Low Bridge"))
+
+        if (platformState.PlatformBridgeActive)
         {
-            platformState.SetBridgeHeight((int)PlatformHeight.Raised);
-        }
-        if (GUILayout.Button("Set Medium Bridge"))
-        {
-            platformState.SetBridgeHeight((int)PlatformHeight.RaisedTwice);
-        }
-        if (GUILayout.Button("Set High Bridge"))
-        {
-            platformState.SetBridgeHeight((int)PlatformHeight.Underground);
+            if (GUILayout.Button("Set Low Bridge"))
+            {
+                platformState.SetBridgeHeight((int)PlatformHeight.Raised);
+            }
+            if (GUILayout.Button("Set Medium Bridge"))
+            {
+                platformState.SetBridgeHeight((int)PlatformHeight.RaisedTwice);
+            }
+            if (GUILayout.Button("Set High Bridge"))
+            {
+                platformState.SetBridgeHeight((int)PlatformHeight.Underground);
+            }
         }
  
 

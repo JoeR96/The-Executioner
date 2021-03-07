@@ -36,7 +36,6 @@ public class EnvironmentManager : MonoBehaviour
 
     public void LowerAll()
     {
-
         foreach (var node in grid.grid)
         {
             node.PlatformState.SetPlatformHeight((int)PlatformHeight.Flat);
@@ -46,7 +45,6 @@ public class EnvironmentManager : MonoBehaviour
                 node.PlatformState.PlatformStairActive = false;
                 node.PlatformState.ActivateStairs(false);
             }
-            
             
         }
 
@@ -80,26 +78,33 @@ public class EnvironmentManager : MonoBehaviour
     
     public void RaiseWall()
     {
+        //The purpose of setting the layer is to seperate the arena navmesh from the navmesh surface above
+        //Using the walls that are always raised around the pit as a seperate navmesh surface seemed the best solution
+        
         SpawnPoints.Clear();
-        foreach (var go in grid.grid)
-        {
-            if (go.PlatformState.PlatformIsWall)
-            {
-                go.PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedFour);
-                SpawnPoints.Add(go.PlatformState.spawnPoint);
-                go.platform.layer = 13;
-            }
-            go.PlatformState.SetState();
-        }
-
+        
+        //Loop through the corresponding tiles to set the playable arena tiles
         for (int i = 10; i < 30; i++)
         {
             for (int j = 10; j < 30; j++)
             {
-                grid.grid[i, j].PlatformState.SetPlatformHeight((int)PlatformHeight.Flat);
-                grid.grid[i,j].platform.layer = 0;
+                var gridPosition = grid.grid[i, j];
+                gridPosition.platform.layer = 0;
+                gridPosition.PlatformState.PlatformIsWall = false;
             }
         }
+        
+        foreach (var node in grid.grid)
+        {
+            if (node.PlatformState.PlatformIsWall)
+            {
+                node.PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedSix);
+                SpawnPoints.Add(node.PlatformState.spawnPoint);
+                node.platform.layer = 13;
+            }
+            node.PlatformState.SetState();
+        }
+        
         navmeshSurface.BuildNavMesh();
     }
     public void BuildNavMesh()
@@ -110,13 +115,8 @@ public class EnvironmentManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
- 
-            var zombie = other.GetComponentInParent<Ragdoll>();
-            zombie.ActivateRagDoll();
-        
-        
-        
-
+        var zombie = other.GetComponentInParent<Ragdoll>();
+        zombie.ActivateRagDoll();
     }
     
     

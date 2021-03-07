@@ -192,7 +192,6 @@ public class EnvironmentSpawner : MonoBehaviour
                 
             }
         }
-        SpawnHighStairs(path);
     }
     public void SpawnLowBunkers(List<List<Node>> Levels)
     {
@@ -209,7 +208,7 @@ public class EnvironmentSpawner : MonoBehaviour
         Levels.Add(path);
         pathfinding.InitializePath();
         var material = Random.Range(0, Materials.Length);
-        //ChangePathColor(Materials[material],LevelBunkers);
+        ChangePathColor(Materials[material],LevelBunkers);
         foreach (var go in Levels)
         {    
        
@@ -227,11 +226,8 @@ public class EnvironmentSpawner : MonoBehaviour
                 
             }
         }
-        // SpawnHighStairs(path);
-        // if (Random.value < 0.5f)
-        // {
-        //     SpawnHighStairs(path);
-        // }
+        SpawnStairs(path);
+
         
     }
   
@@ -289,37 +285,9 @@ public class EnvironmentSpawner : MonoBehaviour
                 
         }
         SpawnStairs(path);
-        if (Random.value < 0.5f)
-        {
-            SpawnStairs(path);
-        }
-        Debug.Log(path.Count);
+
     }
     
-    public void SpawnConnectingBunkers(List<List<Node>> Levels,List<Node> pathToRaise)
-    {
-        var path = pathToRaise;
-
-        Levels.Add(path);
-        pathfinding.InitializePath();
-        var material = Random.Range(0, Materials.Length);
-        //ChangePathColor(Materials[material],LevelBunkers);
-        foreach (var go in Levels)
-        {    
-            foreach (var VARIABLE in go)
-            {
-                if (!VARIABLE.InUse)
-                {
-                    var t = VARIABLE.platform.GetComponent<PlatformState>();
-                   t.PlatformIsActive = true;
-                    VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material]; 
-                    t.SetPlatformHeight((int)PlatformHeight.Raised);
-                }
-                    
-            }
-        }
-        SpawnStairs(path);
-    }
     private bool ReturnStairSpawnStatus(int x,int y,Node[,] platformGroup)
     {
         if (platformGroup[x, y] == null)
@@ -400,137 +368,7 @@ public class EnvironmentSpawner : MonoBehaviour
                   t.GetComponent<PlatformState>().PlatformIsPlatform = false;
              }
          }
-     public void SpawnLowStairs(List<Node> path)
-         {
-             List<Tuple<Vector2, float>> spawnPositions = new List<Tuple<Vector2, float>>();
-     
-             Tuple<Vector2, float> GetStairSpawn(Vector2 position, float rotation)
-             {
-                 float quaternion = rotation;
-                 var vector = position;
-                 return new Tuple<Vector2, float>(vector, quaternion);
-             }
-     
-             var node = GetNode(path);
-             var adjacent = CheckAdjacentPositions(node);
-     
-             //The purpose of checking twice here is to ensure there is nothing blocking the platform leading to the stairs
-             if (!ReturnStairSpawnStatus(2, 1, adjacent))
-             {
-                 if (!ReturnStairSpawnStatus(2, 0, adjacent))
-                 {
-                     spawnPositions.Add(GetStairSpawn(new Vector2(2, 1), 0));
-                 }
-             }
-             if (!ReturnStairSpawnStatus(1, 2, adjacent))
-             {
-                 if (!ReturnStairSpawnStatus(0, 2, adjacent))
-                 {
-                     spawnPositions.Add(GetStairSpawn(new Vector2(1, 2), 90));
-                 }
-             }
-             if (!ReturnStairSpawnStatus(3, 2, adjacent))
-             {
-                 if (!ReturnStairSpawnStatus(4, 2, adjacent))
-                 {
-                     spawnPositions.Add(GetStairSpawn(new Vector2(3, 2), 270));
-                 }
-             }
-             if (!ReturnStairSpawnStatus(2, 3, adjacent))
-             {
-                 if (!ReturnStairSpawnStatus(2, 4, adjacent))
-                 {
-                     spawnPositions.Add(GetStairSpawn(new Vector2(2, 3), 180));
-                 }
-             }
-     
-     
-             if (spawnPositions.Count != 0)
-             {
-                 var random = Random.Range(0, spawnPositions.Count);
-                 var spawnPosition = spawnPositions[random];
-                 var pos = spawnPosition.Item1;
-     
-                 var t = Instantiate(stairs,
-                     adjacent[(int) pos.x, (int) pos.y].worldPosition,
-                     quaternion.identity);
-     
-                 var x = t.GetComponent<PlatformState>();
-                 x.PlatformIsActive = true;
-                 
-                 x.Setint(adjacent[0,0].gridX -1 +(int)pos.x,adjacent[0,0].gridY+(int)pos.y -1);
-                  t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
-                     transform.localRotation.eulerAngles.y + spawnPosition.Item2,
-                     transform.localRotation.eulerAngles.z);
-                  var newPos = new Vector3(t.transform.position.x + 2, t.transform.position.y +2.5f, t.transform.position.z - 2);
-                  t.transform.position = newPos;
-                  t.GetComponent<PlatformState>().PlatformIsPlatform = false;
-             }
-         }
-    public void SpawnHighStairs(List<Node> path)
-    {
-        List<Tuple<Vector2, float>> spawnPositions = new List<Tuple<Vector2, float>>();
-
-        Tuple<Vector2, float> GetStairSpawn(Vector2 position, float rotation)
-        {
-            float quaternion = rotation;
-            var vector = position;
-            return new Tuple<Vector2, float>(vector, quaternion);
-        }
-
-        var node = GetNode(path);
-        var adjacent = CheckAdjacentPositions(node);
-        
-        //The check of the second adjacent position is to check if the stairs can be accessed
-        if (!ReturnStairSpawnStatus(2, 1, adjacent))
-        {
-            if (!ReturnStairSpawnStatus(2, 0, adjacent))
-            {
-                spawnPositions.Add(GetStairSpawn(new Vector2(2, 1), 0));
-            }
-        }
-        if (!ReturnStairSpawnStatus(1, 2, adjacent))
-        {
-            if (!ReturnStairSpawnStatus(0, 2, adjacent))
-            {
-                spawnPositions.Add(GetStairSpawn(new Vector2(1, 2), 90));
-            }
-        }
-        if (!ReturnStairSpawnStatus(3, 2, adjacent))
-        {
-            if (!ReturnStairSpawnStatus(4, 2, adjacent))
-            {
-                spawnPositions.Add(GetStairSpawn(new Vector2(3, 2), 270));
-            }
-        }
-        if (!ReturnStairSpawnStatus(2, 3, adjacent))
-        {
-            if (!ReturnStairSpawnStatus(2, 4, adjacent))
-            {
-                spawnPositions.Add(GetStairSpawn(new Vector2(2, 3), 180));
-            }
-        }
-
-
-        if (spawnPositions.Count != 0)
-        {
-            var random = Random.Range(0, spawnPositions.Count);
-            var spawnPosition = spawnPositions[random];
-            var pos = spawnPosition.Item1;
-            
-            var platformState = adjacent[(int) spawnPosition.Item1.x, (int) spawnPosition.Item1.y].platform.GetComponent<PlatformState>();
-            platformState.SetPlatformHeight((int)PlatformHeight.Raised);
-
-            
-            var stairPlatform = adjacent[(int) pos.x, (int) pos.y].platform.GetComponent<PlatformState>();
-            stairPlatform.ActivateStairs(true);
-
-            stairPlatform.PlatformIsActive = true;
-            
-             stairPlatform.GetComponent<PlatformState>().SpawnPath();
-             
-        }
-    }
+    
     public Node[,] CheckAdjacentPositions(Node node)
     {
         
