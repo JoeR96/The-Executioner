@@ -10,36 +10,38 @@ public class EnvironmentManagerEditor : Editor
     {
         DrawDefaultInspector();
         EnvironmentManager environmentManager = (EnvironmentManager)target;
-        if (GUILayout.Button("Create Lower Path"))
+        EditorGUILayout.BeginHorizontal ();
+        if (GUILayout.Button("Create Lower Path",GUILayout.Width(125), GUILayout.Height(125)))
         {
             environmentManager.StartBunkers();
         }
-        if (GUILayout.Button("Create Low Path"))
+        if (GUILayout.Button("Create Low Path",GUILayout.Width(125), GUILayout.Height(125)))
         {
 
             environmentManager.StartHighBunkers();
 
         }
-        if (GUILayout.Button("Create Above Path"))
+        if (GUILayout.Button("Create High Path",GUILayout.Width(125), GUILayout.Height(125)))
         {
 
             environmentManager.StartLowBunkers();
 
         }
-        
-        if (GUILayout.Button("Reset Platforms"))
+        EditorGUILayout.EndHorizontal ();
+        EditorGUILayout.BeginHorizontal ();
+        if (GUILayout.Button("Reset Path",GUILayout.Width(125), GUILayout.Height(125)))
         {
             environmentManager.LowerAll();
         }
 
-        if (GUILayout.Button("Lower Last Platform"))
+        if (GUILayout.Button("??????",GUILayout.Width(125), GUILayout.Height(125)))
         {
             
         }
-        if (GUILayout.Button("BuildNavmesh"))
+        if (GUILayout.Button("Build NavMesh",GUILayout.Width(125), GUILayout.Height(125)))
         {
             environmentManager.BuildNavMesh();
         }
-
+        EditorGUILayout.EndHorizontal ();
     }
 }
