@@ -17,6 +17,7 @@ using Random = UnityEngine.Random;
 public class EnvironmentManager : MonoBehaviour
 {
 
+    public bool InversePlatforms;
     public List<GameObject> SpawnPoints = new List<GameObject>();
     public Transform NavMeshObject;
     public Transform NavMeshObjectTwo;
@@ -62,6 +63,11 @@ public class EnvironmentManager : MonoBehaviour
 
         grid = GetComponent<Grid>();
     }
+
+    private void Start()
+    {
+        
+    }
     public void StartBunkers()
     {
         environmentSpawner.SpawnBunkers(environmentSpawner.LevelBunkers);
@@ -75,7 +81,37 @@ public class EnvironmentManager : MonoBehaviour
     {
         environmentSpawner.SpawnLowBunkers(environmentSpawner.LevelLowBunkers);
     }
-    
+    public void RaiseWallTwo()
+    {
+        //The purpose of setting the layer is to seperate the arena navmesh from the navmesh surface above
+        //Using the walls that are always raised around the pit as a seperate navmesh surface seemed the best solution
+        
+        SpawnPoints.Clear();
+        
+        //Loop through the corresponding tiles to set the playable arena tiles
+        for (int i = 10; i < 30; i++)
+        {
+            for (int j = 10; j < 30; j++)
+            {
+                var gridPosition = grid.grid[i, j];
+                gridPosition.platform.layer = 0;
+                gridPosition.PlatformState.PlatformIsWall = false;
+            }
+        }
+        
+        foreach (var node in grid.grid)
+        {
+            if (node.PlatformState.PlatformIsWall)
+            {
+                node.PlatformState.SetNegativePlatformHeight((int)PlatformHeight.RaisedSix);
+                SpawnPoints.Add(node.PlatformState.spawnPoint);
+                node.platform.layer = 13;
+            }
+            node.PlatformState.SetState();
+        }
+        
+        navmeshSurface.BuildNavMesh();
+    }
     public void RaiseWall()
     {
         //The purpose of setting the layer is to seperate the arena navmesh from the navmesh surface above

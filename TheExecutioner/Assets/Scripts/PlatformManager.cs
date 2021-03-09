@@ -32,7 +32,7 @@ using UnityEngine;
         foreach (var platform in platforms)
         {
             StartCoroutine(LerpTransformPosition(platform.platform.transform, new Vector3(platform.platform.transform.position.x,
-                0f, platform.platform.transform.position.z), 1f));
+                0f, platform.platform.transform.position.z), 15f));
         }
     }
 

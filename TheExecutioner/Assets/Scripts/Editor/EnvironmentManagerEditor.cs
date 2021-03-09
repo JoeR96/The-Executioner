@@ -10,6 +10,20 @@ public class EnvironmentManagerEditor : Editor
     {
         DrawDefaultInspector();
         EnvironmentManager environmentManager = (EnvironmentManager)target;
+        
+        EditorGUILayout.BeginHorizontal ();
+        if (GUILayout.Button("Raise Walls",GUILayout.Width(125), GUILayout.Height(125)))
+        {
+            environmentManager.RaiseWallTwo();
+        }
+        if (GUILayout.Button("Lower Walls",GUILayout.Width(125), GUILayout.Height(125)))
+        {
+
+            environmentManager.RaiseWall();
+
+        }
+        EditorGUILayout.EndHorizontal ();
+        
         EditorGUILayout.BeginHorizontal ();
         if (GUILayout.Button("Create Lower Path",GUILayout.Width(125), GUILayout.Height(125)))
         {
@@ -28,19 +42,19 @@ public class EnvironmentManagerEditor : Editor
 
         }
         EditorGUILayout.EndHorizontal ();
+        
         EditorGUILayout.BeginHorizontal ();
         if (GUILayout.Button("Reset Path",GUILayout.Width(125), GUILayout.Height(125)))
         {
             environmentManager.LowerAll();
         }
-
-        if (GUILayout.Button("??????",GUILayout.Width(125), GUILayout.Height(125)))
+        if (GUILayout.Button("Raise Wall",GUILayout.Width(125), GUILayout.Height(125)))
         {
-            
+            environmentManager.RaiseWall();
         }
-        if (GUILayout.Button("Build NavMesh",GUILayout.Width(125), GUILayout.Height(125)))
+        if (GUILayout.Button("Raise wall Two",GUILayout.Width(125), GUILayout.Height(125)))
         {
-            environmentManager.BuildNavMesh();
+            environmentManager.RaiseWallTwo();
         }
         EditorGUILayout.EndHorizontal ();
     }

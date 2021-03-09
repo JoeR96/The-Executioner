@@ -8,9 +8,9 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-
-
-
+    public int CurrentLevel;
+    public int CurrentStage;
+    public List<List<PlatformInformation>> CurrentLevelList = new List<List<PlatformInformation>>();
     public bool BuildMode;
     public LevelSo levelSo;
     private Grid grid;
@@ -18,12 +18,11 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         grid = GetComponent<Grid>();
-        Debug.Log(grid);
     }
+    
 
-    
-    
-    public PlatformInformation[,] SaveStageOne()
+
+    public PlatformInformation[,] SaveStageInformation()
     {
         PlatformInformation[,] platformStates = new PlatformInformation[grid.gridSizeX, grid.gridSizeY];
         
@@ -45,6 +44,15 @@ public class LevelManager : MonoBehaviour
         }
         return platformStates;
     }
+    public List<PlatformInformation> ReturnStage(List<List<PlatformInformation>> level, int stageIndex)
+    {
+        var stageToReturn = level[stageIndex];
+        return stageToReturn;
+    }
+    
+    
+    //Cant save the 2d array of nodes to a scriptable object 
+    //I opted to convert all coordinate and state information in to integers that are stored in a list
     public List<PlatformInformation> ConvertToList(PlatformInformation[,] platformInformation)
     {
         var list = new List<PlatformInformation>();
@@ -55,31 +63,38 @@ public class LevelManager : MonoBehaviour
 
         return list;
     }
-
-    public void SaveToList(int index)
+    
+    public void SaveStage(int stageIndex)
     {
-        //
-        var _ = SaveStageOne();
+        var _ = SaveStageInformation();
         var converted = ConvertToList(_);
-        levelSo.AddLevel(converted,index);
+        levelSo.SaveLevel(converted,stageIndex);
+        
     }
-    public void ClearSo()
+
+    private void InsertStage(List<PlatformInformation> converted,int stageIndex)
     {
-        levelSo.ClearSo();
+        CurrentLevelList[stageIndex] = converted;
     }
+
     public void LoadStage(int index)
     {
+        SetCurrentStage(index);W
         var levelToSet = levelSo.ReturnLevel(index);
-        Debug.Log(levelToSet.Count);
-        foreach (var go in levelToSet)
-        {
-            grid.grid[go.X,go.Z].PlatformState.SetStateFromExternal(go.CurrentHeight,go.CurrentRotation,
-                go.PlatformStairActive,go.CurrentBridgeHeight,go.BridgeIsActive,go.CurrentColour);
-            grid.grid[go.X,go.Z].PlatformState.SetState();
-        }
+                foreach (var go in levelToSet)
+            {
+                grid.grid[go.X,go.Z].PlatformState.SetStateFromExternal(go.CurrentHeight,go.CurrentRotation,
+                    go.PlatformStairActive,go.CurrentBridgeHeight,go.BridgeIsActive,go.CurrentColour);
+                grid.grid[go.X,go.Z].PlatformState.SetState();
+            }
+        
 
-    } 
+    }
     
-
+    public void SetCurrentStage(int level)
+    {
+        CurrentStage = level;
+    }
+    
     
 }

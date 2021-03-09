@@ -14180,7 +14180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e6448f902fce94ba12ec5c15c4a48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuildMode: 0
+  CurrentLevel: 0
+  CurrentStage: 1
+  BuildMode: 1
   levelSo: {fileID: 11400000, guid: 728847ddd6591f9419762aeca1329fb0, type: 2}
 --- !u!114 &2053539584
 MonoBehaviour:

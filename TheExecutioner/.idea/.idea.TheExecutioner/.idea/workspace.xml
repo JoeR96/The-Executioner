@@ -11,42 +11,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BulletTracer.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BulletTracer.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EventManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObject (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameObject (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameSaveLoad.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameSaveLoad.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelSo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelSo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Material 1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Material 1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Material 2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Material 2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Material.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlatformInformation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlatformInformation.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RotatingPlatform 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RotatingPlatform 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RotatingPlatform.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RotatingPlatform.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Blue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Green.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Orange.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Purple.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Purple.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Number5_Skybox/Skybox_Orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Number5_Skybox/Skybox_Orange.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StairMaster.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StairMaster.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stairs (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stairs (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stairs.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stairs.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/target.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/target.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelSo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pathfinding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pathfinding.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlatformManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlatformManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skybox_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skybox_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TargetZombie.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TargetZombie.prefab.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,22 +117,24 @@
       <option value="$PROJECT_DIR$/Assets/LevelSO.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlatformManager.cs" />
       <option value="$PROJECT_DIR$/Assets/PlatformInofmration.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelSo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MovingZombieDumper.cs" />
       <option value="$PROJECT_DIR$/Assets/PlatformInformation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Grid.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelSo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlatformManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -211,6 +201,7 @@
       <workItem from="1614964549220" duration="10125000" />
       <workItem from="1615072247212" duration="6127000" />
       <workItem from="1615240477464" duration="827000" />
+      <workItem from="1615241329462" duration="12686000" />
     </task>
     <servers />
   </component>

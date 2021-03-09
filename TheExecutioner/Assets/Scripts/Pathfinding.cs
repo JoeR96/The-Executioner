@@ -19,7 +19,6 @@ public class Pathfinding : MonoBehaviour
     private void Start()
     {
         _platformManager = GetComponent<PlatformManager>();
-        Debug.Log(targets.Count);
     }
     
 

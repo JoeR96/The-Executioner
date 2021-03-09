@@ -8,53 +8,51 @@ using UnityEngine;
 [Serializable]
 public class LevelSo : ScriptableObject
 {
-    
-    public List<PlatformInformation> LevelOne = new List<PlatformInformation>();
-    public List<PlatformInformation> LevelTwo = new List<PlatformInformation>();
-    public List<PlatformInformation> LevelThree = new List<PlatformInformation>();
+    public int LevelCounter;
+
+    public List<PlatformInformation> StageOne = new List<PlatformInformation>();
+    public List<PlatformInformation> StageTwo = new List<PlatformInformation>();
+    public List<PlatformInformation> StageThree = new List<PlatformInformation>();
     public int LevelCount;
-    
 
-
-    
-    public void AddLevel(List<PlatformInformation> level,int index)
+    public void SaveLevel(List<PlatformInformation> level,int index)
     {
         if (index == 0)
         {
-            LevelOne = level;
+            StageOne = level;
         }
 
         if (index == 1)
         {
-            LevelTwo = level;
+            StageTwo = level;
         }
 
         if (index == 2)
         {
-            LevelThree = level;
+            Debug.Log("tits");
+            StageThree = level;
         }
     }
-
-    public void ClearSo()
-    {
-        LevelOne.Clear();
-        LevelTwo.Clear();
-        LevelThree.Clear();
-    }
-
-    public List<PlatformInformation> ReturnLevel(int index)
+    
+     public List<PlatformInformation> ReturnLevel(int index)
     {
         if (index == 0)
-            return LevelOne;
+            return StageOne;
 
         if (index == 1)
-            return LevelTwo;
+            return StageTwo;
 
         if (index == 2)
-            return LevelThree;
+            return StageThree;
         
         
         return null;
         
+    }
+    public void ClearSo()
+    {
+        StageOne.Clear();
+        StageTwo.Clear();
+        StageThree.Clear();
     }
 }

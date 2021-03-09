@@ -10,69 +10,95 @@ public class PlatformEditor : Editor
     {
         DrawDefaultInspector();
         PlatformState platformState = (PlatformState)target;
-        if (GUILayout.Button("Create Low Path"))
+        EditorGUILayout.BeginHorizontal ();
+        if (!GameManager.instance.EnvironmentManager.InversePlatforms)
         {
-            platformState.SetPlatformHeight((int)PlatformHeight.Raised);
+            if (GUILayout.Button("Create Low Path",GUILayout.Width(125), GUILayout.Height(125)))
+            {
+                platformState.SetPlatformHeight((int)PlatformHeight.Raised);
+            }
+            if (GUILayout.Button("Create High Path",GUILayout.Width(125), GUILayout.Height(125)))
+            {
+                platformState.SetPlatformHeight((int)PlatformHeight.RaisedTwice);
+            }
+            if (GUILayout.Button("Lower Platform Underground",GUILayout.Width(125), GUILayout.Height(125)))
+            {
+                platformState.SetPlatformHeight((int)PlatformHeight.Underground);
+            }
+            if (GUILayout.Button("Reset Platform",GUILayout.Width(125), GUILayout.Height(125)))
+            {
+                platformState.SetPlatformHeight((int)PlatformHeight.Flat);
+            }
         }
-        if (GUILayout.Button("Create High Path"))
+        else
         {
-            platformState.SetPlatformHeight((int)PlatformHeight.RaisedTwice);
+            if (GUILayout.Button("Create Low Path",GUILayout.Width(125), GUILayout.Height(125)))
+            {
+                platformState.SetNegativePlatformHeight((int)PlatformHeight.Raised);
+            }
+            if (GUILayout.Button("Create High Path",GUILayout.Width(125), GUILayout.Height(125)))
+            {
+                platformState.SetNegativePlatformHeight((int)PlatformHeight.RaisedTwice);
+            }
+            if (GUILayout.Button("Lower Platform Underground",GUILayout.Width(125), GUILayout.Height(125)))
+            {
+                platformState.SetNegativePlatformHeight((int)PlatformHeight.Underground);
+            }
+            if (GUILayout.Button("Reset Platform",GUILayout.Width(125), GUILayout.Height(125)))
+            {
+                platformState.SetNegativePlatformHeight((int)PlatformHeight.Flat);
+            }
+            
         }
-        if (GUILayout.Button("Lower Platform Underground"))
-        {
-            platformState.SetPlatformHeight((int)PlatformHeight.Underground);
-        }
-        if (GUILayout.Button("Reset Platform"))
-        {
-            platformState.SetPlatformHeight((int)PlatformHeight.Flat);
-        }
-
-        if (GUILayout.Button("Toggle Stair"))
+        if (GUILayout.Button("Toggle Stair",GUILayout.Width(125), GUILayout.Height(125)))
         {
             platformState.ActivateStairs(platformState.ReturnStairValue());
         }
+        EditorGUILayout.EndHorizontal ();
 
+        
+        EditorGUILayout.BeginHorizontal ();
         if (platformState.PlatformStairActive)
         {
-            if (GUILayout.Button("Stair Position One"))
+            if (GUILayout.Button("Stair Position One",GUILayout.Width(125), GUILayout.Height(125)))
             {
                 platformState.SetStairRotation(0);
             }
-            if (GUILayout.Button("Stair Position Two"))
+            if (GUILayout.Button("Stair Position Two",GUILayout.Width(125), GUILayout.Height(125)))
             {
                 platformState.SetStairRotation(1);
             }
-            if (GUILayout.Button("Stair Position Three"))
+            if (GUILayout.Button("Stair Position Three",GUILayout.Width(125), GUILayout.Height(125)))
             {
                 platformState.SetStairRotation(2);
             }
-            if (GUILayout.Button("Stair Position Four"))
+            if (GUILayout.Button("Stair Position Four",GUILayout.Width(125), GUILayout.Height(125)))
             {
                 platformState.SetStairRotation(3);
             }
         }
-        
-        if (GUILayout.Button("Toggle Bridge"))
+        EditorGUILayout.EndHorizontal ();
+        if (GUILayout.Button("Toggle Bridge",GUILayout.Width(125), GUILayout.Height(125)))
         {
             platformState.ActivateBridge(platformState.ReturnBridgeValue());
         }
-
+        EditorGUILayout.BeginHorizontal ();
         if (platformState.PlatformBridgeActive)
         {
-            if (GUILayout.Button("Set Low Bridge"))
+            if (GUILayout.Button("Set Low Bridge",GUILayout.Width(125), GUILayout.Height(125)))
             {
                 platformState.SetBridgeHeight((int)PlatformHeight.Raised);
             }
-            if (GUILayout.Button("Set Medium Bridge"))
+            if (GUILayout.Button("Set Medium Bridge",GUILayout.Width(125), GUILayout.Height(125)))
             {
                 platformState.SetBridgeHeight((int)PlatformHeight.RaisedTwice);
             }
-            if (GUILayout.Button("Set High Bridge"))
+            if (GUILayout.Button("Set High Bridge",GUILayout.Width(125), GUILayout.Height(125)))
             {
                 platformState.SetBridgeHeight((int)PlatformHeight.Underground);
             }
         }
- 
+        EditorGUILayout.EndHorizontal ();
 
     }
 }

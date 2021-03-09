@@ -36,6 +36,7 @@ public class PlatformState : MonoBehaviour
     [SerializeField] private List<float> rotations = new List<float>();
     public GameObject[,] connectingPlatforms = new GameObject[2,2];
     public bool PlatformStairActive;
+    public bool PlatformSpawnPointActive;
     public bool PlatformBridgeActive;
     public bool PlatformIsWall;
     public bool PlatformIsPlatform = true;
@@ -105,7 +106,7 @@ public class PlatformState : MonoBehaviour
         
         SetPlatformHeight(CurrentHeight);
         SetStairRotation(CurrentRotation);
-        //SetPlatformColour(CurrentColour);
+        SetPlatformColour(CurrentColour);
         ActivateStairs(PlatformStairActive);
         ActivateBridge(PlatformBridgeActive);
         SetBridgeHeight(CurrentBridgeHeight);
@@ -169,8 +170,36 @@ public class PlatformState : MonoBehaviour
         X = x;
         Z = z;
     }
-
     public void SetPlatformHeight(int height)
+    {
+        Vector3 targetPosition;
+        if (height == (int)PlatformHeight.Flat)
+        {
+            SetPosition(gameObject,-25,PlatformHeight.Flat,true);
+        }
+        if (height == (int)PlatformHeight.Raised)
+        {
+            SetPosition(gameObject,-5,PlatformHeight.Raised,true);
+        }
+        if (height == (int)PlatformHeight.RaisedTwice)
+        {
+            SetPosition(gameObject,-10, PlatformHeight.RaisedTwice,true);
+        }
+        if (height == (int)PlatformHeight.Underground)
+        {
+            SetPosition(gameObject,5, PlatformHeight.Underground,true);
+        }
+        if (height == (int)PlatformHeight.RaisedFour)
+        {
+            SetPosition(gameObject,-26, PlatformHeight.RaisedFour,true);
+        }
+        if (height == (int)PlatformHeight.RaisedSix)
+        {
+            SetPosition(gameObject,-20, PlatformHeight.RaisedSix,true);
+        }
+        CurrentHeight = (int)height;
+    }
+    public void SetNegativePlatformHeight(int height)
     {
         Vector3 targetPosition;
         if (height == (int)PlatformHeight.Flat)
@@ -195,7 +224,7 @@ public class PlatformState : MonoBehaviour
         }
         if (height == (int)PlatformHeight.RaisedSix)
         {
-            SetPosition(gameObject,-32, PlatformHeight.RaisedSix,true);
+            SetPosition(gameObject,46, PlatformHeight.RaisedSix,true);
         }
         CurrentHeight = (int)height;
     }
@@ -241,7 +270,7 @@ public class PlatformState : MonoBehaviour
         {
             targetPosition = startPosition;
         }
-        StartCoroutine(LerpPosition(go,targetPosition, 0.25f));
+        StartCoroutine(LerpPosition(go,targetPosition, 1f));
         if (isPlatform)
         {
             CurrentHeight = (int)state;
