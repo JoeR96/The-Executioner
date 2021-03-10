@@ -12,7 +12,8 @@ public enum PlatformHeight
     Underground,
     Flat,
     RaisedFour,
-    RaisedSix
+    RaisedSix,
+    LoweredSix
 }
 
 public enum PlatformBridgeHeight
@@ -35,6 +36,9 @@ public class PlatformState : MonoBehaviour
     [SerializeField] private int boundarySize;
     [SerializeField] private List<float> rotations = new List<float>();
     public GameObject[,] connectingPlatforms = new GameObject[2,2];
+    public Material[] materials; 
+    public bool ColourTileMode;
+    public bool ColourAdjacentMode;
     public bool PlatformStairActive;
     public bool PlatformSpawnPointActive;
     public bool PlatformBridgeActive;
@@ -128,11 +132,6 @@ public class PlatformState : MonoBehaviour
         
     }
     
-    private void SetPlatformColour(int index)
-    {
-        var t = GetComponent<MeshRenderer>();
-        t.material = GameManager.instance.EnvironmentManager.environmentSpawner.Materials[index];
-    }
     public bool ReturnStairValue()
     {
         PlatformStairActive = !PlatformStairActive;
@@ -197,6 +196,10 @@ public class PlatformState : MonoBehaviour
         {
             SetPosition(gameObject,-20, PlatformHeight.RaisedSix,true);
         }
+        if (height == (int)PlatformHeight.LoweredSix)
+        {
+            SetPosition(gameObject,20, PlatformHeight.RaisedSix,true);
+        }
         CurrentHeight = (int)height;
     }
     public void SetNegativePlatformHeight(int height)
@@ -224,7 +227,7 @@ public class PlatformState : MonoBehaviour
         }
         if (height == (int)PlatformHeight.RaisedSix)
         {
-            SetPosition(gameObject,46, PlatformHeight.RaisedSix,true);
+            SetPosition(gameObject,-40, PlatformHeight.RaisedSix,true);
         }
         CurrentHeight = (int)height;
     }
@@ -297,7 +300,24 @@ public class PlatformState : MonoBehaviour
         }
 
     }
-    
+    private IEnumerator LerpMaterial(int materialIndex)
+    {
+        Material targetMaterial = materials[materialIndex];
+        Material startMaterial = GetComponent<MeshRenderer>().material;
+        
+        float timer = 0f;
+        float _duration = 25f;
+         
+        while (timer < _duration)
+        {
+            
+            timer += Time.deltaTime;
+            float percentage = Mathf.Min(timer / _duration, 1);
+            startMaterial.Lerp(startMaterial,targetMaterial,percentage);
+            yield return null;
+        }
+
+    }
     public void SetStairRotation( int stairState)
     {
         stairs.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
@@ -306,6 +326,28 @@ public class PlatformState : MonoBehaviour
             CurrentRotation = stairState;
     }
     
+    //editor tests
+    public void SetAdjacentColour(int materialIndex)
+    {
+        var adjacent = GameManager.instance.EnvironmentManager.environmentSpawner.CheckAdjacentPositions(Node);
+        foreach (var go in adjacent)
+        {
+           go.platform.GetComponent<MeshRenderer>().material = materials[materialIndex];
+            go.PlatformState.CurrentColour = materialIndex;
+            go.PlatformState.
+            //go.PlatformState.ChangeMaterial(materialIndex);
+            CurrentColour = materialIndex;
+        }
+    }
+
+    // private void ChangeMaterial(int materialIndex)
+    // {
+    //     StartCoroutine(LerpMaterial(materialIndex));
+    // }
+    public void SetPlatformColour(int materialIndex)
+    {
+        GetComponent<MeshRenderer>().material = materials[materialIndex];
+    }
 }
 
 

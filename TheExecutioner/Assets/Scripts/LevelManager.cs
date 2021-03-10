@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour
     public int CurrentStage;
     public List<List<PlatformInformation>> CurrentLevelList = new List<List<PlatformInformation>>();
     public bool BuildMode;
+    
     public LevelSo levelSo;
     private Grid grid;
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class LevelManager : MonoBehaviour
                 platformStates[i, j].CurrentRotation = grid.grid[i, j].PlatformState.CurrentRotation;
                 platformStates[i, j].PlatformStairActive = grid.grid[i, j].PlatformState.PlatformStairActive;
                 platformStates[i, j].BridgeIsActive = grid.grid[i, j].PlatformState.PlatformBridgeActive;
+                platformStates[i, j].PlatformSpawnActive = grid.grid[i, j].PlatformState.PlatformSpawnPointActive;
                 platformStates[i, j].CurrentColour = grid.grid[i, j].PlatformState.CurrentColour;
                 platformStates[i, j].CurrentBridgeHeight = grid.grid[i, j].PlatformState.CurrentBridgeHeight;
                 platformStates[i, j].X = grid.grid[i, j].PlatformState.X;
@@ -79,7 +81,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadStage(int index)
     {
-        SetCurrentStage(index);W
+        SetCurrentStage(index);
         var levelToSet = levelSo.ReturnLevel(index);
                 foreach (var go in levelToSet)
             {

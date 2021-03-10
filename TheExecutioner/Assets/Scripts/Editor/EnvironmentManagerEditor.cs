@@ -10,20 +10,7 @@ public class EnvironmentManagerEditor : Editor
     {
         DrawDefaultInspector();
         EnvironmentManager environmentManager = (EnvironmentManager)target;
-        
-        EditorGUILayout.BeginHorizontal ();
-        if (GUILayout.Button("Raise Walls",GUILayout.Width(125), GUILayout.Height(125)))
-        {
-            environmentManager.RaiseWallTwo();
-        }
-        if (GUILayout.Button("Lower Walls",GUILayout.Width(125), GUILayout.Height(125)))
-        {
 
-            environmentManager.RaiseWall();
-
-        }
-        EditorGUILayout.EndHorizontal ();
-        
         EditorGUILayout.BeginHorizontal ();
         if (GUILayout.Button("Create Lower Path",GUILayout.Width(125), GUILayout.Height(125)))
         {

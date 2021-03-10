@@ -22,23 +22,7 @@ public class LevelManagerEditor : Editor
         levelSo = levelManager.levelSo;
         if (levelManager.BuildMode)
         {
-            // EditorGUILayout.BeginHorizontal ();
-            // if (GUILayout.Button("Save Level One",GUILayout.Width(125), GUILayout.Height(125)))
-            // {
-            //     levelSo.SaveLevel(currentLevel);
-            //     EditorUtility.SetDirty(levelSo);
-            // }
-            // if (GUILayout.Button("Save Level Two",GUILayout.Width(125), GUILayout.Height(125)))
-            // {
-            //     levelSo.SaveLevel(currentLevel);
-            //     EditorUtility.SetDirty(levelSo);
-            // }
-            // if (GUILayout.Button("Save Level Three",GUILayout.Width(125), GUILayout.Height(125)))
-            // {
-            //     levelSo.SaveLevel(currentLevel);
-            //     EditorUtility.SetDirty(levelSo);
-            // }
-            // EditorGUILayout.EndHorizontal ();
+
             EditorGUILayout.BeginHorizontal ();
             if (GUILayout.Button("Save Stage One",GUILayout.Width(125), GUILayout.Height(125)))
             {
@@ -55,31 +39,14 @@ public class LevelManagerEditor : Editor
                 levelManager.SaveStage(2);
                 EditorUtility.SetDirty(levelSo);
             }
+            if (GUILayout.Button("CLEAR THE LIIIIST NEVERR",GUILayout.Width(125), GUILayout.Height(125)))
+            {
+                levelSo.ClearSo();
+            
+            }
             EditorGUILayout.EndHorizontal ();
         }
-      
         
-        // EditorGUILayout.BeginHorizontal ();
-        // if (GUILayout.Button("Load Level One",GUILayout.Width(125), GUILayout.Height(125)))
-        // {
-        //     levelManager.LoadLevel(0);
-        //     currentLevel = 0;
-        //     EditorUtility.SetDirty(levelSo);
-        // }
-        // if (GUILayout.Button("Load Level Two",GUILayout.Width(125), GUILayout.Height(125)))
-        // {
-        //     levelManager.LoadLevel(1);
-        //     currentLevel = 1;
-        //     EditorUtility.SetDirty(levelSo);
-        // }
-        // if (GUILayout.Button("Load Level Three",GUILayout.Width(125), GUILayout.Height(125)))
-        // {
-        //     levelManager.LoadLevel(2);
-        //     currentLevel = 2;
-        //     EditorUtility.SetDirty(levelSo);
-        // }
-        // EditorGUILayout.EndHorizontal ();
-       
         EditorGUILayout.BeginHorizontal ();
         if (GUILayout.Button("Load Stage One",GUILayout.Width(125), GUILayout.Height(125)))
         {
@@ -96,13 +63,9 @@ public class LevelManagerEditor : Editor
             levelManager.LoadStage(2);
             EditorUtility.SetDirty(levelSo);
         }
-        if (GUILayout.Button("CLEAR THE LIIIIST NEVERR",GUILayout.Width(125), GUILayout.Height(125)))
-        {
-            levelSo.ClearSo();
-            
-        }
+       
         EditorGUILayout.EndHorizontal ();
-        
+   
     }
     
 }

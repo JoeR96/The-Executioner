@@ -17,10 +17,13 @@ using Random = UnityEngine.Random;
 public class EnvironmentManager : MonoBehaviour
 {
 
-    public bool InversePlatforms;
+    public bool InversePlatforms = false
+        ;
     public List<GameObject> SpawnPoints = new List<GameObject>();
     public Transform NavMeshObject;
     public Transform NavMeshObjectTwo;
+
+    
     private GameObject[,] _tileArray;
     private WallManager wallManager;
     private RoomManager roomManager;
@@ -64,6 +67,13 @@ public class EnvironmentManager : MonoBehaviour
         grid = GetComponent<Grid>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.F12))
+        {
+            BuildNavMesh();
+        }
+    }
     private void Start()
     {
         
@@ -103,7 +113,7 @@ public class EnvironmentManager : MonoBehaviour
         {
             if (node.PlatformState.PlatformIsWall)
             {
-                node.PlatformState.SetNegativePlatformHeight((int)PlatformHeight.RaisedSix);
+                node.PlatformState.SetPlatformHeight((int)PlatformHeight.LoweredSix);
                 SpawnPoints.Add(node.PlatformState.spawnPoint);
                 node.platform.layer = 13;
             }
@@ -111,6 +121,7 @@ public class EnvironmentManager : MonoBehaviour
         }
         
         navmeshSurface.BuildNavMesh();
+        //var t = GetComponent<OffMeshLink>();
     }
     public void RaiseWall()
     {
