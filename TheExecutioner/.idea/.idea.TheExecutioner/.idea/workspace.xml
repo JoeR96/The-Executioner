@@ -11,20 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Blue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/camera_zoom_in.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/camera_zoom_in.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-NavMeshSurface.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/NavMesh-NavMeshSurface.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlatformInformation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlatformInformation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,14 +116,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlatformManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/NavMeshLinks_AutoPlacer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/NavMeshLinks_AutoPlaceerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlatformInformation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/NavMeshLinks_AutoPlacer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/NavMeshLinks_AutoPlaceerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -197,7 +192,7 @@
       <workItem from="1615240477464" duration="827000" />
       <workItem from="1615241329462" duration="19902000" />
       <workItem from="1615309900992" duration="7129000" />
-      <workItem from="1615373973683" duration="1720000" />
+      <workItem from="1615373973683" duration="6929000" />
     </task>
     <servers />
   </component>

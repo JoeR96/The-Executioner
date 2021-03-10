@@ -9,11 +9,16 @@ public enum PlatformHeight
 {
     Raised,
     RaisedTwice,
+    RaisedThree,
+    RaisedHalf,
+    RaisedTwiceHalf,
+    RaisedThreeHalf,
     Underground,
+    UndergroundHalf,
     Flat,
     RaisedFour,
-    RaisedSix,
-    LoweredSix
+    HighArenaWall,
+    LoweredArenaWall
 }
 
 public enum PlatformBridgeHeight
@@ -30,16 +35,20 @@ public class PlatformState : MonoBehaviour
 {
 
     [SerializeField] public GameObject stairs;
+    [SerializeField] public GameObject halfStairs;
     [SerializeField] public GameObject bridge;
-    [SerializeField] private GameObject raycastHolder;
     [SerializeField] public GameObject spawnPoint;
-    [SerializeField] private int boundarySize;
+    
     [SerializeField] private List<float> rotations = new List<float>();
-    public GameObject[,] connectingPlatforms = new GameObject[2,2];
-    public Material[] materials; 
+    [SerializeField] private Material[] materials; 
+    
+    public Node Node;
+    
+    #region platform settings
     public bool ColourTileMode;
     public bool ColourAdjacentMode;
     public bool PlatformStairActive;
+    public bool PlatformHalfStairActive;
     public bool PlatformSpawnPointActive;
     public bool PlatformBridgeActive;
     public bool PlatformIsWall;
@@ -53,7 +62,7 @@ public class PlatformState : MonoBehaviour
     public int CurrentRotation;
     private Vector3 startPosition;
     private Vector3 bridgeStartPosition;
-    
+    #endregion
     private void Start()
     {
         PlatformIsWall = true;
@@ -89,7 +98,11 @@ public class PlatformState : MonoBehaviour
         stairs.GetComponent<MeshRenderer>().enabled = active;
         stairs.GetComponent<MeshCollider>().enabled = active;
     }
-
+    public void ActivateHalfStairs(bool active)
+    {
+        halfStairs.GetComponent<MeshRenderer>().enabled = active;
+        halfStairs.GetComponent<MeshCollider>().enabled = active;
+    }
     public void ActivateBridge(bool active)
     {
         bridge.GetComponentInChildren<MeshRenderer>().enabled = active;
@@ -137,33 +150,22 @@ public class PlatformState : MonoBehaviour
         PlatformStairActive = !PlatformStairActive;
         return PlatformStairActive;
     }
+    public bool ReturnHalfStairValue()
+    {
+        PlatformHalfStairActive = !PlatformStairActive;
+        return PlatformHalfStairActive;
+    }
     public bool ReturnBridgeValue()
     {
         PlatformBridgeActive = !PlatformBridgeActive;
         return PlatformBridgeActive;
     }
-    public Node Node;
+    
     public void SetNode(Node node)
     {
         Node = node;
     }
-    private PlatformState FireRay()
-    {
-        RaycastHit hit;
-        Ray ray = default;
-        float thickness = 1f; //<-- Desired thickness here.
-        Vector3 origin = raycastHolder.transform.position;
-        Vector3 direction = transform.TransformDirection(Vector3.down);
-        
-        if (Physics.Raycast(origin, direction, out hit, 25f))
-        {
-            if(hit.collider.GetComponent<PlatformState>())
-                return hit.collider.GetComponent<PlatformState>();
-        }
-
-        return null;
-    }
-
+    
     public void Setint(int x, int z)
     {
         X = x;
@@ -173,61 +175,69 @@ public class PlatformState : MonoBehaviour
     {
         Vector3 targetPosition;
         if (height == (int)PlatformHeight.Flat)
-        {
-            SetPosition(gameObject,-25,PlatformHeight.Flat,true);
-        }
+            SetPosition(gameObject,-8f);
+        
+        if (height == (int)PlatformHeight.RaisedHalf)
+            SetPosition(gameObject,-6.325f);
+        
         if (height == (int)PlatformHeight.Raised)
-        {
-            SetPosition(gameObject,-5,PlatformHeight.Raised,true);
-        }
+            SetPosition(gameObject,-4.65f);
+        
+        if (height == (int)PlatformHeight.RaisedTwiceHalf)
+            SetPosition(gameObject,-2.975f);
+        
         if (height == (int)PlatformHeight.RaisedTwice)
-        {
-            SetPosition(gameObject,-10, PlatformHeight.RaisedTwice,true);
-        }
+            SetPosition(gameObject,-1.3f);
+        
+        if (height == (int)PlatformHeight.RaisedThreeHalf)
+            SetPosition(gameObject,0.375f);
+        
+        if (height == (int)PlatformHeight.RaisedThree)
+            SetPosition(gameObject,2.05f);
+        
+        if (height == (int)PlatformHeight.UndergroundHalf)
+            SetPosition(gameObject,-9.675f);
+        
         if (height == (int)PlatformHeight.Underground)
-        {
-            SetPosition(gameObject,5, PlatformHeight.Underground,true);
-        }
+            SetPosition(gameObject,-11.35f);
+        
         if (height == (int)PlatformHeight.RaisedFour)
-        {
-            SetPosition(gameObject,-26, PlatformHeight.RaisedFour,true);
-        }
-        if (height == (int)PlatformHeight.RaisedSix)
-        {
-            SetPosition(gameObject,-20, PlatformHeight.RaisedSix,true);
-        }
-        if (height == (int)PlatformHeight.LoweredSix)
-        {
-            SetPosition(gameObject,20, PlatformHeight.RaisedSix,true);
-        }
-        CurrentHeight = (int)height;
+            SetPosition(gameObject,-24.5f);
+        
+        if (height == (int)PlatformHeight.HighArenaWall)
+            SetPosition(gameObject,-19.5f);
+        if (height == (int)PlatformHeight.LoweredArenaWall)
+            SetPosition(gameObject,28.5f);
+        
+        
+        CurrentHeight = height;
     }
     public void SetNegativePlatformHeight(int height)
     {
         Vector3 targetPosition;
         if (height == (int)PlatformHeight.Flat)
         {
-            SetPosition(gameObject,25,PlatformHeight.Flat,true);
+            SetPosition(gameObject,25);
         }
         if (height == (int)PlatformHeight.Raised)
         {
-            SetPosition(gameObject,15,PlatformHeight.Raised,true);
+            SetPosition(gameObject,15);
         }
         if (height == (int)PlatformHeight.RaisedTwice)
         {
-            SetPosition(gameObject,20, PlatformHeight.RaisedTwice,true);
+            SetPosition(gameObject,20);
         }
         if (height == (int)PlatformHeight.Underground)
         {
-            SetPosition(gameObject,-5, PlatformHeight.Underground,true);
+            SetPosition(gameObject,-5);
         }
         if (height == (int)PlatformHeight.RaisedFour)
         {
-            SetPosition(gameObject,26, PlatformHeight.RaisedFour,true);
+            SetPosition(gameObject,26);
         }
-        if (height == (int)PlatformHeight.RaisedSix)
+        if (height == (int)PlatformHeight.HighArenaWall)
         {
-            SetPosition(gameObject,-40, PlatformHeight.RaisedSix,true);
+            SetPosition(gameObject,-40);
         }
         CurrentHeight = (int)height;
     }
@@ -265,24 +275,12 @@ public class PlatformState : MonoBehaviour
         
         
     }
-    private void SetPosition(GameObject go,float targetHeight,PlatformHeight state,bool isPlatform)
+    private void SetPosition(GameObject go,float targetHeight)
     {
         Vector3 targetPosition;
         targetPosition = new Vector3(go.transform.position.x, startPosition.y - targetHeight, go.transform.position.z);
-        if (state == PlatformHeight.Flat)
-        {
-            targetPosition = startPosition;
-        }
+
         StartCoroutine(LerpPosition(go,targetPosition, 1f));
-        if (isPlatform)
-        {
-            CurrentHeight = (int)state;
-        }
-        else
-        {
-            CurrentBridgeHeight = (int) state;
-        }
-        
     }
 
     private IEnumerator LerpPosition( GameObject go,Vector3 targetPosition, float duration)
@@ -298,6 +296,8 @@ public class PlatformState : MonoBehaviour
             go.transform.position = Vector3.Lerp(startPosition.position,  targetPosition, percentage);
             yield return null;
         }
+
+        go.transform.position = targetPosition;
 
     }
     private IEnumerator LerpMaterial(int materialIndex)
@@ -347,6 +347,7 @@ public class PlatformState : MonoBehaviour
     public void SetPlatformColour(int materialIndex)
     {
         GetComponent<MeshRenderer>().material = materials[materialIndex];
+        stairs.GetComponent<MeshRenderer>().material = materials[materialIndex];
     }
 }
 
