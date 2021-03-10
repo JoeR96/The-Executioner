@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1106466465020429593}
   - component: {fileID: 1016707195223125596}
   - component: {fileID: 2856449792534238603}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Stairs (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2856449792534238602}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 20.5, z: -2}
+  m_LocalPosition: {x: 2, y: 19.5, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7823854428016962174}
@@ -3869,7 +3869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7823854428016962174}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RaycastObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4515,7 +4515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7823854428207131254}
   - component: {fileID: 7823854428207131255}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: CubeSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4591,9 +4591,9 @@ GameObject:
   - component: {fileID: 7823854428713839812}
   - component: {fileID: 7823854428713839815}
   - component: {fileID: 7823854428713839814}
-  - component: {fileID: 7823854428713839818}
   - component: {fileID: 7823854428713839809}
   - component: {fileID: 7823854428713839819}
+  - component: {fileID: 1807744697}
   m_Layer: 12
   m_Name: FloorContainer
   m_TagString: Cube
@@ -4608,9 +4608,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7823854428713839808}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 42, y: -3, z: 213}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 1, z: 0.75}
   m_Children:
   - {fileID: 7823854428096452852}
   - {fileID: 7823854428207131254}
@@ -6287,49 +6287,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7823854428713839808}
   m_Mesh: {fileID: 0}
---- !u!114 &7823854428713839818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7823854428713839808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9cae371e1ad9084f87524b1a1e389a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stairs: {fileID: 2856449792534238602}
-  bridge: {fileID: 7823854427799946797}
-  raycastHolder: {fileID: 0}
-  spawnPoint: {fileID: 7823854428207131249}
-  boundarySize: 1
-  rotations:
-  - 0
-  - 90
-  - 180
-  - 270
-  materials:
-  - {fileID: 2100000, guid: 1f5abaa588bbaef4dbdaf5e39b60e1c3, type: 2}
-  - {fileID: 2100000, guid: 9afc2c514a57c114aabdf6ff9c3537ad, type: 2}
-  - {fileID: 2100000, guid: 825a6a744faba544fa7aaf71544b7429, type: 2}
-  - {fileID: 2100000, guid: a75860766dc778d4ead77065aa317d37, type: 2}
-  - {fileID: 2100000, guid: 02c28eee0185bd7479f5ca014f96aab5, type: 2}
-  - {fileID: 2100000, guid: 946632c68611f36408173c23657d6eb3, type: 2}
-  ColourTileMode: 0
-  ColourAdjacentMode: 0
-  PlatformStairActive: 0
-  PlatformSpawnPointActive: 0
-  PlatformBridgeActive: 0
-  PlatformIsWall: 0
-  PlatformIsPlatform: 1
-  PlatformIsActive: 0
-  X: 0
-  Z: 0
-  CurrentColour: 0
-  CurrentHeight: 3
-  CurrentBridgeHeight: 0
-  CurrentRotation: 0
 --- !u!65 &7823854428713839809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6371,9 +6328,15 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 825a6a744faba544fa7aaf71544b7429, type: 2}
   - {fileID: 2100000, guid: a75860766dc778d4ead77065aa317d37, type: 2}
   - {fileID: 2100000, guid: 02c28eee0185bd7479f5ca014f96aab5, type: 2}
+  - {fileID: 2100000, guid: 86d9bbfcc0fe8494e8bf51813aebda15, type: 2}
+  - {fileID: 2100000, guid: 9d33b21ec7e2b7c4381ecd8515a9dbff, type: 2}
+  - {fileID: 2100000, guid: 8b0201dd98edb3240bd987adf99d553b, type: 2}
+  - {fileID: 2100000, guid: 629b098e71002244ea10c0bca915113c, type: 2}
+  - {fileID: 2100000, guid: 26bdc7380818bd94fae3cf09285cec00, type: 2}
   - {fileID: 2100000, guid: 946632c68611f36408173c23657d6eb3, type: 2}
-  ColourTileMode: 0
-  ColourAdjacentMode: 0
+  - {fileID: 2100000, guid: 946632c68611f36408173c23657d6eb3, type: 2}
+  ColourTileMode: 1
+  ColourAdjacentMode: 1
   PlatformStairActive: 0
   PlatformSpawnPointActive: 0
   PlatformBridgeActive: 0
@@ -6386,3 +6349,20 @@ MonoBehaviour:
   CurrentHeight: 3
   CurrentBridgeHeight: 0
   CurrentRotation: 0
+--- !u!191 &1807744697
+OffMeshLink:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7823854428713839808}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_AreaIndex: 0
+  m_AgentTypeID: 0
+  m_Start: {fileID: 0}
+  m_End: {fileID: 0}
+  m_CostOverride: -1
+  m_BiDirectional: 1
+  m_Activated: 1
+  m_AutoUpdatePositions: 1

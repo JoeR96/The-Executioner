@@ -13,42 +13,22 @@ public class PlatformEditor : Editor
         PlatformState platformState = (PlatformState)target;
         EditorGUILayout.BeginHorizontal ();
      
-        if (GUILayout.Button("Raised Once Half",GUILayout.Width(125), GUILayout.Height(125)))
-        {
-            platformState.SetPlatformHeight((int)PlatformHeight.RaisedHalf);
-        }
-            if (GUILayout.Button("Raised Once",GUILayout.Width(125), GUILayout.Height(125)))
+            if (GUILayout.Button("Create inverse Low Path",GUILayout.Width(125), GUILayout.Height(125)))
             {
                 platformState.SetPlatformHeight((int)PlatformHeight.Raised);
             }
-            if (GUILayout.Button("Raised Twice Half",GUILayout.Width(125), GUILayout.Height(125)))
+            if (GUILayout.Button("Create inverse Low Path",GUILayout.Width(125), GUILayout.Height(125)))
             {
-                platformState.SetPlatformHeight((int)PlatformHeight.RaisedTwiceHalf);
+                platformState.SetPlatformHeight((int)PlatformHeight.RaisedBetween);
             }
-            if (GUILayout.Button("Raised Twice",GUILayout.Width(125), GUILayout.Height(125)))
+            if (GUILayout.Button("Create inverse High Path",GUILayout.Width(125), GUILayout.Height(125)))
             {
                 platformState.SetPlatformHeight((int)PlatformHeight.RaisedTwice);
             }
-            EditorGUILayout.EndHorizontal();
-            EditorGUILayout.BeginHorizontal ();
-            if (GUILayout.Button("Raised Three Half",GUILayout.Width(125), GUILayout.Height(125)))
-            {
-                platformState.SetPlatformHeight((int)PlatformHeight.RaisedThreeHalf);
-            }
-            if (GUILayout.Button("Raised Three",GUILayout.Width(125), GUILayout.Height(125)))
-            {
-                platformState.SetPlatformHeight((int)PlatformHeight.RaisedThree);
-            }
-            if (GUILayout.Button("Lower Underground",GUILayout.Width(125), GUILayout.Height(125)))
+            if (GUILayout.Button("Lower inverse Platform Underground",GUILayout.Width(125), GUILayout.Height(125)))
             {
                 platformState.SetPlatformHeight((int)PlatformHeight.Underground);
             }
-            if (GUILayout.Button("Lower Underground Half",GUILayout.Width(125), GUILayout.Height(125)))
-            {
-                platformState.SetPlatformHeight((int)PlatformHeight.UndergroundHalf);
-            }
-            EditorGUILayout.EndHorizontal();
-            EditorGUILayout.BeginHorizontal ();
             if (GUILayout.Button("Reset inverse Platform",GUILayout.Width(125), GUILayout.Height(125)))
             {
                 platformState.SetPlatformHeight((int)PlatformHeight.Flat);
@@ -77,10 +57,6 @@ public class PlatformEditor : Editor
             if (GUILayout.Button("Toggle Stair",GUILayout.Width(125), GUILayout.Height(125)))
             {
                 platformState.ActivateStairs(platformState.ReturnStairValue());
-            }
-            if (GUILayout.Button("Toggle Stair",GUILayout.Width(125), GUILayout.Height(125)))
-            {
-                platformState.ActivateHalfStairs(platformState.ReturnHalfStairValue());
             }
             EditorGUILayout.EndHorizontal ();
 

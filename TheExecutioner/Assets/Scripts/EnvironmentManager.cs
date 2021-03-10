@@ -91,7 +91,7 @@ public class EnvironmentManager : MonoBehaviour
     {
         environmentSpawner.SpawnLowBunkers(environmentSpawner.LevelLowBunkers);
     }
-    public void LowerArenaWalls()
+    public void RaiseWallTwo()
     {
         //The purpose of setting the layer is to seperate the arena navmesh from the navmesh surface above
         //Using the walls that are always raised around the pit as a seperate navmesh surface seemed the best solution
@@ -113,7 +113,7 @@ public class EnvironmentManager : MonoBehaviour
         {
             if (node.PlatformState.PlatformIsWall)
             {
-                node.PlatformState.SetPlatformHeight((int)PlatformHeight.LoweredArenaWall);
+                node.PlatformState.SetPlatformHeight((int)PlatformHeight.LoweredSix);
                 SpawnPoints.Add(node.PlatformState.spawnPoint);
                 node.platform.layer = 13;
             }
@@ -145,7 +145,7 @@ public class EnvironmentManager : MonoBehaviour
         {
             if (node.PlatformState.PlatformIsWall)
             {
-                node.PlatformState.SetPlatformHeight((int)PlatformHeight.HighArenaWall);
+                node.PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedSix);
                 SpawnPoints.Add(node.PlatformState.spawnPoint);
                 node.platform.layer = 13;
             }

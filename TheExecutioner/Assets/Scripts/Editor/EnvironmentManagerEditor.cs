@@ -41,7 +41,7 @@ public class EnvironmentManagerEditor : Editor
         }
         if (GUILayout.Button("Raise wall Two",GUILayout.Width(125), GUILayout.Height(125)))
         {
-            environmentManager.LowerArenaWalls();
+            environmentManager.RaiseWallTwo();
         }
         EditorGUILayout.EndHorizontal ();
     }

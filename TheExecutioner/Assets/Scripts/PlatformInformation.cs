@@ -7,7 +7,6 @@ public class PlatformInformation
 {
     public bool BridgeIsActive;
     public bool PlatformStairActive;
-    public bool PlatformHalfStairActive;
     public bool PlatformSpawnActive;
     public int CurrentHeight;
     public int CurrentRotation;

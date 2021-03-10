@@ -36,7 +36,6 @@ public class LevelManager : MonoBehaviour
                 platformStates[i, j].CurrentHeight = grid.grid[i, j].PlatformState.CurrentHeight;
                 platformStates[i, j].CurrentRotation = grid.grid[i, j].PlatformState.CurrentRotation;
                 platformStates[i, j].PlatformStairActive = grid.grid[i, j].PlatformState.PlatformStairActive;
-                platformStates[i, j].PlatformHalfStairActive = grid.grid[i, j].PlatformState.PlatformHalfStairActive;
                 platformStates[i, j].BridgeIsActive = grid.grid[i, j].PlatformState.PlatformBridgeActive;
                 platformStates[i, j].PlatformSpawnActive = grid.grid[i, j].PlatformState.PlatformSpawnPointActive;
                 platformStates[i, j].CurrentColour = grid.grid[i, j].PlatformState.CurrentColour;
