@@ -8,14 +8,7 @@ public class ZombieOverflowEvent : MonoBehaviour
     [SerializeField] private GameObject[] _jailSpotsLights;
     [SerializeField] private Transform[] _jailCells;
     // Start is called before the first frame update
-
-    public IEnumerator OverflowEvent()
-    {
-        InvokeRepeating("Overflow",0f,0.5f);
-        yield return new WaitForSeconds(2f);
-        CancelInvoke();
-        yield return null;
-    }
+    
 
     
     public IEnumerator JailBreakEvent()
@@ -71,7 +64,6 @@ public class ZombieOverflowEvent : MonoBehaviour
     public void PlayOverFlowEvent()
     {
         Overflow();
-        StartCoroutine(OverflowEvent());
     }
 
     private void Overflow()

@@ -12,16 +12,16 @@ public class LevelManager : MonoBehaviour
     public int CurrentStage;
     public List<List<PlatformInformation>> CurrentLevelList = new List<List<PlatformInformation>>();
     public bool BuildMode;
-    
+    private List<PlatformState> spawnPoints = new List<PlatformState>();
     public LevelSo levelSo;
     private Grid grid;
-    // Start is called before the first frame update
+  
     void Start()
     {
         grid = GetComponent<Grid>();
     }
     
-
+    
 
     public PlatformInformation[,] SaveStageInformation()
     {
@@ -84,11 +84,18 @@ public class LevelManager : MonoBehaviour
         SetCurrentStage(index);
         var levelToSet = levelSo.ReturnLevel(index);
                 foreach (var go in levelToSet)
-            {
-                grid.grid[go.X,go.Z].PlatformState.SetStateFromExternal(go.CurrentHeight,go.CurrentRotation,
-                    go.PlatformStairActive,go.CurrentBridgeHeight,go.BridgeIsActive,go.CurrentColour);
-                grid.grid[go.X,go.Z].PlatformState.SetState();
-            }
+                {
+                    var pos = grid.grid[go.X, go.Z].PlatformState;
+                ;
+                pos.SetStateFromExternal(go.CurrentHeight,go.CurrentRotation,
+                    go.PlatformStairActive,go.CurrentBridgeHeight,go.BridgeIsActive,go.CurrentColour,go.PlatformSpawnActive);
+                pos.SetState();
+
+                if (go.PlatformSpawnActive)
+                {
+                    spawnPoints.Add(pos);
+                }
+                }
         
 
     }
@@ -97,6 +104,10 @@ public class LevelManager : MonoBehaviour
     {
         CurrentStage = level;
     }
-    
+
+    public List<PlatformState> ReturnSpawnPoints()
+    {
+        return spawnPoints;
+    }
     
 }

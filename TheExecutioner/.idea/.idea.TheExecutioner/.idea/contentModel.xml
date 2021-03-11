@@ -100,6 +100,7 @@
           <e p="EnvironmentSpawner.cs" t="Include" />
           <e p="EventManager.cs" t="Include" />
           <e p="Events" t="Include">
+            <e p="SpawnPointManager.cs" t="Include" />
             <e p="ZombieOverflowEvent.cs" t="Include" />
           </e>
           <e p="GameManager.cs" t="Include" />

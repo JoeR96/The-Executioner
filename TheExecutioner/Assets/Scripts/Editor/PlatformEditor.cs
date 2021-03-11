@@ -58,6 +58,10 @@ public class PlatformEditor : Editor
             {
                 platformState.ActivateStairs(platformState.ReturnStairValue());
             }
+            if (GUILayout.Button("Toggle Spawn Point",GUILayout.Width(125), GUILayout.Height(125)))
+            {
+                platformState.ReturnPlatformSpawnPointValue();
+            }
             EditorGUILayout.EndHorizontal ();
 
         

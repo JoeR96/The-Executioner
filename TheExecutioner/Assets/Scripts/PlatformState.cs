@@ -84,7 +84,11 @@ public class PlatformState : MonoBehaviour
         stairs.gameObject.SetActive(true);
         return t;
     }
-    
+
+    public void ActivateSpawnPoint(bool active)
+    {
+        
+    }
     public void ActivateStairs(bool active)
     {
         stairs.GetComponent<MeshRenderer>().enabled = active;
@@ -97,13 +101,14 @@ public class PlatformState : MonoBehaviour
         bridge.GetComponentInChildren<BoxCollider>().enabled = active;
     }
 
-    public void SetStateFromExternal(int height, int stairState, bool stairActive,int platformHeight, bool platformBridgeActive,int currentColour)
+    public void SetStateFromExternal(int height, int stairState, bool stairActive,int platformHeight, bool platformBridgeActive,int currentColour,bool spawnPointActive)
     {
         CurrentColour = currentColour;
         PlatformBridgeActive = platformBridgeActive;
         PlatformStairActive = stairActive;
         CurrentHeight = height;
         CurrentRotation = stairState;
+        PlatformSpawnPointActive = spawnPointActive;
         SetState();
     }
     public void SetState()
@@ -115,7 +120,8 @@ public class PlatformState : MonoBehaviour
         ActivateStairs(PlatformStairActive);
         ActivateBridge(PlatformBridgeActive);
         SetBridgeHeight(CurrentBridgeHeight);
-        
+        ActivateSpawnPoint(PlatformSpawnPointActive);
+
     }
 
     public void ResetState()
@@ -132,7 +138,11 @@ public class PlatformState : MonoBehaviour
         ActivateBridge(PlatformBridgeActive);
         
     }
-    
+    public bool ReturnPlatformSpawnPointValue()
+    {
+        PlatformSpawnPointActive = !PlatformSpawnPointActive;
+        return PlatformSpawnPointActive;
+    }
     public bool ReturnStairValue()
     {
         PlatformStairActive = !PlatformStairActive;
@@ -148,23 +158,7 @@ public class PlatformState : MonoBehaviour
     {
         Node = node;
     }
-    private PlatformState FireRay()
-    {
-        RaycastHit hit;
-        Ray ray = default;
-        float thickness = 1f; //<-- Desired thickness here.
-        Vector3 origin = raycastHolder.transform.position;
-        Vector3 direction = transform.TransformDirection(Vector3.down);
-        
-        if (Physics.Raycast(origin, direction, out hit, 25f))
-        {
-            if(hit.collider.GetComponent<PlatformState>())
-                return hit.collider.GetComponent<PlatformState>();
-        }
-
-        return null;
-    }
-
+    
     public void Setint(int x, int z)
     {
         X = x;

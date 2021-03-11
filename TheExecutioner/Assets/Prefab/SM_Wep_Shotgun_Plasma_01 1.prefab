@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4794203562427626150}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RaycastOrigin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 4798648589946334296}
   - component: {fileID: 4632290241578831058}
   - component: {fileID: 4633138190541742428}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4704,7 +4704,7 @@ GameObject:
   - component: {fileID: 4799113853673695332}
   - component: {fileID: 4632093716104888112}
   - component: {fileID: 4633066711672708718}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9359,7 +9359,7 @@ GameObject:
   - component: {fileID: 4798613299619776068}
   - component: {fileID: 4632202989780882798}
   - component: {fileID: 4633189643844899590}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Decal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14238,7 +14238,7 @@ GameObject:
   - component: {fileID: 4793917540367275788}
   - component: {fileID: 4632732160761513130}
   - component: {fileID: 4633300804155925044}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HitEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19066,7 +19066,7 @@ GameObject:
   - component: {fileID: 5932401554900856384}
   - component: {fileID: -3799850126085536459}
   - component: {fileID: -3176177355629625875}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SM_Wep_Shotgun_Plasma_01 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19248,7 +19248,7 @@ GameObject:
   - component: {fileID: 5926886267061316619}
   - component: {fileID: 5919126400973747259}
   - component: {fileID: 5909998276997469883}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SM_Wep_Shotgun_Plasma_Pump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19329,7 +19329,7 @@ GameObject:
   - component: {fileID: 5927212036510424925}
   - component: {fileID: 5919480130263424615}
   - component: {fileID: 5909813006511461351}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SM_Wep_Shotgun_Plasma_Trigger_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19410,7 +19410,7 @@ GameObject:
   - component: {fileID: 8168391942904531047}
   - component: {fileID: 8328553641199827241}
   - component: {fileID: 8327371168213310395}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MuzzleFlash01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24281,7 +24281,7 @@ GameObject:
   - component: {fileID: 8167904572987219915}
   - component: {fileID: 8328834382042691983}
   - component: {fileID: 8327299783309678883}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FlashHeadon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

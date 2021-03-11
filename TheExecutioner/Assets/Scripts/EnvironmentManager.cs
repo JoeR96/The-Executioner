@@ -5,6 +5,7 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+using eDmitriyAssets.NavmeshLinksGenerator;
 using Unity.Mathematics;
 using UnityEditor.Animations;
 using UnityEngine;
@@ -32,7 +33,9 @@ public class EnvironmentManager : MonoBehaviour
     private NavMeshSurface navmeshSurfaceTwo;
     public PlatformManager PlatformManager;
     public EnvironmentSpawner environmentSpawner;
-    public Grid grid;
+    public NavMeshLinks_AutoPlacer navMeshLinkGenerator;
+    
+        public Grid grid;
 
     public List<Node[,]> Levels = new List<Node[,]>();
 
@@ -104,7 +107,6 @@ public class EnvironmentManager : MonoBehaviour
             for (int j = 10; j < 30; j++)
             {
                 var gridPosition = grid.grid[i, j];
-                gridPosition.platform.layer = 0;
                 gridPosition.PlatformState.PlatformIsWall = false;
             }
         }
@@ -115,7 +117,7 @@ public class EnvironmentManager : MonoBehaviour
             {
                 node.PlatformState.SetPlatformHeight((int)PlatformHeight.LoweredSix);
                 SpawnPoints.Add(node.PlatformState.spawnPoint);
-                node.platform.layer = 13;
+  
             }
             node.PlatformState.SetState();
         }
@@ -136,7 +138,6 @@ public class EnvironmentManager : MonoBehaviour
             for (int j = 10; j < 30; j++)
             {
                 var gridPosition = grid.grid[i, j];
-                gridPosition.platform.layer = 0;
                 gridPosition.PlatformState.PlatformIsWall = false;
             }
         }
@@ -147,7 +148,7 @@ public class EnvironmentManager : MonoBehaviour
             {
                 node.PlatformState.SetPlatformHeight((int)PlatformHeight.RaisedSix);
                 SpawnPoints.Add(node.PlatformState.spawnPoint);
-                node.platform.layer = 13;
+                
             }
             node.PlatformState.SetState();
         }
@@ -159,12 +160,7 @@ public class EnvironmentManager : MonoBehaviour
         navmeshSurface.BuildNavMesh();
         navmeshSurfaceTwo.BuildNavMesh();
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        var zombie = other.GetComponentInParent<Ragdoll>();
-        zombie.ActivateRagDoll();
-    }
+    
     
     
     

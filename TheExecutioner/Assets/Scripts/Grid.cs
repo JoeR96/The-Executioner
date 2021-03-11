@@ -146,7 +146,7 @@ public class Node
 {
 
 
-	public bool InUse;
+	public bool InUse = true;
 	public bool walkable;
 	public Vector3 worldPosition;
 	public Vector2 GridPosition;
