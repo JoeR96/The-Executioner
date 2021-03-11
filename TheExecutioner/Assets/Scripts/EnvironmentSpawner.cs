@@ -394,5 +394,29 @@ public class EnvironmentSpawner : MonoBehaviour
         }
         return adjacent;
     }
+    public Node[,] CheckAdjacentClosePositions(Node node)
+    {
+        
+        Node[,] adjacent = new Node[3,3];
 
+        var startX = node.gridX -1;
+        var startZ = node.gridY -1;
+        
+        for (int x = 0; x < adjacent.GetLength(0) ; x++)
+        {
+            for (int z = 0; z < adjacent.GetLength(1) ; z++)
+            {
+      
+                adjacent[x , z ] = grid.grid[startX +x, startZ + z];
+                if(grid.grid[startX + x, startZ + z] == null)
+                {
+                    Debug.Log(startX);
+                    Debug.Log(x);
+                    Debug.Log(startZ);
+                    Debug.Log(z);
+                }
+            }
+        }
+        return adjacent;
+    }
 }

@@ -328,7 +328,7 @@ public class PlatformState : MonoBehaviour
     //editor tests
     public void SetAdjacentColour(int materialIndex)
     {
-        var adjacent = GameManager.instance.EnvironmentManager.environmentSpawner.CheckAdjacentPositions(Node);
+        var adjacent = GameManager.instance.EnvironmentManager.environmentSpawner.CheckAdjacentClosePositions(Node);
         foreach (var go in adjacent)
         {
            go.platform.GetComponent<MeshRenderer>().material = materials[materialIndex];
