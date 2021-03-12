@@ -10,25 +10,7 @@ public class EnvironmentManagerEditor : Editor
     {
         DrawDefaultInspector();
         EnvironmentManager environmentManager = (EnvironmentManager)target;
-
-        EditorGUILayout.BeginHorizontal ();
-        if (GUILayout.Button("Create Lower Path",GUILayout.Width(125), GUILayout.Height(125)))
-        {
-            environmentManager.StartBunkers();
-        }
-        if (GUILayout.Button("Create Low Path",GUILayout.Width(125), GUILayout.Height(125)))
-        {
-
-            environmentManager.StartHighBunkers();
-
-        }
-        if (GUILayout.Button("Create High Path",GUILayout.Width(125), GUILayout.Height(125)))
-        {
-
-            environmentManager.StartLowBunkers();
-
-        }
-        EditorGUILayout.EndHorizontal ();
+        
         
         EditorGUILayout.BeginHorizontal ();
         if (GUILayout.Button("Reset Path",GUILayout.Width(125), GUILayout.Height(125)))
@@ -37,11 +19,11 @@ public class EnvironmentManagerEditor : Editor
         }
         if (GUILayout.Button("Raise Wall",GUILayout.Width(125), GUILayout.Height(125)))
         {
-            environmentManager.RaiseWall();
+            environmentManager.RaiseWall(true);
         }
-        if (GUILayout.Button("Raise wall Two",GUILayout.Width(125), GUILayout.Height(125)))
+        if (GUILayout.Button("Lower Wall",GUILayout.Width(125), GUILayout.Height(125)))
         {
-            environmentManager.RaiseWallTwo();
+            environmentManager.RaiseWall(false);
         }
         EditorGUILayout.EndHorizontal ();
     }

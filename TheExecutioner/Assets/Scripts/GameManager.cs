@@ -19,7 +19,6 @@ public class GameManager : Singleton<GameManager>
     
     void Awake()
     {
-        
         EnvironmentManager = GetComponentInChildren<EnvironmentManager>();
         ZombieOverFlowEvent = GetComponentInChildren<ZombieOverflowEvent>();
         ZombieSpawner = GetComponentInChildren<ZombieSpawner>();
@@ -30,11 +29,15 @@ public class GameManager : Singleton<GameManager>
         SpawnPointManager = GetComponentInChildren<SpawnPointManager>();
     }
 
-    
+    private void Start()
+    {
+        
+    }
     private void StartGame()
     {
         EnvironmentManager.BuildNavMesh();
         EnvironmentManager.navMeshLinkGenerator.Generate();
+        
     }
     private void StartGameSequence()
     {

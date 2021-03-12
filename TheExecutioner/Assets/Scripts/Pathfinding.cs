@@ -52,8 +52,7 @@ public class Pathfinding : MonoBehaviour
 
     public void FindPath(Vector3 startPos, Vector3 targetPos)
      {
-         Debug.Log(grid);
-        Node startNode = grid.NodeFromWorldPoint(startPos);
+         Node startNode = grid.NodeFromWorldPoint(startPos);
         Node targetNode = grid.NodeFromWorldPoint(targetPos);
 
         List<Node> openSet = new List<Node>();
@@ -114,7 +113,6 @@ public class Pathfinding : MonoBehaviour
             currentNode = currentNode.parent;
         }
         path.Reverse();
-        Debug.Log(path.Count);
         var temp = new List<Node>();
         foreach (var go in path)
         {
@@ -126,7 +124,6 @@ public class Pathfinding : MonoBehaviour
         {
             path.Add(temp[i]);
         }
-        Debug.Log(path.Count);
         return path;
         //grid.Path = path;
     }

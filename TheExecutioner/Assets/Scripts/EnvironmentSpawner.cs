@@ -40,197 +40,7 @@ public class EnvironmentSpawner : MonoBehaviour
         var path = pathfinding.ReturnPath();
         return path;
     }
-    public List<Node> SmoothPath(List<Node> path)
-    {
-        var smoothTiles = new List<Node>();
-        foreach (var tile in path)
-        {
-            var t = CheckAdjacentPositions(tile);
-            bool checkOne, checkTwo;
-            if (t[0,0].platform.GetComponent<PlatformState>().PlatformIsActive)
-            {
-                var x = SmoothCheck(1, 0, 0, 1, t);
-                
-                if (x.Count == 2)
-                {
-                    if (Random.value > 0.5f)
-                    {
-                        x.RemoveAt(0);
-                    }
-                    else
-                    {
-                        x.RemoveAt(1);
-                    }
-                }
-                for (int i = 0; i < x.Count; i++)
-                {
-                    smoothTiles.Add(x[i]);
-                    
-                }
-            }
-
-            if (t[2, 2].platform.GetComponent<PlatformState>().PlatformIsActive)
-            {
-                var x = SmoothCheck(2, 1, 1, 2, t);
-             
-
-                if (x.Count == 2)
-                {
-                    if (Random.value > 0.5f)
-                    {
-                        x.RemoveAt(0);
-                    }
-                    else
-                    {
-                        x.RemoveAt(1);
-                    }
-                }
-                for (int i = 0; i < x.Count; i++)
-                {
-                    smoothTiles.Add(x[i]);
-                }
-            }
-            if (t[0, 2].platform.GetComponent<PlatformState>().PlatformIsActive)
-            {
-                var x = SmoothCheck(0, 1, 1, 2, t);
-                for (int i = 0; i < x.Count; i++)
-                {
-                    smoothTiles.Add(x[i]);
-                }
-                if (x.Count == 2)
-                {
-                    if (Random.value > 0.5f)
-                    {
-                        x.RemoveAt(0);
-                    }
-                    else
-                    {
-                        x.RemoveAt(1);
-                    }
-                }
-            }
-            if (t[2, 0].platform.GetComponent<PlatformState>().PlatformIsActive)
-            {
-                var x = SmoothCheck(1, 1, 2, 1, t);
-                for (int i = 0; i < x.Count; i++)
-                {
-                    smoothTiles.Add(x[i]);
-                }
-                if (x.Count == 2)
-                {
-                    if (Random.value > 0.5f)
-                    {
-                        x.RemoveAt(0);
-                    }
-                    else
-                    {
-                        x.RemoveAt(1);
-                    }
-                }
-            }
-        }
-        
-        return smoothTiles;
-
-    }
-    private List<Node> SmoothCheck(int x, int z,int j,int k, Node[,] path)
-    {
-        {
-            var temp = new List<Node>();
-                
-            var pos = path[x, z].platform.GetComponent<PlatformState>();
-                    
-            var posTwo = path[j,k].platform.GetComponent<PlatformState>();
-                    
-            var checkOne = pos.PlatformIsActive;
-            var checkTwo = pos.PlatformIsActive;
-
-            var platformCheck = pos.PlatformIsPlatform;
-            var platformCheckTwo = posTwo.PlatformIsPlatform;
-                
-                
-            if(!checkOne)
-                temp.Add(pos.Node);
-            if(!checkTwo)
-                temp.Add(posTwo.Node);
-                
-            Debug.Log(temp.Count);
-            return temp;
-        }
-    }
-    public void SpawnHighBunkers(List<List<Node>> Levels)
-    {
-        var path = GetPath();
-        var toAdd = SmoothPath(path);
-        
-        for (int i = 0; i < toAdd.Count; i++)
-        {
-            path[i].platform.GetComponent<PlatformState>().PlatformIsActive = false;
-            path.Add(toAdd[i]);
-
-        }
-        
-        Levels.Add(path);
-        pathfinding.InitializePath();
-        var material = Random.Range(0, Materials.Length);
-        //ChangePathColor(Materials[material],LevelBunkers);
-        foreach (var go in Levels)
-        {    
-       
-            foreach (var VARIABLE in go)
-            {
-                if (!VARIABLE.InUse)
-                {
-                    var t = VARIABLE.platform.GetComponent<PlatformState>();
-                    t.PlatformIsActive = true;
-                    VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material];
-                    t.CurrentColour = material;
-                    t.SetPlatformHeight((int)PlatformHeight.RaisedTwice);
-           
-                    LevelBunkers.Add(go);
-                }
-                
-            }
-        }
-    }
-    public void SpawnLowBunkers(List<List<Node>> Levels)
-    {
-        var path = GetPath();
-        var toAdd = SmoothPath(path);
-        
-        for (int i = 0; i < toAdd.Count; i++)
-        {
-            path[i].platform.GetComponent<PlatformState>().PlatformIsActive = false;
-            path.Add(toAdd[i]);
-
-        }
-        
-        Levels.Add(path);
-        pathfinding.InitializePath();
-        var material = Random.Range(0, Materials.Length);
-        ChangePathColor(Materials[material],LevelBunkers);
-        foreach (var go in Levels)
-        {    
-       
-            foreach (var VARIABLE in go)
-            {
-                if (!VARIABLE.InUse)
-                {
-                    var t = VARIABLE.platform.GetComponent<PlatformState>();
-                    t.PlatformIsActive = true;
-                    VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material]; 
-                    t.SetPlatformHeight((int)PlatformHeight.Underground);
-                    
-                    LevelBunkers.Add(go);
-                }
-                
-            }
-        }
-        SpawnStairs(path);
-
-        
-    }
-  
+    
     public Node GetNode(List<Node> path)
     {
         return GetRandomNode(path);
@@ -255,34 +65,21 @@ public class EnvironmentSpawner : MonoBehaviour
             }
         }
     }
-    public void SpawnBunkers(List<List<Node>> levels)
+    public void SpawnPath( int height)
     {
         var path = GetPath();
-        var toAdd = SmoothPath(path);
-        
-        for (int i = 0; i < toAdd.Count; i++)
-        {
-            path[i].platform.GetComponent<PlatformState>().PlatformIsActive = false;
-            path.Add(toAdd[i]);
 
-        }
-        levels.Add(path);
         
         pathfinding.InitializePath();
-        var material = Random.Range(0, Materials.Length);
-        ChangePathColor(Materials[material],LevelBunkers);
-
-        foreach (var VARIABLE in path)
+        var target = height;
+        foreach (var node in path)
         {
-            if (!VARIABLE.InUse)
-            {
-                var t = VARIABLE.platform.GetComponent<PlatformState>();
+            var t = node.platform.GetComponent<PlatformState>();
                 t.PlatformIsActive = true;
-                VARIABLE.platform.GetComponent<MeshRenderer>().material = Materials[material];
-                t.SetPlatformHeight((int)PlatformHeight.Raised);
+                Debug.Log(target);
+                t.SetPlatformHeight(target);
                 LevelBunkers.Add(path);
-            }
-                
+            
         }
         SpawnStairs(path);
 
@@ -351,21 +148,9 @@ public class EnvironmentSpawner : MonoBehaviour
                  var random = Random.Range(0, spawnPositions.Count);
                  var spawnPosition = spawnPositions[random];
                  var pos = spawnPosition.Item1;
-     
-                 var t = Instantiate(stairs,
-                     adjacent[(int) pos.x, (int) pos.y].worldPosition,
-                     quaternion.identity);
-     
-                 var x = t.GetComponent<PlatformState>();
-                 x.PlatformIsActive = true;
+                
+                 adjacent[(int) pos.x,(int) pos.y].PlatformState.ActivateStairs(true);
                  
-                 x.Setint(adjacent[0,0].gridX -1 +(int)pos.x,adjacent[0,0].gridY+(int)pos.y -1);
-                  t.transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles.x,
-                     transform.localRotation.eulerAngles.y + spawnPosition.Item2,
-                     transform.localRotation.eulerAngles.z);
-                  var newPos = new Vector3(t.transform.position.x + 2, t.transform.position.y +2.5f, t.transform.position.z - 2);
-                  t.transform.position = newPos;
-                  t.GetComponent<PlatformState>().PlatformIsPlatform = false;
              }
          }
     

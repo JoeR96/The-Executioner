@@ -38,4 +38,15 @@ public class AiAgent : MonoBehaviour
         StateMachine.Update();
     }
 
+    private void FixedUpdate()
+    {
+        OnAnimatorMove();
+    }
+    void OnAnimatorMove()
+    {
+        
+            navMeshAgent.velocity = Animator.deltaPosition / Time.deltaTime;
+            navMeshAgent.speed = Animator.deltaPosition.magnitude / Time.deltaTime;
+
+    }
 }

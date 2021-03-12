@@ -1,20 +1,24 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public enum PlatformHeight
 {
-    Raised,
-    RaisedBetween,
-    RaisedTwice,
-    Underground,
     Flat,
-    RaisedFour,
-    RaisedSix,
-    LoweredSix
+    LevelOne,
+    LevelTwo,
+    LevelThree,
+    LevelFour,
+    LevelFive,
+    LevelSix,
+    UndergroundOne,
+    UndergroundTwo,
+    RaisedOuterWall,
+    LoweredOuterWall
 }
 
 public enum PlatformBridgeHeight
@@ -36,7 +40,8 @@ public class PlatformState : MonoBehaviour
     [SerializeField] public GameObject spawnPoint;
     [SerializeField] private int boundarySize;
     [SerializeField] private List<float> rotations = new List<float>();
-    public GameObject[,] connectingPlatforms = new GameObject[2,2];
+    [SerializeField] private List<int> platformHeights = new List<int>();
+    #region platform properties
     public Material[] materials; 
     public bool ColourTileMode;
     public bool ColourAdjacentMode;
@@ -52,21 +57,21 @@ public class PlatformState : MonoBehaviour
     public int CurrentHeight;
     public int CurrentBridgeHeight;
     public int CurrentRotation;
+    #endregion
     private Vector3 startPosition;
-    private Vector3 bridgeStartPosition;
+
     
     private void Start()
     {
         PlatformIsWall = true;
         PlatformIsActive = false;
         startPosition = transform.position;
-        bridgeStartPosition = bridge.transform.position;
         CurrentHeight = (int)PlatformHeight.Flat;
     }
     
     public List<Node> SpawnPath()
     { 
-        SetPlatformHeight((int)PlatformHeight.Raised);
+        SetPlatformHeight((int)PlatformHeight.LevelOne);
         var t = GameManager.instance.pathfinding.ReturnPath();
       var l = GameManager.instance.EnvironmentManager.environmentSpawner.GetNode(t);
       GameManager.instance.EnvironmentManager.pathFinding.InitializeConnectingPath(Node,l);
@@ -75,7 +80,7 @@ public class PlatformState : MonoBehaviour
             var state = go.platform.GetComponent<PlatformState>();
             if (!state.PlatformIsActive)
             {
-                state.SetPlatformHeight((int) PlatformHeight.RaisedTwice);
+                state.SetPlatformHeight((int) PlatformHeight.LevelTwo);
             }
             else
                 state.SetBridgeHeight((int)PlatformBridgeHeight.HighBridge);
@@ -91,8 +96,8 @@ public class PlatformState : MonoBehaviour
     }
     public void ActivateStairs(bool active)
     {
-        stairs.GetComponent<MeshRenderer>().enabled = active;
-        stairs.GetComponent<MeshCollider>().enabled = active;
+        stairs.GetComponentInChildren<MeshRenderer>().enabled = active;
+        stairs.GetComponentInChildren<MeshCollider>().enabled = active;
     }
 
     public void ActivateBridge(bool active)
@@ -101,14 +106,14 @@ public class PlatformState : MonoBehaviour
         bridge.GetComponent<BoxCollider>().enabled = active;
     }
 
-    public void SetStateFromExternal(int height, int stairState, bool stairActive,int platformHeight, bool platformBridgeActive,int currentColour,bool spawnPointActive)
+    public void SetStateFromExternal(PlatformInformation platformInformation)
     {
-        CurrentColour = currentColour;
-        PlatformBridgeActive = platformBridgeActive;
-        PlatformStairActive = stairActive;
-        CurrentHeight = height;
-        CurrentRotation = stairState;
-        PlatformSpawnPointActive = spawnPointActive;
+        CurrentColour = platformInformation.CurrentBridgeHeight;
+        PlatformBridgeActive = platformInformation.BridgeIsActive;
+        PlatformStairActive = platformInformation.PlatformStairActive;
+        CurrentHeight = platformInformation.CurrentHeight;
+        CurrentRotation = platformInformation.CurrentRotation;
+        PlatformSpawnPointActive = platformInformation.PlatformSpawnActive;
         SetState();
     }
     public void SetState()
@@ -164,72 +169,12 @@ public class PlatformState : MonoBehaviour
         X = x;
         Z = z;
     }
-    public void SetPlatformHeight(int height)
+    public void SetPlatformHeight(int height )
     {
-        Vector3 targetPosition;
-        if (height == (int)PlatformHeight.Flat)
-        {
-            SetPosition(gameObject,-28,PlatformHeight.Flat,true);
-        }
-        if (height == (int)PlatformHeight.Raised)
-        {
-            SetPosition(gameObject,-6,PlatformHeight.Raised,true);
-        }
-        if (height == (int)PlatformHeight.RaisedBetween)
-        {
-            SetPosition(gameObject,-2,PlatformHeight.RaisedBetween,true);
-        }
-        if (height == (int)PlatformHeight.RaisedTwice)
-        {
-            SetPosition(gameObject,-10, PlatformHeight.RaisedTwice,true);
-        }
-        if (height == (int)PlatformHeight.Underground)
-        {
-            SetPosition(gameObject,2, PlatformHeight.Underground,true);
-        }
-        if (height == (int)PlatformHeight.RaisedFour)
-        {
-            SetPosition(gameObject,-28, PlatformHeight.RaisedFour,true);
-        }
-        if (height == (int)PlatformHeight.RaisedSix)
-        {
-            SetPosition(gameObject,-22, PlatformHeight.RaisedSix,true);
-        }
-        if (height == (int)PlatformHeight.LoweredSix)
-        {
-            SetPosition(gameObject,18, PlatformHeight.RaisedSix,true);
-        }
-        CurrentHeight = (int)height;
+        SetPosition(gameObject,platformHeights[height]);
+        CurrentHeight = height;
     }
-    public void SetNegativePlatformHeight(int height)
-    {
-        Vector3 targetPosition;
-        if (height == (int)PlatformHeight.Flat)
-        {
-            SetPosition(gameObject,25,PlatformHeight.Flat,true);
-        }
-        if (height == (int)PlatformHeight.Raised)
-        {
-            SetPosition(gameObject,15,PlatformHeight.Raised,true);
-        }
-        if (height == (int)PlatformHeight.RaisedTwice)
-        {
-            SetPosition(gameObject,20, PlatformHeight.RaisedTwice,true);
-        }
-        if (height == (int)PlatformHeight.Underground)
-        {
-            SetPosition(gameObject,-0, PlatformHeight.Underground,true);
-        }
-        if (height == (int)PlatformHeight.RaisedFour)
-        {
-            SetPosition(gameObject,26, PlatformHeight.RaisedFour,true);
-        }
-        if (height == (int)PlatformHeight.RaisedSix)
-        {
-            SetPosition(gameObject,-40, PlatformHeight.RaisedSix,true);
-        }
-        CurrentHeight = (int)height;
-    }
+    
 
     public void SetBridgeHeight(int height)
     {
@@ -264,24 +209,13 @@ public class PlatformState : MonoBehaviour
         
         
     }
-    private void SetPosition(GameObject go,float targetHeight,PlatformHeight state,bool isPlatform)
+    private void SetPosition(GameObject go,float targetHeight)
     {
+      
         Vector3 targetPosition;
-        targetPosition = new Vector3(go.transform.position.x, startPosition.y - targetHeight, go.transform.position.z);
-        if (state == PlatformHeight.Flat)
-        {
-            targetPosition = startPosition;
-        }
+        targetPosition = new Vector3(go.transform.position.x, targetHeight - 10f, go.transform.position.z);
+        Debug.Log(targetHeight);
         StartCoroutine(LerpPosition(go,targetPosition, 1f));
-        if (isPlatform)
-        {
-            CurrentHeight = (int)state;
-        }
-        else
-        {
-            CurrentBridgeHeight = (int) state;
-        }
-        
     }
 
     private IEnumerator LerpPosition( GameObject go,Vector3 targetPosition, float duration)
@@ -297,7 +231,7 @@ public class PlatformState : MonoBehaviour
             go.transform.position = Vector3.Lerp(startPosition.position,  targetPosition, percentage);
             yield return null;
         }
-
+        
     }
     private IEnumerator LerpMaterial(int materialIndex)
     {
@@ -338,11 +272,7 @@ public class PlatformState : MonoBehaviour
             CurrentColour = materialIndex;
         }
     }
-
-    // private void ChangeMaterial(int materialIndex)
-    // {
-    //     StartCoroutine(LerpMaterial(materialIndex));
-    // }
+    
     public void SetPlatformColour(int materialIndex)
     {
         GetComponent<MeshRenderer>().material = materials[materialIndex];

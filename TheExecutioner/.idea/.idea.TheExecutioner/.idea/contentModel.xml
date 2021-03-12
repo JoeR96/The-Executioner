@@ -91,6 +91,7 @@
           <e p="EdgeSpawnPlatform.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="EnvironmentManagerEditor.cs" t="Include" />
+            <e p="EnvironmentSpawnerEditor.cs" t="Include" />
             <e p="LevelManagerEditor.cs" t="Include" />
             <e p="NavMeshLinks_AutoPlaceerEditor.cs" t="Include" />
             <e p="PlatformEditor.cs" t="Include" />
@@ -191,6 +192,7 @@
             </e>
           </e>
         </e>
+        <e p="TransferToAnim.cs" t="Include" />
         <e p="TutorialInfo" t="Include">
           <e p="Scripts" t="Include">
             <e p="Editor" t="Include">

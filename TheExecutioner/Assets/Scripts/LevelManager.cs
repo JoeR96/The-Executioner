@@ -86,15 +86,8 @@ public class LevelManager : MonoBehaviour
                 foreach (var go in levelToSet)
                 {
                     var pos = grid.grid[go.X, go.Z].PlatformState;
-                ;
-                pos.SetStateFromExternal(go.CurrentHeight,go.CurrentRotation,
-                    go.PlatformStairActive,go.CurrentBridgeHeight,go.BridgeIsActive,go.CurrentColour,go.PlatformSpawnActive);
+                    pos.SetStateFromExternal(go);
                 pos.SetState();
-
-                if (go.PlatformSpawnActive)
-                {
-                    spawnPoints.Add(pos);
-                }
                 }
         
 
