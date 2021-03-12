@@ -29,7 +29,6 @@ public class LevelSo : ScriptableObject
 
         if (index == 2)
         {
-            Debug.Log("tits");
             StageThree = level;
         }
     }

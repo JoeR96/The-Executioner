@@ -44,6 +44,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     bool isOnMesh;
     protected void Update()
     {
+        OnAnimatorMove();
         if (Input.GetKey(KeyCode.F1))
         {
             _navMeshAgent.enabled = true;
@@ -61,7 +62,12 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
           }
         
     }
+    void OnAnimatorMove()
+    {
+        float speed = _navMeshAgent.velocity.magnitude;
 
+        _animator.SetFloat("forward", speed);
+    }
     public void ActivateZombie( )
     {
         _navMeshAgent.enabled = true;

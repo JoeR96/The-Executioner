@@ -95,15 +95,15 @@ public class PlatformEditor : Editor
         {
             if (GUILayout.Button("Set Low Bridge",GUILayout.Width(125), GUILayout.Height(125)))
             {
-                platformState.SetBridgeHeight((int)PlatformHeight.Raised);
+                platformState.SetBridgeHeight(0);
             }
             if (GUILayout.Button("Set Medium Bridge",GUILayout.Width(125), GUILayout.Height(125)))
             {
-                platformState.SetBridgeHeight((int)PlatformHeight.RaisedTwice);
+                platformState.SetBridgeHeight(1);
             }
             if (GUILayout.Button("Set High Bridge",GUILayout.Width(125), GUILayout.Height(125)))
             {
-                platformState.SetBridgeHeight((int)PlatformHeight.Underground);
+                platformState.SetBridgeHeight(2);
             }
         }
         EditorGUILayout.EndHorizontal ();

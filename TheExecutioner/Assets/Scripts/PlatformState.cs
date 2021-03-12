@@ -97,8 +97,8 @@ public class PlatformState : MonoBehaviour
 
     public void ActivateBridge(bool active)
     {
-        bridge.GetComponentInChildren<MeshRenderer>().enabled = active;
-        bridge.GetComponentInChildren<BoxCollider>().enabled = active;
+        bridge.GetComponent<MeshRenderer>().enabled = active;
+        bridge.GetComponent<BoxCollider>().enabled = active;
     }
 
     public void SetStateFromExternal(int height, int stairState, bool stairActive,int platformHeight, bool platformBridgeActive,int currentColour,bool spawnPointActive)
@@ -234,17 +234,17 @@ public class PlatformState : MonoBehaviour
     public void SetBridgeHeight(int height)
     {
         Vector3 targetPosition;
-        if (height == (int)PlatformBridgeHeight.LowBridge)
+        if (height == 0)
         {
-            SetBridgePosition(bridge,-35,PlatformBridgeHeight.LowBridge,false);
+            SetBridgePosition(bridge,-0.2f,PlatformBridgeHeight.LowBridge,false);
         }
-        if (height == (int)PlatformBridgeHeight.Middlebridge)
+        if (height == 1)
         {
-            SetBridgePosition(bridge,-15,PlatformBridgeHeight.Middlebridge,false);
+            SetBridgePosition(bridge,3.8f,PlatformBridgeHeight.Middlebridge,false);
         }
-        if (height == (int)PlatformBridgeHeight.HighBridge)
+        if (height == 2)
         {
-            SetBridgePosition(bridge,-20, PlatformBridgeHeight.HighBridge,false);
+            SetBridgePosition(bridge,7.8f, PlatformBridgeHeight.HighBridge,false);
         }
 
 
@@ -253,7 +253,7 @@ public class PlatformState : MonoBehaviour
     private void SetBridgePosition(GameObject go,float targetHeight,PlatformBridgeHeight state,bool isPlatform)
     {
         Vector3 targetPosition;
-        targetPosition = new Vector3(go.transform.position.x, startPosition.y - targetHeight, go.transform.position.z);
+        targetPosition = new Vector3(go.transform.position.x, transform.position.y + 18f + targetHeight, go.transform.position.z);
         if (state == PlatformBridgeHeight.Disabled)
         {
             targetPosition = startPosition;

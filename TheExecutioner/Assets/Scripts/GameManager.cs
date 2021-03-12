@@ -36,7 +36,7 @@ public class GameManager : Singleton<GameManager>
         EnvironmentManager.BuildNavMesh();
         EnvironmentManager.navMeshLinkGenerator.Generate();
     }
-    private void Start()
+    private void StartGameSequence()
     {
         
         Invoke("StartLevel", 0.25f);
@@ -46,6 +46,10 @@ public class GameManager : Singleton<GameManager>
     
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            StartLevel();
+        }
         if (Input.GetKeyDown(KeyCode.F7))
         {
             ZombieOverFlowEvent.PlayOverFlowEvent();
