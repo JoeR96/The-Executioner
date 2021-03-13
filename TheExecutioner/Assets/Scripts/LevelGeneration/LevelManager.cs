@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
     public int CurrentStage;
     public List<List<PlatformInformation>> CurrentLevelList = new List<List<PlatformInformation>>();
     public bool BuildMode;
-    private List<PlatformState> spawnPoints = new List<PlatformState>();
+    private List<PlatformStateManager> spawnPoints = new List<PlatformStateManager>();
     public LevelSo levelSo;
     private Grid grid;
   
@@ -33,15 +33,15 @@ public class LevelManager : MonoBehaviour
             {
 
                 platformStates[i, j] = new PlatformInformation();
-                platformStates[i, j].CurrentHeight = grid.grid[i, j].PlatformState.CurrentHeight;
-                platformStates[i, j].CurrentRotation = grid.grid[i, j].PlatformState.CurrentRotation;
-                platformStates[i, j].PlatformStairActive = grid.grid[i, j].PlatformState.PlatformStairActive;
-                platformStates[i, j].BridgeIsActive = grid.grid[i, j].PlatformState.PlatformBridgeActive;
-                platformStates[i, j].PlatformSpawnActive = grid.grid[i, j].PlatformState.PlatformSpawnPointActive;
-                platformStates[i, j].CurrentColour = grid.grid[i, j].PlatformState.CurrentColour;
-                platformStates[i, j].CurrentBridgeHeight = grid.grid[i, j].PlatformState.CurrentBridgeHeight;
-                platformStates[i, j].X = grid.grid[i, j].PlatformState.X;
-                platformStates[i, j].Z = grid.grid[i, j].PlatformState.Z;
+                platformStates[i, j].CurrentHeight = grid.grid[i, j].PlatformManager.PlatformHeightManager.CurrentHeight;
+                platformStates[i, j].CurrentRotation = grid.grid[i, j].PlatformManager.PlatformRampManager.CurrentRotation;
+                platformStates[i, j].PlatformStairActive = grid.grid[i, j].PlatformManager.PlatformRampManager.PlatformRampActive;
+                platformStates[i, j].BridgeIsActive = grid.grid[i, j].PlatformManager.PlatformBridgeManager.PlatformBridgeActive;
+                platformStates[i, j].PlatformSpawnActive = grid.grid[i, j].PlatformManager.PlatformSpawnManager.PlatformSpawnPointActive;
+                platformStates[i, j].CurrentColour = grid.grid[i, j].PlatformManager.PlatformColourManager.CurrentColour;
+                platformStates[i, j].CurrentBridgeHeight = grid.grid[i, j].PlatformManager.PlatformBridgeManager.CurrentBridgeHeight;
+                platformStates[i, j].X = grid.grid[i, j].PlatformManager.PlatformStateManager.X;
+                platformStates[i, j].Z = grid.grid[i, j].PlatformManager.PlatformStateManager.Z;
             }
         }
         return platformStates;
@@ -85,9 +85,9 @@ public class LevelManager : MonoBehaviour
         var levelToSet = levelSo.ReturnLevel(index);
                 foreach (var go in levelToSet)
                 {
-                    var pos = grid.grid[go.X, go.Z].PlatformState;
-                    pos.SetStateFromExternal(go);
-                pos.SetState();
+                    var pos = grid.grid[go.X, go.Z].PlatformManager;
+         
+                    pos.PlatformStateManager.SetStateFromExternal(go);
                 }
         
 
@@ -98,9 +98,6 @@ public class LevelManager : MonoBehaviour
         CurrentStage = level;
     }
 
-    public List<PlatformState> ReturnSpawnPoints()
-    {
-        return spawnPoints;
-    }
+
     
 }

@@ -47,35 +47,35 @@ public class EnvironmentManager : MonoBehaviour
     
     public void RaiseWall(bool raiseUp)
     {
-        PlatformHeight platformHeight;
+        int platformHeight;
         
         SpawnPoints.Clear();
         //Loop through the corresponding tiles to set the playable arena tiles
-        for (int i = 10; i < 30; i++)
+        for (int i = 10; i < 40; i++)
         {
-            for (int j = 10; j < 30; j++)
+            for (int j = 10; j < 40; j++)
             {
                 var gridPosition = grid.grid[i, j];
-                gridPosition.PlatformState.PlatformIsWall = false;
+                gridPosition.PlatformManager.PlatformStateManager.PlatformIsWall = true;
             }
         }
 
         
         if (raiseUp)
-            platformHeight = PlatformHeight.RaisedOuterWall;
+            platformHeight = 6;
 
         else
-            platformHeight = PlatformHeight.LoweredOuterWall;
+            platformHeight = 7;
         
         foreach (var node in grid.grid)
         {
-            if (node.PlatformState.PlatformIsWall)
+            if (!node.PlatformManager.PlatformStateManager.PlatformIsWall)
             {
-                node.PlatformState.SetPlatformHeight((int)platformHeight);
-                SpawnPoints.Add(node.PlatformState.spawnPoint);
+                node.PlatformManager.PlatformHeightManager.SetPlatformHeight(platformHeight);
+                SpawnPoints.Add(node.PlatformManager.PlatformSpawnManager.spawnPoint);
                 
             }
-            node.PlatformState.SetState();
+
         }
         
         navmeshSurface.BuildNavMesh();
@@ -84,12 +84,12 @@ public class EnvironmentManager : MonoBehaviour
     {
         foreach (var node in grid.grid)
         {
-            node.PlatformState.SetPlatformHeight((int)PlatformHeight.Flat);
-            if (node.PlatformState.stairs.GetComponent<MeshRenderer>().enabled)
+            node.PlatformManager.PlatformHeightManager.SetPlatformHeight((int)PlatformHeight.Flat);
+            if (node.PlatformManager.PlatformRampManager.ramp.GetComponent<MeshRenderer>().enabled)
             {
                 
-                node.PlatformState.PlatformStairActive = false;
-                node.PlatformState.ActivateStairs(false);
+                node.PlatformManager.PlatformRampManager.PlatformRampActive = false;
+                node.PlatformManager.PlatformRampManager.ActivateRamp(false);
             }
             
         }

@@ -74,10 +74,10 @@ public class EnvironmentSpawner : MonoBehaviour
         var target = height;
         foreach (var node in path)
         {
-            var t = node.platform.GetComponent<PlatformState>();
-                t.PlatformIsActive = true;
+            var t = node.platform.GetComponent<PlatformManager>();
+                t.PlatformStateManager.PlatformIsActive = true;
                 Debug.Log(target);
-                t.SetPlatformHeight(target);
+                t.PlatformHeightManager.SetPlatformHeight(target);
                 LevelBunkers.Add(path);
             
         }
@@ -96,7 +96,7 @@ public class EnvironmentSpawner : MonoBehaviour
             Debug.Log(x);
             Debug.Log(y);
         }
-        return platformGroup[ x,  y].platform.GetComponent<PlatformState>().PlatformIsActive;
+        return platformGroup[ x,  y].platform.GetComponent<PlatformStateManager>().PlatformIsActive;
     }
     public void SpawnStairs(List<Node> path)
          {
@@ -149,7 +149,7 @@ public class EnvironmentSpawner : MonoBehaviour
                  var spawnPosition = spawnPositions[random];
                  var pos = spawnPosition.Item1;
                 
-                 adjacent[(int) pos.x,(int) pos.y].PlatformState.ActivateStairs(true);
+                 adjacent[(int) pos.x,(int) pos.y].PlatformManager.PlatformRampManager.ActivateRamp(true);
                  
              }
          }

@@ -112,9 +112,9 @@ public class Grid : MonoBehaviour
 			spawnPosition.y = spawnPosition.y - 18f;
 			var _ = Instantiate(floorContainer, spawnPosition, Quaternion.identity);
 			_.transform.SetParent(CubeParent);
-			_.GetComponent<PlatformState>().Setint(n.gridX, n.gridY);
+			_.GetComponent<PlatformManager>().PlatformStateManager.Setint(n.gridX, n.gridY);
 			n.SetPlatformToNode(_.gameObject);
-			_.GetComponent<PlatformState>().SetNode(n);
+			_.GetComponent<PlatformManager>().PlatformStateManager.SetNode(n);
 		}
 	}
 	public List<Node> GetNeighbour(Node node) {
@@ -156,7 +156,7 @@ public class Node
 	public int gCost;
 	public int hCost;
 	public Node parent;
-	public PlatformState PlatformState;
+	public PlatformManager PlatformManager;
 	
 	public Node(bool _walkable, Vector3 _worldPos, int _gridX, int _gridY) {
 		walkable = _walkable;
@@ -172,6 +172,6 @@ public class Node
 	public void SetPlatformToNode(GameObject go)
 	{
 		platform = go;
-		PlatformState = go.GetComponent<PlatformState>();
+		PlatformManager = go.GetComponent<PlatformManager>();
 	}
 }

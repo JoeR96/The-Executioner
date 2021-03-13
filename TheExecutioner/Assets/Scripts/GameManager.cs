@@ -50,10 +50,6 @@ public class GameManager : Singleton<GameManager>
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F1))
-        {
-            StartLevel();
-        }
         if (Input.GetKeyDown(KeyCode.F7))
         {
             ZombieOverFlowEvent.PlayOverFlowEvent();
@@ -64,23 +60,7 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    private void StartLevel()
-    {
-        LevelManager.LoadStage(1);
-    }
-
-    public void SpawnWeapons()
-    {
-        var spawnPoints = LevelManager.ReturnSpawnPoints();
-        foreach (var platform in spawnPoints)
-        {
-            SpawnPointManager.SpawnWeapon(platform.spawnPoint);
-            platform.SetAdjacentColour(UnityEngine.Random.Range(6,11));
-        }
-        
-    }
-
-
+    
     
 }
 

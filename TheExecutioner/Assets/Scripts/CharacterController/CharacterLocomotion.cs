@@ -79,7 +79,6 @@ public class CharacterLocomotion : MonoBehaviour
         _characterController.Move(displacement);
         _isJumping = !_characterController.isGrounded;
         _rootMotion = Vector3.zero;
-        _animator.SetBool("IsJumping",_isJumping);
     }
     private void CharacterGrounded()
     {

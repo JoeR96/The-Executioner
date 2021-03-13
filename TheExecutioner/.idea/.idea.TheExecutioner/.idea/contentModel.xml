@@ -27,7 +27,21 @@
             </e>
           </e>
         </e>
-        <e p="ImportAnimations" t="Include">
+        <e p="Imported" t="Include">
+          <e p="ImportedAssets" t="Include">
+            <e p="Horizontal Skybox.shader" t="Include" />
+            <e p="PolygonSciFiCity" t="Include">
+              <e p="_Shaders" t="Include">
+                <e p="Polygon_Triplanar.shader" t="Include" />
+                <e p="Polygon_UVScroll.shader" t="Include" />
+              </e>
+            </e>
+            <e p="PolygonZombies" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="POLYGON_Zombies.shader" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="NavMeshComponents" t="Include">
             <e p="Editor" t="Include">
               <e p="NavMeshAssetManager.cs" t="Include" />
@@ -37,6 +51,7 @@
               <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
               <e p="NavMeshSurfaceEditor.cs" t="Include" />
             </e>
+            <e p="NavMeshLinks_AutoPlacer.cs" t="Include" />
             <e p="Scripts" t="Include">
               <e p="NavMeshLink.cs" t="Include" />
               <e p="NavMeshModifier.cs" t="Include" />
@@ -44,25 +59,10 @@
               <e p="NavMeshSurface.cs" t="Include" />
             </e>
           </e>
-        </e>
-        <e p="ImportedAssets" t="Include">
-          <e p="Horizontal Skybox.shader" t="Include" />
-          <e p="PolygonSciFiCity" t="Include">
-            <e p="_Shaders" t="Include">
+          <e p="PolygonApocalypse" t="Include">
+            <e p="Shader" t="Include">
               <e p="Polygon_Triplanar.shader" t="Include" />
-              <e p="Polygon_UVScroll.shader" t="Include" />
             </e>
-          </e>
-          <e p="PolygonZombies" t="Include">
-            <e p="Shaders" t="Include">
-              <e p="POLYGON_Zombies.shader" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="NavMeshLinks_AutoPlacer.cs" t="Include" />
-        <e p="PolygonApocalypse" t="Include">
-          <e p="Shader" t="Include">
-            <e p="Polygon_Triplanar.shader" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">
@@ -96,11 +96,21 @@
             <e p="EnvironmentSpawner.cs" t="Include" />
             <e p="GameSaveLoad.cs" t="Include" />
             <e p="Grid.cs" t="Include" />
+            <e p="Interactions" t="Include">
+              <e p="PlatformRampManager.cs" t="Include" />
+            </e>
             <e p="LevelManager.cs" t="Include" />
             <e p="LevelSO.cs" t="Include" />
             <e p="PathFinding.cs" t="Include" />
-            <e p="PlatformInformation.cs" t="Include" />
-            <e p="PlatformState.cs" t="Include" />
+            <e p="Platform" t="Include">
+              <e p="PlatformBridgeManager.cs" t="Include" />
+              <e p="PlatformColourManager.cs" t="Include" />
+              <e p="PlatformHeightManager.cs" t="Include" />
+              <e p="PlatformInformation.cs" t="Include" />
+              <e p="PlatformManager.cs" t="Include" />
+              <e p="PlatformSpawnManager.cs" t="Include" />
+              <e p="PlatformStateManager.cs" t="Include" />
+            </e>
           </e>
           <e p="Singleton.cs" t="Include" />
           <e p="SpawnSystems" t="Include">
