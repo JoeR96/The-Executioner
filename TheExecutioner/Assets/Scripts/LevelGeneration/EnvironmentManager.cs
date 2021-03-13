@@ -23,7 +23,6 @@ public class EnvironmentManager : MonoBehaviour
     private GameObject[,] _tileArray;
     public Pathfinding pathFinding;
     private NavMeshSurface navmeshSurface;
-    private NavMeshSurface navmeshSurfaceTwo;
     public EnvironmentSpawner environmentSpawner;
     public NavMeshLinks_AutoPlacer navMeshLinkGenerator;
     public Grid grid;
@@ -34,7 +33,6 @@ public class EnvironmentManager : MonoBehaviour
         environmentSpawner = GetComponent<EnvironmentSpawner>();
         pathFinding = GetComponent<Pathfinding>();
         navmeshSurface = NavMeshObject.GetComponent<NavMeshSurface>();
-        navmeshSurfaceTwo = NavMeshObjectTwo.GetComponent<NavMeshSurface>();
         grid = GetComponent<Grid>();
     }
 
@@ -100,7 +98,6 @@ public class EnvironmentManager : MonoBehaviour
     public void BuildNavMesh()
     {
         navmeshSurface.BuildNavMesh();
-        navmeshSurfaceTwo.BuildNavMesh();
     }
     
     
