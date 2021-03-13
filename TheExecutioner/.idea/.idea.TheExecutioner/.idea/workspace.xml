@@ -11,47 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FloorContainer.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FloorContainer.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Level3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Level3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelManager.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelManager.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewRampTest.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewRampTest.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NoiseSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NoiseSettings.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pathfinding.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Level.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cube (4).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cube (4).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cube.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cube.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyTargetZombie.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyTargetZombie.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NavigationBaker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NavigationBaker.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RandomEventManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RandomEventManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RandomInteraction.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RandomInteraction.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stairs (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stairs (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/TargetState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/TargetState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TransferToAnim.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TransferToAnim.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/navlink_oneway.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/navlink_oneway.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/navlink_roundtrip.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/navlink_roundtrip.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterLocomotion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterLocomotion.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +31,6 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/ImportAnimations/NavMeshComponents/Editor/NavMeshAssetManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/TileMapPractice (1).cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EffectExamples/Misc Effects/Scripts/SpawnEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/EnemyTargetZombie.cs" root0="FORCE_HIGHLIGHTING" />
@@ -78,10 +38,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Pathfinding.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/dump/12345/The-Executioner-04757166270da61332a9c7b95d3d2f094657c9cb/TheExecutioner/Assets/Scripts/PlatformState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Documents/PizzaPrototype01062020/Library/PackageCache/com.unity.probuilder@4.2.3/Runtime/Core/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ImportAnimations/NavMeshComponents/Scripts/NavMeshSurface.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/bf/c6e0f3d8/Int32.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ImportAnimations/NavMeshComponents/Editor/NavMeshSurfaceEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ImportAnimations/NavMeshComponents/Editor/NavMeshModifierVolumeEditor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -119,6 +76,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Pathfinding.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/EnemyTargetZombie.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterLocomotion.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
