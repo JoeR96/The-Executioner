@@ -46,6 +46,7 @@
           </e>
         </e>
         <e p="ImportedAssets" t="Include">
+          <e p="Horizontal Skybox.shader" t="Include" />
           <e p="PolygonSciFiCity" t="Include">
             <e p="_Shaders" t="Include">
               <e p="Polygon_Triplanar.shader" t="Include" />
@@ -59,29 +60,15 @@
           </e>
         </e>
         <e p="NavMeshLinks_AutoPlacer.cs" t="Include" />
-        <e p="Number2_Screenspace" t="Include">
-          <e p="ScreenspaceObject.shader" t="Include" />
-          <e p="UIScreenspace.shader" t="Include" />
-        </e>
-        <e p="Number3_MirrorReflection" t="Include">
-          <e p="Mirror.shader" t="Include" />
-          <e p="MirrorReflection.cs" t="Include" />
-        </e>
-        <e p="Number4_JoepieShaderWobble" t="Include">
-          <e p="JoepieShaderWobble.shader" t="Include" />
-        </e>
-        <e p="Number5_Skybox" t="Include">
-          <e p="Horizontal Skybox.shader" t="Include" />
-        </e>
         <e p="PolygonApocalypse" t="Include">
           <e p="Shader" t="Include">
             <e p="Polygon_Triplanar.shader" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="AnimatorMove.cs" t="Include" />
-          <e p="AudioManager.cs" t="Include" />
-          <e p="CellularAutomata.cs" t="Include" />
+          <e p="Audio" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+          </e>
           <e p="CharacterController" t="Include">
             <e p="CharacterAiming.cs" t="Include" />
             <e p="CharacterLocomotion.cs" t="Include" />
@@ -101,6 +88,7 @@
           <e p="EnvironmentSpawner.cs" t="Include" />
           <e p="EventManager.cs" t="Include" />
           <e p="Events" t="Include">
+            <e p="MovingZombieDumper.cs" t="Include" />
             <e p="SpawnPointManager.cs" t="Include" />
             <e p="ZombieOverflowEvent.cs" t="Include" />
           </e>
@@ -109,15 +97,14 @@
           <e p="Grid.cs" t="Include" />
           <e p="HealthSystem.cs" t="Include" />
           <e p="JailBreakEvent.cs" t="Include" />
-          <e p="LevelManager.cs" t="Include" />
-          <e p="LevelSO.cs" t="Include" />
-          <e p="LimbSpawner.cs" t="Include" />
-          <e p="MovingZombieDumper.cs" t="Include" />
+          <e p="LevelGeneration" t="Include">
+            <e p="LevelManager.cs" t="Include" />
+            <e p="LevelSO.cs" t="Include" />
+            <e p="PathFinding.cs" t="Include" />
+          </e>
           <e p="NavigationBaker.cs" t="Include" />
           <e p="ObstacleSpawner.cs" t="Include" />
-          <e p="PathFinding.cs" t="Include" />
           <e p="PlatformInformation.cs" t="Include" />
-          <e p="PlatformManager.cs" t="Include" />
           <e p="PlatformState.cs" t="Include" />
           <e p="RandomEventManager.cs" t="Include" />
           <e p="RandomRoomGenerator.cs" t="Include" />
@@ -143,14 +130,15 @@
           <e p="Timer.cs" t="Include" />
           <e p="WallManager.cs" t="Include" />
           <e p="WeaponPickup.cs" t="Include" />
-          <e p="weaponRecoil.cs" t="Include" />
           <e p="WeaponSystem" t="Include">
             <e p="ActiveWeapon.cs" t="Include" />
             <e p="RaycastWeapon.cs" t="Include" />
+            <e p="weaponRecoil.cs" t="Include" />
           </e>
           <e p="Zombies" t="Include">
             <e p="EnemyBase.cs" t="Include" />
             <e p="Lerper.cs" t="Include" />
+            <e p="LimbSpawner.cs" t="Include" />
             <e p="Ragdoll.cs" t="Include" />
           </e>
           <e p="ZombieSpawner.cs" t="Include" />
