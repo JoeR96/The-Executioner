@@ -211,10 +211,8 @@ public class PlatformState : MonoBehaviour
     }
     private void SetPosition(GameObject go,float targetHeight)
     {
-      
         Vector3 targetPosition;
         targetPosition = new Vector3(go.transform.position.x, targetHeight - 10f, go.transform.position.z);
-        Debug.Log(targetHeight);
         StartCoroutine(LerpPosition(go,targetPosition, 1f));
     }
 
