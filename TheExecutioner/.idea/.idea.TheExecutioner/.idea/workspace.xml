@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AnimationControllers/NPC_Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationControllers/NPC_Controller.controller" afterDir="false" />
@@ -25,6 +26,9 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +39,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+<<<<<<< Updated upstream
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -86,6 +91,55 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" />
       </list>
     </option>
+=======
+    <setting file="file://$USER_HOME$/Downloads/TileMapPractice (1).cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EffectExamples/Misc Effects/Scripts/SpawnEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/EnemyTargetZombie.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Pathfinding.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/dump/12345/The-Executioner-04757166270da61332a9c7b95d3d2f094657c9cb/TheExecutioner/Assets/Scripts/PlatformState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Documents/PizzaPrototype01062020/Library/PackageCache/com.unity.probuilder@4.2.3/Runtime/Core/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/bf/c6e0f3d8/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/LevelSO.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/PlatformInofmration.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelSo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MovingZombieDumper.cs" />
+      <option value="$PROJECT_DIR$/Assets/PlatformInformation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlatformManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlatformInformation.cs" />
+      <option value="$PROJECT_DIR$/Assets/NavMeshLinks_AutoPlacer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/NavMeshLinks_AutoPlaceerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Grid.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponPickup.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ZombieSpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelSo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/TransferToAnim.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentSpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentSpawnerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Pathfinding.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/EnemyTargetZombie.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
+    </changedPaths>
+>>>>>>> Stashed changes
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -111,7 +165,53 @@
       <workItem from="1612299584298" duration="4117000" />
       <workItem from="1612361288597" duration="432000" />
       <workItem from="1612373384636" duration="12363000" />
+<<<<<<< Updated upstream
       <workItem from="1612446555881" duration="4433000" />
+=======
+      <workItem from="1612446555881" duration="22600000" />
+      <workItem from="1612547921216" duration="628000" />
+      <workItem from="1612888143846" duration="3945000" />
+      <workItem from="1612911450610" duration="6217000" />
+      <workItem from="1612926671776" duration="1841000" />
+      <workItem from="1613087753111" duration="10382000" />
+      <workItem from="1613342676883" duration="17478000" />
+      <workItem from="1613508811588" duration="28789000" />
+      <workItem from="1613655278413" duration="15603000" />
+      <workItem from="1613673997443" duration="48000" />
+      <workItem from="1613674673031" duration="14414000" />
+      <workItem from="1613690131157" duration="7293000" />
+      <workItem from="1613697545188" duration="37839000" />
+      <workItem from="1613766017256" duration="6112000" />
+      <workItem from="1613856326037" duration="6581000" />
+      <workItem from="1613874085337" duration="10194000" />
+      <workItem from="1613933080025" duration="7573000" />
+      <workItem from="1613945372752" duration="6498000" />
+      <workItem from="1613952320403" duration="1696000" />
+      <workItem from="1613955244224" duration="8308000" />
+      <workItem from="1614115297371" duration="17273000" />
+      <workItem from="1614172929807" duration="3538000" />
+      <workItem from="1614186348897" duration="2000" />
+      <workItem from="1614186372696" duration="8158000" />
+      <workItem from="1614201499868" duration="1000" />
+      <workItem from="1614201519068" duration="7417000" />
+      <workItem from="1614209765952" duration="12161000" />
+      <workItem from="1614334088799" duration="4791000" />
+      <workItem from="1614737425482" duration="17973000" />
+      <workItem from="1614822856503" duration="3449000" />
+      <workItem from="1614868207419" duration="39077000" />
+      <workItem from="1614964549220" duration="10125000" />
+      <workItem from="1615072247212" duration="6127000" />
+      <workItem from="1615240477464" duration="827000" />
+      <workItem from="1615241329462" duration="19902000" />
+      <workItem from="1615309900992" duration="7129000" />
+      <workItem from="1615373973683" duration="1720000" />
+      <workItem from="1615407181604" duration="9489000" />
+      <workItem from="1615494582908" duration="3301000" />
+      <workItem from="1615545660788" duration="1243000" />
+      <workItem from="1615582397511" duration="9983000" />
+      <workItem from="1615649836689" duration="714000" />
+      <workItem from="1615655681689" duration="1197000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
