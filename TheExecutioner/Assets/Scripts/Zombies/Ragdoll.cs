@@ -1,33 +1,71 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Ragdoll : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
-    private Rigidbody[] rigidbodies;
-    private void Start()
+    private NavMeshAgent _navMeshAgent;
+    public Rigidbody[] rigidbodies;
+    private void Awake()
     {
         rigidbodies = GetComponentsInChildren<Rigidbody>();
+        _animator = GetComponent<Animator>();
+        _navMeshAgent = GetComponent<NavMeshAgent>();
         ActivateRagDoll();
     }
-    public void ActivateRagDoll()
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.F2))
+        {
+            DeactivateRagdoll();
+            
+        }if (Input.GetKey(KeyCode.F3))
+        {
+            ActivateRagDoll();
+        }
+    }
+    public void DeactivateRagdoll()
     {
         foreach (Rigidbody rb in rigidbodies)
         {
             rb.isKinematic = true;
         }
 
+        _navMeshAgent.enabled = true;
         _animator.enabled = true;
+        _animator.SetFloat("AnimTime", Random.Range(0.0f,1.0f));
+        
     }
 
-    public void DeactivateRagdoll()
+    public void LoopZombie()
+    {
+        StartCoroutine(RestartZombie());
+    }
+    private IEnumerator RestartZombie()
+    {
+        foreach (Rigidbody rb in rigidbodies)
+        {
+            rb.isKinematic = true;
+        }
+
+        _navMeshAgent.enabled = true;
+        _animator.enabled = true;
+        _animator.SetFloat("AnimTime", Random.Range(0.0f,1.0f));
+        yield return new WaitForSeconds(2f);
+        DeactivateRagdoll();
+        
+    }
+    public void ActivateRagDoll()
     {
         foreach (Rigidbody rb in rigidbodies)
         {
             rb.isKinematic = false;
         }
 
+        _navMeshAgent.enabled = false;
         _animator.enabled = false;
     }
 

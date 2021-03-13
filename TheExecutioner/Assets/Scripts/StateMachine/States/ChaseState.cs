@@ -5,8 +5,6 @@ using UnityEngine.AI;
 
 public class ChaseState : IState
 {
-    public Transform PlayerTransform;
-
     private float _timer = 00f;
     
     public StateId GetId()
@@ -16,36 +14,59 @@ public class ChaseState : IState
 
     public void Enter(AiAgent agent)
     {
-        if(PlayerTransform == null)
-            PlayerTransform = GameObject.FindWithTag("Player").transform;
+     
     }
 
     public void Update(AiAgent agent)
     {
-        if(!agent.enabled)
-            return;
-        _timer -= Time.deltaTime;
-        if (!agent.navMeshAgent.hasPath)
+        if (IsAgentOnNavMesh(agent) && agent.navMeshAgent.isOnNavMesh)
         {
-            agent.navMeshAgent.destination = PlayerTransform.position;
-        }
-
-        if (_timer < 0.0f)
-        {
-            Vector3 direction = (PlayerTransform.position - agent.navMeshAgent.destination);
-            direction.y = 0;
-            if (direction.sqrMagnitude > Mathf.Sqrt(agent.AgentConfig.MaxDistance))
+            if(!agent.enabled )
+                return;
+            _timer -= Time.deltaTime;
+            if (!agent.navMeshAgent.hasPath)
             {
-                if (agent.navMeshAgent.pathStatus != NavMeshPathStatus.PathPartial)
-                {
-                    agent.navMeshAgent.destination = PlayerTransform.position;
-                }
+                agent.navMeshAgent.destination = agent.Player.position;
             }
 
-            _timer = agent.AgentConfig.MaxTime;
+            if (_timer < 0.0f)
+            {
+                Vector3 direction = (agent.Player.position - agent.navMeshAgent.destination);
+                direction.y = 0;
+                if (direction.sqrMagnitude > agent.AgentConfig.MaxDistance * agent.AgentConfig.MaxDistance) ;
+                {
+                    if (agent.navMeshAgent.pathStatus != NavMeshPathStatus.PathPartial)
+                    {
+                        agent.navMeshAgent.destination = agent.Player.position;
+                    }
+                }
+
+                _timer = agent.AgentConfig.MaxTime;
+            }
         }
+        
     }
 
+    public bool IsAgentOnNavMesh(AiAgent agent)
+    {
+        float onMeshThreshold = 3;
+        Vector3 agentPosition = agent.transform.position;
+        NavMeshHit hit;
+
+        // Check for nearest point on navmesh to agent, within onMeshThreshold
+        if (NavMesh.SamplePosition(agentPosition, out hit, onMeshThreshold, NavMesh.AllAreas))
+        {
+            // Check if the positions are vertically aligned
+            if (Mathf.Approximately(agentPosition.x, hit.position.x)
+                && Mathf.Approximately(agentPosition.z, hit.position.z))
+            {
+                // Lastly, check if object is below navmesh
+                return agentPosition.y >= hit.position.y;
+            }
+        }
+
+        return false;
+    }
     public void Exit(AiAgent agent)
     {
  

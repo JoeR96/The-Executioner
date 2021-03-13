@@ -1,12 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using Cinemachine;
-using TMPro;
-using Unity.Mathematics;
 using UnityEngine;
-using UnityEditor.Animations;
-using UnityEngine.Animations.Rigging;
-using UnityEngine.UI;
+
 
 
 public class ActiveWeapon : MonoBehaviour

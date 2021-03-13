@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Shootable
   - DestructibleLimb
+  - Cube
+  - Root
   layers:
   - Default
   - TransparentFX
@@ -18,9 +20,9 @@ TagManager:
   - Lighting
   - Ground
   - Postprocessing
-  - 
-  - 
-  - 
+  - Unwalkable
+  - Raycast
+  - Upstairs
   - 
   - 
   - 

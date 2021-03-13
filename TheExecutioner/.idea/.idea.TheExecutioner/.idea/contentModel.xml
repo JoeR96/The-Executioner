@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Joe\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Joe\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_TheExecutioner.82083740.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Joe\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Joe\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_TheExecutioner.82083740.00" t="ExcludeRecursive" />
     <e p="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="AnimatorMove.cs" t="Include" />
-        <e p="CrosshairTarget.cs" t="Include" />
         <e p="EffectExamples" t="Include">
           <e p="Magic Effects" t="Include">
             <e p="Shaders" t="Include">
@@ -29,7 +27,26 @@
             </e>
           </e>
         </e>
+        <e p="ImportAnimations" t="Include">
+          <e p="NavMeshComponents" t="Include">
+            <e p="Editor" t="Include">
+              <e p="NavMeshAssetManager.cs" t="Include" />
+              <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
+              <e p="NavMeshLinkEditor.cs" t="Include" />
+              <e p="NavMeshModifierEditor.cs" t="Include" />
+              <e p="NavMeshModifierVolumeEditor.cs" t="Include" />
+              <e p="NavMeshSurfaceEditor.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="NavMeshLink.cs" t="Include" />
+              <e p="NavMeshModifier.cs" t="Include" />
+              <e p="NavMeshModifierVolume.cs" t="Include" />
+              <e p="NavMeshSurface.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="ImportedAssets" t="Include">
+          <e p="Horizontal Skybox.shader" t="Include" />
           <e p="PolygonSciFiCity" t="Include">
             <e p="_Shaders" t="Include">
               <e p="Polygon_Triplanar.shader" t="Include" />
@@ -42,20 +59,57 @@
             </e>
           </e>
         </e>
+        <e p="NavMeshLinks_AutoPlacer.cs" t="Include" />
+        <e p="PolygonApocalypse" t="Include">
+          <e p="Shader" t="Include">
+            <e p="Polygon_Triplanar.shader" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
-          <e p="AudioManager.cs" t="Include" />
+          <e p="Audio" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+          </e>
           <e p="CharacterController" t="Include">
             <e p="CharacterAiming.cs" t="Include" />
             <e p="CharacterLocomotion.cs" t="Include" />
             <e p="ThirdPersonController.cs" t="Include" />
           </e>
+          <e p="Editor" t="Include">
+            <e p="EnvironmentManagerEditor.cs" t="Include" />
+            <e p="EnvironmentSpawnerEditor.cs" t="Include" />
+            <e p="LevelManagerEditor.cs" t="Include" />
+            <e p="NavMeshLinks_AutoPlaceerEditor.cs" t="Include" />
+            <e p="PlatformEditor.cs" t="Include" />
+          </e>
+          <e p="Events" t="Include">
+            <e p="JailBreakEvent.cs" t="Include" />
+            <e p="MovingZombieDumper.cs" t="Include" />
+            <e p="SpawnPointManager.cs" t="Include" />
+            <e p="ZombieOverflowEvent.cs" t="Include" />
+          </e>
           <e p="GameManager.cs" t="Include" />
-          <e p="HealthSystem.cs" t="Include" />
-          <e p="LimbSpawner.cs" t="Include" />
+          <e p="HealthSystem" t="Include">
+            <e p="HealthSystem.cs" t="Include" />
+          </e>
+          <e p="LevelGeneration" t="Include">
+            <e p="EnvironmentManager.cs" t="Include" />
+            <e p="EnvironmentSpawner.cs" t="Include" />
+            <e p="GameSaveLoad.cs" t="Include" />
+            <e p="Grid.cs" t="Include" />
+            <e p="LevelManager.cs" t="Include" />
+            <e p="LevelSO.cs" t="Include" />
+            <e p="PathFinding.cs" t="Include" />
+            <e p="PlatformInformation.cs" t="Include" />
+            <e p="PlatformState.cs" t="Include" />
+          </e>
           <e p="Singleton.cs" t="Include" />
+          <e p="SpawnSystems" t="Include">
+            <e p="ZombieSpawner.cs" t="Include" />
+          </e>
           <e p="StateMachine" t="Include">
             <e p="AiAgent.cs" t="Include" />
             <e p="AiAgentConfig.cs" t="Include" />
+            <e p="EnemyTargetZombie.cs" t="Include" />
             <e p="IState.cs" t="Include" />
             <e p="StateMachine.cs" t="Include" />
             <e p="States" t="Include">
@@ -64,18 +118,23 @@
               <e p="ChaseState.cs" t="Include" />
               <e p="DeathState.cs" t="Include" />
               <e p="IdleState.cs" t="Include" />
+              <e p="TargetState.cs" t="Include" />
             </e>
           </e>
+          <e p="Timer.cs" t="Include" />
           <e p="WeaponSystem" t="Include">
             <e p="ActiveWeapon.cs" t="Include" />
+            <e p="CrosshairTarget.cs" t="Include" />
             <e p="RaycastWeapon.cs" t="Include" />
+            <e p="WeaponPickup.cs" t="Include" />
+            <e p="weaponRecoil.cs" t="Include" />
           </e>
           <e p="Zombies" t="Include">
             <e p="EnemyBase.cs" t="Include" />
             <e p="Lerper.cs" t="Include" />
+            <e p="LimbSpawner.cs" t="Include" />
             <e p="Ragdoll.cs" t="Include" />
           </e>
-          <e p="ZombieSpawner.cs" t="Include" />
         </e>
         <e p="Shared" t="Include">
           <e p="Ramps" t="Include">
@@ -122,9 +181,9 @@
             <e p="Readme.cs" t="Include" />
           </e>
         </e>
-        <e p="WeaponPickup.cs" t="Include" />
-        <e p="weaponRecoil.cs" t="Include" />
       </e>
+      <e p="NavMeshComponents.csproj" t="IncludeRecursive" />
+      <e p="NavMeshComponentsEditor.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />

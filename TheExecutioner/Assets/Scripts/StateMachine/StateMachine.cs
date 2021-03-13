@@ -38,8 +38,9 @@ public class StateMachine
         GetState(currentState)?.Update(agent);
     }
 
-    public void RegisterState(ChaseState chaseState)
+    public void RegisterState(IState state)
     {
-        throw new System.NotImplementedException();
+        int index = (int)state.GetId();
+        states[index] = state;
     }
 }

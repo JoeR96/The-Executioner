@@ -7,21 +7,21 @@ public class AttackState : IState
 {
     public StateId GetId()
     {
-        throw new System.NotImplementedException();
+        return StateId.Attack;
     }
 
     public void Enter(AiAgent agent)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void Update(AiAgent agent)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void Exit(AiAgent agent)
     {
-        throw new System.NotImplementedException();
+        
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
 using UnityEngine;
 
 public class DeathState : IState
@@ -12,12 +13,15 @@ public class DeathState : IState
 
     public void Enter(AiAgent agent)
     {
-        agent.navMeshAgent.enabled = false;
-        agent.Ragdoll.DeactivateRagdoll();
+        if (agent.navMeshAgent != null)
+        {
+            agent.navMeshAgent.enabled = false;
+        }
+        
+        agent.Ragdoll.ActivateRagDoll();
         Direction.y = 1;
         agent.Ragdoll.ApplyForce(Direction * agent.AgentConfig.DieForce);
         agent.Mesh.updateWhenOffscreen = true;
-        Debug.Log("Entered");
     }
 
     public void Update(AiAgent agent)
@@ -30,9 +34,5 @@ public class DeathState : IState
         
     }
 
-    private IEnumerator Die(AiAgent agent)
-    {
-        yield return new WaitForSeconds(1f);
-        Object.Destroy(agent.gameObject);
-    }
+
 }
