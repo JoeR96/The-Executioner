@@ -79,6 +79,7 @@ public class CharacterLocomotion : MonoBehaviour
         _characterController.Move(displacement);
         _isJumping = !_characterController.isGrounded;
         _rootMotion = Vector3.zero;
+        _animator.SetBool("IsJumping",_isJumping);
     }
     private void CharacterGrounded()
     {
@@ -108,8 +109,9 @@ public class CharacterLocomotion : MonoBehaviour
     private void SetInAir(float jumpVelocity)
     {
         _isJumping = true;
-        _velocity = _velocity * Damping * GroundSpeed;
+        _velocity = _animator.velocity * Damping * GroundSpeed;
         _velocity.y = jumpVelocity;
+        _animator.SetBool("IsJumping",true);
     }
 
     private Vector3 CalculateAirMovement()
