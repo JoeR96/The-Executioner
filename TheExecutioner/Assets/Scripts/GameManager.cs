@@ -16,9 +16,10 @@ public class GameManager : Singleton<GameManager>
     public Pathfinding pathfinding;
     public LevelManager LevelManager;
     public Grid Grid;
-    
-    void Awake()
+
+    public override void Awake()
     {
+        base.Awake();
         EnvironmentManager = GetComponentInChildren<EnvironmentManager>();
         ZombieOverFlowEvent = GetComponentInChildren<ZombieOverflowEvent>();
         ZombieSpawner = GetComponentInChildren<ZombieSpawner>();

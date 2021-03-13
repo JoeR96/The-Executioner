@@ -74,8 +74,6 @@
             <e p="CharacterLocomotion.cs" t="Include" />
             <e p="ThirdPersonController.cs" t="Include" />
           </e>
-          <e p="CrosshairTarget.cs" t="Include" />
-          <e p="EdgeSpawnPlatform.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="EnvironmentManagerEditor.cs" t="Include" />
             <e p="EnvironmentSpawnerEditor.cs" t="Include" />
@@ -83,39 +81,35 @@
             <e p="NavMeshLinks_AutoPlaceerEditor.cs" t="Include" />
             <e p="PlatformEditor.cs" t="Include" />
           </e>
-          <e p="EnemyTargetZombie.cs" t="Include" />
-          <e p="EnvironmentManager.cs" t="Include" />
-          <e p="EnvironmentSpawner.cs" t="Include" />
-          <e p="EventManager.cs" t="Include" />
           <e p="Events" t="Include">
+            <e p="JailBreakEvent.cs" t="Include" />
             <e p="MovingZombieDumper.cs" t="Include" />
             <e p="SpawnPointManager.cs" t="Include" />
             <e p="ZombieOverflowEvent.cs" t="Include" />
           </e>
           <e p="GameManager.cs" t="Include" />
-          <e p="GameSaveLoad.cs" t="Include" />
-          <e p="Grid.cs" t="Include" />
-          <e p="HealthSystem.cs" t="Include" />
-          <e p="JailBreakEvent.cs" t="Include" />
+          <e p="HealthSystem" t="Include">
+            <e p="HealthSystem.cs" t="Include" />
+          </e>
           <e p="LevelGeneration" t="Include">
+            <e p="EnvironmentManager.cs" t="Include" />
+            <e p="EnvironmentSpawner.cs" t="Include" />
+            <e p="GameSaveLoad.cs" t="Include" />
+            <e p="Grid.cs" t="Include" />
             <e p="LevelManager.cs" t="Include" />
             <e p="LevelSO.cs" t="Include" />
             <e p="PathFinding.cs" t="Include" />
+            <e p="PlatformInformation.cs" t="Include" />
+            <e p="PlatformState.cs" t="Include" />
           </e>
-          <e p="NavigationBaker.cs" t="Include" />
-          <e p="ObstacleSpawner.cs" t="Include" />
-          <e p="PlatformInformation.cs" t="Include" />
-          <e p="PlatformState.cs" t="Include" />
-          <e p="RandomEventManager.cs" t="Include" />
-          <e p="RandomRoomGenerator.cs" t="Include" />
-          <e p="RoomManager.cs" t="Include" />
-          <e p="RotatingPlatform.cs" t="Include" />
-          <e p="RotationManager.cs" t="Include" />
           <e p="Singleton.cs" t="Include" />
-          <e p="StairCheck.cs" t="Include" />
+          <e p="SpawnSystems" t="Include">
+            <e p="ZombieSpawner.cs" t="Include" />
+          </e>
           <e p="StateMachine" t="Include">
             <e p="AiAgent.cs" t="Include" />
             <e p="AiAgentConfig.cs" t="Include" />
+            <e p="EnemyTargetZombie.cs" t="Include" />
             <e p="IState.cs" t="Include" />
             <e p="StateMachine.cs" t="Include" />
             <e p="States" t="Include">
@@ -124,15 +118,15 @@
               <e p="ChaseState.cs" t="Include" />
               <e p="DeathState.cs" t="Include" />
               <e p="IdleState.cs" t="Include" />
+              <e p="TargetState.cs" t="Include" />
             </e>
           </e>
-          <e p="TargetState.cs" t="Include" />
           <e p="Timer.cs" t="Include" />
-          <e p="WallManager.cs" t="Include" />
-          <e p="WeaponPickup.cs" t="Include" />
           <e p="WeaponSystem" t="Include">
             <e p="ActiveWeapon.cs" t="Include" />
+            <e p="CrosshairTarget.cs" t="Include" />
             <e p="RaycastWeapon.cs" t="Include" />
+            <e p="WeaponPickup.cs" t="Include" />
             <e p="weaponRecoil.cs" t="Include" />
           </e>
           <e p="Zombies" t="Include">
@@ -141,7 +135,6 @@
             <e p="LimbSpawner.cs" t="Include" />
             <e p="Ragdoll.cs" t="Include" />
           </e>
-          <e p="ZombieSpawner.cs" t="Include" />
         </e>
         <e p="Shared" t="Include">
           <e p="Ramps" t="Include">
@@ -180,7 +173,6 @@
             </e>
           </e>
         </e>
-        <e p="TransferToAnim.cs" t="Include" />
         <e p="TutorialInfo" t="Include">
           <e p="Scripts" t="Include">
             <e p="Editor" t="Include">
