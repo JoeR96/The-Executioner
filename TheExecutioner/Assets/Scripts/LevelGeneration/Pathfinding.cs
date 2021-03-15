@@ -112,9 +112,10 @@ public class Pathfinding : MonoBehaviour
         }
         path.Reverse();
         var temp = new List<Node>();
+        var nodeCheck = new CheckAdjacentNodes();
         foreach (var go in path)
         {
-            var t = GameManager.instance.EnvironmentManager.environmentSpawner.CheckAdjacentPositions(go);
+            var t = nodeCheck.CheckAdjacentPositions(go,grid.grid);
             temp.Add(t[1,2]);
         }
 

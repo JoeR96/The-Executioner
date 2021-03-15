@@ -8,14 +8,19 @@ public class PlatformColourManager : MonoBehaviour
     public bool ColourAdjacentMode;
     public int CurrentColour;
 
-    public PlatformColourManager(PlatformManager platformStateManager)
+    private CheckAdjacentNodes CheckAdjacentNodes;
+
+    private void Start()
     {
-        platformManager = platformStateManager;
+        CheckAdjacentNodes = new CheckAdjacentNodes();
+        platformManager = GetComponent<PlatformManager>();
     }
+
 
     public void SetAdjacentColour(int materialIndex)
     {
-        var adjacent = GameManager.instance.EnvironmentManager.environmentSpawner.CheckAdjacentClosePositions(platformManager.PlatformStateManager.Node);
+        var adjacent = CheckAdjacentNodes.CheckAdjacentClosePositions(platformManager.PlatformStateManager.Node,GameManager.instance.EnvironmentManager.grid.grid);
+        
         foreach (var go in adjacent)
         {
             go.platform.GetComponent<MeshRenderer>().material = materials[materialIndex];

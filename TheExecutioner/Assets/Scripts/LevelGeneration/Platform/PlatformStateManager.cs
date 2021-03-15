@@ -36,10 +36,11 @@ public class PlatformStateManager : MonoBehaviour
     
     public void SetStateFromExternal(PlatformInformation platformInformation)
     {
-        platformManager.PlatformColourManager.CurrentColour = platformInformation.CurrentBridgeHeight;
+        platformManager.PlatformColourManager.CurrentColour = platformInformation.CurrentColour;
         platformManager.PlatformBridgeManager.PlatformBridgeActive = platformInformation.BridgeIsActive;
         platformManager.PlatformRampManager.PlatformRampActive = platformInformation.PlatformStairActive;
         platformManager.PlatformHeightManager.CurrentHeight = platformInformation.CurrentHeight;
+        platformManager.PlatformBridgeManager.CurrentBridgeHeight = platformInformation.CurrentBridgeHeight;
         platformManager.PlatformRampManager.CurrentRotation = platformInformation.CurrentRotation;
         platformManager.PlatformSpawnManager.PlatformSpawnPointActive = platformInformation.PlatformSpawnActive;
         SetState();
@@ -51,7 +52,7 @@ public class PlatformStateManager : MonoBehaviour
         platformManager.PlatformColourManager.SetPlatformColour(platformManager.PlatformColourManager.CurrentColour);
         platformManager.PlatformRampManager.ActivateRamp(platformManager.PlatformRampManager.PlatformRampActive);
         platformManager.PlatformBridgeManager.ActivateBridge(platformManager.PlatformBridgeManager.PlatformBridgeActive);
-        platformManager.PlatformBridgeManager.SetBridgeHeight(platformManager.PlatformBridgeManager.CurrentBridgeHeight);
+        //platformManager.PlatformBridgeManager.SetBridgeHeight(platformManager.PlatformBridgeManager.CurrentBridgeHeight);
         platformManager.PlatformSpawnManager.ActivateSpawnPoint(platformManager.PlatformSpawnManager.PlatformSpawnPointActive);
 
     }

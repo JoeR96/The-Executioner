@@ -28,7 +28,7 @@ public class PlatformHeightManager : MonoBehaviour
 
     public void SetPlatformHeight(int height )
     {
-        RaisePlatform(gameObject,platformHeights[height],2.5f);
+        RaisePlatform(gameObject,platformHeights[height],1f);
         CurrentHeight = height;
     }
 
@@ -36,7 +36,7 @@ public class PlatformHeightManager : MonoBehaviour
     {
         Vector3 targetPosition;
         targetPosition = new Vector3(go.transform.position.x, targetHeight, go.transform.position.z);
-        StartCoroutine(MovePlatform(go,targetPosition, 2.5f));
+        StartCoroutine(MovePlatform(go,targetPosition, 1f));
     }
 
     private IEnumerator MovePlatform( GameObject go,Vector3 targetPosition, float duration)

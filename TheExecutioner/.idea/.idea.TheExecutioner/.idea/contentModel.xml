@@ -79,7 +79,11 @@
             <e p="EnvironmentSpawnerEditor.cs" t="Include" />
             <e p="LevelManagerEditor.cs" t="Include" />
             <e p="NavMeshLinks_AutoPlaceerEditor.cs" t="Include" />
+            <e p="PlaterformColourManagerEditor.cs" t="Include" />
+            <e p="PlatformBridgeManagerEditor.cs" t="Include" />
             <e p="PlatformEditor.cs" t="Include" />
+            <e p="PlatformHeightManagerEditor.cs" t="Include" />
+            <e p="PlatformStairManagerEditor.cs" t="Include" />
           </e>
           <e p="Events" t="Include">
             <e p="JailBreakEvent.cs" t="Include" />
@@ -92,6 +96,7 @@
             <e p="HealthSystem.cs" t="Include" />
           </e>
           <e p="LevelGeneration" t="Include">
+            <e p="CheckAdjacentNodes.cs" t="Include" />
             <e p="EnvironmentManager.cs" t="Include" />
             <e p="EnvironmentSpawner.cs" t="Include" />
             <e p="GameSaveLoad.cs" t="Include" />
