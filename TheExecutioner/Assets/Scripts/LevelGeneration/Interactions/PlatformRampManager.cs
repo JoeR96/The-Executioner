@@ -27,8 +27,6 @@ public class PlatformRampManager : MonoBehaviour
         var t = colour.materials[colour.CurrentColour];
         var y = rampMat.GetComponent<MeshRenderer>();
         y.material = t;
-        Debug.Log(rampMat.GetComponent<MeshRenderer>().material);
-        
     }
 
     public void SetRampRotation( int stairState)

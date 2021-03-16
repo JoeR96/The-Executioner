@@ -5,7 +5,7 @@ public class RandomPointOnNavMesh : MonoBehaviour
 {
     public float range = 10.0f;
 
-    bool RandomPoint(Vector3 center, float range, out Vector3 result)
+    public bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
         for (int i = 0; i < 30; i++)
         {
@@ -26,7 +26,7 @@ public class RandomPointOnNavMesh : MonoBehaviour
         Vector3 point;
         if (RandomPoint(transform.position, range, out point))
         {
-            Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+            Debug.DrawRay(point, Vector3.up, Color.blue, 55.0f);
         }
     }
 }
