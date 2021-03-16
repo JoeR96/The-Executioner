@@ -136,7 +136,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0, y: 0.189, z: 0.005}
+        value: {x: 0.063, y: 0.182, z: 0.08}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -146,8 +146,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.06666667
         value: {x: 0.021, y: 0.477, z: 0.11}
-        inSlope: {x: 0.23252943, y: 3.8638852, z: 1.1340591}
-        outSlope: {x: 0.23252943, y: 3.8638852, z: 1.1340591}
+        inSlope: {x: 0, y: 3.9058852, z: 0.684059}
+        outSlope: {x: 0, y: 3.9058852, z: 0.684059}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -179,7 +179,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0.145, y: -0.015, z: 0.358}
+        value: {x: -0.09, y: -0.015, z: 0.332}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -247,6 +247,22 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: RigLayer_BodyAiming/WeaponSlot_Secondary
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -1.969, y: -0.577, z: -0.014}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: WeaponHolder/WeaponPivot/LeftElbowRef
   m_ScaleCurves:
   - curve:
       serializedVersion: 2
@@ -568,6 +584,13 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
+      path: 2292140127
+      attribute: 1
+      script: {fileID: 0}
+      typeID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
       path: 1615373315
       attribute: 2
       script: {fileID: 0}
@@ -643,7 +666,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0
+        value: 0.063
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -653,8 +676,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.06666667
         value: 0.021
-        inSlope: 0.23252943
-        outSlope: 0.23252943
+        inSlope: 0
+        outSlope: 0
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -689,7 +712,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.189
+        value: 0.182
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -699,8 +722,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.06666667
         value: 0.477
-        inSlope: 3.8638852
-        outSlope: 3.8638852
+        inSlope: 3.9058852
+        outSlope: 3.9058852
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -735,7 +758,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.005
+        value: 0.08
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -745,8 +768,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.06666667
         value: 0.11
-        inSlope: 1.1340591
-        outSlope: 1.1340591
+        inSlope: 0.684059
+        outSlope: 0.684059
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -914,7 +937,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.145
+        value: -0.09
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -952,7 +975,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.358
+        value: 0.332
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1862,6 +1885,63 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
     path: RigLayer_BodyAiming/WeaponSlot_Secondary
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -1.969
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: WeaponHolder/WeaponPivot/LeftElbowRef
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.577
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: WeaponHolder/WeaponPivot/LeftElbowRef
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -0.014
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: WeaponHolder/WeaponPivot/LeftElbowRef
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:

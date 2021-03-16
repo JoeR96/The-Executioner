@@ -704,9 +704,9 @@ GameObject:
   - component: {fileID: 3631194933960126720}
   - component: {fileID: 3631194933960126727}
   - component: {fileID: 3631194933960126726}
+  - component: {fileID: 3631194933960126722}
   - component: {fileID: 3631194933960126721}
   - component: {fileID: 3631194933960126723}
-  - component: {fileID: 3631194933960126722}
   - component: {fileID: 3631194933960126724}
   m_Layer: 12
   m_Name: fLOORhOLDER
@@ -2470,6 +2470,26 @@ MonoBehaviour:
   ColourTileMode: 0
   ColourAdjacentMode: 0
   CurrentColour: 0
+--- !u!114 &3631194933960126722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3631194933960126728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ba36669abef4b2408c2d4e26221b50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlatformRampActive: 1
+  CurrentRotation: 0
+  rampRotations:
+  - 0
+  - 90
+  - 180
+  - 270
+  ramp: {fileID: 3631194934928849966}
 --- !u!114 &3631194933960126721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2501,26 +2521,6 @@ MonoBehaviour:
   boundarySize: 0
   X: 0
   Z: 0
---- !u!114 &3631194933960126722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3631194933960126728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ba36669abef4b2408c2d4e26221b50e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlatformRampActive: 1
-  CurrentRotation: 0
-  rampRotations:
-  - 0
-  - 90
-  - 180
-  - 270
-  ramp: {fileID: 3631194934928849966}
 --- !u!114 &3631194933960126724
 MonoBehaviour:
   m_ObjectHideFlags: 0

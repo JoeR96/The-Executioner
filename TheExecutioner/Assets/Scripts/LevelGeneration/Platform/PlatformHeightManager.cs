@@ -52,6 +52,5 @@ public class PlatformHeightManager : MonoBehaviour
             go.transform.position = Vector3.Lerp(startPosition,  targetPosition, percentage);
             yield return null;
         }
-        
     }
 }

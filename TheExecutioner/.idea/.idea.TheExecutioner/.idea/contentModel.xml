@@ -72,6 +72,10 @@
           <e p="CharacterController" t="Include">
             <e p="CharacterAiming.cs" t="Include" />
             <e p="CharacterLocomotion.cs" t="Include" />
+            <e p="FirstPersonController" t="Include">
+              <e p="MouseLook.cs" t="Include" />
+              <e p="PlayerController.cs" t="Include" />
+            </e>
             <e p="ThirdPersonController.cs" t="Include" />
           </e>
           <e p="Editor" t="Include">
@@ -83,7 +87,7 @@
             <e p="PlatformBridgeManagerEditor.cs" t="Include" />
             <e p="PlatformEditor.cs" t="Include" />
             <e p="PlatformHeightManagerEditor.cs" t="Include" />
-            <e p="PlatformStairManagerEditor.cs" t="Include" />
+            <e p="PlatformRampManagerEditor.cs" t="Include" />
           </e>
           <e p="Events" t="Include">
             <e p="JailBreakEvent.cs" t="Include" />
