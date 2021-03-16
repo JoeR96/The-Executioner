@@ -43,6 +43,8 @@ public class PlatformStateManager : MonoBehaviour
         platformManager.PlatformBridgeManager.CurrentBridgeHeight = platformInformation.CurrentBridgeHeight;
         platformManager.PlatformRampManager.CurrentRotation = platformInformation.CurrentRotation;
         platformManager.PlatformSpawnManager.PlatformSpawnPointActive = platformInformation.PlatformSpawnActive;
+        if(platformManager.PlatformSpawnManager.PlatformSpawnPointActive)
+            GameManager.instance.EnvironmentManager.EnemySpawnPoints.internalSpawnPoints.Add(platformManager.PlatformSpawnManager.spawnPoint.transform);
         SetState();
     }
     public void SetState()
@@ -54,6 +56,7 @@ public class PlatformStateManager : MonoBehaviour
         platformManager.PlatformBridgeManager.ActivateBridge(platformManager.PlatformBridgeManager.PlatformBridgeActive);
         //platformManager.PlatformBridgeManager.SetBridgeHeight(platformManager.PlatformBridgeManager.CurrentBridgeHeight);
         platformManager.PlatformSpawnManager.ActivateSpawnPoint(platformManager.PlatformSpawnManager.PlatformSpawnPointActive);
+
 
     }
     public void ResetState()

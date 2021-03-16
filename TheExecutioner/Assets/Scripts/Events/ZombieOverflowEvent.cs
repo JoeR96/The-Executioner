@@ -40,7 +40,7 @@ public class ZombieOverflowEvent : MonoBehaviour
         {
             spawnPosition[i] = tempList[i];
         }
-        GameManager.instance.ZombieSpawner.SpawnZombiesAtLocations(spawnPosition);
+        //GameManager.instance.ZombieSpawner.SpawnActiveZombiesAtLocation(tempList);
         
     }
 
@@ -68,7 +68,7 @@ public class ZombieOverflowEvent : MonoBehaviour
 
     private void Overflow()
     {
-        GameManager.instance.ZombieSpawner.SpawnZombiesAtLocations(_overflowSpawns);
+        //GameManager.instance.ZombieSpawner.SpawnZombiesAtLocations(_overflowSpawns);
     }
     
     

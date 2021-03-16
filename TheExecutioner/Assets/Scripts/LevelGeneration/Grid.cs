@@ -144,19 +144,19 @@ public class Grid : MonoBehaviour
 
 public class Node
 {
-
-
-	public bool InUse = true;
-	public bool walkable;
-	public Vector3 worldPosition;
-	public Vector2 GridPosition;
-	public int gridX;
-	public int gridY;
-	public GameObject platform;
-	public int gCost;
-	public int hCost;
 	public Node parent;
 	public PlatformManager PlatformManager;
+	public Vector3 worldPosition;
+	public Vector2 GridPosition;
+	public GameObject platform;
+
+	public bool InUse;
+	public bool walkable;
+	public int gridX;
+	public int gridY;
+	public int gCost;
+	public int hCost;
+	
 	
 	public Node(bool _walkable, Vector3 _worldPos, int _gridX, int _gridY) {
 		walkable = _walkable;

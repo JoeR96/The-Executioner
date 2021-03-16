@@ -12,8 +12,8 @@ public class MovingZombieDumper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     { 
-        _isActive = true;
-            //InvokeRepeating("SpawnZombie",2f,_spawnRate);
+        _isActive = false;
+ 
     }
 
     // Update is called once per frame
@@ -56,6 +56,6 @@ public class MovingZombieDumper : MonoBehaviour
     
     private void SpawnZombie()
     {
-        GameManager.instance.ZombieSpawner.SpawnZombie(_dumperSpawnPoint);
+        GameManager.instance.ZombieManager.ZombieSpawner.SpawnZombie(_dumperSpawnPoint);
     }
 }

@@ -7,11 +7,10 @@ using Random = System.Random;
 
 public class GameManager : Singleton<GameManager>
 {
-    [HideInInspector] 
-    public SpawnPointManager SpawnPointManager;
+    [HideInInspector]
     public ZombieOverflowEvent ZombieOverFlowEvent;
     public LimbSpawner LimbSpawner;
-    public ZombieSpawner ZombieSpawner;
+    public ZombieManager ZombieManager;
     public EnvironmentManager EnvironmentManager;
     public Pathfinding pathfinding;
     public LevelManager LevelManager;
@@ -22,12 +21,12 @@ public class GameManager : Singleton<GameManager>
         base.Awake();
         EnvironmentManager = GetComponentInChildren<EnvironmentManager>();
         ZombieOverFlowEvent = GetComponentInChildren<ZombieOverflowEvent>();
-        ZombieSpawner = GetComponentInChildren<ZombieSpawner>();
+        ZombieManager = GetComponentInChildren<ZombieManager>();
         LimbSpawner = GetComponentInChildren<LimbSpawner>();
         pathfinding = GetComponentInChildren<Pathfinding>();
         Grid = GetComponentInChildren<Grid>();
         LevelManager = GetComponentInChildren<LevelManager>();
-        SpawnPointManager = GetComponentInChildren<SpawnPointManager>();
+        
     }
 
     private void Start()
@@ -50,14 +49,11 @@ public class GameManager : Singleton<GameManager>
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F7))
+        if (Input.GetKeyDown(KeyCode.F1))
         {
-            ZombieOverFlowEvent.PlayOverFlowEvent();
+            ZombieManager.ZombieSpawner.SpawnActiveZombiesAtLocation(EnvironmentManager.EnemySpawnPoints.internalSpawnPoints);
         }
-        if (Input.GetKeyDown(KeyCode.F8))
-        {
-            ZombieOverFlowEvent.PlayJailBreakEvent();
-        }
+ 
     }
 
     

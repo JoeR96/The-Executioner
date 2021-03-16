@@ -77,7 +77,7 @@ public class PlatformHeightManagerEditor : Editor
         }
         if (GUILayout.Button("Reset Platform",GUILayout.Width(80), GUILayout.Height(80)))
         {
-            PlatformHeightManager.SetPlatformHeight((int)PlatformHeight.Flat);
+            PlatformHeightManager.SetPlatformHeight(16);
         }
         EditorGUILayout.EndHorizontal();
     }

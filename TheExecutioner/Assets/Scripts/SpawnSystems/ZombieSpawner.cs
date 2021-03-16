@@ -10,23 +10,43 @@ public class ZombieSpawner : MonoBehaviour
     [SerializeField] private Transform navmeshPos;
     public GameObject SpawnZombie(Transform location)
     {
-        
         var t = Instantiate(_zombiePrefab,location.position, Quaternion.identity);
         t.transform.position = location.position;
         return t;
     }
     
-    public void SpawnZombiesAtLocations(Transform[] location)
+    public void SpawnRagdollZombiesAtLocations(List<Transform> location)
     {
-        
-        for (int i = 0; i < location.Length; i++)
+        for (int i = 0; i < location.Count; i++)
         {
-            var t = SpawnZombie(navmeshPos);
-             
-             t.GetComponent<NavMeshAgent>().enabled = false;
+            var t = SpawnZombie(location[i]);
+            t.GetComponent<NavMeshAgent>().enabled = false;
              t.GetComponent<Ragdoll>().ActivateRagDoll();
              t.transform.position = location[i].position;
         }
+    }
+    public void SpawnRagdollZombieAtLocations(Transform location)
+    {
+        var t = SpawnZombie(location);
+        t.GetComponent<NavMeshAgent>().enabled = false;
+        t.GetComponent<Ragdoll>().ActivateRagDoll();
+        t.transform.position = location.position;
         
     }
+    public void SpawnActiveZombieAtLocation(Transform location)
+    {
+        var t = SpawnZombie(location);
+        t.transform.position = location.position;
+    }
+    
+    public void SpawnActiveZombiesAtLocation(List<Transform> location)
+    {   
+        for (int i = 0; i < location.Count; i++)
+        {
+            var t = SpawnZombie(location[i]);
+            t.transform.position = location[i].position;
+        }
+        
+    }
+    
 }

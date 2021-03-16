@@ -19,19 +19,18 @@ public class EnvironmentManager : MonoBehaviour
 {
     public List<GameObject> SpawnPoints = new List<GameObject>();
     public Transform NavMeshObject;
-    public Transform NavMeshObjectTwo;
-    private GameObject[,] _tileArray;
-    public Pathfinding pathFinding;
-    private NavMeshSurface navmeshSurface;
     public EnvironmentSpawner environmentSpawner;
     public NavMeshLinks_AutoPlacer navMeshLinkGenerator;
+    public EnemySpawnPoints EnemySpawnPoints;
     public Grid grid;
     
+    private GameObject[,] _tileArray;
+    private NavMeshSurface navmeshSurface;
     
     private void Awake()
     {
+        EnemySpawnPoints = GetComponent<EnemySpawnPoints>();
         environmentSpawner = GetComponent<EnvironmentSpawner>();
-        pathFinding = GetComponent<Pathfinding>();
         navmeshSurface = NavMeshObject.GetComponent<NavMeshSurface>();
         grid = GetComponent<Grid>();
     }
@@ -51,15 +50,14 @@ public class EnvironmentManager : MonoBehaviour
         
         SpawnPoints.Clear();
         //Loop through the corresponding tiles to set the playable arena tiles
-        for (int i = 10; i < 40; i++)
+        for (int i = 15; i < 25; i++)
         {
-            for (int j = 10; j < 40; j++)
+            for (int j = 15; j < 25; j++)
             {
                 var gridPosition = grid.grid[i, j];
                 gridPosition.PlatformManager.PlatformStateManager.PlatformIsWall = true;
             }
         }
-
         
         if (raiseUp)
             platformHeight = 14;
@@ -72,14 +70,15 @@ public class EnvironmentManager : MonoBehaviour
             if (!node.PlatformManager.PlatformStateManager.PlatformIsWall)
             {
                 node.PlatformManager.PlatformHeightManager.SetPlatformHeight(platformHeight);
-                SpawnPoints.Add(node.PlatformManager.PlatformSpawnManager.spawnPoint);
-                
+                EnemySpawnPoints.AddExternalSpawnPointToList(node);
             }
-
+            EnemySpawnPoints.CheckForSpawnPoint(node);
         }
         
         navmeshSurface.BuildNavMesh();
     }
+
+
     public void LowerAll()
     {
         foreach (var node in grid.grid)

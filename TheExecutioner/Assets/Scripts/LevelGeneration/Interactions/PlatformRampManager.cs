@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,33 +9,28 @@ public class PlatformRampManager : MonoBehaviour
     public int CurrentRotation;
     [SerializeField] private List<float> rampRotations = new List<float>();
     [SerializeField] public GameObject ramp;
-    
+    [SerializeField] public GameObject rampMat;
+    private Vector3 rampStartPosition;
+
+    private void Start()
+    {
+        rampStartPosition = ramp.transform.localPosition;
+    }
     
 
     public void ActivateRamp(bool active)
     {
-        ramp.GetComponentInChildren<MeshRenderer>().enabled = active;
-        ramp.GetComponentInChildren<MeshCollider>().enabled = active;
-        //StartCoroutine(ChangeRampHeight(active));
+    
+        rampMat.GetComponent<MeshRenderer>().enabled = active;
+        rampMat.GetComponent<MeshCollider>().enabled = active;
+        var colour = ramp.GetComponentInParent<PlatformColourManager>();
+        var t = colour.materials[colour.CurrentColour];
+        var y = rampMat.GetComponent<MeshRenderer>();
+        y.material = t;
+        Debug.Log(rampMat.GetComponent<MeshRenderer>().material);
+        
     }
 
-    private IEnumerator ChangeRampHeight(bool active)
-    {
-        
-        if (active)
-        {
-            ramp.GetComponentInChildren<MeshRenderer>().enabled = active;
-            ramp.GetComponentInChildren<MeshCollider>().enabled = active;
-           // RaisePlatform();
-        }
-        else
-        {
-            //RaisePlatform();
-            yield return new WaitForSeconds(1f);
-            ramp.GetComponentInChildren<MeshRenderer>().enabled = active;
-            ramp.GetComponentInChildren<MeshCollider>().enabled = active;
-        }
-    }
     public void SetRampRotation( int stairState)
     {
         ramp.transform.localRotation = Quaternion.Euler(ramp.
@@ -49,31 +45,32 @@ public class PlatformRampManager : MonoBehaviour
         return PlatformRampActive;
     }
     
-    private void RaisePlatform()
+    private void RaisePlatform(bool active)
     {
-        StartCoroutine(MovePlatform());
+        StartCoroutine(MovePlatform(active));
     }
 
-    private IEnumerator MovePlatform()
+    private IEnumerator MovePlatform(bool active)
     {
+        Vector3 targetPosition;
         Vector3 startPosition = ramp.transform.position;
-        
         float timer = 0f;
         float duration = 1f;
         float target;
-        
-        if (PlatformRampActive)
-            target = 18f;
-        else
-            target = 16f;
 
-        Vector3 targetPosition = new Vector3(ramp.transform.position.x
-            , target, ramp.transform.position.z);
+        Debug.Log(ramp.transform.position.y);
+        if (active)
+            targetPosition = rampStartPosition;
+        else
+            targetPosition = new Vector3(rampStartPosition.x, rampStartPosition.y - 2,
+                rampStartPosition.z);
+        
          
         while (timer < duration)
         {
             timer += Time.deltaTime;
             float percentage = Mathf.Min(timer / duration, 1);
+            
             ramp.transform.position = Vector3.Lerp(startPosition,  targetPosition, percentage);
             yield return null;
         }

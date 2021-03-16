@@ -81,12 +81,12 @@ public class LevelManager : MonoBehaviour
 
     public void LoadStage(int index)
     {
+        GameManager.instance.EnvironmentManager.EnemySpawnPoints.internalSpawnPoints.Clear();
         SetCurrentStage(index);
         var levelToSet = levelSo.ReturnLevel(index);
                 foreach (var go in levelToSet)
                 {
                     var pos = grid.grid[go.X, go.Z].PlatformManager;
-         
                     pos.PlatformStateManager.SetStateFromExternal(go);
                 }
         
