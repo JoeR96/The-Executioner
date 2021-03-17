@@ -124,6 +124,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &5093908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 528397271474707441, guid: e6fe1300025ce334ab78f66571878563,
+    type: 3}
+  m_PrefabInstance: {fileID: 959279013}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &17801841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1890,6 +1896,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &574356644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 574356645}
+  m_Layer: 10
+  m_Name: FloorHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &574356645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574356644}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2053539582}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &587247182
 GameObject:
   m_ObjectHideFlags: 0
@@ -4794,6 +4830,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1246184440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3007716049675863156, guid: e1769c19aaa01cd4a9eacff46989956a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1241631733}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1251561104
 GameObject:
   m_ObjectHideFlags: 0
@@ -7622,13 +7664,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1787597892}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31519e67436111b47a8bdd1dcc4f10a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d3fc007094b74a40b2cf6be935815ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotgunPickup: {fileID: 528397271474707441, guid: e6fe1300025ce334ab78f66571878563,
-    type: 3}
-  pistolPickup: {fileID: 3007716049675863156, guid: e1769c19aaa01cd4a9eacff46989956a,
-    type: 3}
+  shotgunPickup: {fileID: 5093908}
+  pistolPickup: {fileID: 1246184440}
 --- !u!1 &1797222570
 GameObject:
   m_ObjectHideFlags: 0
@@ -8913,6 +8953,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1913488729}
+  - {fileID: 574356645}
   m_Father: {fileID: 1715150810}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8974,7 +9015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f76f45f7e1495f4ead7d42505aecc69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CubeParent: {fileID: 0}
+  CubeParent: {fileID: 574356645}
   unwalkableMask:
     serializedVersion: 2
     m_Bits: 2048

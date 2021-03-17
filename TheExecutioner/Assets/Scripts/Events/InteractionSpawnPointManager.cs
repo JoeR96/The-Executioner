@@ -9,13 +9,13 @@ public class InteractionSpawnPointManager : MonoBehaviour
     [SerializeField] private GameObject shotgunPickup;
     [SerializeField] private GameObject pistolPickup;
 
-    public void SpawnWeapon(GameObject spawnPoint)
+    public void SpawnWeapon(Transform spawnPoint)
     {
         if (Random.value < 0.5f)
-                Instantiate(shotgunPickup, spawnPoint.transform.position, quaternion.identity);
+                Instantiate(shotgunPickup, spawnPoint.position, quaternion.identity);
 
             else
-                Instantiate(pistolPickup, spawnPoint.transform.position, quaternion.identity);
+                Instantiate(pistolPickup, spawnPoint.position, quaternion.identity);
     }
 
 }

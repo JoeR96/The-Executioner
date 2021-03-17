@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.ProGrids;
 
+
 public class EnemySpawnPoints : MonoBehaviour
 {
     public List<Transform> externalSpawnPoints = new List<Transform>();
@@ -31,5 +32,16 @@ public class EnemySpawnPoints : MonoBehaviour
         if(node.PlatformManager.PlatformSpawnManager.PlatformSpawnPointActive)
             AddInternalSpawnPointToList(node);
     }
+
+    public Transform ReturnInternalSpawnPoint()
+    {
+        var random = Random.Range(0, internalSpawnPoints.Count);
+        return internalSpawnPoints[random];
+    }
     
+    public Transform ReturnExternalSpawnPoint()
+    {
+        var random = Random.Range(0, internalSpawnPoints.Count);
+        return internalSpawnPoints[random];
+    }
 }

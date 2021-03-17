@@ -7,7 +7,7 @@ using Random = System.Random;
 
 public class GameManager : Singleton<GameManager>
 {
-    [HideInInspector]
+    public InteractionSpawnPointManager InteractionSpawnPointManager;
     public ZombieOverflowEvent ZombieOverFlowEvent;
     public LimbSpawner LimbSpawner;
     public ZombieManager ZombieManager;
@@ -20,23 +20,22 @@ public class GameManager : Singleton<GameManager>
     {
         base.Awake();
         EnvironmentManager = GetComponentInChildren<EnvironmentManager>();
-        ZombieOverFlowEvent = GetComponentInChildren<ZombieOverflowEvent>();
         ZombieManager = GetComponentInChildren<ZombieManager>();
         LimbSpawner = GetComponentInChildren<LimbSpawner>();
         pathfinding = GetComponentInChildren<Pathfinding>();
         Grid = GetComponentInChildren<Grid>();
         LevelManager = GetComponentInChildren<LevelManager>();
-        
+        InteractionSpawnPointManager = GetComponent<InteractionSpawnPointManager>();
     }
-
-    private void Start()
-    {
-        
-    }
+    
     private void StartGame()
     {
         EnvironmentManager.BuildNavMesh();
         EnvironmentManager.navMeshLinkGenerator.Generate();
+        for (int i = 0; i < 3; i++)
+        {
+            InteractionSpawnPointManager.SpawnWeapon(EnvironmentManager.EnemySpawnPoints.ReturnInternalSpawnPoint());
+        }
         
     }
     private void StartGameSequence()
@@ -51,7 +50,7 @@ public class GameManager : Singleton<GameManager>
     {
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            ZombieManager.ZombieSpawner.SpawnActiveZombiesAtLocation(EnvironmentManager.EnemySpawnPoints.internalSpawnPoints);
+            InteractionSpawnPointManager.SpawnWeapon(EnvironmentManager.EnemySpawnPoints.ReturnInternalSpawnPoint());
         }
  
     }

@@ -23,10 +23,10 @@ public class RandomPointOnNavMesh : MonoBehaviour
 
     void Update()
     {
-        Vector3 point;
-        if (RandomPoint(transform.position, range, out point))
-        {
-            Debug.DrawRay(point, Vector3.up, Color.blue, 55.0f);
-        }
+        // Vector3 point;
+        // if (RandomPoint(transform.position, range, out point))
+        // {
+        //     Debug.DrawRay(point, Vector3.up, Color.blue, 55.0f);
+        // }
     }
 }
