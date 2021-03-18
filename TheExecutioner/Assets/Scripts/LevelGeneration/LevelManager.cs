@@ -20,8 +20,11 @@ public class LevelManager : MonoBehaviour
     {
         grid = GetComponent<Grid>();
     }
-    
-    
+
+    public void LoadLevel(int levelIndex)
+    {
+        LoadStage(levelIndex);
+    }
 
     public PlatformInformation[,] SaveStageInformation()
     {

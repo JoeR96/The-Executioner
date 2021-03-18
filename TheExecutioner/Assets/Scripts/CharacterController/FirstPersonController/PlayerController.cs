@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour
 
     
     // Update is called once per frame
+    private void Start()
+    {
+        _playerRB.detectCollisions = true;
+    }
     private void Update()
     {
         Movement();

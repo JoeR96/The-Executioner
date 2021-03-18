@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
-using Random = System.Random;
+using Random = UnityEngine.Random;
+
 
 public class GameManager : Singleton<GameManager>
 {
@@ -25,32 +26,48 @@ public class GameManager : Singleton<GameManager>
         pathfinding = GetComponentInChildren<Pathfinding>();
         Grid = GetComponentInChildren<Grid>();
         LevelManager = GetComponentInChildren<LevelManager>();
-        InteractionSpawnPointManager = GetComponent<InteractionSpawnPointManager>();
+        InteractionSpawnPointManager = GetComponentInChildren<InteractionSpawnPointManager>();
     }
-    
+
+    private void Start()
+    {
+        InvokeRepeating("StartGameSequence", 1, 45);
+    }
     private void StartGame()
     {
         EnvironmentManager.BuildNavMesh();
-        EnvironmentManager.navMeshLinkGenerator.Generate();
-        for (int i = 0; i < 3; i++)
-        {
-            InteractionSpawnPointManager.SpawnWeapon(EnvironmentManager.EnemySpawnPoints.ReturnInternalSpawnPoint());
-        }
-        
+    }
+
+    private void LoadLevel()
+    {
+        var random = Random.Range(0, 2);
+        LevelManager.LoadLevel(random);
     }
     private void StartGameSequence()
     {
         
-        Invoke("StartLevel", 0.25f);
-        Invoke("StartGame", 2f);
+        Invoke("LoadLevel", 0.25f);
+        Invoke("StartGame", 3f);
         Invoke("SpawnWeapons" ,3f);
+        Invoke("SpawnZombies",4f);
     }
-    
+
+    private void SpawnZombies()
+    {
+        ZombieManager.ZombieSpawner.SpawnActiveZombiesAtLocation(EnvironmentManager.EnemySpawnPoints.internalSpawnPoints);
+    }
+    private void SpawnWeapons()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            InteractionSpawnPointManager.SpawnWeapon(EnvironmentManager.EnemySpawnPoints.ReturnInternalSpawnPoint());
+        }
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            InteractionSpawnPointManager.SpawnWeapon(EnvironmentManager.EnemySpawnPoints.ReturnInternalSpawnPoint());
+            SpawnWeapons();
         }
  
     }
