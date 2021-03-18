@@ -11,64 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_01_B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_01_B.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_01_C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_01_C.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_02_B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_02_B.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_02_C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_02_C.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_03_B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_03_B.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_03_C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_03_C.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_04_B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_04_B.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_04_C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_04_C.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_Burnt_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Alts/PolygonApocalypse_Material_Burnt_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Background_Bunker.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Background_Bunker.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Billboard_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Billboard_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Clouds.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Clouds.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Material_01_A_Temp.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Material_01_A_Temp.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Material_Fence_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Material_Fence_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Material_Glass_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Material_Glass_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Material_Overgrowth_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Material_Overgrowth_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Ocean.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Ocean.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Rubble_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Rubble_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Swamp_Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Swamp_Water.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Veh_Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Veh_Glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/Misc/PolygonApocalypse_Water.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/PolygonApocalypse_Material_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/PolygonApocalypse_Material_01_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/PolygonApocalypse_Material_02_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/PolygonApocalypse_Material_02_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/PolygonApocalypse_Material_03_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/PolygonApocalypse_Material_03_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/PolygonApocalypse_Material_04_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/PolygonApocalypse_Material_04_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/PolygonApocalypse_Material_Road_Standard_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/PolygonApocalypse_Material_Road_Standard_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/PolygonApocalypse_Material_Vehicle_Standard_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Materials/PolygonApocalypse_Material_Vehicle_Standard_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Collision/Materials/lambert62.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Collision/Materials/lambert62.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/Andrew_Rubble_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/Andrew_Rubble_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/Land_Vehicle_Master_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/Land_Vehicle_Master_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/Overgrowth.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/Overgrowth.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonApocalypse_Texture_01_4k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonApocalypse_Texture_01_4k.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonApocalypse_Texture_01_Cleaned.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonApocalypse_Texture_01_Cleaned.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonApocalypse_Texture_01_Cleaned_jason.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonApocalypse_Texture_01_Cleaned_jason.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonApocalyse_Road_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonApocalyse_Road_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonDrugs_Texture_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonDrugs_Texture_01_A.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonFarm_Texture_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonFarm_Texture_02.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonPrototype_Texture_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonPrototype_Texture_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonWar_Texture.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/PolygonWar_Texture.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/SimpleSky.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/SimpleSky.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/lambert1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/lambert1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/lambert32.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/lambert32.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/lambert33.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/lambert33.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/lambert661.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/lambert661.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/lambert921.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/lambert921.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/lambert922.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/lambert922.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/pasted__lambert2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Models/Materials/pasted__lambert2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Prefabs/FX/Misc/Materials/PolygonApocalypse_Texture_01_Cleaned.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Prefabs/FX/Misc/Materials/PolygonApocalypse_Texture_01_Cleaned.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Prefabs/FX/Misc/Materials/PolygonFarm_Texture_01_A_2k.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Prefabs/FX/Misc/Materials/PolygonFarm_Texture_01_A_2k.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Prefabs/FX/Misc/Materials/lambert1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonApocalypse/Prefabs/FX/Misc/Materials/lambert1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/PistolSphere.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pickups/PistolSphere.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/ShotgunSphere.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pickups/ShotgunSphere.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EmissiveMaterial/EmissiveBlue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EmissiveMaterial/EmissiveBlue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/New Material 1.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController/FirstPersonController/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController/FirstPersonController/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +88,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Grid.cs" />
       <option value="$PROJECT_DIR$/Assets/ExternalSpawnPoints.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformHeightManagerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/InteractionSpawnPointManager1.cs" />
@@ -157,6 +105,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/FirstPersonController/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -237,7 +186,8 @@
       <workItem from="1615926750564" duration="189000" />
       <workItem from="1615926973261" duration="9913000" />
       <workItem from="1616017782308" duration="5738000" />
-      <workItem from="1616027303449" duration="438000" />
+      <workItem from="1616027303449" duration="1033000" />
+      <workItem from="1616103108701" duration="1205000" />
     </task>
     <servers />
   </component>

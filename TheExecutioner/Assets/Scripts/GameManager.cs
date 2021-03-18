@@ -16,7 +16,7 @@ public class GameManager : Singleton<GameManager>
     public Pathfinding pathfinding;
     public LevelManager LevelManager;
     public Grid Grid;
-
+    public bool BuildMode;
     public override void Awake()
     {
         base.Awake();
@@ -31,7 +31,15 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
-        InvokeRepeating("StartGameSequence", 1, 45);
+        if (!BuildMode)
+        {
+            InvokeRepeating("StartGameSequence", 1, 25);
+        }
+        else
+        {
+            LoadLevel();
+        }
+        
     }
     private void StartGame()
     {

@@ -60,10 +60,10 @@ public class EnvironmentManager : MonoBehaviour
         }
         
         if (raiseUp)
-            platformHeight = 14;
+            platformHeight = 15;
 
         else
-            platformHeight = 15;
+            platformHeight = 14;
         
         foreach (var node in grid.grid)
         {
