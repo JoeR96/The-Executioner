@@ -18,6 +18,7 @@ public class CharacterAiming : MonoBehaviour
     private int isAimingParam = Animator.StringToHash("IsAiming");
     void Start()
     {
+    
         animator = GetComponent<Animator>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;

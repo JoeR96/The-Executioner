@@ -50,9 +50,9 @@ public class EnvironmentManager : MonoBehaviour
         
         SpawnPoints.Clear();
         //Loop through the corresponding tiles to set the playable arena tiles
-        for (int i = 15; i < 25; i++)
+        for (int i = 15; i < 35; i++)
         {
-            for (int j = 15; j < 25; j++)
+            for (int j = 15; j < 35; j++)
             {
                 var gridPosition = grid.grid[i, j];
                 gridPosition.PlatformManager.PlatformStateManager.PlatformIsWall = true;
@@ -70,7 +70,7 @@ public class EnvironmentManager : MonoBehaviour
             if (!node.PlatformManager.PlatformStateManager.PlatformIsWall)
             {
                 node.PlatformManager.PlatformHeightManager.SetPlatformHeight(platformHeight);
-                EnemySpawnPoints.AddExternalSpawnPointToList(node);
+                //EnemySpawnPoints.AddExternalSpawnPointToList(node);
             }
             EnemySpawnPoints.CheckForSpawnPoint(node);
         }

@@ -9,7 +9,7 @@ public class ActiveWeapon : MonoBehaviour
     {
         PrimaryWeapon = 0,
         SecondaryWeapon = 1,
-        RocketLauncher = 2,
+        SuperWeapon = 2,
         Grenade = 3
     }
 
@@ -47,7 +47,7 @@ public class ActiveWeapon : MonoBehaviour
         if (weapon)
         {
             
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKey(KeyCode.Mouse0))
             {
                 weapon.StartFiring();
             }
@@ -131,7 +131,6 @@ public class ActiveWeapon : MonoBehaviour
         var weapon = GetWeapon(index);
         if (weapon)
         {
-            RigController.SetBool("holster_weapon", false);
             RigController.Play("equip_" + weapon.WeaponName);
             do
             {

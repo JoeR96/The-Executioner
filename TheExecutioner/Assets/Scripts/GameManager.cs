@@ -33,7 +33,7 @@ public class GameManager : Singleton<GameManager>
     {
         if (!BuildMode)
         {
-            InvokeRepeating("StartGameSequence", 1, 25);
+            InvokeRepeating("StartGameSequence", 1, 45);
         }
         else
         {
@@ -49,15 +49,18 @@ public class GameManager : Singleton<GameManager>
     private void LoadLevel()
     {
         var random = Random.Range(0, 2);
+        Debug.Log(random);
+        Debug.Log(LevelManager.name);
         LevelManager.LoadLevel(random);
+        Debug.Log(LevelManager);
     }
     private void StartGameSequence()
     {
         
         Invoke("LoadLevel", 0.25f);
-        Invoke("StartGame", 3f);
-        Invoke("SpawnWeapons" ,3f);
-        Invoke("SpawnZombies",4f);
+        Invoke("StartGame", 6f);
+        Invoke("SpawnWeapons" ,6f);
+        Invoke("SpawnZombies",7f);
     }
 
     private void SpawnZombies()
