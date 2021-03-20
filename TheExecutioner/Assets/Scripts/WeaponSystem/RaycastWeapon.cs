@@ -51,10 +51,6 @@ public class RaycastWeapon : MonoBehaviour
            
         }
     }
-    
-
-   
-
     public void StopFiring()
     {
         IsFiring = false;

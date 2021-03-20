@@ -12,63 +12,9 @@
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnimationControllers/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationControllers/PlayerController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Pistol/Rigcontroller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Pistol/Rigcontroller.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/New Animation.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/New Animation.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_recoil_shotgun.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_recoil_shotgun.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EmissiveMaterial/EmissiveBlue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EmissiveMaterial/EmissiveBlue.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EmissiveMaterial/EmissiveRed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EmissiveMaterial/EmissiveRed.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/Skybox_Orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/Skybox_Orange.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/New Material 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/New Material 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/BloodSpray.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/BloodSpray.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/CageContainer.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/CageContainer.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Cube (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Cube (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/FloorContainer.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/FloorContainer.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/GameObject (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/GameObject (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/PistolSphere.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pickups/PistolSphere.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/RotatingPlatform 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/RotatingPlatform 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/RotatingPlatform.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/RotatingPlatform.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/SM_Wep_Pistol_01 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/SM_Wep_Pistol_01 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/SM_Wep_Shotgun_Plasma_01 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/SM_Wep_Shotgun_Plasma_01 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/StairMaster.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/StairMaster.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Stairs (2).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Stairs (2).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Stairs.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Stairs.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/TracerBullet.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/TracerBullet.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/ZombieDumper.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/ZombieDumper.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Zombie_Paramedic_Female_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Zombie_Paramedic_Female_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/navlink_oneway.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/navlink_oneway.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/navlink_roundtrip.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/navlink_roundtrip.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/target.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/target.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformHeightManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformHeightManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_fire.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_fire.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/weaponRecoil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/weaponRecoil.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +52,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" />
@@ -156,6 +101,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/weaponRecoil.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
     </changedPaths>
   </component>
@@ -239,7 +185,8 @@
       <workItem from="1616017782308" duration="5738000" />
       <workItem from="1616027303449" duration="1033000" />
       <workItem from="1616103108701" duration="6326000" />
-      <workItem from="1616150781191" duration="5785000" />
+      <workItem from="1616150781191" duration="6600000" />
+      <workItem from="1616248084031" duration="659000" />
     </task>
     <servers />
   </component>

@@ -52,11 +52,6 @@ public class ActiveWeapon : MonoBehaviour
                 weapon.StartFiring();
             }
 
-            if (Input.GetKeyUp(KeyCode.Mouse0))
-            {
-                weapon.StopFiring();
-            }
-
             if (Input.GetKeyDown(KeyCode.X))
             {
                 ToggleWeapon();
