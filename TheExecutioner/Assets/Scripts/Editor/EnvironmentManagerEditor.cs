@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+#if UNITY_EDITOR 
 using UnityEditor;
+#endif 
 using UnityEngine;
 [CustomEditor(typeof(EnvironmentManager))]
 public class EnvironmentManagerEditor : Editor

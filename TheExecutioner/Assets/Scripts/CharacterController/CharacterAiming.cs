@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.IO.Pipes;
+﻿
 using UnityEngine;
-using UnityEngine.Animations.Rigging;
+
 public class CharacterAiming : MonoBehaviour
 {
     public float TurnSpeed = 15f;

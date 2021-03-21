@@ -572,7 +572,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2520
+  m_Name: pb_Mesh252594
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4065,7 +4065,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 484969972, guid: e6fe1300025ce334ab78f66571878563, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 7e-45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 484969972, guid: e6fe1300025ce334ab78f66571878563, type: 3}
       propertyPath: m_Color.r
@@ -4078,6 +4078,14 @@ PrefabInstance:
     - target: {fileID: 484969972, guid: e6fe1300025ce334ab78f66571878563, type: 3}
       propertyPath: m_Color.b
       value: 0.06407974
+      objectReference: {fileID: 0}
+    - target: {fileID: 484969972, guid: e6fe1300025ce334ab78f66571878563, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 484969972, guid: e6fe1300025ce334ab78f66571878563, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 528397271474707436, guid: e6fe1300025ce334ab78f66571878563,
         type: 3}
@@ -21959,6 +21967,7 @@ GameObject:
   - component: {fileID: 1846586486253753431}
   - component: {fileID: 1846586486253753430}
   - component: {fileID: 1846586486253753428}
+  - component: {fileID: 1846586486253753436}
   m_Layer: 12
   m_Name: ----[PLAYER]----
   m_TagString: Player
@@ -22215,6 +22224,26 @@ MonoBehaviour:
     m_Bits: 4096
   _playerRB: {fileID: 1846586486253753434}
   _playerAudio: {fileID: 1846586486253753431}
+  _moveSpeed: 6
+--- !u!114 &1846586486253753436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846586486253753427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc1b77a5bc692b4ea5c41191cb40725, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  height: 25
+  width: 5
+  defaultSpread: 59
+  color: {r: 1, g: 1, b: 1, a: 1}
+  resizeable: 1
+  resizedSpread: 555
+  resizeSpeed: 3
 --- !u!4 &1852310090414315357
 Transform:
   m_ObjectHideFlags: 0
@@ -23030,6 +23059,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4071071368534310455, guid: 4390e655c91840d479a2c1b56b4b0d46,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 7762ead4739cc3540a6e84a040435733,
+        type: 2}
     - target: {fileID: 4071071368552105400, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}
       propertyPath: m_Mesh
@@ -23040,6 +23075,12 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 692616762}
+    - target: {fileID: 4071071368552105403, guid: 4390e655c91840d479a2c1b56b4b0d46,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 7762ead4739cc3540a6e84a040435733,
+        type: 2}
     - target: {fileID: 4071071369127037448, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23105,6 +23146,12 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2046716952}
+    - target: {fileID: 4071071369127037452, guid: 4390e655c91840d479a2c1b56b4b0d46,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 7762ead4739cc3540a6e84a040435733,
+        type: 2}
     - target: {fileID: 4071071369127037453, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}
       propertyPath: m_Name
@@ -23500,6 +23547,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4071071370138017905, guid: 4390e655c91840d479a2c1b56b4b0d46,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 7762ead4739cc3540a6e84a040435733,
+        type: 2}
+    - target: {fileID: 6552915853218007185, guid: 4390e655c91840d479a2c1b56b4b0d46,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 7762ead4739cc3540a6e84a040435733,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4390e655c91840d479a2c1b56b4b0d46, type: 3}
 --- !u!4 &5217528086052769893

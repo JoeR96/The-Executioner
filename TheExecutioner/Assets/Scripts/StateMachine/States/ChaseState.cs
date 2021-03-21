@@ -33,7 +33,7 @@ public class ChaseState : IState
             {
                 Vector3 direction = (agent.Player.position - agent.navMeshAgent.destination);
                 direction.y = 0;
-                if (direction.sqrMagnitude > agent.AgentConfig.MaxDistance * agent.AgentConfig.MaxDistance) ;
+                if (direction.sqrMagnitude > agent.AgentConfig.MaxDistance * agent.AgentConfig.MaxDistance) 
                 {
                     if (agent.navMeshAgent.pathStatus != NavMeshPathStatus.PathPartial)
                     {

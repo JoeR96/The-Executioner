@@ -124,14 +124,15 @@ public class ActiveWeapon : MonoBehaviour
     IEnumerator ActivateWeapon(int index)
     {
         var weapon = GetWeapon(index);
-        if (weapon)
-        {
-            RigController.Play("equip_" + weapon.WeaponName);
-            do
-            {
-                yield return new WaitForEndOfFrame();
-            } while (RigController.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f);
-        }
+        // if (weapon)
+        // {
+        //     RigController.Play("equip_" + weapon.WeaponName);
+        //     do
+        //     {
+        //         yield return new WaitForEndOfFrame();
+        //     } while (RigController.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f);
+        // }
+        yield break;
     }
     IEnumerator SwitchWeapon(int holsterIndex, int activeIndex)
     {

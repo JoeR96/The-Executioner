@@ -8,7 +8,6 @@ using UnityEngine.AI;
  
 #if UNITY_EDITOR
 using UnityEditor.SceneManagement;
-using UnityEditor;
 #endif
  
  

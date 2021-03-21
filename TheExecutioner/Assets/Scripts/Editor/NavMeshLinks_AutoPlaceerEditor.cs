@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using eDmitriyAssets.NavmeshLinksGenerator;
 using UnityEngine;
+#if UNITY_EDITOR 
 using UnityEditor;
+#endif 
 
 [CustomEditor( typeof( NavMeshLinks_AutoPlacer ) )]
 [CanEditMultipleObjects]

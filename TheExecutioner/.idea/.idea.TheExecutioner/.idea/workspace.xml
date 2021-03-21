@@ -11,7 +11,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Crosshair.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Crosshair.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/NavMeshComponents/Editor/NavMeshLinkEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/NavMeshComponents/Editor/NavMeshLinkEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/NavMeshComponents/NavMeshLinks_AutoPlacer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/NavMeshComponents/NavMeshLinks_AutoPlacer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController/FirstPersonController/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController/FirstPersonController/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentSpawnerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentSpawnerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/NavMeshLinks_AutoPlaceerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/NavMeshLinks_AutoPlaceerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PlaterformColourManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PlaterformColourManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformBridgeManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformBridgeManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformHeightManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformHeightManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformRampManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformRampManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelSo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/CrosshairTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/CrosshairTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shared/Ramps/Editor/RampAssetEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shared/Ramps/Editor/RampAssetEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,17 +75,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinding.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/EnvironmentSpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlatformState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/EnemyTargetZombie.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterLocomotion.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/PlatformState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/PlatformColourManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/PlatformBridgeManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/PlatformStateManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/PlatformSpawnManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/PlatformManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/PlatformHeightManager.cs" />
@@ -69,38 +83,49 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformColourManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformStairManagerEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformBridgeManagerEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlaterformColourManagerEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentSpawnerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Grid.cs" />
       <option value="$PROJECT_DIR$/Assets/ExternalSpawnPoints.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformHeightManagerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/InteractionSpawnPointManager1.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ZombieManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/MovingZombieDumper.cs" />
       <option value="$PROJECT_DIR$/Assets/SpawnZombieTest.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformRampManagerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Interactions/PlatformRampManager.cs" />
       <option value="$PROJECT_DIR$/Assets/EscortTest.cs" />
       <option value="$PROJECT_DIR$/Assets/RandomPointOnNavMesh.cs" />
       <option value="$PROJECT_DIR$/Assets/EnemySpawnPoints.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/InteractionSpawnPointManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/FirstPersonController/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformHeightManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/weaponRecoil.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/CrosshairTarget.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Imported/NavMeshComponents/NavMeshLinks_AutoPlacer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Crosshair.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformHeightManagerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentSpawnerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Imported/NavMeshComponents/Editor/NavMeshLinkEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EnvironmentManagerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/LevelManagerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/NavMeshLinks_AutoPlaceerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlaterformColourManagerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformRampManagerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformBridgeManagerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelSo.cs" />
+      <option value="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Shared/Ramps/Editor/RampAssetEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/FirstPersonController/PlayerController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -185,6 +210,7 @@
       <workItem from="1616103108701" duration="6326000" />
       <workItem from="1616150781191" duration="6600000" />
       <workItem from="1616248084031" duration="2022000" />
+      <workItem from="1616359768846" duration="2335000" />
     </task>
     <servers />
   </component>
