@@ -12,9 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_fire.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_fire.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +36,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/EffectExamples/Misc Effects/Scripts/SpawnEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/EnemyTargetZombie.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/PlatformBridgeManagerEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Crosshair.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Pathfinding.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/dump/12345/The-Executioner-04757166270da61332a9c7b95d3d2f094657c9cb/TheExecutioner/Assets/Scripts/PlatformState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RandomPointOnNavMesh.cs" root0="FORCE_HIGHLIGHTING" />
@@ -186,7 +184,7 @@
       <workItem from="1616027303449" duration="1033000" />
       <workItem from="1616103108701" duration="6326000" />
       <workItem from="1616150781191" duration="6600000" />
-      <workItem from="1616248084031" duration="659000" />
+      <workItem from="1616248084031" duration="2022000" />
     </task>
     <servers />
   </component>
