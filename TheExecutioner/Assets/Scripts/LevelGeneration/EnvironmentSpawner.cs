@@ -50,7 +50,6 @@ public class EnvironmentSpawner : MonoBehaviour
     public void SpawnPath( int height)
     {
         var path = GetPath();
-
         
         pathfinding.InitializePath();
         var target = height;
@@ -58,10 +57,9 @@ public class EnvironmentSpawner : MonoBehaviour
         {
             var t = node.platform.GetComponent<PlatformManager>();
                 t.PlatformStateManager.PlatformIsActive = true;
-                Debug.Log(target);
                 t.PlatformHeightManager.SetPlatformHeight(target);
                 LevelBunkers.Add(path);
-            
+                
         }
     }
     
@@ -80,6 +78,7 @@ public class EnvironmentSpawner : MonoBehaviour
     }
     //I stopped building upon this logic once I built the custom editor
     //I would improve the stair spawning logic if time allowed 
+    //Manually setting the stairs allowed me to progress quickly with the project and manage scope better
     
     // public void SpawnStairs(List<Node> path)
     //      {

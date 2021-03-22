@@ -134,7 +134,6 @@
             <e p="MovingZombieDumper.cs" t="Include" />
             <e p="ZombieOverflowEvent.cs" t="Include" />
           </e>
-          <e p="GameManager.cs" t="Include" />
           <e p="HealthSystem" t="Include">
             <e p="HealthSystem.cs" t="Include" />
           </e>
@@ -160,7 +159,12 @@
               <e p="PlatformStateManager.cs" t="Include" />
             </e>
           </e>
-          <e p="Singleton.cs" t="Include" />
+          <e p="Managers" t="Include">
+            <e p="GameManager.cs" t="Include" />
+            <e p="Singleton.cs" t="Include" />
+            <e p="Timer.cs" t="Include" />
+            <e p="ZombieManager.cs" t="Include" />
+          </e>
           <e p="SpawnSystems" t="Include">
             <e p="ZombieSpawner.cs" t="Include" />
           </e>
@@ -179,7 +183,6 @@
               <e p="TargetState.cs" t="Include" />
             </e>
           </e>
-          <e p="Timer.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="WeaponUI" t="Include">
               <e p="SetAmmoText.cs" t="Include" />
@@ -195,7 +198,6 @@
               <e p="SMG.cs" t="Include" />
             </e>
           </e>
-          <e p="ZombieManager.cs" t="Include" />
           <e p="Zombies" t="Include">
             <e p="EnemyBase.cs" t="Include" />
             <e p="Lerper.cs" t="Include" />

@@ -11,11 +11,11 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     [SerializeField] protected ParticleSystem[] _particleSystem;
     [SerializeField] protected GameObject[] _limbs;
     [SerializeField] protected GameObject _rootComponent;
-    [SerializeField] protected GameObject _zombieSkin;
+    [SerializeField] protected GameObject _zombieSkinContainer;
     [SerializeField] protected Vector3 _explosionScaleSize;
     [SerializeField] protected float _explosionScaleTime;
     [SerializeField] protected float _maxHealth;
-    
+    private GameObject activeSkin;
     private Dictionary<string,Transform> _destructibleLimbs = new Dictionary<string, Transform>();
     private Dictionary<String,ParticleSystem> _destructibleLimbParticle = new Dictionary<string, ParticleSystem>();
     protected Animator _animator;
@@ -39,8 +39,14 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     protected virtual void Start()
     {
         PopulateLimbDictionary();
+        SetRandomSkin();
     }
-    
+
+    private void SetRandomSkin()
+    {
+        var random = Random.Range(0, _zombieSkinContainer.transform.childCount);
+        _zombieSkinContainer.transform.GetChild(random).gameObject.SetActive(true);
+    }
     bool isOnMesh;
     protected void Update()
     {

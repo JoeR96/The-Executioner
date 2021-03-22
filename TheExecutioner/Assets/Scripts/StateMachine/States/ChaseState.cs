@@ -14,7 +14,7 @@ public class ChaseState : IState
 
     public void Enter(AiAgent agent)
     {
-     
+        
     }
 
     public void Update(AiAgent agent)
@@ -23,6 +23,7 @@ public class ChaseState : IState
         {
             if(!agent.enabled )
                 return;
+            
             _timer -= Time.deltaTime;
             if (!agent.navMeshAgent.hasPath)
             {
@@ -38,13 +39,18 @@ public class ChaseState : IState
                     if (agent.navMeshAgent.pathStatus != NavMeshPathStatus.PathPartial)
                     {
                         agent.navMeshAgent.destination = agent.Player.position;
+                        
                     }
                 }
 
                 _timer = agent.AgentConfig.MaxTime;
             }
         }
-        
+
+        if (Vector3.Distance(agent.transform.position, agent.Player.transform.position) <=1.25f)
+        {
+            agent.StateMachine.ChangeState(StateId.Attack);
+        }
     }
 
     public bool IsAgentOnNavMesh(AiAgent agent)

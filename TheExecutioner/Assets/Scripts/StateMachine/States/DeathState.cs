@@ -26,7 +26,7 @@ public class DeathState : IState
 
     public void Update(AiAgent agent)
     {
-        
+     
     }
 
     public void Exit(AiAgent agent)

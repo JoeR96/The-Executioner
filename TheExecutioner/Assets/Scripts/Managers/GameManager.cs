@@ -17,6 +17,7 @@ public class GameManager : Singleton<GameManager>
     public LevelManager LevelManager;
     public Grid Grid;
     public bool BuildMode;
+    public int SpawnDivider;
     public override void Awake()
     {
         base.Awake();
@@ -65,7 +66,22 @@ public class GameManager : Singleton<GameManager>
 
     private void SpawnZombies()
     {
-        ZombieManager.ZombieSpawner.SpawnActiveZombiesAtLocation(EnvironmentManager.EnemySpawnPoints.internalSpawnPoints);
+        List<Transform> newList = EnvironmentManager.EnemySpawnPoints.internalSpawnPoints;
+        List<Transform> temp = new List<Transform>();
+        
+        int length = newList.Count;
+        int newLength = length / 10;
+
+        for (int i = 0; i < newLength; i++)
+        {
+            int random = Random.Range(0, newList.Count);
+            Transform spawnPoint = newList[random];
+            
+            newList.RemoveAt(random);
+            temp.Add(spawnPoint);
+        }
+        
+        ZombieManager.ZombieSpawner.SpawnRagdollZombiesAtLocations(temp);
     }
     private void SpawnWeapons()
     {

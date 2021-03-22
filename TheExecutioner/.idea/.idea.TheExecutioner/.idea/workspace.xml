@@ -13,14 +13,31 @@
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnimationControllers/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationControllers/PlayerController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/equip_smg.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/equip_smg.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_fire.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_fire.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimationControllers/NPC_Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationControllers/NPC_Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Ikd#/Zombie_Paramedic_Female_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Ikd#/Zombie_Paramedic_Female_01.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/New Ai Agent Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/New Ai Agent Config.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Audio.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthSystem.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/HealthSystem.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Grid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Grid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Pathfinding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Pathfinding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Interactions/fLOORhOLDER.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Interactions/fLOORhOLDER.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NavMesh.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/NavMesh.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Singleton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Singleton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Singleton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnSystems.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnSystems.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/AttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Timer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZombieManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ZombieManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZombieManager.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,11 +79,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/CheckAdjacentNodes.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentSpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformColourManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformStairManagerEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/ExternalSpawnPoints.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/ZombieOverflowEvent.cs" />
@@ -86,9 +98,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/weaponRecoil.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/CrosshairTarget.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" />
       <option value="$PROJECT_DIR$/Assets/Imported/NavMeshComponents/NavMeshLinks_AutoPlacer.cs" />
       <option value="$PROJECT_DIR$/Assets/Crosshair.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformHeightManagerEditor.cs" />
@@ -107,16 +117,25 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/FirstPersonController/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/SMG.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/WeaponUI/SetAmmoText.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Pathfinding.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Grid.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentSpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/AttackState.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -199,7 +218,7 @@
       <workItem from="1616150781191" duration="6600000" />
       <workItem from="1616248084031" duration="2022000" />
       <workItem from="1616359768846" duration="2930000" />
-      <workItem from="1616424529621" duration="7079000" />
+      <workItem from="1616424529621" duration="14962000" />
     </task>
     <servers />
   </component>
@@ -229,6 +248,19 @@
           <line>81</line>
           <properties documentPath="$PROJECT_DIR$/Assets/ImportAnimations/NavMeshComponents/Editor/NavMeshAssetManager.cs" initialLine="81" />
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs</url>
+          <line>68</line>
+          <properties documentPath="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner\Assets\Scripts\Managers\GameManager.cs" initialLine="68" containingFunctionPresentation="method 'SpawnZombies'">
+            <startOffsets>
+              <option value="1908" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1990" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

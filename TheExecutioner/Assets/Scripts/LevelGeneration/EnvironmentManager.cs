@@ -29,6 +29,10 @@ public class EnvironmentManager : MonoBehaviour
         grid = GetComponent<Grid>();
     }
 
+    private void Start()
+    {
+        SetSpawnPoints();
+    }
     private void Update()
     {
         if (Input.GetKey(KeyCode.F12))
@@ -37,7 +41,17 @@ public class EnvironmentManager : MonoBehaviour
         }
     }
 
-    
+    public void SetSpawnPoints()
+    {
+        for (int i = 15; i < 35; i++)
+        {
+            for (int j = 15; j < 35; j++)
+            {
+                var gridPosition = grid.grid[i, j];
+                gridPosition.PlatformManager.PlatformSpawnManager.PlatformSpawnPointActive = true;
+            }
+        }
+    }
     public void RaiseWall(bool raiseUp)
     {
         int platformHeight;
@@ -50,6 +64,7 @@ public class EnvironmentManager : MonoBehaviour
             {
                 var gridPosition = grid.grid[i, j];
                 gridPosition.PlatformManager.PlatformStateManager.PlatformIsWall = true;
+                gridPosition.PlatformManager.PlatformSpawnManager.PlatformSpawnPointActive = true;
             }
         }
         
