@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
-
+using UnityEngine.Animations.Rigging;
 
 
 public class ActiveWeapon : MonoBehaviour
@@ -17,7 +17,7 @@ public class ActiveWeapon : MonoBehaviour
     public Transform CrossHairTarget;
     private RaycastWeapon[] _equippedWeapons = new RaycastWeapon[2];
     private int activeWeaponIndex;
-    
+    public RaycastWeapon CurrentRaycastWeapon;
     public Transform[] WeaponSlots;
 
     public Animator RigController;
@@ -43,19 +43,22 @@ public class ActiveWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var weapon = GetWeapon(activeWeaponIndex);
-        if (weapon)
+        CurrentRaycastWeapon = GetWeapon(activeWeaponIndex);
+        if (CurrentRaycastWeapon)
         {
             
-            if (Input.GetKey(KeyCode.Mouse0))
+            if (Input.GetKey(KeyCode.Mouse0) && CurrentRaycastWeapon.CanFire())
             {
-                weapon.StartFiring();
+                CurrentRaycastWeapon.FireWeapon();
             }
 
-            if (Input.GetKeyDown(KeyCode.X))
+            if (Input.GetKey(KeyCode.R) && !CurrentRaycastWeapon.WeaponIsReloading)
             {
-                ToggleWeapon();
+                CurrentRaycastWeapon.StartCoroutine("ReloadWeapon");
+                
             }
+            
+
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))

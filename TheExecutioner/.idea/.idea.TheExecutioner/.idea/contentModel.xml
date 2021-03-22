@@ -180,12 +180,20 @@
             </e>
           </e>
           <e p="Timer.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="WeaponUI" t="Include">
+              <e p="SetAmmoText.cs" t="Include" />
+            </e>
+          </e>
           <e p="WeaponSystem" t="Include">
             <e p="ActiveWeapon.cs" t="Include" />
             <e p="CrosshairTarget.cs" t="Include" />
             <e p="RaycastWeapon.cs" t="Include" />
             <e p="WeaponPickup.cs" t="Include" />
             <e p="weaponRecoil.cs" t="Include" />
+            <e p="Weapons" t="Include">
+              <e p="SMG.cs" t="Include" />
+            </e>
           </e>
           <e p="ZombieManager.cs" t="Include" />
           <e p="Zombies" t="Include">

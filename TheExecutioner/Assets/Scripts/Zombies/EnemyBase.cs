@@ -133,9 +133,10 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
         var limb = GameManager.instance.LimbSpawner.ReturnLimb(name);
         limb.transform.position = _destructibleLimbs[name].transform.position;
         
-        limb.GetComponent<Rigidbody>().AddForce(direction);
+        limb.GetComponent<Rigidbody>().AddForce(-direction);
         if (name == "Head")
         {
+            _aiAgent.Ragdoll.ActivateRagDoll();
             var random = Random.Range(0, 3);
             Debug.Log(random);
             if (random == 1)

@@ -124,7 +124,6 @@ public class Pathfinding : MonoBehaviour
             path.Add(temp[i]);
         }
         return path;
-        //grid.Path = path;
     }
 
     public List<Node> ReturnPath()
