@@ -46,9 +46,7 @@ public class ActiveWeapon : MonoBehaviour
                 Debug.Log(CurrentRaycastWeapon.WeaponName);
                 RigController.Play("weapon_"+CurrentRaycastWeapon.WeaponName+"_fire",0);
             }
-                
             
-
             if (Input.GetKey(KeyCode.R) && !CurrentRaycastWeapon.WeaponIsReloading)
                 CurrentRaycastWeapon.StartCoroutine("ReloadWeapon");
         }
@@ -56,7 +54,7 @@ public class ActiveWeapon : MonoBehaviour
     
     public void EquipWeapon(RaycastWeapon weapon)
     {
-        RigController.SetBool(weapon.WeaponName + "Equipped", true);
+        RigController.Play("weapon_"+weapon.WeaponName+"_equip",0);
         activeWeaponIndex = (int) weapon.weaponSlot;    
     }
 }

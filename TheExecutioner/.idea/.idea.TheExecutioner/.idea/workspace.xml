@@ -11,66 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponStateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnimationControllers/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationControllers/PlayerController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/equip_smg.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/equip_smg.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_reload_smg.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_reload_smg.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_fire.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_fire.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/How to use this asset.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/How to use this asset.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Scene.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Scene/Demo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Scene/Demo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Scene/Demo.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Scene/Demo.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Scene/Text.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Scene/Text.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Scene/TextAnimation.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Scene/TextAnimation.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Scene/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Scene/background.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Script.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Script/ProgressBar.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Script/ProgressBar.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Script/ProgressBarCircle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Script/ProgressBarCircle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sound.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sound/beep.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sound/beep.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sprites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sprites/Progressbar Blue gradient.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sprites/Progressbar Blue gradient.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sprites/Progressbar Empty.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sprites/Progressbar Empty.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sprites/Progressbar circle Background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sprites/Progressbar circle Background.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sprites/Progressbar circle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sprites/Progressbar circle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sprites/Spinner.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sprites/Spinner.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sprites/Spinner.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sprites/Spinner.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sprites/bar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/Sprites/bar.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/UI ProgressBar.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/UI ProgressBar.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/UI ProgressBarCircle.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBar/UI ProgressBarCircle.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/AttackState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/WeaponUI/SetAmmoText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/WeaponUI/SetAmmoText.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/SMG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/SMG.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,11 +106,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/AttackState.cs" />
       <option value="$PROJECT_DIR$/Assets/CharacterManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponStateManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/SMG.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/WeaponUI/SetAmmoText.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/SMG.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
     </changedPaths>
   </component>
@@ -255,6 +201,7 @@
       <workItem from="1616248084031" duration="2022000" />
       <workItem from="1616359768846" duration="2930000" />
       <workItem from="1616424529621" duration="31690000" />
+      <workItem from="1616609148559" duration="3296000" />
     </task>
     <servers />
   </component>

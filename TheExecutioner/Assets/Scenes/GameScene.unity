@@ -7150,11 +7150,11 @@ MonoBehaviour:
   WeaponName: smg
   recoil: {fileID: 1411915541}
   weaponMaxAmmo: 45
-  weaponSpareAmmo: 90
+  weaponSpareAmmo: 180
   weaponReloadTime: 1.25
   weaponDamage: 15
-  weaponFireRate: 0.075
-  weaponCurrentammo: 0
+  weaponFireRate: 0.03
+  weaponCurrentammo: 45
 --- !u!114 &1411915541 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7468024436314017237, guid: dc422aec8ba471640a3d5063ccc0d2b4,
@@ -24442,7 +24442,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 1
 --- !u!1 &1846586486253753427
 GameObject:
   m_ObjectHideFlags: 0

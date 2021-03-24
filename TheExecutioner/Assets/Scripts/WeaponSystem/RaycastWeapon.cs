@@ -105,9 +105,9 @@ public abstract class RaycastWeapon : MonoBehaviour
     {
         Reload();
         WeaponIsLoaded = true;
-        weaponMaxAmmo = weaponCurrentammo;
+        weaponCurrentammo = weaponMaxAmmo;
         WeaponIsReloading = false;
-        
+        weaponSpareAmmo = weaponMaxAmmo * 2;
         defaultValues[1] = weaponDamage;
         defaultValues[2] = weaponMaxAmmo;
         defaultValues[3] = weaponSpareAmmo;
@@ -125,7 +125,7 @@ public abstract class RaycastWeapon : MonoBehaviour
     {
         
         weaponFireTimer = 0f;
-        weaponCurrentammo -= 1;
+        weaponCurrentammo --;
         recoil.Reset();
         IsFiring = true;
         MuzzleFlash.Emit(1);
@@ -141,6 +141,7 @@ public abstract class RaycastWeapon : MonoBehaviour
             HitEffect.Emit(1);
             string name = hitInfo.collider.name;
             tracer.transform.position = hitInfo.point;
+            Debug.Log(ray.origin);
             recoil.GenerateRecoil(WeaponName);
             Debug.Log(hitInfo.collider.name);
             if (hitInfo.collider.GetComponentInParent<ITakeDamage>() != null)
@@ -189,9 +190,12 @@ public abstract class RaycastWeapon : MonoBehaviour
     
     protected virtual void Reload()
     {
+        if(weaponSpareAmmo <= 0)
+            return;
+        
         var toAdd = weaponMaxAmmo - weaponCurrentammo;
         weaponCurrentammo += toAdd;
-        weaponMaxAmmo -= toAdd;
+        weaponSpareAmmo -= toAdd;
         WeaponIsReloading = false;
         
         
@@ -211,9 +215,10 @@ public abstract class RaycastWeapon : MonoBehaviour
         return defaultValues[index];
     }
     
-    public void SetWeaponState(int qualityModifier)
+    public void SetWeaponState(float qualityModifier)
     {
         ResetWeaponState();
+        weaponDamage *= qualityModifier;    
         weaponMaxAmmo *= qualityModifier;
         weaponSpareAmmo *= qualityModifier;
         weaponReloadTime /= qualityModifier;
@@ -222,6 +227,7 @@ public abstract class RaycastWeapon : MonoBehaviour
 
     public void ResetWeaponState()
     {
+        weaponCurrentammo = ReturnDefaultValue(2);
        weaponDamage = ReturnDefaultValue(1);
        weaponMaxAmmo = ReturnDefaultValue(2);
         weaponSpareAmmo = ReturnDefaultValue(3);

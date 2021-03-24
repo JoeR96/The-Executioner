@@ -10,11 +10,10 @@ public class WeaponPickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Tits");
             ActiveWeapon activeWeapon = other.GetComponent<ActiveWeapon>();
             if (activeWeapon)
             {
-                activeWeapon.CurrentRaycastWeapon.SetWeaponState(3);
+                activeWeapon.CurrentRaycastWeapon.SetWeaponState(0.75f);
                 activeWeapon.EquipWeapon(raycastWeapon);
             }
             Destroy(gameObject);
