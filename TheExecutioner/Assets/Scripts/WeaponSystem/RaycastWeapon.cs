@@ -130,18 +130,20 @@ public abstract class RaycastWeapon : MonoBehaviour
         IsFiring = true;
         MuzzleFlash.Emit(1);
         ray.origin = RaycastOrigin.position;
+
         ray.direction = RaycastDestination.position - RaycastOrigin.position;
         AudioManager.Instance.PlaySound("ShotgunFire");
         var tracer = Instantiate(TracerEffect, ray.origin,quaternion.identity);
         tracer.AddPosition(ray.origin);
+        Debug.Log("lesbian");
         if(Physics.Raycast(ray,out hitInfo))
         {
             HitEffect.transform.position = hitInfo.point;
             HitEffect.transform.forward = hitInfo.normal;
             HitEffect.Emit(1);
-            string name = hitInfo.collider.name;
+           
             tracer.transform.position = hitInfo.point;
-            Debug.Log(ray.origin);
+
             recoil.GenerateRecoil(WeaponName);
             Debug.Log(hitInfo.collider.name);
             if (hitInfo.collider.GetComponentInParent<ITakeDamage>() != null)
@@ -159,7 +161,6 @@ public abstract class RaycastWeapon : MonoBehaviour
     protected virtual IEnumerator ReloadWeapon()
     {
         var test = FindObjectOfType<ActiveWeapon>();
-        Debug.Log(test.CurrentRaycastWeapon.WeaponName);
         test.RigController.Play("weapon_reload_" + test.CurrentRaycastWeapon.WeaponName,0);
         WeaponIsReloading = true;
         yield return new WaitForSeconds(weaponReloadTime);

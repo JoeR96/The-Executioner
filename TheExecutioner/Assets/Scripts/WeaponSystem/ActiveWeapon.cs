@@ -43,7 +43,6 @@ public class ActiveWeapon : MonoBehaviour
             if (Input.GetKey(KeyCode.Mouse0) && CurrentRaycastWeapon.CanFire())
             {
                 CurrentRaycastWeapon.FireWeapon();
-                Debug.Log(CurrentRaycastWeapon.WeaponName);
                 RigController.Play("weapon_"+CurrentRaycastWeapon.WeaponName+"_fire",0);
             }
             

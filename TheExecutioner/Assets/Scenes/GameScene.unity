@@ -124,6 +124,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!198 &11665590 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7954474736350056306, guid: 50478a37a56fe994d833d1519ee9b3b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7954474736085081562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &17801841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3904,6 +3910,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!198 &872293442 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7954474737072973278, guid: 50478a37a56fe994d833d1519ee9b3b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7954474736085081562}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &875901632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4990,6 +5002,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4140056863447004, guid: 4f59791116191f444a9238c811769c9a,
     type: 3}
   m_PrefabInstance: {fileID: 778397644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1034501056 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7954474736299547619, guid: 50478a37a56fe994d833d1519ee9b3b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7954474736085081562}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1035597185
 GameObject:
@@ -7146,7 +7164,7 @@ MonoBehaviour:
   HitEffect: {fileID: 58433527}
   TracerEffect: {fileID: 7989577672764970850, guid: 2b07df7201fb4834d9907a0cbc7d055e,
     type: 3}
-  RaycastDestination: {fileID: 256566885}
+  RaycastDestination: {fileID: 1557424503}
   WeaponName: smg
   recoil: {fileID: 1411915541}
   weaponMaxAmmo: 45
@@ -7165,6 +7183,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b123f54f4c1c0e64bb01c56534c360bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1411915542 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7468024436314017234, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+    type: 3}
+  m_PrefabInstance: {fileID: 7467097123331240121}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411915539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1431156199
@@ -7882,6 +7912,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1555174797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7955149745709057089, guid: 50478a37a56fe994d833d1519ee9b3b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7954474736085081562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1555174798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555174797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9843b93945e0a0e4a879c456c29ed536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSlot: 0
+  IsFiring: 0
+  RaycastOrigin: {fileID: 1034501056}
+  MuzzleFlash: {fileID: 11665590}
+  HitEffect: {fileID: 872293442}
+  TracerEffect: {fileID: 7989577672764970850, guid: 2b07df7201fb4834d9907a0cbc7d055e,
+    type: 3}
+  RaycastDestination: {fileID: 0}
+  WeaponName: 
+  recoil: {fileID: 1555174799}
+  weaponMaxAmmo: 0
+  weaponSpareAmmo: 0
+  weaponReloadTime: 0
+  weaponDamage: 0
+  weaponFireRate: 0
+  weaponCurrentammo: 0
+--- !u!114 &1555174799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7955149745709057095, guid: 50478a37a56fe994d833d1519ee9b3b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7954474736085081562}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555174797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b123f54f4c1c0e64bb01c56534c360bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1557424502
 GameObject:
   m_ObjectHideFlags: 0
@@ -11071,7 +11147,7 @@ MonoBehaviour:
   CurrentLevel: 0
   CurrentStage: 2
   BuildMode: 1
-  levelSo: {fileID: 11400000, guid: 3263f576268c161498844c0213f21f73, type: 2}
+  levelSo: {fileID: 11400000, guid: 728847ddd6591f9419762aeca1329fb0, type: 2}
 --- !u!114 &2053539584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24674,11 +24750,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterAiming: {fileID: 1846586486253753429}
   CrossHairTarget: {fileID: 1557424503}
-  CurrentRaycastWeapon: {fileID: 0}
+  CurrentRaycastWeapon: {fileID: 1411915540}
   WeaponSlots:
   - {fileID: 303648181}
   - {fileID: 1240353083}
-  - {fileID: 1240353083}
+  - {fileID: 350370974}
   RigController: {fileID: 1798617594023139925}
 --- !u!54 &1846586486253753434
 Rigidbody:
@@ -53369,11 +53445,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1240353083}
     m_Modifications:
+    - target: {fileID: 7467097122523067651, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467097122523067651, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467097122523067651, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7468024436314017235, guid: dc422aec8ba471640a3d5063ccc0d2b4,
         type: 3}
       propertyPath: m_Name
       value: SM_Wep_Rifle_Small_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7468024436314017235, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7468024436314017237, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
+      propertyPath: CharacterAiming
+      value: 
+      objectReference: {fileID: 1846586486253753429}
+    - target: {fileID: 7468024436314017237, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
+      propertyPath: RigController
+      value: 
+      objectReference: {fileID: 1798617594023139925}
+    - target: {fileID: 7468024436314017237, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
+      propertyPath: CameraShake
+      value: 
+      objectReference: {fileID: 1411915542}
     - target: {fileID: 7471167318697791985, guid: dc422aec8ba471640a3d5063ccc0d2b4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -53529,6 +53640,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Wep_Shotgun_Plasma_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955149745709057089, guid: 50478a37a56fe994d833d1519ee9b3b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7955149745709057092, guid: 50478a37a56fe994d833d1519ee9b3b1,
         type: 3}

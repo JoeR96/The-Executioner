@@ -7,6 +7,7 @@ public class ZombieSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _zombiePrefab;
     [SerializeField] private Transform navmeshPos;
+    public List<GameObject> ActiveFodderZombies = new List<GameObject>();
     public GameObject SpawnZombie(Transform location)
     {
         var t = Instantiate(_zombiePrefab,location.position, Quaternion.identity);

@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class weaponRecoil : MonoBehaviour
 {
-    [HideInInspector]public CharacterAiming CharacterAiming;
-    [HideInInspector] public CinemachineImpulseSource CameraShake;
-    [HideInInspector] public Animator RigController;
+    public CharacterAiming CharacterAiming;
+    public CinemachineImpulseSource CameraShake;
+    public Animator RigController;
     public Vector2[] RecoilPattern;
     public float duration;
     
@@ -36,7 +36,7 @@ public class weaponRecoil : MonoBehaviour
         horizontalRecoil = RecoilPattern[_index].x;
         verticalRecoil = RecoilPattern[_index].y;
         _index = NextIndex(_index);
-        
+        Debug.Log(RigController);
         RigController.Play("weapon_" + weaponName +"_fire", 0, 0.0f);
     }
 
