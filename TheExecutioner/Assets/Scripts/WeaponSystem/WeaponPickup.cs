@@ -5,16 +5,17 @@ using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour
 {
-    public RaycastWeapon weaponPrefab;
+    public RaycastWeapon raycastWeapon;
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Tits");
             ActiveWeapon activeWeapon = other.GetComponent<ActiveWeapon>();
             if (activeWeapon)
             {
-                RaycastWeapon newWeapon = Instantiate(weaponPrefab);
-                activeWeapon.EquipWeapon(newWeapon);
+                activeWeapon.CurrentRaycastWeapon.SetWeaponState(3);
+                activeWeapon.EquipWeapon(raycastWeapon);
             }
             Destroy(gameObject);
         }

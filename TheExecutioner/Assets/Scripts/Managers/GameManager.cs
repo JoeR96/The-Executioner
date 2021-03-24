@@ -8,6 +8,9 @@ using Random = UnityEngine.Random;
 
 public class GameManager : Singleton<GameManager>
 {
+    [SerializeField] private GameObject uiCanvas;
+    [SerializeField] private GameObject gameCanvas;
+    
     public InteractionSpawnPointManager InteractionSpawnPointManager;
     public ZombieOverflowEvent ZombieOverFlowEvent;
     public LimbSpawner LimbSpawner;
@@ -50,10 +53,8 @@ public class GameManager : Singleton<GameManager>
     private void LoadLevel()
     {
         var random = Random.Range(0, 2);
-        Debug.Log(random);
-        Debug.Log(LevelManager.name);
         LevelManager.LoadLevel(random);
-        Debug.Log(LevelManager);
+
     }
     private void StartGameSequence()
     {
@@ -99,8 +100,13 @@ public class GameManager : Singleton<GameManager>
  
     }
 
-    
-    
+
+    public void GameOver()
+    {
+        uiCanvas.gameObject.SetActive(true);
+        gameCanvas.gameObject.SetActive(false);
+        Cursor.lockState = CursorLockMode.Confined;
+    }
 }
 
 

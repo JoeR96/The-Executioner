@@ -14,11 +14,12 @@ public class AiAgent : MonoBehaviour
     public Animator Animator;
     public Ragdoll Ragdoll;
     public SkinnedMeshRenderer Mesh;
-    
+    public EnemyBase EnemyBase;
     
     // Start is called before the first frame update
     void Awake()
     {
+        EnemyBase = GetComponent<EnemyBase>();
         Animator = GetComponent<Animator>();
         Player = GameObject.FindWithTag("Player").transform;
         Ragdoll = GetComponent<Ragdoll>();

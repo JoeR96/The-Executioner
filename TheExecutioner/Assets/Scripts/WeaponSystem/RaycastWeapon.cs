@@ -20,7 +20,7 @@ public abstract class RaycastWeapon : MonoBehaviour
     #region weaponvariables
     [Header("Utility ")][Space(10)]
     [SerializeField] [Range(0f, 60f)]
-    protected float weaponMaxAmmo;
+    protected float  weaponMaxAmmo;
     
     [SerializeField][Range(0f,180f)]
     protected float weaponSpareAmmo;
@@ -42,6 +42,8 @@ public abstract class RaycastWeapon : MonoBehaviour
     public bool WeaponIsLoaded { get; protected set; }
     
     protected float weaponReloadTimer;
+
+    private float[] defaultValues = new float[6];
     
     protected string weaponFiringClip;
     protected string weaponReloadingClip;
@@ -49,7 +51,12 @@ public abstract class RaycastWeapon : MonoBehaviour
     
     [SerializeField]
     protected float weaponCurrentammo;
+    #endregion
+    private  WeaponStateManager weaponStateManager;
 
+
+    #region properties
+    
     public float WeaponCurrentammo
     {
         get => weaponCurrentammo;
@@ -61,10 +68,36 @@ public abstract class RaycastWeapon : MonoBehaviour
         get => weaponMaxAmmo;
         set => weaponMaxAmmo = value;
     }
+    
+    public float WeaponDamage
+    {
+        get => weaponDamage;
+        set => weaponDamage = value;
+    }
+    public float WeaponReloadTimer
+    {
+        get => weaponReloadTimer;
+        set => weaponReloadTimer = value;
+    }
+    
+    public float WeaponReloadTime
+    {
+        get => weaponReloadTime;
+        set => weaponReloadTime = value;
+    }
+    
+    public float WeaponSpareAmmo
+    {
+        get => weaponSpareAmmo;
+        set => weaponSpareAmmo = value;
+    }
+
+
 
     #endregion
     private void Awake()
     {
+        weaponStateManager = GetComponent<WeaponStateManager>();
         recoil = GetComponent<weaponRecoil>();
     }
     
@@ -74,6 +107,12 @@ public abstract class RaycastWeapon : MonoBehaviour
         WeaponIsLoaded = true;
         weaponMaxAmmo = weaponCurrentammo;
         WeaponIsReloading = false;
+        
+        defaultValues[1] = weaponDamage;
+        defaultValues[2] = weaponMaxAmmo;
+        defaultValues[3] = weaponSpareAmmo;
+        defaultValues[4] = weaponReloadTime;
+        defaultValues[5] = weaponReloadTimer;
     }
 
     protected void Update()
@@ -81,8 +120,10 @@ public abstract class RaycastWeapon : MonoBehaviour
         weaponReloadTimer += Time.deltaTime;
         weaponFireTimer += Time.deltaTime;
     }
+    #region weaponlogic
     public void FireWeapon()
     {
+        
         weaponFireTimer = 0f;
         weaponCurrentammo -= 1;
         recoil.Reset();
@@ -117,7 +158,8 @@ public abstract class RaycastWeapon : MonoBehaviour
     protected virtual IEnumerator ReloadWeapon()
     {
         var test = FindObjectOfType<ActiveWeapon>();
-        test.RigController.SetBool("IsReloading",true);
+        Debug.Log(test.CurrentRaycastWeapon.WeaponName);
+        test.RigController.Play("weapon_reload_" + test.CurrentRaycastWeapon.WeaponName,0);
         WeaponIsReloading = true;
         yield return new WaitForSeconds(weaponReloadTime);
         Reload();
@@ -161,5 +203,29 @@ public abstract class RaycastWeapon : MonoBehaviour
             return true;
 
         return false;
+    }
+    #endregion
+
+    public float ReturnDefaultValue(int index)
+    {
+        return defaultValues[index];
+    }
+    
+    public void SetWeaponState(int qualityModifier)
+    {
+        ResetWeaponState();
+        weaponMaxAmmo *= qualityModifier;
+        weaponSpareAmmo *= qualityModifier;
+        weaponReloadTime /= qualityModifier;
+        weaponReloadTimer /= qualityModifier;
+    }
+
+    public void ResetWeaponState()
+    {
+       weaponDamage = ReturnDefaultValue(1);
+       weaponMaxAmmo = ReturnDefaultValue(2);
+        weaponSpareAmmo = ReturnDefaultValue(3);
+        weaponReloadTime = ReturnDefaultValue(4);
+        weaponReloadTimer = ReturnDefaultValue(5);
     }
 }

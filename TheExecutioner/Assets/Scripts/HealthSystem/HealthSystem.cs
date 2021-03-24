@@ -77,4 +77,8 @@ public class HealthSystem
             return false;
         }
     }
+    public float Percent()
+    {
+        return (currentHealth / maxHealth * 100);
+    }
 }

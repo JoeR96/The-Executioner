@@ -4,8 +4,4 @@ using UnityEngine;
 
 public class SMG : RaycastWeapon
 {
-    public SMG()
-    {
-        
-    }
 }

@@ -10,6 +10,7 @@ public class SetAmmoText : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(activeWeapon.CurrentRaycastWeapon.WeaponName);
         ammoText.SetText(activeWeapon.CurrentRaycastWeapon.WeaponCurrentammo 
                          + "  |  " + 
                          activeWeapon.CurrentRaycastWeapon.WeaponMaxAmmo);
