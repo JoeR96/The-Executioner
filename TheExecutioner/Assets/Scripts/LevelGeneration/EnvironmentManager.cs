@@ -18,6 +18,7 @@ public class EnvironmentManager : MonoBehaviour
     public EnemySpawnPoints EnemySpawnPoints;
     public Grid grid;
     
+  
     private GameObject[,] _tileArray;
     private NavMeshSurface navmeshSurface;
     
@@ -107,8 +108,9 @@ public class EnvironmentManager : MonoBehaviour
     {
         navmeshSurface.BuildNavMesh();
     }
-    
-    
+
+
+
     
     
     

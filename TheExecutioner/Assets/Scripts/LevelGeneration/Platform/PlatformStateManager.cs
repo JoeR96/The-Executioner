@@ -36,13 +36,13 @@ public class PlatformStateManager : MonoBehaviour
     
     public void SetStateFromExternal(PlatformInformation platformInformation)
     {
-        platformManager.PlatformColourManager.CurrentColour = platformInformation.CurrentColour;
         platformManager.PlatformBridgeManager.PlatformBridgeActive = platformInformation.BridgeIsActive;
         platformManager.PlatformRampManager.PlatformRampActive = platformInformation.PlatformStairActive;
         platformManager.PlatformHeightManager.CurrentHeight = platformInformation.CurrentHeight;
         platformManager.PlatformBridgeManager.CurrentBridgeHeight = platformInformation.CurrentBridgeHeight;
         platformManager.PlatformRampManager.CurrentRotation = platformInformation.CurrentRotation;
         platformManager.PlatformSpawnManager.PlatformSpawnPointActive = platformInformation.PlatformSpawnActive;
+        platformManager.PlatformSpawnManager.PlatformEventSpawn = platformInformation.PlatformEventSpawn;
         if(platformManager.PlatformSpawnManager.PlatformSpawnPointActive)
             GameManager.instance.EnvironmentManager.EnemySpawnPoints.internalSpawnPoints.Add(platformManager.PlatformSpawnManager.spawnPoint.transform);
         SetState();

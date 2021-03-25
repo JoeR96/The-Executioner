@@ -19,11 +19,13 @@ public class GameManager : Singleton<GameManager>
     public Pathfinding pathfinding;
     public LevelManager LevelManager;
     public Grid Grid;
+    public EventManager eventManager;
     public bool BuildMode;
     public int SpawnDivider;
     public override void Awake()
     {
         base.Awake();
+        eventManager = GetComponentInChildren<EventManager>();
         EnvironmentManager = GetComponentInChildren<EnvironmentManager>();
         ZombieManager = GetComponentInChildren<ZombieManager>();
         LimbSpawner = GetComponentInChildren<LimbSpawner>();
@@ -97,7 +99,11 @@ public class GameManager : Singleton<GameManager>
         {
             SpawnWeapons();
         }
- 
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+           eventManager.PlaySacrificeEvent();
+        }
+
     }
 
 

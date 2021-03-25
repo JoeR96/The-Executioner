@@ -19,6 +19,7 @@ public class ZombieSpawner : MonoBehaviour
     {
         for (int i = 0; i < location.Count; i++)
         {
+            ActiveFodderZombies.Add(gameObject);
             var t = SpawnZombie(location[i]);
             t.GetComponent<NavMeshAgent>().enabled = false;
              t.GetComponent<Ragdoll>().ActivateRagDoll();

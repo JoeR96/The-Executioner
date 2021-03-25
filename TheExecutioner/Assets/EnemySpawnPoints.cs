@@ -6,9 +6,9 @@ using UnityEngine.ProGrids;
 
 public class EnemySpawnPoints : MonoBehaviour
 {
-    public List<Transform> externalSpawnPoints = new List<Transform>();
+    private List<Transform> externalSpawnPoints = new List<Transform>();
     public List<Transform> internalSpawnPoints = new List<Transform>();
-    
+    public List<Transform> eventSpawnPositions = new List<Transform>();
     public List<Transform> ReturnExternalSpawnPoints()
     {
         return externalSpawnPoints;
@@ -32,7 +32,7 @@ public class EnemySpawnPoints : MonoBehaviour
         if(node.PlatformManager.PlatformSpawnManager.PlatformSpawnPointActive)
             AddInternalSpawnPointToList(node);
     }
-
+    
     public Transform ReturnInternalSpawnPoint()
     {
         var random = Random.Range(0, internalSpawnPoints.Count);
@@ -43,5 +43,20 @@ public class EnemySpawnPoints : MonoBehaviour
     {
         var random = Random.Range(0, internalSpawnPoints.Count);
         return internalSpawnPoints[random];
+    }
+
+    public Transform ReturnEventSpawnPoint()
+    {
+        var random = Random.Range(0,eventSpawnPositions.Count);
+        return eventSpawnPositions[random];
+    }
+    public void ClearEventSpawns()
+    {
+        eventSpawnPositions.Clear();
+    }
+
+    public void AddEventSpawn(Transform spawn)
+    {
+        eventSpawnPositions.Add(spawn);
     }
 }

@@ -8,6 +8,7 @@ public class PlatformInformation
     public bool BridgeIsActive;
     public bool PlatformStairActive;
     public bool PlatformSpawnActive;
+    public bool PlatformEventSpawn;
     public int CurrentHeight;
     public int CurrentRotation;
     public int CurrentColour;
