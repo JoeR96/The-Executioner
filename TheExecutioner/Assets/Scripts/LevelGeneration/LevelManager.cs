@@ -14,7 +14,8 @@ public class LevelManager : MonoBehaviour
     public LevelSo levelSo;
     private Grid grid;
     private EnemySpawnPoints enemySpawnPoints;
-    void Start()
+
+    private void Start()
     {
         enemySpawnPoints = GetComponent<EnemySpawnPoints>();
         grid = GetComponent<Grid>();
@@ -96,12 +97,8 @@ public class LevelManager : MonoBehaviour
                 pos.PlatformStateManager.SetStateFromExternal(go);
                 if(pos.PlatformSpawnManager.PlatformEventSpawn)
                             enemySpawnPoints.AddEventSpawn(pos.PlatformSpawnManager.spawnPoint.transform);
-                            
             }
-                    
         }
-        
-
     }
     
     public void SetCurrentStage(int level)

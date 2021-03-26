@@ -6,7 +6,7 @@ public class CharacterManager : MonoBehaviour
 {
     public HealthSystem PlayerHealthSystem;
     
-    void Start()
+    void Awake()
     {
         PlayerHealthSystem = new HealthSystem(100, 100);
     }

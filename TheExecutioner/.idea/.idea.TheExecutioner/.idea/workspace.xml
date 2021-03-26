@@ -12,10 +12,13 @@
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Altar/Altar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Altar/Altar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimationControllers/AltarAnimationController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationControllers/AltarAnimationController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimationControllers/NPC_Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationControllers/NPC_Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CharacterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Ikd#/Zombie_Paramedic_Female_01.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Ikd#/Zombie_Paramedic_Female_01.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +45,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/PlatformBridgeManagerEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Pathfinding.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/Shotgun.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Desktop/dump/12345/The-Executioner-04757166270da61332a9c7b95d3d2f094657c9cb/TheExecutioner/Assets/Scripts/PlatformState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Documents/PizzaPrototype01062020/Library/PackageCache/com.unity.probuilder@4.2.3/Runtime/Core/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Desktop/AsteroidsWeekTen/Assets/Scripts/Asteroid/HealthSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EscortTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Altar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/SMG.cs" root0="FORCE_HIGHLIGHTING" />
@@ -88,7 +89,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/UiHealthCanvas.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/AttackState.cs" />
-      <option value="$PROJECT_DIR$/Assets/CharacterManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponStateManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/SMG.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/WeaponUI/SetAmmoText.cs" />
@@ -101,7 +101,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformSpawnManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" />
       <option value="$PROJECT_DIR$/Assets/EnemySpawnPoints.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/EscortState.cs" />
@@ -116,6 +115,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Events 1/SacrificeEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Altar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/CharacterManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -209,6 +210,7 @@
       <workItem from="1616699706321" duration="4146000" />
       <workItem from="1616703959430" duration="11055000" />
       <workItem from="1616754911369" duration="31000" />
+      <workItem from="1616774762372" duration="2321000" />
     </task>
     <servers />
   </component>
