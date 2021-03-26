@@ -54,7 +54,8 @@ public class GameManager : Singleton<GameManager>
 
     private void LoadLevel()
     {
-        LevelManager.LoadLevel(2);
+        var random = Random.Range(0, 4);
+        LevelManager.LoadLevel(random);
 
     }
     private void StartGameSequence()
