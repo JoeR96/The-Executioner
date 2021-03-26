@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class AiAgent : MonoBehaviour
 {
+    public StateId CurrentState;
     public StateMachine StateMachine;
     public StateId InitialState;
     public NavMeshAgent navMeshAgent;
@@ -15,6 +16,8 @@ public class AiAgent : MonoBehaviour
     public Ragdoll Ragdoll;
     public SkinnedMeshRenderer Mesh;
     public EnemyBase EnemyBase;
+    public float AnimatorDelta;
+    public float value;
     
     // Start is called before the first frame update
     void Awake()
@@ -30,12 +33,15 @@ public class AiAgent : MonoBehaviour
         StateMachine.RegisterState(new IdleState());
         StateMachine.RegisterState(new AttackState());
         StateMachine.RegisterState(new TargetState());
+        StateMachine.RegisterState(new EventState());
         StateMachine.ChangeState(InitialState);
     }
 
     // Update is called once per frame
     void Update()
     {
+        AnimatorDelta = Animator.deltaPosition.magnitude / Time.deltaTime;
+        CurrentState = StateMachine.currentState;
         StateMachine.Update();
     }
 

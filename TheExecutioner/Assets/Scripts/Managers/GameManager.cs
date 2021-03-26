@@ -19,13 +19,13 @@ public class GameManager : Singleton<GameManager>
     public Pathfinding pathfinding;
     public LevelManager LevelManager;
     public Grid Grid;
-    public EventManager eventManager;
+    public EventManager EventManager;
     public bool BuildMode;
     public int SpawnDivider;
     public override void Awake()
     {
         base.Awake();
-        eventManager = GetComponentInChildren<EventManager>();
+        EventManager = GetComponentInChildren<EventManager>();
         EnvironmentManager = GetComponentInChildren<EnvironmentManager>();
         ZombieManager = GetComponentInChildren<ZombieManager>();
         LimbSpawner = GetComponentInChildren<LimbSpawner>();
@@ -54,8 +54,7 @@ public class GameManager : Singleton<GameManager>
 
     private void LoadLevel()
     {
-        var random = Random.Range(0, 2);
-        LevelManager.LoadLevel(random);
+        LevelManager.LoadLevel(2);
 
     }
     private void StartGameSequence()
@@ -67,13 +66,26 @@ public class GameManager : Singleton<GameManager>
         Invoke("SpawnZombies",7f);
     }
 
+    public void AssignEvents()
+    {
+        foreach (var go in ZombieManager.ZombieSpawner.ActiveFodderZombies)
+        {
+            var x = go.GetComponent<AiAgent>();
+            x.StateMachine.ChangeState(StateId.EventState);
+        }
+        foreach (var go in ZombieManager.ZombieSpawner.ArmoredZombies)
+        {
+            var x = go.GetComponent<AiAgent>();
+            x.StateMachine.ChangeState(StateId.EventState);
+        }
+    }
     private void SpawnZombies()
     {
         List<Transform> newList = EnvironmentManager.EnemySpawnPoints.internalSpawnPoints;
         List<Transform> temp = new List<Transform>();
         
         int length = newList.Count;
-        int newLength = length / 10;
+        int newLength = length / 25;
 
         for (int i = 0; i < newLength; i++)
         {
@@ -85,6 +97,25 @@ public class GameManager : Singleton<GameManager>
         }
         
         ZombieManager.ZombieSpawner.SpawnRagdollZombiesAtLocations(temp);
+    }
+    private void SpawnArmoredZombies()
+    {
+        List<Transform> newList = EnvironmentManager.EnemySpawnPoints.internalSpawnPoints;
+        List<Transform> temp = new List<Transform>();
+        
+        int length = newList.Count;
+        int newLength = length / 75;
+
+        for (int i = 0; i < newLength; i++)
+        {
+            int random = Random.Range(0, newList.Count);
+            Transform spawnPoint = newList[random];
+            
+            newList.RemoveAt(random);
+            temp.Add(spawnPoint);
+        }
+        
+        ZombieManager.ZombieSpawner.SpawnArmoredZombiesAtLocations(temp);
     }
     private void SpawnWeapons()
     {
@@ -101,12 +132,17 @@ public class GameManager : Singleton<GameManager>
         }
         if (Input.GetKeyDown(KeyCode.F2))
         {
-           eventManager.PlaySacrificeEvent();
+           EventManager.PlaySacrificeEvent();
+           AssignEvents();
         }
+        if(Input.GetKeyDown(KeyCode.F3))
+            SpawnZombies();
+        
+        if(Input.GetKeyDown(KeyCode.F4))
+            SpawnArmoredZombies();
 
     }
-
-
+    
     public void GameOver()
     {
         uiCanvas.gameObject.SetActive(true);

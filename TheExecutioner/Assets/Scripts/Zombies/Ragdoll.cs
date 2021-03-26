@@ -15,18 +15,7 @@ public class Ragdoll : MonoBehaviour
         _navMeshAgent = GetComponent<NavMeshAgent>();
         ActivateRagDoll();
     }
-
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.F2))
-        {
-            DeactivateRagdoll();
-            
-        }if (Input.GetKey(KeyCode.F3))
-        {
-            ActivateRagDoll();
-        }
-    }
+    
     public void DeactivateRagdoll()
     {
         foreach (Rigidbody rb in rigidbodies)
@@ -39,11 +28,7 @@ public class Ragdoll : MonoBehaviour
         _animator.SetFloat("AnimTime", Random.Range(0.0f,1.0f));
         
     }
-
-    public void LoopZombie()
-    {
-        StartCoroutine(RestartZombie());
-    }
+    
     private IEnumerator RestartZombie()
     {
         foreach (Rigidbody rb in rigidbodies)

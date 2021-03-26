@@ -53,20 +53,11 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
         _zombieSkinContainer.transform.GetChild(random).gameObject.SetActive(true);
     }
     bool isOnMesh;
+    private bool isAlive = true;
     protected void Update()
     {
         
-        if (Input.GetKey(KeyCode.F1))
-        {
-            _navMeshAgent.enabled = true;
-        }
-        if (Input.GetKeyDown(KeyCode.F5))
-        {
-            Debug.Log(IsAgentOnNavMesh());
-        }
-
-        
-        if (IsAgentOnNavMesh() && isOnMesh == false)
+        if (IsAgentOnNavMesh() && isOnMesh == false && isAlive)
         {
             isOnMesh = true;
               ActivateZombie();
@@ -99,13 +90,23 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
         }
     }
 
-
+    public bool InEvent;
     protected virtual void Die(Vector3 direction)
     {
-        DeathState deathState = _aiAgent.StateMachine.GetState(StateId.DeathState) as DeathState;
-        if (deathState != null) deathState.Direction = direction;
-        _aiAgent.StateMachine.ChangeState(StateId.DeathState);
-        StartCoroutine(Die());
+        if (InEvent)
+        {
+            isAlive = false;
+            _aiAgent.Ragdoll.ActivateRagDoll();
+        }
+        else
+        {
+            DeathState deathState = _aiAgent.StateMachine.GetState(StateId.DeathState) as DeathState;
+            if (deathState != null) deathState.Direction = direction;
+            _aiAgent.StateMachine.ChangeState(StateId.DeathState);
+        
+            StartCoroutine(Die());
+        }
+       
     }
 
     private IEnumerator Die()
@@ -199,6 +200,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
         var root = _rootComponent.transform;
         StartCoroutine(ScaleComponent(root, _explosionScaleSize, 1f));
     }
+
 
   
     public bool IsAgentOnNavMesh()
