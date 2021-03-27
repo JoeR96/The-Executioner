@@ -135,7 +135,7 @@ public abstract class RaycastWeapon : MonoBehaviour
         AudioManager.Instance.PlaySound("ShotgunFire");
         var tracer = Instantiate(TracerEffect, ray.origin,quaternion.identity);
         tracer.AddPosition(ray.origin);
-        Debug.Log("lesbian");
+ 
         if(Physics.Raycast(ray,out hitInfo))
         {
             HitEffect.transform.position = hitInfo.point;
@@ -145,12 +145,12 @@ public abstract class RaycastWeapon : MonoBehaviour
             tracer.transform.position = hitInfo.point;
 
             recoil.GenerateRecoil(WeaponName);
-            Debug.Log(hitInfo.collider.name);
             if (hitInfo.collider.GetComponentInParent<ITakeDamage>() != null)
             {
                 hitInfo.collider.GetComponentInParent<ITakeDamage>().TakeDamage(100, ray.direction);
                 if (hitInfo.collider.CompareTag("DestructibleLimb"))
                 {
+                    Debug.Log(name);
                     hitInfo.collider.GetComponentInParent<IDestroyLimb>().DestroyLimb(name, hitInfo.point);   
                 }
             }

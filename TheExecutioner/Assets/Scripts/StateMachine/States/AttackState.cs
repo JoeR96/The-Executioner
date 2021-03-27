@@ -32,7 +32,6 @@ public class AttackState : IState
         }
         if (Vector3.Distance(agent.transform.position, agent.Player.transform.position) >= 1.25f)
         {
-            Debug.Log("DISTANCE");
             agent.StateMachine.ChangeState(StateId.ChasePlayer);
         }
         
@@ -52,6 +51,6 @@ public class AttackState : IState
         agent.transform.LookAt(agent.Player);
         randomNumber = Random.Range(1, 4);
         agent.Animator.SetBool("Attack" + randomNumber,true);
-        agent.Player.GetComponent<CharacterManager>().TakeDamage(agent.EnemyBase.Damage());
+        agent.Player.GetComponent<CharacterManager>().TakeDamage(agent.EnemyBase.Damage);
     }
 }

@@ -15,7 +15,10 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     [SerializeField] protected Vector3 _explosionScaleSize;
     [SerializeField] protected float _explosionScaleTime;
     [SerializeField] protected float _maxHealth;
-    [SerializeField] protected float _damage = 5f;
+    
+    [field: SerializeField]
+     public float Damage { get; set; }
+         
     private GameObject activeSkin;
     private Dictionary<string,Transform> _destructibleLimbs = new Dictionary<string, Transform>();
     private Dictionary<String,ParticleSystem> _destructibleLimbParticle = new Dictionary<string, ParticleSystem>();
@@ -43,10 +46,6 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
         SetRandomSkin();
     }
 
-    public float Damage()
-    {
-        return _damage;
-    }
     private void SetRandomSkin()
     {
         var random = Random.Range(0, _zombieSkinContainer.transform.childCount);
@@ -91,6 +90,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     }
 
     public bool InEvent;
+    
     protected virtual void Die(Vector3 direction)
     {
         if (InEvent)
@@ -137,8 +137,10 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     }
     public void DestroyLimb(string name,Vector3 direction)
     {
+        Debug.Log(name);
         var transformTarget = _destructibleLimbs[name];
-        Debug.Log(transformTarget);
+
+        Debug.Log(name);
         StartCoroutine(ScaleComponent(transformTarget, 
             new Vector3(0,0,0), 0.25f));
         var t = _destructibleLimbs[name];

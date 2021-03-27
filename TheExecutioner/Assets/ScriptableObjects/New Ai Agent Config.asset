@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e8e1d93ca525c94aa3d6cee3156e4fb, type: 3}
   m_Name: New Ai Agent Config
   m_EditorClassIdentifier: 
-  MaxTime: 3
-  MaxDistance: 1
-  DieForce: 15
-  maxsightDistance: 5
+  MaxTime: 1
+  MaxDistance: 25
+  DieForce: 7.5
+  maxsightDistance: 15

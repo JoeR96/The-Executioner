@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,13 +13,15 @@ public class ZombieSpawner : MonoBehaviour
     public List<GameObject> ArmoredZombies = new List<GameObject>();
     public GameObject SpawnZombie(Transform location)
     {
-        var t = Instantiate(_zombiePrefab,location.position, Quaternion.identity);
+        var t = ObjectPooler.instance.GetObject(PoolObjectType.BasicZombie);
+        t.transform.SetPositionAndRotation(location.position,quaternion.identity);
         t.transform.position = location.position;
         return t;
     }
     public GameObject SpawnArmoredZombie(Transform location)
     {
-        var t = Instantiate(_zombieArmorPrefab,location.position, Quaternion.identity);
+        var t = ObjectPooler.instance.GetObject(PoolObjectType.FastZombie);
+        t.transform.SetPositionAndRotation(location.position,quaternion.identity);
         t.transform.position = location.position;
         return t;
     }

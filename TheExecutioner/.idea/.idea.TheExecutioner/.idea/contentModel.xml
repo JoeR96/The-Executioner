@@ -140,6 +140,7 @@
             </e>
             <e p="LevelManagerEditor.cs" t="Include" />
             <e p="NavMeshLinks_AutoPlaceerEditor.cs" t="Include" />
+            <e p="ObjectPoolerEditor.cs" t="Include" />
             <e p="PlaterformColourManagerEditor.cs" t="Include" />
             <e p="PlatformBridgeManagerEditor.cs" t="Include" />
             <e p="PlatformEditor.cs" t="Include" />
@@ -159,6 +160,7 @@
           <e p="HealthSystem" t="Include">
             <e p="HealthSystem.cs" t="Include" />
           </e>
+          <e p="isPoolable.cs" t="Include" />
           <e p="LevelGeneration" t="Include">
             <e p="CheckAdjacentNodes.cs" t="Include" />
             <e p="EnvironmentManager.cs" t="Include" />
@@ -188,6 +190,8 @@
             <e p="Timer.cs" t="Include" />
             <e p="ZombieManager.cs" t="Include" />
           </e>
+          <e p="ObjectPooler.cs" t="Include" />
+          <e p="ObjectPoolerTypes.cs" t="Include" />
           <e p="SpawnSystems" t="Include">
             <e p="ZombieSpawner.cs" t="Include" />
           </e>

@@ -36,7 +36,6 @@ public class weaponRecoil : MonoBehaviour
         horizontalRecoil = RecoilPattern[_index].x;
         verticalRecoil = RecoilPattern[_index].y;
         _index = NextIndex(_index);
-        Debug.Log(RigController);
         RigController.Play("weapon_" + weaponName +"_fire", 0, 0.0f);
     }
 

@@ -54,7 +54,7 @@ public class GameManager : Singleton<GameManager>
 
     private void LoadLevel()
     {
-        var random = Random.Range(0, 4);
+        var random = Random.Range(0, 3);
         LevelManager.LoadLevel(random);
 
     }
@@ -71,8 +71,14 @@ public class GameManager : Singleton<GameManager>
     {
         foreach (var go in ZombieManager.ZombieSpawner.ActiveFodderZombies)
         {
-            var x = go.GetComponent<AiAgent>();
-            x.StateMachine.ChangeState(StateId.EventState);
+            if (go.GetComponent<AiAgent>() != null)
+            {
+                var x = go.GetComponent<AiAgent>();
+                x.StateMachine.ChangeState(StateId.EventState);
+            }
+            
+           
+            
         }
         foreach (var go in ZombieManager.ZombieSpawner.ArmoredZombies)
         {
