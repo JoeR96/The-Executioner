@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private Quaternion _handIdlePosition;
     private Quaternion _handSprintPosition;
 
+    private float coyoteTime;
     
     // Update is called once per frame
     private void Start()
@@ -55,12 +56,13 @@ public class PlayerController : MonoBehaviour
         //check if our player is grounded
          _isGrounded = Physics.CheckSphere(
              new Vector3(transform.position.x, transform.position.y - 1, transform.position.z),
-             0.4f, _layerMask);
+             2f, _layerMask);
         
         //Jump
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
         {
             _playerRB.velocity = new Vector3(_playerRB.velocity.x, _jumpForce, _playerRB.velocity.z);
+                
         }
         
         if (!_playerAudio.isPlaying && _playerIsMoving)

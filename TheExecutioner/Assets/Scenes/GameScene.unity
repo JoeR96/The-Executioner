@@ -2119,6 +2119,7 @@ MonoBehaviour:
   weaponReloadTime: 1.25
   weaponDamage: 15
   weaponFireRate: 0.075
+  <WeaponIsReloading>k__BackingField: 0
   weaponCurrentammo: 45
 --- !u!1 &387441261
 GameObject:
@@ -4855,6 +4856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5fa6ac9b7ad0645a07286120cb4cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  externalSpawnPoints: []
   internalSpawnPoints: []
   eventSpawnPositions: []
 --- !u!114 &954858386
@@ -5255,7 +5257,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 704044336}
   m_Follow: {fileID: 704044336}
   m_Lens:
-    FieldOfView: 100
+    FieldOfView: 112
     OrthographicSize: 5
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -7276,15 +7278,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4094684098678374, guid: d9de82ecdd3d01b4d9f2e15be36b3554, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.189
       objectReference: {fileID: 0}
     - target: {fileID: 4094684098678374, guid: d9de82ecdd3d01b4d9f2e15be36b3554, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.0407
       objectReference: {fileID: 0}
     - target: {fileID: 4094684098678374, guid: d9de82ecdd3d01b4d9f2e15be36b3554, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.475
+      value: 0.1365
       objectReference: {fileID: 0}
     - target: {fileID: 4094684098678374, guid: d9de82ecdd3d01b4d9f2e15be36b3554, type: 3}
       propertyPath: m_LocalRotation.x
@@ -7317,6 +7319,18 @@ PrefabInstance:
     - target: {fileID: 4094684098678374, guid: d9de82ecdd3d01b4d9f2e15be36b3554, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094684098678374, guid: d9de82ecdd3d01b4d9f2e15be36b3554, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094684098678374, guid: d9de82ecdd3d01b4d9f2e15be36b3554, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094684098678374, guid: d9de82ecdd3d01b4d9f2e15be36b3554, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9de82ecdd3d01b4d9f2e15be36b3554, type: 3}
@@ -7353,6 +7367,7 @@ MonoBehaviour:
   weaponReloadTime: 1.25
   weaponDamage: 15
   weaponFireRate: 0.03
+  <WeaponIsReloading>k__BackingField: 0
   weaponCurrentammo: 900
 --- !u!114 &1411915541 stripped
 MonoBehaviour:
@@ -8110,6 +8125,7 @@ MonoBehaviour:
   weaponReloadTime: 0
   weaponDamage: 0
   weaponFireRate: 0
+  <WeaponIsReloading>k__BackingField: 0
   weaponCurrentammo: 0
 --- !u!114 &1555174799 stripped
 MonoBehaviour:
@@ -9313,7 +9329,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 62
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -9447,16 +9463,13 @@ MonoBehaviour:
   uiCanvas: {fileID: 1048777976}
   gameCanvas: {fileID: 1482123587}
   InteractionSpawnPointManager: {fileID: 0}
-  ZombieOverFlowEvent: {fileID: 0}
   LimbSpawner: {fileID: 1715150812}
   ZombieManager: {fileID: 0}
   EnvironmentManager: {fileID: 0}
-  pathfinding: {fileID: 0}
+  Pathfinding: {fileID: 0}
   LevelManager: {fileID: 2053539583}
-  Grid: {fileID: 0}
   EventManager: {fileID: 0}
-  BuildMode: 0
-  SpawnDivider: 0
+  BuildMode: 1
 --- !u!4 &1715150810
 Transform:
   m_ObjectHideFlags: 0
@@ -10953,6 +10966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5fa6ac9b7ad0645a07286120cb4cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  externalSpawnPoints: []
   internalSpawnPoints: []
   eventSpawnPositions: []
 --- !u!1001 &2073647789

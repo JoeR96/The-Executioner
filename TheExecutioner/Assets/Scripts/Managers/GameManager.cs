@@ -12,16 +12,15 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject gameCanvas;
     
     public InteractionSpawnPointManager InteractionSpawnPointManager;
-    public ZombieOverflowEvent ZombieOverFlowEvent;
     public LimbSpawner LimbSpawner;
     public ZombieManager ZombieManager;
     public EnvironmentManager EnvironmentManager;
-    public Pathfinding pathfinding;
+    public Pathfinding Pathfinding;
     public LevelManager LevelManager;
-    public Grid Grid;
+
     public EventManager EventManager;
     public bool BuildMode;
-    public int SpawnDivider;
+ 
     public override void Awake()
     {
         base.Awake();
@@ -29,8 +28,7 @@ public class GameManager : Singleton<GameManager>
         EnvironmentManager = GetComponentInChildren<EnvironmentManager>();
         ZombieManager = GetComponentInChildren<ZombieManager>();
         LimbSpawner = GetComponentInChildren<LimbSpawner>();
-        pathfinding = GetComponentInChildren<Pathfinding>();
-        Grid = GetComponentInChildren<Grid>();
+        Pathfinding = GetComponentInChildren<Pathfinding>();
         LevelManager = GetComponentInChildren<LevelManager>();
         InteractionSpawnPointManager = GetComponentInChildren<InteractionSpawnPointManager>();
     }
@@ -88,7 +86,7 @@ public class GameManager : Singleton<GameManager>
     }
     private void SpawnZombies()
     {
-        List<Transform> newList = EnvironmentManager.EnemySpawnPoints.internalSpawnPoints;
+        List<Transform> newList = EnvironmentManager.EnemySpawnPoints.InternalSpawnPoints;
         List<Transform> temp = new List<Transform>();
         
         int length = newList.Count;
@@ -107,7 +105,7 @@ public class GameManager : Singleton<GameManager>
     }
     private void SpawnArmoredZombies()
     {
-        List<Transform> newList = EnvironmentManager.EnemySpawnPoints.internalSpawnPoints;
+        List<Transform> newList = EnvironmentManager.EnemySpawnPoints.InternalSpawnPoints;
         List<Transform> temp = new List<Transform>();
         
         int length = newList.Count;
@@ -123,6 +121,11 @@ public class GameManager : Singleton<GameManager>
         }
         
         ZombieManager.ZombieSpawner.SpawnArmoredZombiesAtLocations(temp);
+    }
+
+    public void RagdollAllDuringLevelChange()
+    {
+        
     }
     private void SpawnWeapons()
     {

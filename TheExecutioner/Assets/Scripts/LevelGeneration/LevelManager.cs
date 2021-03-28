@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour
     public void LoadLevel(int levelIndex)
     {
         LoadStage(levelIndex);
+        GameManager.instance.RagdollAllDuringLevelChange();
     }
 
     public PlatformInformation[,] SaveStageInformation()

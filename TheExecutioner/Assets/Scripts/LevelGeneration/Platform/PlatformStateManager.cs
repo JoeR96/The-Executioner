@@ -44,7 +44,7 @@ public class PlatformStateManager : MonoBehaviour
         platformManager.PlatformSpawnManager.PlatformSpawnPointActive = platformInformation.PlatformSpawnActive;
         platformManager.PlatformSpawnManager.PlatformEventSpawn = platformInformation.PlatformEventSpawn;
         if(platformManager.PlatformSpawnManager.PlatformSpawnPointActive)
-            GameManager.instance.EnvironmentManager.EnemySpawnPoints.internalSpawnPoints.Add(platformManager.PlatformSpawnManager.spawnPoint.transform);
+            GameManager.instance.EnvironmentManager.EnemySpawnPoints.CheckForSpawnPoint(Node);
         SetState();
     }
     public void SetState()

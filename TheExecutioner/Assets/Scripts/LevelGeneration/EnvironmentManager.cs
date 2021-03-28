@@ -80,7 +80,11 @@ public class EnvironmentManager : MonoBehaviour
             if (!node.PlatformManager.PlatformStateManager.PlatformIsWall)
             {
                 node.PlatformManager.PlatformHeightManager.SetPlatformHeight(platformHeight);
-                //EnemySpawnPoints.AddExternalSpawnPointToList(node);
+                EnemySpawnPoints.AddExternalSpawnPointToList(node.PlatformManager.PlatformSpawnManager.spawnPoint.transform);
+            }
+            else
+            {
+                EnemySpawnPoints.AddInternalSpawnPointToList(node.PlatformManager.PlatformSpawnManager.spawnPoint.transform);
             }
             EnemySpawnPoints.CheckForSpawnPoint(node);
         }

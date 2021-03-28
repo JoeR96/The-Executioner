@@ -6,31 +6,28 @@ using UnityEngine.ProGrids;
 
 public class EnemySpawnPoints : MonoBehaviour
 {
-    private List<Transform> externalSpawnPoints = new List<Transform>();
-    public List<Transform> internalSpawnPoints = new List<Transform>();
-    public List<Transform> eventSpawnPositions = new List<Transform>();
-    public List<Transform> ReturnExternalSpawnPoints()
-    {
-        return externalSpawnPoints;
-    }
+     [SerializeField] List<Transform> externalSpawnPoints = new List<Transform>();
+     [SerializeField] List<Transform> internalSpawnPoints = new List<Transform>();
+     [SerializeField] List<Transform> eventSpawnPositions = new List<Transform>();
 
-    public List<Transform> ReturnInternalSpawnPoints()
+     public List<Transform> ExternalSpawnPoints => externalSpawnPoints;
+     public List<Transform> InternalSpawnPoints => internalSpawnPoints;
+     public List<Transform> EventSpawnPoints => eventSpawnPositions;
+     
+
+    public void AddExternalSpawnPointToList(Transform spawn)
     {
-        return internalSpawnPoints;
+        externalSpawnPoints.Add(spawn);
     }
-    public void AddExternalSpawnPointToList(Node node)
+    public void AddInternalSpawnPointToList(Transform spawn)
     {
-        externalSpawnPoints.Add(node.PlatformManager.PlatformSpawnManager.spawnPoint.transform);
-    }
-    public void AddInternalSpawnPointToList(Node node)
-    {
-        internalSpawnPoints.Add(node.PlatformManager.PlatformSpawnManager.spawnPoint.transform);
+        internalSpawnPoints.Add(spawn);
     }
     
     public void CheckForSpawnPoint(Node node)
     {
         if(node.PlatformManager.PlatformSpawnManager.PlatformSpawnPointActive)
-            AddInternalSpawnPointToList(node);
+            AddInternalSpawnPointToList(node.PlatformManager.PlatformSpawnManager.spawnPoint.transform);
     }
     
     public Transform ReturnInternalSpawnPoint()

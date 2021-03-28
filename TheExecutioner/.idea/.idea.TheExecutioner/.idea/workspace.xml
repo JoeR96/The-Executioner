@@ -11,24 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnimationControllers/FastArmoredHeavy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationControllers/FastArmoredHeavy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnimationControllers/NPC_Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationControllers/NPC_Controller.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Drunk Run Forward.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Drunk Run Forward.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Zombie_Paramedic_Female_01.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Zombie_Paramedic_Female_01.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/New Ai Agent Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/New Ai Agent Config.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnemySpawnPoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnemySpawnPoints.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonSciFiCity/_Materials/PolygonScifi_01_A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonSciFiCity/_Materials/PolygonScifi_01_A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Components/Meshes/Arms/Materials/Arms Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly FPS Pack - Free (Sample)/Components/Meshes/Arms/Materials/Arms Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController/FirstPersonController/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController/FirstPersonController/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/AttackState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/weaponRecoil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/weaponRecoil.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ZombieFast.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ZombieFast.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +79,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelSo.cs" />
       <option value="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Shared/Ramps/Editor/RampAssetEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/FirstPersonController/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Pathfinding.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Grid.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentSpawner.cs" />
@@ -101,9 +93,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformInformation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformSpawnManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/EnemySpawnPoints.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/EscortState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" />
@@ -113,8 +102,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Events 1/SacrificeEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Altar.cs" />
       <option value="$PROJECT_DIR$/Assets/CharacterManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/weaponRecoil.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PoolType.cs" />
@@ -126,8 +113,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ObjectPoolerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/EnemySpawnPoints.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/FirstPersonController/PlayerController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -223,7 +216,8 @@
       <workItem from="1616754911369" duration="31000" />
       <workItem from="1616774762372" duration="2321000" />
       <workItem from="1616795439051" duration="1198000" />
-      <workItem from="1616861396807" duration="7343000" />
+      <workItem from="1616861396807" duration="9673000" />
+      <workItem from="1616888164917" duration="927000" />
     </task>
     <servers />
   </component>

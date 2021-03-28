@@ -27,7 +27,7 @@ public class EnvironmentSpawner : MonoBehaviour
     private List<Node> GetPath()
     {
         
-        pathfinding = GameManager.instance.pathfinding;
+        pathfinding = GameManager.instance.Pathfinding;
         var path = pathfinding.ReturnPath();
         return path;
     }

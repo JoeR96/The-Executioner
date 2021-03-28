@@ -38,7 +38,8 @@ public abstract class RaycastWeapon : MonoBehaviour
     
     protected float weaponFireTimer;
 
-    public bool WeaponIsReloading { get; protected set; }
+   
+    [field: SerializeField] public bool WeaponIsReloading { get; protected set; }
     public bool WeaponIsLoaded { get; protected set; }
     
     protected float weaponReloadTimer;
@@ -191,13 +192,15 @@ public abstract class RaycastWeapon : MonoBehaviour
     
     protected virtual void Reload()
     {
+        WeaponIsReloading = false;
+        
         if(weaponSpareAmmo <= 0)
             return;
         
         var toAdd = weaponMaxAmmo - weaponCurrentammo;
         weaponCurrentammo += toAdd;
         weaponSpareAmmo -= toAdd;
-        WeaponIsReloading = false;
+        
         
         
     }
