@@ -11,14 +11,16 @@ public class EventManager : MonoBehaviour
     [SerializeField]
     private EnemySpawnPoints enemySpawnPoints;
     
-    private SacrificeEvent sacrificeEvent;
-    private HeartEscortEvent heartEscortEvent;
+    public SacrificeEvent SacrificeEvent { get; private set; }
+    public HeartEscortEvent HeartEscortEvent { get; private set; }
+
     private List<Transform> activeEvents = new List<Transform>();
-    
+   
+
     private void Start()
     {
-        sacrificeEvent = GetComponent<SacrificeEvent>();
-        heartEscortEvent = GetComponent<HeartEscortEvent>();
+        SacrificeEvent = GetComponent<SacrificeEvent>();
+        HeartEscortEvent = GetComponent<HeartEscortEvent>();
     }
 
     public void AssignEvents()
@@ -40,13 +42,14 @@ public class EventManager : MonoBehaviour
     public Transform ReturnActiveRandomEventLocation()
     {
         var random = Random.Range(0, activeEvents.Count);
-        return activeEvents[random];
+        var _ = activeEvents[random];
+        activeEvents.RemoveAt(random);
+        return _;
     }
 
-    private Transform ReturnAvailableEventLocation()
+    public Transform ReturnAvailableEventLocation()
     {
         var eventLocation = enemySpawnPoints.ReturnEventSpawnPoint();
-        Debug.Log(eventLocation);
         return eventLocation;
     }
 
@@ -54,7 +57,7 @@ public class EventManager : MonoBehaviour
     public void PlaySacrificeEvent()
     {
         var eventLocation = ReturnAvailableEventLocation();
-        sacrificeEvent.StartEvent(eventLocation);
+        SacrificeEvent.StartEvent(eventLocation);
         activeEvents.Add(eventLocation);
     }
 
@@ -62,7 +65,7 @@ public class EventManager : MonoBehaviour
     public void PlayHeartEscortEvent()
     {
         var eventLocation = ReturnAvailableEventLocation();
-        heartEscortEvent.StartEvent(eventLocation);
+        HeartEscortEvent.StartEvent(eventLocation);
         activeEvents.Add(eventLocation);
     }
 

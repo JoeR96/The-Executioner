@@ -11,6 +11,7 @@ public class ZombieSpawner : MonoBehaviour
     [SerializeField] private Transform navmeshPos;
     public List<GameObject> ActiveFodderZombies = new List<GameObject>();
     public List<GameObject> ArmoredZombies = new List<GameObject>();
+    
     public GameObject SpawnZombie(Transform location)
     {
         var t = ObjectPooler.instance.GetObject(PoolObjectType.BasicZombie);
@@ -28,9 +29,11 @@ public class ZombieSpawner : MonoBehaviour
     
     public void SpawnRagdollZombiesAtLocations(List<Transform> location)
     {
+        
         for (int i = 0; i < location.Count; i++)
         {
-            
+            if(ActiveFodderZombies.Count >= 30)
+                return;
             var t = SpawnZombie(location[i]);
             t.GetComponent<NavMeshAgent>().enabled = false;
              t.GetComponent<Ragdoll>().ActivateRagDoll();

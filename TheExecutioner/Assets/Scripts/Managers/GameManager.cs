@@ -17,8 +17,8 @@ public class GameManager : Singleton<GameManager>
     public EnvironmentManager EnvironmentManager;
     public Pathfinding Pathfinding;
     public LevelManager LevelManager;
-
     public EventManager EventManager;
+    
     public bool BuildMode;
  
     public override void Awake()
@@ -37,7 +37,7 @@ public class GameManager : Singleton<GameManager>
     {
         if (!BuildMode)
         {
-            InvokeRepeating("StartGameSequence", 1, 45);
+            StartGameSequence();
         }
         else
         {
@@ -58,15 +58,14 @@ public class GameManager : Singleton<GameManager>
     }
     private void StartGameSequence()
     {
-        
         Invoke("LoadLevel", 0.25f);
         Invoke("StartGame", 6f);
         Invoke("SpawnWeapons" ,6f);
-        Invoke("SpawnZombies",7f);
+        Invoke("SpawnFodderZombies",7f);
     }
 
  
-    private void SpawnZombies()
+    private void SpawnFodderZombies()
     {
         List<Transform> newList = EnvironmentManager.EnemySpawnPoints.InternalSpawnPoints;
         List<Transform> temp = new List<Transform>();
@@ -128,7 +127,7 @@ public class GameManager : Singleton<GameManager>
            EventManager.AssignEvents();
         }
         if(Input.GetKeyDown(KeyCode.F3))
-            SpawnZombies();
+            SpawnFodderZombies();
         
         if(Input.GetKeyDown(KeyCode.F4))
             SpawnArmoredZombies();
