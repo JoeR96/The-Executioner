@@ -7,32 +7,27 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Altar.cs" t="Include" />
-        <e p="CharacterManager.cs" t="Include" />
-        <e p="Crosshair.cs" t="Include" />
-        <e p="EffectExamples" t="Include">
-          <e p="Magic Effects" t="Include">
-            <e p="Shaders" t="Include">
-              <e p="Ice.shader" t="Include" />
-            </e>
-          </e>
-          <e p="Misc Effects" t="Include">
-            <e p="Prefabs" t="Include">
-              <e p="Readme_Dissolve_Respawn_.txt" t="Include" />
-            </e>
-            <e p="Scripts" t="Include">
-              <e p="SpawnEffect.cs" t="Include" />
-            </e>
-            <e p="Shaders" t="Include">
-              <e p="Dissolve.shader" t="Include" />
-              <e p="FireFly.shader" t="Include" />
-              <e p="Respawn.shader" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="EnemySpawnPoints.cs" t="Include" />
-        <e p="EscortTest.cs" t="Include" />
         <e p="Imported" t="Include">
+          <e p="EffectExamples" t="Include">
+            <e p="Magic Effects" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="Ice.shader" t="Include" />
+              </e>
+            </e>
+            <e p="Misc Effects" t="Include">
+              <e p="Prefabs" t="Include">
+                <e p="Readme_Dissolve_Respawn_.txt" t="Include" />
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="SpawnEffect.cs" t="Include" />
+              </e>
+              <e p="Shaders" t="Include">
+                <e p="Dissolve.shader" t="Include" />
+                <e p="FireFly.shader" t="Include" />
+                <e p="Respawn.shader" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="ImportedAssets" t="Include">
             <e p="Horizontal Skybox.shader" t="Include" />
             <e p="PolygonSciFiCity" t="Include">
@@ -44,6 +39,40 @@
             <e p="PolygonZombies" t="Include">
               <e p="Shaders" t="Include">
                 <e p="POLYGON_Zombies.shader" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Low Poly FPS Pack - Free (Sample)" t="Include">
+            <e p="Components" t="Include">
+              <e p="Demo_Scene_Components" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="DebrisScript.cs" t="Include" />
+                  <e p="ExplosiveBarrelScript.cs" t="Include" />
+                  <e p="TargetScript.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="Bullet" t="Include">
+                  <e p="BulletScript.cs" t="Include" />
+                </e>
+                <e p="Casings_&amp;_Projectiles" t="Include">
+                  <e p="CasingScript.cs" t="Include" />
+                  <e p="GrenadeScript.cs" t="Include" />
+                </e>
+                <e p="Explosions_&amp;_Impacts" t="Include">
+                  <e p="ExplosionScript.cs" t="Include" />
+                  <e p="ImpactScript.cs" t="Include" />
+                </e>
+                <e p="FPSController" t="Include">
+                  <e p="FpsControllerLPFP.cs" t="Include" />
+                </e>
+                <e p="Misc" t="Include">
+                  <e p="LookAtCamera.cs" t="Include" />
+                </e>
+                <e p="Weapon_Scripts" t="Include">
+                  <e p="AutomaticGunScriptLPFP.cs" t="Include" />
+                  <e p="HandgunScriptLPFP.cs" t="Include" />
+                </e>
               </e>
             </e>
           </e>
@@ -69,6 +98,11 @@
               <e p="Polygon_Triplanar.shader" t="Include" />
             </e>
           </e>
+          <e p="PolygonBossZombies" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="POLYGON_ZombieBoss.shader" t="Include" />
+            </e>
+          </e>
           <e p="ProgressBar" t="Include">
             <e p="Scene" t="Include">
               <e p="Demo.cs" t="Include" />
@@ -78,47 +112,12 @@
               <e p="ProgressBarCircle.cs" t="Include" />
             </e>
           </e>
-        </e>
-        <e p="Low Poly FPS Pack - Free (Sample)" t="Include">
-          <e p="Components" t="Include">
-            <e p="Demo_Scene_Components" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="DebrisScript.cs" t="Include" />
-                <e p="ExplosiveBarrelScript.cs" t="Include" />
-                <e p="TargetScript.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Scripts" t="Include">
-              <e p="Bullet" t="Include">
-                <e p="BulletScript.cs" t="Include" />
-              </e>
-              <e p="Casings_&amp;_Projectiles" t="Include">
-                <e p="CasingScript.cs" t="Include" />
-                <e p="GrenadeScript.cs" t="Include" />
-              </e>
-              <e p="Explosions_&amp;_Impacts" t="Include">
-                <e p="ExplosionScript.cs" t="Include" />
-                <e p="ImpactScript.cs" t="Include" />
-              </e>
-              <e p="FPSController" t="Include">
-                <e p="FpsControllerLPFP.cs" t="Include" />
-              </e>
-              <e p="Misc" t="Include">
-                <e p="LookAtCamera.cs" t="Include" />
-              </e>
-              <e p="Weapon_Scripts" t="Include">
-                <e p="AutomaticGunScriptLPFP.cs" t="Include" />
-                <e p="HandgunScriptLPFP.cs" t="Include" />
-              </e>
+          <e p="SimpleFX" t="Include">
+            <e p="Materials" t="Include">
+              <e p="UnlitVertexColour_Alpha.shader" t="Include" />
             </e>
           </e>
         </e>
-        <e p="PolygonBossZombies" t="Include">
-          <e p="Shaders" t="Include">
-            <e p="POLYGON_ZombieBoss.shader" t="Include" />
-          </e>
-        </e>
-        <e p="RandomPointOnNavMesh.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Audio" t="Include">
             <e p="AudioManager.cs" t="Include" />
@@ -126,6 +125,7 @@
           <e p="CharacterController" t="Include">
             <e p="CharacterAiming.cs" t="Include" />
             <e p="CharacterLocomotion.cs" t="Include" />
+            <e p="CharacterManager.cs" t="Include" />
             <e p="FirstPersonController" t="Include">
               <e p="MouseLook.cs" t="Include" />
               <e p="PlayerController.cs" t="Include" />
@@ -148,19 +148,24 @@
             <e p="PlatformRampManagerEditor.cs" t="Include" />
           </e>
           <e p="Events" t="Include">
+            <e p="AlterEvent" t="Include">
+              <e p="Altar.cs" t="Include" />
+            </e>
+            <e p="EscortEvent" t="Include">
+              <e p="EscortTest.cs" t="Include" />
+              <e p="Heart.cs" t="Include" />
+              <e p="HeartEscortEvent.cs" t="Include" />
+            </e>
             <e p="InteractionSpawnPointManager.cs" t="Include" />
             <e p="InteractionSpawnPointManager1.cs" t="Include" />
             <e p="JailBreakEvent.cs" t="Include" />
             <e p="MovingZombieDumper.cs" t="Include" />
-            <e p="ZombieOverflowEvent.cs" t="Include" />
-          </e>
-          <e p="Events 1" t="Include">
             <e p="SacrificeEvent.cs" t="Include" />
+            <e p="ZombieOverflowEvent.cs" t="Include" />
           </e>
           <e p="HealthSystem" t="Include">
             <e p="HealthSystem.cs" t="Include" />
           </e>
-          <e p="isPoolable.cs" t="Include" />
           <e p="LevelGeneration" t="Include">
             <e p="CheckAdjacentNodes.cs" t="Include" />
             <e p="EnvironmentManager.cs" t="Include" />
@@ -186,13 +191,21 @@
           <e p="Managers" t="Include">
             <e p="EventManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
+            <e p="NavMesh" t="Include">
+              <e p="RandomPointOnNavMesh.cs" t="Include" />
+            </e>
             <e p="Singleton.cs" t="Include" />
             <e p="Timer.cs" t="Include" />
             <e p="ZombieManager.cs" t="Include" />
           </e>
-          <e p="ObjectPooler.cs" t="Include" />
-          <e p="ObjectPoolerTypes.cs" t="Include" />
+          <e p="ObjectPooler" t="Include">
+            <e p="isPoolable.cs" t="Include" />
+            <e p="ObjectPooler.cs" t="Include" />
+            <e p="ObjectPoolerTypes.cs" t="Include" />
+          </e>
           <e p="SpawnSystems" t="Include">
+            <e p="EnemySpawnPoints.cs" t="Include" />
+            <e p="SpawnZombieTest.cs" t="Include" />
             <e p="ZombieSpawner.cs" t="Include" />
           </e>
           <e p="StateMachine" t="Include">
@@ -212,12 +225,14 @@
             </e>
           </e>
           <e p="UI" t="Include">
+            <e p="UiHealthCanvas.cs" t="Include" />
             <e p="WeaponUI" t="Include">
               <e p="SetAmmoText.cs" t="Include" />
             </e>
           </e>
           <e p="WeaponSystem" t="Include">
             <e p="ActiveWeapon.cs" t="Include" />
+            <e p="Crosshair.cs" t="Include" />
             <e p="CrosshairTarget.cs" t="Include" />
             <e p="RaycastWeapon.cs" t="Include" />
             <e p="WeaponPickup.cs" t="Include" />
@@ -251,12 +266,6 @@
             <e p="SimpleCharacterMotor.cs" t="Include" />
           </e>
         </e>
-        <e p="SimpleFX" t="Include">
-          <e p="Materials" t="Include">
-            <e p="UnlitVertexColour_Alpha.shader" t="Include" />
-          </e>
-        </e>
-        <e p="SpawnZombieTest.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">
             <e p="LineBreaking Following Characters.txt" t="Include" />
@@ -286,7 +295,6 @@
             <e p="Readme.cs" t="Include" />
           </e>
         </e>
-        <e p="UiHealthCanvas.cs" t="Include" />
       </e>
       <e p="NavMeshComponents.csproj" t="IncludeRecursive" />
       <e p="NavMeshComponentsEditor.csproj" t="IncludeRecursive" />

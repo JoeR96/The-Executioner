@@ -65,25 +65,7 @@ public class GameManager : Singleton<GameManager>
         Invoke("SpawnZombies",7f);
     }
 
-    public void AssignEvents()
-    {
-        foreach (var go in ZombieManager.ZombieSpawner.ActiveFodderZombies)
-        {
-            if (go.GetComponent<AiAgent>() != null)
-            {
-                var x = go.GetComponent<AiAgent>();
-                x.StateMachine.ChangeState(StateId.EventState);
-            }
-            
-           
-            
-        }
-        foreach (var go in ZombieManager.ZombieSpawner.ArmoredZombies)
-        {
-            var x = go.GetComponent<AiAgent>();
-            x.StateMachine.ChangeState(StateId.EventState);
-        }
-    }
+ 
     private void SpawnZombies()
     {
         List<Transform> newList = EnvironmentManager.EnemySpawnPoints.InternalSpawnPoints;
@@ -143,13 +125,16 @@ public class GameManager : Singleton<GameManager>
         if (Input.GetKeyDown(KeyCode.F2))
         {
            EventManager.PlaySacrificeEvent();
-           AssignEvents();
+           EventManager.AssignEvents();
         }
         if(Input.GetKeyDown(KeyCode.F3))
             SpawnZombies();
         
         if(Input.GetKeyDown(KeyCode.F4))
             SpawnArmoredZombies();
+        
+        if(Input.GetKeyDown(KeyCode.F5))
+            EventManager.PlayHeartEscortEvent();
 
     }
     

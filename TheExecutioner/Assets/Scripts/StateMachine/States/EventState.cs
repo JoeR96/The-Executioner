@@ -14,7 +14,7 @@ public class EventState : IState
 
     public void Enter(AiAgent agent)
     {
-        eventTarget = GameManager.instance.EventManager.ReturnRandomEventLocation();
+        eventTarget = GameManager.instance.EventManager.ReturnActiveRandomEventLocation();
         agent.navMeshAgent.destination = eventTarget.position;
     }
 
