@@ -51,6 +51,8 @@ public class EnemySpawnPoints : MonoBehaviour
         
         return temp;
     }
+    
+
     public void ClearEventSpawns()
     {
         eventSpawnPositions.Clear();

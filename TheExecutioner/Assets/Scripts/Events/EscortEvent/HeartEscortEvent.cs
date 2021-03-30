@@ -3,18 +3,26 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class HeartEscortEvent : MonoBehaviour
+public class HeartEscortEvent : Event
 {
     
     [SerializeField] private GameObject heartPrefab;
     [SerializeField] private GameObject targetAltar;
-    
-    public void StartEvent(Transform altarTransform)
+
+    public override void StartEvent()
     {
-        var startPosition = GameManager.instance.EventManager.ReturnAvailableEventLocation();
-        var heart = Instantiate(heartPrefab, startPosition.position, Quaternion.identity);
-        var target = altarTransform;
-        heart.GetComponent<Heart>().StartEvent(target);
+        var target = eventManager.ReturnAvailableEventLocation().position;
+        
+        activeEventGameObject = Instantiate(eventGameObject, target, quaternion.identity);
+        AddEventTransformsToMaster();
+        SetEventDestination();
+        SetHeart();
+    }
+
+    private void SetHeart()
+    {
+        var activeHeart = activeEventGameObject.GetComponent<Heart>();
+        activeHeart.SetTargetPosition(eventTargetDestination);
     }
 
     public void EventComplete(Heart heart)

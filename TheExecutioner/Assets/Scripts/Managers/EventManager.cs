@@ -14,7 +14,8 @@ public class EventManager : MonoBehaviour
     public SacrificeEvent SacrificeEvent { get; private set; }
     public HeartEscortEvent HeartEscortEvent { get; private set; }
 
-    private List<Transform> activeEvents = new List<Transform>();
+    private List<Transform> activeEventTargetDestinations = new List<Transform>();
+    [SerializeField] private List<Transform> activeEventTransforms = new List<Transform>();
    
 
     private void Start()
@@ -31,42 +32,59 @@ public class EventManager : MonoBehaviour
             {
                 var x = go.GetComponent<AiAgent>();
                 x.StateMachine.ChangeState(StateId.EventState);
+                Debug.Log(x.StateMachine);
             }
         }
         foreach (var go in zombieSpawner.ArmoredZombies)
         {
-            var x = go.GetComponent<AiAgent>();
-            x.StateMachine.ChangeState(StateId.EventState);
+            if (go.GetComponent<AiAgent>() != null)
+            {
+                var x = go.GetComponent<AiAgent>();
+                x.StateMachine.ChangeState(StateId.EventState);
+                Debug.Log(x.StateMachine);
+            }
         }
     }
     public Transform ReturnActiveRandomEventLocation()
     {
-        var random = Random.Range(0, activeEvents.Count);
-        var _ = activeEvents[random];
-        activeEvents.RemoveAt(random);
+        var random = Random.Range(0, activeEventTransforms.Count);
+        var _ = activeEventTransforms[random];
+        activeEventTransforms.RemoveAt(random);
+        return _;
+    }
+    
+    public Transform ReturnActiveRandomEventTransform()
+    {
+        var random = Random.Range(0, activeEventTransforms.Count);
+        var _ = activeEventTransforms[random];
         return _;
     }
 
     public Transform ReturnAvailableEventLocation()
     {
-        var eventLocation = enemySpawnPoints.ReturnEventSpawnPoint();
-        return eventLocation;
+        return enemySpawnPoints.ReturnEventSpawnPoint();
     }
 
-    
+
+    public void AddEventDestinationToList(Transform destination)
+    {
+        activeEventTargetDestinations.Add(destination);
+    }
+
+    public void AddEventTransformObjectToList(Transform eventTransform)
+    {
+        activeEventTransforms.Add(eventTransform);
+    }
+
     public void PlaySacrificeEvent()
     {
-        var eventLocation = ReturnAvailableEventLocation();
-        SacrificeEvent.StartEvent(eventLocation);
-        activeEvents.Add(eventLocation);
+        SacrificeEvent.StartEvent();
     }
 
 
     public void PlayHeartEscortEvent()
     {
-        var eventLocation = ReturnAvailableEventLocation();
-        HeartEscortEvent.StartEvent(eventLocation);
-        activeEvents.Add(eventLocation);
+        HeartEscortEvent.StartEvent();
     }
 
 }

@@ -14,12 +14,14 @@ public class EventState : IState
 
     public void Enter(AiAgent agent)
     {
-        eventTarget = GameManager.instance.EventManager.ReturnActiveRandomEventLocation();
+        eventTarget = GameManager.instance.EventManager.ReturnActiveRandomEventTransform();
+        Debug.Log(eventTarget);
         agent.navMeshAgent.destination = eventTarget.position;
     }
 
     public void Update(AiAgent agent)
     {
+        agent.navMeshAgent.destination = eventTarget.position;
         if (IsAgentOnNavMesh(agent) && agent.navMeshAgent.isOnNavMesh)
         {
             if(!agent.enabled )
@@ -33,7 +35,7 @@ public class EventState : IState
 
             if (_timer < 0.0f)
             {
-                Vector3 direction = (agent.Player.position - agent.navMeshAgent.destination);
+                Vector3 direction = (eventTarget.position - agent.navMeshAgent.destination);
                 direction.y = 0;
                 if (direction.sqrMagnitude > agent.AgentConfig.MaxDistance * agent.AgentConfig.MaxDistance) 
                 {

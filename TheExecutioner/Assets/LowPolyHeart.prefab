@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8240951189856932770}
   - component: {fileID: 8240951189856932769}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Spot Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 8240951189112241489}
   - component: {fileID: 8240951189112241495}
   - component: {fileID: 8240951189112241488}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: LowPolyHeart
   m_TagString: Untagged
   m_Icon: {fileID: 0}

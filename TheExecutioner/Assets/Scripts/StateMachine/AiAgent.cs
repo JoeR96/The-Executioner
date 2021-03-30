@@ -11,6 +11,7 @@ public class AiAgent : MonoBehaviour
     public StateId InitialState;
     public NavMeshAgent navMeshAgent;
     public Transform Player;
+    public Transform EventTarget;
     public AiAgentConfig AgentConfig;
     public Animator Animator;
     public Ragdoll Ragdoll;
