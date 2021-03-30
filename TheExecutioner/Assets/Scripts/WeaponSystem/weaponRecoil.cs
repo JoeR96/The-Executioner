@@ -29,7 +29,7 @@ public class weaponRecoil : MonoBehaviour
         _index = 0;
     }
 
-    public void GenerateRecoil(string weaponName)
+    public void  GenerateRecoil(string weaponName)
     {
         time = duration;
         CameraShake.GenerateImpulse(Camera.main.transform.forward);

@@ -8,6 +8,7 @@ TagManager:
   - DestructibleLimb
   - Cube
   - Root
+  - Heart
   layers:
   - Default
   - TransparentFX

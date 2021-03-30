@@ -25,6 +25,6 @@ public abstract class Event : MonoBehaviour, IStartEvent
     public void AddEventTransformsToMaster()
     {
         eventManager.AddEventDestinationToList(eventTargetDestination);
-        eventManager.AddEventTransformObjectToList(eventGameObject.transform);
+        eventManager.AddEventTransformObjectToList(activeEventGameObject);
     }
 }

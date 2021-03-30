@@ -13,7 +13,7 @@ public class Heart : MonoBehaviour
     {
         
         navmeshAgent = GetComponent<NavMeshAgent>();
-        navmeshAgent.speed = Random.Range(2, 4);
+        navmeshAgent.speed = Random.Range(1.5f, 3f);
     }
 
     private void Update()

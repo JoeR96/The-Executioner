@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EventState : IState
 {
     private Transform eventTarget;
-    private float _timer = 00f;
+    private float timer = 1f;
     public StateId GetId()
     {
         return StateId.EventState;
@@ -14,37 +14,36 @@ public class EventState : IState
 
     public void Enter(AiAgent agent)
     {
-        eventTarget = GameManager.instance.EventManager.ReturnActiveRandomEventTransform();
-        Debug.Log(eventTarget);
-        agent.navMeshAgent.destination = eventTarget.position;
+        var go = GameManager.instance.EventManager.ReturnActiveRandomEventTransform();
+        agent.EventTarget = go.transform;
+        agent.navMeshAgent.destination = agent.EventTarget.position;
     }
 
     public void Update(AiAgent agent)
     {
-        agent.navMeshAgent.destination = eventTarget.position;
         if (IsAgentOnNavMesh(agent) && agent.navMeshAgent.isOnNavMesh)
         {
             if(!agent.enabled )
                 return;
             
-            _timer -= Time.deltaTime;
+            timer -= Time.deltaTime;
             if (!agent.navMeshAgent.hasPath)
             {
-                agent.navMeshAgent.destination = eventTarget.position;
+                agent.navMeshAgent.destination = agent.EventTarget.position;
             }
 
-            if (_timer < 0.0f)
+            if (timer < 0.0f)
             {
-                Vector3 direction = (eventTarget.position - agent.navMeshAgent.destination);
+                Vector3 direction = agent.EventTarget.position - agent.navMeshAgent.destination;
                 direction.y = 0;
                 if (direction.sqrMagnitude > agent.AgentConfig.MaxDistance * agent.AgentConfig.MaxDistance) 
                 {
                     if (agent.navMeshAgent.pathStatus != NavMeshPathStatus.PathPartial)
                     {
-                        agent.navMeshAgent.destination = eventTarget.position;
+                        agent.navMeshAgent.destination = agent.EventTarget.position;
                     }
                 }
-                _timer = agent.AgentConfig.MaxTime;
+                timer = agent.AgentConfig.MaxTime;
             }
         }
 

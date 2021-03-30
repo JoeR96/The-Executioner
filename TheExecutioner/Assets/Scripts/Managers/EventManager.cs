@@ -15,7 +15,7 @@ public class EventManager : MonoBehaviour
     public HeartEscortEvent HeartEscortEvent { get; private set; }
 
     private List<Transform> activeEventTargetDestinations = new List<Transform>();
-    [SerializeField] private List<Transform> activeEventTransforms = new List<Transform>();
+    [SerializeField] private List<GameObject> activeEventGameObjects = new List<GameObject>();
    
 
     private void Start()
@@ -47,17 +47,17 @@ public class EventManager : MonoBehaviour
     }
     public Transform ReturnActiveRandomEventLocation()
     {
-        var random = Random.Range(0, activeEventTransforms.Count);
-        var _ = activeEventTransforms[random];
-        activeEventTransforms.RemoveAt(random);
-        return _;
+        var random = Random.Range(0, activeEventGameObjects.Count);
+        var _ = activeEventGameObjects[random];
+        activeEventGameObjects.RemoveAt(random);
+        return _.transform;
     }
     
-    public Transform ReturnActiveRandomEventTransform()
+    public GameObject ReturnActiveRandomEventTransform()
     {
-        var random = Random.Range(0, activeEventTransforms.Count);
-        var _ = activeEventTransforms[random];
-        return _;
+        var random = Random.Range(0, activeEventGameObjects.Count);
+        var _ = activeEventGameObjects[random];
+        return _.gameObject;
     }
 
     public Transform ReturnAvailableEventLocation()
@@ -71,9 +71,9 @@ public class EventManager : MonoBehaviour
         activeEventTargetDestinations.Add(destination);
     }
 
-    public void AddEventTransformObjectToList(Transform eventTransform)
+    public void AddEventTransformObjectToList(GameObject go)
     {
-        activeEventTransforms.Add(eventTransform);
+        activeEventGameObjects.Add(go);
     }
 
     public void PlaySacrificeEvent()

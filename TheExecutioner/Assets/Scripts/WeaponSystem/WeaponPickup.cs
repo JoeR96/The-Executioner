@@ -33,7 +33,7 @@ public class WeaponPickup : MonoBehaviour
     public RaycastWeapon raycastWeapon;
     void OnTriggerEnter(Collider other)
     {
-    
+        
         if (other.CompareTag("Player"))
         {
             ActiveWeapon activeWeapon = other.GetComponent<ActiveWeapon>();

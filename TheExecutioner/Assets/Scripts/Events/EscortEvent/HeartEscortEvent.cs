@@ -9,6 +9,8 @@ public class HeartEscortEvent : Event
     [SerializeField] private GameObject heartPrefab;
     [SerializeField] private GameObject targetAltar;
 
+    private Transform targetPos;
+    
     public override void StartEvent()
     {
         var target = eventManager.ReturnAvailableEventLocation().position;
@@ -28,7 +30,9 @@ public class HeartEscortEvent : Event
     public void EventComplete(Heart heart)
     {
         var altar = Instantiate(targetAltar, heart.Destination.position,quaternion.identity);
-        var targetPos = ReturnHeartTargetPosition(altar);
+        targetPos = ReturnHeartTargetPosition(altar);
+
+        heart.transform.rotation = targetPos.rotation;
         
         heart.DisableNavmeshAgent();
         StartCoroutine(LerpHeartTransform(heart.gameObject, targetPos.position));
@@ -42,6 +46,7 @@ public class HeartEscortEvent : Event
 
     private IEnumerator LerpHeartTransform(GameObject heart,Vector3 targetPosition)
     {
+        Transform startRotation = heart.transform;
         Vector3 startPosition = heart.transform.position;
         float timer = 0f;
         float duration = 1f;
@@ -51,6 +56,7 @@ public class HeartEscortEvent : Event
             float percentage = Mathf.Min(timer / duration, 1);
             timer += Time.deltaTime;
             heart.transform.position = Vector3.Lerp(startPosition,targetPosition,percentage);
+            heart.transform.rotation = Quaternion.Slerp(heart.transform.rotation, targetPos.rotation, percentage);
             yield return null;
         }
     }
