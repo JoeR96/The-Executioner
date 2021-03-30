@@ -124,7 +124,7 @@ public class GameManager : Singleton<GameManager>
         if (Input.GetKeyDown(KeyCode.F2))
         {
            EventManager.PlaySacrificeEvent();
-           EventManager.AssignEvents();
+           
         }
         if(Input.GetKeyDown(KeyCode.F3))
             SpawnFodderZombies();
@@ -134,7 +134,9 @@ public class GameManager : Singleton<GameManager>
         
         if(Input.GetKeyDown(KeyCode.F5))
             EventManager.PlayHeartEscortEvent();
-
+        
+        if(Input.GetKeyDown(KeyCode.F6))
+            EventManager.AssignEvents();
     }
     
     public void GameOver()
