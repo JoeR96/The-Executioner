@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
-public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
+public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventArea
 {
     
     [SerializeField] protected ParticleSystem[] _particleSystem;
@@ -119,6 +119,8 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     
     public LimbParticleLocation[] _LimbParticleLocations;
     public ParticleSystem _bloodSplat;
+    private IIsInEventArea _isInEventAreaImplementation;
+
     private void PlayParticleAtLimb(string name)
     {
         var limb = Array.Find(_LimbParticleLocations, 
@@ -227,6 +229,14 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
 
         return false;
     }
+    
+    public void IsInArea(bool state)
+    {
+        Debug.Log(state);
+        InEvent = state;
+    }
+
+
 }
 public interface ITakeDamage
 { 

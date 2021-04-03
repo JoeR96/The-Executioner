@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class Altar : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Component other)
     {
-        if(other.GetComponent<EnemyBase>())
-                other.GetComponent<EnemyBase>().InEvent = true;
-            Debug.Log("ZOMBIES IN ARENA!!");
+        Debug.Log(other.name);
+        Debug.Log("Entered");
+        var enemy = other.GetComponentInParent<IIsInEventArea>();
+        Debug.Log(enemy);
+        enemy?.IsInArea(true);
 
     }
     
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Component other)
     {
-        if(other.GetComponent<EnemyBase>())
-            other.GetComponent<EnemyBase>().InEvent = false;
-        Debug.Log("ZOMBIES LEFT ARENA!!");
+        Debug.Log("Exit");
+        var enemy = other.GetComponentInParent<IIsInEventArea>();
+        Debug.Log(enemy);
+        enemy?.IsInArea(false);
     }
 }

@@ -11,16 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AnimationControllers/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationControllers/PlayerController.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_fire.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_fire.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_equip.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_equip.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_fire.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_fire.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieFast.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieFast.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieSlow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieSlow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Altar/Altar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Altar/Altar.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,8 +60,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Shared/Ramps/Editor/RampAssetEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Pathfinding.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Grid.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" />
@@ -113,8 +107,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/EventState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/weaponRecoil.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/IIsInEventArea.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -216,6 +212,7 @@
       <workItem from="1617027387556" duration="9172000" />
       <workItem from="1617122857584" duration="16469000" />
       <workItem from="1617377588227" duration="3572000" />
+      <workItem from="1617486753222" duration="844000" />
     </task>
     <servers />
   </component>
