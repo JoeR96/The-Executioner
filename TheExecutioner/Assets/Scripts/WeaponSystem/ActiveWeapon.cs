@@ -15,7 +15,7 @@ public class ActiveWeapon : MonoBehaviour
 
     public CharacterAiming CharacterAiming;
     public Transform CrossHairTarget;
-    private RaycastWeapon[] _equippedWeapons = new RaycastWeapon[2];
+   [SerializeField] private RaycastWeapon[] _equippedWeapons = new RaycastWeapon[2];
     private int activeWeaponIndex;
     public RaycastWeapon CurrentRaycastWeapon;
     public Transform[] WeaponSlots;
@@ -51,21 +51,17 @@ public class ActiveWeapon : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            SetActiveWeapon(WeaponSlot.PrimaryWeapon);
+            EquipWeapon(_equippedWeapons[0]);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            SetActiveWeapon(WeaponSlot.SecondaryWeapon);
+            EquipWeapon(_equippedWeapons[1]);
         }
     }
     
     private void SetActiveWeapon(WeaponSlot weaponSlot)
     {
-        int holsterIndex = activeWeaponIndex;
-        int activateIndex = (int)weaponSlot;
-        if (holsterIndex == activateIndex)
-            holsterIndex = -1;
-        StartCoroutine(SwitchWeapon(holsterIndex, activateIndex));
+        CurrentRaycastWeapon = _equippedWeapons[(int) weaponSlot];
     }
     
     IEnumerator SwitchWeapon(int holsterIndex, int activeIndex)
@@ -90,10 +86,12 @@ public class ActiveWeapon : MonoBehaviour
 
     IEnumerator ActivateWeapon(int index)
     {
+        SetActiveWeapon((WeaponSlot) index);
+        _equippedWeapons[index].gameObject.SetActive(true);
         var weapon = GetWeapon(index);
         if (weapon)
         {
-            
+
             RigController.Play("equip_" + weapon.WeaponName);
             do
             {
@@ -112,6 +110,9 @@ public class ActiveWeapon : MonoBehaviour
     }
     public void EquipWeapon(RaycastWeapon weapon)
     {
+        CurrentRaycastWeapon.gameObject.SetActive(false);
+        SetActiveWeapon(weapon.weaponSlot);
+        CurrentRaycastWeapon.gameObject.SetActive(true);
         RigController.Play("weapon_"+weapon.WeaponName+"_equip",0);
         activeWeaponIndex = (int) weapon.weaponSlot;    
         WeaponSlots[activeWeaponIndex].gameObject.SetActive(true);

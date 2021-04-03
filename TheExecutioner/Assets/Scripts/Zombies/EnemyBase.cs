@@ -15,7 +15,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
     [SerializeField] protected Vector3 _explosionScaleSize;
     [SerializeField] protected float _explosionScaleTime;
     [SerializeField] protected float _maxHealth;
-    
+    [SerializeField] private ParticleSystem spawnParticle;
     [field: SerializeField]
      public float Damage { get; set; }
          
@@ -39,9 +39,11 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb
         _animator = GetComponent<Animator>();
         AnimatorStateInfo state = _animator.GetCurrentAnimatorStateInfo(0);
         _animator.Play(state.fullPathHash, -1, Random.Range(0f, 1f));
+        spawnParticle.Play();
     }
     protected virtual void Start()
     {
+        
         PopulateLimbDictionary();
         SetRandomSkin();
     }
