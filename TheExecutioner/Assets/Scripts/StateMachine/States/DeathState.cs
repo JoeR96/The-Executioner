@@ -6,6 +6,7 @@ using UnityEngine;
 public class DeathState : IState
 {
     public Vector3 Direction;
+    private Timer timer;
     public StateId GetId()
     {
         return StateId.DeathState;
@@ -13,26 +14,29 @@ public class DeathState : IState
 
     public void Enter(AiAgent agent)
     {
+        timer = new Timer(5f);
         if (agent.navMeshAgent != null)
         {
             agent.navMeshAgent.enabled = false;
         }
-        
+
+        agent.EnemyBase.ActiveSkin.gameObject.SetActive(false);
+        agent.EnemyBase.LimbManager.PlayDeathParticles();
         agent.Ragdoll.ActivateRagDoll();
         Direction.y = 1;
         agent.Ragdoll.ApplyForce(Direction * agent.AgentConfig.DieForce);
         agent.Mesh.updateWhenOffscreen = true;
+
     }
 
     public void Update(AiAgent agent)
     {
-     
+     if(timer.TimerIsOver())
+         ObjectPooler.instance.ReturnObject(agent.gameObject,agent.EnemyBase.ZombieType);
     }
 
     public void Exit(AiAgent agent)
     {
         
     }
-
-
 }

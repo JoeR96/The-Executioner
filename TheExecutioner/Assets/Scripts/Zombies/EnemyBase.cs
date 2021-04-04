@@ -7,180 +7,84 @@ using Random = UnityEngine.Random;
 
 public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventArea
 {
-    
-    [SerializeField] protected ParticleSystem[] _particleSystem;
-    [SerializeField] protected GameObject[] _limbs;
+    [SerializeField] private ParticleSystem spawnParticle;
     [SerializeField] protected GameObject _rootComponent;
     [SerializeField] protected GameObject _zombieSkinContainer;
     [SerializeField] protected Vector3 _explosionScaleSize;
     [SerializeField] protected float _explosionScaleTime;
     [SerializeField] protected float _maxHealth;
-    [SerializeField] private ParticleSystem spawnParticle;
+
     [field: SerializeField]
      public float Damage { get; set; }
-         
-    private GameObject activeSkin;
-    private Dictionary<string,Transform> _destructibleLimbs = new Dictionary<string, Transform>();
-    private Dictionary<String,ParticleSystem> _destructibleLimbParticle = new Dictionary<string, ParticleSystem>();
-    protected Animator _animator;
-    protected HealthSystem _healthSystem;
 
+     public LimbManager LimbManager { get; private set; }
+     public PoolObjectType ZombieType { get; private set; }
+
+     public GameObject ActiveSkin;
+     protected Animator _animator;
+    protected HealthSystem healthSystem;
     protected AiAgent _aiAgent;
-    protected NavMeshAgent _navMeshAgent;
-    private StateMachine _stateMachine;
- 
-    protected bool _isMelee;
-
+    
     private void Awake()
     {
         _aiAgent = GetComponent<AiAgent>();
-        _healthSystem = new HealthSystem(_maxHealth,_maxHealth);
-        _navMeshAgent = GetComponent<NavMeshAgent>();
+        healthSystem = new HealthSystem(_maxHealth,_maxHealth);
         _animator = GetComponent<Animator>();
-        AnimatorStateInfo state = _animator.GetCurrentAnimatorStateInfo(0);
-        _animator.Play(state.fullPathHash, -1, Random.Range(0f, 1f));
-        spawnParticle.Play();
+        LimbManager = GetComponent<LimbManager>();
     }
-    protected virtual void Start()
+
+    private void Start()
     {
-        
-        PopulateLimbDictionary();
+        spawnParticle.Play();
+        SetRandomAnimTime();
         SetRandomSkin();
     }
 
+    private void SetRandomAnimTime()
+    {
+        AnimatorStateInfo state = _animator.GetCurrentAnimatorStateInfo(0);
+        _animator.Play(state.fullPathHash, -1, Random.Range(0f, 1f));
+    }
     private void SetRandomSkin()
     {
         var random = Random.Range(0, _zombieSkinContainer.transform.childCount);
-        _zombieSkinContainer.transform.GetChild(random).gameObject.SetActive(true);
+        var skin = _zombieSkinContainer.transform.GetChild(random).gameObject;
+        skin.SetActive(true);
+        ActiveSkin = skin;
     }
     bool isOnMesh;
     private bool isAlive = true;
     protected void Update()
     {
-        
         if (IsAgentOnNavMesh() && isOnMesh == false && isAlive)
         {
             isOnMesh = true;
               ActivateZombie();
           }
-        
     }
     
     public void ActivateZombie( )
     {
-        _navMeshAgent.enabled = true;
+        _aiAgent.navMeshAgent.enabled = true;
         GetComponent<Ragdoll>().DeactivateRagdoll();
         
     }
     
     public void TakeDamage(float damage, Vector3 direction)
     {
-        _healthSystem.TakeDamage(damage);
-        if (_healthSystem.CurrentHealth < 0)
+        healthSystem.TakeDamage(damage);
+        if (healthSystem.CurrentHealth < 0)
         {
-            Die(direction);
-            PlayDeathParticles();
+            _aiAgent.StateMachine.ChangeState(StateId.DeathState);
+           
         }
     }
     
-    private void PopulateLimbDictionary()
-    {
-        foreach (var gameobject in _limbs)
-        {
-            _destructibleLimbs.Add(gameobject.transform.name,gameobject.transform);
-        }
-    }
+
 
     public bool InEvent;
     
-    protected virtual void Die(Vector3 direction)
-    {
-        if (InEvent)
-        {
-            isAlive = false;
-            _aiAgent.Ragdoll.ActivateRagDoll();
-        }
-        else
-        {
-            DeathState deathState = _aiAgent.StateMachine.GetState(StateId.DeathState) as DeathState;
-            if (deathState != null) deathState.Direction = direction;
-            _aiAgent.StateMachine.ChangeState(StateId.DeathState);
-        
-            StartCoroutine(Die());
-        }
-       
-    }
-
-    private IEnumerator Die()
-    {
-        yield return new WaitForSeconds(2f);
-        Destroy(gameObject);
-    }
-    
-    public LimbParticleLocation[] _LimbParticleLocations;
-    public ParticleSystem _bloodSplat;
-    private IIsInEventArea _isInEventAreaImplementation;
-
-    private void PlayParticleAtLimb(string name)
-    {
-        var limb = Array.Find(_LimbParticleLocations, 
-            zombieLimb => zombieLimb.Name == name);
-        var t = limb.Location;
-        
-        _bloodSplat.transform.SetParent(t);
-        _bloodSplat.transform.SetPositionAndRotation(t.position,t.rotation);
-        _bloodSplat.Play();
-
-    }
-
-    [Serializable]
-    public struct LimbParticleLocation
-    {
-        public string Name;
-        public Transform Location;
-    }
-    public void DestroyLimb(string name,Vector3 direction)
-    {
-        Debug.Log(name);
-        var transformTarget = _destructibleLimbs[name];
-
-        Debug.Log(name);
-        StartCoroutine(ScaleComponent(transformTarget, 
-            new Vector3(0,0,0), 0.25f));
-        var t = _destructibleLimbs[name];
-        var limb = GameManager.instance.LimbSpawner.ReturnLimb(name);
-        limb.transform.position = _destructibleLimbs[name].transform.position;
-        
-        limb.GetComponent<Rigidbody>().AddForce(-direction);
-        if (name == "Head")
-        {
-            _aiAgent.Ragdoll.ActivateRagDoll();
-            var random = Random.Range(0, 3);
-            Debug.Log(random);
-            if (random == 1)
-            {
-                _animator.SetBool("DiedByHeadshot", true);
-                AudioManager.Instance.PlaySound("HeadshotSplat");
-            }
-        }
-
-        PlayParticleAtLimb(name);
-        StartCoroutine(DestroyObject(limb,5f));
-    }
-
-    private IEnumerator DestroyObject(GameObject toDestroy,float duration)
-    {
-        yield return new WaitForSeconds(duration);
-        Destroy(toDestroy);
-    }
-    private void PlayDeathParticles()
-    {
-        foreach (var particle in _particleSystem)
-        {
-            particle.Play();
-        }
-        
-    }
+   
 
     //Scale the limb to size 0 so it is removed from the body and the animation still functions
     private IEnumerator ScaleComponent(Transform target, Vector3 targetSize, float speed)
@@ -195,20 +99,18 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
             target.localScale = Vector3.Lerp(startSize, targetSize,percentage);
             yield return null;
         }
-
-        if (_isMelee)
-        {
-            PlayDeathParticles();
-        }
     }
+
+
+    private  EnemyPartices _enemyPartices = new EnemyPartices();
+
+
     private void ScaleRootComponents()
     {
         var root = _rootComponent.transform;
         StartCoroutine(ScaleComponent(root, _explosionScaleSize, 1f));
     }
-
-
-  
+    
     public bool IsAgentOnNavMesh()
     {
         float onMeshThreshold = 3;
@@ -232,8 +134,39 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     
     public void IsInArea(bool state)
     {
-        Debug.Log(state);
         InEvent = state;
+    }
+
+
+    public void DestroyLimb(string limbName,Vector3 direction)
+    {
+        Debug.Log(limbName);
+        Debug.Log(LimbManager.DestructibleLimbs.Count);
+        var transformTarget = LimbManager.DestructibleLimbs[limbName];
+       
+        Debug.Log(transformTarget.name);
+        
+        StartCoroutine(ScaleComponent(transformTarget, 
+            new Vector3(0,0,0), 0.25f));
+        var t = LimbManager.DestructibleLimbs[limbName];
+        var limb = GameManager.instance.LimbSpawner.ReturnLimb(limbName);
+        limb.transform.position = LimbManager.DestructibleLimbs[limbName].transform.position;
+        
+        limb.GetComponent<Rigidbody>().AddForce(-direction);
+        if (limbName == "Head")
+        {
+            _aiAgent.Ragdoll.ActivateRagDoll();
+            var random = Random.Range(0, 3);
+            Debug.Log(random);
+            if (random == 1)
+            {
+                _animator.SetBool("DiedByHeadshot", true);
+                AudioManager.Instance.PlaySound("HeadshotSplat");
+            }
+        }
+
+        LimbManager.PlayParticleAtLimb(limbName);
+        StartCoroutine(LimbManager.RemoveLimb(limb,5f));
     }
 
 
@@ -243,9 +176,4 @@ public interface ITakeDamage
     void TakeDamage(float damage, Vector3 direction);
 }
 
-public interface IDestroyLimb
-{
-    void DestroyLimb(string name,Vector3 direction);
-
-}
 

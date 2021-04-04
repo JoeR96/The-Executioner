@@ -10268,7 +10268,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.404154, y: 0.061368644, z: 1.5145783e-15}
+  m_ConnectedAnchor: {x: -0.40415385, y: 0.06136661, z: 1.5145776e-15}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -10441,7 +10441,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.39930987, y: 0.0000007227063, z: -0.00000055879354}
+  m_ConnectedAnchor: {x: 0.39930922, y: -0.000001206994, z: -0.00000055134296}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -10582,7 +10582,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.233716, y: -0.007858336, z: -0.19098663}
+  m_ConnectedAnchor: {x: -0.2337153, y: -0.007856511, z: -0.19098854}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -13726,7 +13726,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.23371792, y: -0.007858038, z: 0.19098663}
+  m_ConnectedAnchor: {x: -0.23371811, y: -0.007856108, z: 0.19098854}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -14726,7 +14726,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.3394705, y: -0.0014498048, z: -0.0014397874}
+  m_ConnectedAnchor: {x: -0.3394742, y: -0.0014490248, z: -0.001435915}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -15623,7 +15623,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.39931, y: -0.0000006631017, z: 0.000000603497}
+  m_ConnectedAnchor: {x: -0.3993091, y: -0.00000063329935, z: 0.0000006109476}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -15733,6 +15733,7 @@ GameObject:
   - component: {fileID: 3025747335874322063}
   - component: {fileID: 3025747335874322056}
   - component: {fileID: 8558688465867651075}
+  - component: {fileID: 418726500}
   m_Layer: 12
   m_Name: ZombieFast
   m_TagString: Untagged
@@ -15755,6 +15756,7 @@ Transform:
   - {fileID: 3024078059313591863}
   - {fileID: 3024362246782552201}
   - {fileID: 1808532013711949840}
+  - {fileID: 4597829290481273}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15789,45 +15791,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a2512ecd9a28b428eba2013d8207b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _particleSystem: []
-  _limbs:
-  - {fileID: 3025908092865166611}
-  - {fileID: 3025715805398393857}
-  - {fileID: 3026015275896448645}
-  - {fileID: 3025091344338973295}
-  - {fileID: 3025043393134783717}
-  - {fileID: 3025499101455059253}
-  - {fileID: 3025879403214687335}
-  - {fileID: 3025100871672774517}
-  - {fileID: 3025617645720049561}
+  spawnParticle: {fileID: 4187161446715573734}
   _rootComponent: {fileID: 3026104692043339451}
   _zombieSkinContainer: {fileID: 3024362246782552202}
   _explosionScaleSize: {x: 2, y: 2, z: 2}
   _explosionScaleTime: 0.25
   _maxHealth: 250
-  spawnParticle: {fileID: 4187161446715573734}
   <Damage>k__BackingField: 0
+  ActiveSkin: {fileID: 0}
   InEvent: 0
-  _LimbParticleLocations:
-  - Name: LowerLeg_L
-    Location: {fileID: 3024362246753939568}
-  - Name: LowerLeg_R
-    Location: {fileID: 3024362247425273986}
-  - Name: UpperLeg_R
-    Location: {fileID: 3024362246565030195}
-  - Name: UpperLeg_L
-    Location: {fileID: 3024362248270734615}
-  - Name: Shoulder_L
-    Location: {fileID: 3024362247574521574}
-  - Name: Elbow_L
-    Location: {fileID: 3024362247385001492}
-  - Name: Shoulder_R
-    Location: {fileID: 3024362248053520189}
-  - Name: Elbow_R
-    Location: {fileID: 3024362247321904957}
-  - Name: Head
-    Location: {fileID: 3024362247723715323}
-  _bloodSplat: {fileID: 4462267626112938722}
 --- !u!195 &3025747335874322057
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15904,6 +15876,50 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!114 &418726500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3025747335874322059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957ac1d7f39c6c64a804d93b72d131ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deathParticles:
+  - {fileID: 198355780156179231}
+  _limbs:
+  - {fileID: 3025908092865166611}
+  - {fileID: 3025091344338973295}
+  - {fileID: 3026015275896448645}
+  - {fileID: 3025715805398393857}
+  - {fileID: 3025499101455059253}
+  - {fileID: 3025617645720049561}
+  - {fileID: 3025100871672774517}
+  - {fileID: 3025879403214687335}
+  - {fileID: 3025043393134783717}
+  _LimbParticleLocations:
+  - Name: LowerLeg_L
+    Location: {fileID: 3024362246753939568}
+  - Name: LowerLeg_R
+    Location: {fileID: 3024362247425273986}
+  - Name: UpperLeg_L
+    Location: {fileID: 3024362248270734615}
+  - Name: UpperLeg_R
+    Location: {fileID: 3024362246565030195}
+  - Name: Elbow_R
+    Location: {fileID: 3024362247321904957}
+  - Name: Elbow_L
+    Location: {fileID: 3024362247574521574}
+  - Name: Shoulder_L
+    Location: {fileID: 3024362247574521574}
+  - Name: Shoulder_R
+    Location: {fileID: 3024362248053520189}
+  - Name: Head
+    Location: {fileID: 3024362247723715323}
+  _bloodSplat: {fileID: 198355780156179231}
 --- !u!1 &3025764004557357249
 GameObject:
   m_ObjectHideFlags: 0
@@ -16870,7 +16886,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.33947825, y: 0.0014482108, z: 0.0014397167}
+  m_ConnectedAnchor: {x: 0.33947432, y: 0.0014475943, z: 0.0014359374}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -17144,7 +17160,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.04115748, y: -0.026921278, z: 0.098968506}
+  m_ConnectedAnchor: {x: 0.04115748, y: -0.026921278, z: 0.0989666}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -17518,7 +17534,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.2818376, y: 0.036006197, z: 0}
+  m_ConnectedAnchor: {x: -0.28183714, y: 0.036006138, z: 0}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -18270,7 +18286,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.04115748, y: -0.026921278, z: -0.098968506}
+  m_ConnectedAnchor: {x: 0.04115748, y: -0.026921278, z: -0.0989666}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -47473,3 +47489,96 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1001 &1241520529
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3019808348438999527}
+    m_Modifications:
+    - target: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_Name
+      value: FX_Explosion_Body_Bloody_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597830263558120, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597830263558120, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597830263558120, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597830263558120, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597830263558120, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597830263558120, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597830263558120, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597830263558120, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597830263558120, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597830263558120, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597830263558120, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597830263558120, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 199146105760861778, guid: 3b517eddec185dd4a830743a742ad00b,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199168678241948164, guid: 3b517eddec185dd4a830743a742ad00b,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199298478915647496, guid: 3b517eddec185dd4a830743a742ad00b,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199984788572563202, guid: 3b517eddec185dd4a830743a742ad00b,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+--- !u!4 &4597829290481273 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4597830263558120, guid: 3b517eddec185dd4a830743a742ad00b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1241520529}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &198355780156179231 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198355779183106702, guid: 3b517eddec185dd4a830743a742ad00b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1241520529}
+  m_PrefabAsset: {fileID: 0}

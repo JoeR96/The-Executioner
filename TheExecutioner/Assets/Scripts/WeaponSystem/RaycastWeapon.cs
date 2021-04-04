@@ -139,6 +139,7 @@ public abstract class RaycastWeapon : MonoBehaviour
  
         if(Physics.Raycast(ray,out hitInfo))
         {
+            Debug.Log(hitInfo.collider.name);
             HitEffect.transform.position = hitInfo.point;
             HitEffect.transform.forward = hitInfo.normal;
             HitEffect.Emit(1);
@@ -151,8 +152,7 @@ public abstract class RaycastWeapon : MonoBehaviour
                 hitInfo.collider.GetComponentInParent<ITakeDamage>().TakeDamage(100, ray.direction);
                 if (hitInfo.collider.CompareTag("DestructibleLimb"))
                 {
-                    Debug.Log(name);
-                    hitInfo.collider.GetComponentInParent<IDestroyLimb>().DestroyLimb(name, hitInfo.point);   
+                    hitInfo.collider.GetComponentInParent<IDestroyLimb>().DestroyLimb(hitInfo.collider.name, hitInfo.point);   
                 }
             }
            

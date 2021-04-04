@@ -21,7 +21,6 @@ public class Heart : MonoBehaviour
         if (HasReachedDestination() && eventComplete != true)
         {
             eventComplete = true;
-            Debug.Log(Destination);
             GameManager.instance.EventManager.HeartEscortEvent.EventComplete(this);
         }
             

@@ -252,7 +252,10 @@
           </e>
           <e p="Zombies" t="Include">
             <e p="EnemyBase.cs" t="Include" />
+            <e p="EnemyPartices.cs" t="Include" />
+            <e p="IDestroyLimb.cs" t="Include" />
             <e p="Lerper.cs" t="Include" />
+            <e p="LimbManager.cs" t="Include" />
             <e p="LimbSpawner.cs" t="Include" />
             <e p="Ragdoll.cs" t="Include" />
           </e>
