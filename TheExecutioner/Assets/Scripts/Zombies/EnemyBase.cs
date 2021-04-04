@@ -174,6 +174,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
 public interface ITakeDamage
 { 
     void TakeDamage(float damage, Vector3 direction);
+   
 }
 
 

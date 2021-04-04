@@ -11,22 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyPartices.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/LimbManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonParticleFX/Prefabs/FX_Explosion_Body_Bloody_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonParticleFX/Prefabs/FX_Explosion_Body_Bloody_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieCrawler 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieCrawler 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieFast.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieFast.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieSlow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieSlow.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/EnemyTargetZombie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/EnemyTargetZombie.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IIsInEventArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IIsInEventArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/Lerper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/Lerper.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +64,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/SMG.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/WeaponUI/SetAmmoText.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/Shotgun.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlaterformColourManagerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformInformation.cs" />
@@ -102,25 +94,27 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/IStartEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AltarEventCompleteTrigger.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/EventState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/weaponRecoil.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/IIsInEventArea.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/IDestroyLimb.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Lerper.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyPartices.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/EnemyTargetZombie.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/LimbManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/IIsInEventArea.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/IReturnEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -222,7 +216,7 @@
       <workItem from="1617027387556" duration="9172000" />
       <workItem from="1617122857584" duration="16469000" />
       <workItem from="1617377588227" duration="3572000" />
-      <workItem from="1617486753222" duration="7652000" />
+      <workItem from="1617486753222" duration="15202000" />
     </task>
     <servers />
   </component>
@@ -271,10 +265,10 @@
           <line>26</line>
           <properties documentPath="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner\Assets\Scripts\Events\Event.cs" initialLine="28" containingFunctionPresentation="method 'AddEventTransformsToMaster'">
             <startOffsets>
-              <option value="842" />
+              <option value="856" />
             </startOffsets>
             <endOffsets>
-              <option value="905" />
+              <option value="919" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />

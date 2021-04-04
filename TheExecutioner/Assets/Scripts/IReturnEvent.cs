@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Altar : MonoBehaviour
+public interface IReturnEvent
 {
-
+    Event ReturnActiveEevent();
 }

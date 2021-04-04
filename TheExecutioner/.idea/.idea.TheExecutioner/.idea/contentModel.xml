@@ -173,6 +173,7 @@
             <e p="HealthSystem.cs" t="Include" />
           </e>
           <e p="IIsInEventArea.cs" t="Include" />
+          <e p="IReturnEvent.cs" t="Include" />
           <e p="LevelGeneration" t="Include">
             <e p="CheckAdjacentNodes.cs" t="Include" />
             <e p="EnvironmentManager.cs" t="Include" />

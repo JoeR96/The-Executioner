@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public abstract class Event : MonoBehaviour, IStartEvent
+public abstract class Event : MonoBehaviour, IStartEvent, IReturnEvent
 {
     [field: SerializeField] protected GameObject eventGameObject { get; set; }
     [SerializeField] protected EventManager eventManager;
@@ -26,5 +26,22 @@ public abstract class Event : MonoBehaviour, IStartEvent
     {
         eventManager.AddEventDestinationToList(eventTargetDestination);
         eventManager.AddEventTransformObjectToList(activeEventGameObject);
+    }
+
+    private void OnTriggerEnter(Component other)
+    {
+        var enemy = other.GetComponentInParent<IIsInEventArea>();
+        enemy?.IsInArea(true);
+    }
+    
+    private void OnTriggerExit(Component other)
+    {
+        var enemy = other.GetComponentInParent<IIsInEventArea>();
+        enemy?.IsInArea(false);
+    }
+
+    public Event ReturnActiveEevent()
+    {
+        return this;
     }
 }

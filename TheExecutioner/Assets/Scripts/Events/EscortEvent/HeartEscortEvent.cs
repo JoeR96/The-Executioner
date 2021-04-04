@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class HeartEscortEvent : Event
+public class HeartEscortEvent : Event, ITakeDamage
 {
     
     [SerializeField] private GameObject heartPrefab;
     [SerializeField] private GameObject targetAltar;
 
+    public int LimbsSacrificed { get; set; }
     private Transform targetPos;
     
     public override void StartEvent()
@@ -60,6 +61,10 @@ public class HeartEscortEvent : Event
             yield return null;
         }
     }
-    
 
+
+    public void TakeDamage(float damage, Vector3 direction)
+    {
+        throw new System.NotImplementedException();
+    }
 }
