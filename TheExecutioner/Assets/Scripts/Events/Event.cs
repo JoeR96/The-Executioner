@@ -10,11 +10,16 @@ public class Event : MonoBehaviour, IStartEvent
     protected Transform eventTargetDestination{ get; private set; }
     protected GameObject activeEventGameObject;
 
+    private void Awake()
+    {
+        eventManager = GameManager.instance.EventManager;
+    }
     public int progress { get; set; }
     public virtual void StartEvent( )
     {
         SetEventDestination();
-        activeEventGameObject = Instantiate(eventGameObject, eventTargetDestination.position, quaternion.identity);
+        activeEventGameObject = gameObject;
+        transform.position = eventTargetDestination.position;
         AddEventTransformsToMaster();
     }
 

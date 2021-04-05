@@ -6,17 +6,20 @@ using UnityEngine;
 public class HeartEscortEvent : Event, ITakeDamage
 {
     
-    [SerializeField] private GameObject heartPrefab;
     [SerializeField] private GameObject targetAltar;
 
     public int LimbsSacrificed { get; set; }
     private Transform targetPos;
-    
+
+    private void OnEnable()
+    {
+        StartEvent();
+    }
     public override void StartEvent()
     {
-        var target = eventManager.ReturnAvailableEventLocation().position;
-        
-        activeEventGameObject = Instantiate(eventGameObject, target, quaternion.identity);
+        transform.position = eventManager.ReturnAvailableEventLocation().position;
+        activeEventGameObject = gameObject;
+ 
         AddEventTransformsToMaster();
         SetEventDestination();
         SetHeart();

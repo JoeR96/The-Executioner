@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 8240951189112241489}
   - component: {fileID: 8240951189112241495}
   - component: {fileID: 8240951189112241488}
+  - component: {fileID: -2789268927371116607}
   m_Layer: 12
   m_Name: LowPolyHeart
   m_TagString: Untagged
@@ -263,3 +264,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Destination: {fileID: 0}
+--- !u!114 &-2789268927371116607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9123400729144540373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2d0737fa0bec241a3b8fe6e0428f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <eventGameObject>k__BackingField: {fileID: 0}
+  eventManager: {fileID: 0}
+  heartPrefab: {fileID: 6096607800471224361, guid: df873ea5ffcacf04fae563d709c66b9f,
+    type: 3}
+  targetAltar: {fileID: 6096607800471224361, guid: df873ea5ffcacf04fae563d709c66b9f,
+    type: 3}

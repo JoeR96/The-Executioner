@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Heart : Event
+public class Heart : MonoBehaviour
 {
     private NavMeshAgent navmeshAgent;
     public Transform Destination;
-    
+    private HeartEscortEvent heartEscortEvent;
     private bool eventComplete = false;
     private void Awake()
     {
-        
+        heartEscortEvent = GetComponent<HeartEscortEvent>();
         navmeshAgent = GetComponent<NavMeshAgent>();
         navmeshAgent.speed = Random.Range(1.5f, 3f);
     }
@@ -21,7 +21,7 @@ public class Heart : Event
         if (HasReachedDestination() && eventComplete != true)
         {
             eventComplete = true;
-            GameManager.instance.EventManager.HeartEscortEvent.EventComplete(this);
+            heartEscortEvent.EventComplete(this);
         }
             
     }

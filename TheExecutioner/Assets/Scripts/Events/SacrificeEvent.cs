@@ -8,7 +8,12 @@ public class SacrificeEvent : Event
     private int targetKillCount;
     private int limbKillCount;
     private int limbBonusTargetCount;
-    
+
+    private void OnEnable()
+    {
+        StartEvent();
+    }
+
 }
 
 

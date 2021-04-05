@@ -5070,6 +5070,7 @@ GameObject:
   - component: {fileID: 8848713537544351640}
   - component: {fileID: 6834677044188690631}
   - component: {fileID: 558890755}
+  - component: {fileID: 536761374561462395}
   m_Layer: 12
   m_Name: Altar
   m_TagString: Untagged
@@ -5138,6 +5139,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c65b64523d73d940a25e0a96f919452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <eventGameObject>k__BackingField: {fileID: 0}
+  eventManager: {fileID: 0}
+--- !u!114 &536761374561462395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848713537544351642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeed2ed4ea1f8374f9feff712184bf93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <eventGameObject>k__BackingField: {fileID: 0}
+  eventManager: {fileID: 0}
 --- !u!1001 &497414907
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,9 +10,12 @@ public class EventManager : MonoBehaviour
     
     [SerializeField]
     private EnemySpawnPoints enemySpawnPoints;
-    
-    public SacrificeEvent SacrificeEvent { get; private set; }
-    public HeartEscortEvent HeartEscortEvent { get; private set; }
+
+    [SerializeField] 
+    private GameObject SacrificeEvent;
+
+    [SerializeField]
+    private GameObject HeartEscortEvent;
 
     private List<Transform> activeEventTargetDestinations = new List<Transform>();
     [SerializeField] private List<GameObject> activeEventGameObjects = new List<GameObject>();
@@ -20,8 +23,7 @@ public class EventManager : MonoBehaviour
 
     private void Start()
     {
-        SacrificeEvent = GetComponent<SacrificeEvent>();
-        HeartEscortEvent = GetComponent<HeartEscortEvent>();
+        
     }
 
     public void AssignEvents()
@@ -79,13 +81,13 @@ public class EventManager : MonoBehaviour
 
     public void PlaySacrificeEvent()
     {
-        SacrificeEvent.StartEvent();
+        Instantiate(SacrificeEvent);
     }
 
 
     public void PlayHeartEscortEvent()
     {
-        HeartEscortEvent.StartEvent();
+        Instantiate(HeartEscortEvent);
     }
 
 }
