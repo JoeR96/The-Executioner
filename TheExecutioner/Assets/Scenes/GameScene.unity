@@ -6802,7 +6802,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1e-45}
+  m_BoundingSphereOverride: {x: 0, y: 2.2314e-41, z: 0, w: -0.000000025727786}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -16072,7 +16072,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4.8e-44}
+  m_BoundingSphereOverride: {x: 0, y: 3.3855e-41, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -39997,7 +39997,7 @@ MonoBehaviour:
   CurrentLevel: 0
   CurrentStage: 2
   BuildMode: 1
-  levelSo: {fileID: 11400000, guid: 5eeadaf0e4da1d1498557bdfa631b302, type: 2}
+  levelSo: {fileID: 11400000, guid: 078947a562787604c951a72b92ca7f52, type: 2}
 --- !u!114 &2053539584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73187,6 +73187,7 @@ GameObject:
   - component: {fileID: 1846586486253753430}
   - component: {fileID: 1846586486253753436}
   - component: {fileID: 1846586486253753428}
+  - component: {fileID: 1846586486253753437}
   m_Layer: 12
   m_Name: ----[PLAYER]----
   m_TagString: Player
@@ -73206,6 +73207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb06b8999102ee4e8e286038f71e81e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ActivePlayerEvents: {fileID: 1846586486253753437}
 --- !u!114 &1846586486253753429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73461,6 +73463,20 @@ MonoBehaviour:
   resizeable: 1
   resizedSpread: 555
   resizeSpeed: 3
+--- !u!114 &1846586486253753437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846586486253753427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f599dfc2ce89a4f469331cad5bcbd6d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveEvents: []
+  InRangeEvent: []
 --- !u!4 &1852310090414315357
 Transform:
   m_ObjectHideFlags: 0

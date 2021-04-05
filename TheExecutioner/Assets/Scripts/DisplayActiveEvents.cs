@@ -13,10 +13,12 @@ public class DisplayActiveEvents : MonoBehaviour
      public void AddActiveEventToList(Event newEvent)
      {
           ActiveEventsToDisplay.Add(newEvent);
+          Debug.Log(newEvent.progress);
      }
      
      public void RemoveEventFromList(Event toRemove)
      {
           ActiveEventsToDisplay.Remove(toRemove);
+          Debug.Log(toRemove.progress);
      }
 }

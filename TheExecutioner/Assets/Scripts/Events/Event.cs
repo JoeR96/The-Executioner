@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public abstract class Event : MonoBehaviour, IStartEvent, IReturnEvent
+public class Event : MonoBehaviour, IStartEvent
 {
     [field: SerializeField] protected GameObject eventGameObject { get; set; }
     [SerializeField] protected EventManager eventManager;

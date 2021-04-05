@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Heart : MonoBehaviour
+public class Heart : Event
 {
     private NavMeshAgent navmeshAgent;
     public Transform Destination;

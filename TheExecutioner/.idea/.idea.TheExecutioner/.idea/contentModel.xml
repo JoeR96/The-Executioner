@@ -153,6 +153,7 @@
             <e p="PlatformRampManagerEditor.cs" t="Include" />
           </e>
           <e p="Events" t="Include">
+            <e p="ActivePlayerEvents.cs" t="Include" />
             <e p="AlterEvent" t="Include">
               <e p="Altar.cs" t="Include" />
             </e>

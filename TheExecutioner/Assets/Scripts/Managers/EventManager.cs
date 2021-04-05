@@ -76,33 +76,7 @@ public class EventManager : MonoBehaviour
         activeEventGameObjects.Add(go);
     }
 
-    public List<Event> ActiveEvents { get; set; }
-    public List<Event> InRangeEvent { get; set; }
-    public void AddEventToList(Event newEvent)
-    {
-        ActiveEvents.Add(newEvent);
-    }
 
-    public void RemoveEventFromList(Event eventToRemove)
-    {
-        ActiveEvents.Remove(eventToRemove);
-    }
-    
-    public void AddActiveEventToList(Event newEvent)
-    {
-        InRangeEvent.Add(newEvent);
-        //Create ui for scroll rect here
-    }
-
-    public void RemoveActiveEventFromList(Event eventToRemove)
-    {
-        InRangeEvent.Remove(eventToRemove);
-    }
-
-    public virtual void DisplayEvent(Event eventToDisplay)
-    {
-        
-    }
     public void PlaySacrificeEvent()
     {
         SacrificeEvent.StartEvent();

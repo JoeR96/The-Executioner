@@ -139,7 +139,6 @@ public abstract class RaycastWeapon : MonoBehaviour
  
         if(Physics.Raycast(ray,out hitInfo))
         {
-            Debug.Log(hitInfo.collider.name);
             HitEffect.transform.position = hitInfo.point;
             HitEffect.transform.forward = hitInfo.normal;
             HitEffect.Emit(1);
