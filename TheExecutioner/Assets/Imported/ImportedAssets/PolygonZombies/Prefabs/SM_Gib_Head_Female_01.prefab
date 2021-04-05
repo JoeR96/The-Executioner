@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33919133633833772}
   - component: {fileID: 23675570305541640}
   - component: {fileID: 4149877389203610248}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SM_Gib_Head_Female_01
   m_TagString: Limb
   m_Icon: {fileID: 0}

@@ -11,7 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_Head_Female_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_Head_Female_01.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_Head_Male_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_Head_Male_01.prefab" afterDir="false" />
@@ -19,10 +18,9 @@
       <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_LowerLeg_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_LowerLeg_01.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_UpperArm_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_UpperArm_01.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level2.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +79,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/isPoolable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/AttackState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ObjectPoolerEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
       <option value="$PROJECT_DIR$/Assets/EnemySpawnPoints.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
@@ -115,10 +112,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/LimbEventTrigger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -221,7 +219,7 @@
       <workItem from="1617122857584" duration="16469000" />
       <workItem from="1617377588227" duration="3572000" />
       <workItem from="1617486753222" duration="18168000" />
-      <workItem from="1617642741591" duration="11939000" />
+      <workItem from="1617642741591" duration="13245000" />
     </task>
     <servers />
   </component>

@@ -76,11 +76,26 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
 
     public void CollectLimb(GameObject limb)
     {
-        StartCoroutine(LerpHeartTransform(limb, this.transform.position));
+        StartCoroutine(LerpHeartTransform(limb, transform.position));
         LimbsSacrificed++;
     }
 
+    public override void OnTriggerEnter(Component other)
+    {
+        base.OnTriggerEnter(other);
+        if (other.CompareTag("Limb"))
+        {
+            ReturnLimb(other);
+        }
+            
     }
+
+    private void ReturnLimb(Component other)
+    {
+        var limb = other.GetComponent<ICollectLimb>();
+        limb.CollectLimb(other.gameObject);
+    }
+}
 
 
 public interface ICollectLimb

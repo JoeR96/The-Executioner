@@ -37,7 +37,7 @@ public class Event : MonoBehaviour, IStartEvent
         eventManager.AddEventTransformObjectToList(activeEventGameObject);
     }
 
-    private void OnTriggerEnter(Component other)
+    public virtual void OnTriggerEnter(Component other)
     {
         var enemy = other.GetComponentInParent<IIsInEventArea>();
         enemy?.IsInArea(true);

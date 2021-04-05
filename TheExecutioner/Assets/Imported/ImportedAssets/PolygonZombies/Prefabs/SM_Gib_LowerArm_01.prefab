@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -1025635127717332489}
   - component: {fileID: 3225565396625766618}
   - component: {fileID: -781589374531791474}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SM_Gib_LowerArm_01
   m_TagString: Limb
   m_Icon: {fileID: 0}

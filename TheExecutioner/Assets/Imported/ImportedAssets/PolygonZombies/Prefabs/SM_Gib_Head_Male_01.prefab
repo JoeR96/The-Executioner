@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2770338802487734658}
   - component: {fileID: -957359858312456966}
   - component: {fileID: 6482691556173000661}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SM_Gib_Head_Male_01
   m_TagString: Limb
   m_Icon: {fileID: 0}
