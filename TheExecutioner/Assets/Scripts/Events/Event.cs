@@ -10,6 +10,7 @@ public abstract class Event : MonoBehaviour, IStartEvent, IReturnEvent
     protected Transform eventTargetDestination{ get; private set; }
     protected GameObject activeEventGameObject;
 
+    public int progress { get; set; }
     public virtual void StartEvent( )
     {
         SetEventDestination();
