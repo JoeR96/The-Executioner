@@ -17,8 +17,6 @@ public class EnvironmentManager : MonoBehaviour
     public NavMeshLinks_AutoPlacer navMeshLinkGenerator;
     public EnemySpawnPoints EnemySpawnPoints;
     public Grid grid;
-    
-  
     private GameObject[,] _tileArray;
     private NavMeshSurface navmeshSurface;
     
@@ -91,8 +89,7 @@ public class EnvironmentManager : MonoBehaviour
         
         navmeshSurface.BuildNavMesh();
     }
-
-
+    
     public void LowerAll()
     {
         foreach (var node in grid.grid)
@@ -100,26 +97,15 @@ public class EnvironmentManager : MonoBehaviour
             node.PlatformManager.PlatformHeightManager.SetPlatformHeight((int)PlatformHeight.Flat);
             if (node.PlatformManager.PlatformRampManager.ramp.GetComponent<MeshRenderer>().enabled)
             {
-                
                 node.PlatformManager.PlatformRampManager.PlatformRampActive = false;
                 node.PlatformManager.PlatformRampManager.ActivateRamp(false);
             }
-            
         }
-
     }
     public void BuildNavMesh()
     {
         navmeshSurface.BuildNavMesh();
     }
-
-
-
-    
-    
-    
-
-    
 }
     
 

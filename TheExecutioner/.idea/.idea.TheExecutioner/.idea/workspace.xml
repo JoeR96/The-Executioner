@@ -11,16 +11,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LowPolyHeart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LowPolyHeart.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Altar/Altar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Altar/Altar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_Head_Female_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_Head_Female_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_Head_Male_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_Head_Male_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_LowerArm_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_LowerArm_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_LowerLeg_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_LowerLeg_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_UpperArm_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportedAssets/PolygonZombies/Prefabs/SM_Gib_UpperArm_01.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level2.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +68,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformInformation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformSpawnManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/EscortState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" />
@@ -114,9 +114,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/LimbEventTrigger.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -219,7 +221,7 @@
       <workItem from="1617122857584" duration="16469000" />
       <workItem from="1617377588227" duration="3572000" />
       <workItem from="1617486753222" duration="18168000" />
-      <workItem from="1617642741591" duration="5907000" />
+      <workItem from="1617642741591" duration="11939000" />
     </task>
     <servers />
   </component>
@@ -265,13 +267,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Events/Event.cs</url>
-          <line>32</line>
+          <line>35</line>
           <properties documentPath="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner\Assets\Scripts\Events\Event.cs" initialLine="28" containingFunctionPresentation="method 'AddEventTransformsToMaster'">
             <startOffsets>
-              <option value="956" />
+              <option value="1057" />
             </startOffsets>
             <endOffsets>
-              <option value="1019" />
+              <option value="1120" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />

@@ -10,6 +10,9 @@ public class Event : MonoBehaviour, IStartEvent
     protected Transform eventTargetDestination{ get; private set; }
     protected GameObject activeEventGameObject;
 
+    protected int targetKillCount;
+    public int currentTargetKillCount  { get; private set; }
+    
     private void Awake()
     {
         eventManager = GameManager.instance.EventManager;

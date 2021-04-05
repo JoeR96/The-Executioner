@@ -26,7 +26,6 @@ public class PlatformBridgeManager : MonoBehaviour
 
     public void SetBridgeHeight(int height)
     {
-        Vector3 targetPosition;
         SetBridgePosition(bridgeHeights[height], 1f);
         CurrentBridgeHeight = height;
     }

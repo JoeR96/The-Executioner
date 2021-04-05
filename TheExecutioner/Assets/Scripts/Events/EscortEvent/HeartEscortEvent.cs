@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class HeartEscortEvent : Event, ITakeDamage
+public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
 {
     
     [SerializeField] private GameObject targetAltar;
 
-    public int LimbsSacrificed { get; set; }
+    
+    public float percent;
+    private int LimbsSacrificed { get; set; }
     private Transform targetPos;
-
+    private float startDistance;
     private void OnEnable()
     {
         StartEvent();
@@ -29,8 +31,9 @@ public class HeartEscortEvent : Event, ITakeDamage
     {
         var activeHeart = activeEventGameObject.GetComponent<Heart>();
         activeHeart.SetTargetPosition(eventTargetDestination);
+        
     }
-
+    
     public void EventComplete(Heart heart)
     {
         var altar = Instantiate(targetAltar, heart.Destination.position,quaternion.identity);
@@ -53,7 +56,7 @@ public class HeartEscortEvent : Event, ITakeDamage
         Transform startRotation = heart.transform;
         Vector3 startPosition = heart.transform.position;
         float timer = 0f;
-        float duration = 1f;
+        float duration = 0.5f;
 
         while (timer < duration)
         {
@@ -70,4 +73,17 @@ public class HeartEscortEvent : Event, ITakeDamage
     {
         throw new System.NotImplementedException();
     }
+
+    public void CollectLimb(GameObject limb)
+    {
+        StartCoroutine(LerpHeartTransform(limb, this.transform.position));
+        LimbsSacrificed++;
+    }
+
+    }
+
+
+public interface ICollectLimb
+{
+    void CollectLimb(GameObject limb);
 }
