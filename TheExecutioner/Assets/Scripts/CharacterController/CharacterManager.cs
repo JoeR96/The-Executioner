@@ -37,8 +37,10 @@ public class CharacterManager : MonoBehaviour
     {
         
         var activeEvent = other.GetComponent<IReturnEvent>();
+        Debug.Log("WOG");
         if (activeEvent != null)
         {
+            Debug.Log(activeEvent);
             Debug.Log("TESTICLES");
         }
         if(activeEvent != null)

@@ -15849,7 +15849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentState: 0
-  InitialState: 5
+  InitialState: 0
   navMeshAgent: {fileID: 3025747335874322057}
   Player: {fileID: 0}
   EventTarget: {fileID: 0}
