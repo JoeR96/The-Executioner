@@ -26,7 +26,7 @@ public class ActiveWeapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CurrentRaycastWeapon = GetComponentInChildren<RaycastWeapon>();
+        //CurrentRaycastWeapon = GetComponentInChildren<RaycastWeapon>();
         if (CurrentRaycastWeapon)
         {
             EquipWeapon(CurrentRaycastWeapon);
@@ -56,6 +56,10 @@ public class ActiveWeapon : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             EquipWeapon(_equippedWeapons[1]);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            EquipWeapon(_equippedWeapons[2]);
         }
     }
     

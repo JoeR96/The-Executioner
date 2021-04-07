@@ -1,36 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class RPG : RaycastWeapon
 {
-    private GameObject toFire;
-
+    [SerializeField] private GameObject rocketPrefab;
+    [SerializeField] private GameObject activeRocket;
+    [SerializeField] private Transform rocketPosition;
+    [SerializeField] private float rocketForce;
     public RPG()
     {
-        weaponFireRate = 2f;
-        weaponReloadTime = 2f;
-        weaponFiringClip = "RpgLaunch";
-        weaponReloadingClip = "RpgReload";
-       
+        TracerEffect = null;
     }
 
     public override void FireWeapon()
     {
         if (!WeaponIsReloading && WeaponIsLoaded)
         {
-            SetRaycastPositions();
             AudioManager.Instance.PlaySound("RPGFire");
+            SetRaycastPositions();
+            SetWeaponProperties();
+            
             MuzzleFlash.Play();
-            weaponCurrentammo --;
-            WeaponIsLoaded = false;
         }
+    }
+
+    protected override void Reload()
+    {
+        base.Reload();
+        activeRocket = Instantiate(rocketPrefab, rocketPosition);
     }
 
     protected override void SetWeaponProperties()
     {
         weaponCurrentammo--;
         weaponFireTimer = 0f;
+        StartCoroutine(LerpRocket(ray.direction));
     }
 
     protected override IEnumerator ReloadWeapon()
@@ -38,18 +44,25 @@ public class RPG : RaycastWeapon
         WeaponIsReloading = true;
         AudioManager.Instance.PlaySound(weaponReloadingClip);
         yield return new WaitForSeconds(2f);
-        //get current
-        //add maxammo - current ammo
-        //spare ammo - maxammo - current ammo 
         Reload();
         WeaponIsLoaded = true;
     }
-
-    protected override void Reload()
+    
+    private IEnumerator LerpRocket(Vector3 target)
     {
-        toFire = Instantiate(bullet, bulletSpawn.position, transform.rotation);
-        toFire.transform.SetParent(bulletSpawn);
-        WeaponIsReloading = false;
-    }
+        float timer = 0;
 
+        Vector3 start = activeRocket.transform.position; 
+        
+        while (timer < rocketForce)
+        {
+            Debug.Log("HI");
+            timer += Time.deltaTime;
+            float percentage = Mathf.Min(timer / rocketForce, 1);
+            activeRocket.transform.position = Vector3.Lerp(start, target, 1);
+            yield return null;
+        }
+        Destroy(activeRocket);
+        Reload();
+    }
 }

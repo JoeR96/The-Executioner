@@ -9,8 +9,5 @@ public class UiHealthCanvas : MonoBehaviour
     [SerializeField] private CharacterManager characterManager;
     [SerializeField] private ProgressBar playerProgressBar;
     
-    private void Update()
-    {
-        playerProgressBar.BarValue = characterManager.PlayerHealthSystem.Percent();
-    }
+
 }
