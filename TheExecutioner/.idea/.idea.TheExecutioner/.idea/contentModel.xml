@@ -123,6 +123,7 @@
           </e>
         </e>
         <e p="LimbEventTrigger.cs" t="Include" />
+        <e p="RPG.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Audio" t="Include">
             <e p="AudioManager.cs" t="Include" />

@@ -10,7 +10,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="" />
+    <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportAnimations/Zombie Attack (1).fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportAnimations/Zombie Attack (1).fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportAnimations/Zombie Attack (3).fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportAnimations/Zombie Attack (3).fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportAnimations/Zombie Punching (1).fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportAnimations/Zombie Punching (1).fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportAnimations/Zombie Punching.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportAnimations/Zombie Punching.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +63,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/EscortState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" />
@@ -94,7 +101,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DisplayActiveEvents.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/ActivePlayerEvents.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" />
@@ -106,6 +112,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/LimbManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/RPG.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -211,6 +219,7 @@
       <workItem from="1617642741591" duration="13245000" />
       <workItem from="1617740594267" duration="1925000" />
       <workItem from="1617818586920" duration="779000" />
+      <workItem from="1617827074725" duration="642000" />
     </task>
     <servers />
   </component>
