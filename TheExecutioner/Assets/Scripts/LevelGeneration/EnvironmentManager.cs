@@ -17,7 +17,6 @@ public class EnvironmentManager : MonoBehaviour
     public NavMeshLinks_AutoPlacer navMeshLinkGenerator;
     public EnemySpawnPoints EnemySpawnPoints;
     public Grid grid;
-    
     private GameObject[,] _tileArray;
     private NavMeshSurface navmeshSurface;
     
@@ -29,6 +28,10 @@ public class EnvironmentManager : MonoBehaviour
         grid = GetComponent<Grid>();
     }
 
+    private void Start()
+    {
+        SetSpawnPoints();
+    }
     private void Update()
     {
         if (Input.GetKey(KeyCode.F12))
@@ -37,7 +40,17 @@ public class EnvironmentManager : MonoBehaviour
         }
     }
 
-    
+    public void SetSpawnPoints()
+    {
+        for (int i = 15; i < 35; i++)
+        {
+            for (int j = 15; j < 35; j++)
+            {
+                var gridPosition = grid.grid[i, j];
+                gridPosition.PlatformManager.PlatformSpawnManager.PlatformSpawnPointActive = true;
+            }
+        }
+    }
     public void RaiseWall(bool raiseUp)
     {
         int platformHeight;
@@ -50,6 +63,7 @@ public class EnvironmentManager : MonoBehaviour
             {
                 var gridPosition = grid.grid[i, j];
                 gridPosition.PlatformManager.PlatformStateManager.PlatformIsWall = true;
+                gridPosition.PlatformManager.PlatformSpawnManager.PlatformSpawnPointActive = true;
             }
         }
         
@@ -64,15 +78,18 @@ public class EnvironmentManager : MonoBehaviour
             if (!node.PlatformManager.PlatformStateManager.PlatformIsWall)
             {
                 node.PlatformManager.PlatformHeightManager.SetPlatformHeight(platformHeight);
-                //EnemySpawnPoints.AddExternalSpawnPointToList(node);
+                EnemySpawnPoints.AddExternalSpawnPointToList(node.PlatformManager.PlatformSpawnManager.spawnPoint.transform);
+            }
+            else
+            {
+                EnemySpawnPoints.AddInternalSpawnPointToList(node.PlatformManager.PlatformSpawnManager.spawnPoint.transform);
             }
             EnemySpawnPoints.CheckForSpawnPoint(node);
         }
         
         navmeshSurface.BuildNavMesh();
     }
-
-
+    
     public void LowerAll()
     {
         foreach (var node in grid.grid)
@@ -80,25 +97,15 @@ public class EnvironmentManager : MonoBehaviour
             node.PlatformManager.PlatformHeightManager.SetPlatformHeight((int)PlatformHeight.Flat);
             if (node.PlatformManager.PlatformRampManager.ramp.GetComponent<MeshRenderer>().enabled)
             {
-                
                 node.PlatformManager.PlatformRampManager.PlatformRampActive = false;
                 node.PlatformManager.PlatformRampManager.ActivateRamp(false);
             }
-            
         }
-
     }
     public void BuildNavMesh()
     {
         navmeshSurface.BuildNavMesh();
     }
-    
-    
-    
-    
-    
-
-    
 }
     
 

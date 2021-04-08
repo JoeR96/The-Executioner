@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 23193034940148200}
   - component: {fileID: -1025635127717332489}
   - component: {fileID: 3225565396625766618}
-  m_Layer: 0
+  - component: {fileID: -781589374531791474}
+  m_Layer: 12
   m_Name: SM_Gib_LowerArm_01
-  m_TagString: Untagged
+  m_TagString: Limb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,3 +114,15 @@ CapsuleCollider:
   m_Height: 0.109176636
   m_Direction: 1
   m_Center: {x: -0.000000044703484, y: 0, z: 0}
+--- !u!114 &-781589374531791474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774619796312080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18355b92dd3a7345b735bd73cdf66cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

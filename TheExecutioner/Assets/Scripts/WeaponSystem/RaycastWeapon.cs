@@ -12,7 +12,7 @@ public abstract class RaycastWeapon : MonoBehaviour
     public ParticleSystem HitEffect;
     public TrailRenderer TracerEffect;
     public Transform RaycastDestination;
-    private Ray ray;
+    protected Ray ray;
     private RaycastHit hitInfo;
     public string WeaponName;
     public weaponRecoil recoil;
@@ -20,7 +20,7 @@ public abstract class RaycastWeapon : MonoBehaviour
     #region weaponvariables
     [Header("Utility ")][Space(10)]
     [SerializeField] [Range(0f, 60f)]
-    protected float weaponMaxAmmo;
+    protected float  weaponMaxAmmo;
     
     [SerializeField][Range(0f,180f)]
     protected float weaponSpareAmmo;
@@ -38,10 +38,13 @@ public abstract class RaycastWeapon : MonoBehaviour
     
     protected float weaponFireTimer;
 
-    public bool WeaponIsReloading { get; protected set; }
+   
+    [field: SerializeField] public bool WeaponIsReloading { get; protected set; }
     public bool WeaponIsLoaded { get; protected set; }
     
     protected float weaponReloadTimer;
+
+    private float[] defaultValues = new float[6];
     
     protected string weaponFiringClip;
     protected string weaponReloadingClip;
@@ -49,7 +52,12 @@ public abstract class RaycastWeapon : MonoBehaviour
     
     [SerializeField]
     protected float weaponCurrentammo;
+    #endregion
+    private  WeaponStateManager weaponStateManager;
 
+
+    #region properties
+    
     public float WeaponCurrentammo
     {
         get => weaponCurrentammo;
@@ -61,10 +69,36 @@ public abstract class RaycastWeapon : MonoBehaviour
         get => weaponMaxAmmo;
         set => weaponMaxAmmo = value;
     }
+    
+    public float WeaponDamage
+    {
+        get => weaponDamage;
+        set => weaponDamage = value;
+    }
+    public float WeaponReloadTimer
+    {
+        get => weaponReloadTimer;
+        set => weaponReloadTimer = value;
+    }
+    
+    public float WeaponReloadTime
+    {
+        get => weaponReloadTime;
+        set => weaponReloadTime = value;
+    }
+    
+    public float WeaponSpareAmmo
+    {
+        get => weaponSpareAmmo;
+        set => weaponSpareAmmo = value;
+    }
+
+
 
     #endregion
     private void Awake()
     {
+        weaponStateManager = GetComponent<WeaponStateManager>();
         recoil = GetComponent<weaponRecoil>();
     }
     
@@ -72,8 +106,14 @@ public abstract class RaycastWeapon : MonoBehaviour
     {
         Reload();
         WeaponIsLoaded = true;
-        weaponMaxAmmo = weaponCurrentammo;
+        weaponCurrentammo = weaponMaxAmmo;
         WeaponIsReloading = false;
+        weaponSpareAmmo = weaponMaxAmmo * 2;
+        defaultValues[1] = weaponDamage;
+        defaultValues[2] = weaponMaxAmmo;
+        defaultValues[3] = weaponSpareAmmo;
+        defaultValues[4] = weaponReloadTime;
+        defaultValues[5] = weaponReloadTimer;
     }
 
     protected void Update()
@@ -81,43 +121,67 @@ public abstract class RaycastWeapon : MonoBehaviour
         weaponReloadTimer += Time.deltaTime;
         weaponFireTimer += Time.deltaTime;
     }
-    public void FireWeapon()
+    #region weaponlogic
+    public virtual void FireWeapon()
     {
-        weaponFireTimer = 0f;
-        weaponCurrentammo -= 1;
-        recoil.Reset();
-        IsFiring = true;
-        MuzzleFlash.Emit(1);
-        ray.origin = RaycastOrigin.position;
-        ray.direction = RaycastDestination.position - RaycastOrigin.position;
+        SetWeaponProperties();
+        SetRaycastPositions();
         AudioManager.Instance.PlaySound("ShotgunFire");
-        var tracer = Instantiate(TracerEffect, ray.origin,quaternion.identity);
-        tracer.AddPosition(ray.origin);
+        MuzzleFlash.Emit(1);
+        var tracer = InstantiateTrailRenderer();
         if(Physics.Raycast(ray,out hitInfo))
         {
-            HitEffect.transform.position = hitInfo.point;
-            HitEffect.transform.forward = hitInfo.normal;
-            HitEffect.Emit(1);
-            string name = hitInfo.collider.name;
+            SetHitEffects();
             tracer.transform.position = hitInfo.point;
             recoil.GenerateRecoil(WeaponName);
-            Debug.Log(hitInfo.collider.name);
             if (hitInfo.collider.GetComponentInParent<ITakeDamage>() != null)
             {
-                hitInfo.collider.GetComponentInParent<ITakeDamage>().TakeDamage(100, ray.direction);
-                if (hitInfo.collider.CompareTag("DestructibleLimb"))
-                {
-                    hitInfo.collider.GetComponentInParent<IDestroyLimb>().DestroyLimb(name, hitInfo.point);   
-                }
+                HitEnemy();
             }
-           
         }
+    }
+
+    protected TrailRenderer InstantiateTrailRenderer()
+    {
+        var tracer = Instantiate(TracerEffect, ray.origin, quaternion.identity);
+        tracer.AddPosition(ray.origin);
+        return tracer;
+    }
+
+    protected void HitEnemy()
+    {
+        hitInfo.collider.GetComponentInParent<ITakeDamage>().TakeDamage(100, ray.direction);
+        if (hitInfo.collider.CompareTag("DestructibleLimb"))
+        {
+            hitInfo.collider.GetComponentInParent<IDestroyLimb>().DestroyLimb(hitInfo.collider.name, hitInfo.point);
+        }
+    }
+
+    protected void SetHitEffects()
+    {
+        HitEffect.transform.position = hitInfo.point;
+        HitEffect.transform.forward = hitInfo.normal;
+        HitEffect.Emit(1);
+    }
+
+    protected virtual void SetWeaponProperties()
+    {
+        weaponFireTimer = 0f;
+        weaponCurrentammo--;
+        recoil.Reset();
+        IsFiring = true;
+    }
+
+    protected void SetRaycastPositions()
+    {
+        ray.origin = RaycastOrigin.position;
+        ray.direction = RaycastDestination.position - RaycastOrigin.position;
     }
 
     protected virtual IEnumerator ReloadWeapon()
     {
         var test = FindObjectOfType<ActiveWeapon>();
-        test.RigController.SetBool("IsReloading",true);
+        test.RigController.Play("weapon_reload_" + test.CurrentRaycastWeapon.WeaponName,0);
         WeaponIsReloading = true;
         yield return new WaitForSeconds(weaponReloadTime);
         Reload();
@@ -147,10 +211,15 @@ public abstract class RaycastWeapon : MonoBehaviour
     
     protected virtual void Reload()
     {
+        WeaponIsReloading = false;
+        
+        if(weaponSpareAmmo <= 0)
+            return;
+        
         var toAdd = weaponMaxAmmo - weaponCurrentammo;
         weaponCurrentammo += toAdd;
-        weaponMaxAmmo -= toAdd;
-        WeaponIsReloading = false;
+        weaponSpareAmmo -= toAdd;
+        
         
         
     }
@@ -161,5 +230,31 @@ public abstract class RaycastWeapon : MonoBehaviour
             return true;
 
         return false;
+    }
+    #endregion
+
+    public float ReturnDefaultValue(int index)
+    {
+        return defaultValues[index];
+    }
+    
+    public void SetWeaponState(float qualityModifier)
+    {
+        ResetWeaponState();
+        weaponDamage *= qualityModifier;    
+        weaponMaxAmmo *= qualityModifier;
+        weaponSpareAmmo *= qualityModifier;
+        weaponReloadTime /= qualityModifier;
+        weaponReloadTimer /= qualityModifier;
+    }
+
+    public void ResetWeaponState()
+    {
+        weaponCurrentammo = ReturnDefaultValue(2);
+       weaponDamage = ReturnDefaultValue(1);
+       weaponMaxAmmo = ReturnDefaultValue(2);
+        weaponSpareAmmo = ReturnDefaultValue(3);
+        weaponReloadTime = ReturnDefaultValue(4);
+        weaponReloadTimer = ReturnDefaultValue(5);
     }
 }

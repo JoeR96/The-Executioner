@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 23043185968034454}
   - component: {fileID: 2770338802487734658}
   - component: {fileID: -957359858312456966}
-  m_Layer: 0
+  - component: {fileID: 6482691556173000661}
+  m_Layer: 12
   m_Name: SM_Gib_Head_Male_01
-  m_TagString: Untagged
+  m_TagString: Limb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,3 +114,15 @@ CapsuleCollider:
   m_Height: 0.3520616
   m_Direction: 1
   m_Center: {x: 0, y: 0.000000074505806, z: 0}
+--- !u!114 &6482691556173000661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791137125428618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18355b92dd3a7345b735bd73cdf66cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

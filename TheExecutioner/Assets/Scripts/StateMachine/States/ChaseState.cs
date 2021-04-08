@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class ChaseState : IState
 {
-    private float _timer = 00f;
-    
+    private float timer = 1f;
+    private float attackRange = 1.25f;
     public StateId GetId()
     {
         return StateId.ChasePlayer;
@@ -14,7 +14,7 @@ public class ChaseState : IState
 
     public void Enter(AiAgent agent)
     {
-     
+        
     }
 
     public void Update(AiAgent agent)
@@ -23,28 +23,35 @@ public class ChaseState : IState
         {
             if(!agent.enabled )
                 return;
-            _timer -= Time.deltaTime;
+            
+            timer -= Time.deltaTime;
             if (!agent.navMeshAgent.hasPath)
-            {
                 agent.navMeshAgent.destination = agent.Player.position;
-            }
 
-            if (_timer < 0.0f)
+            if (timer < 0.0f)
             {
                 Vector3 direction = (agent.Player.position - agent.navMeshAgent.destination);
                 direction.y = 0;
-                if (direction.sqrMagnitude > agent.AgentConfig.MaxDistance * agent.AgentConfig.MaxDistance) 
+                if (direction.sqrMagnitude > agent.AgentConfig.MaxDistance * agent.AgentConfig.MaxDistance)
                 {
+                    if (agent.navMeshAgent.pathStatus != NavMeshPathStatus.PathPartial)
+                        agent.navMeshAgent.destination = agent.Player.position;
+                }
                     if (agent.navMeshAgent.pathStatus != NavMeshPathStatus.PathPartial)
                     {
                         agent.navMeshAgent.destination = agent.Player.position;
-                    }
-                }
 
-                _timer = agent.AgentConfig.MaxTime;
+                    }
+
+                timer = agent.AgentConfig.MaxTime;
             }
-        }
         
+        }
+
+        if (Vector3.Distance(agent.transform.position, agent.Player.transform.position) <= attackRange)
+        {
+            agent.StateMachine.ChangeState(StateId.Attack);
+        }
     }
 
     public bool IsAgentOnNavMesh(AiAgent agent)

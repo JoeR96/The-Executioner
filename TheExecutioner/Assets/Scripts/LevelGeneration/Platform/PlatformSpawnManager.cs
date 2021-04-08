@@ -3,16 +3,24 @@
 public class PlatformSpawnManager : MonoBehaviour
 {
     public bool PlatformSpawnPointActive;
+    public bool PlatformEventSpawn;
     [SerializeField] public GameObject spawnPoint;
 
     public PlatformSpawnManager(PlatformManager platformManager)
     {
     }
 
+  
+
     public bool ReturnPlatformSpawnPointValue()
     {
         PlatformSpawnPointActive = !PlatformSpawnPointActive;
         return PlatformSpawnPointActive;
+    }
+    public bool ReturnPlatformEventSpawnPointValue()
+    {
+        PlatformEventSpawn = !PlatformEventSpawn;
+        return PlatformEventSpawn;
     }
 
     public void ActivateSpawnPoint(bool active)

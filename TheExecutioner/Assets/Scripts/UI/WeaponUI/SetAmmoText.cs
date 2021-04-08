@@ -12,6 +12,6 @@ public class SetAmmoText : MonoBehaviour
     {
         ammoText.SetText(activeWeapon.CurrentRaycastWeapon.WeaponCurrentammo 
                          + "  |  " + 
-                         activeWeapon.CurrentRaycastWeapon.WeaponMaxAmmo);
+                         activeWeapon.CurrentRaycastWeapon.WeaponSpareAmmo);
     }
 }

@@ -8,13 +8,16 @@ ChasePlayer,
 DeathState,
 Idle,
 Attack,
-Target
+Target,
+EventState
 }
 
 public interface IState 
 {
     StateId GetId();
+
     void Enter(AiAgent agent);
+
     void Update(AiAgent agent);
     void Exit(AiAgent agent);
 }

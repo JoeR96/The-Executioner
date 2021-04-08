@@ -13,15 +13,18 @@ public class LevelManager : MonoBehaviour
     private List<PlatformStateManager> spawnPoints = new List<PlatformStateManager>();
     public LevelSo levelSo;
     private Grid grid;
-  
-    void Start()
+    private EnemySpawnPoints enemySpawnPoints;
+
+    private void Start()
     {
+        enemySpawnPoints = GetComponent<EnemySpawnPoints>();
         grid = GetComponent<Grid>();
     }
 
     public void LoadLevel(int levelIndex)
     {
         LoadStage(levelIndex);
+        GameManager.instance.RagdollAllDuringLevelChange();
     }
 
     public PlatformInformation[,] SaveStageInformation()
@@ -39,6 +42,7 @@ public class LevelManager : MonoBehaviour
                 platformStates[i, j].PlatformStairActive = grid.grid[i, j].PlatformManager.PlatformRampManager.PlatformRampActive;
                 platformStates[i, j].BridgeIsActive = grid.grid[i, j].PlatformManager.PlatformBridgeManager.PlatformBridgeActive;
                 platformStates[i, j].PlatformSpawnActive = grid.grid[i, j].PlatformManager.PlatformSpawnManager.PlatformSpawnPointActive;
+                platformStates[i, j].PlatformEventSpawn = grid.grid[i, j].PlatformManager.PlatformSpawnManager.PlatformEventSpawn;
                 platformStates[i, j].CurrentColour = grid.grid[i, j].PlatformManager.PlatformColourManager.CurrentColour;
                 platformStates[i, j].CurrentBridgeHeight = grid.grid[i, j].PlatformManager.PlatformBridgeManager.CurrentBridgeHeight;
                 platformStates[i, j].X = grid.grid[i, j].PlatformManager.PlatformStateManager.X;
@@ -82,20 +86,20 @@ public class LevelManager : MonoBehaviour
 
     public void LoadStage(int index)
     {
-        GameManager.instance.EnvironmentManager.EnemySpawnPoints.internalSpawnPoints.Clear();
+        GameManager.instance.EnvironmentManager.EnemySpawnPoints.ClearEventSpawns();
         SetCurrentStage(index);
         var levelToSet = levelSo.ReturnLevel(index);
+        
         foreach (var go in levelToSet)
         {
             if (grid.grid[go.X, go.Z] != null)
             {
-                        var pos = grid.grid[go.X, go.Z].PlatformManager;
-                        pos.PlatformStateManager.SetStateFromExternal(go);
+                var pos = grid.grid[go.X, go.Z].PlatformManager;
+                pos.PlatformStateManager.SetStateFromExternal(go);
+                if(pos.PlatformSpawnManager.PlatformEventSpawn)
+                            enemySpawnPoints.AddEventSpawn(pos.PlatformSpawnManager.spawnPoint.transform);
             }
-                    
         }
-        
-
     }
     
     public void SetCurrentStage(int level)

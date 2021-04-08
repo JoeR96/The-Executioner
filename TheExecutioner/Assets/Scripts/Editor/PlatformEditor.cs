@@ -20,6 +20,10 @@ public class PlatformManagerEditor : Editor
             {
                 PlatformManager.PlatformSpawnManager.ReturnPlatformSpawnPointValue();
             }
+            if (GUILayout.Button("Toggle Event Spawn Point",GUILayout.Width(100), GUILayout.Height(100)))
+            {
+                PlatformManager.PlatformSpawnManager.ReturnPlatformEventSpawnPointValue();
+            }
             EditorGUILayout.EndHorizontal ();
 
         
