@@ -5,7 +5,6 @@ using UnityEngine;
 public class SacrificeEvent : Event 
 {
     private int currentKillCount;
-    private int targetKillCount;
     private int limbKillCount;
     private int limbBonusTargetCount;
 

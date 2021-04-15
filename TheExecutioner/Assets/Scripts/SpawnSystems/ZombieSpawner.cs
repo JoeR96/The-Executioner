@@ -10,7 +10,7 @@ public class ZombieSpawner : MonoBehaviour
     [SerializeField] private GameObject _zombiePrefab;
     [SerializeField] private GameObject _zombieArmorPrefab;
     [SerializeField] private Transform navmeshPos;
-    public List<GameObject> ActiveFodderZombies = new List<GameObject>();
+    public List<GameObject> ActiveZombies = new List<GameObject>();
     public List<GameObject> ArmoredZombies = new List<GameObject>();
     
     public GameObject SpawnZombie(Transform location)
@@ -18,6 +18,7 @@ public class ZombieSpawner : MonoBehaviour
         var t = ObjectPooler.instance.GetObject(PoolObjectType.BasicZombie);
         t.transform.SetPositionAndRotation(location.position,quaternion.identity);
         t.transform.position = location.position;
+        ActiveZombies.Add(t);
         return t;
     }
 
@@ -25,6 +26,7 @@ public class ZombieSpawner : MonoBehaviour
     {
         var location = enemySpawnPoints.ReturnInternalSpawnPoint();
         var t = ObjectPooler.instance.GetObject(PoolObjectType.BasicZombie);
+        ActiveZombies.Add(t);
         SetZombiePosition(t, location);
         return t;
     }
@@ -48,13 +50,13 @@ public class ZombieSpawner : MonoBehaviour
         
         for (int i = 0; i < location.Count; i++)
         {
-            if(ActiveFodderZombies.Count >= 30)
+            if(ActiveZombies.Count >= 30)
                 return;
             var t = SpawnZombie(location[i]);
             t.GetComponent<NavMeshAgent>().enabled = false;
              t.GetComponent<Ragdoll>().ActivateRagDoll();
              t.transform.position = location[i].position;
-             ActiveFodderZombies.Add(t);
+             ActiveZombies.Add(t);
         }
     }
     public void SpawnArmoredZombiesAtLocations(List<Transform> location)

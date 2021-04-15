@@ -16,7 +16,7 @@ public class EventState : IState
     {
         var go = GameManager.instance.EventManager.ReturnActiveRandomEventTransform();
         agent.EventTarget = go.transform;
-        agent.navMeshAgent.destination = agent.EventTarget.position;
+        agent.SetEventDestination();
     }
 
     public void Update(AiAgent agent)
@@ -47,10 +47,10 @@ public class EventState : IState
             }
         }
 
-        // if (Vector3.Distance(agent.transform.position, eventTarget.transform.position) <=1.25f)
-        // {
-        //     //agent.StateMachine.ChangeState(StateId.Attack);
-        // }
+         if (Vector3.Distance(agent.transform.position, agent.Player.transform.position) <= 1.25f)
+         {
+             agent.StateMachine.ChangeState(StateId.ChasePlayer);
+        }
     }
 
     public bool IsAgentOnNavMesh(AiAgent agent)

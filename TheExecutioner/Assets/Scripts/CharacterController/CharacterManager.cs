@@ -35,9 +35,7 @@ public class CharacterManager : MonoBehaviour
     
     private void CheckForActiveEvent(Collider other)
     {
-        
         var activeEvent = other.GetComponent<IReturnEvent>();
-        Debug.Log("WOG");
         if (activeEvent != null)
         {
             Debug.Log(activeEvent);

@@ -55,6 +55,11 @@ public class AiAgent : MonoBehaviour
         
             navMeshAgent.velocity = Animator.deltaPosition / Time.deltaTime;
             navMeshAgent.speed = Animator.deltaPosition.magnitude / Time.deltaTime;
+    }
 
+    public void SetEventDestination()
+    {
+        if(navMeshAgent.isOnNavMesh)
+         navMeshAgent.destination = EventTarget.position;
     }
 }

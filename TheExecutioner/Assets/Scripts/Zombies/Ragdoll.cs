@@ -25,7 +25,7 @@ public class Ragdoll : MonoBehaviour
 
         _navMeshAgent.enabled = true;
         _animator.enabled = true;
-        _animator.SetFloat("AnimTime", Random.Range(0.0f,1.0f));
+       // _animator.SetFloat("AnimTime", Random.Range(0.0f,1.0f));
         
     }
     

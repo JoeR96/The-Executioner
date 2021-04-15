@@ -61,7 +61,7 @@ public class GameManager : Singleton<GameManager>
     {
         Invoke("LoadStage",0.25f);
         Invoke("BuildNavMesh", 6f);
-        Invoke("StartNewRound",7f);
+        Invoke("StartNewRound",8f);
     }
 
     private void StartNewRound()

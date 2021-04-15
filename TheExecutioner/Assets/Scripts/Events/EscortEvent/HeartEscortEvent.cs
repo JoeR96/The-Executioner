@@ -20,6 +20,7 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
     }
     public override void StartEvent()
     {
+        eventZombieSpawner = new EventZombieSpawner(waveSpawnTotal,transform);
         transform.position = eventManager.ReturnAvailableEventLocation().position;
         activeEventGameObject = gameObject;
         eventZombieSpawner.SpawnZombiesTargetingEvent();

@@ -20,7 +20,7 @@ public class RoundManager : MonoBehaviour
     {
         IncreaseSpawnCount();
         SetNewRound();
-        StartEvents();
+        StartCoroutine(StartEvents());
         SpawnZombies();
     }
 
@@ -31,12 +31,13 @@ public class RoundManager : MonoBehaviour
         currentRound++;
     }
 
-    private void StartEvents()
+    private IEnumerator StartEvents()
     {
         for (int i = 0; i < currentRound; i++)
         {
             eventManager.PlayEvent();
         }
+        yield return new WaitForSeconds(3f);
     }
 
     private void SpawnZombies()
