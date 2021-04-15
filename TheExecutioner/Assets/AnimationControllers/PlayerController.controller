@@ -46,7 +46,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 61b80b3b65559ac45b8ecd3983cfdfae, type: 2}
+  m_Motion: {fileID: 7400000, guid: bd204535b41739e4fa25a2d4ead86ab1, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -702,7 +702,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: weapon_shotgun_equip
-  m_Speed: -1
+  m_Speed: -0.25
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -551760667963718097}
@@ -779,7 +779,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: weapon_smg_equip
-  m_Speed: 0.25
+  m_Speed: -0.25
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 392782274792519974}
@@ -792,7 +792,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a36725269630478438ad2bd74830cb01, type: 2}
+  m_Motion: {fileID: 7400000, guid: 56f642515c2137a4dadbe71eb037ddaa, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -883,7 +883,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: weapon_RPG_equip
-  m_Speed: 1
+  m_Speed: 7.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 5937785970037755051}
