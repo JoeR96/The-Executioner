@@ -8,6 +8,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AltarEventCompleteTrigger.cs" t="Include" />
+        <e p="ButtonMouseHover.cs" t="Include" />
         <e p="EventZombieSpawner.cs" t="Include" />
         <e p="Fonts" t="Include">
           <e p="Zombie_Holocaust_Font_Read_Me.txt" t="Include" />
