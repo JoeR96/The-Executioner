@@ -77,19 +77,12 @@ public class ActiveWeapon : MonoBehaviour
     IEnumerator HolsterWeapon(int index)
     {
         var weapon = GetWeapon(index);
-        // if (weapon)
-        // {
-        //     RigController.SetBool("holster_weapon",true);
-        //     do
-        //     {
-        //         yield return new WaitForEndOfFrame();
-        //     }while (RigController.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f);
-        // }
         yield return null;
     }
 
     IEnumerator ActivateWeapon(int index)
     {
+        Debug.Log(index);
         SetActiveWeapon((WeaponSlot) index);
         _equippedWeapons[index].gameObject.SetActive(true);
         var weapon = GetWeapon(index);

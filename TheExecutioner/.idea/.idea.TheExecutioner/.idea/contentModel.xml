@@ -218,6 +218,7 @@
           <e p="SpawnSystems" t="Include">
             <e p="EnemySpawnPoints.cs" t="Include" />
             <e p="SpawnZombieTest.cs" t="Include" />
+            <e p="WaveManager.cs" t="Include" />
             <e p="ZombieSpawner.cs" t="Include" />
           </e>
           <e p="StateMachine" t="Include">

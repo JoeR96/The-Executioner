@@ -10,7 +10,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="" />
+    <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimationControllers/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationControllers/PlayerController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/RPG/weapon_RPG_equip.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/RPG/weapon_RPG_equip.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/RPG/weapon_RPG_fire.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/RPG/weapon_RPG_fire.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/RPG/weapon_RPG_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/RPG/weapon_RPG_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_equip.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_equip.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_equip.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_equip.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_fire.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_fire.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_fire.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_fire.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_idle.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_idle.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,10 +117,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/LimbManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UiHealthCanvas.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/RPG.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -213,6 +228,7 @@
       <workItem from="1617818586920" duration="779000" />
       <workItem from="1617827074725" duration="6559000" />
       <workItem from="1617872847079" duration="609000" />
+      <workItem from="1618088134815" duration="5818000" />
     </task>
     <servers />
   </component>
