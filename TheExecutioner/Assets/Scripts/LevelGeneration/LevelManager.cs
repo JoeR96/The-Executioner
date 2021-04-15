@@ -76,14 +76,8 @@ public class LevelManager : MonoBehaviour
         var _ = SaveStageInformation();
         var converted = ConvertToList(_);
         levelSo.SaveLevel(converted,stageIndex);
-        
     }
-
-    private void InsertStage(List<PlatformInformation> converted,int stageIndex)
-    {
-        CurrentLevelList[stageIndex] = converted;
-    }
-
+    
     public void LoadStage(int index)
     {
         GameManager.instance.EnvironmentManager.EnemySpawnPoints.ClearEventSpawns();

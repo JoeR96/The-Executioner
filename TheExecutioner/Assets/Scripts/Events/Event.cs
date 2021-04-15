@@ -9,13 +9,21 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent
     [SerializeField] protected EventManager eventManager;
     protected Transform eventTargetDestination{ get; private set; }
     protected GameObject activeEventGameObject;
-
+    protected EventZombieSpawner eventZombieSpawner;
     protected int targetKillCount;
+    protected int waveSpawnTotal;
     public int currentTargetKillCount  { get; private set; }
     
     private void Awake()
     {
+        
         eventManager = GameManager.instance.EventManager;
+  
+    }
+
+    private void Start()
+    {
+        
     }
     public int progress { get; set; }
     public virtual void StartEvent( )
@@ -24,6 +32,8 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent
         activeEventGameObject = gameObject;
         transform.position = eventTargetDestination.position;
         AddEventTransformsToMaster();
+        eventZombieSpawner = new EventZombieSpawner(waveSpawnTotal,transform);
+        eventZombieSpawner.SpawnZombiesTargetingEvent();
     }
 
     public void SetEventDestination()

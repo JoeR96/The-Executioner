@@ -23,30 +23,10 @@ public class EventManager : MonoBehaviour
 
     private void Start()
     {
-        
+       
     }
 
-    public void AssignEvents()
-    {
-        foreach (var go in zombieSpawner.ActiveFodderZombies)
-        {
-            if (go.GetComponent<AiAgent>() != null)
-            {
-                var x = go.GetComponent<AiAgent>();
-                x.StateMachine.ChangeState(StateId.EventState);
-                Debug.Log(x.StateMachine);
-            }
-        }
-        foreach (var go in zombieSpawner.ArmoredZombies)
-        {
-            if (go.GetComponent<AiAgent>() != null)
-            {
-                var x = go.GetComponent<AiAgent>();
-                x.StateMachine.ChangeState(StateId.EventState);
-                Debug.Log(x.StateMachine);
-            }
-        }
-    }
+
     public Transform ReturnActiveRandomEventLocation()
     {
         var random = Random.Range(0, activeEventGameObjects.Count);

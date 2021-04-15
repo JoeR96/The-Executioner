@@ -6431,7 +6431,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 7e-45, z: 2.12665e-40, w: -0.00000003248934}
+  m_BoundingSphereOverride: {x: NaN, y: NaN, z: NaN, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -13626,7 +13626,8 @@ MonoBehaviour:
   MasterPool:
   - type: 0
     AmountToPool: 0
-    PrefabToPool: {fileID: 0}
+    PrefabToPool: {fileID: 3025747335874322059, guid: 349339e87439b15498ad03d7d6814536,
+      type: 3}
     PoolHolder: {fileID: 1927191925}
     ObjectPool: []
   - type: 1
@@ -25345,6 +25346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47bd3e1fe28240f428db22773aa0b23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemySpawnPoints: {fileID: 2053539589}
   _zombiePrefab: {fileID: 7509154245710281141, guid: 663e8ba86653aee4ca45b1d1d6beb397,
     type: 3}
   _zombieArmorPrefab: {fileID: 0}
@@ -25378,7 +25380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed07cb05e2df7004a954263864fb5159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ZombieSpawner: {fileID: 0}
+  ZombieSpawner: {fileID: 954858384}
 --- !u!108 &959010769
 Light:
   m_ObjectHideFlags: 0
@@ -25436,7 +25438,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 7.4e-43, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: NaN, y: 2.2011103e-38, z: 2.2011103e-38, w: 0.000000012653466}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -32460,7 +32462,7 @@ MonoBehaviour:
   weaponSpareAmmo: 180
   weaponReloadTime: 1.25
   weaponDamage: 15
-  weaponFireRate: 0.03
+  weaponFireRate: 0.1
   <WeaponIsReloading>k__BackingField: 0
   weaponCurrentammo: 30
 --- !u!114 &1411915541 stripped
@@ -33776,7 +33778,7 @@ MonoBehaviour:
   weaponSpareAmmo: 16
   weaponReloadTime: 2
   weaponDamage: 15
-  weaponFireRate: 0.125
+  weaponFireRate: 0.325
   <WeaponIsReloading>k__BackingField: 0
   weaponCurrentammo: 8
 --- !u!114 &1555174799 stripped
@@ -34820,6 +34822,7 @@ GameObject:
   - component: {fileID: 1715150810}
   - component: {fileID: 1715150809}
   - component: {fileID: 1715150812}
+  - component: {fileID: 1715150811}
   m_Layer: 0
   m_Name: ----[GAMEMANAGER]----
   m_TagString: Untagged
@@ -34869,6 +34872,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1715150811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715150808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e511f8f3f570b514abef4e6c75fd9291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelManager: {fileID: 2053539583}
+  zombieSpawner: {fileID: 954858384}
+  spawnCount: 7
 --- !u!114 &1715150812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75614,7 +75632,7 @@ MonoBehaviour:
   weaponDamage: 15
   weaponFireRate: 2
   <WeaponIsReloading>k__BackingField: 0
-  weaponCurrentammo: 0
+  weaponCurrentammo: 1
   rocketPrefab: {fileID: 4146537175756036855, guid: 8d7eb8ed3acd3d34e9569aed85acf1f3,
     type: 3}
   activeRocket: {fileID: 1177755264}

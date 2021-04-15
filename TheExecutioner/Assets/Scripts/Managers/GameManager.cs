@@ -135,8 +135,6 @@ public class GameManager : Singleton<GameManager>
         if(Input.GetKeyDown(KeyCode.F5))
             EventManager.PlayHeartEscortEvent();
         
-        if(Input.GetKeyDown(KeyCode.F6))
-            EventManager.AssignEvents();
     }
     
     public void GameOver()

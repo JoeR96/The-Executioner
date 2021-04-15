@@ -11,20 +11,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AnimationControllers/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationControllers/PlayerController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/RPG/weapon_RPG_equip.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/RPG/weapon_RPG_equip.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/RPG/weapon_RPG_fire.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/RPG/weapon_RPG_fire.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/RPG/weapon_RPG_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/RPG/weapon_RPG_idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_equip.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_equip.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_equip.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_equip.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_fire.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_fire.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_fire.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_fire.anim.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_idle.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/Shotgun/weapon_shotgun_idle.anim.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/WaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/WaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,34 +42,33 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/States/EventState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Interactions/PlatformRampManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/PlatformRampManagerEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/TileMapPractice (1).cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/EnemyTargetZombie.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/PlatformBridgeManagerEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/Crosshair.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zombies/IDestroyLimb.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Pathfinding.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/Shotgun.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Documents/PizzaPrototype01062020/Library/PackageCache/com.unity.probuilder@4.2.3/Runtime/Core/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/bf/c6e0f3d8/Int32.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/1b/148abea8/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/IStartEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/New folder/dump/12345/The-Executioner-04757166270da61332a9c7b95d3d2f094657c9cb/TheExecutioner/Assets/Scripts/Zombies/Lerper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/WeaponUI/SetAmmoText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DisplayActiveEvents.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/PlaterformColourManagerEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/InteractionSpawnPointManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/ActivePlayerEvents.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/SMG.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Interactions/PlatformRampManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/TileMapPractice (1).cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Crosshair.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/bf/c6e0f3d8/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/1b/148abea8/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/WeaponUI/SetAmmoText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/PlaterformColourManagerEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/InteractionSpawnPointManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/PlatformHeightManagerEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EventZombieSpawner.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events 1/SacrificeEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Altar.cs" />
       <option value="$PROJECT_DIR$/Assets/CharacterManager.cs" />
@@ -83,11 +80,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ObjectPoolerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/EnemySpawnPoints.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/FirstPersonController/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/AltarEventCompleteTrigger.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/EnemySpawnPoints.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/IStartEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" />
@@ -106,21 +100,26 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/DisplayActiveEvents.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/ActivePlayerEvents.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/LimbEventTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/LimbManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UiHealthCanvas.cs" />
       <option value="$PROJECT_DIR$/Assets/RPG.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/WaveManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
+      <option value="$PROJECT_DIR$/Assets/EventZombieSpawner.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -229,6 +228,7 @@
       <workItem from="1617827074725" duration="6559000" />
       <workItem from="1617872847079" duration="609000" />
       <workItem from="1618088134815" duration="5818000" />
+      <workItem from="1618500450783" duration="6006000" />
     </task>
     <servers />
   </component>
@@ -274,13 +274,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Events/Event.cs</url>
-          <line>35</line>
+          <line>45</line>
           <properties documentPath="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner\Assets\Scripts\Events\Event.cs" initialLine="28" containingFunctionPresentation="method 'AddEventTransformsToMaster'">
             <startOffsets>
-              <option value="1071" />
+              <option value="1352" />
             </startOffsets>
             <endOffsets>
-              <option value="1134" />
+              <option value="1415" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />

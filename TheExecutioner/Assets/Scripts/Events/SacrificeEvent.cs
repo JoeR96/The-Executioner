@@ -11,6 +11,7 @@ public class SacrificeEvent : Event
 
     private void OnEnable()
     {
+        waveSpawnTotal = 10;
         StartEvent();
     }
 

@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class ZombieSpawner : MonoBehaviour
 {
+    [SerializeField] private EnemySpawnPoints enemySpawnPoints;
     [SerializeField] private GameObject _zombiePrefab;
     [SerializeField] private GameObject _zombieArmorPrefab;
     [SerializeField] private Transform navmeshPos;
@@ -19,6 +20,21 @@ public class ZombieSpawner : MonoBehaviour
         t.transform.position = location.position;
         return t;
     }
+
+    public GameObject SpawnZombie()
+    {
+        var location = enemySpawnPoints.ReturnInternalSpawnPoint();
+        var t = ObjectPooler.instance.GetObject(PoolObjectType.BasicZombie);
+        SetZombiePosition(t, location);
+        return t;
+    }
+
+    private void SetZombiePosition(GameObject t, Transform location)
+    {
+        t.transform.SetPositionAndRotation(location.position, quaternion.identity);
+        t.transform.position = location.position;
+    }
+
     public GameObject SpawnArmoredZombie(Transform location)
     {
         var t = ObjectPooler.instance.GetObject(PoolObjectType.FastZombie);

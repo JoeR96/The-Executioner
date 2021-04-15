@@ -4,14 +4,31 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private LevelManager levelManager;
+    [SerializeField] private ZombieSpawner zombieSpawner;
+    [SerializeField] private int spawnCount;
+
+    private void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.F9))
+            IncreaseSpawnCount();
+        if(Input.GetKeyDown(KeyCode.F8))
+            SpawnWave();
+    }
+    private void IncreaseSpawnCount()
+    {
+        var count = spawnCount *  1.25f;
+        spawnCount = Mathf.RoundToInt(count);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SpawnWave()
+    {
+        for (int i = 0; i < spawnCount; i++)
+        {
+            zombieSpawner.SpawnZombie();
+        }
+    }
+    private void SetWaveEnemyTypes()
     {
         
     }

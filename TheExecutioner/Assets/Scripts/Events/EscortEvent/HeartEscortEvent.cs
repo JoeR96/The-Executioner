@@ -8,20 +8,21 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
     
     [SerializeField] private GameObject targetAltar;
 
-    
     public float percent;
     private int LimbsSacrificed { get; set; }
     private Transform targetPos;
     private float startDistance;
+    
     private void OnEnable()
     {
+        waveSpawnTotal = 8;
         StartEvent();
     }
     public override void StartEvent()
     {
         transform.position = eventManager.ReturnAvailableEventLocation().position;
         activeEventGameObject = gameObject;
- 
+        eventZombieSpawner.SpawnZombiesTargetingEvent();
         AddEventTransformsToMaster();
         SetEventDestination();
         SetHeart();
