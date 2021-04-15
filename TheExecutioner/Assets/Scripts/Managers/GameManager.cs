@@ -10,7 +10,7 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private GameObject uiCanvas;
     [SerializeField] private GameObject gameCanvas;
-    
+    [SerializeField] private RoundManager roundManager;
     public InteractionSpawnPointManager InteractionSpawnPointManager;
     public LimbSpawner LimbSpawner;
     public ZombieManager ZombieManager;
@@ -31,40 +31,43 @@ public class GameManager : Singleton<GameManager>
         Pathfinding = GetComponentInChildren<Pathfinding>();
         LevelManager = GetComponentInChildren<LevelManager>();
         InteractionSpawnPointManager = GetComponentInChildren<InteractionSpawnPointManager>();
+        roundManager = GetComponent<RoundManager>();
     }
 
     private void Start()
     {
         if (!BuildMode)
         {
-            StartGameSequence();
+            NextRoundSequence();
         }
         else
         {
-            LoadLevel();
+            LoadStage();
         }
         
     }
-    private void StartGame()
+    private void BuildNavMesh()
     {
         EnvironmentManager.BuildNavMesh();
     }
 
-    private void LoadLevel()
+    private void LoadStage()
     {
         var random = Random.Range(0, 3);
-        LevelManager.LoadLevel(random);
+        LevelManager.LoadLevel(0);
 
     }
-    private void StartGameSequence()
+    private void NextRoundSequence()
     {
-        Invoke("LoadLevel", 0.25f);
-        Invoke("StartGame", 6f);
-        Invoke("SpawnWeapons" ,6f);
-        Invoke("SpawnFodderZombies",7f);
+        Invoke("LoadStage",0.25f);
+        Invoke("BuildNavMesh", 6f);
+        Invoke("StartNewRound",7f);
     }
 
- 
+    private void StartNewRound()
+    {
+        roundManager.StartNewRound();
+    }
     private void SpawnFodderZombies()
     {
         List<Transform> newList = EnvironmentManager.EnemySpawnPoints.InternalSpawnPoints;
@@ -103,11 +106,7 @@ public class GameManager : Singleton<GameManager>
         
         ZombieManager.ZombieSpawner.SpawnArmoredZombiesAtLocations(temp);
     }
-
-    public void RagdollAllDuringLevelChange()
-    {
-        
-    }
+    
     private void SpawnWeapons()
     {
         for (int i = 0; i < 5; i++)

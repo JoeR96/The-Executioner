@@ -58,7 +58,17 @@ public class EventManager : MonoBehaviour
         activeEventGameObjects.Add(go);
     }
 
-
+    public void PlayEvent()
+    {
+        if (Random.value < 0.5)
+        {
+            PlaySacrificeEvent();
+        }
+        else
+        {
+            PlayHeartEscortEvent();
+        }
+    }
     public void PlaySacrificeEvent()
     {
         Instantiate(SacrificeEvent);

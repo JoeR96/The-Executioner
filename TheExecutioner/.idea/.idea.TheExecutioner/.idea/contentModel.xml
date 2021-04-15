@@ -207,6 +207,7 @@
             <e p="NavMesh" t="Include">
               <e p="RandomPointOnNavMesh.cs" t="Include" />
             </e>
+            <e p="RoundManager.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
             <e p="Timer.cs" t="Include" />
             <e p="ZombieManager.cs" t="Include" />

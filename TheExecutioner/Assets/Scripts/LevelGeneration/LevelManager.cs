@@ -1,11 +1,10 @@
-﻿
-using System.Collections.Generic;
-
-
+﻿using System.Collections.Generic;
 using UnityEngine;
+
 
 public class LevelManager : MonoBehaviour
 {
+    [SerializeField] private List<LevelSo> Levels = new List<LevelSo>();
     public int CurrentLevel;
     public int CurrentStage;
     public List<List<PlatformInformation>> CurrentLevelList = new List<List<PlatformInformation>>();
@@ -24,9 +23,13 @@ public class LevelManager : MonoBehaviour
     public void LoadLevel(int levelIndex)
     {
         LoadStage(levelIndex);
-        GameManager.instance.RagdollAllDuringLevelChange();
     }
 
+    public void LoadNewLevel()
+    {
+        var rand = Random.Range(0, Levels.Count);
+        levelSo = Levels[rand];
+    }
     public PlatformInformation[,] SaveStageInformation()
     {
         PlatformInformation[,] platformStates = new PlatformInformation[grid.gridSizeX, grid.gridSizeY];

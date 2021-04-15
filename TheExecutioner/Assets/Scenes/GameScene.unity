@@ -34823,6 +34823,7 @@ GameObject:
   - component: {fileID: 1715150809}
   - component: {fileID: 1715150812}
   - component: {fileID: 1715150811}
+  - component: {fileID: 1715150813}
   m_Layer: 0
   m_Name: ----[GAMEMANAGER]----
   m_TagString: Untagged
@@ -34845,6 +34846,7 @@ MonoBehaviour:
   _onDestroy: 0
   uiCanvas: {fileID: 0}
   gameCanvas: {fileID: 0}
+  roundManager: {fileID: 0}
   InteractionSpawnPointManager: {fileID: 0}
   LimbSpawner: {fileID: 1715150812}
   ZombieManager: {fileID: 0}
@@ -34927,6 +34929,20 @@ MonoBehaviour:
   - LimbPrefab: {fileID: 1581538933006698, guid: f2f7a69296e6a1445a21e69fe29961c2,
       type: 3}
     LimbName: LowerLeg_R
+--- !u!114 &1715150813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715150808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e0e6706aa00744ab2f399eb654b9e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventManager: {fileID: 999766929}
+  zombieSpawner: {fileID: 954858384}
 --- !u!4 &1716127128 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6593310514980126577, guid: d9e824487333034498dde6e385b0b072,
@@ -41574,6 +41590,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e6448f902fce94ba12ec5c15c4a48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Levels:
+  - {fileID: 11400000, guid: 728847ddd6591f9419762aeca1329fb0, type: 2}
+  - {fileID: 11400000, guid: af8c74f22d99e3146a427436d221f117, type: 2}
+  - {fileID: 11400000, guid: d3851a23693d7824c93b6c40f814807f, type: 2}
+  - {fileID: 11400000, guid: 7be89fbba064d934aa18b4b888727c5b, type: 2}
+  - {fileID: 11400000, guid: 3263f576268c161498844c0213f21f73, type: 2}
+  - {fileID: 11400000, guid: 492ed115c37b22445a48c6e2d2d5bd6b, type: 2}
+  - {fileID: 11400000, guid: 8f178ba1fc7e83b4fa990e9482eb0fd8, type: 2}
   CurrentLevel: 0
   CurrentStage: 2
   BuildMode: 1

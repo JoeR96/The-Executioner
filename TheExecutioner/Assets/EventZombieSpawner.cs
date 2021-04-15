@@ -16,16 +16,10 @@ public class EventZombieSpawner
     }
     public void SpawnZombiesTargetingEvent()
     {
-        Debug.Log("PRE SPAWN");
-        Debug.Log("Count =" + count);
         for (int i = 0; i < count; i++)
         {
-            Debug.Log(targetPos);
-            Debug.Log(zombieSpawner);
             var zombie = zombieSpawner.SpawnZombie();
             SetZombieState(zombie);
-            
-            Debug.Log("SPAWNING");
         }
     }
 
