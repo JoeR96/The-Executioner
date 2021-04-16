@@ -21,7 +21,7 @@ public class RoundManager : MonoBehaviour
         IncreaseSpawnCount();
         SetNewRound();
         StartCoroutine(StartEvents());
-        SpawnZombies();
+        SpawnWave();
     }
 
     private void SetNewRound()
@@ -40,7 +40,7 @@ public class RoundManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
     }
 
-    private void SpawnZombies()
+    private void SpawnWave()
     {
         for (int i = 0; i < currentRoundZombieSpawnCount; i++)
         {

@@ -31,10 +31,9 @@ public class ButtonMouseHover : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         Vector3 targetScale;
         var startScale = transform.localScale;
-        if (scaleUp)
-            targetScale = new Vector3(1.25f, 1.25f, 1.25f);
-        else
-            targetScale = new Vector3(1, 1, 1);
+        
+        targetScale = SetScaleSize(scaleUp);
+        
         float timer = 0f;
         float duration = 0.125f;
 
@@ -45,5 +44,15 @@ public class ButtonMouseHover : MonoBehaviour, IPointerEnterHandler, IPointerExi
             transform.localScale = Vector3.Lerp(startScale,targetScale,percentage);
             yield return null;
         }
+    }
+
+    private static Vector3 SetScaleSize(bool scaleUp)
+    {
+        Vector3 targetScale;
+        if (scaleUp)
+            targetScale = new Vector3(1.25f, 1.25f, 1.25f);
+        else
+            targetScale = new Vector3(1, 1, 1);
+        return targetScale;
     }
 }
