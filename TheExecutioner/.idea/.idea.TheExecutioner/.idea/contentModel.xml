@@ -125,6 +125,7 @@
           </e>
         </e>
         <e p="LimbEventTrigger.cs" t="Include" />
+        <e p="PrintGameUI.cs" t="Include" />
         <e p="RPG.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Audio" t="Include">
@@ -221,7 +222,6 @@
           <e p="SpawnSystems" t="Include">
             <e p="EnemySpawnPoints.cs" t="Include" />
             <e p="SpawnZombieTest.cs" t="Include" />
-            <e p="WaveManager.cs" t="Include" />
             <e p="ZombieSpawner.cs" t="Include" />
           </e>
           <e p="StateMachine" t="Include">

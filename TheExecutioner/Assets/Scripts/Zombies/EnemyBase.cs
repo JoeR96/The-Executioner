@@ -76,7 +76,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         if (healthSystem.CurrentHealth < 0)
         {
             _aiAgent.StateMachine.ChangeState(StateId.DeathState);
-           
+           GameManager.instance.ZombieManager.ZombieSpawner.RemoveZombieFromList(gameObject);
         }
     }
     

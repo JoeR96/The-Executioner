@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private List<LevelSo> Levels = new List<LevelSo>();
@@ -16,20 +15,29 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        CurrentLevel = 0;
+        CurrentStage = 0;
         enemySpawnPoints = GetComponent<EnemySpawnPoints>();
         grid = GetComponent<Grid>();
     }
 
-    public void LoadLevel(int levelIndex)
+    public void LoadLevel()
     {
-        LoadStage(levelIndex);
-    }
-
-    public void LoadNewLevel()
-    {
+        CurrentStage = 0;
+        
         var rand = Random.Range(0, Levels.Count);
         levelSo = Levels[rand];
     }
+    public void LoadStage()
+    {
+        if (CurrentStage == 2)
+            LoadLevel();
+        else
+            CurrentStage++;
+        
+        LoadStage(CurrentStage);
+    }
+    
     public PlatformInformation[,] SaveStageInformation()
     {
         PlatformInformation[,] platformStates = new PlatformInformation[grid.gridSizeX, grid.gridSizeY];

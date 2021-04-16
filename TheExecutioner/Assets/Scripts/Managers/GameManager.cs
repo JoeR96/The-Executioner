@@ -53,8 +53,8 @@ public class GameManager : Singleton<GameManager>
 
     private void LoadStage()
     {
-        var random = Random.Range(0, 3);
-        LevelManager.LoadLevel(0);
+        
+        LevelManager.LoadStage();
 
     }
     private void NextRoundSequence()

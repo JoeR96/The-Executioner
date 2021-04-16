@@ -94,5 +94,9 @@ public class ZombieSpawner : MonoBehaviour
         }
         
     }
-    
+
+    public void RemoveZombieFromList(GameObject Zombie)
+    {
+        ActiveZombies.Remove(Zombie);
+    }
 }

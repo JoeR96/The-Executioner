@@ -6,10 +6,16 @@ public class RoundManager : MonoBehaviour
 {
     [SerializeField] private EventManager eventManager;
     [SerializeField] private ZombieSpawner zombieSpawner;
-    
-    private int currentRound = 1;
-    private int currentRoundZombieSpawnCount = 12;
+
+    public int CurrentRound { get; set; }
+    public int CurrentRoundZombieSpawnCount { get; set; }
     private int eventsToSpawn;
+
+    private void Start()
+    {
+        CurrentRound = 1;
+        CurrentRoundZombieSpawnCount = 12;
+    }
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.F7))
@@ -26,14 +32,14 @@ public class RoundManager : MonoBehaviour
 
     private void SetNewRound()
     {
-        eventsToSpawn = currentRound / 2;
+        eventsToSpawn = CurrentRound / 2;
         Mathf.RoundToInt(eventsToSpawn);
-        currentRound++;
+        CurrentRound++;
     }
 
     private IEnumerator StartEvents()
     {
-        for (int i = 0; i < currentRound; i++)
+        for (int i = 0; i < CurrentRound; i++)
         {
             eventManager.PlayEvent();
         }
@@ -42,7 +48,7 @@ public class RoundManager : MonoBehaviour
 
     private void SpawnWave()
     {
-        for (int i = 0; i < currentRoundZombieSpawnCount; i++)
+        for (int i = 0; i < CurrentRoundZombieSpawnCount; i++)
         {
             zombieSpawner.SpawnZombie();
         }
@@ -50,7 +56,12 @@ public class RoundManager : MonoBehaviour
     
     private void IncreaseSpawnCount()
     {
-        var count = currentRoundZombieSpawnCount *  1.25f;
-        currentRoundZombieSpawnCount = Mathf.RoundToInt(count);
+        var count = CurrentRoundZombieSpawnCount *  1.25f;
+        CurrentRoundZombieSpawnCount = Mathf.RoundToInt(count);
+    }
+
+    public int ReturnActiveZombieCount()
+    {
+        return zombieSpawner.ActiveZombies.Count;
     }
 }
