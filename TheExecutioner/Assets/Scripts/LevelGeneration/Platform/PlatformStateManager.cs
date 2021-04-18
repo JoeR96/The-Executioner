@@ -43,8 +43,6 @@ public class PlatformStateManager : MonoBehaviour
         platformManager.PlatformRampManager.CurrentRotation = platformInformation.CurrentRotation;
         platformManager.PlatformSpawnManager.PlatformSpawnPointActive = platformInformation.PlatformSpawnActive;
         platformManager.PlatformSpawnManager.PlatformEventSpawn = platformInformation.PlatformEventSpawn;
-        if(platformManager.PlatformSpawnManager.PlatformSpawnPointActive)
-            GameManager.instance.EnvironmentManager.EnemySpawnPoints.CheckForSpawnPoint(Node);
         SetState();
     }
     public void SetState()

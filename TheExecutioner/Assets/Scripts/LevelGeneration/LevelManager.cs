@@ -28,6 +28,7 @@ public class LevelManager : MonoBehaviour
         var rand = Random.Range(0, Levels.Count);
         levelSo = Levels[rand];
     }
+    
     public void LoadStage()
     {
         if (CurrentStage == 2)
@@ -37,8 +38,40 @@ public class LevelManager : MonoBehaviour
         
         LoadStage(CurrentStage);
     }
+
+    public void LoadStage(int index)
+    {
+        
+        SetCurrentStage(index);
+        var levelToSet = levelSo.ReturnLevel(index);
+
+        foreach (var go in levelToSet)
+        {
+            if (grid.grid[go.X, go.Z] != null)
+            {
+                var pos = grid.grid[go.X, go.Z].PlatformManager;
+                pos.PlatformStateManager.SetStateFromExternal(go);
+                if (pos.PlatformSpawnManager.PlatformEventSpawn)
+                    enemySpawnPoints.AddEventSpawn(pos.PlatformSpawnManager.spawnPoint.transform);
+            }
+        }
+    }
     
-    public PlatformInformation[,] SaveStageInformation()
+    public void SetCurrentStage(int level)
+    {
+        CurrentStage = level;
+    }
+    
+    public void SaveStage(int stageIndex)
+    {
+        var _ = SaveStageInformation();
+        var converted = ConvertToList(_);
+        levelSo.SaveLevel(converted,stageIndex);
+    }
+    
+    
+    
+        public PlatformInformation[,] SaveStageInformation()
     {
         PlatformInformation[,] platformStates = new PlatformInformation[grid.gridSizeX, grid.gridSizeY];
         
@@ -68,9 +101,6 @@ public class LevelManager : MonoBehaviour
         return stageToReturn;
     }
     
-    
-    //Cant save the 2d array of nodes to a scriptable object 
-    //I opted to convert all coordinate and state information in to integers that are stored in a list
     public List<PlatformInformation> ConvertToList(PlatformInformation[,] platformInformation)
     {
         var list = new List<PlatformInformation>();
@@ -81,36 +111,10 @@ public class LevelManager : MonoBehaviour
 
         return list;
     }
-    
-    public void SaveStage(int stageIndex)
-    {
-        var _ = SaveStageInformation();
-        var converted = ConvertToList(_);
-        levelSo.SaveLevel(converted,stageIndex);
-    }
-    
-    public void LoadStage(int index)
-    {
-        GameManager.instance.EnvironmentManager.EnemySpawnPoints.ClearEventSpawns();
-        SetCurrentStage(index);
-        var levelToSet = levelSo.ReturnLevel(index);
-        
-        foreach (var go in levelToSet)
-        {
-            if (grid.grid[go.X, go.Z] != null)
-            {
-                var pos = grid.grid[go.X, go.Z].PlatformManager;
-                pos.PlatformStateManager.SetStateFromExternal(go);
-                if(pos.PlatformSpawnManager.PlatformEventSpawn)
-                            enemySpawnPoints.AddEventSpawn(pos.PlatformSpawnManager.spawnPoint.transform);
-            }
-        }
-    }
-    
-    public void SetCurrentStage(int level)
-    {
-        CurrentStage = level;
-    }
+    //Cant save the 2d array of nodes to a scriptable object 
+    //I opted to convert all coordinate and state information in to integers that are stored in a list
+
+ 
 
 
     

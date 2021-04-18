@@ -36,7 +36,7 @@ public class RPG : RaycastWeapon
     {
         weaponCurrentammo--;
         weaponFireTimer = 0f;
-        StartCoroutine(LerpRocket(ray.direction));
+        StartCoroutine(LerpRocket(RaycastDestination.position));
     }
 
     protected override IEnumerator ReloadWeapon()
@@ -59,7 +59,7 @@ public class RPG : RaycastWeapon
             Debug.Log("HI");
             timer += Time.deltaTime;
             float percentage = Mathf.Min(timer / rocketForce, 1);
-            activeRocket.transform.position = Vector3.Lerp(start, target, 1);
+            activeRocket.transform.position = Vector3.Lerp(start, target, percentage);
             yield return null;
         }
         Destroy(activeRocket);
