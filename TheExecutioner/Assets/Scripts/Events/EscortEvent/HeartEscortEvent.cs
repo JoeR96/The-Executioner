@@ -38,6 +38,8 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
     
     public void EventComplete(Heart heart)
     {
+        if(heart.Destination != null)
+            return;
         var altar = Instantiate(targetAltar, heart.Destination.position,quaternion.identity);
         targetPos = ReturnHeartTargetPosition(altar);
 
