@@ -59,9 +59,9 @@ public class GameManager : Singleton<GameManager>
     }
     private void NextRoundSequence()
     {
-        Invoke("LoadStage",0.25f);
-        Invoke("BuildNavMesh", 6f);
-        Invoke("StartNewRound",8f);
+        Invoke("LoadStage", 0.1f);
+        Invoke("BuildNavMesh", 4f);
+        Invoke("StartNewRound",4.5f);
     }
 
     private void StartNewRound()
@@ -134,6 +134,9 @@ public class GameManager : Singleton<GameManager>
         if(Input.GetKeyDown(KeyCode.F5))
             EventManager.PlayHeartEscortEvent();
         
+        if(Input.GetKeyDown(KeyCode.F6))
+            NextRoundSequence();
+
     }
     
     public void GameOver()

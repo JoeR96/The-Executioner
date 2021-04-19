@@ -128,6 +128,7 @@
         <e p="MainMenuLevelManager.cs" t="Include" />
         <e p="Missile.cs" t="Include" />
         <e p="PrintGameUI.cs" t="Include" />
+        <e p="RespawnPlayer.cs" t="Include" />
         <e p="RPG.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Audio" t="Include">

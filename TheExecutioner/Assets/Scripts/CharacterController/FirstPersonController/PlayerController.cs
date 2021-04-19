@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private float _sprintSpeed = 10f;
     private float _sprintSpeedUpTimer = 0.5f;
     
-    private bool _isGrounded;
+    public bool _isGrounded;
     private bool _playerIsMoving;
     private bool _isSprinting;
 
@@ -56,7 +56,8 @@ public class PlayerController : MonoBehaviour
         //check if our player is grounded
          _isGrounded = Physics.CheckSphere(
              new Vector3(transform.position.x, transform.position.y - 1, transform.position.z),
-             2f, _layerMask);
+             0.2f, _layerMask);
+         
         
         //Jump
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)

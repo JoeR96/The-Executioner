@@ -32,13 +32,18 @@ public class LevelManager : MonoBehaviour
     public void LoadStage()
     {
         if (CurrentStage == 2)
+        {
+            CurrentStage = 0;
             LoadLevel();
+        }
+          
         else
             CurrentStage++;
         
         LoadStage(CurrentStage);
     }
 
+    public bool menuMode;
     public void LoadStage(int index)
     {
         
@@ -51,11 +56,16 @@ public class LevelManager : MonoBehaviour
             {
                 var pos = grid.grid[go.X, go.Z].PlatformManager;
                 pos.PlatformStateManager.SetStateFromExternal(go);
-                if (pos.PlatformSpawnManager.PlatformEventSpawn)
-                    enemySpawnPoints.AddEventSpawn(pos.PlatformSpawnManager.spawnPoint.transform);
-                if(pos.PlatformSpawnManager.PlatformSpawnPointActive)
-                    GameManager.instance.EnvironmentManager.EnemySpawnPoints.CheckForSpawnPoint(
-                        pos.PlatformStateManager.Node);
+                if (menuMode == false) 
+                {
+                    pos.PlatformHeightManager.RaisePlatformTowerHeight();
+                    if (pos.PlatformSpawnManager.PlatformEventSpawn)
+                        enemySpawnPoints.AddEventSpawn(pos.PlatformSpawnManager.spawnPoint.transform);
+                    if(pos.PlatformSpawnManager.PlatformSpawnPointActive)
+                        GameManager.instance.EnvironmentManager.EnemySpawnPoints.CheckForSpawnPoint(
+                            pos.PlatformStateManager.Node);
+                }
+         
             }
         }
     }

@@ -53,4 +53,15 @@ public class PlatformHeightManager : MonoBehaviour
             yield return null;
         }
     }
+
+    public void RaisePlatformTowerHeight()
+    {
+        for (int i = 0; i < platformHeights.Count; i++)
+        {
+            if (i != 15) 
+            {
+                platformHeights[i] += 2;
+            }
+        }
+    }
 }
