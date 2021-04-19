@@ -23,6 +23,7 @@ public class RPG : RaycastWeapon
             SetWeaponProperties();
             SetRocketRigidBodyVariables();
             activeRocket.transform.SetParent(null);
+            activeRocket.GetComponent<Rocket>().SetActiveRocket();
             MuzzleFlash.Play();
         }
     }
@@ -56,4 +57,6 @@ public class RPG : RaycastWeapon
         Reload();
         WeaponIsLoaded = true;
     }
+
+
 }
