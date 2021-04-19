@@ -53,6 +53,9 @@ public class LevelManager : MonoBehaviour
                 pos.PlatformStateManager.SetStateFromExternal(go);
                 if (pos.PlatformSpawnManager.PlatformEventSpawn)
                     enemySpawnPoints.AddEventSpawn(pos.PlatformSpawnManager.spawnPoint.transform);
+                if(pos.PlatformSpawnManager.PlatformSpawnPointActive)
+                    GameManager.instance.EnvironmentManager.EnemySpawnPoints.CheckForSpawnPoint(
+                        pos.PlatformStateManager.Node);
             }
         }
     }

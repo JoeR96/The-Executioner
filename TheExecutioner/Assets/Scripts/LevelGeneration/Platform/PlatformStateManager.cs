@@ -43,6 +43,7 @@ public class PlatformStateManager : MonoBehaviour
         platformManager.PlatformRampManager.CurrentRotation = platformInformation.CurrentRotation;
         platformManager.PlatformSpawnManager.PlatformSpawnPointActive = platformInformation.PlatformSpawnActive;
         platformManager.PlatformSpawnManager.PlatformEventSpawn = platformInformation.PlatformEventSpawn;
+
         SetState();
     }
     public void SetState()

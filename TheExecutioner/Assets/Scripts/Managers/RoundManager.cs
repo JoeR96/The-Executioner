@@ -32,7 +32,6 @@ public class RoundManager : MonoBehaviour
 
     private void SetNewRound()
     {
-        GameManager.instance.EnvironmentManager.EnemySpawnPoints.ClearEventSpawns();
         eventsToSpawn = CurrentRound / 2;
         Mathf.RoundToInt(eventsToSpawn);
         CurrentRound++;
@@ -40,7 +39,7 @@ public class RoundManager : MonoBehaviour
 
     private IEnumerator StartEvents()
     {
-        for (int i = 0; i < CurrentRound; i++)
+        for (int i = 0; i < eventsToSpawn; i++)
         {
             eventManager.PlayEvent();
         }

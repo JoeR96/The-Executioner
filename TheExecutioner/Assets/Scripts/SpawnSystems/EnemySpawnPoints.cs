@@ -44,6 +44,7 @@ public class EnemySpawnPoints : MonoBehaviour
 
     public Transform ReturnEventSpawnPoint()
     {
+        Debug.Log(eventSpawnPositions.Count);
         var random = Random.Range(0,eventSpawnPositions.Count);
         var temp = eventSpawnPositions[random];
         

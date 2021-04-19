@@ -21,9 +21,18 @@ public class RPG : RaycastWeapon
             AudioManager.Instance.PlaySound("RPGFire");
             SetRaycastPositions();
             SetWeaponProperties();
-            
+            SetRocketRigidBodyVariables();
+            activeRocket.transform.SetParent(null);
             MuzzleFlash.Play();
         }
+    }
+
+    private void SetRocketRigidBodyVariables()
+    {
+        var rb = activeRocket.GetComponent<Rigidbody>();
+        rb.isKinematic = false;
+        rb.constraints = RigidbodyConstraints.None;
+        rb.velocity = rocketPosition.forward * rocketForce;
     }
 
     protected override void Reload()
@@ -36,7 +45,7 @@ public class RPG : RaycastWeapon
     {
         weaponCurrentammo--;
         weaponFireTimer = 0f;
-        StartCoroutine(LerpRocket(RaycastDestination.position));
+        
     }
 
     protected override IEnumerator ReloadWeapon()
@@ -46,23 +55,5 @@ public class RPG : RaycastWeapon
         yield return new WaitForSeconds(2f);
         Reload();
         WeaponIsLoaded = true;
-    }
-    
-    private IEnumerator LerpRocket(Vector3 target)
-    {
-        float timer = 0;
-
-        Vector3 start = activeRocket.transform.position; 
-        
-        while (timer < rocketForce)
-        {
-            Debug.Log("HI");
-            timer += Time.deltaTime;
-            float percentage = Mathf.Min(timer / rocketForce, 1);
-            activeRocket.transform.position = Vector3.Lerp(start, target, percentage);
-            yield return null;
-        }
-        Destroy(activeRocket);
-        Reload();
     }
 }
