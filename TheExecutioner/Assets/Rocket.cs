@@ -50,7 +50,7 @@ public class Rocket : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(RocketIsActive)
+        if(RocketIsActive && !other.CompareTag("Rocket"))
             Explosion();
     }
 }
