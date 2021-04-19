@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1326523378140003697}
   m_Layer: 0
   m_Name: SM_Wep_RocketLauncher_01_Trigger_02
-  m_TagString: Untagged
+  m_TagString: Rocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1326523378140003707}
   m_Layer: 0
   m_Name: SM_Wep_RocketLauncher_01_Fireworks_01
-  m_TagString: Untagged
+  m_TagString: Rocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 1326523378140003709}
   m_Layer: 0
   m_Name: SM_Wep_RocketLauncher_01_Missile_01
-  m_TagString: Untagged
+  m_TagString: Rocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 1326523378140003711}
   m_Layer: 0
   m_Name: SM_Wep_RocketLauncher_01_Trigger_01
-  m_TagString: Untagged
+  m_TagString: Rocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14960,7 +14960,7 @@ GameObject:
   - component: {fileID: 3351435704116798427}
   m_Layer: 0
   m_Name: Rocket
-  m_TagString: Untagged
+  m_TagString: Rocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15053,7 +15053,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!114 &3351435704116798427
 MonoBehaviour:
   m_ObjectHideFlags: 0
