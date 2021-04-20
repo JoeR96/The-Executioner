@@ -131,6 +131,7 @@ public abstract class RaycastWeapon : MonoBehaviour
         var tracer = InstantiateTrailRenderer();
         if(Physics.Raycast(ray,out hitInfo))
         {
+            Debug.Log(hitInfo.collider.name);
             SetHitEffects();
             tracer.transform.position = hitInfo.point;
             recoil.GenerateRecoil(WeaponName);

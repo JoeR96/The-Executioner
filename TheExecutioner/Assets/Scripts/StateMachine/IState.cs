@@ -9,7 +9,8 @@ DeathState,
 Idle,
 Attack,
 Target,
-EventState
+EventState,
+EventDeathState
 }
 
 public interface IState 

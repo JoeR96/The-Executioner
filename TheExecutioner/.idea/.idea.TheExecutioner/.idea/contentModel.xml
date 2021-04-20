@@ -239,12 +239,14 @@
               <e p="Chase.cs" t="Include" />
               <e p="ChaseState.cs" t="Include" />
               <e p="DeathState.cs" t="Include" />
+              <e p="EventDeathState.cs" t="Include" />
               <e p="EventState.cs" t="Include" />
               <e p="IdleState.cs" t="Include" />
               <e p="TargetState.cs" t="Include" />
             </e>
           </e>
           <e p="UI" t="Include">
+            <e p="FadeWeaponIcon.cs" t="Include" />
             <e p="UiHealthCanvas.cs" t="Include" />
             <e p="WeaponUI" t="Include">
               <e p="SetAmmoText.cs" t="Include" />

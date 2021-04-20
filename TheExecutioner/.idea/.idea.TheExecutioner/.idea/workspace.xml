@@ -11,7 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Rocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rocket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieFast.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieFast.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/InteractionSpawnPointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/InteractionSpawnPointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,10 +57,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/MainMenuLevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/ActivePlayerEvents.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/RespawnPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/FadeWeaponIcon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/SMG.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Rocket.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Interactions/PlatformRampManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/TileMapPractice (1).cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StateMachine/States/EventDeathState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Crosshair.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/bf/c6e0f3d8/Int32.cs" root0="SKIP_HIGHLIGHTING" />
@@ -68,10 +77,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/AltarEventCompleteTrigger.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/IStartEvent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AltarEventCompleteTrigger.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/ChaseState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/weaponRecoil.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/IDestroyLimb.cs" />
@@ -89,7 +94,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/LimbManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UiHealthCanvas.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
       <option value="$PROJECT_DIR$/Assets/EventZombieSpawner.cs" />
@@ -104,7 +108,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/WaveManager.cs" />
       <option value="$PROJECT_DIR$/Assets/PrintGameUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/MainMenuLevelManager.cs" />
@@ -119,6 +122,12 @@
       <option value="$PROJECT_DIR$/Assets/RespawnPlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/RPG.cs" />
       <option value="$PROJECT_DIR$/Assets/Rocket.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/FadeWeaponIcon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/InteractionSpawnPointManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/EventDeathState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -231,7 +240,7 @@
       <workItem from="1618744273422" duration="12538000" />
       <workItem from="1618844396593" duration="4893000" />
       <workItem from="1618851831174" duration="3564000" />
-      <workItem from="1618870450361" duration="111000" />
+      <workItem from="1618870450361" duration="4840000" />
     </task>
     <servers />
   </component>
@@ -287,19 +296,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs</url>
-          <line>168</line>
-          <properties documentPath="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner\Assets\Scripts\Zombies\EnemyBase.cs" initialLine="184" containingFunctionPresentation="method 'DestroyLimb'">
-            <startOffsets>
-              <option value="5240" />
-            </startOffsets>
-            <endOffsets>
-              <option value="5288" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

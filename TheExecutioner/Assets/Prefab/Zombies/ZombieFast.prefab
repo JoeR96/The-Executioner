@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1826799221799591805}
   - component: {fileID: 5228978668170145088}
   - component: {fileID: 4589801418514303086}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FX_LevelUp_Swirl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4890,7 +4890,7 @@ GameObject:
   - component: {fileID: 5963636414068091738}
   - component: {fileID: 7070191395831732269}
   - component: {fileID: 4046061024372659573}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FX_LevelUp_Beams_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10268,7 +10268,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.40415385, y: 0.06136661, z: 1.5145776e-15}
+  m_ConnectedAnchor: {x: -0.4041535, y: 0.061365616, z: 1.5145761e-15}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -10441,7 +10441,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.39930922, y: -0.000001206994, z: -0.00000055134296}
+  m_ConnectedAnchor: {x: 0.39930892, y: -0.00000026077032, z: 0.0000003799796}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -10582,7 +10582,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.2337153, y: -0.007856511, z: -0.19098854}
+  m_ConnectedAnchor: {x: -0.23371582, y: -0.007857412, z: -0.19098902}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -13726,7 +13726,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.23371811, y: -0.007856108, z: 0.19098854}
+  m_ConnectedAnchor: {x: -0.23371866, y: -0.0078569725, z: 0.19098902}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -14726,7 +14726,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.3394742, y: -0.0014490248, z: -0.001435915}
+  m_ConnectedAnchor: {x: -0.3394742, y: -0.0014485139, z: -0.0014359336}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -15623,7 +15623,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.3993091, y: -0.00000063329935, z: 0.0000006109476}
+  m_ConnectedAnchor: {x: -0.3993091, y: -0.00000016391277, z: -0.00000032782555}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -17160,7 +17160,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.04115748, y: -0.026921278, z: 0.0989666}
+  m_ConnectedAnchor: {x: 0.041157626, y: -0.026920335, z: 0.098967075}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -17534,7 +17534,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.28183714, y: 0.036006138, z: 0}
+  m_ConnectedAnchor: {x: -0.28183776, y: 0.03600526, z: 0}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -18286,7 +18286,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.04115748, y: -0.026921278, z: -0.0989666}
+  m_ConnectedAnchor: {x: 0.041157626, y: -0.026920335, z: -0.098967075}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -37757,7 +37757,7 @@ GameObject:
   - component: {fileID: 2022997966137931898}
   - component: {fileID: 5550200632275719681}
   - component: {fileID: 1974837646659149215}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FX_LevelUp_Sparkles_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42627,7 +42627,7 @@ GameObject:
   - component: {fileID: 1808532013711949840}
   - component: {fileID: 4187161446715573734}
   - component: {fileID: 7560043810492325703}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SwirlSpawn (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47496,9 +47496,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3019808348438999527}
     m_Modifications:
+    - target: {fileID: 1101507302235792, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255573265440238, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
       propertyPath: m_Name
       value: FX_Explosion_Body_Bloody_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277154925287174, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583149892273974, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4597830263558120, guid: 3b517eddec185dd4a830743a742ad00b, type: 3}
       propertyPath: m_LocalPosition.x

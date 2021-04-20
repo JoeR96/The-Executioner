@@ -67,25 +67,21 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     {
         _aiAgent.navMeshAgent.enabled = true;
         GetComponent<Ragdoll>().DeactivateRagdoll();
-        
     }
-    
     public void TakeDamage(float damage, Vector3 direction)
     {
         healthSystem.TakeDamage(damage);
         if (healthSystem.CurrentHealth < 0)
         {
+            if (InEvent)
+            {
+                _aiAgent.StateMachine.ChangeState(StateId.EventDeathState);
+            }
             _aiAgent.StateMachine.ChangeState(StateId.DeathState);
            GameManager.instance.ZombieManager.ZombieSpawner.RemoveZombieFromList(gameObject);
         }
     }
-    
-
-
     public bool InEvent;
-    
-   
-
     //Scale the limb to size 0 so it is removed from the body and the animation still functions
     private IEnumerator ScaleComponent(Transform target, Vector3 targetSize, float speed)
     {
@@ -100,23 +96,17 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
             yield return null;
         }
     }
-
-
     private  EnemyPartices _enemyPartices = new EnemyPartices();
-
-
     private void ScaleRootComponents()
     {
         var root = _rootComponent.transform;
-        StartCoroutine(ScaleComponent(root, _explosionScaleSize, 1f));
+        StartCoroutine(ScaleComponent(root, _explosionScaleSize, 0.5f));
     }
-    
     public bool IsAgentOnNavMesh()
     {
         float onMeshThreshold = 3;
         Vector3 agentPosition = transform.position; 
         NavMeshHit hit;
-
         // Check for nearest point on navmesh to agent, within onMeshThreshold
         if (NavMesh.SamplePosition(agentPosition, out hit, onMeshThreshold, NavMesh.AllAreas))
         {
@@ -128,7 +118,6 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
                 return agentPosition.y >= hit.position.y;
             }
         }
-
         return false;
     }
     
