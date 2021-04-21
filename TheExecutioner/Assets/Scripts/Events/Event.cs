@@ -32,8 +32,14 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent
         activeEventGameObject = gameObject;
         transform.position = eventTargetDestination.position;
         AddEventTransformsToMaster();
+        AddEventToList();
         eventZombieSpawner = new EventZombieSpawner(waveSpawnTotal,transform);
         eventZombieSpawner.SpawnZombiesTargetingEvent();
+    }
+
+    private void AddEventToList()
+    {
+        eventManager.AddEvent(this);
     }
 
     public void SetEventDestination()

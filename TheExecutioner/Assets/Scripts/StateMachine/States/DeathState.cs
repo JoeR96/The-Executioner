@@ -26,13 +26,14 @@ public class DeathState : IState
         Direction.y = 1;
         agent.Ragdoll.ApplyForce(Direction * agent.AgentConfig.DieForce);
         agent.Mesh.updateWhenOffscreen = true;
+        agent.StartCoroutine(agent.EnemyBase.Die());
 
     }
 
     public void Update(AiAgent agent)
     {
-     if(timer.TimerIsOver())
-         ObjectPooler.instance.ReturnObject(agent.gameObject,agent.EnemyBase.ZombieType);
+     
+         
     }
 
     public void Exit(AiAgent agent)

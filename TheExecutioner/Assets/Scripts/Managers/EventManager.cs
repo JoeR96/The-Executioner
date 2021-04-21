@@ -19,7 +19,8 @@ public class EventManager : MonoBehaviour
 
     private List<Transform> activeEventTargetDestinations = new List<Transform>();
     [SerializeField] private List<GameObject> activeEventGameObjects = new List<GameObject>();
-   
+
+    public List<Event> ActiveEvents { get; } = new List<Event>();
 
     private void Start()
     {
@@ -80,4 +81,13 @@ public class EventManager : MonoBehaviour
         Instantiate(HeartEscortEvent);
     }
 
+    public void AddEvent(Event newEvent)
+    {
+        ActiveEvents.Add(newEvent);
+    }
+
+    public void RemoveEvent(Event completedEvent)
+    {
+        ActiveEvents.Remove(completedEvent);
+    }
 }

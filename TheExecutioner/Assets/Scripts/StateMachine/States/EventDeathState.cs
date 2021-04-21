@@ -6,7 +6,7 @@ public class EventDeathState : IState
 {
     public StateId GetId()
     {
-        
+        return StateId.EventDeathState;
     }
 
     public void Enter(AiAgent agent)

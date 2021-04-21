@@ -35,12 +35,15 @@ public class LevelManager : MonoBehaviour
         {
             CurrentStage = 0;
             LoadLevel();
+            LoadStage(CurrentStage);
         }
-          
+
         else
+        {
             CurrentStage++;
-        
-        LoadStage(CurrentStage);
+            LoadStage(CurrentStage);
+        }
+   
     }
 
     public bool menuMode;

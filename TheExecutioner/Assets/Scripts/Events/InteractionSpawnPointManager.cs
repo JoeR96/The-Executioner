@@ -14,7 +14,11 @@ public class InteractionSpawnPointManager : MonoBehaviour
     {
         var rand = Random.Range(0, weapons.Count);
         var randomWeapon = weapons[rand];
-                Instantiate(randomWeapon, spawnPoint.position, quaternion.identity);
+        {
+            var weapon = Instantiate(randomWeapon, spawnPoint.position, quaternion.identity);
+            weapon.transform.SetParent(spawnPoint.transform.parent);
+        }
+                
 
     }
 

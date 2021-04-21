@@ -11,7 +11,7 @@ public class ZombieSpawner : MonoBehaviour
     [SerializeField] private GameObject _zombieArmorPrefab;
     [SerializeField] private Transform navmeshPos;
     public List<GameObject> ActiveZombies = new List<GameObject>();
-    public List<GameObject> ArmoredZombies = new List<GameObject>();
+    public List<GameObject> EliteZombie = new List<GameObject>();
     
     public GameObject SpawnZombie(Transform location)
     {
@@ -68,7 +68,7 @@ public class ZombieSpawner : MonoBehaviour
             t.GetComponent<NavMeshAgent>().enabled = false;
             t.GetComponent<Ragdoll>().ActivateRagDoll();
             t.transform.position = location[i].position;
-            ArmoredZombies.Add(t);
+            EliteZombie.Add(t);
         }
     }
     public void SpawnRagdollZombieAtLocations(Transform location)
@@ -99,4 +99,6 @@ public class ZombieSpawner : MonoBehaviour
     {
         ActiveZombies.Remove(Zombie);
     }
+    
+    
 }

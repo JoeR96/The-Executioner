@@ -158,8 +158,13 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         StartCoroutine(LimbManager.RemoveLimb(limb,5f));
     }
 
-
+    public IEnumerator Die()
+    {
+        yield return new WaitForSeconds(2f);
+        ObjectPooler.instance.ReturnObject(gameObject,ZombieType);
+    }
 }
+
 public interface ITakeDamage
 { 
     void TakeDamage(float damage, Vector3 direction);

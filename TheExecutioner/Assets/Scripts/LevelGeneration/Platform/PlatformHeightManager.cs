@@ -58,10 +58,14 @@ public class PlatformHeightManager : MonoBehaviour
     {
         for (int i = 0; i < platformHeights.Count; i++)
         {
-            if (i != 15) 
+            if (i != 14) 
             {
                 platformHeights[i] += 2;
             }
         }
+
+        var spawnPos = GameManager.instance.playerSpawnPoint.transform.position;
+        var targetVector = new Vector3(spawnPos.x, spawnPos.y += 2, spawnPos.z);
+        GameManager.instance.playerSpawnPoint.transform.position = targetVector;
     }
 }

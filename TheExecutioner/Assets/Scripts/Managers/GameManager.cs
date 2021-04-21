@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject uiCanvas;
     [SerializeField] private GameObject gameCanvas;
     [SerializeField] private RoundManager roundManager;
+    [SerializeField] public GameObject playerSpawnPoint;
     public InteractionSpawnPointManager InteractionSpawnPointManager;
     public LimbSpawner LimbSpawner;
     public ZombieManager ZombieManager;
@@ -57,11 +58,12 @@ public class GameManager : Singleton<GameManager>
         LevelManager.LoadStage();
 
     }
-    private void NextRoundSequence()
+    public void NextRoundSequence()
     {
-        Invoke("LoadStage", 0.1f);
+
+        Invoke("StartNewRound",1f);
         Invoke("BuildNavMesh", 4f);
-        Invoke("StartNewRound",4.5f);
+        Invoke("SpawnWeapons", 5f);
     }
 
     private void StartNewRound()
@@ -109,7 +111,7 @@ public class GameManager : Singleton<GameManager>
     
     private void SpawnWeapons()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 12; i++)
         {
             InteractionSpawnPointManager.SpawnWeapon(EnvironmentManager.EnemySpawnPoints.ReturnInternalSpawnPoint());
         }

@@ -5,5 +5,4 @@ using UnityEngine;
 public interface IIsInEventArea
 {
     void IsInArea(bool state);
-    
 }
