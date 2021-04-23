@@ -47,11 +47,7 @@ public class GameManager : Singleton<GameManager>
         }
         
     }
-    private void BuildNavMesh()
-    {
-        EnvironmentManager.BuildNavMesh();
-    }
-
+   
     private void LoadStage()
     {
         
@@ -61,8 +57,8 @@ public class GameManager : Singleton<GameManager>
     public void NextRoundSequence()
     {
 
+        InteractionSpawnPointManager.ClearWeapons();
         Invoke("StartNewRound",1f);
-        Invoke("BuildNavMesh", 4f);
         Invoke("SpawnWeapons", 5f);
     }
 
@@ -127,12 +123,7 @@ public class GameManager : Singleton<GameManager>
            EventManager.PlaySacrificeEvent();
            
         }
-        if(Input.GetKeyDown(KeyCode.F3))
-            SpawnFodderZombies();
-        
-        if(Input.GetKeyDown(KeyCode.F4))
-            SpawnArmoredZombies();
-        
+
         if(Input.GetKeyDown(KeyCode.F5))
             EventManager.PlayHeartEscortEvent();
         

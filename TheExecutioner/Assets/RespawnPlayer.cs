@@ -10,5 +10,11 @@ public class RespawnPlayer : MonoBehaviour
         if (other.CompareTag("Player"))
             other.transform.position = playerSpawnPoint.position;
 
+        if (other.CompareTag("Zombie"))
+        {
+            other.GetComponent<EnemyBase>().DeactivateZombie();
+            other.transform.position = playerSpawnPoint.position;
+        }
+            
     }
 }

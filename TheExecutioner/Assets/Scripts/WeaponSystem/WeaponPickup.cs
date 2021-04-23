@@ -7,19 +7,19 @@ using Random = UnityEngine.Random;
 
 public class WeaponPickup : MonoBehaviour
 {
-    public Color[] GodBeamColours;
-    public GameObject Godbeam;
-
+    public GameObject[] GodBeams;
+    private int quality;
     private void Start()
     {
-           var t = GetQuality();
-           raycastWeapon.SetWeaponState(t);
-           //SetGodBeamColour(t);
+        
+        quality = GetQuality();
+           raycastWeapon.SetWeaponState(quality);
+           SetGodBeamColour(quality);
     }
 
     public int GetQuality()
     {
-        var random = Random.Range(0, GodBeamColours.Length);
+        var random = Random.Range(0, GodBeams.Length);
         
         return random;
     }
@@ -27,8 +27,7 @@ public class WeaponPickup : MonoBehaviour
 
     public void SetGodBeamColour(int index)
     {
-        var meshRenderer = Godbeam.GetComponent<SkinnedMeshRenderer>();
-        meshRenderer.material.SetColor("_TintColor",GodBeamColours[index]);
+        GodBeams[index].gameObject.SetActive(true);
     }
     public RaycastWeapon raycastWeapon;
     void OnTriggerEnter(Collider other)
@@ -39,7 +38,7 @@ public class WeaponPickup : MonoBehaviour
             ActiveWeapon activeWeapon = other.GetComponent<ActiveWeapon>();
             if (activeWeapon)
             {
-                activeWeapon.CurrentRaycastWeapon.SetWeaponState(0.75f);
+                activeWeapon.CurrentRaycastWeapon.SetWeaponState(quality);
                 activeWeapon.EquipWeapon(raycastWeapon);
             }
             Destroy(gameObject);

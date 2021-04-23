@@ -5,20 +5,26 @@ using UnityEngine;
 public class Rocket : MonoBehaviour
 {
     [SerializeField] private float explosionForce;
-
+    [SerializeField] private Collider collider;
     [SerializeField] private ParticleSystem explosionParticle;
-
+    private MeshRenderer[] meshRenders;
     private Rigidbody rb;
     private bool RocketIsActive { get; set; }
 
+    private void Awake()
+    {
+        meshRenders = GetComponentsInChildren<MeshRenderer>();
+        rb = GetComponent<Rigidbody>();
+    }
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+       
         RocketIsActive = false;
     }
 
     public void SetActiveRocket()
     {
+        collider.enabled = true;
         RocketIsActive = true;
         gameObject.layer = 12;
     }
@@ -27,6 +33,12 @@ public class Rocket : MonoBehaviour
     // Start is called before the first frame update
     private void Explosion()
     {
+        foreach (var mesh in meshRenders)
+        {
+            mesh.enabled = false;
+            GetComponent<CapsuleCollider>().enabled = false;
+        }
+            
         rb.constraints = RigidbodyConstraints.FreezeAll;
         Vector3 explosionCentre = transform.position;
         float explosionRadius = 3f;
@@ -48,9 +60,10 @@ public class Rocket : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if(RocketIsActive && !other.CompareTag("Rocket"))
+        Debug.Log(other);
+        if(RocketIsActive && !other.collider.CompareTag("Rocket") && !other.collider.CompareTag("Player"))
             Explosion();
     }
 }

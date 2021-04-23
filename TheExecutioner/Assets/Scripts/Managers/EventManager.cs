@@ -5,8 +5,7 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
     
-    [SerializeField] 
-    private ZombieSpawner zombieSpawner;
+    public ZombieSpawner zombieSpawner;
     
     [SerializeField]
     private EnemySpawnPoints enemySpawnPoints;

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    [SerializeField] private EnvironmentManager environmentManager;
     [SerializeField] private List<LevelSo> Levels = new List<LevelSo>();
     public int CurrentLevel;
     public int CurrentStage;
@@ -49,7 +50,6 @@ public class LevelManager : MonoBehaviour
     public bool menuMode;
     public void LoadStage(int index)
     {
-        
         SetCurrentStage(index);
         var levelToSet = levelSo.ReturnLevel(index);
 
@@ -68,7 +68,6 @@ public class LevelManager : MonoBehaviour
                         GameManager.instance.EnvironmentManager.EnemySpawnPoints.CheckForSpawnPoint(
                             pos.PlatformStateManager.Node);
                 }
-         
             }
         }
     }
@@ -130,7 +129,11 @@ public class LevelManager : MonoBehaviour
     //Cant save the 2d array of nodes to a scriptable object 
     //I opted to convert all coordinate and state information in to integers that are stored in a list
 
- 
+    public void BuildNavMesh()
+    {
+        environmentManager.BuildNavMesh();
+    }
+
 
 
     

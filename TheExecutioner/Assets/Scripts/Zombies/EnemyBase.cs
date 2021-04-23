@@ -14,6 +14,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     [SerializeField] protected float _explosionScaleTime;
     [SerializeField] protected float _maxHealth;
 
+    public float EnemyHealth;
     [field: SerializeField]
      public float Damage { get; set; }
 
@@ -27,18 +28,30 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     
     private void Awake()
     {
+        
         _aiAgent = GetComponent<AiAgent>();
         healthSystem = new HealthSystem(_maxHealth,_maxHealth);
         _animator = GetComponent<Animator>();
         LimbManager = GetComponent<LimbManager>();
+        foreach (Transform transform in _rootComponent.transform)
+        {
+            transform.localScale = Vector3.one;
+        }
     }
 
+    private void OnEnable()
+    {
+        Debug.Log(_aiAgent);
+        ActivateZombie();
+        healthSystem = new HealthSystem(_maxHealth,_maxHealth);
+    }
     private void Start()
     {
         spawnParticle.Play();
         SetRandomAnimTime();
         SetRandomSkin();
     }
+
 
     private void SetRandomAnimTime()
     {
@@ -56,17 +69,33 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     private bool isAlive = true;
     protected void Update()
     {
+        EnemyHealth = healthSystem.CurrentHealth;
         if (IsAgentOnNavMesh() && isOnMesh == false && isAlive)
         {
             isOnMesh = true;
               ActivateZombie();
           }
+        if(_animator.enabled == false && _aiAgent.navMeshAgent.enabled == false)
+        {
+ 
+            Invoke("KillZombie",2.5f);
+        }
     }
-    
+
+    private void KillZombie()
+    {
+        GameManager.instance.EventManager.zombieSpawner.RemoveZombieFromList(gameObject);
+        Destroy(gameObject);
+    }
     public void ActivateZombie( )
     {
         _aiAgent.navMeshAgent.enabled = true;
-        GetComponent<Ragdoll>().DeactivateRagdoll();
+        _aiAgent.Ragdoll.DeactivateRagdoll();
+    }
+    public void DeactivateZombie( )
+    {
+        _aiAgent.navMeshAgent.enabled = false;
+        GetComponent<Ragdoll>().ActivateRagDoll();
     }
     public void TakeDamage(float damage, Vector3 direction)
     {
@@ -77,8 +106,9 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
             {
                 _aiAgent.StateMachine.ChangeState(StateId.EventDeathState);
             }
+            GameManager.instance.ZombieManager.ZombieSpawner.RemoveZombieFromList(gameObject);
             _aiAgent.StateMachine.ChangeState(StateId.DeathState);
-           GameManager.instance.ZombieManager.ZombieSpawner.RemoveZombieFromList(gameObject);
+          
         }
     }
     public bool InEvent;
@@ -149,7 +179,6 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
             Debug.Log(random);
             if (random == 1)
             {
-                _animator.SetBool("DiedByHeadshot", true);
                 AudioManager.Instance.PlaySound("HeadshotSplat");
             }
         }
@@ -161,7 +190,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     public IEnumerator Die()
     {
         yield return new WaitForSeconds(2f);
-        ObjectPooler.instance.ReturnObject(gameObject,ZombieType);
+        //ObjectPooler.instance.ReturnObject(gameObject,ZombieType);
     }
 }
 

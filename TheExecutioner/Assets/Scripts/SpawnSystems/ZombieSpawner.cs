@@ -12,12 +12,16 @@ public class ZombieSpawner : MonoBehaviour
     [SerializeField] private Transform navmeshPos;
     public List<GameObject> ActiveZombies = new List<GameObject>();
     public List<GameObject> EliteZombie = new List<GameObject>();
-    
+
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.P))
+            ClearZombies();
+    }
     public GameObject SpawnZombie(Transform location)
     {
         var t = ObjectPooler.instance.GetObject(PoolObjectType.BasicZombie);
-        t.transform.SetPositionAndRotation(location.position,quaternion.identity);
-        t.transform.position = location.position;
+        SetZombiePosition(t,location);
         ActiveZombies.Add(t);
         return t;
     }
@@ -99,6 +103,18 @@ public class ZombieSpawner : MonoBehaviour
     {
         ActiveZombies.Remove(Zombie);
     }
-    
-    
+
+    public void ClearZombies()
+    {
+ 
+            for (int i = 0; i < ActiveZombies.Count; i++)
+            {
+                ActiveZombies.RemoveAt(i);
+            }
+            
+            foreach (var zombie in EliteZombie)
+        {
+            EliteZombie.Remove(zombie);
+        }
+    }
 }

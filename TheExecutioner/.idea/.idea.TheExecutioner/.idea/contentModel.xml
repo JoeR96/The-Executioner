@@ -127,6 +127,7 @@
         <e p="LimbEventTrigger.cs" t="Include" />
         <e p="MainMenuLevelManager.cs" t="Include" />
         <e p="Missile.cs" t="Include" />
+        <e p="ObjectState.cs" t="Include" />
         <e p="PrintGameUI.cs" t="Include" />
         <e p="RespawnPlayer.cs" t="Include" />
         <e p="Rocket.cs" t="Include" />

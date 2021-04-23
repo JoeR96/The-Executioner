@@ -17,7 +17,7 @@ public class EnemySpawnPoints : MonoBehaviour
 
     public void AddExternalSpawnPointToList(Transform spawn)
     {
-        externalSpawnPoints.Add(spawn);
+        //externalSpawnPoints.Add(spawn);
     }
     public void AddInternalSpawnPointToList(Transform spawn)
     {

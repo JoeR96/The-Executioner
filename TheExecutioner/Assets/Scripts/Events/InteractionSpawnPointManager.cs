@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 public class InteractionSpawnPointManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> weapons;
-   
+    private List<GameObject> activeWeapons = new List<GameObject>();
 
     public void SpawnWeapon(Transform spawnPoint)
     {
@@ -17,9 +17,13 @@ public class InteractionSpawnPointManager : MonoBehaviour
         {
             var weapon = Instantiate(randomWeapon, spawnPoint.position, quaternion.identity);
             weapon.transform.SetParent(spawnPoint.transform.parent);
+            activeWeapons.Add(weapon);
         }
-                
-
     }
 
+    public void ClearWeapons()
+    {
+        foreach (var go in activeWeapons)
+            Destroy(go);
+    }
 }

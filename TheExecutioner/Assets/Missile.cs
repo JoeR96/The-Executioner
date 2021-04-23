@@ -32,19 +32,20 @@ public class Missile : MonoBehaviour
     
     private void Explosion()
     {
-        
+        AudioManager.Instance.PlaySound("RpgExplosion");
+        _particleSystem.Play();
+        GetComponent<MeshRenderer>().enabled = false;
         Vector3 explosionCentre = transform.position;
         float explosionRadius = 25f;
         Collider[] colliders = Physics.OverlapSphere(explosionCentre, explosionRadius);
         foreach (var hit in colliders)
         {
+            var x = GetComponent<ITakeDamage>();
+            if (x != null)
+                x.TakeDamage(125f,transform.up);
             var rb = hit.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                AudioManager.Instance.PlaySound("RpgExplosion");
-                _particleSystem.Play();
-                _rb.constraints = RigidbodyConstraints.FreezeAll;
-                GetComponent<MeshRenderer>().enabled = false;
                 rb.AddExplosionForce(50f,transform.position,25f,1f);
             }
         }

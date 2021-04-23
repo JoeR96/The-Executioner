@@ -30,7 +30,7 @@ public abstract class RaycastWeapon : MonoBehaviour
     
     [Header("Damage variables")][Space(10)]
     
-    [SerializeField] [Range(0f,15f)]
+    [SerializeField] [Range(0f,150f)]
     protected float weaponDamage;
     
     [SerializeField] [Range(0f, 2.5f)]
@@ -247,6 +247,9 @@ public abstract class RaycastWeapon : MonoBehaviour
         weaponSpareAmmo *= qualityModifier;
         weaponReloadTime /= qualityModifier;
         weaponReloadTimer /= qualityModifier;
+        Mathf.RoundToInt(weaponDamage);
+        Mathf.RoundToInt(weaponMaxAmmo);
+        Mathf.RoundToInt(weaponSpareAmmo);
     }
 
     public void ResetWeaponState()

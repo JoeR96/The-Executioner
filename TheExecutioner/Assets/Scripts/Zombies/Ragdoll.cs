@@ -13,6 +13,7 @@ public class Ragdoll : MonoBehaviour
         rigidbodies = GetComponentsInChildren<Rigidbody>();
         _animator = GetComponent<Animator>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        Debug.Log(_navMeshAgent);
         ActivateRagDoll();
     }
     
@@ -22,6 +23,7 @@ public class Ragdoll : MonoBehaviour
         {
             rb.isKinematic = true;
         }
+
 
         _navMeshAgent.enabled = true;
         _animator.enabled = true;
