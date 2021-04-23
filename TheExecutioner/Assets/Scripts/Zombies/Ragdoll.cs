@@ -13,7 +13,6 @@ public class Ragdoll : MonoBehaviour
         rigidbodies = GetComponentsInChildren<Rigidbody>();
         _animator = GetComponent<Animator>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        Debug.Log(_navMeshAgent);
         ActivateRagDoll();
     }
     
@@ -25,7 +24,7 @@ public class Ragdoll : MonoBehaviour
         }
 
 
-        _navMeshAgent.enabled = true;
+//        _navMeshAgent.enabled = true;
         _animator.enabled = true;
        // _animator.SetFloat("AnimTime", Random.Range(0.0f,1.0f));
         

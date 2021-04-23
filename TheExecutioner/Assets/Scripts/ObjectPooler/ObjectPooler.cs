@@ -75,7 +75,6 @@ using UnityEngine;
             List<GameObject> pool = currentPool.ObjectPool;
         
             GameObject returnObject = null;
-            Debug.Log(pool.Count);
             if(pool.Count > 0)
             {
                 returnObject = pool[pool.Count - 1];

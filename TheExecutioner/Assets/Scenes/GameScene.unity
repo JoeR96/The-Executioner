@@ -15204,7 +15204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1048777977}
   m_Layer: 5
-  m_Name: PauseCanvas
+  m_Name: DeathCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20976,7 +20976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterManager: {fileID: 1846586486253753428}
-  playerProgressBar: {fileID: 0}
+  playerProgressBar: {fileID: 1366066939}
 --- !u!114 &1366066939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22718,8 +22718,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onDestroy: 0
-  uiCanvas: {fileID: 0}
-  gameCanvas: {fileID: 0}
+  uiCanvas: {fileID: 1048777976}
+  gameCanvas: {fileID: 1482123587}
   roundManager: {fileID: 0}
   playerSpawnPoint: {fileID: 1446966913}
   InteractionSpawnPointManager: {fileID: 0}
@@ -45247,6 +45247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActivePlayerEvents: {fileID: 1846586486253753437}
+  health: 0
 --- !u!114 &1846586486253753429
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,34 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonParticleFX/Materials/PolygonParticleFX_LightRay_Cube.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonParticleFX/Materials/PolygonParticleFX_LightRay_Cube.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Missile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Missile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/RPG_pickup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pickups/RPG_pickup.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/ShotgunSphere.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/ShotgunSphere.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/smg_pickup.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/smg_pickup.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieFast.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieFast.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RespawnPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RespawnPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Rocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rocket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Rocket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rocket.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level5.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/InteractionSpawnPointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/InteractionSpawnPointManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectPooler/ObjectPooler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectPooler/ObjectPooler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/EnemySpawnPoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/EnemySpawnPoints.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UiHealthCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UiHealthCanvas.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +84,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Lerper.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyPartices.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/EnemyTargetZombie.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/IReturnEvent.cs" />
@@ -111,12 +93,10 @@
       <option value="$PROJECT_DIR$/Assets/LimbEventTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/LimbManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UiHealthCanvas.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" />
       <option value="$PROJECT_DIR$/Assets/EventZombieSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/EventState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" />
@@ -139,19 +119,22 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/EnemySpawnPoints.cs" />
       <option value="$PROJECT_DIR$/Assets/Missile.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/InteractionSpawnPointManager.cs" />
       <option value="$PROJECT_DIR$/Assets/RespawnPlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/ObjectState.cs" />
       <option value="$PROJECT_DIR$/Assets/Rocket.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPooler/ObjectPooler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UiHealthCanvas.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPooler/ObjectPooler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -269,6 +252,8 @@
       <workItem from="1618953979108" duration="10548000" />
       <workItem from="1619007163627" duration="5952000" />
       <workItem from="1619093746152" duration="12496000" />
+      <workItem from="1619140569819" duration="740000" />
+      <workItem from="1619141391682" duration="2337000" />
     </task>
     <servers />
   </component>

@@ -41,7 +41,6 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
 
     private void OnEnable()
     {
-        Debug.Log(_aiAgent);
         ActivateZombie();
         healthSystem = new HealthSystem(_maxHealth,_maxHealth);
     }
@@ -50,8 +49,10 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         spawnParticle.Play();
         SetRandomAnimTime();
         SetRandomSkin();
+        
     }
 
+    
 
     private void SetRandomAnimTime()
     {

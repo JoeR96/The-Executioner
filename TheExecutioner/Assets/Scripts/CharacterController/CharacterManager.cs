@@ -6,17 +6,27 @@ public class CharacterManager : MonoBehaviour
 {
     public HealthSystem PlayerHealthSystem;
     public ActivePlayerEvents ActivePlayerEvents;
+    public float health;
     void Awake()
     {
+        
         PlayerHealthSystem = new HealthSystem(100, 100);
     }
 
+    private void Start()
+    {
+        InvokeRepeating("Heal", 5f, 2.25f);
+    }
     // Update is called once per frame
     void Update()
     {
-        
+        health = PlayerHealthSystem.Percent();
     }
 
+    private void Heal()
+    {
+        PlayerHealthSystem.Heal(7.5f);
+    }
     public void TakeDamage(float damage )
     {
         if(!PlayerHealthSystem.TakeDamage(damage))

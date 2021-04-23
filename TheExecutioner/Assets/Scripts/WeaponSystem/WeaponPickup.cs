@@ -38,6 +38,7 @@ public class WeaponPickup : MonoBehaviour
             ActiveWeapon activeWeapon = other.GetComponent<ActiveWeapon>();
             if (activeWeapon)
             {
+                activeWeapon.CurrentRaycastWeapon.WeaponIsReloading = false;
                 activeWeapon.CurrentRaycastWeapon.SetWeaponState(quality);
                 activeWeapon.EquipWeapon(raycastWeapon);
             }
