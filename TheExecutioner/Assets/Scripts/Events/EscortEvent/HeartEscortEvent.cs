@@ -36,6 +36,7 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
     private void SetHeart()
     {
         var activeHeart = GetComponent<Heart>();
+        Debug.Log(eventTargetDestination);
         activeHeart.SetTargetPosition(eventTargetDestination);
         
     }

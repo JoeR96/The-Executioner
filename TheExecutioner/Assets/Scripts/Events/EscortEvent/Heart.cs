@@ -12,24 +12,22 @@ public class Heart : MonoBehaviour
     
     private void Awake()
     {
-       
         navmeshAgent = GetComponent<NavMeshAgent>();
         navmeshAgent.speed = Random.Range(1.5f, 3f);
     }
-
-
+    
     private void Update()
     {
-        // if (HasReachedDestination() && eventComplete != true)
-        // {
-        //     eventComplete = true;
-        //     heartEscortEvent.EventComplete(this);
-        // }
+        if (HasReachedDestination() && eventComplete != true)
+        {
+            eventComplete = true;
+            heartEscortEvent.EventComplete(this);
+        }
     }
     public void SetTargetPosition(Transform altarLocation)
     {
+        
         navmeshAgent.destination = altarLocation.position;
-        Debug.Log(altarLocation);
         Destination = altarLocation;
     }
 

@@ -14,9 +14,9 @@ public class EventState : IState
 
     public void Enter(AiAgent agent)
     {
-        var go = GameManager.instance.EventManager.ReturnActiveRandomEventTransform();
-        agent.EventTarget = go.transform;
-        agent.SetEventDestination();
+        //var go = GameManager.instance.EventManager.ReturnActiveRandomEventTransform();
+        // agent.EventTarget = go.transform;
+        // agent.SetEventDestination();
     }
 
     public void Update(AiAgent agent)

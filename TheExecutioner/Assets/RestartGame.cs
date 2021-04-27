@@ -12,10 +12,12 @@ public class RestartGame : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(0);
+        AudioManager.Instance.PlaySound("ButtonClick");
     }
 
     public void Quit()
     {
         Application.Quit();
+        AudioManager.Instance.PlaySound("ButtonClick");
     }
 }

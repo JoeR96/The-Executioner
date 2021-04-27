@@ -20,6 +20,7 @@ public class ButtonMouseHover : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public void OnPointerEnter(PointerEventData eventData)
     {
         StartCoroutine(LerpSize(true));
+        AudioManager.Instance.PlaySound("ButtonHover");
     }
 
     public void OnPointerExit(PointerEventData eventData)
