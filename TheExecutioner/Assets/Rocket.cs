@@ -45,7 +45,6 @@ public class Rocket : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(explosionCentre, explosionRadius);
         foreach (var hit in colliders)
         {
-           Debug.Log(hit.name);
             var x = hit.GetComponentInParent<ITakeDamage>();
             x?.TakeDamage(125,explosionCentre);
             
@@ -62,7 +61,6 @@ public class Rocket : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other);
         if(RocketIsActive && !other.collider.CompareTag("Rocket") && !other.collider.CompareTag("Player"))
             Explosion();
     }

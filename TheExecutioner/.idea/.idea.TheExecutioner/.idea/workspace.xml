@@ -11,17 +11,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieFast.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Zombies/ZombieFast.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/RPG/weapon_RPG_equip.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/RPG/weapon_RPG_equip.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_equip.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/WeaponAnimations/SMG/weapon_smg_equip.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LowPolyHeart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LowPolyHeart.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Altar/Altar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Altar/Altar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_pistol.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_pistol.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_rpg.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_rpg.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_shotgun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_shotgun.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_smg.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_smg.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Weapons/SM_Wep_Shotgun_Plasma_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Weapons/SM_Wep_Shotgun_Plasma_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RPG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RPG.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Rocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rocket.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectPooler/ObjectPooler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectPooler/ObjectPooler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UiHealthCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UiHealthCanvas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IReturnEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IReturnEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/EnemySpawnPoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/EnemySpawnPoints.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +70,7 @@
     <setting file="file://$USER_HOME$/Documents/PizzaPrototype01062020/Library/PackageCache/com.unity.probuilder@4.2.3/Runtime/Core/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EventTargetKillCount.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/IStartEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Missile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/New folder/dump/12345/The-Executioner-04757166270da61332a9c7b95d3d2f094657c9cb/TheExecutioner/Assets/Scripts/Zombies/Lerper.cs" root0="SKIP_HIGHLIGHTING" />
@@ -63,6 +83,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/FadeWeaponIcon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/SMG.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Rocket.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RestartGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Interactions/PlatformRampManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Scripts/Shop/ShopBuyBoost.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/TileMapPractice (1).cs" root0="SKIP_HIGHLIGHTING" />
@@ -73,7 +94,9 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.3.5/Editor/treeview/Drawers/ClipDrawer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/1b/148abea8/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ButtonMouseHover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DisplayEventText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/WeaponUI/SetAmmoText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/IDisplayEventText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Asteroids-Remastered/AsteroidsWeekTen/Assets/Scripts/Levels/ConsoleSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/PlaterformColourManagerEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/InteractionSpawnPointManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,57 +107,57 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyPartices.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/EnemyTargetZombie.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/IReturnEvent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/DisplayActiveEvents.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/ActivePlayerEvents.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/LimbEventTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/LimbManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/AlterEvent/Altar.cs" />
       <option value="$PROJECT_DIR$/Assets/EventZombieSpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/EventState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" />
       <option value="$PROJECT_DIR$/Assets/OnPointerEnter.cs" />
       <option value="$PROJECT_DIR$/Assets/ButtonMouseHover.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/WaveManager.cs" />
       <option value="$PROJECT_DIR$/Assets/PrintGameUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/MainMenuLevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/FirstPersonController/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/RPG.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/FadeWeaponIcon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/EventDeathState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/IIsInEventArea.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformHeightManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/EnemySpawnPoints.cs" />
       <option value="$PROJECT_DIR$/Assets/Missile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/InteractionSpawnPointManager.cs" />
       <option value="$PROJECT_DIR$/Assets/RespawnPlayer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/ObjectState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Rocket.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UiHealthCanvas.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPooler/ObjectPooler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/EquippedWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/EnemySpawnPoints.cs" />
+      <option value="$PROJECT_DIR$/Assets/RPG.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Rocket.cs" />
+      <option value="$PROJECT_DIR$/Assets/IDisplayEventText.cs" />
+      <option value="$PROJECT_DIR$/Assets/DisyplayEventText.cs" />
+      <option value="$PROJECT_DIR$/Assets/EventTargetKillCount.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/RestartGame.cs" />
+      <option value="$PROJECT_DIR$/Assets/DisplayEventText.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -253,7 +276,11 @@
       <workItem from="1619007163627" duration="5952000" />
       <workItem from="1619093746152" duration="12496000" />
       <workItem from="1619140569819" duration="740000" />
-      <workItem from="1619141391682" duration="2337000" />
+      <workItem from="1619141391682" duration="3144000" />
+      <workItem from="1619316795109" duration="636000" />
+      <workItem from="1619388980357" duration="2768000" />
+      <workItem from="1619442731477" duration="20261000" />
+      <workItem from="1619482631091" duration="3635000" />
     </task>
     <servers />
   </component>
@@ -286,29 +313,16 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs</url>
-          <line>33</line>
+          <line>32</line>
           <properties documentPath="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner\Assets\Scripts\WeaponSystem\WeaponPickup.cs" initialLine="34" containingFunctionPresentation="method 'OnTriggerEnter'">
             <startOffsets>
-              <option value="760" />
+              <option value="706" />
             </startOffsets>
             <endOffsets>
-              <option value="761" />
+              <option value="707" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Events/Event.cs</url>
-          <line>51</line>
-          <properties documentPath="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner\Assets\Scripts\Events\Event.cs" initialLine="28" containingFunctionPresentation="method 'AddEventTransformsToMaster'">
-            <startOffsets>
-              <option value="1462" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1525" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Events/InteractionSpawnPointManager.cs</url>
@@ -322,6 +336,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs</url>
+          <line>58</line>
+          <properties documentPath="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner\Assets\Scripts\Managers\RoundManager.cs" initialLine="57" containingFunctionPresentation="method 'SetNewRound'">
+            <startOffsets>
+              <option value="1525" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1590" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

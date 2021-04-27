@@ -29,6 +29,8 @@ public class ActiveWeapon : MonoBehaviour
         //CurrentRaycastWeapon = GetComponentInChildren<RaycastWeapon>();
         if (CurrentRaycastWeapon)
         {
+            
+            
             EquipWeapon(CurrentRaycastWeapon);
         }
     }
@@ -113,5 +115,6 @@ public class ActiveWeapon : MonoBehaviour
         RigController.Play("weapon_"+weapon.WeaponName+"_equip",0);
         activeWeaponIndex = (int) weapon.weaponSlot;    
         WeaponSlots[activeWeaponIndex].gameObject.SetActive(true);
+        GetComponent<EquippedWeapon>().DisplayEquippedWeapon((int)CurrentRaycastWeapon.weaponSlot);
     }
 }

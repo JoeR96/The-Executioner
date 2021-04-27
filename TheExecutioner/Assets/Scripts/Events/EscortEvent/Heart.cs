@@ -5,33 +5,31 @@ using UnityEngine.AI;
 
 public class Heart : MonoBehaviour
 {
+    [SerializeField] private HeartEscortEvent heartEscortEvent;
     private NavMeshAgent navmeshAgent;
     public Transform Destination;
-    private HeartEscortEvent heartEscortEvent;
     private bool eventComplete = false;
+    
     private void Awake()
     {
-        heartEscortEvent = GetComponent<HeartEscortEvent>();
+       
         navmeshAgent = GetComponent<NavMeshAgent>();
         navmeshAgent.speed = Random.Range(1.5f, 3f);
     }
 
-    private void Start()
-    {
-        
-    }
+
     private void Update()
     {
-        if (HasReachedDestination() && eventComplete != true)
-        {
-            eventComplete = true;
-            heartEscortEvent.EventComplete(this);
-        }
+        // if (HasReachedDestination() && eventComplete != true)
+        // {
+        //     eventComplete = true;
+        //     heartEscortEvent.EventComplete(this);
+        // }
     }
     public void SetTargetPosition(Transform altarLocation)
     {
         navmeshAgent.destination = altarLocation.position;
-        Debug.Log(Destination);
+        Debug.Log(altarLocation);
         Destination = altarLocation;
     }
 

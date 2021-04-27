@@ -61,7 +61,7 @@ public class LevelManager : MonoBehaviour
                 pos.PlatformStateManager.SetStateFromExternal(go);
                 if (menuMode == false) 
                 {
-                    pos.PlatformHeightManager.RaisePlatformTowerHeight();
+                    // pos.PlatformHeightManager.RaisePlatformTowerHeight();
                     if (pos.PlatformSpawnManager.PlatformEventSpawn)
                         enemySpawnPoints.AddEventSpawn(pos.PlatformSpawnManager.spawnPoint.transform);
                     if(pos.PlatformSpawnManager.PlatformSpawnPointActive)

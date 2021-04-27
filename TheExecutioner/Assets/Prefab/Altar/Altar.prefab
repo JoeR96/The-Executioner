@@ -4918,7 +4918,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8848713536378696646}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4961,7 +4961,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 8848713536378696646}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -5139,8 +5139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c65b64523d73d940a25e0a96f919452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <eventGameObject>k__BackingField: {fileID: 0}
-  eventManager: {fileID: 0}
 --- !u!114 &536761374561462395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5155,6 +5153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <eventGameObject>k__BackingField: {fileID: 0}
   eventManager: {fileID: 0}
+  <eventTargetDestination>k__BackingField: {fileID: 0}
 --- !u!1001 &497414907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5636,6 +5635,10 @@ PrefabInstance:
     - target: {fileID: 1840157041260602, guid: 17d36ed57951c824fa6d4f4a785e96ce, type: 3}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840157041260602, guid: 17d36ed57951c824fa6d4f4a785e96ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1884357876729754, guid: 17d36ed57951c824fa6d4f4a785e96ce, type: 3}
       propertyPath: m_Layer

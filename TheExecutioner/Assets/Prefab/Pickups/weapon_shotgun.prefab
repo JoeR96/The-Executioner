@@ -29061,7 +29061,7 @@ MonoBehaviour:
   recoil: {fileID: 0}
   weaponMaxAmmo: 12
   weaponSpareAmmo: 24
-  weaponReloadTime: 2
+  weaponReloadTime: 1
   weaponDamage: 15
   weaponFireRate: 0.25
   <WeaponIsReloading>k__BackingField: 0
@@ -29262,7 +29262,7 @@ MonoBehaviour:
   - {fileID: 8581396501038915535}
   - {fileID: 8581396501057827942}
   - {fileID: 8581396500395598750}
-  - {fileID: 8581396501800305642}
+  quality: 0
   raycastWeapon: {fileID: 4740304441079775879}
 --- !u!1 &8581396499819176824
 GameObject:
@@ -29485,7 +29485,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8581396500283026130}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
 using Random = UnityEngine.Random;
 
 public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventArea
@@ -39,26 +40,31 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         }
     }
 
+    private Timer timer;
     private void OnEnable()
     {
         ActivateZombie();
         healthSystem = new HealthSystem(_maxHealth,_maxHealth);
+        
     }
     private void Start()
     {
+        _aiAgent.StateMachine.ChangeState(StateId.ChasePlayer);
         spawnParticle.Play();
         SetRandomAnimTime();
         SetRandomSkin();
-        
+        timer = new Timer(5f);
     }
 
     
-
+    bool time = false;
     private void SetRandomAnimTime()
     {
         AnimatorStateInfo state = _animator.GetCurrentAnimatorStateInfo(0);
         _animator.Play(state.fullPathHash, -1, Random.Range(0f, 1f));
     }
+
+    
     private void SetRandomSkin()
     {
         var random = Random.Range(0, _zombieSkinContainer.transform.childCount);
@@ -70,26 +76,43 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     private bool isAlive = true;
     protected void Update()
     {
+        
         EnemyHealth = healthSystem.CurrentHealth;
         if (IsAgentOnNavMesh() && isOnMesh == false && isAlive)
         {
             isOnMesh = true;
               ActivateZombie();
           }
-        if(_animator.enabled == false && _aiAgent.navMeshAgent.enabled == false)
+        
+        if(_animator.enabled == false && _aiAgent.navMeshAgent.enabled == false && timer.TimerIsOver())
         {
  
             Invoke("KillZombie",2.5f);
         }
+
     }
 
     private void KillZombie()
     {
         GameManager.instance.EventManager.zombieSpawner.RemoveZombieFromList(gameObject);
         Destroy(gameObject);
+        if (InEvent)
+        {
+            var x = Physics.OverlapSphere(transform.position, 3f);
+            foreach (var events in x)
+            {
+                if (events.GetComponent<Event>() != null)
+                {
+                    events.GetComponent<Event>().EventTargetKillCountManager.IncreaseKillCount();
+                }
+            }
+        }
+            
+        //ObjectPooler.instance.ReturnObject(gameObject,ZombieType);
     }
     public void ActivateZombie( )
     {
+        _aiAgent.Animator.enabled = true;
         _aiAgent.navMeshAgent.enabled = true;
         _aiAgent.Ragdoll.DeactivateRagdoll();
     }
@@ -105,7 +128,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         {
             if (InEvent)
             {
-                _aiAgent.StateMachine.ChangeState(StateId.EventDeathState);
+                _aiAgent.StateMachine.ChangeState(StateId.DeathState);
             }
             GameManager.instance.ZombieManager.ZombieSpawner.RemoveZombieFromList(gameObject);
             _aiAgent.StateMachine.ChangeState(StateId.DeathState);
@@ -160,11 +183,9 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
 
     public void DestroyLimb(string limbName,Vector3 direction)
     {
-        Debug.Log(limbName);
-        Debug.Log(LimbManager.DestructibleLimbs.Count);
         var transformTarget = LimbManager.DestructibleLimbs[limbName];
        
-        Debug.Log(transformTarget.name);
+
         
         StartCoroutine(ScaleComponent(transformTarget, 
             new Vector3(0,0,0), 0.25f));
@@ -177,7 +198,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         {
             _aiAgent.Ragdoll.ActivateRagDoll();
             var random = Random.Range(0, 3);
-            Debug.Log(random);
+
             if (random == 1)
             {
                 AudioManager.Instance.PlaySound("HeadshotSplat");

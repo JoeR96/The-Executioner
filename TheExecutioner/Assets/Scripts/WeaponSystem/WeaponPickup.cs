@@ -8,13 +8,12 @@ using Random = UnityEngine.Random;
 public class WeaponPickup : MonoBehaviour
 {
     public GameObject[] GodBeams;
-    private int quality;
+    public int quality;
     private void Start()
     {
         
         quality = GetQuality();
-           raycastWeapon.SetWeaponState(quality);
-           SetGodBeamColour(quality);
+        SetGodBeamColour(quality);
     }
 
     public int GetQuality()
@@ -38,9 +37,14 @@ public class WeaponPickup : MonoBehaviour
             ActiveWeapon activeWeapon = other.GetComponent<ActiveWeapon>();
             if (activeWeapon)
             {
-                activeWeapon.CurrentRaycastWeapon.WeaponIsReloading = false;
-                activeWeapon.CurrentRaycastWeapon.SetWeaponState(quality);
+                var weapon = activeWeapon.CurrentRaycastWeapon;
+                weapon.WeaponIsReloading = false;
                 activeWeapon.EquipWeapon(raycastWeapon);
+                weapon.ResetWeaponState();
+                weapon.SetWeaponState(quality);
+                
+                if(!weapon.WeaponIsLoaded)
+                    weapon.Reload();
             }
             Destroy(gameObject);
         }

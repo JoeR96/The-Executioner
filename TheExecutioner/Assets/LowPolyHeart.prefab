@@ -356,6 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495dd876af9c5b742a79bf94fadcf0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heartEscortEvent: {fileID: -2789268927371116607}
   Destination: {fileID: 0}
 --- !u!114 &-2789268927371116607
 MonoBehaviour:

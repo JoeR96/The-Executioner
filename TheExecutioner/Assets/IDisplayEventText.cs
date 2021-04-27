@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IReturnEvent
+public interface IDisplayEventText 
 {
-    Event ReturnActiveEvent();
+    
 }

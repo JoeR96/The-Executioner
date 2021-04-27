@@ -9,10 +9,13 @@
       <e p="Assets" t="Include">
         <e p="AltarEventCompleteTrigger.cs" t="Include" />
         <e p="ButtonMouseHover.cs" t="Include" />
+        <e p="DisplayEventText.cs" t="Include" />
+        <e p="EventTargetKillCount.cs" t="Include" />
         <e p="EventZombieSpawner.cs" t="Include" />
         <e p="Fonts" t="Include">
           <e p="Zombie_Holocaust_Font_Read_Me.txt" t="Include" />
         </e>
+        <e p="IDisplayEventText.cs" t="Include" />
         <e p="Imported" t="Include">
           <e p="EffectExamples" t="Include">
             <e p="Magic Effects" t="Include">
@@ -124,12 +127,14 @@
             </e>
           </e>
         </e>
+        <e p="InterfaceManager.cs" t="Include" />
         <e p="LimbEventTrigger.cs" t="Include" />
         <e p="MainMenuLevelManager.cs" t="Include" />
         <e p="Missile.cs" t="Include" />
         <e p="ObjectState.cs" t="Include" />
         <e p="PrintGameUI.cs" t="Include" />
         <e p="RespawnPlayer.cs" t="Include" />
+        <e p="RestartGame.cs" t="Include" />
         <e p="Rocket.cs" t="Include" />
         <e p="RPG.cs" t="Include" />
         <e p="Scripts" t="Include">
@@ -247,6 +252,7 @@
             </e>
           </e>
           <e p="UI" t="Include">
+            <e p="EquippedWeapon.cs" t="Include" />
             <e p="FadeWeaponIcon.cs" t="Include" />
             <e p="UiHealthCanvas.cs" t="Include" />
             <e p="WeaponUI" t="Include">

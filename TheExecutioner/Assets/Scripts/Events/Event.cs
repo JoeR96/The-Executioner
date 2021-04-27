@@ -3,27 +3,27 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class Event : MonoBehaviour, IStartEvent, IReturnEvent
+public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
 {
     [field: SerializeField] protected GameObject eventGameObject { get; set; }
     [SerializeField] protected EventManager eventManager;
-    protected Transform eventTargetDestination{ get; private set; }
+    [field: SerializeField] protected Transform eventTargetDestination{ get; private set; }
     protected GameObject activeEventGameObject;
     protected EventZombieSpawner eventZombieSpawner;
-    protected int targetKillCount;
+    public int EventTargetKillCount { get; set; }
+    public EventTargetKillCount EventTargetKillCountManager;
     protected int waveSpawnTotal;
-    public int currentTargetKillCount  { get; private set; }
+    public int currentTargetKillCount;
     
     private void Awake()
     {
-        
         eventManager = GameManager.instance.EventManager;
-  
+        EventTargetKillCountManager = new EventTargetKillCount(EventTargetKillCount);
     }
 
-    private void Start()
+    private void Update()
     {
-        
+        currentTargetKillCount = EventTargetKillCountManager.CurrentKillCount;
     }
     public int progress { get; set; }
     public virtual void StartEvent( )
@@ -51,6 +51,7 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent
     {
         eventManager.AddEventDestinationToList(eventTargetDestination);
         eventManager.AddEventTransformObjectToList(activeEventGameObject);
+        Debug.Log("Event should add");
     }
 
     public virtual void OnTriggerEnter(Component other)
@@ -65,7 +66,7 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent
         enemy?.IsInArea(false);
     }
 
-    public Event ReturnActiveEevent()
+    public Event ReturnActiveEvent()
     {
         return this;
     }

@@ -9887,8 +9887,7 @@ MonoBehaviour:
   - {fileID: 8136594740820328652}
   - {fileID: 8136594741232330766}
   - {fileID: 8136594741361239118}
-  - {fileID: 8136594740606740608}
-  Godbeam: {fileID: 0}
+  quality: 0
   raycastWeapon: {fileID: 4197880724487614216}
 --- !u!1 &2623436778210493108
 GameObject:
@@ -9928,7 +9927,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2623436778210493108}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
@@ -10092,8 +10091,8 @@ MonoBehaviour:
   weaponMaxAmmo: 1
   weaponSpareAmmo: 5
   weaponReloadTime: 1
-  weaponDamage: 15
-  weaponFireRate: 1
+  weaponDamage: 49.4
+  weaponFireRate: 0.125
   <WeaponIsReloading>k__BackingField: 0
   weaponCurrentammo: 1
   rocketPrefab: {fileID: 4146537175756036855, guid: 8d7eb8ed3acd3d34e9569aed85acf1f3,

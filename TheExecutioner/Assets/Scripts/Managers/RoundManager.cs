@@ -16,7 +16,9 @@ public class RoundManager : MonoBehaviour
 
     private void Start()
     {
+        currentEventSpawnCount = 1;
         CurrentRoundZombieSpawnCount = 0;
+        Invoke("TriggerBoolChange", 10f);
     }
     private void Update()
     {
@@ -31,14 +33,15 @@ public class RoundManager : MonoBehaviour
 
     public void StartNewRound()
     {
+        levelManager.LoadLevel();
+        levelManager.LoadStage();
         StartCoroutine(NewRound());
+        Invoke("TriggerBoolChange", 10f);
     }
     public IEnumerator NewRound()
     {
-        levelManager.LoadLevel();
-        levelManager.LoadStage();
-        IncreaseZombieSpawnCount();
         
+        IncreaseZombieSpawnCount();
         SetNewRound();
         yield return new WaitForSeconds(3.25f);
         levelManager.BuildNavMesh();
@@ -49,11 +52,11 @@ public class RoundManager : MonoBehaviour
 
     private void IncreaseZombieSpawnCount()
     {
-        CurrentRoundZombieSpawnCount += 12;
+        CurrentRoundZombieSpawnCount += 8;
     }
     private void SetNewRound()
     {
-        currentEventSpawnCount = (int) (currentEventSpawnCount * 1.25f);
+        currentEventSpawnCount =  (int) (currentEventSpawnCount * 1.25f);
         Mathf.RoundToInt(currentEventSpawnCount);
         CurrentRound++;
     }
@@ -80,10 +83,7 @@ public class RoundManager : MonoBehaviour
     }
     private IEnumerator SpawnWave()
     {
-        Debug.Log(CurrentRound);
-        Debug.Log(CurrentRoundZombieSpawnCount);
-
-        roundActive = true;
+        
 
             for (int j = 0; j < CurrentRoundZombieSpawnCount; j++)
             {
@@ -108,6 +108,11 @@ public class RoundManager : MonoBehaviour
     private bool AllZombiesDead()
     {
         return zombieSpawner.ActiveZombies.Count == 0 && zombieSpawner.EliteZombie.Count == 0;
+    }
+
+    private void TriggerBoolChange()
+    {
+        roundActive = true;
     }
 
     private bool CheckEventStatus()

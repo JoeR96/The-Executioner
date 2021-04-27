@@ -12,6 +12,7 @@ public class RPG : RaycastWeapon
     public RPG()
     {
         TracerEffect = null;
+        WeaponIsLoaded = false;
     }
 
     public override void FireWeapon()
@@ -36,9 +37,10 @@ public class RPG : RaycastWeapon
         rb.velocity = rocketPosition.forward * rocketForce;
     }
 
-    protected override void Reload()
+    public override void Reload()
     {
         base.Reload();
+        WeaponIsReloading = false;
         activeRocket = Instantiate(rocketPrefab, rocketPosition);
     }
 

@@ -15,23 +15,27 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
     
     private void OnEnable()
     {
+        EventTargetKillCount = 25;
         waveSpawnTotal = 8;
-        StartEvent();
+        StartHeartEvent();
     }
-    public override void StartEvent()
+    public void StartHeartEvent()
     {
+        SetEventDestination();
         eventZombieSpawner = new EventZombieSpawner(waveSpawnTotal,transform);
         transform.position = eventManager.ReturnAvailableEventLocation().position;
-        activeEventGameObject = gameObject;
+        
         eventZombieSpawner.SpawnZombiesTargetingEvent();
-        AddEventTransformsToMaster();
-        SetEventDestination();
         SetHeart();
+        
+        AddEventTransformsToMaster();
+        
+        
     }
 
     private void SetHeart()
     {
-        var activeHeart = activeEventGameObject.GetComponent<Heart>();
+        var activeHeart = GetComponent<Heart>();
         activeHeart.SetTargetPosition(eventTargetDestination);
         
     }

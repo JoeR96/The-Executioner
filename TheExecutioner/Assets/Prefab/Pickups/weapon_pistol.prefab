@@ -19690,10 +19690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GodBeams:
   - {fileID: 8386288927653069331}
-  - {fileID: 8386288927958876501}
-  - {fileID: 8386288926871256087}
-  - {fileID: 8386288926409473788}
-  Godbeam: {fileID: 0}
+  quality: 0
   raycastWeapon: {fileID: 0}
 --- !u!1 &8386288926196012528
 GameObject:

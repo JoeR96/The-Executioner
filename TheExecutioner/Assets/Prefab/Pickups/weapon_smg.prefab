@@ -38,7 +38,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840793786404591365}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   - {fileID: 6428798369430033843}
   - {fileID: 7835290751289350171}
   - {fileID: 3693162968827149877}
-  - {fileID: 5551104515633623129}
+  quality: 0
   raycastWeapon: {fileID: 763663398946108088}
 --- !u!1 &3693002259658775717
 GameObject:
@@ -30169,7 +30169,7 @@ MonoBehaviour:
   weaponDamage: 15
   weaponFireRate: 0.075
   <WeaponIsReloading>k__BackingField: 0
-  weaponCurrentammo: 0
+  weaponCurrentammo: 45
 --- !u!1 &7835166894219610169
 GameObject:
   m_ObjectHideFlags: 0

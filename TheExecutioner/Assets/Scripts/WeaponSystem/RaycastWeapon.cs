@@ -118,8 +118,15 @@ public abstract class RaycastWeapon : MonoBehaviour
 
     protected void Update()
     {
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+            IsFiring = false;
         weaponReloadTimer += Time.deltaTime;
         weaponFireTimer += Time.deltaTime;
+    }
+
+    protected void OnEnable()
+    {
+        WeaponIsReloading = false;
     }
     #region weaponlogic
     public virtual void FireWeapon()
@@ -131,7 +138,6 @@ public abstract class RaycastWeapon : MonoBehaviour
         var tracer = InstantiateTrailRenderer();
         if(Physics.Raycast(ray,out hitInfo))
         {
-            Debug.Log(hitInfo.collider.name);
             SetHitEffects();
             tracer.transform.position = hitInfo.point;
             recoil.GenerateRecoil(WeaponName);
@@ -209,20 +215,22 @@ public abstract class RaycastWeapon : MonoBehaviour
         
         return true;
     }
-    
-    protected virtual void Reload()
+
+    public virtual void Reload()
     {
         WeaponIsReloading = false;
         
         if(weaponSpareAmmo <= 0)
             return;
-        
+    
         var toAdd = weaponMaxAmmo - weaponCurrentammo;
-        weaponCurrentammo += toAdd;
-        weaponSpareAmmo -= toAdd;
-        
-        
-        
+        for (int i = 0; i < toAdd; i++)
+        {
+            if(weaponSpareAmmo == 0)
+                return;
+            weaponCurrentammo++;
+            weaponSpareAmmo--;
+        }
     }
 
     public bool CanFire()
@@ -238,18 +246,21 @@ public abstract class RaycastWeapon : MonoBehaviour
     {
         return defaultValues[index];
     }
-    
-    public void SetWeaponState(float qualityModifier)
+    //refactor this in to non mono class
+    //multiply and divide by an input to recieve an output
+    public void SetWeaponState(float qualityModifierOld)
     {
-        ResetWeaponState();
-        weaponDamage *= qualityModifier;    
-        weaponMaxAmmo *= qualityModifier;
-        weaponSpareAmmo *= qualityModifier;
-        weaponReloadTime /= qualityModifier;
-        weaponReloadTimer /= qualityModifier;
-        Mathf.RoundToInt(weaponDamage);
-        Mathf.RoundToInt(weaponMaxAmmo);
-        Mathf.RoundToInt(weaponSpareAmmo);
+        // var qualityModifier = qualityModifierOld;
+        // qualityModifier += qualityModifier + 1;
+        // weaponDamage *= qualityModifier;    
+        // weaponMaxAmmo *= qualityModifier;
+        // weaponSpareAmmo *= qualityModifier;
+        // weaponCurrentammo *= qualityModifier;
+        // weaponReloadTime /= qualityModifier;
+        // weaponReloadTimer /= qualityModifier;
+        // Mathf.RoundToInt(weaponDamage);
+        // Mathf.RoundToInt(weaponMaxAmmo);
+        // Mathf.RoundToInt(weaponSpareAmmo);
     }
 
     public void ResetWeaponState()
