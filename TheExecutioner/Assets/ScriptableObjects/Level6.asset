@@ -43165,7 +43165,7 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 28
     Z: 21
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
@@ -43175,7 +43175,7 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 28
     Z: 22
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0

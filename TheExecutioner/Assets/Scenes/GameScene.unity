@@ -5506,7 +5506,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh80814
+  m_Name: pb_Mesh62240
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7815,7 +7815,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5954040
+  m_Name: pb_Mesh-46482
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22171,7 +22171,7 @@ MonoBehaviour:
   Pathfinding: {fileID: 0}
   LevelManager: {fileID: 2053539583}
   EventManager: {fileID: 0}
-  BuildMode: 0
+  BuildMode: 1
 --- !u!4 &1715150810
 Transform:
   m_ObjectHideFlags: 0
@@ -64564,40 +64564,20 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 900378053}
-    - target: {fileID: 4071071368552105402, guid: 4390e655c91840d479a2c1b56b4b0d46,
+    - target: {fileID: 4071071369127037442, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071071368552105403, guid: 4390e655c91840d479a2c1b56b4b0d46,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071071368552105404, guid: 4390e655c91840d479a2c1b56b4b0d46,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071071368552105404, guid: 4390e655c91840d479a2c1b56b4b0d46,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071071368552105404, guid: 4390e655c91840d479a2c1b56b4b0d46,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
+      propertyPath: bridgeHeights.Array.data[2]
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4071071369127037442, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}
-      propertyPath: PlatformBridgeActive
-      value: 1
+      propertyPath: bridgeHeights.Array.data[1]
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 4071071369127037447, guid: 4390e655c91840d479a2c1b56b4b0d46,
+    - target: {fileID: 4071071369127037442, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}
-      propertyPath: PlatformRampActive
-      value: 0
+      propertyPath: bridgeHeights.Array.data[0]
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4071071369127037448, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}
@@ -64607,7 +64587,7 @@ PrefabInstance:
     - target: {fileID: 4071071369127037448, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -16.836761
       objectReference: {fileID: 0}
     - target: {fileID: 4071071369127037448, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}
@@ -64659,21 +64639,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 918594880}
-    - target: {fileID: 4071071369127037450, guid: 4390e655c91840d479a2c1b56b4b0d46,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1f5abaa588bbaef4dbdaf5e39b60e1c3, type: 2}
     - target: {fileID: 4071071369127037451, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 918594880}
-    - target: {fileID: 4071071369127037452, guid: 4390e655c91840d479a2c1b56b4b0d46,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4071071369127037453, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}
       propertyPath: m_Name
@@ -64861,21 +64831,6 @@ PrefabInstance:
       objectReference: {fileID: 1971045370}
     - target: {fileID: 4071071370138017902, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}
-      propertyPath: m_SelectedFaces.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071071370138017902, guid: 4390e655c91840d479a2c1b56b4b0d46,
-        type: 3}
-      propertyPath: m_SelectedEdges.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071071370138017902, guid: 4390e655c91840d479a2c1b56b4b0d46,
-        type: 3}
-      propertyPath: m_SelectedVertices.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071071370138017902, guid: 4390e655c91840d479a2c1b56b4b0d46,
-        type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 416058863}
@@ -65044,11 +64999,6 @@ PrefabInstance:
       propertyPath: m_Tangents.Array.data[15].z
       value: NaN
       objectReference: {fileID: 0}
-    - target: {fileID: 4071071370138017903, guid: 4390e655c91840d479a2c1b56b4b0d46,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4071071370138017904, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}
       propertyPath: m_Mesh
@@ -65059,11 +65009,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 416058863}
-    - target: {fileID: 4071071370138017905, guid: 4390e655c91840d479a2c1b56b4b0d46,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4390e655c91840d479a2c1b56b4b0d46, type: 3}
 --- !u!1001 &6420588289249342901

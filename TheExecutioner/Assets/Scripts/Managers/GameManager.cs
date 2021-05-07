@@ -37,8 +37,14 @@ public class GameManager : Singleton<GameManager>
         }
         else
         {
-            LoadStage();
+            Invoke("LoadBuildMode",1f);
         }
+    }
+
+    private void LoadBuildMode()
+    {
+        LevelManager.LoadLevel();
+        LoadStage();
     }
     private void LoadStage()
     {

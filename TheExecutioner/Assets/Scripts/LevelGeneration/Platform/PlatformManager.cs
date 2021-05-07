@@ -2,20 +2,16 @@
 
 public class PlatformManager : MonoBehaviour
 {
-    public PlatformRampManager PlatformRampManager { get; private set; }
-    public PlatformBridgeManager PlatformBridgeManager { get; private set; }
-    public PlatformColourManager PlatformColourManager { get; private set; }
-    public PlatformHeightManager PlatformHeightManager { get; private set; }
-    public PlatformSpawnManager PlatformSpawnManager { get; private set;}
-    public PlatformStateManager PlatformStateManager { get; private set;}
+    /// <summary>
+    /// These values need to be serialized for the custom inspector to work appropriately
+    /// [field:SerializeField] is used to allow properties to be serialized
+    /// </summary>
+    [field:SerializeField] public PlatformRampManager PlatformRampManager { get; private set; }
+    [field:SerializeField] public PlatformBridgeManager PlatformBridgeManager { get; set; }
+    [field:SerializeField] public PlatformColourManager PlatformColourManager { get; set;  }
+    [field:SerializeField] public PlatformHeightManager PlatformHeightManager { get; set; }
+    [field:SerializeField] public PlatformSpawnManager PlatformSpawnManager { get; set; }
+    [field:SerializeField]  public PlatformStateManager PlatformStateManager { get;set; }
 
-    private void Awake()
-    {
-        PlatformRampManager = GetComponent<PlatformRampManager>();
-        PlatformBridgeManager = GetComponent<PlatformBridgeManager>();
-        PlatformColourManager = GetComponent<PlatformColourManager>();
-        PlatformHeightManager = GetComponent<PlatformHeightManager>();
-        PlatformSpawnManager = GetComponent<PlatformSpawnManager>();
-        PlatformStateManager = GetComponent<PlatformStateManager>();
-    }
+
 }

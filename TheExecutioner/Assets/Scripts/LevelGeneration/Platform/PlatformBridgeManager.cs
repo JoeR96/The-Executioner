@@ -16,41 +16,62 @@ public class PlatformBridgeManager : MonoBehaviour
     [SerializeField] public GameObject bridge;
     public bool PlatformBridgeActive;
     public int CurrentBridgeHeight;
+    public Vector3 bridgeStartPosition;
 
-    #region MyRegion
-    #region Two
-    #endregion
-    #endregion
-    //===============================================================================================\\
-    //                                     Platform Bridges                                          \\
-    //===============================================================================================\\
-    private PlatformManager platformManager;
-    public PlatformBridgeManager(PlatformManager platform)
+    private void Start()
     {
-        platformManager = platform;
+        //SetBridgeStartPosition();
     }
+    /// <summary>
+    /// Sets the bridge at the height passed as a parameter
+    /// </summary>
+    /// <param name="height"></param>
     public void SetBridgeHeight(int height)
     {
+        SetBridgeStartPosition();
         SetBridgePosition(bridgeHeights[height], 1f);
         CurrentBridgeHeight = height;
     }
-
+    /// <summary>
+    /// Set the initial position of the bridge relative to the parent
+    /// </summary>
+    private void SetBridgeStartPosition()
+    {
+        bridgeStartPosition = new Vector3(2, 17.9f, -2);
+        transform.localPosition = bridgeStartPosition;
+    }
+    /// <summary>
+    /// Set the bridge position dependant on the input height
+    /// lerp the bridge over duration passed in
+    /// </summary>
+    /// <param name="targetHeight"></param>
+    /// <param name="duration"></param>
     private void SetBridgePosition(float targetHeight, float duration)
     {
         Vector3 targetPosition;
-        targetPosition = new Vector3(transform.position.x, transform.position.y  + targetHeight,
-            transform.position.z);
+        targetPosition = new Vector3(2, bridgeStartPosition.y  + targetHeight,
+           -2);
         StartCoroutine(LerpPosition(targetPosition, duration));
     }
+    /// <summary>
+    /// Toggle the bridge active
+    /// Return a boolean dependant on the bridge active status
+    /// </summary>
+    /// <returns></returns>
     public bool ReturnBridgeValue()
     {
         PlatformBridgeActive = !PlatformBridgeActive;
         return PlatformBridgeActive;
     }
-    
+    /// <summary>
+    /// Lerp the bridge position to the input position over the input duration
+    /// </summary>
+    /// <param name="targetPosition"></param>
+    /// <param name="duration"></param>
+    /// <returns></returns>
     private IEnumerator LerpPosition(Vector3 targetPosition, float duration)
     {
-        Vector3 startPosition = transform.position;
+        Vector3 startPosition = bridge.transform.position;
         float timer = 0f;
         float _duration = duration;
 
@@ -58,12 +79,14 @@ public class PlatformBridgeManager : MonoBehaviour
         {
             timer += Time.deltaTime;
             float percentage = Mathf.Min(timer / _duration, 1);
-            bridge.transform.position = Vector3.Lerp(startPosition, targetPosition, percentage);
+            bridge.transform.localPosition = Vector3.Lerp(startPosition, targetPosition, percentage);
             yield return null;
         }
     }
-    private PlatformStateManager _platformStateManager;
-    
+    /// <summary>
+    /// Toggle the mesh and collider of the bridge depending on the active status
+    /// </summary>
+    /// <param name="active"></param>
     public void ActivateBridge(bool active)
     {
         bridge.GetComponent<MeshRenderer>().enabled = active;

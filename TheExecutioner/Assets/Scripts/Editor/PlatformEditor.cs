@@ -9,10 +9,9 @@ using UnityEditor;
 [CustomEditor(typeof(PlatformManager))]
 public class PlatformManagerEditor : Editor
 {
-    
     public override void OnInspectorGUI()
     {
-        DrawDefaultInspector();
+        
         PlatformManager PlatformManager = (PlatformManager)target;
         EditorGUILayout.BeginHorizontal();
         if (GUILayout.Button("1",GUILayout.Width(80), GUILayout.Height(80)))

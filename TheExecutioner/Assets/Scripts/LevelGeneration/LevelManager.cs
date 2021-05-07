@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<LevelSo> Levels = new List<LevelSo>();
     public int CurrentLevel;
     public int CurrentStage;
+    public bool menuMode;
     public List<List<PlatformInformation>> CurrentLevelList = new List<List<PlatformInformation>>();
     public bool BuildMode;
     private List<PlatformStateManager> spawnPoints = new List<PlatformStateManager>();
@@ -21,7 +22,10 @@ public class LevelManager : MonoBehaviour
         enemySpawnPoints = GetComponent<EnemySpawnPoints>();
         grid = GetComponent<Grid>();
     }
-
+    /// <summary>
+    /// Load a random level from the level list
+    /// set the current stage to 0
+    /// </summary>
     public void LoadLevel()
     {
         CurrentStage = 0;
@@ -29,7 +33,10 @@ public class LevelManager : MonoBehaviour
         var rand = Random.Range(0, Levels.Count);
         levelSo = Levels[rand];
     }
-    
+    /// <summary>
+    /// Load a new stage of the level
+    /// if the previous stage is the final stage of the level load a new one
+    /// </summary>
     public void LoadStage()
     {
         if (CurrentStage == 2)
@@ -46,8 +53,11 @@ public class LevelManager : MonoBehaviour
         }
    
     }
-
-    public bool menuMode;
+    
+    /// <summary>
+    /// Load a certain stage of the level according to the input passed in
+    /// </summary>
+    /// <param name="index"></param>
     public void LoadStage(int index)
     {
         SetCurrentStage(index);
@@ -71,30 +81,35 @@ public class LevelManager : MonoBehaviour
             }
         }
     }
-    
+    /// <summary>
+    /// Set the current stage index
+    /// </summary>
+    /// <param name="level"></param>
     public void SetCurrentStage(int level)
     {
         CurrentStage = level;
     }
-    
+    /// <summary>
+    /// Save the current level to an input index
+    /// </summary>
+    /// <param name="stageIndex"></param>
     public void SaveStage(int stageIndex)
     {
         var _ = SaveStageInformation();
         var converted = ConvertToList(_);
         levelSo.SaveLevel(converted,stageIndex);
     }
-    
-    
-    
-        public PlatformInformation[,] SaveStageInformation()
+    /// <summary>
+    /// Save the state of each component on the platform to a platformInformation class
+    /// </summary>
+    /// <returns></returns>
+    public PlatformInformation[,] SaveStageInformation()
     {
         PlatformInformation[,] platformStates = new PlatformInformation[grid.gridSizeX, grid.gridSizeY];
-        
         for (int i = 0; i < grid.gridSizeX; i++)
         {
             for (int j = 0; j < grid.gridSizeY; j++)
             {
-
                 platformStates[i, j] = new PlatformInformation();
                 platformStates[i, j].CurrentHeight = grid.grid[i, j].PlatformManager.PlatformHeightManager.CurrentHeight;
                 platformStates[i, j].CurrentRotation = grid.grid[i, j].PlatformManager.PlatformRampManager.CurrentRotation;
@@ -110,12 +125,23 @@ public class LevelManager : MonoBehaviour
         }
         return platformStates;
     }
+    /// <summary>
+    /// Return a  stage from the list of level stages using an index
+    /// </summary>
+    /// <param name="level"></param>
+    /// <param name="stageIndex"></param>
+    /// <returns></returns>
     public List<PlatformInformation> ReturnStage(List<List<PlatformInformation>> level, int stageIndex)
     {
         var stageToReturn = level[stageIndex];
         return stageToReturn;
     }
-    
+    /// <summary>
+    /// Convert each platform information within the 2d array to a list
+    /// Saving the X and Z coordinates means we do not need a 2d array and can simply serialize the data in a list format
+    /// </summary>
+    /// <param name="platformInformation"></param>
+    /// <returns></returns>
     public List<PlatformInformation> ConvertToList(PlatformInformation[,] platformInformation)
     {
         var list = new List<PlatformInformation>();
@@ -123,12 +149,11 @@ public class LevelManager : MonoBehaviour
         {
             list.Add(go);
         }
-
         return list;
     }
-    //Cant save the 2d array of nodes to a scriptable object 
-    //I opted to convert all coordinate and state information in to integers that are stored in a list
-
+    /// <summary>
+    /// Build the navmesh at runtime
+    /// </summary>
     public void BuildNavMesh()
     {
         environmentManager.BuildNavMesh();
