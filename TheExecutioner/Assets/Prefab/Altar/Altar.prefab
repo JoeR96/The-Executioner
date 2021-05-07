@@ -5125,8 +5125,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 7.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 30
+  m_Center: {x: 0, y: 10.011734, z: 0}
 --- !u!114 &558890755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5154,6 +5154,8 @@ MonoBehaviour:
   <eventGameObject>k__BackingField: {fileID: 0}
   eventManager: {fileID: 0}
   <eventTargetDestination>k__BackingField: {fileID: 0}
+  currentTargetKillCount: 0
+  EventText: {fileID: 0}
 --- !u!1001 &497414907
 PrefabInstance:
   m_ObjectHideFlags: 0

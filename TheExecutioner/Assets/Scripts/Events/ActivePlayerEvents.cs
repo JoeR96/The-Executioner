@@ -19,7 +19,6 @@ public class ActivePlayerEvents : MonoBehaviour
     public void AddActiveEventToList(Event newEvent)
     {
         InRangeEvent.Add(newEvent);
-        //Create ui for scroll rect here
     }
 
     public void RemoveActiveEventFromList(Event eventToRemove)

@@ -299,7 +299,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.9228957
+  m_Radius: 30
   m_Height: 10.399399
   m_Direction: 1
   m_Center: {x: 0.8654844, y: 0.19487873, z: 1.7590915}
@@ -372,6 +372,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <eventGameObject>k__BackingField: {fileID: 0}
   eventManager: {fileID: 0}
+  <eventTargetDestination>k__BackingField: {fileID: 0}
+  currentTargetKillCount: 0
+  EventText: {fileID: 0}
   targetAltar: {fileID: 6096607800471224361, guid: df873ea5ffcacf04fae563d709c66b9f,
     type: 3}
   percent: 0

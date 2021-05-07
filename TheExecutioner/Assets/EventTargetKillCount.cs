@@ -7,9 +7,9 @@ public class EventTargetKillCount
     public int TargetKillCount { get; set; }
     public int CurrentKillCount { get; set; }
     
-    public EventTargetKillCount(int targetKillCount)
+    public EventTargetKillCount(int multiplierValue,int waveNumber)
     {
-        TargetKillCount = targetKillCount;
+        TargetKillCount = waveNumber * multiplierValue;
         CurrentKillCount = 0;
     }
 

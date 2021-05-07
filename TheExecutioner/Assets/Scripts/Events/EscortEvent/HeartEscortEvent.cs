@@ -15,7 +15,7 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
     
     private void OnEnable()
     {
-        EventTargetKillCount = 25;
+        EventTargetKillCountMultiplier = 5;
         waveSpawnTotal = 8;
         StartHeartEvent();
     }

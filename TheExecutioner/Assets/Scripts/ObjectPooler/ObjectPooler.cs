@@ -3,9 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-    
     [Serializable]
     public class PoolType
     {
@@ -15,12 +12,11 @@ using UnityEngine;
         public GameObject PoolHolder;
         public List<GameObject> ObjectPool = new List<GameObject>();
     }
+
     public class ObjectPooler : Singleton<ObjectPooler>
     {
         [Header("Pool Properties")]
-        
         public List<PoolType> MasterPool;
-        
         private void Start()
         {
             Invoke("FillPools",3f);

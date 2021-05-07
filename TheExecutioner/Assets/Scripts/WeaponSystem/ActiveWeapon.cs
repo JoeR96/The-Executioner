@@ -17,26 +17,54 @@ public class ActiveWeapon : MonoBehaviour
     private int activeWeaponIndex;
     public RaycastWeapon CurrentRaycastWeapon;
     public Transform[] WeaponSlots;
-
     public Animator RigController;
-
- 
+    
     // Start is called before the first frame update
     void Start()
     {
         //CurrentRaycastWeapon = GetComponentInChildren<RaycastWeapon>();
         if (CurrentRaycastWeapon)
         {
-            
-            
             EquipWeapon(CurrentRaycastWeapon);
         }
     }
-    
+
+    public void SelectWeapon()
+    {
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        {
+            activeWeaponIndex--;
+            SetWeaponWheelIndex();
+            EquipWeapon(_equippedWeapons[activeWeaponIndex]);
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        {
+            Debug.Log("T");
+            SetWeaponWheelIndex();
+            EquipWeapon(_equippedWeapons[activeWeaponIndex]);
+        } 
+            
+        
+        
+    }
+
+    private void SetWeaponWheelIndex()
+    {
+        if (activeWeaponIndex == 2)
+        {
+            activeWeaponIndex = 0;
+        }
+
+        if (activeWeaponIndex == -1)
+        {
+            activeWeaponIndex = 2;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        SelectWeapon();
         if (CurrentRaycastWeapon)
         {
             if (Input.GetKey(KeyCode.Mouse0) && CurrentRaycastWeapon.CanFire())
@@ -52,7 +80,6 @@ public class ActiveWeapon : MonoBehaviour
             if (Input.GetKey(KeyCode.R) && !CurrentRaycastWeapon.WeaponIsReloading)
                 CurrentRaycastWeapon.StartCoroutine("ReloadWeapon");
         }
-        
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             EquipWeapon(_equippedWeapons[0]);

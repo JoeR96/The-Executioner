@@ -21,7 +21,6 @@ public class Rocket : MonoBehaviour
     {
         RocketIsActive = false;
     }
-
     /// <summary>
     /// Enable collision components once the rocket has been fired
     /// I would like to have done this cleaner however I only realised this later in the project and there was minimal reward if any for changing the layers across the game

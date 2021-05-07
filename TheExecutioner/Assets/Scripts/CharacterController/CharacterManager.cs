@@ -51,13 +51,19 @@ public class CharacterManager : MonoBehaviour
         var x = Instantiate(displayEventText);
         x.transform.SetParent(eventScrollRect.transform);
         x.GetComponent<DisplayEventText>().SetEvent(activeEvent);
+        activeEvent.SetText(x);
 
     }
     
     private void CheckEventRemove(Collider other)
     {
         var activeEvent = other.GetComponent<IReturnEvent>();
-        if(activeEvent != null)
+        if (activeEvent != null)
+        {
             ActivePlayerEvents.RemoveActiveEventFromList(activeEvent.ReturnActiveEvent());
+            activeEvent.ReturnActiveEvent().DestroyText();
+            
+        }
+            
     }
 }

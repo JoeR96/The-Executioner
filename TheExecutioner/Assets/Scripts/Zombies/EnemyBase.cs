@@ -87,26 +87,26 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     {
         GameManager.instance.EventManager.zombieSpawner.RemoveZombieFromList(gameObject);
         Destroy(gameObject);
-        if (InEvent)
-        {
-            var x = Physics.OverlapSphere(transform.position, 3f);
-            foreach (var events in x)
-            {
-                if (events.GetComponent<Event>() != null)
-                {
-                    events.GetComponent<Event>().EventTargetKillCountManager.IncreaseKillCount();
-                }
-            }
-        }
+     
             
         //ObjectPooler.instance.ReturnObject(gameObject,ZombieType);
     }
+    /// <summary>
+    /// Activate a zombie from its ragdoll steal
+    /// Enable the animator
+    /// Enable the navmeshAgent
+    /// </summary>
     public void ActivateZombie( )
     {
         _aiAgent.Animator.enabled = true;
         _aiAgent.navMeshAgent.enabled = true;
         _aiAgent.Ragdoll.DeactivateRagdoll();
     }
+    /// <summary>
+    /// Deactivate the Zombie
+    /// disable the navmesh agent
+    /// Activate the ragdoll
+    /// </summary>
     public void DeactivateZombie( )
     {
         _aiAgent.navMeshAgent.enabled = false;
@@ -115,17 +115,32 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     public void TakeDamage(float damage, Vector3 direction)
     {
         healthSystem.TakeDamage(damage);
-        if (healthSystem.CurrentHealth < 0)
+        if (healthSystem.CurrentHealth < 0 && IsDead == false)
         {
+            IsDead = true;
             if (InEvent)
             {
-                _aiAgent.StateMachine.ChangeState(StateId.DeathState);
+                var x = Physics.OverlapSphere(transform.position, 5f);
+                foreach (var events in x)
+                {
+                    var eventRef = events.gameObject.GetComponent<Event>();
+                    
+                    if (eventRef != null)
+                    {
+                        eventRef.EventTargetKillCountManager.IncreaseKillCount();
+                        break;
+                    }
+                }
+                
             }
             GameManager.instance.ZombieManager.ZombieSpawner.RemoveZombieFromList(gameObject);
             _aiAgent.StateMachine.ChangeState(StateId.DeathState);
           
         }
     }
+
+    public bool IsDead { get; set; }
+
     public bool InEvent;
     //Scale the limb to size 0 so it is removed from the body and the animation still functions
     private IEnumerator ScaleComponent(Transform target, Vector3 targetSize, float speed)

@@ -10,7 +10,7 @@ public class SacrificeEvent : Event
 
     private void OnEnable()
     {
-        EventTargetKillCount = 25;
+        EventTargetKillCountMultiplier = 5;
         waveSpawnTotal = 10;
         StartEvent();
     }

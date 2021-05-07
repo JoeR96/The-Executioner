@@ -6,7 +6,7 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private GameObject uiCanvas;
     [SerializeField] private GameObject gameCanvas;
-    [SerializeField] private RoundManager roundManager;
+    [SerializeField] public RoundManager roundManager;
     [SerializeField] public GameObject playerSpawnPoint;
     public InteractionSpawnPointManager InteractionSpawnPointManager;
     public LimbSpawner LimbSpawner;
@@ -20,6 +20,7 @@ public class GameManager : Singleton<GameManager>
     public override void Awake()
     {
         base.Awake();
+        roundManager = GetComponent<RoundManager>();
         EventManager = GetComponentInChildren<EventManager>();
         EnvironmentManager = GetComponentInChildren<EnvironmentManager>();
         ZombieManager = GetComponentInChildren<ZombieManager>();
@@ -27,78 +28,51 @@ public class GameManager : Singleton<GameManager>
         Pathfinding = GetComponentInChildren<Pathfinding>();
         LevelManager = GetComponentInChildren<LevelManager>();
         InteractionSpawnPointManager = GetComponentInChildren<InteractionSpawnPointManager>();
-        roundManager = GetComponent<RoundManager>();
+        
     }
     private void Start()
     {
         if (!BuildMode)
         {
-            NextRoundSequence();
+            Invoke("StartNewRound",1f);
+            Invoke("SpawnWeapons", 5f);
         }
         else
         {
-            Invoke("LoadBuildMode",1f);
+            LoadBuildMode();
         }
     }
-
+    /// <summary>
+    /// Load a level and stage
+    /// Gameplay is disabled
+    /// </summary>
     private void LoadBuildMode()
     {
         LevelManager.LoadLevel();
         LoadStage();
     }
+    /// <summary>
+    /// Load a stage through the level manager
+    /// </summary>
     private void LoadStage()
     {
         LevelManager.LoadStage();
     }
+    /// <summary>
+    /// Start the next round sequence at the end of the level
+    /// Clear the current pickups
+    /// Invoke a new round after 1 seconds
+    /// Invoke Spawn Weapons after 5 seconds
+    /// </summary>
     public void NextRoundSequence()
     {
-
         InteractionSpawnPointManager.ClearWeapons();
         Invoke("StartNewRound",1f);
         Invoke("SpawnWeapons", 5f);
     }
-    private void StartNewRound()
-    {
-        roundManager.StartNewRound();
-    }
-    private void SpawnFodderZombies()
-    {
-        List<Transform> newList = EnvironmentManager.EnemySpawnPoints.InternalSpawnPoints;
-        List<Transform> temp = new List<Transform>();
-        
-        int length = newList.Count;
-        int newLength = length / 25;
-
-        for (int i = 0; i < newLength; i++)
-        {
-            int random = Random.Range(0, newList.Count);
-            Transform spawnPoint = newList[random];
-            
-            newList.RemoveAt(random);
-            temp.Add(spawnPoint);
-        }
-        
-        ZombieManager.ZombieSpawner.SpawnRagdollZombiesAtLocations(temp);
-    }
-    private void SpawnArmoredZombies()
-    {
-        List<Transform> newList = EnvironmentManager.EnemySpawnPoints.InternalSpawnPoints;
-        List<Transform> temp = new List<Transform>();
-        
-        int length = newList.Count;
-        int newLength = length / 75;
-
-        for (int i = 0; i < newLength; i++)
-        {
-            int random = Random.Range(0, newList.Count);
-            Transform spawnPoint = newList[random];
-            
-            newList.RemoveAt(random);
-            temp.Add(spawnPoint);
-        }
-        
-        ZombieManager.ZombieSpawner.SpawnArmoredZombiesAtLocations(temp);
-    }
+    /// <summary>
+    /// Spawn Weapons
+    /// </summary>
     private void SpawnWeapons()
     {
         for (int i = 0; i < 12; i++)
@@ -124,6 +98,13 @@ public class GameManager : Singleton<GameManager>
             NextRoundSequence();
 
     }
+    /// <summary>
+    /// Toggle gameover
+    /// Disable the timescale
+    /// Disable the game canvas
+    /// Enable the death canvas
+    /// Enable the cursor and confine it to the screen
+    /// </summary>
     public void GameOver()
     {
         Time.timeScale = 0;
@@ -131,6 +112,14 @@ public class GameManager : Singleton<GameManager>
         gameCanvas.gameObject.SetActive(false);
         Cursor.lockState = CursorLockMode.Confined;
     }
+    /// <summary>
+    /// Start a new round in the roundManager reference
+    /// </summary>
+    private void StartNewRound()
+    {
+        roundManager.StartNewRound();
+    }
+    
 }
 
 

@@ -16,8 +16,8 @@ public class DisplayEventText : MonoBehaviour
     }
     private void Update()
     {
-        if(activeEvent != null)
-            SetCurrentKillCountText(activeEvent.currentTargetKillCount);
+
+        SetCurrentKillCountText(activeEvent.currentTargetKillCount);
     }
     public void SetEvent(Event newEvent)
     {
@@ -37,7 +37,7 @@ public class DisplayEventText : MonoBehaviour
     /// </summary>
     private void ReturnEventKillCount()
     {
-        targetKillCount = activeEvent.EventTargetKillCount;
+        targetKillCount = activeEvent.EventTargetKillCountMultiplier;
     }
     /// <summary>
     /// Animate the event UI to lerp in size from 0 - 1

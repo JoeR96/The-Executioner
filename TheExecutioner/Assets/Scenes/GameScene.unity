@@ -22137,7 +22137,6 @@ GameObject:
   - component: {fileID: 1715150810}
   - component: {fileID: 1715150809}
   - component: {fileID: 1715150812}
-  - component: {fileID: 1715150811}
   - component: {fileID: 1715150813}
   - component: {fileID: 1715150814}
   m_Layer: 0
@@ -22171,7 +22170,7 @@ MonoBehaviour:
   Pathfinding: {fileID: 0}
   LevelManager: {fileID: 2053539583}
   EventManager: {fileID: 0}
-  BuildMode: 1
+  BuildMode: 0
 --- !u!4 &1715150810
 Transform:
   m_ObjectHideFlags: 0
@@ -22191,18 +22190,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1715150811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715150808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e511f8f3f570b514abef4e6c75fd9291, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1715150812
 MonoBehaviour:
   m_ObjectHideFlags: 0
