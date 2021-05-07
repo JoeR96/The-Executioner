@@ -11,6 +11,8 @@ public class RPG : RaycastWeapon
     [SerializeField] private float rocketForce;
     public RPG()
     {
+        fireWeapon = "RpgFire";
+        reloadWeapon = "RpgReload";
         TracerEffect = null;
         WeaponIsLoaded = false;
     }
@@ -39,6 +41,10 @@ public class RPG : RaycastWeapon
 
     public override void Reload()
     {
+        if(weaponSpareAmmo <= 0)
+            return;
+        
+        AudioManager.Instance.PlaySound(reloadWeapon);
         base.Reload();
         WeaponIsReloading = false;
         activeRocket = Instantiate(rocketPrefab, rocketPosition);

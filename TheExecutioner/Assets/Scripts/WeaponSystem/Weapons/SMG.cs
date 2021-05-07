@@ -4,4 +4,9 @@ using UnityEngine;
 
 public class SMG : RaycastWeapon
 {
+    public SMG()
+    {
+        fireWeapon = "SmgFire";
+        reloadWeapon = "SmgReload";
+    }
 }

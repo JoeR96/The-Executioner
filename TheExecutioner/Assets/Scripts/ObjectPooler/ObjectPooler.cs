@@ -17,30 +17,18 @@ using UnityEngine;
     }
     public class ObjectPooler : Singleton<ObjectPooler>
     {
-    
-
         [Header("Pool Properties")]
-        //[Range(0, 999)]  [SerializeField] private int poolSize;
-        //[SerializeField] private GameObject objectToPool;
-        //static instanstance as we only want one cop
-        public static ObjectPooler Instance;
-        //Create a queue of PoolObjects later once we have the class
-        //[Header("Pool Holders")]
-        //public List<GameObject> pool = new List<GameObject>();
         
-        //make this a dictionary 
         public List<PoolType> MasterPool;
-
-        private void Awake()
-        {
-            Instance = this;
-        }
+        
         private void Start()
         {
             Invoke("FillPools",3f);
         }
         #region Object Pooler
-
+        /// <summary>
+        /// Initialize each object pool 
+        /// </summary>
         private void FillPools()
         {
             for (int i = 0; i < MasterPool.Count ; i++)
@@ -48,6 +36,9 @@ using UnityEngine;
                 CreatePool(MasterPool[i]);
             }
         }
+        /// <summary>
+        /// Instantiate the target amount of prefabs defined in the inspector
+        /// </summary>
         private void CreatePool(PoolType type)
         {
             for (int i = 0; i < type.AmountToPool; i++)
@@ -57,6 +48,9 @@ using UnityEngine;
                 type.ObjectPool.Add(pooledObject);
             }
         }
+        /// <summary>
+        /// Return a reference to the target pool type
+        /// </summary>
         private PoolType GetPoolType(PoolObjectType type)
         {
             for (int i = 0; i < MasterPool.Count; i++)
@@ -69,6 +63,10 @@ using UnityEngine;
 
             return null;
         }
+        /// <summary>
+        /// Input a pool type to return a game gameobject from that pool
+        /// If no gameobject is available instantiate a new one
+        /// </summary>
         public GameObject GetObject(PoolObjectType type)
         {
             PoolType currentPool = GetPoolType(type);
@@ -87,8 +85,9 @@ using UnityEngine;
             }
             return returnObject;
         }
-
-
+        /// <summary>
+        /// Pass a gameobject and type to return it the correct pool
+        /// </summary>
         public void ReturnObject(GameObject obj,PoolObjectType type)
         {
             obj.SetActive(false);

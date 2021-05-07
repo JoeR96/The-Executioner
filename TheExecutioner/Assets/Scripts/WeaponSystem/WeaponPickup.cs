@@ -11,7 +11,6 @@ public class WeaponPickup : MonoBehaviour
     public int quality;
     private void Start()
     {
-        
         quality = GetQuality();
         SetGodBeamColour(quality);
     }
@@ -22,7 +21,6 @@ public class WeaponPickup : MonoBehaviour
         
         return random;
     }
-    
 
     public void SetGodBeamColour(int index)
     {
@@ -31,7 +29,6 @@ public class WeaponPickup : MonoBehaviour
     public RaycastWeapon raycastWeapon;
     void OnTriggerEnter(Collider other)
     {
-        
         if (other.CompareTag("Player"))
         {
             ActiveWeapon activeWeapon = other.GetComponent<ActiveWeapon>();
@@ -44,6 +41,9 @@ public class WeaponPickup : MonoBehaviour
                 weapon.SetWeaponState(quality);
                 
                 if(!weapon.WeaponIsLoaded)
+                    weapon.Reload();
+                
+                if(weapon.GetComponent<RPG>())
                     weapon.Reload();
             }
             Destroy(gameObject);

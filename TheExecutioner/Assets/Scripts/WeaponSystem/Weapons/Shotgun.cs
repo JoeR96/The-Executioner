@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class Shotgun : RaycastWeapon
 {
-
+    public Shotgun()
+    {
+        fireWeapon = "ShotgunFire";
+        reloadWeapon = "ShotgunReload";
+    }
 }

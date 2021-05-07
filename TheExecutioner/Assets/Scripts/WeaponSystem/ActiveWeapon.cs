@@ -1,7 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Animations.Rigging;
-
 
 public class ActiveWeapon : MonoBehaviour
 {
@@ -45,6 +43,10 @@ public class ActiveWeapon : MonoBehaviour
             {
                 CurrentRaycastWeapon.FireWeapon();
                 RigController.Play("weapon_"+CurrentRaycastWeapon.WeaponName+"_fire",0);
+            }
+            else
+            {
+                AudioManager.Instance.PlaySound("ClipEmpty");
             }
             
             if (Input.GetKey(KeyCode.R) && !CurrentRaycastWeapon.WeaponIsReloading)
@@ -109,6 +111,7 @@ public class ActiveWeapon : MonoBehaviour
     }
     public void EquipWeapon(RaycastWeapon weapon)
     {
+        AudioManager.Instance.PlaySound("EquipWeapon");
         CurrentRaycastWeapon.gameObject.SetActive(false);
         SetActiveWeapon(weapon.weaponSlot);
         CurrentRaycastWeapon.gameObject.SetActive(true);

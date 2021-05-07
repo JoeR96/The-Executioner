@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
 
 public class GameManager : Singleton<GameManager>
 {
@@ -19,7 +15,6 @@ public class GameManager : Singleton<GameManager>
     public Pathfinding Pathfinding;
     public LevelManager LevelManager;
     public EventManager EventManager;
-    
     public bool BuildMode;
  
     public override void Awake()
@@ -34,7 +29,6 @@ public class GameManager : Singleton<GameManager>
         InteractionSpawnPointManager = GetComponentInChildren<InteractionSpawnPointManager>();
         roundManager = GetComponent<RoundManager>();
     }
-
     private void Start()
     {
         if (!BuildMode)
@@ -45,14 +39,10 @@ public class GameManager : Singleton<GameManager>
         {
             LoadStage();
         }
-        
     }
-   
     private void LoadStage()
     {
-        
         LevelManager.LoadStage();
-
     }
     public void NextRoundSequence()
     {
@@ -61,7 +51,6 @@ public class GameManager : Singleton<GameManager>
         Invoke("StartNewRound",1f);
         Invoke("SpawnWeapons", 5f);
     }
-
     private void StartNewRound()
     {
         roundManager.StartNewRound();
@@ -104,7 +93,6 @@ public class GameManager : Singleton<GameManager>
         
         ZombieManager.ZombieSpawner.SpawnArmoredZombiesAtLocations(temp);
     }
-    
     private void SpawnWeapons()
     {
         for (int i = 0; i < 12; i++)
@@ -121,7 +109,6 @@ public class GameManager : Singleton<GameManager>
         if (Input.GetKeyDown(KeyCode.F2))
         {
            EventManager.PlaySacrificeEvent();
-           
         }
 
         if(Input.GetKeyDown(KeyCode.F5))
@@ -131,7 +118,6 @@ public class GameManager : Singleton<GameManager>
             NextRoundSequence();
 
     }
-    
     public void GameOver()
     {
         Time.timeScale = 0;

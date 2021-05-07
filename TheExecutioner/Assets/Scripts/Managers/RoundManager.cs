@@ -16,9 +16,9 @@ public class RoundManager : MonoBehaviour
 
     private void Start()
     {
-        currentEventSpawnCount = 1;
-        CurrentRoundZombieSpawnCount = 0;
-        Invoke("TriggerBoolChange", 10f);
+        // currentEventSpawnCount = 1;
+        // CurrentRoundZombieSpawnCount = 0;
+        // Invoke("TriggerBoolChange", 10f);
     }
     private void Update()
     {

@@ -29,10 +29,9 @@ public class Rocket : MonoBehaviour
         gameObject.layer = 12;
     }
 
-
-    // Start is called before the first frame update
     private void Explosion()
     {
+        AudioManager.Instance.PlaySound("RpgExplosion");
         foreach (var mesh in meshRenders)
         {
             mesh.enabled = false;

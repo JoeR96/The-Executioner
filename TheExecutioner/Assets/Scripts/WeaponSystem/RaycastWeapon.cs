@@ -16,7 +16,10 @@ public abstract class RaycastWeapon : MonoBehaviour
     private RaycastHit hitInfo;
     public string WeaponName;
     public weaponRecoil recoil;
-
+    protected string reloadWeapon;
+    protected string fireWeapon;
+    protected string equipWeapon;
+    
     #region weaponvariables
     [Header("Utility ")][Space(10)]
     [SerializeField] [Range(0f, 60f)]
@@ -63,7 +66,7 @@ public abstract class RaycastWeapon : MonoBehaviour
         get => weaponCurrentammo;
         set => weaponCurrentammo = value;
     }
-
+    
     public float WeaponMaxAmmo
     {
         get => weaponMaxAmmo;
@@ -93,8 +96,7 @@ public abstract class RaycastWeapon : MonoBehaviour
         set => weaponSpareAmmo = value;
     }
 
-
-
+    
     #endregion
     private void Awake()
     {
@@ -133,7 +135,7 @@ public abstract class RaycastWeapon : MonoBehaviour
     {
         SetWeaponProperties();
         SetRaycastPositions();
-        AudioManager.Instance.PlaySound("ShotgunFire");
+        AudioManager.Instance.PlaySound(fireWeapon);
         MuzzleFlash.Emit(1);
         var tracer = InstantiateTrailRenderer();
         if(Physics.Raycast(ray,out hitInfo))
@@ -223,6 +225,7 @@ public abstract class RaycastWeapon : MonoBehaviour
         if(weaponSpareAmmo <= 0)
             return;
     
+        AudioManager.Instance.PlaySound(reloadWeapon);
         var toAdd = weaponMaxAmmo - weaponCurrentammo;
         for (int i = 0; i < toAdd; i++)
         {

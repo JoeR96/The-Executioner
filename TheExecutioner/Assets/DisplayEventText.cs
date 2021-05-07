@@ -39,7 +39,6 @@ public class DisplayEventText : MonoBehaviour
     {
         var target = GetComponent<RectTransform>();
         var startSize = transform.localScale;
-        var targetSize = 1;
         float timer = 0;
         float duration = 1;
         while (timer < duration)

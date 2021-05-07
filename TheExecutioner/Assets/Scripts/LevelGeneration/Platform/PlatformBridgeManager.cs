@@ -17,13 +17,18 @@ public class PlatformBridgeManager : MonoBehaviour
     public bool PlatformBridgeActive;
     public int CurrentBridgeHeight;
 
+    #region MyRegion
+    #region Two
+    #endregion
+    #endregion
+    //===============================================================================================\\
+    //                                     Platform Bridges                                          \\
+    //===============================================================================================\\
     private PlatformManager platformManager;
-
     public PlatformBridgeManager(PlatformManager platform)
     {
         platformManager = platform;
     }
-
     public void SetBridgeHeight(int height)
     {
         SetBridgePosition(bridgeHeights[height], 1f);
@@ -33,18 +38,16 @@ public class PlatformBridgeManager : MonoBehaviour
     private void SetBridgePosition(float targetHeight, float duration)
     {
         Vector3 targetPosition;
-        targetPosition = new Vector3(bridge.transform.position.x, bridge.transform.position.y + 18f + targetHeight,
-            bridge.transform.position.z);
+        targetPosition = new Vector3(transform.position.x, transform.position.y  + targetHeight,
+            transform.position.z);
         StartCoroutine(LerpPosition(targetPosition, duration));
     }
-
     public bool ReturnBridgeValue()
     {
         PlatformBridgeActive = !PlatformBridgeActive;
         return PlatformBridgeActive;
     }
-
-
+    
     private IEnumerator LerpPosition(Vector3 targetPosition, float duration)
     {
         Vector3 startPosition = transform.position;
@@ -55,14 +58,12 @@ public class PlatformBridgeManager : MonoBehaviour
         {
             timer += Time.deltaTime;
             float percentage = Mathf.Min(timer / _duration, 1);
-            transform.position = Vector3.Lerp(startPosition, targetPosition, percentage);
+            bridge.transform.position = Vector3.Lerp(startPosition, targetPosition, percentage);
             yield return null;
         }
     }
     private PlatformStateManager _platformStateManager;
-
-
-
+    
     public void ActivateBridge(bool active)
     {
         bridge.GetComponent<MeshRenderer>().enabled = active;

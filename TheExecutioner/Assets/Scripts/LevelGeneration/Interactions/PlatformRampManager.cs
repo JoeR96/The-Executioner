@@ -16,11 +16,8 @@ public class PlatformRampManager : MonoBehaviour
     {
         rampStartPosition = ramp.transform.localPosition;
     }
-    
-
     public void ActivateRamp(bool active)
     {
-    
         rampMat.GetComponent<MeshRenderer>().enabled = active;
         rampMat.GetComponent<MeshCollider>().enabled = active;
         var colour = ramp.GetComponentInParent<PlatformColourManager>();
@@ -28,7 +25,6 @@ public class PlatformRampManager : MonoBehaviour
         var y = rampMat.GetComponent<MeshRenderer>();
         y.material = t;
     }
-
     public void SetRampRotation( int stairState)
     {
         ramp.transform.localRotation = Quaternion.Euler(ramp.
@@ -36,18 +32,15 @@ public class PlatformRampManager : MonoBehaviour
             ramp.transform.localRotation.eulerAngles.z);
         CurrentRotation = stairState;
     }
-
     public bool ReturnRampValue()
     {
         PlatformRampActive = !PlatformRampActive;
         return PlatformRampActive;
     }
-    
     private void RaisePlatform(bool active)
     {
         StartCoroutine(MovePlatform(active));
     }
-
     private IEnumerator MovePlatform(bool active)
     {
         Vector3 targetPosition;
@@ -72,7 +65,6 @@ public class PlatformRampManager : MonoBehaviour
             ramp.transform.position = Vector3.Lerp(startPosition,  targetPosition, percentage);
             yield return null;
         }
-
         ramp.transform.position = targetPosition;
         // ramp.transform.position = new Vector3(ramp.transform.position.x, target, ramp.transform.position.z);
     }

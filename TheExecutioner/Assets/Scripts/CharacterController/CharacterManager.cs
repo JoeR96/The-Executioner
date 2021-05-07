@@ -11,7 +11,6 @@ public class CharacterManager : MonoBehaviour
     
     void Awake()
     {
-        
         PlayerHealthSystem = new HealthSystem(100, 100);
     }
 

@@ -10094,7 +10094,7 @@ MonoBehaviour:
   weaponDamage: 49.4
   weaponFireRate: 0.125
   <WeaponIsReloading>k__BackingField: 0
-  weaponCurrentammo: 1
+  weaponCurrentammo: 0
   rocketPrefab: {fileID: 4146537175756036855, guid: 8d7eb8ed3acd3d34e9569aed85acf1f3,
     type: 3}
   activeRocket: {fileID: 0}
