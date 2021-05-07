@@ -5,10 +5,7 @@ public class PlatformSpawnManager : MonoBehaviour
     public bool PlatformSpawnPointActive;
     public bool PlatformEventSpawn;
     [SerializeField] public GameObject spawnPoint;
-
-    public PlatformSpawnManager(PlatformManager platformManager)
-    {
-    }
+    
 
   
 

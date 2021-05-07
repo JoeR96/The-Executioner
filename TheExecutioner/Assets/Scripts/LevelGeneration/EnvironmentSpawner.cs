@@ -62,7 +62,10 @@ public class EnvironmentSpawner : MonoBehaviour
                 
         }
     }
-    
+    #region StairSpawningLogic
+    //I stopped building upon this logic once I built the custom editor
+    //I would improve the stair spawning logic if time allowed 
+    //Manually setting the stairs allowed me to progress quickly with the project and manage scope more effectively
     private bool ReturnStairSpawnStatus(int x,int y,Node[,] platformGroup)
     {
         if (platformGroup[x, y] == null)
@@ -76,9 +79,7 @@ public class EnvironmentSpawner : MonoBehaviour
         }
         return platformGroup[ x,  y].platform.GetComponent<PlatformStateManager>().PlatformIsActive;
     }
-    //I stopped building upon this logic once I built the custom editor
-    //I would improve the stair spawning logic if time allowed 
-    //Manually setting the stairs allowed me to progress quickly with the project and manage scope better
+   
     
     // public void SpawnStairs(List<Node> path)
     //      {
@@ -135,4 +136,5 @@ public class EnvironmentSpawner : MonoBehaviour
     //              
     //          }
     //      }
+    #endregion
 }

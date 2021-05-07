@@ -15,22 +15,16 @@ public class PlatformManagerEditor : Editor
         DrawDefaultInspector();
         PlatformManager PlatformManager = (PlatformManager)target;
        
-            EditorGUILayout.BeginHorizontal ();
-            if (GUILayout.Button("Toggle Spawn Point",GUILayout.Width(100), GUILayout.Height(100)))
-            {
-                PlatformManager.PlatformSpawnManager.ReturnPlatformSpawnPointValue();
-            }
-            if (GUILayout.Button("Toggle Event Spawn Point",GUILayout.Width(100), GUILayout.Height(100)))
-            {
-                PlatformManager.PlatformSpawnManager.ReturnPlatformEventSpawnPointValue();
-            }
-            EditorGUILayout.EndHorizontal ();
-
-        
-      
-        
+        EditorGUILayout.BeginHorizontal ();
+        if (GUILayout.Button("Toggle Spawn Point",GUILayout.Width(100), GUILayout.Height(100)))
+        {
+            PlatformManager.PlatformSpawnManager.ReturnPlatformSpawnPointValue();
+        }
+        if (GUILayout.Button("Toggle Event Spawn Point",GUILayout.Width(100), GUILayout.Height(100))) { 
+            PlatformManager.PlatformSpawnManager.ReturnPlatformEventSpawnPointValue();
+        }
+        EditorGUILayout.EndHorizontal ();
             
-        
         EditorGUILayout.BeginHorizontal ();
         if (PlatformManager.PlatformColourManager.ColourTileMode)
         {

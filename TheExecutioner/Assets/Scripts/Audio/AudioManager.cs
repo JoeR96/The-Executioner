@@ -22,7 +22,11 @@ public class AudioManager : MonoBehaviour
         Instance = this;
     }
 
-
+    /// <summary>
+    /// Pass a string and use this string to match a value in the audio clips array
+    /// Play the sound
+    /// </summary>
+    /// <param name="soundName"></param>
     public void PlaySound(string soundName)
     {
         var sound = Array.Find(_gameClips, 

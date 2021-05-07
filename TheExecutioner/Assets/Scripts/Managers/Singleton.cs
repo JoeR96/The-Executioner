@@ -8,13 +8,17 @@
 
         static T m_instance;
 
+        /// <summary>
+        /// If there is already an instance find and reference it
+        /// Otherwise create a new instance
+        /// </summary>
         public static T instance
         {
             get
             {
                 if(m_instance == null)
                 {
-                    m_instance = GameObject.FindObjectOfType<T>();
+                    m_instance = FindObjectOfType<T>();
 
                     if(m_instance == null)
                     {

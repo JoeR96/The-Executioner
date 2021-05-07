@@ -1,6 +1,4 @@
-﻿
-
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
 [CustomEditor(typeof(ObjectPooler))]
 public class ObjectPoolerEditor : Editor
@@ -15,20 +13,15 @@ public class ObjectPoolerEditor : Editor
         // Custom form for Player Preferences
         ObjectPooler  _objectPooler= (ObjectPooler)target;
         
-
+        /// <summary>
+        /// Create a button to click to increase the current size of the pool in the inspector
+        /// </summary>
         if (GUILayout.Button("Increase Pool Size")) //8
         {
             _objectPooler.IncreasePoolSize();
         }
 
-        if (GUILayout.Button("Return")) //10
-        {
-            
-            //ObjectPooler.Instance.ReturnObject();
-        }
-
         GUILayout.EndHorizontal();
-        
-        // Custom Button with Image as Thumbnail
+
     }
 }

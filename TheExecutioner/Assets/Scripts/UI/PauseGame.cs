@@ -5,6 +5,10 @@ using UnityEngine.ProBuilder.MeshOperations;
 
 public class PauseGame : MonoBehaviour
 {
+    private void Update()
+    {
+        
+    }
     /// <summary>
     /// Pause the game by setting setting timescale to 0
     /// Display the cursor

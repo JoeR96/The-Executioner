@@ -9,15 +9,20 @@ public class RestartGame : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
     }
+    /// <summary>
+    /// Reload the scene to restart the game
+    /// </summary>
     public void Restart()
     {
-        SceneManager.LoadScene(0);
         AudioManager.Instance.PlaySound("ButtonClick");
+        SceneManager.LoadScene(0);
     }
-
+    /// <summary>
+    /// Quit t he application
+    /// </summary>
     public void Quit()
     {
-        Application.Quit();
         AudioManager.Instance.PlaySound("ButtonClick");
+        Application.Quit();
     }
 }

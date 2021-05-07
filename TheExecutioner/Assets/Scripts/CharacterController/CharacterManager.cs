@@ -44,7 +44,6 @@ public class CharacterManager : MonoBehaviour
     {
       
         var currentEvent = other.GetComponent<IReturnEvent>();
-
         if (currentEvent == null) return;
         
         var activeEvent = other.GetComponent<Event>();

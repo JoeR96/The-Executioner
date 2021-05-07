@@ -24,17 +24,25 @@ public class DisplayEventText : MonoBehaviour
         activeEvent = newEvent;
         ReturnEventKillCount();
     }
-    
+    /// <summary>
+    /// Set the current killcount text
+    /// </summary>
+    /// <param name="KillCount"></param>
     public void SetCurrentKillCountText(int KillCount)
     {
         currentKillCountText.SetText(KillCount + " / " + targetKillCount );
     }
-
+    /// <summary>
+    /// Return the target event kill count from the active event
+    /// </summary>
     private void ReturnEventKillCount()
     {
         targetKillCount = activeEvent.EventTargetKillCount;
     }
-    
+    /// <summary>
+    /// Animate the event UI to lerp in size from 0 - 1
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator ScaleComponent( )
     {
         var target = GetComponent<RectTransform>();

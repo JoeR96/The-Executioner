@@ -16,19 +16,13 @@ public class CharacterAiming : MonoBehaviour
     private int isAimingParam = Animator.StringToHash("IsAiming");
     void Start()
     {
-    
         animator = GetComponent<Animator>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         _camera = Camera.main;
         _weapon = GetComponentInChildren<RaycastWeapon>();
     }
-
-    private void Update()
-    {
-        bool isAiming = Input.GetMouseButton(1);
-        animator.SetBool(isAimingParam,isAiming);
-    }
+    
     // Update is called once per frame
     void FixedUpdate()
     {
