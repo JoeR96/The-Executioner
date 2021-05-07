@@ -12,10 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformHeightManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformHeightManagerEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformRampManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformRampManagerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Interactions/fLOORhOLDER.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Interactions/fLOORhOLDER.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +78,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/InteractionSpawnPointManager.cs" />
       <option value="$PROJECT_DIR$/Assets/RespawnPlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/ObjectState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UiHealthCanvas.cs" />
@@ -130,6 +127,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformBridgeManagerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformHeightManagerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformRampManagerEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
     </changedPaths>
   </component>
@@ -264,6 +262,7 @@
       <workItem from="1620342179878" duration="9000" />
       <workItem from="1620385768609" duration="5374000" />
       <workItem from="1620393305584" duration="1018000" />
+      <workItem from="1620394355452" duration="339000" />
     </task>
     <servers />
   </component>
