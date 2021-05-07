@@ -16,7 +16,8 @@ public class PlatformHeightManagerEditor : Editor
         
         EditorGUILayout.BeginHorizontal();
         if (GUILayout.Button("1",GUILayout.Width(80), GUILayout.Height(80)))
-        { PlatformHeightManager.SetPlatformHeight(0);
+        { 
+            PlatformHeightManager.SetPlatformHeight(0);
         }
         if (GUILayout.Button("2",GUILayout.Width(80), GUILayout.Height(80)))
         {
