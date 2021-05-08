@@ -6915,7 +6915,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-46918
+  m_Name: pb_Mesh-2788
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13740,7 +13740,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-46880
+  m_Name: pb_Mesh-2750
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14518,7 +14518,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh62534
+  m_Name: pb_Mesh19480
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32357,7 +32357,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-46920
+  m_Name: pb_Mesh-2790
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -64553,6 +64553,11 @@ PrefabInstance:
       objectReference: {fileID: 900378053}
     - target: {fileID: 4071071369127037442, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}
+      propertyPath: bridgeHeights.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071071369127037442, guid: 4390e655c91840d479a2c1b56b4b0d46,
+        type: 3}
       propertyPath: bridgeHeights.Array.data[2]
       value: 8
       objectReference: {fileID: 0}
@@ -64565,6 +64570,21 @@ PrefabInstance:
         type: 3}
       propertyPath: bridgeHeights.Array.data[0]
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071071369127037442, guid: 4390e655c91840d479a2c1b56b4b0d46,
+        type: 3}
+      propertyPath: bridgeHeights.Array.data[3]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071071369127037442, guid: 4390e655c91840d479a2c1b56b4b0d46,
+        type: 3}
+      propertyPath: bridgeHeights.Array.data[4]
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071071369127037442, guid: 4390e655c91840d479a2c1b56b4b0d46,
+        type: 3}
+      propertyPath: bridgeHeights.Array.data[5]
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4071071369127037448, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}

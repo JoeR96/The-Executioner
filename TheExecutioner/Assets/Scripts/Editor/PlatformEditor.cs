@@ -111,17 +111,29 @@ public class PlatformManagerEditor : Editor
         }
         if (PlatformManager.PlatformBridgeManager.PlatformBridgeActive)
         {
-            if (GUILayout.Button("Set Low Bridge",GUILayout.Width(80), GUILayout.Height(80)))
+            if (GUILayout.Button("Set Bridge One",GUILayout.Width(80), GUILayout.Height(80)))
             {
                 PlatformManager.PlatformBridgeManager.SetBridgeHeight(0);
             }
-            if (GUILayout.Button("Set Medium Bridge",GUILayout.Width(80), GUILayout.Height(80)))
+            if (GUILayout.Button("Set Bridge Two",GUILayout.Width(80), GUILayout.Height(80)))
             {
                 PlatformManager.PlatformBridgeManager.SetBridgeHeight(1);
             }
-            if (GUILayout.Button("Set High Bridge",GUILayout.Width(80), GUILayout.Height(80)))
+            if (GUILayout.Button("Set Bridge Three",GUILayout.Width(80), GUILayout.Height(80)))
             {
                 PlatformManager.PlatformBridgeManager.SetBridgeHeight(2);
+            }
+            if (GUILayout.Button("Set Bridge Four",GUILayout.Width(80), GUILayout.Height(80)))
+            {
+                PlatformManager.PlatformBridgeManager.SetBridgeHeight(3);
+            }
+            if (GUILayout.Button("Set Bridge Five",GUILayout.Width(80), GUILayout.Height(80)))
+            {
+                PlatformManager.PlatformBridgeManager.SetBridgeHeight(4);
+            }
+            if (GUILayout.Button("Set Bridge Six",GUILayout.Width(80), GUILayout.Height(80)))
+            {
+                PlatformManager.PlatformBridgeManager.SetBridgeHeight(5);
             }
         }
         EditorGUILayout.EndHorizontal ();

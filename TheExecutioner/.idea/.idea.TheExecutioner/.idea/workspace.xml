@@ -11,14 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_rpg.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_rpg.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_shotgun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_shotgun.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_smg.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_smg.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +106,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformBridgeManagerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformHeightManagerEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformRampManagerEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformManager.cs" />
@@ -134,6 +126,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -271,7 +264,7 @@
       <workItem from="1620404689665" duration="7389000" />
       <workItem from="1620431955160" duration="596000" />
       <workItem from="1620477701465" duration="1803000" />
-      <workItem from="1620508593299" duration="4598000" />
+      <workItem from="1620508593299" duration="4893000" />
     </task>
     <servers />
   </component>
