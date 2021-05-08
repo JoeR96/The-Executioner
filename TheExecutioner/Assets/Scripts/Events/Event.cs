@@ -18,7 +18,7 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
 
     private void Awake()
     {
-        //SpawnPointManager = GameManager.instance.GetComponent<SpawnPointManager>();
+        SpawnPointManager = GameManager.instance.GetComponentInChildren<SpawnPointManager>();
         eventManager = GameManager.instance.EventManager;
     }
     private void Start()
@@ -53,7 +53,7 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     /// </summary>
     private void SpawnReward()
     {
-        SpawnPointManager.SpawnWeapon(eventTargetDestination);
+        SpawnPointManager.SpawnWeapon(transform);
     }
 
     public int progress { get; set; }
