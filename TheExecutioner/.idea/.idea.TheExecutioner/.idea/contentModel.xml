@@ -237,12 +237,12 @@
               <e p="HeartEscortEvent.cs" t="Include" />
             </e>
             <e p="Event.cs" t="Include" />
-            <e p="InteractionSpawnPointManager.cs" t="Include" />
             <e p="InteractionSpawnPointManager1.cs" t="Include" />
             <e p="IStartEvent.cs" t="Include" />
             <e p="JailBreakEvent.cs" t="Include" />
             <e p="MovingZombieDumper.cs" t="Include" />
             <e p="SacrificeEvent.cs" t="Include" />
+            <e p="SpawnPointManager.cs" t="Include" />
             <e p="ZombieOverflowEvent.cs" t="Include" />
           </e>
           <e p="HealthSystem" t="Include">

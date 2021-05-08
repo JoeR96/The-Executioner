@@ -22163,7 +22163,7 @@ MonoBehaviour:
   gameCanvas: {fileID: 1482123587}
   roundManager: {fileID: 0}
   playerSpawnPoint: {fileID: 1446966913}
-  InteractionSpawnPointManager: {fileID: 0}
+  SpawnPointManager: {fileID: 0}
   LimbSpawner: {fileID: 1715150812}
   ZombieManager: {fileID: 0}
   EnvironmentManager: {fileID: 0}
@@ -27486,13 +27486,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1787597892}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3fc007094b74a40b2cf6be935815ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 86e2323200083be4baff410635982674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
+  - {fileID: 2539308211900486839, guid: 47ebf5d85cf772342b678712d2e57067, type: 3}
   - {fileID: 2224477734925844742, guid: 17dcfe2de88790f43a04830b76362acd, type: 3}
   - {fileID: 8089028028120136913, guid: da3ed1b1c036c9b41a4581e199487d19, type: 3}
-  - {fileID: 2539308211900486839, guid: 47ebf5d85cf772342b678712d2e57067, type: 3}
 --- !u!1 &1807744690 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4071071369127037453, guid: 4390e655c91840d479a2c1b56b4b0d46,

@@ -5,7 +5,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 
-public class InteractionSpawnPointManager : MonoBehaviour
+public class SpawnPointManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> weapons;
     private List<GameObject> activeWeapons = new List<GameObject>();

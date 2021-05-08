@@ -16,8 +16,7 @@ public class DisplayEventText : MonoBehaviour
     }
     private void Update()
     {
-
-        SetCurrentKillCountText(activeEvent.currentTargetKillCount);
+        SetCurrentKillCountText(activeEvent.EventTargetKillCountManager.CurrentKillCount);
     }
     public void SetEvent(Event newEvent)
     {

@@ -8,7 +8,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject gameCanvas;
     [SerializeField] public RoundManager roundManager;
     [SerializeField] public GameObject playerSpawnPoint;
-    public InteractionSpawnPointManager InteractionSpawnPointManager;
+    public SpawnPointManager SpawnPointManager;
     public LimbSpawner LimbSpawner;
     public ZombieManager ZombieManager;
     public EnvironmentManager EnvironmentManager;
@@ -27,7 +27,7 @@ public class GameManager : Singleton<GameManager>
         LimbSpawner = GetComponentInChildren<LimbSpawner>();
         Pathfinding = GetComponentInChildren<Pathfinding>();
         LevelManager = GetComponentInChildren<LevelManager>();
-        InteractionSpawnPointManager = GetComponentInChildren<InteractionSpawnPointManager>();
+        SpawnPointManager = GetComponentInChildren<SpawnPointManager>();
         
     }
     private void Start()
@@ -66,7 +66,7 @@ public class GameManager : Singleton<GameManager>
     /// </summary>
     public void NextRoundSequence()
     {
-        InteractionSpawnPointManager.ClearWeapons();
+        SpawnPointManager.ClearWeapons();
         Invoke("StartNewRound",1f);
         Invoke("SpawnWeapons", 5f);
     }
@@ -77,7 +77,7 @@ public class GameManager : Singleton<GameManager>
     {
         for (int i = 0; i < 12; i++)
         {
-            InteractionSpawnPointManager.SpawnWeapon(EnvironmentManager.EnemySpawnPoints.ReturnInternalSpawnPoint());
+            SpawnPointManager.SpawnWeapon(EnvironmentManager.EnemySpawnPoints.ReturnInternalSpawnPoint());
         }
     }
     private void Update()

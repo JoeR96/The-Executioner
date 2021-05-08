@@ -6,7 +6,11 @@ public class EventTargetKillCount
 {
     public int TargetKillCount { get; set; }
     public int CurrentKillCount { get; set; }
-    
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="multiplierValue"></param>
+    /// <param name="waveNumber"></param>
     public EventTargetKillCount(int multiplierValue,int waveNumber)
     {
         TargetKillCount = waveNumber * multiplierValue;

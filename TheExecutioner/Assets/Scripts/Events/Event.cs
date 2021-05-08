@@ -6,42 +6,54 @@ using UnityEngine;
 
 public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
 {
-    [field: SerializeField] protected GameObject eventGameObject { get; set; }
-    [SerializeField] protected EventManager eventManager;
-    [field: SerializeField] protected Transform eventTargetDestination{ get; private set; }
+    protected EventManager eventManager; protected Transform eventTargetDestination{ get; private set; }
+    public EventTargetKillCount EventTargetKillCountManager { get; private set; }
+    public int EventTargetKillCountMultiplier { get; set; }
+    public GameObject EventText;
     protected GameObject activeEventGameObject;
     protected EventZombieSpawner eventZombieSpawner;
-    public int EventTargetKillCountMultiplier { get; set; }
-    public EventTargetKillCount EventTargetKillCountManager;
     protected int waveSpawnTotal;
-    public int currentTargetKillCount;
-    public GameObject EventText;
     private bool eventComplete;
+    private SpawnPointManager SpawnPointManager;
 
     private void Awake()
     {
+        //SpawnPointManager = GameManager.instance.GetComponent<SpawnPointManager>();
         eventManager = GameManager.instance.EventManager;
     }
     private void Start()
     {
         EventTargetKillCountManager = new EventTargetKillCount(EventTargetKillCountMultiplier,GameManager.instance.roundManager.CurrentRound);
-        Debug.Log("Current Round =" + GameManager.instance.roundManager.CurrentRound);
     }
 
     private void Update()
     {
-        
-        EventTargetKillCountManager.CurrentKillCount = currentTargetKillCount;
-        if (currentTargetKillCount == EventTargetKillCountManager.TargetKillCount && eventComplete == false)
+        if (EventTargetKillCountManager.CurrentKillCount >= EventTargetKillCountManager.TargetKillCount && eventComplete == false)
         {
             eventComplete = true;
-            CompleteEvent();
+            StartCoroutine(CompleteEvent());
         }
     }
-
-    private void CompleteEvent()
+    /// <summary>
+    /// Play the destroy text animation to destroy the text
+    /// Wait 1 second
+    /// destroy the event game object
+    /// Spawnn a reward
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator CompleteEvent()
     {
+        DestroyText();
+        yield return new WaitForSeconds(1f);
         Destroy(activeEventGameObject);
+        SpawnReward();
+    }
+    /// <summary>
+    /// Spawn a reward at the the target location
+    /// </summary>
+    private void SpawnReward()
+    {
+        SpawnPointManager.SpawnWeapon(eventTargetDestination);
     }
 
     public int progress { get; set; }
@@ -85,20 +97,6 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
         enemy?.IsInArea(false);
     }
 
-    public Event ReturnActiveEvent()
-    {
-        return this;
-    }
-
-    public void SetText(GameObject o)
-    {
-        EventText = o;
-    }
-
-    public void DestroyText()
-    {
-        StartCoroutine(ScaleComponent());
-    }
     
     private IEnumerator ScaleComponent( )
     {
@@ -114,5 +112,20 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
             yield return null;
         }
         Destroy(EventText);
+    }
+    
+    public Event ReturnActiveEvent()
+    {
+        return this;
+    }
+
+    public void SetText(GameObject o)
+    {
+        EventText = o;
+    }
+
+    public void DestroyText()
+    {
+        StartCoroutine(ScaleComponent());
     }
 }

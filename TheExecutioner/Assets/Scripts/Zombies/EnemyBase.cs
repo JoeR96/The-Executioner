@@ -124,9 +124,10 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
                 foreach (var events in x)
                 {
                     var eventRef = events.gameObject.GetComponent<Event>();
-                    
+                    Debug.Log("Checking for event");
                     if (eventRef != null)
                     {
+                        Debug.Log("Should increase kill count");
                         eventRef.EventTargetKillCountManager.IncreaseKillCount();
                         break;
                     }
