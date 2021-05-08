@@ -13,13 +13,11 @@ public class CharacterManager : MonoBehaviour
     {
         PlayerHealthSystem = new HealthSystem(100, 100);
     }
-
     private void Start()
     {
         InvokeRepeating("Heal", 5f, 2.25f);
     }
     // Update is called once per frame
-
     private void Heal()
     {
         PlayerHealthSystem.Heal(7.5f);
@@ -29,17 +27,14 @@ public class CharacterManager : MonoBehaviour
         if(!PlayerHealthSystem.TakeDamage(damage))
          GameManager.instance.GameOver();
     }
-    
     private void OnTriggerEnter(Collider other)
     {
         CheckForActiveEvent(other);
     }
-    
     private void OnTriggerExit(Collider other)
     {
         CheckEventRemove(other);
     }
-    
     private void CheckForActiveEvent(Collider other)
     {
       
@@ -54,7 +49,6 @@ public class CharacterManager : MonoBehaviour
         activeEvent.SetText(x);
 
     }
-    
     private void CheckEventRemove(Collider other)
     {
         var activeEvent = other.GetComponent<IReturnEvent>();

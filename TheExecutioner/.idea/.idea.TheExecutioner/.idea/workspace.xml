@@ -12,7 +12,13 @@
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_rpg.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_rpg.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_shotgun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_shotgun.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_smg.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Pickups/weapon_smg.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +83,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UiHealthCanvas.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/EquippedWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventManager.cs" />
@@ -91,7 +96,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/SMG.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Interactions/PlatformRampManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Hotkeys.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" />
@@ -119,7 +123,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/RPG.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/ActivePlayerEvents.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Rocket.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" />
@@ -127,6 +130,9 @@
       <option value="$PROJECT_DIR$/Assets/EventTargetKillCount.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/DisplayEventText.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
     </changedPaths>
   </component>
@@ -265,7 +271,7 @@
       <workItem from="1620404689665" duration="7389000" />
       <workItem from="1620431955160" duration="596000" />
       <workItem from="1620477701465" duration="1803000" />
-      <workItem from="1620508593299" duration="2767000" />
+      <workItem from="1620508593299" duration="4598000" />
     </task>
     <servers />
   </component>
@@ -298,13 +304,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs</url>
-          <line>30</line>
+          <line>33</line>
           <properties documentPath="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner\Assets\Scripts\WeaponSystem\WeaponPickup.cs" initialLine="34" containingFunctionPresentation="method 'OnTriggerEnter'">
             <startOffsets>
-              <option value="692" />
+              <option value="751" />
             </startOffsets>
             <endOffsets>
-              <option value="693" />
+              <option value="752" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
@@ -314,10 +320,10 @@
           <line>15</line>
           <properties documentPath="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner\Assets\Scripts\Events\InteractionSpawnPointManager.cs" initialLine="15" containingFunctionPresentation="method 'SpawnWeapon'">
             <startOffsets>
-              <option value="430" />
+              <option value="675" />
             </startOffsets>
             <endOffsets>
-              <option value="463" />
+              <option value="708" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />

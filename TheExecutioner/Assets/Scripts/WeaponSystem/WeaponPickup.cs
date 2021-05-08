@@ -9,6 +9,7 @@ public class WeaponPickup : MonoBehaviour
 {
     public GameObject[] GodBeams;
     public int quality;
+    public RaycastWeapon raycastWeapon;
     private void Start()
     {
         quality = GetQuality();
@@ -17,16 +18,18 @@ public class WeaponPickup : MonoBehaviour
 
     public int GetQuality()
     {
-        var random = Random.Range(0, GodBeams.Length);
+        var random = Random.Range(0, GodBeams.Length -1);
         
         return random;
     }
 
     public void SetGodBeamColour(int index)
     {
+        Debug.Log(index);
         GodBeams[index].gameObject.SetActive(true);
+        quality = index;
     }
-    public RaycastWeapon raycastWeapon;
+    
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -34,7 +37,7 @@ public class WeaponPickup : MonoBehaviour
             ActiveWeapon activeWeapon = other.GetComponent<ActiveWeapon>();
             if (activeWeapon)
             {
-                var weapon = activeWeapon.CurrentRaycastWeapon;
+                weapon = activeWeapon.CurrentRaycastWeapon;
                 weapon.WeaponIsReloading = false;
                 activeWeapon.EquipWeapon(raycastWeapon);
                 weapon.ResetWeaponState();
@@ -51,5 +54,7 @@ public class WeaponPickup : MonoBehaviour
        
             
     }
+
+    public RaycastWeapon weapon { get; set; }
 }
 

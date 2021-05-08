@@ -44,16 +44,17 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     private IEnumerator CompleteEvent()
     {
         DestroyText();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2.5f);
         Destroy(activeEventGameObject);
         SpawnReward();
+        eventManager.RemoveEvent(this);
     }
     /// <summary>
     /// Spawn a reward at the the target location
     /// </summary>
     private void SpawnReward()
     {
-        SpawnPointManager.SpawnWeapon(transform);
+        SpawnPointManager.SpawnWeapon(3,transform);
     }
 
     public int progress { get; set; }
