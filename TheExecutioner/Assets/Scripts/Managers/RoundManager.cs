@@ -59,7 +59,7 @@ public class RoundManager : MonoBehaviour
     /// </summary>
     private void IncreaseZombieSpawnCount()
     {
-        CurrentRoundZombieSpawnCount += 8;
+        CurrentRoundZombieSpawnCount += 6;
     }
     /// <summary>
     /// Increase the event spawn count

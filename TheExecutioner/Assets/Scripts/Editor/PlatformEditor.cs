@@ -114,6 +114,7 @@ public class PlatformManagerEditor : Editor
         EditorGUILayout.BeginHorizontal ();
         if (GUILayout.Button("Toggle Bridge", GUILayout.Width(80), GUILayout.Height(80)))
         {
+            PlatformManager.PlatformBridgeManager.ToggleBridge();
             PlatformManager.PlatformBridgeManager.ActivateBridge(PlatformManager.PlatformBridgeManager.ReturnBridgeValue());
         }
         if (PlatformManager.PlatformBridgeManager.PlatformBridgeActive)

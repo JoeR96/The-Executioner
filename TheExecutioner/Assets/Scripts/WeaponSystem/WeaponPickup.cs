@@ -11,12 +11,27 @@ public class WeaponPickup : MonoBehaviour
     private int quality;
     private RaycastWeapon raycastWeapon;
     public RaycastWeapon weapon { get; set; }
+
+    /// <summary>
+    /// Reference the weapon to pickup
+    /// </summary>
+    private void Awake()
+    {
+        weapon = GetComponentInChildren<RaycastWeapon>();
+    }
+    /// <summary>
+    /// Set the weapon quality
+    /// </summary>
     private void Start()
     {
         quality = GetQuality();
         SetGodBeamColour(quality);
     }
-
+    /// <summary>
+    /// Randomly choose a colour quality between green, blue and purple
+    /// Legendary beam is ignored
+    /// </summary>
+    /// <returns></returns>
     public int GetQuality()
     {
         var random = Random.Range(0, GodBeams.Length -1);
@@ -43,7 +58,7 @@ public class WeaponPickup : MonoBehaviour
             Debug.Log(activeWeapon);
             if (activeWeapon)
             {
-                weapon = activeWeapon.CurrentRaycastWeapon;
+                
                 weapon.WeaponIsReloading = false;
                 
                 activeWeapon.EquipWeapon(weapon);

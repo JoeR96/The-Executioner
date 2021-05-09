@@ -61,8 +61,14 @@ public class PlatformBridgeManager : MonoBehaviour
     /// <returns></returns>
     public bool ReturnBridgeValue()
     {
-        PlatformBridgeActive = !PlatformBridgeActive;
         return PlatformBridgeActive;
+    }
+    /// <summary>
+    /// Toggle the bridge boolean
+    /// </summary>
+    public void ToggleBridge()
+    {
+        PlatformBridgeActive = !PlatformBridgeActive;
     }
     /// <summary>
     /// Lerp the bridge position to the input position over the input duration

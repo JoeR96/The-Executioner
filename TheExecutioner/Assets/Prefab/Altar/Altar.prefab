@@ -6461,7 +6461,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EventText: {fileID: 0}
   destroyParticle: {fileID: 198963655962512457}
-  Lightning: {fileID: 198963655962512457}
   Fog: {fileID: 198291468728840716}
 --- !u!1001 &385208517
 PrefabInstance:

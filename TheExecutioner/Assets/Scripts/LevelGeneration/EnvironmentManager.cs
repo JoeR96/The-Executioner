@@ -55,7 +55,7 @@ public class EnvironmentManager : MonoBehaviour
     {
         int platformHeight;
         
-        SpawnPoints.Clear();
+        //SpawnPoints.Clear();
         //Loop through the corresponding tiles to set the playable arena tiles
         for (int i = 15; i < 35; i++)
         {
@@ -67,7 +67,6 @@ public class EnvironmentManager : MonoBehaviour
                 
             }
         }
-        
         if (raiseUp)
             platformHeight = 15;
 
@@ -78,9 +77,9 @@ public class EnvironmentManager : MonoBehaviour
         {
             if (!node.PlatformManager.PlatformStateManager.PlatformIsPlayable)
             {
+                node.PlatformManager.PlatformStateManager.ResetState();
                 node.PlatformManager.PlatformHeightManager.SetPlatformHeight(platformHeight);
                 EnemySpawnPoints.AddExternalSpawnPointToList(node.PlatformManager.PlatformSpawnManager.spawnPoint.transform);
-                node.PlatformManager.PlatformStateManager.ResetState();
             }
             else
             {

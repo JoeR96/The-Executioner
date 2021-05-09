@@ -53,7 +53,6 @@ public class LevelManager : MonoBehaviour
         }
    
     }
-    
     /// <summary>
     /// Load a certain stage of the level according to the input passed in
     /// </summary>
