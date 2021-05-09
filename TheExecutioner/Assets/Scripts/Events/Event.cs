@@ -6,26 +6,29 @@ using UnityEngine;
 
 public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
 {
-    protected EventManager eventManager; protected Transform eventTargetDestination{ get; private set; }
+
     public EventTargetKillCount EventTargetKillCountManager { get; private set; }
     public int EventTargetKillCountMultiplier { get; set; }
+    protected EventManager EventManager;
+    protected Transform EventTargetDestination{ get; private set; }
     public GameObject EventText;
+    [SerializeField] private ParticleSystem destroyParticle;
+    private SpawnPointManager spawnPointManager;
+    private GameObject eventDestroyTrigger;
     protected GameObject activeEventGameObject;
     protected EventZombieSpawner eventZombieSpawner;
     protected int waveSpawnTotal;
     private bool eventComplete;
-    private SpawnPointManager SpawnPointManager;
-
+    private bool rewardSpawned;
     private void Awake()
     {
-        SpawnPointManager = GameManager.instance.GetComponentInChildren<SpawnPointManager>();
-        eventManager = GameManager.instance.EventManager;
+        spawnPointManager = GameManager.instance.GetComponentInChildren<SpawnPointManager>();
+        EventManager = GameManager.instance.EventManager;
     }
     private void Start()
     {
         EventTargetKillCountManager = new EventTargetKillCount(EventTargetKillCountMultiplier,GameManager.instance.roundManager.CurrentRound);
     }
-
     private void Update()
     {
         if (EventTargetKillCountManager.CurrentKillCount >= EventTargetKillCountManager.TargetKillCount && eventComplete == false)
@@ -33,6 +36,8 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
             eventComplete = true;
             StartCoroutine(CompleteEvent());
         }
+        if (eventDestroyTrigger == null && rewardSpawned)
+            Destroy(gameObject);
     }
     /// <summary>
     /// Play the destroy text animation to destroy the text
@@ -41,20 +46,36 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     /// Spawnn a reward
     /// </summary>
     /// <returns></returns>
-    private IEnumerator CompleteEvent()
+    protected virtual IEnumerator CompleteEvent()
     {
         DestroyText();
         yield return new WaitForSeconds(2.5f);
-        Destroy(activeEventGameObject);
+        DisableColliderAndMesh();
         SpawnReward();
-        eventManager.RemoveEvent(this);
+        EventManager.RemoveEvent(this);
+        yield return new WaitForSeconds(2.5f);
+        destroyParticle.Play();
     }
+    /// <summary>
+    /// Get the mesh render and disable it
+    /// Find all colliders within the event game object
+    /// disable said colliders
+    /// </summary>
+    private void DisableColliderAndMesh()
+    {
+        GetComponentInChildren<MeshRenderer>().enabled = false;
+        var colliderArray = GetComponentsInChildren<Collider>();
+        foreach (var collider in colliderArray)
+            collider.enabled = false;
+    }
+
     /// <summary>
     /// Spawn a reward at the the target location
     /// </summary>
     private void SpawnReward()
     {
-        SpawnPointManager.SpawnWeapon(3,transform);
+        eventDestroyTrigger = spawnPointManager.SpawnWeapon(3, transform);
+        rewardSpawned = true;
     }
 
     public int progress { get; set; }
@@ -62,7 +83,7 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     {
         SetEventDestination();
         activeEventGameObject = gameObject;
-        transform.position = eventTargetDestination.position;
+        transform.position = EventTargetDestination.position;
         AddEventTransformsToMaster();
         AddEventToList();
         eventZombieSpawner = new EventZombieSpawner(waveSpawnTotal,transform);
@@ -71,18 +92,18 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
 
     private void AddEventToList()
     {
-        eventManager.AddEvent(this);
+        EventManager.AddEvent(this);
     }
 
     public void SetEventDestination()
     {
-        eventTargetDestination = eventManager.ReturnAvailableEventLocation();
+        EventTargetDestination = EventManager.ReturnAvailableEventLocation();
     }
 
     public void AddEventTransformsToMaster()
     {
-        eventManager.AddEventDestinationToList(eventTargetDestination);
-        eventManager.AddEventTransformObjectToList(activeEventGameObject);
+        EventManager.AddEventDestinationToList(EventTargetDestination);
+        EventManager.AddEventTransformObjectToList(activeEventGameObject);
         Debug.Log("Event should add");
     }
 

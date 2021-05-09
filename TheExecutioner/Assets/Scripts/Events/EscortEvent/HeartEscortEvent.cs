@@ -23,7 +23,7 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
     {
         SetEventDestination();
         eventZombieSpawner = new EventZombieSpawner(waveSpawnTotal,transform);
-        transform.position = eventManager.ReturnAvailableEventLocation().position;
+        transform.position = EventManager.ReturnAvailableEventLocation().position;
         
         eventZombieSpawner.SpawnZombiesTargetingEvent();
         SetHeart();
@@ -36,8 +36,8 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
     private void SetHeart()
     {
         var activeHeart = GetComponent<Heart>();
-        Debug.Log(eventTargetDestination);
-        activeHeart.SetTargetPosition(eventTargetDestination);
+        Debug.Log(EventTargetDestination);
+        activeHeart.SetTargetPosition(EventTargetDestination);
         
     }
     

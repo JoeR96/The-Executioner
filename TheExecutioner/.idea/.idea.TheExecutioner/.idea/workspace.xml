@@ -12,14 +12,22 @@
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnvironmentManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnvironmentManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/PolygonParticleFX/Prefabs/FX_LightningStrike_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/PolygonParticleFX/Prefabs/FX_LightningStrike_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Altar/Altar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Altar/Altar.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Level6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Level6.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformHeightManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformHeightManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +101,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/EventState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/Shotgun.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/Weapons/SMG.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Interactions/PlatformRampManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Hotkeys.cs" />
@@ -119,22 +126,23 @@
       <option value="$PROJECT_DIR$/Assets/RPG.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/ActivePlayerEvents.cs" />
       <option value="$PROJECT_DIR$/Assets/Rocket.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
       <option value="$PROJECT_DIR$/Assets/EventTargetKillCount.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/DisplayEventText.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformHeightManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformHeightManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/SacrificeEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -272,7 +280,7 @@
       <workItem from="1620404689665" duration="7389000" />
       <workItem from="1620431955160" duration="596000" />
       <workItem from="1620477701465" duration="1803000" />
-      <workItem from="1620508593299" duration="8510000" />
+      <workItem from="1620508593299" duration="13568000" />
     </task>
     <servers />
   </component>
@@ -305,13 +313,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs</url>
-          <line>33</line>
+          <line>38</line>
           <properties documentPath="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner\Assets\Scripts\WeaponSystem\WeaponPickup.cs" initialLine="34" containingFunctionPresentation="method 'OnTriggerEnter'">
             <startOffsets>
-              <option value="751" />
+              <option value="1009" />
             </startOffsets>
             <endOffsets>
-              <option value="752" />
+              <option value="1010" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />

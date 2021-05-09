@@ -34,13 +34,13 @@ public class SpawnPointManager : MonoBehaviour
     /// set the weapon state to the input quality
     /// </summary>
     /// <param name="spawnPoint"></param>
-    public void SpawnWeapon(int quality,Transform spawnPoint)
+    public GameObject SpawnWeapon(int quality,Transform spawnPoint)
     {
         var rand = Random.Range(0, weapons.Count);
         var randomWeapon = weapons[rand];
         var weapon = Instantiate(randomWeapon,spawnPoint.position, quaternion.identity);
         weapon.GetComponent<WeaponPickup>().SetGodBeamColour(quality);
-        
+        return weapon.gameObject;
     }
     /// <summary>
     /// Destroy all currently equipped weapons

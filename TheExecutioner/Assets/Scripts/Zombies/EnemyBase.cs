@@ -12,16 +12,20 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     [SerializeField] protected Vector3 _explosionScaleSize;
     [SerializeField] protected float _explosionScaleTime;
     [SerializeField] protected float _maxHealth;
-
-    public float EnemyHealth;
-    [field: SerializeField]
-    public float Damage { get; set; }
+    
     public LimbManager LimbManager { get; private set; }
     public PoolObjectType ZombieType { get; private set; }
     public GameObject ActiveSkin;
     protected Animator _animator;
     protected HealthSystem healthSystem;
     protected AiAgent _aiAgent;
+    [field: SerializeField]
+    public float Damage { get; set; }
+    public bool IsDead { get; set; }
+    public bool InEvent;
+    private bool time = false;
+    private bool isOnMesh;
+    private bool isAlive = true;
     
     private void Awake()
     {
@@ -48,14 +52,23 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         SetRandomSkin();
         timer = new Timer(5f);
     }
-    
-    bool time = false;
+    protected void Update()
+    {
+        if (IsAgentOnNavMesh() && isOnMesh == false && isAlive)
+        {
+            isOnMesh = true;
+            ActivateZombie();
+        }
+        if(_animator.enabled == false && _aiAgent.navMeshAgent.enabled == false && timer.TimerIsOver())
+        {
+            Invoke("KillZombie",2.5f);
+        }
+    }
     private void SetRandomAnimTime()
     {
         AnimatorStateInfo state = _animator.GetCurrentAnimatorStateInfo(0);
         _animator.Play(state.fullPathHash, -1, Random.Range(0f, 1f));
     }
-    
     private void SetRandomSkin()
     {
         var random = Random.Range(0, _zombieSkinContainer.transform.childCount);
@@ -63,32 +76,10 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         skin.SetActive(true);
         ActiveSkin = skin;
     }
-    bool isOnMesh;
-    private bool isAlive = true;
-    protected void Update()
-    {
-        
-        EnemyHealth = healthSystem.CurrentHealth;
-        if (IsAgentOnNavMesh() && isOnMesh == false && isAlive)
-        {
-            isOnMesh = true;
-              ActivateZombie();
-          }
-        
-        if(_animator.enabled == false && _aiAgent.navMeshAgent.enabled == false && timer.TimerIsOver())
-        {
- 
-            Invoke("KillZombie",2.5f);
-        }
-
-    }
-
     private void KillZombie()
     {
         GameManager.instance.EventManager.zombieSpawner.RemoveZombieFromList(gameObject);
         Destroy(gameObject);
-     
-            
         //ObjectPooler.instance.ReturnObject(gameObject,ZombieType);
     }
     /// <summary>
@@ -124,25 +115,17 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
                 foreach (var events in x)
                 {
                     var eventRef = events.gameObject.GetComponent<Event>();
-                    Debug.Log("Checking for event");
                     if (eventRef != null)
                     {
-                        Debug.Log("Should increase kill count");
                         eventRef.EventTargetKillCountManager.IncreaseKillCount();
                         break;
                     }
                 }
-                
             }
             GameManager.instance.ZombieManager.ZombieSpawner.RemoveZombieFromList(gameObject);
             _aiAgent.StateMachine.ChangeState(StateId.DeathState);
-          
         }
     }
-
-    public bool IsDead { get; set; }
-
-    public bool InEvent;
     //Scale the limb to size 0 so it is removed from the body and the animation still functions
     private IEnumerator ScaleComponent(Transform target, Vector3 targetSize, float speed)
     {
@@ -157,7 +140,6 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
             yield return null;
         }
     }
-    private  EnemyPartices _enemyPartices = new EnemyPartices();
     private void ScaleRootComponents()
     {
         var root = _rootComponent.transform;
@@ -181,19 +163,13 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         }
         return false;
     }
-    
     public void IsInArea(bool state)
     {
         InEvent = state;
     }
-
-
     public void DestroyLimb(string limbName,Vector3 direction)
     {
         var transformTarget = LimbManager.DestructibleLimbs[limbName];
-       
-
-        
         StartCoroutine(ScaleComponent(transformTarget, 
             new Vector3(0,0,0), 0.25f));
         var t = LimbManager.DestructibleLimbs[limbName];
@@ -215,18 +191,15 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         LimbManager.PlayParticleAtLimb(limbName);
         StartCoroutine(LimbManager.RemoveLimb(limb,5f));
     }
-
     public IEnumerator Die()
     {
         yield return new WaitForSeconds(2f);
         //ObjectPooler.instance.ReturnObject(gameObject,ZombieType);
     }
 }
-
 public interface ITakeDamage
 { 
     void TakeDamage(float damage, Vector3 direction);
-   
 }
 
 

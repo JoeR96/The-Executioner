@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 public class PlatformStateManager : MonoBehaviour
 {
     
-    public bool PlatformIsWall;
+    public bool PlatformIsPlayable;
     public bool PlatformIsActive = false;
     
     private PlatformManager platformManager;
@@ -74,13 +74,13 @@ public class PlatformStateManager : MonoBehaviour
     /// </summary>
     public void ResetState()
     {
-        // platformManager.PlatformBridgeManager.PlatformBridgeActive = false;
-        // platformManager.PlatformBridgeManager.SetBridgeHeight((int) PlatformBridgeHeight.Disabled);
-        // platformManager.PlatformBridgeManager.ActivateBridge(false);
-        // platformManager.PlatformHeightManager.SetPlatformHeight((int) PlatformHeight.Flat);
-        // platformManager.PlatformRampManager.PlatformRampActive = false;
-        // platformManager.PlatformRampManager.SetRampRotation(0);
-        // platformManager.PlatformRampManager.ActivateRamp(false);
+        platformManager.PlatformBridgeManager.PlatformBridgeActive = false;
+        platformManager.PlatformBridgeManager.SetBridgeHeight((int) PlatformBridgeHeight.Disabled);
+        platformManager.PlatformBridgeManager.ActivateBridge(false);
+        platformManager.PlatformHeightManager.SetPlatformHeight((int) PlatformHeight.Flat);
+        platformManager.PlatformRampManager.PlatformRampActive = false;
+        platformManager.PlatformRampManager.SetRampRotation(0);
+        platformManager.PlatformRampManager.ActivateRamp(false);
     }
 }
 

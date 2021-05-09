@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 #if UNITY_EDITOR 
 using UnityEditor;
-#endif 
-
+#endif
 [CanEditMultipleObjects]
 [CustomEditor(typeof(PlatformManager))]
 public class PlatformManagerEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        
         PlatformManager PlatformManager = (PlatformManager)target;
-        EditorGUILayout.BeginHorizontal();
+        #region Platform Height GUI Buttons
+
+                EditorGUILayout.BeginHorizontal();
         if (GUILayout.Button("1",GUILayout.Width(80), GUILayout.Height(80)))
         { 
             PlatformManager.PlatformHeightManager.SetPlatformHeight(0);
@@ -79,6 +79,9 @@ public class PlatformManagerEditor : Editor
             PlatformManager.PlatformHeightManager.SetPlatformHeight(16);
         }
         EditorGUILayout.EndHorizontal();
+
+        #endregion
+        #region Platform Ramp GUI Buttons
         EditorGUILayout.BeginHorizontal();
         if (GUILayout.Button("Toggle Ramp", GUILayout.Width(80), GUILayout.Height(80)))
         {
@@ -104,6 +107,10 @@ public class PlatformManagerEditor : Editor
             }
         }
         EditorGUILayout.EndHorizontal();
+        
+
+        #endregion
+        #region Platform Bridge GUI buttons
         EditorGUILayout.BeginHorizontal ();
         if (GUILayout.Button("Toggle Bridge", GUILayout.Width(80), GUILayout.Height(80)))
         {
@@ -137,6 +144,11 @@ public class PlatformManagerEditor : Editor
             }
         }
         EditorGUILayout.EndHorizontal ();
+        
+
+        #endregion
+        #region Platform Spawn Point GUI Buttons
+
         EditorGUILayout.BeginHorizontal ();
         if (GUILayout.Button("Toggle Spawn Point",GUILayout.Width(80), GUILayout.Height(80)))
         {
@@ -146,5 +158,7 @@ public class PlatformManagerEditor : Editor
             PlatformManager.PlatformSpawnManager.ReturnPlatformEventSpawnPointValue();
         }
         EditorGUILayout.EndHorizontal ();
+
+        #endregion
     }
 }

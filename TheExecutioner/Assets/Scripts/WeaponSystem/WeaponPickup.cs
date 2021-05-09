@@ -7,9 +7,10 @@ using Random = UnityEngine.Random;
 
 public class WeaponPickup : MonoBehaviour
 {
-    public GameObject[] GodBeams;
-    public int quality;
-    public RaycastWeapon raycastWeapon;
+    [SerializeField] private GameObject[] GodBeams;
+    private int quality;
+    private RaycastWeapon raycastWeapon;
+    public RaycastWeapon weapon { get; set; }
     private void Start()
     {
         quality = GetQuality();
@@ -22,10 +23,14 @@ public class WeaponPickup : MonoBehaviour
         
         return random;
     }
-
+    /// <summary>
+    /// Set the God Beam quality to the input index
+    /// Set the Weapon quality to the input index
+    /// Set the quality to the input index
+    /// </summary>
+    /// <param name="index"></param>
     public void SetGodBeamColour(int index)
     {
-        Debug.Log(index);
         GodBeams[index].gameObject.SetActive(true);
         quality = index;
     }
@@ -35,11 +40,13 @@ public class WeaponPickup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             ActiveWeapon activeWeapon = other.GetComponent<ActiveWeapon>();
+            Debug.Log(activeWeapon);
             if (activeWeapon)
             {
                 weapon = activeWeapon.CurrentRaycastWeapon;
                 weapon.WeaponIsReloading = false;
-                activeWeapon.EquipWeapon(raycastWeapon);
+                
+                activeWeapon.EquipWeapon(weapon);
                 weapon.ResetWeaponState();
                 weapon.SetWeaponState(quality);
                 
@@ -55,6 +62,6 @@ public class WeaponPickup : MonoBehaviour
             
     }
 
-    public RaycastWeapon weapon { get; set; }
+    
 }
 

@@ -1,20 +1,13 @@
 ﻿
 using System.Collections.Generic;
-
-using eDmitriyAssets.NavmeshLinksGenerator;
-
 using UnityEngine;
 using UnityEngine.AI;
-
-
-
 
 public class EnvironmentManager : MonoBehaviour
 {
     public List<GameObject> SpawnPoints = new List<GameObject>();
     public Transform NavMeshObject;
     public EnvironmentSpawner environmentSpawner;
-    public NavMeshLinks_AutoPlacer navMeshLinkGenerator;
     public EnemySpawnPoints EnemySpawnPoints;
     public Grid grid;
     private GameObject[,] _tileArray;
@@ -39,7 +32,9 @@ public class EnvironmentManager : MonoBehaviour
             BuildNavMesh();
         }
     }
-
+    /// <summary>
+    /// Set spawnpoints within the arena
+    /// </summary>
     public void SetSpawnPoints()
     {
         for (int i = 15; i < 35; i++)
@@ -51,6 +46,11 @@ public class EnvironmentManager : MonoBehaviour
             }
         }
     }
+    /// <summary>
+    /// Loop through the tiles between 15 and 35 on the X and Z axis respectively
+    /// Activate them as arena tiles 
+    /// </summary>
+    /// <param name="raiseUp"></param>
     public void RaiseWall(bool raiseUp)
     {
         int platformHeight;
@@ -62,7 +62,7 @@ public class EnvironmentManager : MonoBehaviour
             for (int j = 15; j < 35; j++)
             {
                 var gridPosition = grid.grid[i, j];
-                gridPosition.PlatformManager.PlatformStateManager.PlatformIsWall = true;
+                gridPosition.PlatformManager.PlatformStateManager.PlatformIsPlayable = true;
                 gridPosition.PlatformManager.PlatformSpawnManager.PlatformSpawnPointActive = true;
                 
             }
@@ -76,7 +76,7 @@ public class EnvironmentManager : MonoBehaviour
         
         foreach (var node in grid.grid)
         {
-            if (!node.PlatformManager.PlatformStateManager.PlatformIsWall)
+            if (!node.PlatformManager.PlatformStateManager.PlatformIsPlayable)
             {
                 node.PlatformManager.PlatformHeightManager.SetPlatformHeight(platformHeight);
                 EnemySpawnPoints.AddExternalSpawnPointToList(node.PlatformManager.PlatformSpawnManager.spawnPoint.transform);
@@ -93,6 +93,9 @@ public class EnvironmentManager : MonoBehaviour
         navmeshSurface.BuildNavMesh();
     }
     
+    /// <summary>
+    /// Reset all platforms
+    /// </summary>
     public void LowerAll()
     {
         foreach (var node in grid.grid)
@@ -105,6 +108,9 @@ public class EnvironmentManager : MonoBehaviour
             }
         }
     }
+    /// <summary>
+    /// Build navmesh
+    /// </summary>
     public void BuildNavMesh()
     {
         navmeshSurface.BuildNavMesh();

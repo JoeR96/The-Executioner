@@ -30,7 +30,6 @@ public class PlatformHeightManager : MonoBehaviour
         Vector3 targetPosition = new Vector3(gameObject.transform.position.x, platformHeights[index], gameObject.transform.position.z);
         StartCoroutine(MovePlatform(targetPosition));
     }
-    
     /// <summary>
     /// Coroutine to lerp the platform height to a specified position
     /// Set a start position
@@ -55,7 +54,6 @@ public class PlatformHeightManager : MonoBehaviour
             yield return null;
         }
     }
-
     /// <summary>
     /// Increase the height of each platform element in the height list by 2
     /// </summary>

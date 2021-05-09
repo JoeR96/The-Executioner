@@ -322,7 +322,6 @@ MonoBehaviour:
   SpawnPoints: []
   NavMeshObject: {fileID: 0}
   environmentSpawner: {fileID: 469152442901536541}
-  navMeshLinkGenerator: {fileID: 0}
   EnemySpawnPoints: {fileID: 0}
   grid: {fileID: 469152442901536542}
 --- !u!114 &469152442901536483
@@ -337,18 +336,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e6448f902fce94ba12ec5c15c4a48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  environmentManager: {fileID: 469152442901536540}
   Levels:
   - {fileID: 11400000, guid: 728847ddd6591f9419762aeca1329fb0, type: 2}
-  - {fileID: 11400000, guid: af8c74f22d99e3146a427436d221f117, type: 2}
-  - {fileID: 11400000, guid: d3851a23693d7824c93b6c40f814807f, type: 2}
-  - {fileID: 11400000, guid: 7be89fbba064d934aa18b4b888727c5b, type: 2}
-  - {fileID: 11400000, guid: 3263f576268c161498844c0213f21f73, type: 2}
-  - {fileID: 11400000, guid: 492ed115c37b22445a48c6e2d2d5bd6b, type: 2}
-  - {fileID: 11400000, guid: 8f178ba1fc7e83b4fa990e9482eb0fd8, type: 2}
   CurrentLevel: 0
   CurrentStage: 2
+  menuMode: 0
   BuildMode: 1
-  levelSo: {fileID: 11400000, guid: 5eeadaf0e4da1d1498557bdfa631b302, type: 2}
+  levelSo: {fileID: 11400000, guid: 728847ddd6591f9419762aeca1329fb0, type: 2}
 --- !u!114 &469152442901536542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,7 +398,7 @@ BoxCollider:
   m_GameObject: {fileID: 469152442901536481}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 82, y: 5, z: 80.17556}
   m_Center: {x: 1.9753933, y: 15.03463, z: -1.8328819}
