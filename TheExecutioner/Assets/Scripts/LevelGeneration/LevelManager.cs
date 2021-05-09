@@ -48,8 +48,8 @@ public class LevelManager : MonoBehaviour
 
         else
         {
-            CurrentStage++;
             LoadStage(CurrentStage);
+            CurrentStage++;
         }
    
     }

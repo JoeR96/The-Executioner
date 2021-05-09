@@ -8725,11 +8725,11 @@ MonoBehaviour:
     X: 16
     Z: 22
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 0
-    CurrentRotation: 0
+    CurrentRotation: 2
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 16
@@ -8738,18 +8738,18 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 6
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 16
     Z: 24
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 0
-    CurrentRotation: 0
+    CurrentRotation: 2
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 16
@@ -8765,11 +8765,11 @@ MonoBehaviour:
     X: 16
     Z: 26
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 0
-    CurrentRotation: 0
+    CurrentRotation: 2
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 16
@@ -8795,11 +8795,11 @@ MonoBehaviour:
     X: 16
     Z: 29
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 0
-    CurrentRotation: 0
+    CurrentRotation: 2
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 16
@@ -8815,11 +8815,11 @@ MonoBehaviour:
     X: 16
     Z: 31
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 0
-    CurrentRotation: 0
+    CurrentRotation: 2
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 16
@@ -9268,10 +9268,10 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 6
+    CurrentHeight: 1
     CurrentRotation: 0
     CurrentColour: 0
-    CurrentBridgeHeight: 0
+    CurrentBridgeHeight: 3
     X: 17
     Z: 24
   - BridgeIsActive: 0
@@ -9314,14 +9314,14 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 17
     Z: 28
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 1
     CurrentRotation: 0
     CurrentColour: 0
-    CurrentBridgeHeight: 0
+    CurrentBridgeHeight: 1
     X: 17
     Z: 29
   - BridgeIsActive: 0
@@ -9798,10 +9798,10 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 6
+    CurrentHeight: 1
     CurrentRotation: 0
     CurrentColour: 0
-    CurrentBridgeHeight: 0
+    CurrentBridgeHeight: 3
     X: 18
     Z: 24
   - BridgeIsActive: 0
@@ -9818,7 +9818,7 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 1
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -9828,7 +9828,7 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 1
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -9844,14 +9844,14 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 18
     Z: 28
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 1
     CurrentRotation: 0
     CurrentColour: 0
-    CurrentBridgeHeight: 0
+    CurrentBridgeHeight: 1
     X: 18
     Z: 29
   - BridgeIsActive: 0
@@ -10328,7 +10328,7 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 6
+    CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -10344,18 +10344,18 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 19
     Z: 25
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 0
     CurrentRotation: 0
     CurrentColour: 0
-    CurrentBridgeHeight: 0
+    CurrentBridgeHeight: 1
     X: 19
     Z: 26
   - BridgeIsActive: 0
-    PlatformStairActive: 1
+    PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 0
@@ -10418,7 +10418,7 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 2
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -10858,8 +10858,8 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 6
-    CurrentRotation: 0
+    CurrentHeight: 1
+    CurrentRotation: 2
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 20
@@ -10868,20 +10868,20 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
+    CurrentHeight: 1
+    CurrentRotation: 2
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 20
     Z: 25
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
+  - BridgeIsActive: 1
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 0
-    CurrentRotation: 0
+    CurrentRotation: 3
     CurrentColour: 0
-    CurrentBridgeHeight: 0
+    CurrentBridgeHeight: 1
     X: 20
     Z: 26
   - BridgeIsActive: 0
@@ -10904,22 +10904,22 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 20
     Z: 28
-  - BridgeIsActive: 0
-    PlatformStairActive: 0
+  - BridgeIsActive: 1
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
+    CurrentHeight: 0
+    CurrentRotation: 1
     CurrentColour: 0
-    CurrentBridgeHeight: 0
+    CurrentBridgeHeight: 2
     X: 20
     Z: 29
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
+    CurrentHeight: 1
+    CurrentRotation: 1
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 20
@@ -10945,7 +10945,7 @@ MonoBehaviour:
     X: 20
     Z: 32
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 2
@@ -11324,14 +11324,14 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 21
     Z: 17
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 1
     CurrentRotation: 0
     CurrentColour: 0
-    CurrentBridgeHeight: 0
+    CurrentBridgeHeight: 2
     X: 21
     Z: 18
   - BridgeIsActive: 0
@@ -11385,11 +11385,11 @@ MonoBehaviour:
     X: 21
     Z: 23
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 6
-    CurrentRotation: 0
+    CurrentHeight: 1
+    CurrentRotation: 2
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 21
@@ -11398,8 +11398,8 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
+    CurrentHeight: 1
+    CurrentRotation: 2
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 21
@@ -11408,18 +11408,18 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 2
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 21
     Z: 26
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
+    CurrentHeight: 3
+    CurrentRotation: 1
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 21
@@ -11918,18 +11918,18 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 6
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 22
     Z: 24
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
+    CurrentHeight: 2
+    CurrentRotation: 1
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 22
@@ -11938,7 +11938,7 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 2
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -11965,11 +11965,11 @@ MonoBehaviour:
     X: 22
     Z: 28
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 4
-    CurrentRotation: 0
+    CurrentHeight: 3
+    CurrentRotation: 3
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 22
@@ -12005,11 +12005,11 @@ MonoBehaviour:
     X: 22
     Z: 32
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 2
-    CurrentRotation: 0
+    CurrentRotation: 1
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 22
@@ -12518,7 +12518,7 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 6
+    CurrentHeight: 4
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -12934,7 +12934,7 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 24
     Z: 19
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
@@ -12964,7 +12964,7 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 24
     Z: 22
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
@@ -12975,7 +12975,7 @@ MonoBehaviour:
     X: 24
     Z: 23
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 2
@@ -13045,11 +13045,11 @@ MonoBehaviour:
     X: 24
     Z: 30
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 6
-    CurrentRotation: 0
+    CurrentHeight: 3
+    CurrentRotation: 3
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 24
@@ -13075,11 +13075,11 @@ MonoBehaviour:
     X: 24
     Z: 33
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 3
-    CurrentRotation: 0
+    CurrentRotation: 2
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 24
@@ -13465,11 +13465,11 @@ MonoBehaviour:
     X: 25
     Z: 19
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
+    CurrentHeight: 2
+    CurrentRotation: 2
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 25
@@ -13494,7 +13494,7 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 25
     Z: 22
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
@@ -13515,7 +13515,7 @@ MonoBehaviour:
     X: 25
     Z: 24
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 2
@@ -13524,11 +13524,11 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 25
     Z: 25
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 4
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -13565,11 +13565,11 @@ MonoBehaviour:
     X: 25
     Z: 29
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 5
-    CurrentRotation: 0
+    CurrentHeight: 4
+    CurrentRotation: 2
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 25
@@ -13585,11 +13585,11 @@ MonoBehaviour:
     X: 25
     Z: 31
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 3
-    CurrentRotation: 0
+    CurrentHeight: 4
+    CurrentRotation: 3
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 25
@@ -13598,7 +13598,7 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 3
+    CurrentHeight: 4
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -13985,10 +13985,10 @@ MonoBehaviour:
     X: 26
     Z: 18
   - BridgeIsActive: 0
-    PlatformStairActive: 1
+    PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 4
+    CurrentHeight: 5
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -14054,11 +14054,11 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 26
     Z: 25
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 4
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -14584,11 +14584,11 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 27
     Z: 25
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 4
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -14635,11 +14635,11 @@ MonoBehaviour:
     X: 27
     Z: 30
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 6
-    CurrentRotation: 0
+    CurrentHeight: 5
+    CurrentRotation: 1
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 27
@@ -15165,11 +15165,11 @@ MonoBehaviour:
     X: 28
     Z: 30
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 6
-    CurrentRotation: 0
+    CurrentHeight: 3
+    CurrentRotation: 1
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 28
@@ -15578,7 +15578,7 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 5
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -15615,11 +15615,11 @@ MonoBehaviour:
     X: 29
     Z: 22
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 6
-    CurrentRotation: 0
+    CurrentHeight: 2
+    CurrentRotation: 1
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 29
@@ -15628,7 +15628,7 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 6
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -15638,7 +15638,7 @@ MonoBehaviour:
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 0
+    CurrentHeight: 3
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -15674,11 +15674,11 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 29
     Z: 28
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 4
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -16094,14 +16094,14 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 30
     Z: 17
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 1
     CurrentRotation: 0
     CurrentColour: 0
-    CurrentBridgeHeight: 0
+    CurrentBridgeHeight: 2
     X: 30
     Z: 18
   - BridgeIsActive: 0
@@ -16165,11 +16165,11 @@ MonoBehaviour:
     X: 30
     Z: 24
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 5
-    CurrentRotation: 0
+    CurrentHeight: 3
+    CurrentRotation: 2
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 30
@@ -16204,11 +16204,11 @@ MonoBehaviour:
     CurrentBridgeHeight: 0
     X: 30
     Z: 28
-  - BridgeIsActive: 0
+  - BridgeIsActive: 1
     PlatformStairActive: 0
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 4
+    CurrentHeight: 2
     CurrentRotation: 0
     CurrentColour: 0
     CurrentBridgeHeight: 0
@@ -17215,21 +17215,21 @@ MonoBehaviour:
     X: 32
     Z: 23
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
     CurrentHeight: 2
-    CurrentRotation: 0
+    CurrentRotation: 1
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 32
     Z: 24
   - BridgeIsActive: 0
-    PlatformStairActive: 0
+    PlatformStairActive: 1
     PlatformSpawnActive: 1
     PlatformEventSpawn: 0
-    CurrentHeight: 0
-    CurrentRotation: 0
+    CurrentHeight: 3
+    CurrentRotation: 1
     CurrentColour: 0
     CurrentBridgeHeight: 0
     X: 32

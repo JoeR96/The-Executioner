@@ -64,6 +64,7 @@ public class EnvironmentManager : MonoBehaviour
                 var gridPosition = grid.grid[i, j];
                 gridPosition.PlatformManager.PlatformStateManager.PlatformIsWall = true;
                 gridPosition.PlatformManager.PlatformSpawnManager.PlatformSpawnPointActive = true;
+                
             }
         }
         
@@ -79,10 +80,12 @@ public class EnvironmentManager : MonoBehaviour
             {
                 node.PlatformManager.PlatformHeightManager.SetPlatformHeight(platformHeight);
                 EnemySpawnPoints.AddExternalSpawnPointToList(node.PlatformManager.PlatformSpawnManager.spawnPoint.transform);
+                node.PlatformManager.PlatformStateManager.ResetState();
             }
             else
             {
                 EnemySpawnPoints.AddInternalSpawnPointToList(node.PlatformManager.PlatformSpawnManager.spawnPoint.transform);
+                
             }
             EnemySpawnPoints.CheckForSpawnPoint(node);
         }

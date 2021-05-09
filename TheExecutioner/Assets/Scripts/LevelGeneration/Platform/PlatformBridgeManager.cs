@@ -17,6 +17,7 @@ public class PlatformBridgeManager : MonoBehaviour
     public bool PlatformBridgeActive;
     public int CurrentBridgeHeight;
     public Vector3 bridgeStartPosition;
+    public float duration = 3f;
 
     private void Start()
     {
@@ -29,7 +30,7 @@ public class PlatformBridgeManager : MonoBehaviour
     public void SetBridgeHeight(int height)
     {
         SetBridgeStartPosition();
-        SetBridgePosition(bridgeHeights[height], 1f);
+        SetBridgePosition(bridgeHeights[height]);
         CurrentBridgeHeight = height;
     }
     /// <summary>
@@ -38,7 +39,7 @@ public class PlatformBridgeManager : MonoBehaviour
     private void SetBridgeStartPosition()
     {
         bridgeStartPosition = new Vector3(2, 17.9f, -2);
-        transform.localPosition = bridgeStartPosition;
+        bridge.transform.localPosition = bridgeStartPosition;
     }
     /// <summary>
     /// Set the bridge position dependant on the input height
@@ -46,12 +47,12 @@ public class PlatformBridgeManager : MonoBehaviour
     /// </summary>
     /// <param name="targetHeight"></param>
     /// <param name="duration"></param>
-    private void SetBridgePosition(float targetHeight, float duration)
+    private void SetBridgePosition(float targetHeight)
     {
         Vector3 targetPosition;
         targetPosition = new Vector3(2, bridgeStartPosition.y  + targetHeight,
            -2);
-        StartCoroutine(LerpPosition(targetPosition, duration));
+        StartCoroutine(LerpPosition(targetPosition));
     }
     /// <summary>
     /// Toggle the bridge active
@@ -69,9 +70,9 @@ public class PlatformBridgeManager : MonoBehaviour
     /// <param name="targetPosition"></param>
     /// <param name="duration"></param>
     /// <returns></returns>
-    private IEnumerator LerpPosition(Vector3 targetPosition, float duration)
+    private IEnumerator LerpPosition(Vector3 targetPosition)
     {
-        Vector3 startPosition = bridge.transform.position;
+        Vector3 startPosition = bridge.transform.localPosition;
         float timer = 0f;
         float _duration = duration;
 
