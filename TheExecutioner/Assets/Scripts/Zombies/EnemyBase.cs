@@ -108,6 +108,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         healthSystem.TakeDamage(damage);
         if (healthSystem.CurrentHealth < 0 && IsDead == false)
         {
+            GameManager.instance.ZombieManager.ZombieSpawner.RemoveZombieFromList(gameObject);
             IsDead = true;
             if (InEvent)
             {
@@ -117,13 +118,18 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
                     var eventRef = events.gameObject.GetComponent<Event>();
                     if (eventRef != null)
                     {
+                        _aiAgent.Ragdoll.ActivateRagDoll();
                         eventRef.EventTargetKillCountManager.IncreaseKillCount();
+                        StartCoroutine(eventRef.KillSacrificeEventEnemy(transform));
+                        StartCoroutine(Die(3f));
                         break;
                     }
                 }
             }
-            GameManager.instance.ZombieManager.ZombieSpawner.RemoveZombieFromList(gameObject);
-            _aiAgent.StateMachine.ChangeState(StateId.DeathState);
+            else
+            {
+                
+            }
         }
     }
     //Scale the limb to size 0 so it is removed from the body and the animation still functions
@@ -191,10 +197,10 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         LimbManager.PlayParticleAtLimb(limbName);
         StartCoroutine(LimbManager.RemoveLimb(limb,5f));
     }
-    public IEnumerator Die()
+    public IEnumerator Die(float duration)
     {
-        yield return new WaitForSeconds(2f);
-        //ObjectPooler.instance.ReturnObject(gameObject,ZombieType);
+        yield return new WaitForSeconds(duration);
+        _aiAgent.StateMachine.ChangeState(StateId.DeathState);
     }
 }
 public interface ITakeDamage

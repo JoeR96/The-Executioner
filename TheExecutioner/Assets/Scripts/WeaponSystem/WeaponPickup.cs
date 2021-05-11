@@ -27,6 +27,10 @@ public class WeaponPickup : MonoBehaviour
         quality = GetQuality();
         SetGodBeamColour(quality);
     }
+    private void Update()
+    {
+        weapon.gameObject.transform.Rotate( new Vector3(0, 1f,0) );
+    }
     /// <summary>
     /// Randomly choose a colour quality between green, blue and purple
     /// Legendary beam is ignored

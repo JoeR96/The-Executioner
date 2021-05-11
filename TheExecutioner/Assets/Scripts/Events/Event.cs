@@ -6,13 +6,13 @@ using UnityEngine;
 
 public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
 {
-
     public EventTargetKillCount EventTargetKillCountManager { get; private set; }
     public int EventTargetKillCountMultiplier { get; set; }
     protected EventManager EventManager;
     protected Transform EventTargetDestination{ get; private set; }
     public GameObject EventText;
     [SerializeField] private ParticleSystem destroyParticle;
+    [SerializeField] private Transform[] eventKillTransformPositions;
     private SpawnPointManager spawnPointManager;
     private GameObject eventDestroyTrigger;
     protected GameObject activeEventGameObject;
@@ -68,7 +68,6 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
         foreach (var collider in colliderArray)
             collider.enabled = false;
     }
-
     /// <summary>
     /// Spawn a reward at the the target location
     /// </summary>
@@ -77,7 +76,6 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
         eventDestroyTrigger = spawnPointManager.SpawnWeapon(3, transform);
         rewardSpawned = true;
     }
-
     public int progress { get; set; }
     public virtual void StartEvent( )
     {
@@ -89,37 +87,30 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
         eventZombieSpawner = new EventZombieSpawner(waveSpawnTotal,transform);
         eventZombieSpawner.SpawnZombiesTargetingEvent();
     }
-
     private void AddEventToList()
     {
         EventManager.AddEvent(this);
     }
-
     public void SetEventDestination()
     {
         EventTargetDestination = EventManager.ReturnAvailableEventLocation();
     }
-
     public void AddEventTransformsToMaster()
     {
         EventManager.AddEventDestinationToList(EventTargetDestination);
         EventManager.AddEventTransformObjectToList(activeEventGameObject);
         Debug.Log("Event should add");
     }
-
     public virtual void OnTriggerEnter(Component other)
     {
         var enemy = other.GetComponentInParent<IIsInEventArea>();
         enemy?.IsInArea(true);
     }
-    
     private void OnTriggerExit(Component other)
     {
         var enemy = other.GetComponentInParent<IIsInEventArea>();
         enemy?.IsInArea(false);
     }
-
-    
     private IEnumerator ScaleComponent( )
     {
         var target = EventText.GetComponent<RectTransform>();
@@ -134,6 +125,30 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
             yield return null;
         }
         Destroy(EventText);
+    }
+    public IEnumerator KillSacrificeEventEnemy(Transform targetTransform)
+    {
+        var startPosition = targetTransform.position;
+
+        float percentage;
+        float timer = 0;
+        float duration = 0.75f;
+        while (timer < duration)
+        {
+            percentage = Mathf.Min(timer / duration, 1);
+            timer += Time.deltaTime;
+            targetTransform.position = Vector3.Lerp(startPosition, eventKillTransformPositions[0].position, percentage);
+        }
+
+        startPosition = targetTransform.position;
+        timer = 0;
+        while (timer < duration)
+        {
+            percentage = Mathf.Min(timer / duration, 1);
+            timer += Time.deltaTime;
+            targetTransform.position = Vector3.Lerp(startPosition, eventKillTransformPositions[1].position, percentage);
+        }
+        yield return null;
     }
     
     public Event ReturnActiveEvent()

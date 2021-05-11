@@ -26,7 +26,7 @@ public class DeathState : IState
         Direction.y = 1;
         agent.Ragdoll.ApplyForce(Direction * agent.AgentConfig.DieForce);
         agent.Mesh.updateWhenOffscreen = true;
-        agent.StartCoroutine(agent.EnemyBase.Die());
+        agent.StartCoroutine(agent.EnemyBase.Die(2f));
 
     }
 
