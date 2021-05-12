@@ -32,6 +32,7 @@ public class PlatformHeightManager : MonoBehaviour
     /// <param name="index"></param>
     public void SetPlatformHeight(int index )
     {
+
         CurrentHeight = index;
         Vector3 targetPosition = new Vector3(gameObject.transform.position.x, platformHeights[index], gameObject.transform.position.z);
         StartCoroutine(MovePlatform(targetPosition));
