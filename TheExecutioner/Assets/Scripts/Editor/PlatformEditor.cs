@@ -151,6 +151,10 @@ public class PlatformManagerEditor : Editor
             {
                 PlatformManager.PlatformBridgeRampManager.SetBridgeHeight(5);
             }
+            if (GUILayout.Button("0",GUILayout.Width(80), GUILayout.Height(80)))
+            {
+                PlatformManager.PlatformBridgeRampManager.SetBridgeHeight(6);
+            }
             if (GUILayout.Button("+",GUILayout.Width(80), GUILayout.Height(80)))
             {
                 PlatformManager.PlatformBridgeRampManager.RaiseOneLevel();
