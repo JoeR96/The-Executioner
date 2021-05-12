@@ -40076,23 +40076,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 469152442901536483, guid: ae091588df359794dbd66d11f6b8d1b9,
-        type: 3}
-      propertyPath: BuildMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 469152442901536483, guid: ae091588df359794dbd66d11f6b8d1b9,
-        type: 3}
-      propertyPath: levelSo
-      value: 
-      objectReference: {fileID: 11400000, guid: 7be89fbba064d934aa18b4b888727c5b,
-        type: 2}
-    - target: {fileID: 469152442901536483, guid: ae091588df359794dbd66d11f6b8d1b9,
-        type: 3}
-      propertyPath: Levels.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7be89fbba064d934aa18b4b888727c5b,
-        type: 2}
     - target: {fileID: 469152442901536540, guid: ae091588df359794dbd66d11f6b8d1b9,
         type: 3}
       propertyPath: NavMeshObject
@@ -60093,6 +60076,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 200953010, guid: 4390e655c91840d479a2c1b56b4b0d46, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 200953011, guid: 4390e655c91840d479a2c1b56b4b0d46, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -60713,6 +60700,16 @@ PrefabInstance:
       propertyPath: m_Tangents.Array.data[15].z
       value: NaN
       objectReference: {fileID: 0}
+    - target: {fileID: 4071071370138017903, guid: 4390e655c91840d479a2c1b56b4b0d46,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071071370138017903, guid: 4390e655c91840d479a2c1b56b4b0d46,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: feacb3f1aa7726e4f953137d27edccf6, type: 2}
     - target: {fileID: 4071071370138017904, guid: 4390e655c91840d479a2c1b56b4b0d46,
         type: 3}
       propertyPath: m_Mesh
@@ -60723,6 +60720,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1447806253}
+    - target: {fileID: 4071071370138017905, guid: 4390e655c91840d479a2c1b56b4b0d46,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4390e655c91840d479a2c1b56b4b0d46, type: 3}
 --- !u!1001 &6420588289249342901

@@ -17,7 +17,7 @@ public class PlatformBridgeManager : MonoBehaviour
     
     public bool PlatformBridgeActive { get; set; }
 
-    public int CurrentBridgeHeight;
+    [SerializeField] protected internal int CurrentBridgeHeight;
     public Vector3 bridgeStartPosition;
     public float duration = 3f;
 
@@ -67,7 +67,6 @@ public class PlatformBridgeManager : MonoBehaviour
     {
         return PlatformBridgeActive;
     }
-    
     /// <summary>
     /// Toggle the bridge boolean
     /// </summary>
@@ -75,7 +74,6 @@ public class PlatformBridgeManager : MonoBehaviour
     {
         PlatformBridgeActive = !PlatformBridgeActive;
     }
-   
     /// <summary>
     /// Lerp the bridge position to the input position over the input duration
     /// </summary>
@@ -114,8 +112,8 @@ public class PlatformBridgeManager : MonoBehaviour
     {
         CurrentBridgeHeight++;
         
-        if (CurrentBridgeHeight >= bridgeHeights.Count)
-            return;
+        if (CurrentBridgeHeight == bridgeHeights.Count)
+            CurrentBridgeHeight++;
         
         SetBridgeHeight(CurrentBridgeHeight);
         
@@ -126,11 +124,8 @@ public class PlatformBridgeManager : MonoBehaviour
     /// </summary>
     public void DownOneLevel()
     {
-        CurrentBridgeHeight--;
-        
-        if (CurrentBridgeHeight <= 0)
-            return;
-        
-        SetBridgeHeight(CurrentBridgeHeight);
+        if (CurrentBridgeHeight == 0)
+            CurrentBridgeHeight++;
+        SetBridgeHeight(CurrentBridgeHeight - 1);
     }
 }

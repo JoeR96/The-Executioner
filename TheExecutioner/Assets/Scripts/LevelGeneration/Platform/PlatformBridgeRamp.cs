@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformBridgeRamp : PlatformBridgeManager
 {
     public bool PlatformBridgeRampActive { get; set; }
-    public int CurrentBridgeRampHeight { get; set; }
+    [SerializeField] public int CurrentBridgeRampHeight { get; set; }
     public int CurrentBridgeRampRotation  { get; set; }
     
     [SerializeField] private List<float> rampRotations = new List<float>();

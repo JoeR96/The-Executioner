@@ -62,7 +62,7 @@ public class PlatformStateManager : MonoBehaviour
     /// <summary>
     /// using previously input information from platformInformation set the status of each component to the previously applied index
     /// </summary>
-    public void SetState()
+    private void SetState()
     {
         platformManager.PlatformHeightManager.SetPlatformHeight(platformManager.PlatformHeightManager.CurrentHeight);
         platformManager.PlatformRampManager.SetRampRotation(platformManager.PlatformRampManager.CurrentRotation);
@@ -71,7 +71,7 @@ public class PlatformStateManager : MonoBehaviour
         platformManager.PlatformBridgeManager.ActivateBridge(platformManager.PlatformBridgeManager.PlatformBridgeActive);
         platformManager.PlatformBridgeManager.SetBridgeHeight(platformManager.PlatformBridgeManager.CurrentBridgeHeight);
         platformManager.PlatformBridgeRampManager.ActivateBridge(platformManager.PlatformBridgeRampManager.PlatformBridgeRampActive);
-        platformManager.PlatformBridgeRampManager.SetBridgeHeight(platformManager.PlatformBridgeRampManager.CurrentBridgeHeight);
+        platformManager.PlatformBridgeRampManager.SetBridgeHeight(platformManager.PlatformBridgeRampManager.CurrentBridgeRampHeight);
         platformManager.PlatformBridgeRampManager.SetRampRotation(platformManager.PlatformBridgeRampManager.CurrentBridgeRampRotation);
         platformManager.PlatformSpawnManager.ActivateSpawnPoint(platformManager.PlatformSpawnManager.PlatformSpawnPointActive);
     }

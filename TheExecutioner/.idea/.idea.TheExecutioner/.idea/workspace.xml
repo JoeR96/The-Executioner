@@ -11,25 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/EffectExamples/Weapon Effects/Materials/RockDebris.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/EffectExamples/Weapon Effects/Materials/RockDebris.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Interactions/fLOORhOLDER.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Interactions/fLOORhOLDER.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformHeightManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformHeightManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformInformation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformInformation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformSpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformSpawnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeRamp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeRamp.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,12 +119,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformSpawnManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Editor/PlatformEditor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeRamp.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformHeightManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeRamp.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformStateManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformBridgeManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -278,7 +266,7 @@
       <workItem from="1620580933838" duration="5469000" />
       <workItem from="1620725848312" duration="6218000" />
       <workItem from="1620734380264" duration="8022000" />
-      <workItem from="1620840208348" duration="6196000" />
+      <workItem from="1620840208348" duration="8215000" />
     </task>
     <servers />
   </component>
@@ -346,10 +334,10 @@
           <line>75</line>
           <properties documentPath="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner\Assets\Scripts\LevelGeneration\Platform\PlatformStateManager.cs" initialLine="74" containingFunctionPresentation="method 'SetState'">
             <startOffsets>
-              <option value="3845" />
+              <option value="3850" />
             </startOffsets>
             <endOffsets>
-              <option value="3845" />
+              <option value="3850" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="12" />
