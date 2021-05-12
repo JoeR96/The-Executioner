@@ -77,9 +77,7 @@ public class EnvironmentManager : MonoBehaviour
         {
             if (!node.PlatformManager.PlatformStateManager.PlatformIsPlayable)
             {
-                node.PlatformManager.PlatformStateManager.ResetState();
                 node.PlatformManager.PlatformHeightManager.SetPlatformHeight(platformHeight);
-                EnemySpawnPoints.AddExternalSpawnPointToList(node.PlatformManager.PlatformSpawnManager.spawnPoint.transform);
             }
             else
             {
