@@ -13,15 +13,19 @@ public enum PlatformBridgeHeight
 public class PlatformBridgeManager : MonoBehaviour
 {
     [SerializeField] private List<float> bridgeHeights = new List<float>();
-    [SerializeField] public GameObject bridge;
-    public bool PlatformBridgeActive;
+    [SerializeField] protected GameObject bridge;
+    
+    public bool PlatformBridgeActive { get; set; }
+
     public int CurrentBridgeHeight;
     public Vector3 bridgeStartPosition;
     public float duration = 3f;
 
     private void Start()
     {
-        //SetBridgeStartPosition();
+        if (GameManager.instance.BuildMode)
+            duration = GameManager.instance.BuildSpeed;
+
     }
     /// <summary>
     /// Sets the bridge at the height passed as a parameter
@@ -59,17 +63,19 @@ public class PlatformBridgeManager : MonoBehaviour
     /// Return a boolean dependant on the bridge active status
     /// </summary>
     /// <returns></returns>
-    public bool ReturnBridgeValue()
+    public virtual bool ReturnBridgeValue()
     {
         return PlatformBridgeActive;
     }
+    
     /// <summary>
     /// Toggle the bridge boolean
     /// </summary>
-    public void ToggleBridge()
+    public virtual void ToggleBridge()
     {
         PlatformBridgeActive = !PlatformBridgeActive;
     }
+   
     /// <summary>
     /// Lerp the bridge position to the input position over the input duration
     /// </summary>
@@ -94,9 +100,37 @@ public class PlatformBridgeManager : MonoBehaviour
     /// Toggle the mesh and collider of the bridge depending on the active status
     /// </summary>
     /// <param name="active"></param>
-    public void ActivateBridge(bool active)
+    public virtual void ActivateBridge(bool active)
     {
         bridge.GetComponent<MeshRenderer>().enabled = active;
         bridge.GetComponent<BoxCollider>().enabled = active;
+        PlatformBridgeActive = active;
+    }
+    /// <summary>
+    /// Raise the platform by one index
+    /// if it is at the last index return
+    /// </summary>
+    public void RaiseOneLevel()
+    {
+        CurrentBridgeHeight++;
+        
+        if (CurrentBridgeHeight >= bridgeHeights.Count)
+            return;
+        
+        SetBridgeHeight(CurrentBridgeHeight);
+        
+    }
+    /// <summary>
+    /// if it is at the first index return
+    /// Lower the platform index by 1
+    /// </summary>
+    public void DownOneLevel()
+    {
+        CurrentBridgeHeight--;
+        
+        if (CurrentBridgeHeight <= 0)
+            return;
+        
+        SetBridgeHeight(CurrentBridgeHeight);
     }
 }

@@ -112,6 +112,9 @@ public class LevelManager : MonoBehaviour
                 platformStates[i, j] = new PlatformInformation();
                 platformStates[i, j].CurrentHeight = grid.grid[i, j].PlatformManager.PlatformHeightManager.CurrentHeight;
                 platformStates[i, j].CurrentRotation = grid.grid[i, j].PlatformManager.PlatformRampManager.CurrentRotation;
+                platformStates[i, j].CurrentBridgeRampRotation = grid.grid[i,j].PlatformManager.PlatformBridgeRampManager.CurrentBridgeRampRotation;
+                platformStates[i, j].CurrentBridgeRampHeight = grid.grid[i, j].PlatformManager.PlatformBridgeRampManager.CurrentBridgeRampHeight;
+                platformStates[i, j].PlatformBridgeRampActive = grid.grid[i, j].PlatformManager.PlatformBridgeRampManager.PlatformBridgeRampActive;
                 platformStates[i, j].PlatformStairActive = grid.grid[i, j].PlatformManager.PlatformRampManager.PlatformRampActive;
                 platformStates[i, j].BridgeIsActive = grid.grid[i, j].PlatformManager.PlatformBridgeManager.PlatformBridgeActive;
                 platformStates[i, j].PlatformSpawnActive = grid.grid[i, j].PlatformManager.PlatformSpawnManager.PlatformSpawnPointActive;

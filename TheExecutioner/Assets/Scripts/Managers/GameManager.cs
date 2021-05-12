@@ -16,7 +16,8 @@ public class GameManager : Singleton<GameManager>
     public LevelManager LevelManager;
     public EventManager EventManager;
     public bool BuildMode;
- 
+    [field: SerializeField]public float BuildSpeed { get; set; }
+
     public override void Awake()
     {
         base.Awake();

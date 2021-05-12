@@ -18,8 +18,14 @@ public enum PlatformHeight
 public class PlatformHeightManager : MonoBehaviour
 {
     public int CurrentHeight { get; set; }
-    public float Duration = 3f;
+    [SerializeField] private float duration;
     [SerializeField] private List<int> platformHeights = new List<int>();
+
+    private void Start()
+    {
+        if (GameManager.instance.BuildMode)
+            duration = GameManager.instance.BuildSpeed;
+    }
     /// <summary>
     /// Raise the platform to the height within the height list using the index passed in
     /// </summary>
@@ -46,10 +52,10 @@ public class PlatformHeightManager : MonoBehaviour
         Vector3 startPosition = transform.position;
         float timer = 0f;
 
-        while (timer < Duration)
+        while (timer < duration)
         {
             timer += Time.deltaTime;
-            float percentage = Mathf.Min(timer / Duration, 1);
+            float percentage = Mathf.Min(timer / duration, 1);
             transform.position = Vector3.Lerp(startPosition,  targetPosition, percentage);
             yield return null;
         }
@@ -69,5 +75,39 @@ public class PlatformHeightManager : MonoBehaviour
         var spawnPos = GameManager.instance.playerSpawnPoint.transform.position;
         var targetVector = new Vector3(spawnPos.x, spawnPos.y += 2, spawnPos.z);
         GameManager.instance.playerSpawnPoint.transform.position = targetVector;
+    }
+    /// <summary>
+    /// Raise the platform by one index
+    /// if it is at the last index return
+    /// </summary>
+    public void RaiseOneLevel()
+    {
+        CurrentHeight++;
+        
+        if (CurrentHeight == platformHeights.Count)
+            return;
+        
+        SetPlatformHeight(CurrentHeight);
+        
+    }
+    /// <summary>
+    /// if it is at the first index return
+    /// Lower the platform index by 1
+    /// </summary>
+    public void DownOneLevel()
+    {
+        CurrentHeight--;
+        
+        if (CurrentHeight == 0)
+            return;
+        
+        SetPlatformHeight(CurrentHeight);
+    }
+    /// <summary>
+    /// Reset the platform to the original position
+    /// </summary>
+    public void ResetPlatformHeight()
+    {
+        SetPlatformHeight(16);
     }
 }

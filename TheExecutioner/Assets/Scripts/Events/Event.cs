@@ -126,6 +126,15 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
         }
         Destroy(EventText);
     }
+    /// <summary>
+    /// Create and set the start position of the targetTransform
+    /// Whilst the timer is less than duration lerp the transform to event position one
+    /// Percentage ensures the lerp is over a consistent value
+    /// The same process is repeated in the second while loop however startPosition is set to the current position
+    /// The transform is lerped to the second position in the target positions array
+    /// </summary>
+    /// <param name="targetTransform"></param>
+    /// <returns></returns>
     public IEnumerator KillSacrificeEventEnemy(Transform targetTransform)
     {
         var startPosition = targetTransform.position;
@@ -139,18 +148,17 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
             timer += Time.deltaTime;
             targetTransform.position = Vector3.Lerp(startPosition, eventKillTransformPositions[0].position, percentage);
         }
-
         startPosition = targetTransform.position;
         timer = 0;
         while (timer < duration)
         {
+            Debug.Log("Should lerp to position two");
             percentage = Mathf.Min(timer / duration, 1);
             timer += Time.deltaTime;
             targetTransform.position = Vector3.Lerp(startPosition, eventKillTransformPositions[1].position, percentage);
         }
         yield return null;
     }
-    
     public Event ReturnActiveEvent()
     {
         return this;

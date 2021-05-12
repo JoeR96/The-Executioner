@@ -48,6 +48,9 @@ public class PlatformStateManager : MonoBehaviour
     {
         platformManager.PlatformBridgeManager.PlatformBridgeActive = platformInformation.BridgeIsActive;
         platformManager.PlatformRampManager.PlatformRampActive = platformInformation.PlatformStairActive;
+        platformManager.PlatformBridgeRampManager.PlatformBridgeRampActive = platformInformation.PlatformBridgeRampActive;
+        platformManager.PlatformBridgeRampManager.CurrentBridgeRampHeight = platformInformation.CurrentBridgeRampHeight;
+        platformManager.PlatformBridgeRampManager.CurrentBridgeRampRotation = platformInformation.CurrentBridgeRampRotation;
         platformManager.PlatformHeightManager.CurrentHeight = platformInformation.CurrentHeight;
         platformManager.PlatformBridgeManager.CurrentBridgeHeight = platformInformation.CurrentBridgeHeight;
         platformManager.PlatformRampManager.CurrentRotation = platformInformation.CurrentRotation;
@@ -67,6 +70,9 @@ public class PlatformStateManager : MonoBehaviour
         platformManager.PlatformRampManager.ActivateRamp(platformManager.PlatformRampManager.PlatformRampActive);
         platformManager.PlatformBridgeManager.ActivateBridge(platformManager.PlatformBridgeManager.PlatformBridgeActive);
         platformManager.PlatformBridgeManager.SetBridgeHeight(platformManager.PlatformBridgeManager.CurrentBridgeHeight);
+        platformManager.PlatformBridgeRampManager.ActivateBridge(platformManager.PlatformBridgeRampManager.PlatformBridgeRampActive);
+        platformManager.PlatformBridgeRampManager.SetBridgeHeight(platformManager.PlatformBridgeRampManager.CurrentBridgeHeight);
+        platformManager.PlatformBridgeRampManager.SetRampRotation(platformManager.PlatformBridgeRampManager.CurrentBridgeRampRotation);
         platformManager.PlatformSpawnManager.ActivateSpawnPoint(platformManager.PlatformSpawnManager.PlatformSpawnPointActive);
     }
     /// <summary>
@@ -74,13 +80,13 @@ public class PlatformStateManager : MonoBehaviour
     /// </summary>
     public void ResetState()
     {
-        platformManager.PlatformBridgeManager.PlatformBridgeActive = false;
-        platformManager.PlatformBridgeManager.SetBridgeHeight((int) PlatformBridgeHeight.Disabled);
-        platformManager.PlatformBridgeManager.ActivateBridge(false);
-        platformManager.PlatformHeightManager.SetPlatformHeight((int) PlatformHeight.Flat);
-        platformManager.PlatformRampManager.PlatformRampActive = false;
-        platformManager.PlatformRampManager.SetRampRotation(0);
         platformManager.PlatformRampManager.ActivateRamp(false);
+        platformManager.PlatformBridgeManager.ActivateBridge(false);
+        platformManager.PlatformBridgeRampManager.ActivateBridge(false);
+        platformManager.PlatformHeightManager.ResetPlatformHeight();
+        platformManager.PlatformSpawnManager.DeactivateSpawnPoint();
+        platformManager.PlatformSpawnManager.DeactivateEventSpawnPoint();
+        platformManager.PlatformStateManager.ResetState();
     }
 }
 

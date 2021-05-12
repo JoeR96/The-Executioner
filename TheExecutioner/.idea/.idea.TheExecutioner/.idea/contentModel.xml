@@ -8,7 +8,6 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="AssetCleaner.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="AltarEventCompleteTrigger.cs" t="Include" />
         <e p="Asset Cleaner" t="Include">
           <e p="com.leopotam.ecs" t="Include">
             <e p="src" t="Include">
@@ -69,14 +68,9 @@
             <e p="SearchUtils.cs" t="Include" />
           </e>
         </e>
-        <e p="ButtonMouseHover.cs" t="Include" />
-        <e p="DisplayEventText.cs" t="Include" />
-        <e p="EventTargetKillCount.cs" t="Include" />
-        <e p="EventZombieSpawner.cs" t="Include" />
         <e p="Fonts" t="Include">
           <e p="Zombie_Holocaust_Font_Read_Me.txt" t="Include" />
         </e>
-        <e p="IDisplayEventText.cs" t="Include" />
         <e p="Imported" t="Include">
           <e p="EffectExamples" t="Include">
             <e p="Magic Effects" t="Include">
@@ -188,18 +182,12 @@
             </e>
           </e>
         </e>
-        <e p="InterfaceManager.cs" t="Include" />
-        <e p="LimbEventTrigger.cs" t="Include" />
-        <e p="MainMenuLevelManager.cs" t="Include" />
-        <e p="PrintGameUI.cs" t="Include" />
-        <e p="RespawnPlayer.cs" t="Include" />
-        <e p="RestartGame.cs" t="Include" />
-        <e p="Rocket.cs" t="Include" />
-        <e p="RPG.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="AltarEventCompleteTrigger.cs" t="Include" />
           <e p="Audio" t="Include">
             <e p="AudioManager.cs" t="Include" />
           </e>
+          <e p="ButtonMouseHover.cs" t="Include" />
           <e p="CharacterController" t="Include">
             <e p="CharacterAiming.cs" t="Include" />
             <e p="CharacterLocomotion.cs" t="Include" />
@@ -211,6 +199,7 @@
             <e p="ThirdPersonController.cs" t="Include" />
           </e>
           <e p="DisplayActiveEvents.cs" t="Include" />
+          <e p="DisplayEventText.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="EnvironmentManagerEditor.cs" t="Include" />
             <e p="EnvironmentSpawnerEditor.cs" t="Include" />
@@ -245,10 +234,14 @@
             <e p="SpawnPointManager.cs" t="Include" />
             <e p="ZombieOverflowEvent.cs" t="Include" />
           </e>
+          <e p="EventTargetKillCount.cs" t="Include" />
+          <e p="EventZombieSpawner.cs" t="Include" />
           <e p="HealthSystem" t="Include">
             <e p="HealthSystem.cs" t="Include" />
           </e>
+          <e p="IDisplayEventText.cs" t="Include" />
           <e p="IIsInEventArea.cs" t="Include" />
+          <e p="InterfaceManager.cs" t="Include" />
           <e p="IReturnEvent.cs" t="Include" />
           <e p="LevelGeneration" t="Include">
             <e p="CheckAdjacentNodes.cs" t="Include" />
@@ -264,6 +257,7 @@
             <e p="PathFinding.cs" t="Include" />
             <e p="Platform" t="Include">
               <e p="PlatformBridgeManager.cs" t="Include" />
+              <e p="PlatformBridgeRamp.cs" t="Include" />
               <e p="PlatformColourManager.cs" t="Include" />
               <e p="PlatformHeightManager.cs" t="Include" />
               <e p="PlatformInformation.cs" t="Include" />
@@ -272,6 +266,8 @@
               <e p="PlatformStateManager.cs" t="Include" />
             </e>
           </e>
+          <e p="LimbEventTrigger.cs" t="Include" />
+          <e p="MainMenuLevelManager.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="EventManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
@@ -288,6 +284,11 @@
             <e p="ObjectPooler.cs" t="Include" />
             <e p="ObjectPoolerTypes.cs" t="Include" />
           </e>
+          <e p="PrintGameUI.cs" t="Include" />
+          <e p="RespawnPlayer.cs" t="Include" />
+          <e p="RestartGame.cs" t="Include" />
+          <e p="Rocket.cs" t="Include" />
+          <e p="RPG.cs" t="Include" />
           <e p="SpawnSystems" t="Include">
             <e p="EnemySpawnPoints.cs" t="Include" />
             <e p="SpawnZombieTest.cs" t="Include" />

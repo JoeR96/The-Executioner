@@ -10,10 +10,15 @@ public class PlatformManagerEditor : Editor
 {
     public override void OnInspectorGUI()
     {
+        GUIStyle style = new GUIStyle(EditorStyles.textArea);
+        style.wordWrap = true;
+        
         PlatformManager PlatformManager = (PlatformManager)target;
         #region Platform Height GUI Buttons
 
-                EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.BeginHorizontal();
+        GUI.skin.button.wordWrap = true;
+
         if (GUILayout.Button("1",GUILayout.Width(80), GUILayout.Height(80)))
         { 
             PlatformManager.PlatformHeightManager.SetPlatformHeight(0);
@@ -52,27 +57,24 @@ public class PlatformManagerEditor : Editor
         {
             PlatformManager.PlatformHeightManager.SetPlatformHeight(8);
         }
-        if (GUILayout.Button("Level 10",GUILayout.Width(80), GUILayout.Height(80)))
+  
+        EditorGUILayout.EndHorizontal();
+        EditorGUILayout.BeginHorizontal ();
+        if (GUILayout.Button("10",GUILayout.Width(80), GUILayout.Height(80)))
         {
             PlatformManager.PlatformHeightManager.SetPlatformHeight(9);
         }
-        EditorGUILayout.EndHorizontal();
-        EditorGUILayout.BeginHorizontal ();
         if (GUILayout.Button("11",GUILayout.Width(80), GUILayout.Height(80)))
         {
             PlatformManager.PlatformHeightManager.SetPlatformHeight(10);
         }
-        if (GUILayout.Button("12",GUILayout.Width(80), GUILayout.Height(80)))
+        if (GUILayout.Button("+",GUILayout.Width(80), GUILayout.Height(80)))
         {
-            PlatformManager.PlatformHeightManager.SetPlatformHeight(11);
+            PlatformManager.PlatformHeightManager.RaiseOneLevel();
         }
-        if (GUILayout.Button("13",GUILayout.Width(80), GUILayout.Height(80)))
+        if (GUILayout.Button("-",GUILayout.Width(80), GUILayout.Height(80)))
         {
-            PlatformManager.PlatformHeightManager.SetPlatformHeight(12);
-        }
-        if (GUILayout.Button("14",GUILayout.Width(80), GUILayout.Height(80)))
-        {
-            PlatformManager.PlatformHeightManager.SetPlatformHeight(13);
+            PlatformManager.PlatformHeightManager.DownOneLevel();
         }
         if (GUILayout.Button("Reset Platform",GUILayout.Width(80), GUILayout.Height(80)))
         {
@@ -89,26 +91,98 @@ public class PlatformManagerEditor : Editor
         }
         if (PlatformManager.PlatformRampManager.PlatformRampActive)
         {
-            if (GUILayout.Button("One", GUILayout.Width(80), GUILayout.Height(80)))
+            if (GUILayout.Button("1", GUILayout.Width(80), GUILayout.Height(80)))
             {
                 PlatformManager.PlatformRampManager.SetRampRotation(0);
             }
-            if (GUILayout.Button("Two", GUILayout.Width(80), GUILayout.Height(80)))
+            if (GUILayout.Button("2", GUILayout.Width(80), GUILayout.Height(80)))
             {
                 PlatformManager.PlatformRampManager.SetRampRotation(1);
             }
-            if (GUILayout.Button("Three", GUILayout.Width(80), GUILayout.Height(80)))
+            if (GUILayout.Button("3", GUILayout.Width(80), GUILayout.Height(80)))
             {
                 PlatformManager.PlatformRampManager.SetRampRotation(2);
             }
-            if (GUILayout.Button("Four", GUILayout.Width(80), GUILayout.Height(80)))
+            if (GUILayout.Button("4", GUILayout.Width(80), GUILayout.Height(80)))
             {
                 PlatformManager.PlatformRampManager.SetRampRotation(3);
             }
         }
         EditorGUILayout.EndHorizontal();
-        
 
+
+        #endregion
+        #region PlatformBridgeRamp
+        EditorGUILayout.BeginHorizontal();
+        {
+            if (GUILayout.Button("Toggle Bridge Ramp", GUILayout.Width(80), GUILayout.Height(80)))
+            {
+                PlatformManager.PlatformBridgeRampManager.ToggleBridge();
+                PlatformManager.PlatformBridgeRampManager.ActivateBridge(
+                    PlatformManager.PlatformBridgeRampManager.ReturnBridgeValue());
+            }
+           if (PlatformManager.PlatformBridgeRampManager.PlatformBridgeRampActive )
+            { 
+                if (GUILayout.Button("1",GUILayout.Width(80), GUILayout.Height(80)))
+                {
+                    PlatformManager.PlatformBridgeRampManager.SetBridgeHeight(0);
+                }
+                if (GUILayout.Button("2",GUILayout.Width(80), GUILayout.Height(80)))
+                {
+                    PlatformManager.PlatformBridgeRampManager.SetBridgeHeight(1);
+                }
+                if (GUILayout.Button("3",GUILayout.Width(80), GUILayout.Height(80)))
+                {
+                    PlatformManager.PlatformBridgeRampManager.SetBridgeHeight(2);
+                }
+                if (GUILayout.Button("4",GUILayout.Width(80), GUILayout.Height(80)))
+                {
+                    PlatformManager.PlatformBridgeRampManager.SetBridgeHeight(3);
+                }
+            
+            EditorGUILayout.EndHorizontal ();
+            EditorGUILayout.BeginHorizontal();
+     
+            if (GUILayout.Button("5",GUILayout.Width(80), GUILayout.Height(80)))
+            {
+                PlatformManager.PlatformBridgeRampManager.SetBridgeHeight(4);
+            }
+            if (GUILayout.Button("6",GUILayout.Width(80), GUILayout.Height(80)))
+            {
+                PlatformManager.PlatformBridgeRampManager.SetBridgeHeight(5);
+            }
+            if (GUILayout.Button("+",GUILayout.Width(80), GUILayout.Height(80)))
+            {
+                PlatformManager.PlatformBridgeRampManager.RaiseOneLevel();
+            }
+            if (GUILayout.Button("-",GUILayout.Width(80), GUILayout.Height(80)))
+            {
+                PlatformManager.PlatformBridgeRampManager.DownOneLevel();
+            }
+            EditorGUILayout.EndHorizontal();
+            EditorGUILayout.BeginHorizontal();
+            if (GUILayout.Button("Rotation", GUILayout.Width(80), GUILayout.Height(80)))
+                {
+                }
+                if (GUILayout.Button("1",GUILayout.Width(80), GUILayout.Height(80)))
+                {
+                    PlatformManager.PlatformBridgeRampManager.SetRampRotation(0);
+                }
+                if (GUILayout.Button("2",GUILayout.Width(80), GUILayout.Height(80)))
+                {
+                    PlatformManager.PlatformBridgeRampManager.SetRampRotation(1);
+                }
+                if (GUILayout.Button("3",GUILayout.Width(80), GUILayout.Height(80)))
+                {
+                    PlatformManager.PlatformBridgeRampManager.SetRampRotation(2);
+                }
+                if (GUILayout.Button("4",GUILayout.Width(80), GUILayout.Height(80)))
+                {
+                    PlatformManager.PlatformBridgeRampManager.SetRampRotation(3);
+                }
+            }
+            EditorGUILayout.EndHorizontal ();
+        }
         #endregion
         #region Platform Bridge GUI buttons
         EditorGUILayout.BeginHorizontal ();
@@ -117,35 +191,50 @@ public class PlatformManagerEditor : Editor
             PlatformManager.PlatformBridgeManager.ToggleBridge();
             PlatformManager.PlatformBridgeManager.ActivateBridge(PlatformManager.PlatformBridgeManager.ReturnBridgeValue());
         }
-        if (PlatformManager.PlatformBridgeManager.PlatformBridgeActive)
+       
+        if (PlatformManager.PlatformBridgeManager.PlatformBridgeActive )
         {
-            if (GUILayout.Button("Set Bridge One",GUILayout.Width(80), GUILayout.Height(80)))
+            if (GUILayout.Button("1",GUILayout.Width(80), GUILayout.Height(80)))
             {
                 PlatformManager.PlatformBridgeManager.SetBridgeHeight(0);
             }
-            if (GUILayout.Button("Set Bridge Two",GUILayout.Width(80), GUILayout.Height(80)))
+            if (GUILayout.Button("2",GUILayout.Width(80), GUILayout.Height(80)))
             {
                 PlatformManager.PlatformBridgeManager.SetBridgeHeight(1);
             }
-            if (GUILayout.Button("Set Bridge Three",GUILayout.Width(80), GUILayout.Height(80)))
+            if (GUILayout.Button("3",GUILayout.Width(80), GUILayout.Height(80)))
             {
                 PlatformManager.PlatformBridgeManager.SetBridgeHeight(2);
             }
-            if (GUILayout.Button("Set Bridge Four",GUILayout.Width(80), GUILayout.Height(80)))
+            if (GUILayout.Button("4",GUILayout.Width(80), GUILayout.Height(80)))
             {
                 PlatformManager.PlatformBridgeManager.SetBridgeHeight(3);
             }
-            if (GUILayout.Button("Set Bridge Five",GUILayout.Width(80), GUILayout.Height(80)))
+            EditorGUILayout.EndHorizontal();
+            EditorGUILayout.BeginHorizontal();
+            if (GUILayout.Button("5",GUILayout.Width(80), GUILayout.Height(80)))
             {
                 PlatformManager.PlatformBridgeManager.SetBridgeHeight(4);
             }
-            if (GUILayout.Button("Set Bridge Six",GUILayout.Width(80), GUILayout.Height(80)))
+            if (GUILayout.Button("6",GUILayout.Width(80), GUILayout.Height(80)))
             {
                 PlatformManager.PlatformBridgeManager.SetBridgeHeight(5);
             }
+            if (GUILayout.Button("7",GUILayout.Width(80), GUILayout.Height(80)))
+            {
+                PlatformManager.PlatformBridgeManager.SetBridgeHeight(6);
+            }
+            if (GUILayout.Button("+", GUILayout.Width(80), GUILayout.Height(80)))
+            {
+                PlatformManager.PlatformBridgeManager.RaiseOneLevel();
+            }
+            if (GUILayout.Button("-", GUILayout.Width(80), GUILayout.Height(80)))
+            {
+                PlatformManager.PlatformBridgeManager.DownOneLevel();
+            }
+            
         }
         EditorGUILayout.EndHorizontal ();
-        
 
         #endregion
         #region Platform Spawn Point GUI Buttons
@@ -153,10 +242,19 @@ public class PlatformManagerEditor : Editor
         EditorGUILayout.BeginHorizontal ();
         if (GUILayout.Button("Toggle Spawn Point",GUILayout.Width(80), GUILayout.Height(80)))
         {
-            PlatformManager.PlatformSpawnManager.ReturnPlatformSpawnPointValue();
+            PlatformManager.PlatformSpawnManager.ActivateSpawnPoint();
         }
-        if (GUILayout.Button("Toggle Event Spawn Point",GUILayout.Width(80), GUILayout.Height(80))) { 
-            PlatformManager.PlatformSpawnManager.ReturnPlatformEventSpawnPointValue();
+        if (GUILayout.Button("Toggle Spawn Point On",GUILayout.Width(80), GUILayout.Height(80))) { 
+            PlatformManager.PlatformSpawnManager.DeactivateSpawnPoint();
+        }
+        if (GUILayout.Button("Toggle Event Spawn Point On",GUILayout.Width(80), GUILayout.Height(80))) { 
+            PlatformManager.PlatformSpawnManager.ActivateEventSpawnPoint();
+        }
+        if (GUILayout.Button("Toggle Event Spawn Point Off",GUILayout.Width(80), GUILayout.Height(80))) { 
+            PlatformManager.PlatformSpawnManager.DeactivateSpawnPoint();
+        }
+        if (GUILayout.Button("Reset All",GUILayout.Width(80), GUILayout.Height(80))) { 
+            PlatformManager.ResetPlatformStates();
         }
         EditorGUILayout.EndHorizontal ();
 

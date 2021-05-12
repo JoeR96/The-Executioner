@@ -136,8 +136,10 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     private IEnumerator ScaleComponent(Transform target, Vector3 targetSize, float speed)
     {
         var startSize = target.localScale;
+        
         float timer = 0;
         float duration = _explosionScaleTime;
+        
         while (timer < duration)
         {
             float percentage = Mathf.Min(timer / duration, 1);
