@@ -28888,9 +28888,9 @@ GameObject:
   - component: {fileID: 7471167318697791985}
   - component: {fileID: 7482806133883197109}
   - component: {fileID: 7490284676139262305}
-  - component: {fileID: 7468024436314017236}
   - component: {fileID: 7468024436314017237}
   - component: {fileID: 7468024436314017234}
+  - component: {fileID: 2445520164713175020}
   m_Layer: 12
   m_Name: SM_Wep_Rifle_Small_01
   m_TagString: Untagged
@@ -28968,28 +28968,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7468024436314017236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7468024436314017235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb948a0d6c777d74ab5eb63be3fd20ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponSlot: 1
-  IsFiring: 0
-  RaycastOrigin: {fileID: 7467097122523067651}
-  MuzzleFlash: {fileID: 7467097123504609396}
-  HitEffect: {fileID: 7467097122711988448}
-  TracerEffect: {fileID: 7989577672764970850, guid: 2b07df7201fb4834d9907a0cbc7d055e,
-    type: 3}
-  RaycastDestination: {fileID: 7467097122523067651}
-  WeaponName: smg
-  recoil: {fileID: 0}
 --- !u!114 &7468024436314017237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29064,6 +29042,35 @@ MonoBehaviour:
     m_DissipationMode: 2
     m_DissipationDistance: 1000
     m_PropagationSpeed: 343
+--- !u!114 &2445520164713175020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468024436314017235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9843b93945e0a0e4a879c456c29ed536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSlot: 0
+  IsFiring: 0
+  RaycastOrigin: {fileID: 0}
+  MuzzleFlash: {fileID: 0}
+  HitEffect: {fileID: 0}
+  TracerEffect: {fileID: 7989577672764970850, guid: 2b07df7201fb4834d9907a0cbc7d055e,
+    type: 3}
+  RaycastDestination: {fileID: 0}
+  WeaponName: shotgun
+  recoil: {fileID: 0}
+  weaponMaxAmmo: 12
+  weaponSpareAmmo: 24
+  weaponReloadTime: 2
+  weaponDamage: 150
+  weaponFireRate: 0.26
+  <WeaponIsReloading>k__BackingField: 0
+  weaponCurrentammo: 12
 --- !u!1 &7468285234403240813
 GameObject:
   m_ObjectHideFlags: 0

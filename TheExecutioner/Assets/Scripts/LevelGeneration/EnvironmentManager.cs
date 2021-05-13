@@ -23,7 +23,9 @@ public class EnvironmentManager : MonoBehaviour
 
     private void Start()
     {
-        SetSpawnPoints();
+        var levelMaster = GetComponent<LevelManager>();
+        if(!levelMaster.MenuMode)
+            SetSpawnPoints();
     }
     private void Update()
     {

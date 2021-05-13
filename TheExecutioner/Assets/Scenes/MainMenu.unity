@@ -141,6 +141,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: '----[AUDIO]---- '
       objectReference: {fileID: 0}
+    - target: {fileID: 8271040859741350046, guid: 70e5b7544ca128f4ea61692472c54ebb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8271040859741350047, guid: 70e5b7544ca128f4ea61692472c54ebb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -283,7 +288,7 @@ PrefabInstance:
     - target: {fileID: 469152442901536483, guid: ae091588df359794dbd66d11f6b8d1b9,
         type: 3}
       propertyPath: Levels.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 469152442901536483, guid: ae091588df359794dbd66d11f6b8d1b9,
         type: 3}
@@ -308,6 +313,28 @@ PrefabInstance:
       propertyPath: menuMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 469152442901536483, guid: ae091588df359794dbd66d11f6b8d1b9,
+        type: 3}
+      propertyPath: Levels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d16174159038c041abddbde56ad453d,
+        type: 2}
+    - target: {fileID: 469152442901536483, guid: ae091588df359794dbd66d11f6b8d1b9,
+        type: 3}
+      propertyPath: levelSo
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d16174159038c041abddbde56ad453d,
+        type: 2}
+    - target: {fileID: 469152442901536483, guid: ae091588df359794dbd66d11f6b8d1b9,
+        type: 3}
+      propertyPath: BuildMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 469152442901536483, guid: ae091588df359794dbd66d11f6b8d1b9,
+        type: 3}
+      propertyPath: <MenuMode>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 469152442901536540, guid: ae091588df359794dbd66d11f6b8d1b9,
         type: 3}
       propertyPath: NavMeshObject
@@ -317,7 +344,8 @@ PrefabInstance:
         type: 3}
       propertyPath: floorContainer
       value: 
-      objectReference: {fileID: 7238465149872158746}
+      objectReference: {fileID: 4071071369127037453, guid: 4390e655c91840d479a2c1b56b4b0d46,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae091588df359794dbd66d11f6b8d1b9, type: 3}
 --- !u!1 &403047805
@@ -900,7 +928,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25238
+  m_Name: pb_Mesh25842
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1469,7 +1497,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25274
+  m_Name: pb_Mesh25878
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1820,6 +1848,65 @@ RectTransform:
   m_AnchoredPosition: {x: -83, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1441124226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1441124228}
+  - component: {fileID: 1441124227}
+  m_Layer: 0
+  m_Name: GameManagerMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1441124227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441124226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c41a5a578fce44a4492fc67e5d8105c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onDestroy: 0
+  uiCanvas: {fileID: 0}
+  gameCanvas: {fileID: 0}
+  roundManager: {fileID: 0}
+  playerSpawnPoint: {fileID: 0}
+  SpawnPointManager: {fileID: 0}
+  LimbSpawner: {fileID: 0}
+  ZombieManager: {fileID: 0}
+  EnvironmentManager: {fileID: 1605424468}
+  Pathfinding: {fileID: 0}
+  <LevelManager>k__BackingField: {fileID: 2025523190}
+  EventManager: {fileID: 0}
+  <BuildMode>k__BackingField: 0
+  <PlayMode>k__BackingField: 0
+  <MenuMode>k__BackingField: 1
+  <BuildSpeed>k__BackingField: 0
+--- !u!4 &1441124228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441124226}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.670303, y: -24.045221, z: -4.9481387}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1478977089
 GameObject:
   m_ObjectHideFlags: 0
@@ -2021,6 +2108,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580189172}
   m_CullTransparentMesh: 0
+--- !u!114 &1605424468 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 469152442901536540, guid: ae091588df359794dbd66d11f6b8d1b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 377570440}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71b11ad2640d2a145b208e2cdc659d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1688939122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2203,14 +2302,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a041ba08e5d0b44aa3e3910c549acbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelManager: {fileID: 2025523190}
 --- !u!43 &1891308344
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25310
+  m_Name: pb_Mesh25914
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2384,7 +2482,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25250
+  m_Name: pb_Mesh25854
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4493,7 +4591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8aa072e508bd5e4390c8ff1de400b29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformIsWall: 0
+  PlatformIsPlayable: 0
   PlatformIsActive: 0
   boundarySize: 0
   X: 0
@@ -4510,12 +4608,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932ab7fe2f4539d47bbc37d686b24794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlatformRampManager: {fileID: 7238465149872158736}
-  PlatformBridgeManager: {fileID: 7238465149872158741}
-  PlatformColourManager: {fileID: 7238465149872158740}
-  PlatformHeightManager: {fileID: 7238465149872158739}
-  PlatformSpawnManager: {fileID: 7238465149872158742}
-  PlatformStateManager: {fileID: 7238465149872158737}
+  <PlatformRampManager>k__BackingField: {fileID: 0}
+  <PlatformBridgeManager>k__BackingField: {fileID: 0}
+  <PlatformBridgeRampManager>k__BackingField: {fileID: 0}
+  <PlatformColourManager>k__BackingField: {fileID: 0}
+  <PlatformHeightManager>k__BackingField: {fileID: 0}
+  <PlatformSpawnManager>k__BackingField: {fileID: 0}
+  <PlatformStateManager>k__BackingField: {fileID: 0}
 --- !u!114 &7238465149872158739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4528,7 +4627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e23fbd59fa709e48a2f6e2ffa2221d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentHeight: 0
+  duration: 0
   platformHeights: f0fffffff2fffffff4fffffff6fffffff8fffffffafffffffcfffffffeffffff00000000020000000400000006000000080000000a00000012000000d0ffffffeeffffff
 --- !u!114 &7238465149872158740
 MonoBehaviour:
@@ -4567,8 +4666,9 @@ MonoBehaviour:
   - -2.8
   - 1.8
   bridge: {fileID: 7238465149398939562}
-  PlatformBridgeActive: 0
   CurrentBridgeHeight: 0
+  bridgeStartPosition: {x: 0, y: 0, z: 0}
+  duration: 3
 --- !u!114 &7238465149872158742
 MonoBehaviour:
   m_ObjectHideFlags: 0

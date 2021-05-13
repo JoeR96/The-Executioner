@@ -22090,7 +22090,7 @@ MonoBehaviour:
   Pathfinding: {fileID: 0}
   LevelManager: {fileID: 2053539583}
   EventManager: {fileID: 0}
-  BuildMode: 1
+  BuildMode: 0
   <BuildSpeed>k__BackingField: 0.5
 --- !u!4 &1715150810
 Transform:
@@ -40088,6 +40088,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: de32ff12f36d4474c87fc806acb52cb7,
         type: 2}
+    - target: {fileID: 469152442901536483, guid: ae091588df359794dbd66d11f6b8d1b9,
+        type: 3}
+      propertyPath: BuildMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 469152442901536540, guid: ae091588df359794dbd66d11f6b8d1b9,
         type: 3}
       propertyPath: NavMeshObject

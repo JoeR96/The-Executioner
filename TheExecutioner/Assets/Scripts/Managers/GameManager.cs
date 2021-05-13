@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -13,9 +14,11 @@ public class GameManager : Singleton<GameManager>
     public ZombieManager ZombieManager;
     public EnvironmentManager EnvironmentManager;
     public Pathfinding Pathfinding;
-    public LevelManager LevelManager;
+    [field:SerializeField] private LevelManager LevelManager { get; set; }
     public EventManager EventManager;
-    public bool BuildMode;
+    [field: SerializeField] public bool BuildMode { get; set; }
+    [field: SerializeField] public bool PlayMode { get; set; }
+    [field: SerializeField] public bool MenuMode { get; set; }
     [field: SerializeField]public float BuildSpeed { get; set; }
 
     public override void Awake()
@@ -27,20 +30,24 @@ public class GameManager : Singleton<GameManager>
         ZombieManager = GetComponentInChildren<ZombieManager>();
         LimbSpawner = GetComponentInChildren<LimbSpawner>();
         Pathfinding = GetComponentInChildren<Pathfinding>();
-        LevelManager = GetComponentInChildren<LevelManager>();
         SpawnPointManager = GetComponentInChildren<SpawnPointManager>();
         
     }
     private void Start()
     {
-        if (!BuildMode)
+        if (PlayMode)
         {
             Invoke("StartNewRound",1f);
             Invoke("SpawnWeapons", 5f);
         }
-        else
+        if(BuildMode)
         {
             LoadBuildMode();
+        }
+
+        if (MenuMode)
+        {
+            InvokeRepeating("MainMenuSequence",1f,7f);
         }
     }
     /// <summary>
@@ -120,7 +127,11 @@ public class GameManager : Singleton<GameManager>
     {
         roundManager.StartNewRound();
     }
-    
+
+    private void MainMenuSequence()
+    {
+        LevelManager.LoadStage();
+    }
 }
 
 

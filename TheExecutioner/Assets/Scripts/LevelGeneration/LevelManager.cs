@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<LevelSo> Levels = new List<LevelSo>();
     public int CurrentLevel;
     public int CurrentStage;
-    public bool menuMode;
+    [field:SerializeField] public bool MenuMode { get; set; }
     public List<List<PlatformInformation>> CurrentLevelList = new List<List<PlatformInformation>>();
     public bool BuildMode;
     private List<PlatformStateManager> spawnPoints = new List<PlatformStateManager>();
@@ -42,7 +42,6 @@ public class LevelManager : MonoBehaviour
         if (CurrentStage == 2)
         {
             CurrentStage = 0;
-            LoadLevel();
             LoadStage(CurrentStage);
         }
 
@@ -68,7 +67,7 @@ public class LevelManager : MonoBehaviour
             {
                 var pos = grid.grid[go.X, go.Z].PlatformManager;
                 pos.PlatformStateManager.SetStateFromExternal(go);
-                if (menuMode == false) 
+                if (MenuMode == false) 
                 {
                     // pos.PlatformHeightManager.RaisePlatformTowerHeight();
                     if (pos.PlatformSpawnManager.PlatformEventSpawn)

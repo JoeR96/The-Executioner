@@ -14,16 +14,15 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     [SerializeField] protected float _maxHealth;
     
     public LimbManager LimbManager { get; private set; }
-    public PoolObjectType ZombieType { get; private set; }
+    public PoolObjectType ZombieType { get;  }
     public GameObject ActiveSkin;
-    protected Animator _animator;
-    protected HealthSystem healthSystem;
+    internal Animator animator;
+    private HealthSystem healthSystem;
     protected AiAgent _aiAgent;
     [field: SerializeField]
     public float Damage { get; set; }
     public bool IsDead { get; set; }
     public bool InEvent;
-    private bool time = false;
     private bool isOnMesh;
     private bool isAlive = true;
     
@@ -31,7 +30,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     {
         _aiAgent = GetComponent<AiAgent>();
         healthSystem = new HealthSystem(_maxHealth,_maxHealth);
-        _animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         LimbManager = GetComponent<LimbManager>();
         foreach (Transform transform in _rootComponent.transform)
         {
@@ -59,15 +58,15 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
             isOnMesh = true;
             ActivateZombie();
         }
-        if(_animator.enabled == false && _aiAgent.navMeshAgent.enabled == false && timer.TimerIsOver())
+        if(animator.enabled == false && _aiAgent.navMeshAgent.enabled == false && timer.TimerIsOver() || IsDead)
         {
-            Invoke("KillZombie",2.5f);
+            KillZombie();
         }
     }
     private void SetRandomAnimTime()
     {
-        AnimatorStateInfo state = _animator.GetCurrentAnimatorStateInfo(0);
-        _animator.Play(state.fullPathHash, -1, Random.Range(0f, 1f));
+        AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
+        animator.Play(state.fullPathHash, -1, Random.Range(0f, 1f));
     }
     private void SetRandomSkin()
     {
