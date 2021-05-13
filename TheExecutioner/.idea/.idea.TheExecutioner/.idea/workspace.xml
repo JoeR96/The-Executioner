@@ -12,8 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Levels/Level2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformHeightManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Platform/PlatformHeightManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +260,7 @@
       <workItem from="1620580933838" duration="5469000" />
       <workItem from="1620725848312" duration="6218000" />
       <workItem from="1620734380264" duration="8022000" />
-      <workItem from="1620840208348" duration="11575000" />
+      <workItem from="1620840208348" duration="12186000" />
     </task>
     <servers />
   </component>
