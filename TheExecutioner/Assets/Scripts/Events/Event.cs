@@ -73,7 +73,7 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     /// </summary>
     private void SpawnReward()
     {
-        eventDestroyTrigger = spawnPointManager.SpawnWeapon(3, transform);
+        eventDestroyTrigger = spawnPointManager.SpawnWeapon(3, transform,true);
         rewardSpawned = true;
     }
     public int progress { get; set; }

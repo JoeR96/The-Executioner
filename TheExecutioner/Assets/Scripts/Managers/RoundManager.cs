@@ -31,7 +31,7 @@ public class RoundManager : MonoBehaviour
     /// </summary>
     public void StartNewRound()
     {
-        levelManager.LoadLevel();
+        //levelManager.LoadLevel();
         levelManager.LoadStage();
         StartCoroutine(NewRound());
         Invoke("TriggerBoolChange", 10f);

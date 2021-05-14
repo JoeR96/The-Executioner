@@ -5199,7 +5199,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2712
+  m_Name: pb_Mesh-5051674
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5393,7 +5393,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2746
+  m_Name: pb_Mesh-5051710
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7880,6 +7880,10 @@ MonoBehaviour:
   roundManager: {fileID: 1715150813}
   currentRound: {fileID: 2141731762}
   activeZombies: {fileID: 1823812432}
+  weaponIcons:
+  - {fileID: 783199014}
+  - {fileID: 1618394346}
+  - {fileID: 794946034}
 --- !u!1 &653260035
 GameObject:
   m_ObjectHideFlags: 0
@@ -8395,7 +8399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.29411766}
+  m_Color: {r: 0, g: 1, b: 0.023376703, a: 0.29411766}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8470,7 +8474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.29411766}
+  m_Color: {r: 0, g: 1, b: 0.023376703, a: 0.29411766}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14507,6 +14511,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6108438f5e38d0b4b8fed06af6b74254, type: 3}
+--- !u!114 &997427814 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 469152442901536540, guid: ae091588df359794dbd66d11f6b8d1b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 469152442802608156}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71b11ad2640d2a145b208e2cdc659d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &997427818 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 469152442901536543, guid: ae091588df359794dbd66d11f6b8d1b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 469152442802608156}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e87eb80cfbc634599ce9f3dd3b0e97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &999766926
 GameObject:
   m_ObjectHideFlags: 0
@@ -14687,7 +14715,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2752
+  m_Name: pb_Mesh-5051720
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20377,7 +20405,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19188
+  m_Name: pb_Mesh33504
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20646,6 +20674,7 @@ GameObject:
   - component: {fileID: 1366066938}
   - component: {fileID: 1366066940}
   - component: {fileID: 1366066939}
+  - component: {fileID: 1366066941}
   m_Layer: 5
   m_Name: HealthCanvas
   m_TagString: Untagged
@@ -20724,6 +20753,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366066936}
   m_CullTransparentMesh: 0
+--- !u!82 &1366066941
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366066936}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 312f62486ee0c6c45b3c4a5fff9ee4fe, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1372623274
 GameObject:
   m_ObjectHideFlags: 0
@@ -20862,6 +20987,7 @@ MonoBehaviour:
   TracerEffect: {fileID: 7989577672764970850, guid: 2b07df7201fb4834d9907a0cbc7d055e,
     type: 3}
   RaycastDestination: {fileID: 1557424503}
+  <Quality>k__BackingField: 0
   WeaponName: smg
   recoil: {fileID: 1411915541}
   weaponMaxAmmo: 30
@@ -21307,12 +21433,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc1b77a5bc692b4ea5c41191cb40725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height: 25
-  width: 3
-  defaultSpread: 25
-  color: {r: 1, g: 1, b: 1, a: 1}
+  height: 15
+  width: 5
+  defaultSpread: 35
+  color: {r: 0.8584906, g: 0.5223834, b: 0.5223834, a: 1}
   resizeable: 0
-  resizedSpread: 2.5
+  resizedSpread: 35
   resizeSpeed: 2.5
 --- !u!1001 &1486915067
 PrefabInstance:
@@ -21478,6 +21604,7 @@ MonoBehaviour:
   TracerEffect: {fileID: 7989577672764970850, guid: 2b07df7201fb4834d9907a0cbc7d055e,
     type: 3}
   RaycastDestination: {fileID: 1557424503}
+  <Quality>k__BackingField: 0
   WeaponName: shotgun
   recoil: {fileID: 1555174799}
   weaponMaxAmmo: 12
@@ -21605,7 +21732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.29411766}
+  m_Color: {r: 0, g: 1, b: 0.023376703, a: 0.29411766}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -22081,16 +22208,19 @@ MonoBehaviour:
   _onDestroy: 0
   uiCanvas: {fileID: 307215523}
   gameCanvas: {fileID: 1482123587}
-  roundManager: {fileID: 0}
+  roundManager: {fileID: 1715150813}
   playerSpawnPoint: {fileID: 1446966913}
-  SpawnPointManager: {fileID: 0}
-  LimbSpawner: {fileID: 1715150812}
-  ZombieManager: {fileID: 0}
-  EnvironmentManager: {fileID: 0}
-  Pathfinding: {fileID: 0}
-  LevelManager: {fileID: 2053539583}
-  EventManager: {fileID: 0}
-  BuildMode: 0
+  <PrintGameUi>k__BackingField: {fileID: 649439383}
+  <SpawnPointManager>k__BackingField: {fileID: 1787597894}
+  <LimbSpawner>k__BackingField: {fileID: 1715150812}
+  <ZombieManager>k__BackingField: {fileID: 954858386}
+  <EnvironmentManager>k__BackingField: {fileID: 997427814}
+  <Pathfinding>k__BackingField: {fileID: 997427818}
+  <LevelManager>k__BackingField: {fileID: 2053539583}
+  <EventManager>k__BackingField: {fileID: 999766929}
+  <BuildMode>k__BackingField: 0
+  <PlayMode>k__BackingField: 1
+  <MenuMode>k__BackingField: 0
   <BuildSpeed>k__BackingField: 0.5
 --- !u!4 &1715150810
 Transform:
@@ -22501,7 +22631,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19484
+  m_Name: pb_Mesh33802
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27592,7 +27722,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2750
+  m_Name: pb_Mesh-5051718
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -40080,13 +40210,13 @@ PrefabInstance:
         type: 3}
       propertyPath: Levels.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: de32ff12f36d4474c87fc806acb52cb7,
+      objectReference: {fileID: 11400000, guid: 7d16174159038c041abddbde56ad453d,
         type: 2}
     - target: {fileID: 469152442901536483, guid: ae091588df359794dbd66d11f6b8d1b9,
         type: 3}
       propertyPath: levelSo
       value: 
-      objectReference: {fileID: 11400000, guid: de32ff12f36d4474c87fc806acb52cb7,
+      objectReference: {fileID: 11400000, guid: 7d16174159038c041abddbde56ad453d,
         type: 2}
     - target: {fileID: 469152442901536483, guid: ae091588df359794dbd66d11f6b8d1b9,
         type: 3}
@@ -61310,6 +61440,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8271040859741350113, guid: 70e5b7544ca128f4ea61692472c54ebb,
+        type: 3}
+      propertyPath: _gameClips.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271040859741350113, guid: 70e5b7544ca128f4ea61692472c54ebb,
+        type: 3}
+      propertyPath: _gameClips.Array.data[9].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0fd41e80da3d32e4f84bd267db9e21b9, type: 3}
+    - target: {fileID: 8271040859741350113, guid: 70e5b7544ca128f4ea61692472c54ebb,
+        type: 3}
+      propertyPath: _gameClips.Array.data[13].name
+      value: LimbSplat
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271040859741350113, guid: 70e5b7544ca128f4ea61692472c54ebb,
+        type: 3}
+      propertyPath: _gameClips.Array.data[13].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ef992251ffd0fa448a786436abade7db, type: 3}
+    - target: {fileID: 8271040859741350113, guid: 70e5b7544ca128f4ea61692472c54ebb,
+        type: 3}
+      propertyPath: _gameClips.Array.data[1].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 13df004749c429c4d8e9f5091e2c34e3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70e5b7544ca128f4ea61692472c54ebb, type: 3}
 --- !u!82 &8503399256756620899

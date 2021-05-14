@@ -47,25 +47,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameClips:
   - name: ShotgunFire
-    audioClip: {fileID: 8300000, guid: e1b6aede700663e4c8520ca118b81b8e, type: 3}
+    audioClip: {fileID: 8300000, guid: 2f78752f322127a4787fd4b869a93c7d, type: 3}
   - name: HeadshotSplat
-    audioClip: {fileID: 8300000, guid: 13df004749c429c4d8e9f5091e2c34e3, type: 3}
+    audioClip: {fileID: 0}
   - name: ButtonClick
-    audioClip: {fileID: 8300000, guid: 312f62486ee0c6c45b3c4a5fff9ee4fe, type: 3}
+    audioClip: {fileID: 8300000, guid: bd2c6e01a1aec744b90f4f45fad87229, type: 3}
   - name: ButtonHover
-    audioClip: {fileID: 8300000, guid: 769d7f9a33fe18d45ad6bc722a2f4346, type: 3}
+    audioClip: {fileID: 8300000, guid: 5ff90594ed26fc344988e6f14d11d17d, type: 3}
   - name: RpgExplosion
     audioClip: {fileID: 8300000, guid: ce33468b66dc42f41b03ea9bdf6daed9, type: 3}
-  - name: RpgLaunch
+  - name: RPGFire
     audioClip: {fileID: 8300000, guid: cde9ed66238646946bea7fbeac1e3a89, type: 3}
   - name: RpgReload
     audioClip: {fileID: 8300000, guid: 35fe751bb5864eb4eb44383a0b8854fa, type: 3}
-  - name: SMGReload
-    audioClip: {fileID: 8300000, guid: 35fe751bb5864eb4eb44383a0b8854fa, type: 3}
+  - name: PlayGameButtonClick
+    audioClip: {fileID: 8300000, guid: 312f62486ee0c6c45b3c4a5fff9ee4fe, type: 3}
   - name: ClipEmpty
-    audioClip: {fileID: 8300000, guid: ffc69759212db97459023a8ae713f6ab, type: 3}
+    audioClip: {fileID: 8300000, guid: 5a92369634aeb7d43b52bc3a1f6eb0a4, type: 3}
   - name: EquipWeapon
-    audioClip: {fileID: 8300000, guid: 0fd41e80da3d32e4f84bd267db9e21b9, type: 3}
+    audioClip: {fileID: 0}
   - name: SmgFire
     audioClip: {fileID: 8300000, guid: d48e9745a63f5324a96b1cc79e00bab5, type: 3}
   - name: SmgReload
@@ -86,7 +86,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -182,7 +182,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 775165cd3a2995f48b44c4f71289649b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.125
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -12,6 +12,7 @@ public abstract class RaycastWeapon : MonoBehaviour
     public ParticleSystem HitEffect;
     public TrailRenderer TracerEffect;
     public Transform RaycastDestination;
+    [field:SerializeField] public int Quality { get; set; }
     protected Ray ray;
     private RaycastHit hitInfo;
     public string WeaponName;
@@ -96,7 +97,8 @@ public abstract class RaycastWeapon : MonoBehaviour
         set => weaponSpareAmmo = value;
     }
 
-    
+    public bool WeaponIsSet { get; set; }
+
     #endregion
     private void Awake()
     {
@@ -106,6 +108,7 @@ public abstract class RaycastWeapon : MonoBehaviour
     
     protected void Start()
     {
+        WeaponIsSet = false;
         Reload();
         WeaponIsLoaded = true;
         weaponCurrentammo = weaponMaxAmmo;
@@ -140,6 +143,7 @@ public abstract class RaycastWeapon : MonoBehaviour
         var tracer = InstantiateTrailRenderer();
         if(Physics.Raycast(ray,out hitInfo))
         {
+            Debug.Log(hitInfo.collider.name);
             SetHitEffects();
             tracer.transform.position = hitInfo.point;
             recoil.GenerateRecoil(WeaponName);
@@ -159,7 +163,7 @@ public abstract class RaycastWeapon : MonoBehaviour
 
     protected void HitEnemy()
     {
-        hitInfo.collider.GetComponentInParent<ITakeDamage>().TakeDamage(100, ray.direction);
+        hitInfo.collider.GetComponentInParent<ITakeDamage>().TakeDamage(weaponDamage, ray.direction);
         if (hitInfo.collider.CompareTag("DestructibleLimb"))
         {
             hitInfo.collider.GetComponentInParent<IDestroyLimb>().DestroyLimb(hitInfo.collider.name, hitInfo.point);
@@ -251,28 +255,36 @@ public abstract class RaycastWeapon : MonoBehaviour
     }
     //refactor this in to non mono class
     //multiply and divide by an input to recieve an output
-    public void SetWeaponState(float qualityModifierOld)
+    public void SetWeaponState(int quality)
     {
-        // var qualityModifier = qualityModifierOld;
-        // qualityModifier += qualityModifier + 1;
-        // weaponDamage *= qualityModifier;    
-        // weaponMaxAmmo *= qualityModifier;
-        // weaponSpareAmmo *= qualityModifier;
-        // weaponCurrentammo *= qualityModifier;
-        // weaponReloadTime /= qualityModifier;
-        // weaponReloadTimer /= qualityModifier;
-        // Mathf.RoundToInt(weaponDamage);
-        // Mathf.RoundToInt(weaponMaxAmmo);
-        // Mathf.RoundToInt(weaponSpareAmmo);
+        Debug.Log(WeaponIsSet);
+        if (WeaponIsSet == false)
+        {
+            ResetWeaponState();
+            Quality = quality;
+            GameManager.instance.PrintGameUi.SetWeaponColour(weaponSlot,quality);
+            weaponDamage *= quality + 1;    
+            weaponMaxAmmo *= quality + 1; 
+            weaponSpareAmmo *= quality + 1; 
+            weaponCurrentammo *= quality + 1; 
+            weaponReloadTime /= quality + 1; 
+            weaponReloadTimer /= quality + 1; 
+            Mathf.RoundToInt(weaponDamage);
+            Mathf.RoundToInt(weaponMaxAmmo);
+            Mathf.RoundToInt(weaponSpareAmmo);
+            WeaponIsSet = true;
+        }
     }
 
     public void ResetWeaponState()
     {
         weaponCurrentammo = ReturnDefaultValue(2);
-       weaponDamage = ReturnDefaultValue(1);
-       weaponMaxAmmo = ReturnDefaultValue(2);
+        weaponDamage = ReturnDefaultValue(1);
+        weaponMaxAmmo = ReturnDefaultValue(2);
         weaponSpareAmmo = ReturnDefaultValue(3);
         weaponReloadTime = ReturnDefaultValue(4);
         weaponReloadTimer = ReturnDefaultValue(5);
     }
+
+
 }

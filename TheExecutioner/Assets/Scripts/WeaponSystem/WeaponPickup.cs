@@ -9,8 +9,9 @@ public class WeaponPickup : MonoBehaviour
 {
     [SerializeField] private GameObject[] GodBeams;
     private int quality;
-    private RaycastWeapon raycastWeapon;
+    public bool EventReward { get; set; }
     public RaycastWeapon weapon { get; set; }
+
 
     /// <summary>
     /// Reference the weapon to pickup
@@ -24,8 +25,15 @@ public class WeaponPickup : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        quality = GetQuality();
-        SetGodBeamColour(quality);
+        if (!EventReward)
+        {
+            quality = GetQuality();
+            SetGodBeamColour(quality);
+            
+        }
+        weapon.Quality = quality;
+        weapon.WeaponIsSet = false;
+
     }
     private void Update()
     {
@@ -59,16 +67,11 @@ public class WeaponPickup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             ActiveWeapon activeWeapon = other.GetComponent<ActiveWeapon>();
-            Debug.Log(activeWeapon);
             if (activeWeapon)
             {
-                
                 weapon.WeaponIsReloading = false;
-                
+                weapon.Quality = quality;
                 activeWeapon.EquipWeapon(weapon);
-                weapon.ResetWeaponState();
-                weapon.SetWeaponState(quality);
-                
                 if(!weapon.WeaponIsLoaded)
                     weapon.Reload();
                 

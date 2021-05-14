@@ -25,7 +25,6 @@ public class PlatformBridgeManager : MonoBehaviour
     {
         if (GameManager.instance.BuildMode)
             duration = GameManager.instance.BuildSpeed;
-
     }
     /// <summary>
     /// Sets the bridge at the height passed as a parameter

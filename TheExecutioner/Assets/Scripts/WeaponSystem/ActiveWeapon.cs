@@ -72,7 +72,7 @@ public class ActiveWeapon : MonoBehaviour
                 CurrentRaycastWeapon.FireWeapon();
                 RigController.Play("weapon_"+CurrentRaycastWeapon.WeaponName+"_fire",0);
             }
-            else
+            else if(Input.GetKey(KeyCode.Mouse0) && !CurrentRaycastWeapon.CanFire())
             {
                 AudioManager.Instance.PlaySound("ClipEmpty");
             }
@@ -146,5 +146,13 @@ public class ActiveWeapon : MonoBehaviour
         activeWeaponIndex = (int) weapon.weaponSlot;    
         WeaponSlots[activeWeaponIndex].gameObject.SetActive(true);
         GetComponent<EquippedWeapon>().DisplayEquippedWeapon((int)CurrentRaycastWeapon.weaponSlot);
+        CurrentRaycastWeapon.WeaponIsSet = weapon.WeaponIsSet;
+        CurrentRaycastWeapon.SetWeaponState(weapon.Quality);
+        
+
+
+
+
+
     }
 }

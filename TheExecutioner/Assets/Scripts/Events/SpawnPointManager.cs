@@ -34,12 +34,16 @@ public class SpawnPointManager : MonoBehaviour
     /// set the weapon state to the input quality
     /// </summary>
     /// <param name="spawnPoint"></param>
-    public GameObject SpawnWeapon(int quality,Transform spawnPoint)
+    public GameObject SpawnWeapon(int quality,Transform spawnPoint,bool eventReward)
     {
         var rand = Random.Range(0, weapons.Count);
         var randomWeapon = weapons[rand];
         var weapon = Instantiate(randomWeapon,spawnPoint.position, quaternion.identity);
-        weapon.GetComponent<WeaponPickup>().SetGodBeamColour(quality);
+        var pickup =  weapon.GetComponent<WeaponPickup>();
+        pickup.EventReward = eventReward;
+        
+        Debug.Log(quality);
+        pickup.SetGodBeamColour(quality);
         return weapon.gameObject;
     }
     /// <summary>

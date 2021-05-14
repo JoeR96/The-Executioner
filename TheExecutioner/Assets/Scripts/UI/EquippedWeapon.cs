@@ -6,10 +6,7 @@ using UnityEngine.UI;
 public class EquippedWeapon : MonoBehaviour
 {
     [SerializeField] private Image[] weapons = new Image[3];
-    
-    public int CurrentWeapon { get; set; }
 
-    
     public void DisplayEquippedWeapon(int index)
     {
         for (int i = 0; i < weapons.Length; i++)

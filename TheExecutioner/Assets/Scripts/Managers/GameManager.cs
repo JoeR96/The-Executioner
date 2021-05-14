@@ -9,30 +9,21 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject gameCanvas;
     [SerializeField] public RoundManager roundManager;
     [SerializeField] public GameObject playerSpawnPoint;
-    public SpawnPointManager SpawnPointManager;
-    public LimbSpawner LimbSpawner;
-    public ZombieManager ZombieManager;
-    public EnvironmentManager EnvironmentManager;
-    public Pathfinding Pathfinding;
+    
+    [field: SerializeField] public PrintGameUI PrintGameUi { get; set; }
+    [field: SerializeField] public SpawnPointManager SpawnPointManager { get; set; }
+    [field: SerializeField] public LimbSpawner LimbSpawner { get; set; }
+    [field: SerializeField] public ZombieManager ZombieManager { get; set; }
+    [field: SerializeField] public EnvironmentManager EnvironmentManager { get; set; }
+    [field: SerializeField] public Pathfinding Pathfinding{ get; set; }
     [field:SerializeField] private LevelManager LevelManager { get; set; }
-    public EventManager EventManager;
+    [field:SerializeField] public EventManager EventManager { get; set; }
     [field: SerializeField] public bool BuildMode { get; set; }
     [field: SerializeField] public bool PlayMode { get; set; }
     [field: SerializeField] public bool MenuMode { get; set; }
     [field: SerializeField]public float BuildSpeed { get; set; }
 
-    public override void Awake()
-    {
-        base.Awake();
-        roundManager = GetComponent<RoundManager>();
-        EventManager = GetComponentInChildren<EventManager>();
-        EnvironmentManager = GetComponentInChildren<EnvironmentManager>();
-        ZombieManager = GetComponentInChildren<ZombieManager>();
-        LimbSpawner = GetComponentInChildren<LimbSpawner>();
-        Pathfinding = GetComponentInChildren<Pathfinding>();
-        SpawnPointManager = GetComponentInChildren<SpawnPointManager>();
-        
-    }
+
     private void Start()
     {
         if (PlayMode)

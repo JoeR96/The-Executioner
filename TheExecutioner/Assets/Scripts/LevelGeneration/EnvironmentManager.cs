@@ -80,6 +80,10 @@ public class EnvironmentManager : MonoBehaviour
             if (!node.PlatformManager.PlatformStateManager.PlatformIsPlayable)
             {
                 node.PlatformManager.PlatformHeightManager.SetPlatformHeight(platformHeight);
+                node.PlatformManager.PlatformSpawnManager.DeactivateSpawnPoint();
+                node.PlatformManager.PlatformSpawnManager.DeactivateEventSpawnPoint();
+                node.PlatformManager.PlatformRampManager.ActivateRamp(false);
+                node.PlatformManager.PlatformRampManager.PlatformRampActive = false;
             }
             else
             {

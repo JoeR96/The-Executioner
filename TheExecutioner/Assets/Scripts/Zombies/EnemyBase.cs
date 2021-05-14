@@ -78,7 +78,6 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     private void KillZombie()
     {
         GameManager.instance.EventManager.zombieSpawner.RemoveZombieFromList(gameObject);
-        Destroy(gameObject);
         //ObjectPooler.instance.ReturnObject(gameObject,ZombieType);
     }
     /// <summary>
@@ -119,8 +118,9 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
                     {
                         _aiAgent.Ragdoll.ActivateRagDoll();
                         eventRef.EventTargetKillCountManager.IncreaseKillCount();
-                        StartCoroutine(eventRef.KillSacrificeEventEnemy(transform));
                         StartCoroutine(Die(3f));
+                        StartCoroutine(eventRef.KillSacrificeEventEnemy(transform));
+                        
                         break;
                     }
                 }
@@ -186,13 +186,14 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         limb.GetComponent<Rigidbody>().AddForce(-direction);
         if (limbName == "Head")
         {
+            AudioManager.Instance.PlaySound("HeadshotSplat");
             _aiAgent.Ragdoll.ActivateRagDoll();
             var random = Random.Range(0, 3);
-
-            if (random == 1)
-            {
-                AudioManager.Instance.PlaySound("HeadshotSplat");
-            }
+       
+        }
+        else
+        {
+            AudioManager.Instance.PlaySound("LimbSplat");
         }
 
         LimbManager.PlayParticleAtLimb(limbName);
