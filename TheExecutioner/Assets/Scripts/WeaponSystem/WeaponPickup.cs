@@ -10,18 +10,17 @@ public class WeaponPickup : MonoBehaviour
     [SerializeField] private GameObject[] GodBeams;
     private int quality;
     public bool EventReward { get; set; }
-    public RaycastWeapon weapon { get; set; }
-
+    public RaycastWeapon Weapon { get; set; }
 
     /// <summary>
     /// Reference the weapon to pickup
     /// </summary>
     private void Awake()
     {
-        weapon = GetComponentInChildren<RaycastWeapon>();
+        Weapon = GetComponentInChildren<RaycastWeapon>();
     }
     /// <summary>
-    /// Set the weapon quality
+    /// Set the weapon quality randomly if this object wasnt spawned by an event
     /// </summary>
     private void Start()
     {
@@ -31,13 +30,13 @@ public class WeaponPickup : MonoBehaviour
             SetGodBeamColour(quality);
             
         }
-        weapon.Quality = quality;
-        weapon.WeaponIsSet = false;
+        Weapon.Quality = quality;
+        Weapon.WeaponIsSet = false;
 
     }
     private void Update()
     {
-        weapon.gameObject.transform.Rotate( new Vector3(0, 1f,0) );
+        Weapon.gameObject.transform.Rotate( new Vector3(0, 1f,0) );
     }
     /// <summary>
     /// Randomly choose a colour quality between green, blue and purple
@@ -61,7 +60,6 @@ public class WeaponPickup : MonoBehaviour
         GodBeams[index].gameObject.SetActive(true);
         quality = index;
     }
-    
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -69,14 +67,15 @@ public class WeaponPickup : MonoBehaviour
             ActiveWeapon activeWeapon = other.GetComponent<ActiveWeapon>();
             if (activeWeapon)
             {
-                weapon.WeaponIsReloading = false;
-                weapon.Quality = quality;
-                activeWeapon.EquipWeapon(weapon);
-                if(!weapon.WeaponIsLoaded)
-                    weapon.Reload();
+                Weapon.WeaponIsReloading = false;
+                Weapon.Quality = quality;
+                activeWeapon.EquipWeapon(Weapon);
                 
-                if(weapon.GetComponent<RPG>())
-                    weapon.Reload();
+                if(!Weapon.WeaponIsLoaded)
+                    Weapon.Reload();
+                
+                if(Weapon.GetComponent<RPG>())
+                    Weapon.Reload();
             }
             Destroy(gameObject);
         }

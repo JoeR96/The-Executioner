@@ -20979,21 +20979,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb8cce51edb167449ec80396278734b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponSlot: 1
+  WeaponSlot: 0
   IsFiring: 0
   RaycastOrigin: {fileID: 256566885}
   MuzzleFlash: {fileID: 2123310913}
   HitEffect: {fileID: 2941651}
-  TracerEffect: {fileID: 7989577672764970850, guid: 2b07df7201fb4834d9907a0cbc7d055e,
-    type: 3}
+  TracerEffect: {fileID: 0}
   RaycastDestination: {fileID: 1557424503}
   <Quality>k__BackingField: 0
   WeaponName: smg
   recoil: {fileID: 1411915541}
   weaponMaxAmmo: 30
   weaponSpareAmmo: 180
-  weaponReloadTime: 1.25
-  weaponDamage: 15
+  weaponReloadTime: 1
+  weaponDamage: 25
   weaponFireRate: 0.1
   <WeaponIsReloading>k__BackingField: 0
   weaponCurrentammo: 30
@@ -21596,13 +21595,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9843b93945e0a0e4a879c456c29ed536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponSlot: 0
+  WeaponSlot: 0
   IsFiring: 0
   RaycastOrigin: {fileID: 1034501056}
   MuzzleFlash: {fileID: 11665590}
   HitEffect: {fileID: 872293442}
-  TracerEffect: {fileID: 7989577672764970850, guid: 2b07df7201fb4834d9907a0cbc7d055e,
-    type: 3}
+  TracerEffect: {fileID: 0}
   RaycastDestination: {fileID: 1557424503}
   <Quality>k__BackingField: 0
   WeaponName: shotgun
@@ -28956,6 +28954,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198103514842770696, guid: 24b82347924701148a13c746edfb6b22,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198646725254718190, guid: 24b82347924701148a13c746edfb6b22,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 198680025581574516, guid: 24b82347924701148a13c746edfb6b22,
         type: 3}
       propertyPath: looping
@@ -28975,6 +28983,16 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198680025581574516, guid: 24b82347924701148a13c746edfb6b22,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198763882716928616, guid: 24b82347924701148a13c746edfb6b22,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 199156021678073710, guid: 24b82347924701148a13c746edfb6b22,
         type: 3}
@@ -40682,7 +40700,7 @@ PrefabInstance:
     - target: {fileID: 879179714688670151, guid: 017f6bd101359ca46bd973c1f6825aad,
         type: 3}
       propertyPath: weaponDamage
-      value: 15
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 879179714688670151, guid: 017f6bd101359ca46bd973c1f6825aad,
         type: 3}
@@ -61049,6 +61067,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1240353083}
     m_Modifications:
+    - target: {fileID: 2445520164713175020, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
+      propertyPath: WeaponSlot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2445520164713175020, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
+      propertyPath: RaycastOrigin
+      value: 
+      objectReference: {fileID: 256566885}
+    - target: {fileID: 2445520164713175020, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
+      propertyPath: MuzzleFlash
+      value: 
+      objectReference: {fileID: 2123310913}
+    - target: {fileID: 2445520164713175020, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
+      propertyPath: HitEffect
+      value: 
+      objectReference: {fileID: 2941651}
+    - target: {fileID: 2445520164713175020, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
+      propertyPath: RaycastDestination
+      value: 
+      objectReference: {fileID: 1557424503}
+    - target: {fileID: 2445520164713175020, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
+      propertyPath: WeaponName
+      value: smg
+      objectReference: {fileID: 0}
+    - target: {fileID: 2445520164713175020, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
+      propertyPath: recoil
+      value: 
+      objectReference: {fileID: 1411915541}
+    - target: {fileID: 2445520164713175020, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
+      propertyPath: weaponDamage
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7467097122523067651, guid: dc422aec8ba471640a3d5063ccc0d2b4,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -61191,6 +61249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7468024436314017236, guid: dc422aec8ba471640a3d5063ccc0d2b4, type: 3}
+    - {fileID: 2445520164713175020, guid: dc422aec8ba471640a3d5063ccc0d2b4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dc422aec8ba471640a3d5063ccc0d2b4, type: 3}
 --- !u!1001 &7685821370511966831
 PrefabInstance:
