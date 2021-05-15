@@ -13,6 +13,7 @@ public class RPG : RaycastWeapon
     {
         fireWeapon = "RpgFire";
         reloadWeapon = "RpgReload";
+        TracerEffect = null;
         WeaponIsLoaded = false;
     }
 
@@ -64,6 +65,5 @@ public class RPG : RaycastWeapon
         Reload();
         WeaponIsLoaded = true;
     }
-
 
 }

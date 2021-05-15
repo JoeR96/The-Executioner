@@ -140,14 +140,19 @@ public class ActiveWeapon : MonoBehaviour
     {
         AudioManager.Instance.PlaySound("EquipWeapon");
         CurrentRaycastWeapon.gameObject.SetActive(false);
-        SetActiveWeapon(weapon.WeaponSlot);
+        SetActiveWeapon(weapon.weaponSlot);
         CurrentRaycastWeapon.gameObject.SetActive(true);
-        Debug.Log(weapon.WeaponName);
         RigController.Play("weapon_"+weapon.WeaponName+"_equip",0);
-        activeWeaponIndex = (int) weapon.WeaponSlot;    
+        activeWeaponIndex = (int) weapon.weaponSlot;    
         WeaponSlots[activeWeaponIndex].gameObject.SetActive(true);
-        GetComponent<EquippedWeapon>().DisplayEquippedWeapon((int)CurrentRaycastWeapon.WeaponSlot);
+        GetComponent<EquippedWeapon>().DisplayEquippedWeapon((int)CurrentRaycastWeapon.weaponSlot);
         CurrentRaycastWeapon.WeaponIsSet = weapon.WeaponIsSet;
         CurrentRaycastWeapon.SetWeaponState(weapon.Quality);
+        
+
+
+
+
+
     }
 }

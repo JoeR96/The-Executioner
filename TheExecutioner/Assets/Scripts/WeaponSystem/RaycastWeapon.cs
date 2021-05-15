@@ -5,21 +5,7 @@ using UnityEngine;
 
 public abstract class RaycastWeapon : MonoBehaviour
 {
-    public ActiveWeapon.WeaponSlot WeaponSlot;
-    public bool IsFiring;
-    public Transform RaycastOrigin;
-    public ParticleSystem MuzzleFlash;
-    public ParticleSystem HitEffect;
-    public Transform RaycastDestination;
-    [field:SerializeField] public int Quality { get; set; }
-    protected Ray ray;
-    private RaycastHit hitInfo;
-    public string WeaponName;
-    public weaponRecoil recoil;
-    protected string reloadWeapon;
-    protected string fireWeapon;
-    protected string equipWeapon;
-    
+
     
     #region weaponvariables
     [Header("Utility ")][Space(10)]
@@ -52,10 +38,28 @@ public abstract class RaycastWeapon : MonoBehaviour
     
     protected string weaponFiringClip;
     protected string weaponReloadingClip;
-  
+    protected string weaponName;
+    
     [SerializeField]
     protected float weaponCurrentammo;
+    
+    public ActiveWeapon.WeaponSlot weaponSlot;
+    public bool IsFiring;
+    public Transform RaycastOrigin;
+    public ParticleSystem MuzzleFlash;
+    public ParticleSystem HitEffect;
+    public TrailRenderer TracerEffect;
+    public Transform RaycastDestination;
+    [field:SerializeField] public int Quality { get; set; }
+    protected Ray ray;
+    private RaycastHit hitInfo;
+    public string WeaponName;
+    public weaponRecoil recoil;
+    protected string reloadWeapon;
+    protected string fireWeapon;
+    protected string equipWeapon;
     #endregion
+
     #region properties
     
     public float WeaponCurrentammo
@@ -100,11 +104,15 @@ public abstract class RaycastWeapon : MonoBehaviour
     {
         recoil = GetComponent<weaponRecoil>();
     }
+    
     protected void Start()
     {
         WeaponIsSet = false;
         Reload();
+        
         WeaponIsLoaded = true;
+    
+        
         weaponCurrentammo = weaponMaxAmmo;
         WeaponIsReloading = false;
         weaponSpareAmmo = weaponMaxAmmo * 2;
@@ -114,6 +122,7 @@ public abstract class RaycastWeapon : MonoBehaviour
         defaultValues[4] = weaponReloadTime;
         defaultValues[5] = weaponReloadTimer;
     }
+
     protected void Update()
     {
         if (Input.GetKeyUp(KeyCode.Mouse0))
@@ -121,6 +130,7 @@ public abstract class RaycastWeapon : MonoBehaviour
         weaponReloadTimer += Time.deltaTime;
         weaponFireTimer += Time.deltaTime;
     }
+
     protected void OnEnable()
     {
         WeaponIsReloading = false;
@@ -132,10 +142,12 @@ public abstract class RaycastWeapon : MonoBehaviour
         SetRaycastPositions();
         AudioManager.Instance.PlaySound(fireWeapon);
         MuzzleFlash.Emit(1);
+        var tracer = InstantiateTrailRenderer();
         if(Physics.Raycast(ray,out hitInfo))
         {
             Debug.Log(hitInfo.collider.name);
             SetHitEffects();
+            tracer.transform.position = hitInfo.point;
             recoil.GenerateRecoil(WeaponName);
             if (hitInfo.collider.GetComponentInParent<ITakeDamage>() != null)
             {
@@ -143,12 +155,14 @@ public abstract class RaycastWeapon : MonoBehaviour
             }
         }
     }
-    /// <summary>
-    /// Access Take damage interface
-    /// Deal damage and direction of impact
-    /// if a destructible limb is hit
-    /// Destroy the limb through the limb interface
-    /// </summary>
+
+    protected TrailRenderer InstantiateTrailRenderer()
+    {
+        var tracer = Instantiate(TracerEffect, ray.origin, quaternion.identity);
+        tracer.AddPosition(ray.origin);
+        return tracer;
+    }
+
     protected void HitEnemy()
     {
         hitInfo.collider.GetComponentInParent<ITakeDamage>().TakeDamage(weaponDamage, ray.direction);
@@ -157,16 +171,14 @@ public abstract class RaycastWeapon : MonoBehaviour
             hitInfo.collider.GetComponentInParent<IDestroyLimb>().DestroyLimb(hitInfo.collider.name, hitInfo.point);
         }
     }
-    /// <summary>
-    /// Set impact particle hit position
-    /// Play one particle
-    /// </summary>
+
     protected void SetHitEffects()
     {
         HitEffect.transform.position = hitInfo.point;
         HitEffect.transform.forward = hitInfo.normal;
         HitEffect.Emit(1);
     }
+
     protected virtual void SetWeaponProperties()
     {
         weaponFireTimer = 0f;
@@ -174,11 +186,13 @@ public abstract class RaycastWeapon : MonoBehaviour
         recoil.Reset();
         IsFiring = true;
     }
+
     protected void SetRaycastPositions()
     {
         ray.origin = RaycastOrigin.position;
         ray.direction = RaycastDestination.position - RaycastOrigin.position;
     }
+
     protected virtual IEnumerator ReloadWeapon()
     {
         var test = FindObjectOfType<ActiveWeapon>();
@@ -188,6 +202,7 @@ public abstract class RaycastWeapon : MonoBehaviour
         Reload();
         
     }
+    
     public bool FireRateTimer()
     {
         if (weaponFireTimer < weaponFireRate)
@@ -197,12 +212,18 @@ public abstract class RaycastWeapon : MonoBehaviour
 
         return true;
     }
-    /// <summary>
-    /// Return if there is no ammo left
-    /// Play the reload sound
-    /// Add the required amount of ammo
-    /// remove the added ammo from the spare ammo
-    /// </summary>
+
+    protected bool Reloading()
+    {
+        weaponReloadTimer -= Time.deltaTime;
+        if (weaponReloadTimer < weaponReloadTime)
+        {
+            return false;
+        }
+        
+        return true;
+    }
+
     public virtual void Reload()
     {
         WeaponIsReloading = false;
@@ -220,10 +241,7 @@ public abstract class RaycastWeapon : MonoBehaviour
             weaponSpareAmmo--;
         }
     }
-    /// <summary>
-    /// Return a boolean if the waepon is not 
-    /// </summary>
-    /// <returns></returns>
+
     public bool CanFire()
     {
         if (!WeaponIsReloading && FireRateTimer() && weaponCurrentammo != 0)
@@ -233,42 +251,36 @@ public abstract class RaycastWeapon : MonoBehaviour
     }
     #endregion
 
-    #region WeaponState
-    /// <summary>
-    /// Return a value of the weapon stats array through an index
-    /// </summary>
-    /// <param name="index"></param>
-    /// <returns></returns>
     public float ReturnDefaultValue(int index)
     {
         return defaultValues[index];
     }
-    /// <summary>
-    /// If the weapon has not had its stats set
-    /// Set each  state using the quality modifier
-    /// the + 1 is added for scaling reasons aswell as to ignore multiplying by 0
-    /// </summary>
-    /// <param name="quality"></param>
+    //refactor this in to non mono class
+    //multiply and divide by an input to recieve an output
     public void SetWeaponState(int quality)
     {
         if (WeaponIsSet == false)
         {
             ResetWeaponState();
             Quality = quality;
-            GameManager.instance.PrintGameUi.SetWeaponColour(WeaponSlot,quality);
-            weaponDamage *= quality + 1;    
+            GameManager.instance.PrintGameUi.SetWeaponColour(weaponSlot,quality);
+            weaponDamage *= quality + 1;
+            if (WeaponName != "RPG")
+            {
+                weaponCurrentammo *= quality + 1; 
+             
+            }
             weaponMaxAmmo *= quality + 1; 
-            weaponSpareAmmo *= quality + 1; 
-            weaponCurrentammo *= quality + 1; 
+            weaponSpareAmmo *= quality + 1;
             weaponReloadTime /= quality + 1; 
             weaponReloadTimer /= quality + 1; 
-   
+            Mathf.RoundToInt(weaponDamage);
+            Mathf.RoundToInt(weaponMaxAmmo);
+            Mathf.RoundToInt(weaponSpareAmmo);
             WeaponIsSet = true;
         }
     }
-    /// <summary>
-    /// Reset each stat using the default value index
-    /// </summary>
+
     public void ResetWeaponState()
     {
         weaponCurrentammo = ReturnDefaultValue(2);
@@ -278,8 +290,6 @@ public abstract class RaycastWeapon : MonoBehaviour
         weaponReloadTime = ReturnDefaultValue(4);
         weaponReloadTimer = ReturnDefaultValue(5);
     }
-    #endregion
-
 
 
 }

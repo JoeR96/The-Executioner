@@ -9888,8 +9888,6 @@ MonoBehaviour:
   - {fileID: 8136594741232330766}
   - {fileID: 8136594741361239118}
   - {fileID: 8136594740606740608}
-  quality: 0
-  raycastWeapon: {fileID: 4197880724487614216}
 --- !u!1 &2623436778210493108
 GameObject:
   m_ObjectHideFlags: 0
@@ -10087,6 +10085,7 @@ MonoBehaviour:
   HitEffect: {fileID: 0}
   TracerEffect: {fileID: 0}
   RaycastDestination: {fileID: 0}
+  <Quality>k__BackingField: 0
   WeaponName: RPG
   recoil: {fileID: 4197880724487614230}
   weaponMaxAmmo: 1
@@ -10095,7 +10094,7 @@ MonoBehaviour:
   weaponDamage: 49.4
   weaponFireRate: 0.125
   <WeaponIsReloading>k__BackingField: 0
-  weaponCurrentammo: 0
+  weaponCurrentammo: 1
   rocketPrefab: {fileID: 4146537175756036855, guid: 8d7eb8ed3acd3d34e9569aed85acf1f3,
     type: 3}
   activeRocket: {fileID: 0}
