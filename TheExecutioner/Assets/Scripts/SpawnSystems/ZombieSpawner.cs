@@ -26,6 +26,7 @@ public class ZombieSpawner : MonoBehaviour
     public GameObject SpawnZombie(Transform location)
     {
         var t = ObjectPooler.instance.GetObject(PoolObjectType.BasicZombie);
+        t.SetActive(true);
         t.transform.SetPositionAndRotation(location.position,quaternion.identity);
         ActiveZombies.Add(t);
         return t;
@@ -39,6 +40,7 @@ public class ZombieSpawner : MonoBehaviour
         var t = ObjectPooler.instance.GetObject(PoolObjectType.BasicZombie);
         t.transform.SetPositionAndRotation(location.position,quaternion.identity);
         ActiveZombies.Add(t);
+        t.SetActive(true);
         return t;
     }
     /// <summary>

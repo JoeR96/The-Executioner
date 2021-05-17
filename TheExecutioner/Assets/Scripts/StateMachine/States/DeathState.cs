@@ -20,14 +20,12 @@ public class DeathState : IState
             agent.navMeshAgent.enabled = false;
         }
 
-        agent.EnemyBase.ActiveSkin.gameObject.SetActive(false);
+        //agent.EnemyBase.ActiveSkin.gameObject.SetActive(false);
         agent.EnemyBase.LimbManager.PlayDeathParticles();
         agent.Ragdoll.ActivateRagDoll();
         Direction.y = 1;
         agent.Ragdoll.ApplyForce(Direction * agent.AgentConfig.DieForce);
         agent.Mesh.updateWhenOffscreen = true;
-        agent.StartCoroutine(agent.EnemyBase.Die(1f));
-
     }
 
     public void Update(AiAgent agent)

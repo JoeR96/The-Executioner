@@ -19023,98 +19023,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!1 &4797395461745816827
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9212600470197197976}
-  - component: {fileID: 8021521037102547487}
-  m_Layer: 12
-  m_Name: Area Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9212600470197197976
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4797395461745816827}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7471167318697791985}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!108 &8021521037102547487
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4797395461745816827}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 2
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 2
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!1 &7467097121488370053
 GameObject:
   m_ObjectHideFlags: 0
@@ -48097,7 +48005,6 @@ Transform:
   - {fileID: 7471571830258418321}
   - {fileID: 2941649}
   - {fileID: 2565853332927173452}
-  - {fileID: 9212600470197197976}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48236,6 +48143,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9843b93945e0a0e4a879c456c29ed536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponMaxAmmo: 12
+  weaponSpareAmmo: 24
+  weaponReloadTime: 2
+  weaponDamage: 150
+  weaponFireRate: 0.26
+  <WeaponIsReloading>k__BackingField: 0
+  weaponCurrentammo: 12
   weaponSlot: 0
   IsFiring: 0
   RaycastOrigin: {fileID: 0}
@@ -48247,13 +48161,6 @@ MonoBehaviour:
   <Quality>k__BackingField: 0
   WeaponName: shotgun
   recoil: {fileID: 0}
-  weaponMaxAmmo: 12
-  weaponSpareAmmo: 24
-  weaponReloadTime: 2
-  weaponDamage: 150
-  weaponFireRate: 0.26
-  <WeaponIsReloading>k__BackingField: 0
-  weaponCurrentammo: 12
 --- !u!114 &1411915540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48266,6 +48173,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb8cce51edb167449ec80396278734b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponMaxAmmo: 30
+  weaponSpareAmmo: 180
+  weaponReloadTime: 1.25
+  weaponDamage: 15
+  weaponFireRate: 0.1
+  <WeaponIsReloading>k__BackingField: 0
+  weaponCurrentammo: 30
   weaponSlot: 1
   IsFiring: 0
   RaycastOrigin: {fileID: 7467097122523067651}
@@ -48277,13 +48191,6 @@ MonoBehaviour:
   <Quality>k__BackingField: 0
   WeaponName: smg
   recoil: {fileID: 7468024436314017237}
-  weaponMaxAmmo: 30
-  weaponSpareAmmo: 180
-  weaponReloadTime: 1.25
-  weaponDamage: 15
-  weaponFireRate: 0.1
-  <WeaponIsReloading>k__BackingField: 0
-  weaponCurrentammo: 30
 --- !u!1 &7468285234403240813
 GameObject:
   m_ObjectHideFlags: 0

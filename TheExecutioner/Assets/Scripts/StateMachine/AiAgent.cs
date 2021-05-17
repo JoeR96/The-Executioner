@@ -23,6 +23,7 @@ public class AiAgent : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        Debug.Log("AWAKEINGNG");
         EnemyBase = GetComponent<EnemyBase>();
         Animator = GetComponent<Animator>();
         Player = GameObject.FindWithTag("Player").transform;
@@ -37,7 +38,8 @@ public class AiAgent : MonoBehaviour
         StateMachine.RegisterState(new EventState());
         StateMachine.ChangeState(InitialState);
     }
-
+    
+    
     // Update is called once per frame
     void Update()
     {

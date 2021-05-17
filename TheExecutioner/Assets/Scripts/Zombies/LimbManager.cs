@@ -7,7 +7,7 @@ public class LimbManager : MonoBehaviour
 {
     
     [SerializeField] protected ParticleSystem[] _deathParticles;
-    [SerializeField] private GameObject[] _limbs;
+    [field:SerializeField] public GameObject[] Limbs { get; set; }
 
     public Dictionary<string, Transform> DestructibleLimbs { get; } = new Dictionary<string, Transform>();
     private Dictionary<String, ParticleSystem> _destructibleLimbParticle = new Dictionary<string, ParticleSystem>();
@@ -23,7 +23,7 @@ public class LimbManager : MonoBehaviour
 
     private void PopulateLimbDictionary()
     {
-        foreach (var gameobject in _limbs)
+        foreach (var gameobject in Limbs)
         {
             DestructibleLimbs.Add(gameobject.transform.name, gameobject.transform);
         }

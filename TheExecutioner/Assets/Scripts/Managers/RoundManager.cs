@@ -5,15 +5,19 @@ using UnityEngine;
 public class RoundManager : MonoBehaviour
 {
     [SerializeField] private EventManager eventManager;
-    [SerializeField] private ZombieSpawner zombieSpawner;
+    [SerializeField] public ZombieSpawner zombieSpawner;
     [SerializeField] private LevelManager levelManager;
-
+    [SerializeField] private Light areaLight;
     public int CurrentRound { get; set; }
     public int CurrentRoundZombieSpawnCount { get; set; }
     public int CurrentRoundZombieEliteSpawnCount { get; set; }
     private int currentEventSpawnCount;
     private bool roundActive;
 
+    private void Start()
+    {
+        currentEventSpawnCount = 4;
+    }
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.F7))
@@ -32,7 +36,7 @@ public class RoundManager : MonoBehaviour
     public void StartNewRound()
     {
         //levelManager.LoadLevel();
-        levelManager.LoadStage();
+        levelManager.LoadStage(2);
         StartCoroutine(NewRound());
         Invoke("TriggerBoolChange", 10f);
     }
@@ -50,8 +54,21 @@ public class RoundManager : MonoBehaviour
         SetNewRound();
         yield return new WaitForSeconds(3.25f);
         levelManager.BuildNavMesh();
-        if(CurrentRound % 3 == 0)
-            StartCoroutine(StartEvents());
+        yield return new WaitForSeconds(1f);
+        if (CurrentRound % 1 == 0)
+        {
+            areaLight.intensity = 225;
+        }
+        if (CurrentRound % 2 == 0)
+        {
+            //StartCoroutine(StartEvents());
+            areaLight.intensity = 600;
+        }
+        if (CurrentRound % 3 == 0 && CurrentRound % 3 != 0)
+        {
+            areaLight.intensity = 354;
+        }
+        
         StartCoroutine(SpawnWave());
     }
     /// <summary>
@@ -59,7 +76,7 @@ public class RoundManager : MonoBehaviour
     /// </summary>
     private void IncreaseZombieSpawnCount()
     {
-        CurrentRoundZombieSpawnCount += 6;
+        CurrentRoundZombieSpawnCount += 3;
     }
     /// <summary>
     /// Increase the event spawn count

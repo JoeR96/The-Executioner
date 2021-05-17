@@ -136,6 +136,7 @@ public abstract class RaycastWeapon : MonoBehaviour
         WeaponIsReloading = false;
     }
     #region weaponlogic
+    
     public virtual void FireWeapon()
     {
         SetWeaponProperties();
@@ -145,13 +146,17 @@ public abstract class RaycastWeapon : MonoBehaviour
         var tracer = InstantiateTrailRenderer();
         if(Physics.Raycast(ray,out hitInfo))
         {
-            Debug.Log(hitInfo.collider.name);
+            
             SetHitEffects();
             tracer.transform.position = hitInfo.point;
             recoil.GenerateRecoil(WeaponName);
             if (hitInfo.collider.GetComponentInParent<ITakeDamage>() != null)
             {
                 HitEnemy();
+            }
+            else
+            {
+                Debug.Log(hitInfo.collider.name);
             }
         }
     }

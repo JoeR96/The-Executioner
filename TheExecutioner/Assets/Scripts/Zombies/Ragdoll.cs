@@ -10,6 +10,7 @@ public class Ragdoll : MonoBehaviour
     public Rigidbody[] rigidbodies;
     private void Awake()
     {
+        Debug.Log("CHICKENWINGSWEDNESDAY");
         rigidbodies = GetComponentsInChildren<Rigidbody>();
         _animator = GetComponent<Animator>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -28,11 +29,11 @@ public class Ragdoll : MonoBehaviour
         foreach (Rigidbody rb in rigidbodies)
         {
             rb.isKinematic = true;
-        } 
-        // _navMeshAgent.enabled = true;
-        // _animator.enabled = true;
-        // _animator.SetFloat("AnimTime", Random.Range(0.0f,1.0f));
-        
+        }
+        _animator.enabled = true;
+        _navMeshAgent.enabled = true;
+      
+
     }
     /// <summary>
     /// Turn on ragdoll mode

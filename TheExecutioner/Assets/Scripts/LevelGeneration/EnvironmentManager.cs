@@ -45,6 +45,10 @@ public class EnvironmentManager : MonoBehaviour
             {
                 var gridPosition = grid.grid[i, j];
                 gridPosition.PlatformManager.PlatformSpawnManager.PlatformSpawnPointActive = true;
+                var golayers = gridPosition.platform.transform.GetComponentsInChildren(typeof(Transform));
+                foreach (var go in golayers)
+                    go.gameObject.layer = 12;
+
             }
         }
     }

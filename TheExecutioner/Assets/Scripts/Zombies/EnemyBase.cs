@@ -12,13 +12,14 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     [SerializeField] protected Vector3 _explosionScaleSize;
     [SerializeField] protected float _explosionScaleTime;
     [SerializeField] protected float _maxHealth;
+
     
     public LimbManager LimbManager { get; private set; }
     public PoolObjectType ZombieType { get;  }
     public GameObject ActiveSkin;
     internal Animator animator;
     private HealthSystem healthSystem;
-    protected AiAgent _aiAgent;
+    [SerializeField] protected AiAgent _aiAgent;
     [field: SerializeField]
     public float Damage { get; set; }
     public bool IsDead { get; set; }
@@ -28,39 +29,36 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     
     private void Awake()
     {
-        _aiAgent = GetComponent<AiAgent>();
         healthSystem = new HealthSystem(_maxHealth,_maxHealth);
         animator = GetComponent<Animator>();
         LimbManager = GetComponent<LimbManager>();
-        foreach (Transform transform in _rootComponent.transform)
-        {
-            transform.localScale = Vector3.one;
-        }
+       
     }
     private Timer timer;
-    private void OnEnable()
-    {
-        ActivateZombie();
-        healthSystem = new HealthSystem(_maxHealth,_maxHealth);
-    }
+
     private void Start()
     {
-        _aiAgent.StateMachine.ChangeState(StateId.ChasePlayer);
-        spawnParticle.Play();
-        SetRandomAnimTime();
-        SetRandomSkin();
-        timer = new Timer(5f);
+        ActivateZombie();
+    }
+
+    /// <summary>
+    /// OnEnable is used instead of start due to object pooling
+    /// Activate a zombie
+    /// </summary>
+    private void OnEnable()
+    {
+        IsDead = false;
+        healthSystem = new HealthSystem(125f,125f);
     }
     protected void Update()
     {
-        if (IsAgentOnNavMesh() && isOnMesh == false && isAlive)
+        if (IsAgentOnNavMesh()  == false && isAlive)
         {
-            isOnMesh = true;
-            ActivateZombie();
+            _aiAgent.navMeshAgent.set
         }
         if(animator.enabled == false && _aiAgent.navMeshAgent.enabled == false && timer.TimerIsOver() || IsDead)
         {
-            KillZombie();
+            healthSystem.TakeDamage(50000);
         }
     }
     private void SetRandomAnimTime()
@@ -77,8 +75,9 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     }
     private void KillZombie()
     {
-        GameManager.instance.EventManager.zombieSpawner.RemoveZombieFromList(gameObject);
-        //ObjectPooler.instance.ReturnObject(gameObject,ZombieType);
+        GameManager.instance.roundManager.zombieSpawner.RemoveZombieFromList(gameObject);
+        ResetLimbs();
+        Destroy(gameObject);
     }
     /// <summary>
     /// Activate a zombie from its ragdoll steal
@@ -87,8 +86,14 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     /// </summary>
     public void ActivateZombie( )
     {
-        _aiAgent.Animator.enabled = true;
-        _aiAgent.navMeshAgent.enabled = true;
+        healthSystem = new HealthSystem(_maxHealth,_maxHealth);
+        timer = new Timer(5f);
+        IsDead = false;
+       
+        SetRandomAnimTime();
+        spawnParticle.Play();
+        SetRandomSkin();
+        _aiAgent.StateMachine.ChangeState(StateId.ChasePlayer);
         _aiAgent.Ragdoll.DeactivateRagdoll();
     }
     /// <summary>
@@ -103,32 +108,13 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     }
     public void TakeDamage(float damage, Vector3 direction)
     {
+        //&& timer.TimerIsOver()
         healthSystem.TakeDamage(damage);
-        if (healthSystem.CurrentHealth < 0 && IsDead == false)
+        if(healthSystem.BelowPercent(1) && IsDead != true)
         {
-            GameManager.instance.ZombieManager.ZombieSpawner.RemoveZombieFromList(gameObject);
             IsDead = true;
-            if (InEvent)
-            {
-                var x = Physics.OverlapSphere(transform.position, 5f);
-                foreach (var events in x)
-                {
-                    var eventRef = events.gameObject.GetComponent<Event>();
-                    if (eventRef != null)
-                    {
-                        _aiAgent.Ragdoll.ActivateRagDoll();
-                        eventRef.EventTargetKillCountManager.IncreaseKillCount();
-                        StartCoroutine(Die(3f));
-                        StartCoroutine(eventRef.KillSacrificeEventEnemy(transform));
-                        
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                
-            }
+            _aiAgent.StateMachine.ChangeState(StateId.DeathState);
+            Invoke("KillZombie",2.5f);
         }
     }
     //Scale the limb to size 0 so it is removed from the body and the animation still functions
@@ -187,8 +173,13 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         if (limbName == "Head")
         {
             AudioManager.Instance.PlaySound("HeadshotSplat");
-            _aiAgent.Ragdoll.ActivateRagDoll();
-            var random = Random.Range(0, 3);
+            
+            var random = Random.Range(0, 2);
+            if (random == 1)
+            {
+                healthSystem.TakeDamage(50000);
+                _aiAgent.Ragdoll.ActivateRagDoll();
+            }
        
         }
         else
@@ -199,10 +190,13 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         LimbManager.PlayParticleAtLimb(limbName);
         StartCoroutine(LimbManager.RemoveLimb(limb,5f));
     }
-    public IEnumerator Die(float duration)
+
+    public void ResetLimbs()
     {
-        yield return new WaitForSeconds(duration);
-        _aiAgent.StateMachine.ChangeState(StateId.DeathState);
+        foreach (var child in LimbManager.Limbs)
+        {
+            child.transform.localScale = Vector3.one;
+        }
     }
 }
 public interface ITakeDamage

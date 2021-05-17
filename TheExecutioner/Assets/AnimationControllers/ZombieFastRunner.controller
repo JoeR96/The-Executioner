@@ -21,7 +21,7 @@ AnimatorState:
   m_Mirror: 0
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
+  m_CycleOffsetParameterActive: 1
   m_TimeParameterActive: 0
   m_Motion: {fileID: -203655887218126122, guid: 29777fe08df3f08478be0170586468f8,
     type: 3}
@@ -29,7 +29,7 @@ AnimatorState:
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: AnimTime
-  m_TimeParameter: 
+  m_TimeParameter: AnimTime
 --- !u!1102 &-8076478476261547873
 AnimatorState:
   serializedVersion: 5
@@ -159,6 +159,12 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: Attack3
     m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: AnimTime
+    m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0

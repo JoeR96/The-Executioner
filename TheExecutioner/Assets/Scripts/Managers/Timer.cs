@@ -15,7 +15,11 @@ public class Timer
         Duration = duration;
         CurrentTime = 0f;
     }
-
+    /// <summary>
+    /// return true if the timer is greater than 0
+    /// else return false
+    /// </summary>
+    /// <returns></returns>
     public bool TimerIsOver()
     {
         if (CurrentTime <= Duration)
@@ -23,16 +27,16 @@ public class Timer
             CurrentTime += Time.deltaTime;
             return false;
         }
-        else
-        {
-            CurrentTime = 0f;
-            return true;
-        }
-    }
 
+        CurrentTime = 0f;
+        return true;
+    }
+    /// <summary>
+    /// reset the timer to the duration
+    /// </summary>
     public void ResetTimer()
     {
-        CurrentTime = 0f;
+        CurrentTime = Duration;
     }
     
   
