@@ -771,7 +771,7 @@ PrefabInstance:
     - target: {fileID: 5676147460603351108, guid: cca50476eada9914b9f47d3f3218eae1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Quit
+      value: ReturnToMain
       objectReference: {fileID: 0}
     - target: {fileID: 5676147460603351108, guid: cca50476eada9914b9f47d3f3218eae1,
         type: 3}
@@ -5345,7 +5345,7 @@ PrefabInstance:
     - target: {fileID: 5676147460603351108, guid: cca50476eada9914b9f47d3f3218eae1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Restart
+      value: PlayGame
       objectReference: {fileID: 0}
     - target: {fileID: 5676147460603351108, guid: cca50476eada9914b9f47d3f3218eae1,
         type: 3}

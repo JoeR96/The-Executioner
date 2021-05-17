@@ -12,17 +12,24 @@ public class RestartGame : MonoBehaviour
     /// <summary>
     /// Reload the scene to restart the game
     /// </summary>
-    public void Restart()
+    public void PlayGame()
+    {
+        AudioManager.Instance.PlaySound("ButtonClick");
+        SceneManager.LoadScene(1);
+    }
+    /// <summary>
+    /// Load the main menu scene
+    /// </summary>
+    public void ReturnToMain()
     {
         AudioManager.Instance.PlaySound("ButtonClick");
         SceneManager.LoadScene(0);
     }
     /// <summary>
-    /// Quit t he application
+    /// Quit the application
     /// </summary>
     public void Quit()
     {
-        AudioManager.Instance.PlaySound("ButtonClick");
         Application.Quit();
     }
 }

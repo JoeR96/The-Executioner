@@ -11,16 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Altar/Altar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Altar/Altar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Rocket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Rocket.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Weapons/SM_Wep_RocketLauncher_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Weapons/SM_Wep_RocketLauncher_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Interactions/fLOORhOLDER.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/Interactions/fLOORhOLDER.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RPG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RPG.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RestartGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RestartGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +73,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/EventZombieSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/RestartGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterAiming.cs" />
@@ -130,6 +123,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/RPG.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/MenuCameraController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RestartGame.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -280,7 +274,7 @@
       <workItem from="1620950108148" duration="2801000" />
       <workItem from="1620956241837" duration="2377000" />
       <workItem from="1620996450211" duration="1603000" />
-      <workItem from="1621177118860" duration="35302000" />
+      <workItem from="1621177118860" duration="36090000" />
     </task>
     <servers />
   </component>
