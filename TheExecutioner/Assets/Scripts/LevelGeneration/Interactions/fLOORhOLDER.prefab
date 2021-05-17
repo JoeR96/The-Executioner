@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 144630885}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: BridgeRamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 200953013}
   - component: {fileID: 200953012}
   - component: {fileID: 200953011}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: BridgeRamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4071071368231018719}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: BridgeOffset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -706,7 +706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4071071368534310457}
   - component: {fileID: 4071071368534310455}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Cube
   m_Icon: {fileID: 0}
@@ -753,7 +753,7 @@ GameObject:
   - component: {fileID: 4071071368552105402}
   - component: {fileID: 4071071368552105403}
   - component: {fileID: 4071071368552105400}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1304,7 +1304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4071071368629275835}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: CubeSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1319,7 +1319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4071071368629275836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 19, z: -2.25}
+  m_LocalPosition: {x: 2, y: 18.216, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4071071369127037448}
@@ -1334,7 +1334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4071071368775074915}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: NavMeshSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1349,7 +1349,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4071071368775074916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19, y: 19, z: -163}
+  m_LocalPosition: {x: 1.83, y: 19.91, z: -0.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4071071369127037448}
@@ -1376,7 +1376,7 @@ GameObject:
   - component: {fileID: 4071071369127037446}
   - component: {fileID: 4071071369127037441}
   - component: {fileID: 1807744692}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: fLOORhOLDER
   m_TagString: Cube
   m_Icon: {fileID: 0}
@@ -3503,7 +3503,7 @@ GameObject:
   - component: {fileID: 4071071369636692611}
   - component: {fileID: 4071071369636692612}
   - component: {fileID: 4071071369636692613}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: Ramp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3812,7 +3812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4071071369658852645}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3843,7 +3843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4071071369835644714}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: Ramp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3874,7 +3874,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4071071369950337994}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3908,7 +3908,7 @@ GameObject:
   - component: {fileID: 4071071370138017903}
   - component: {fileID: 4071071370138017904}
   - component: {fileID: 4071071370138017905}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: Ramp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4354,7 +4354,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4071071370138017906}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4407,7 +4407,7 @@ MeshCollider:
   m_GameObject: {fileID: 4071071370138017906}
   m_Material: {fileID: 13400000, guid: 7762ead4739cc3540a6e84a040435733, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -4423,7 +4423,7 @@ GameObject:
   - component: {fileID: 6939160293741726989}
   - component: {fileID: 6608547098149430228}
   - component: {fileID: 6552915853218007185}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: RampContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

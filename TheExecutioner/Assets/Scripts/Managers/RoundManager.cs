@@ -36,7 +36,7 @@ public class RoundManager : MonoBehaviour
     public void StartNewRound()
     {
         //levelManager.LoadLevel();
-        levelManager.LoadStage(2);
+        levelManager.LoadStage();
         StartCoroutine(NewRound());
         Invoke("TriggerBoolChange", 10f);
     }
@@ -50,11 +50,12 @@ public class RoundManager : MonoBehaviour
     /// <returns></returns>
     public IEnumerator NewRound()
     {
-        IncreaseZombieSpawnCount();
-        SetNewRound();
+        
         yield return new WaitForSeconds(3.25f);
-        levelManager.BuildNavMesh();
-        yield return new WaitForSeconds(1f);
+         levelManager.BuildNavMesh();
+         yield return new WaitForSeconds(4f);
+         IncreaseZombieSpawnCount();
+         SetNewRound();
         if (CurrentRound % 1 == 0)
         {
             areaLight.intensity = 225;
@@ -76,7 +77,7 @@ public class RoundManager : MonoBehaviour
     /// </summary>
     private void IncreaseZombieSpawnCount()
     {
-        CurrentRoundZombieSpawnCount += 3;
+        CurrentRoundZombieSpawnCount += 5;
     }
     /// <summary>
     /// Increase the event spawn count

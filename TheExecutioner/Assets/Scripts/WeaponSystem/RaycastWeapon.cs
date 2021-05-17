@@ -156,7 +156,7 @@ public abstract class RaycastWeapon : MonoBehaviour
             }
             else
             {
-                Debug.Log(hitInfo.collider.name);
+                
             }
         }
     }

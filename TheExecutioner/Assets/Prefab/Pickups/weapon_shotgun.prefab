@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1987597001861280268}
   - component: {fileID: 1826876674884371266}
   - component: {fileID: 1828015278387192272}
-  m_Layer: 12
+  m_Layer: 16
   m_Name: MuzzleFlash01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4882,7 +4882,7 @@ GameObject:
   - component: {fileID: 1987371870912996768}
   - component: {fileID: 1827159072438780900}
   - component: {fileID: 1827945539794248520}
-  m_Layer: 12
+  m_Layer: 16
   m_Name: FlashHeadon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9752,7 +9752,7 @@ GameObject:
   - component: {fileID: 2906872758716469775}
   - component: {fileID: 3064182164073366875}
   - component: {fileID: 3063956690956067845}
-  m_Layer: 12
+  m_Layer: 16
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14407,7 +14407,7 @@ GameObject:
   - component: {fileID: 2906669726103000627}
   - component: {fileID: 3064588145237358265}
   - component: {fileID: 3063185947889179447}
-  m_Layer: 12
+  m_Layer: 16
   m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19070,7 +19070,7 @@ GameObject:
   - component: {fileID: 2903066227850440039}
   - component: {fileID: 3063693056136560321}
   - component: {fileID: 3063119859925686367}
-  m_Layer: 12
+  m_Layer: 16
   m_Name: HitEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23895,7 +23895,7 @@ GameObject:
   - component: {fileID: 2906704810086710319}
   - component: {fileID: 3064222166431706885}
   - component: {fileID: 3063235744665086317}
-  m_Layer: 12
+  m_Layer: 16
   m_Name: Decal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28772,7 +28772,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2902226353145727181}
-  m_Layer: 12
+  m_Layer: 16
   m_Name: RaycastOrigin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28804,7 +28804,7 @@ GameObject:
   - component: {fileID: 4075482996976772406}
   - component: {fileID: 4100701253237728268}
   - component: {fileID: 4093057785744796044}
-  m_Layer: 12
+  m_Layer: 16
   m_Name: SM_Wep_Shotgun_Plasma_Trigger_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28888,7 +28888,7 @@ GameObject:
   - component: {fileID: 2416904342395993950}
   - component: {fileID: 4117796686772832134}
   - component: {fileID: 4740304441079775879}
-  m_Layer: 12
+  m_Layer: 16
   m_Name: SM_Wep_Shotgun_Plasma_01 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29049,6 +29049,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9843b93945e0a0e4a879c456c29ed536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponMaxAmmo: 12
+  weaponSpareAmmo: 24
+  weaponReloadTime: 1
+  weaponDamage: 15
+  weaponFireRate: 0.25
+  <WeaponIsReloading>k__BackingField: 0
+  weaponCurrentammo: 12
   weaponSlot: 0
   IsFiring: 0
   RaycastOrigin: {fileID: 0}
@@ -29057,15 +29064,9 @@ MonoBehaviour:
   TracerEffect: {fileID: 7989577672764970850, guid: 2b07df7201fb4834d9907a0cbc7d055e,
     type: 3}
   RaycastDestination: {fileID: 0}
+  <Quality>k__BackingField: 0
   WeaponName: shotgun
   recoil: {fileID: 0}
-  weaponMaxAmmo: 12
-  weaponSpareAmmo: 24
-  weaponReloadTime: 1
-  weaponDamage: 15
-  weaponFireRate: 0.25
-  <WeaponIsReloading>k__BackingField: 0
-  weaponCurrentammo: 12
 --- !u!1 &4078934717660959296
 GameObject:
   m_ObjectHideFlags: 0
@@ -29077,7 +29078,7 @@ GameObject:
   - component: {fileID: 4075245739280356960}
   - component: {fileID: 4101195796903579216}
   - component: {fileID: 4092120449758309584}
-  m_Layer: 12
+  m_Layer: 16
   m_Name: SM_Wep_Shotgun_Plasma_Pump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29160,7 +29161,7 @@ GameObject:
   - component: {fileID: 8089028028120136910}
   - component: {fileID: 8089028028120136911}
   - component: {fileID: 8089028028120136912}
-  m_Layer: 12
+  m_Layer: 16
   m_Name: weapon_shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29263,8 +29264,6 @@ MonoBehaviour:
   - {fileID: 8581396501057827942}
   - {fileID: 8581396500395598750}
   - {fileID: 8581396501800305642}
-  quality: 0
-  raycastWeapon: {fileID: 4740304441079775879}
 --- !u!1 &8581396499819176824
 GameObject:
   m_ObjectHideFlags: 0
@@ -29274,7 +29273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396499819176825}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Light_Shaft_Manip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29305,7 +29304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396499831929899}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Null
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29335,7 +29334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396499856598004}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Light_Shaft_Manip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29366,7 +29365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396499906582554}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Null
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29396,7 +29395,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396500076350863}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Null
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29426,7 +29425,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396500257414108}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Light_Shaft_Manip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29458,7 +29457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8581396500283026131}
   - component: {fileID: 8581396500283026132}
-  m_Layer: 12
+  m_Layer: 16
   m_Name: Area Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29549,7 +29548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396500328575647}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Null
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29579,7 +29578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396500395598751}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: PurpleGodBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29612,7 +29611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8581396500422194295}
   - component: {fileID: 8581396500422194292}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: SM_LightRay_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29696,7 +29695,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396500431844188}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Light_Shaft_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29728,7 +29727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8581396500742313113}
   - component: {fileID: 8581396500742313118}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: SM_LightRay_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29813,7 +29812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8581396500836253850}
   - component: {fileID: 8581396500836253851}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: SM_LightRay_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29897,7 +29896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396500928468554}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Light_Shaft_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29928,7 +29927,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396501038915532}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: GreenGodBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29960,7 +29959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396501057827943}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: BlueGodBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29992,7 +29991,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396501224739274}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Light_Shaft_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30023,7 +30022,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396501687886189}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Light_Shaft_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30054,7 +30053,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396501775981425}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Light_Shaft_Manip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30086,7 +30085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8581396501800305643}
   - component: {fileID: 8581396501800305640}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: GodRayLegendary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30137,7 +30136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581396501872912458}
-  m_Layer: 12
+  m_Layer: 16
   m_Name: GodBeams (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30172,7 +30171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8581396501920304456}
   - component: {fileID: 8581396501920304457}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: SM_LightRay_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

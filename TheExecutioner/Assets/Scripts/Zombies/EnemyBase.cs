@@ -52,9 +52,10 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     }
     protected void Update()
     {
-        if (IsAgentOnNavMesh()  == false && isAlive)
+        if (IsAgentOnNavMesh()  == false && IsDead == false)
         {
-            _aiAgent.navMeshAgent.set
+            _aiAgent.Ragdoll.ActivateRagDoll();
+            _aiAgent.Ragdoll.DeactivateRagdoll();
         }
         if(animator.enabled == false && _aiAgent.navMeshAgent.enabled == false && timer.TimerIsOver() || IsDead)
         {
