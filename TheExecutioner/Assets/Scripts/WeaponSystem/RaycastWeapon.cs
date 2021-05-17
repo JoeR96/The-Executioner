@@ -111,7 +111,6 @@ public abstract class RaycastWeapon : MonoBehaviour
         Reload();
         
         WeaponIsLoaded = true;
-    
         
         weaponCurrentammo = weaponMaxAmmo;
         WeaponIsReloading = false;
@@ -146,17 +145,12 @@ public abstract class RaycastWeapon : MonoBehaviour
         var tracer = InstantiateTrailRenderer();
         if(Physics.Raycast(ray,out hitInfo))
         {
-            
             SetHitEffects();
             tracer.transform.position = hitInfo.point;
             recoil.GenerateRecoil(WeaponName);
             if (hitInfo.collider.GetComponentInParent<ITakeDamage>() != null)
             {
                 HitEnemy();
-            }
-            else
-            {
-                
             }
         }
     }
@@ -262,7 +256,7 @@ public abstract class RaycastWeapon : MonoBehaviour
     }
     //refactor this in to non mono class
     //multiply and divide by an input to recieve an output
-    public void SetWeaponState(int quality)
+    public virtual void SetWeaponState(int quality)
     {
         if (WeaponIsSet == false)
         {
@@ -272,9 +266,10 @@ public abstract class RaycastWeapon : MonoBehaviour
             weaponDamage *= quality + 1;
             if (WeaponName != "RPG")
             {
-                weaponCurrentammo *= quality + 1; 
-             
+                weaponCurrentammo *= quality + 1;
+
             }
+
             weaponMaxAmmo *= quality + 1; 
             weaponSpareAmmo *= quality + 1;
             weaponReloadTime /= quality + 1; 

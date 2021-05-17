@@ -99,6 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553dc5d71d4684d4da147b7c2f6c2773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponMaxAmmo: 1
+  weaponSpareAmmo: 5
+  weaponReloadTime: 1
+  weaponDamage: 15
+  weaponFireRate: 1
+  <WeaponIsReloading>k__BackingField: 0
+  weaponCurrentammo: 1
   weaponSlot: 2
   IsFiring: 0
   RaycastOrigin: {fileID: 2869018529322303824}
@@ -109,13 +116,6 @@ MonoBehaviour:
   <Quality>k__BackingField: 0
   WeaponName: RPG
   recoil: {fileID: 879179714688670169}
-  weaponMaxAmmo: 1
-  weaponSpareAmmo: 5
-  weaponReloadTime: 1
-  weaponDamage: 15
-  weaponFireRate: 1
-  <WeaponIsReloading>k__BackingField: 0
-  weaponCurrentammo: 1
   rocketPrefab: {fileID: 4146537175756036855, guid: 8d7eb8ed3acd3d34e9569aed85acf1f3,
     type: 3}
   activeRocket: {fileID: 0}

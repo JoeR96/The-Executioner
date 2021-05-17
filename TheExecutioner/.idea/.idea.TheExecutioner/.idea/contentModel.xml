@@ -182,6 +182,7 @@
             </e>
           </e>
         </e>
+        <e p="MenuCameraController.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AltarEventCompleteTrigger.cs" t="Include" />
           <e p="Audio" t="Include">

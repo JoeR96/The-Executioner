@@ -31,6 +31,15 @@ public class RPG : RaycastWeapon
         }
     }
 
+    public override void SetWeaponState(int quality)
+    {
+        if (WeaponIsSet == false)
+        {
+            weaponCurrentammo = 1;
+            SpawnRocket();
+        }
+        base.SetWeaponState(quality);
+    }
     private void SetRocketRigidBodyVariables()
     {
         var rb = activeRocket.GetComponent<Rigidbody>();
@@ -47,6 +56,11 @@ public class RPG : RaycastWeapon
         AudioManager.Instance.PlaySound(reloadWeapon);
         base.Reload();
         WeaponIsReloading = false;
+        SpawnRocket();
+    }
+
+    private void SpawnRocket()
+    {
         activeRocket = Instantiate(rocketPrefab, rocketPosition);
     }
 
