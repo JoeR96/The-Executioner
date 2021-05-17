@@ -31,6 +31,7 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
             Destroy(gameObject);
     }
 
+    
     public void StartHeartEvent()
     {
         SetEventDestination();
@@ -44,21 +45,17 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
         
         
     }
-
     private void SetHeart()
     {
         var activeHeart = GetComponent<Heart>();
         Debug.Log(EventTargetDestination);
         activeHeart.SetTargetPosition(EventTargetDestination);
-        
     }
-    
     public void EventComplete(Heart heart)
     {
         if(heart.Destination == null)
             return;
         
-        Debug.Log(heart);
         var altar = Instantiate(targetAltar,heart.Destination.position,quaternion.identity);
         targetPos = ReturnHeartTargetPosition(altar);
         heart.EventComplete = true;
@@ -66,14 +63,13 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
         
         heart.DisableNavmeshAgent();
         StartCoroutine(LerpHeartTransform(heart.gameObject, targetPos.position));
+        SpawnReward();
     }
-    
     public Transform ReturnHeartTargetPosition(GameObject altar)
     {
         var target = altar.GetComponent<AltarEventCompleteTrigger>().HeartTargetPosition;
         return target;
     }
-
     private IEnumerator LerpHeartTransform(GameObject heart,Vector3 targetPosition)
     {
         Transform startRotation = heart.transform;
@@ -90,19 +86,15 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
             yield return null;
         }
     }
-
-
     public void TakeDamage(float damage, Vector3 direction)
     {
         
     }
-
     public void CollectLimb(GameObject limb)
     {
         StartCoroutine(LerpHeartTransform(limb, transform.position));
         LimbsSacrificed++;
     }
-
     public override void OnTriggerEnter(Component other)
     {
         //base.OnTriggerEnter(other);
@@ -112,7 +104,6 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
         }
             
     }
-
     private void ReturnLimb(GameObject other)
     {
        // CollectLimb(other.gameObject);

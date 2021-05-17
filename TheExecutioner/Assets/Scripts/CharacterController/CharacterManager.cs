@@ -29,11 +29,13 @@ public class CharacterManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        CheckForActiveEvent(other);
+        if(other != null)
+            CheckForActiveEvent(other);
     }
     private void OnTriggerExit(Collider other)
     {
-        CheckEventRemove(other);
+        if(other != null)
+            CheckEventRemove(other);
     }
     private void CheckForActiveEvent(Collider other)
     {

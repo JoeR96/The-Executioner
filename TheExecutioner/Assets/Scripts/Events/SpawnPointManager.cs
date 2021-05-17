@@ -41,8 +41,6 @@ public class SpawnPointManager : MonoBehaviour
         var weapon = Instantiate(randomWeapon,spawnPoint.position, quaternion.identity);
         var pickup =  weapon.GetComponent<WeaponPickup>();
         pickup.EventReward = eventReward;
-        
-        Debug.Log(quality);
         pickup.SetGodBeamColour(quality);
         return weapon.gameObject;
     }

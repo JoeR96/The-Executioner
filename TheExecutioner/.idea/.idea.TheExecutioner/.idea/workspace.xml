@@ -12,19 +12,18 @@
   <component name="ChangeListManager">
     <list default="true" id="59eb3689-a9ba-4cc4-a6fa-d76cde7d3347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheExecutioner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Altar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Altar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Altar/Altar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Altar/Altar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/LowPolyHeart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/LowPolyHeart.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AnimationControllers/ZombieFastRunner.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AnimationControllers/ZombieFastRunner.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/ImportAnimations/zombie_attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/ImportAnimations/zombie_attack.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AltarEventCompleteTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AltarEventCompleteTrigger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectPooler/ObjectPooler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectPooler/ObjectPooler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RPG.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RPG.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +81,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/PauseGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/LimbSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/EventZombieSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentSpawner.cs" />
@@ -111,10 +109,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/EquippedWeapon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PrintGameUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/RPG.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/WeaponPickup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnSystems/ZombieSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Timer.cs" />
@@ -123,16 +118,20 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/DeathState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/RaycastWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelGeneration/EnvironmentManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/AttackState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/EnemyBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPooler/ObjectPooler.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Zombies/Ragdoll.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/AiAgent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/Event.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RPG.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/AttackState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponSystem/ActiveWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/SpawnPointManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AltarEventCompleteTrigger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/Heart.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController/CharacterManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nwSIV5yhRdeqsiaj91vFUs8z5R" />
@@ -283,7 +282,7 @@
       <workItem from="1620950108148" duration="2801000" />
       <workItem from="1620956241837" duration="2377000" />
       <workItem from="1620996450211" duration="1603000" />
-      <workItem from="1621177118860" duration="24551000" />
+      <workItem from="1621177118860" duration="31458000" />
     </task>
     <servers />
   </component>
@@ -351,10 +350,10 @@
           <line>149</line>
           <properties documentPath="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner\Assets\Scripts\WeaponSystem\ActiveWeapon.cs" initialLine="149" containingFunctionPresentation="method 'EquipWeapon'">
             <startOffsets>
-              <option value="4456" />
+              <option value="4461" />
             </startOffsets>
             <endOffsets>
-              <option value="4508" />
+              <option value="4513" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="14" />
@@ -374,13 +373,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Events/EscortEvent/HeartEscortEvent.cs</url>
-          <line>61</line>
+          <line>58</line>
           <properties documentPath="X:\Git\Unity\Year 3\The-Executioner\TheExecutioner\Assets\Scripts\Events\EscortEvent\HeartEscortEvent.cs" initialLine="60" containingFunctionPresentation="method 'EventComplete'">
             <startOffsets>
-              <option value="1635" />
+              <option value="1599" />
             </startOffsets>
             <endOffsets>
-              <option value="1719" />
+              <option value="1683" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="16" />

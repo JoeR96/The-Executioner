@@ -20,8 +20,9 @@ public class Heart : MonoBehaviour
     {
         if (HasReachedDestination() && EventComplete != true)
         {
-            EventComplete = true;
-            heartEscortEvent.EventComplete(this);
+            // EventComplete = true;
+            // Debug.Log(EventComplete);
+            // heartEscortEvent.EventComplete(this);
         }
     }
     public void SetTargetPosition(Transform altarLocation)
@@ -38,7 +39,7 @@ public class Heart : MonoBehaviour
     }
     public bool HasReachedDestination()
     {
-        if (!navmeshAgent.pathPending)
+        if (!navmeshAgent.pathPending && navmeshAgent.isOnNavMesh)
         {
             if (navmeshAgent.remainingDistance <= navmeshAgent.stoppingDistance)
             {

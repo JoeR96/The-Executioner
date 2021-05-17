@@ -60,7 +60,7 @@ public class RPG : RaycastWeapon
     protected override IEnumerator ReloadWeapon()
     {
         WeaponIsReloading = true;
-        AudioManager.Instance.PlaySound(weaponReloadingClip);
+        AudioManager.Instance.PlaySound(reloadWeapon);
         yield return new WaitForSeconds(2f);
         Reload();
         WeaponIsLoaded = true;

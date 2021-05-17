@@ -16,7 +16,7 @@ public class RoundManager : MonoBehaviour
 
     private void Start()
     {
-        currentEventSpawnCount = 4;
+        CurrentRoundZombieSpawnCount = 4;
     }
     private void Update()
     {

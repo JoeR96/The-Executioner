@@ -40984,6 +40984,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7468024436314017237, guid: dc422aec8ba471640a3d5063ccc0d2b4,
         type: 3}
+      propertyPath: RecoilPattern.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7468024436314017237, guid: dc422aec8ba471640a3d5063ccc0d2b4,
+        type: 3}
       propertyPath: CharacterAiming
       value: 
       objectReference: {fileID: 1846586486253753429}
@@ -41221,6 +41226,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 7954474736299547619, guid: 50478a37a56fe994d833d1519ee9b3b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954474736299547619, guid: 50478a37a56fe994d833d1519ee9b3b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.922
+      objectReference: {fileID: 0}
     - target: {fileID: 7954474736350056319, guid: 50478a37a56fe994d833d1519ee9b3b1,
         type: 3}
       propertyPath: m_Layer
@@ -41255,6 +41270,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955149745709057095, guid: 50478a37a56fe994d833d1519ee9b3b1,
+        type: 3}
+      propertyPath: RecoilPattern.Array.size
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7955149745709057095, guid: 50478a37a56fe994d833d1519ee9b3b1,
         type: 3}

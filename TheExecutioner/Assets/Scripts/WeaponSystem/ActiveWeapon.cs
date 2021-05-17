@@ -39,7 +39,7 @@ public class ActiveWeapon : MonoBehaviour
         }
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
-            Debug.Log("T");
+            activeWeaponIndex++;
             SetWeaponWheelIndex();
             EquipWeapon(_equippedWeapons[activeWeaponIndex]);
         } 
@@ -50,7 +50,7 @@ public class ActiveWeapon : MonoBehaviour
 
     private void SetWeaponWheelIndex()
     {
-        if (activeWeaponIndex == 2)
+        if (activeWeaponIndex == 3)
         {
             activeWeaponIndex = 0;
         }

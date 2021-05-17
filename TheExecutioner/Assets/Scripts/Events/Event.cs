@@ -71,7 +71,7 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     /// <summary>
     /// Spawn a reward at the the target location
     /// </summary>
-    private void SpawnReward()
+    protected void SpawnReward()
     {
         eventDestroyTrigger = spawnPointManager.SpawnWeapon(3, transform,true);
         rewardSpawned = true;
