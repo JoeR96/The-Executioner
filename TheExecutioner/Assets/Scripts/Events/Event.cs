@@ -14,12 +14,12 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     [SerializeField] private ParticleSystem destroyParticle;
     [SerializeField] private Transform[] eventKillTransformPositions;
     private SpawnPointManager spawnPointManager;
-    private GameObject eventDestroyTrigger;
+    protected GameObject eventDestroyTrigger;
     protected GameObject activeEventGameObject;
     protected EventZombieSpawner eventZombieSpawner;
     protected int waveSpawnTotal;
-    private bool eventComplete;
-    private bool rewardSpawned;
+    protected bool eventComplete;
+    protected bool rewardSpawned;
     private void Awake()
     {
         spawnPointManager = GameManager.instance.GetComponentInChildren<SpawnPointManager>();
@@ -29,7 +29,7 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     {
         EventTargetKillCountManager = new EventTargetKillCount(EventTargetKillCountMultiplier,GameManager.instance.roundManager.CurrentRound);
     }
-    private void Update()
+    protected virtual void Update()
     {
         if (EventTargetKillCountManager.CurrentKillCount >= EventTargetKillCountManager.TargetKillCount && eventComplete == false)
         {

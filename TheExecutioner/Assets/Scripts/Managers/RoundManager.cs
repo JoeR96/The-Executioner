@@ -62,7 +62,7 @@ public class RoundManager : MonoBehaviour
         }
         if (CurrentRound % 2 == 0)
         {
-            //StartCoroutine(StartEvents());
+            StartCoroutine(StartEvents());
             areaLight.intensity = 600;
         }
         if (CurrentRound % 3 == 0 && CurrentRound % 3 != 0)

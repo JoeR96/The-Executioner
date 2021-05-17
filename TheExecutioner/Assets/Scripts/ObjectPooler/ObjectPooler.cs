@@ -74,12 +74,10 @@ using UnityEngine;
                 returnObject = pool[pool.Count - 1];
                 pool.Remove(returnObject);
                 returnObject.SetActive(true);
-                Debug.Log("Here");
             }
             else
             {
                 returnObject = Instantiate(currentPool.PrefabToPool, currentPool.PoolHolder.transform);
-                Debug.Log("Not Here");
             }
             return returnObject;
         }

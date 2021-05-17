@@ -23,7 +23,6 @@ public class AiAgent : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Debug.Log("AWAKEINGNG");
         EnemyBase = GetComponent<EnemyBase>();
         Animator = GetComponent<Animator>();
         Player = GameObject.FindWithTag("Player").transform;

@@ -29,7 +29,6 @@ public class CharacterManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
         CheckForActiveEvent(other);
     }
     private void OnTriggerExit(Collider other)

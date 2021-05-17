@@ -8,8 +8,8 @@ public class Heart : MonoBehaviour
     [SerializeField] private HeartEscortEvent heartEscortEvent;
     private NavMeshAgent navmeshAgent;
     public Transform Destination;
-    private bool eventComplete = false;
-    
+    public bool EventComplete { get; set; }
+
     private void Awake()
     {
         navmeshAgent = GetComponent<NavMeshAgent>();
@@ -18,9 +18,9 @@ public class Heart : MonoBehaviour
     
     private void Update()
     {
-        if (HasReachedDestination() && eventComplete != true)
+        if (HasReachedDestination() && EventComplete != true)
         {
-            eventComplete = true;
+            EventComplete = true;
             heartEscortEvent.EventComplete(this);
         }
     }

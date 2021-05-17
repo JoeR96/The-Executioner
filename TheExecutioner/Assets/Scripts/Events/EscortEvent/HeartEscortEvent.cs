@@ -19,6 +19,18 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
         waveSpawnTotal = 8;
         StartHeartEvent();
     }
+
+    protected override void Update()
+    {
+        if (EventTargetKillCountManager.CurrentKillCount >= EventTargetKillCountManager.TargetKillCount && eventComplete == false)
+        {
+            eventComplete = true;
+            StartCoroutine(CompleteEvent());
+        }
+        if (eventDestroyTrigger == null && rewardSpawned)
+            Destroy(gameObject);
+    }
+
     public void StartHeartEvent()
     {
         SetEventDestination();
@@ -43,11 +55,13 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
     
     public void EventComplete(Heart heart)
     {
-        if(heart.Destination != null)
+        if(heart.Destination == null)
             return;
-        var altar = Instantiate(targetAltar, heart.Destination.position,quaternion.identity);
+        
+        Debug.Log(heart);
+        var altar = Instantiate(targetAltar,heart.Destination.position,quaternion.identity);
         targetPos = ReturnHeartTargetPosition(altar);
-
+        heart.EventComplete = true;
         heart.transform.rotation = targetPos.rotation;
         
         heart.DisableNavmeshAgent();
@@ -72,7 +86,7 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
             float percentage = Mathf.Min(timer / duration, 1);
             timer += Time.deltaTime;
             heart.transform.position = Vector3.Lerp(startPosition,targetPosition,percentage);
-            heart.transform.rotation = Quaternion.Slerp(heart.transform.rotation, targetPos.rotation, percentage);
+             heart.transform.rotation = Quaternion.Slerp(heart.transform.rotation, targetPos.rotation, percentage);
             yield return null;
         }
     }
@@ -80,7 +94,7 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
 
     public void TakeDamage(float damage, Vector3 direction)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void CollectLimb(GameObject limb)
@@ -91,18 +105,17 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
 
     public override void OnTriggerEnter(Component other)
     {
-        base.OnTriggerEnter(other);
+        //base.OnTriggerEnter(other);
         if (other.CompareTag("Limb"))
         {
-            ReturnLimb(other);
+            ReturnLimb(other.gameObject);
         }
             
     }
 
-    private void ReturnLimb(Component other)
+    private void ReturnLimb(GameObject other)
     {
-        var limb = other.GetComponent<ICollectLimb>();
-        limb.CollectLimb(other.gameObject);
+       // CollectLimb(other.gameObject);
     }
 }
 

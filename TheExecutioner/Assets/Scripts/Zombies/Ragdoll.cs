@@ -10,7 +10,6 @@ public class Ragdoll : MonoBehaviour
     public Rigidbody[] rigidbodies;
     private void Awake()
     {
-        Debug.Log("CHICKENWINGSWEDNESDAY");
         rigidbodies = GetComponentsInChildren<Rigidbody>();
         _animator = GetComponent<Animator>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
