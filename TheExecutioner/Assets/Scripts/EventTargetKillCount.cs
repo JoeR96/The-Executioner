@@ -16,9 +16,19 @@ public class EventTargetKillCount
         TargetKillCount = waveNumber * multiplierValue;
         CurrentKillCount = 0;
     }
-
+    /// <summary>
+    /// Increase the kill count
+    /// </summary>
     public void IncreaseKillCount()
     {
         CurrentKillCount++;
+    }
+    /// <summary>
+    /// Return true if the current kill count is equal to the target kill count
+    /// </summary>
+    /// <returns></returns>
+    public bool ReturnKillCountComplete()
+    {
+        return CurrentKillCount == TargetKillCount;
     }
 }

@@ -21,7 +21,8 @@ public class GameManager : Singleton<GameManager>
     [field: SerializeField] public bool BuildMode { get; set; }
     [field: SerializeField] public bool PlayMode { get; set; }
     [field: SerializeField] public bool MenuMode { get; set; }
-    [field: SerializeField]public float BuildSpeed { get; set; }
+    [field: SerializeField] public float BuildSpeed { get; set; }
+    [field: SerializeField] public Transform PlayerTransform { get; set; }
 
 
     private void Start()
@@ -65,6 +66,7 @@ public class GameManager : Singleton<GameManager>
     /// </summary>
     public void NextRoundSequence()
     {
+        EventManager.ClearEventObjects();
         SpawnPointManager.ClearWeapons();
         Invoke("StartNewRound",1f);
         Invoke("SpawnWeapons", 5f);

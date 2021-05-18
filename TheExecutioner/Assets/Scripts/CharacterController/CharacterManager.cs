@@ -11,16 +11,16 @@ public class CharacterManager : MonoBehaviour
     
     void Awake()
     {
-        PlayerHealthSystem = new HealthSystem(100, 100);
+        PlayerHealthSystem = new HealthSystem(250, 250);
     }
     private void Start()
     {
-        InvokeRepeating("Heal", 5f, 2.25f);
+        InvokeRepeating("Heal", 25f, 2.25f);
     }
     // Update is called once per frame
     private void Heal()
     {
-        PlayerHealthSystem.Heal(7.5f);
+        PlayerHealthSystem.Heal(100f);
     }
     public void TakeDamage(float damage )
     {

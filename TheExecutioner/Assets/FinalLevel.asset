@@ -51965,7 +51965,7 @@ MonoBehaviour:
     Z: 20
   - BridgeIsActive: 1
     PlatformStairActive: 0
-    PlatformSpawnActive: 1
+    PlatformSpawnActive: 0
     PlatformEventSpawn: 0
     PlatformBridgeRampActive: 1
     CurrentBridgeRampRotation: 2
@@ -91291,7 +91291,7 @@ MonoBehaviour:
     Z: 24
   - BridgeIsActive: 0
     PlatformStairActive: 0
-    PlatformSpawnActive: 1
+    PlatformSpawnActive: 0
     PlatformEventSpawn: 0
     PlatformBridgeRampActive: 0
     CurrentBridgeRampRotation: 0

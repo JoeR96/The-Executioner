@@ -7,20 +7,21 @@ public class Heart : MonoBehaviour
 {
     [SerializeField] private HeartEscortEvent heartEscortEvent;
     private NavMeshAgent navmeshAgent;
-    public Transform Destination;
+    private Transform destination;
     public bool EventComplete { get; set; }
 
     private void Awake()
     {
         navmeshAgent = GetComponent<NavMeshAgent>();
-        navmeshAgent.speed = Random.Range(1.5f, 2f);
     }
-
+    /// <summary>
+    /// Set the target position to move to
+    /// </summary>
+    /// <param name="altarLocation"></param>
     public void SetTargetPosition(Transform altarLocation)
     {
-        
         navmeshAgent.destination = altarLocation.position;
-        Destination = altarLocation;
+        destination = altarLocation;
     }
     
     /// <summary>

@@ -10,6 +10,7 @@ public class EventZombieSpawner
     private ZombieSpawner zombieSpawner;
     private Transform targetPos;
     public int count;
+    private List<GameObject> eventZombies = new List<GameObject>();
 
     /// <summary>
     /// Use the gamemanager singleton to access the zombie spawner rather than using findobjectoftype
@@ -22,18 +23,33 @@ public class EventZombieSpawner
     {
         zombieSpawner = GameManager.instance.ZombieManager.ZombieSpawner;
         targetPos = target;
+        Debug.Log(spawnCount);
         count = spawnCount;
     }
     /// <summary>
     /// Spawn the appropriate number of zombies for the event according to the count specified within the class instance
     /// Set the Zombie in to an event state
     /// </summary>
-    public void SpawnZombiesTargetingEvent()
+    public IEnumerator SpawnZombiesTargetingEvent()
+    {
+        
+        for (int i = 0; i < count; i++)
+        {
+            yield return new WaitForSeconds(1f);
+            var zombie = zombieSpawner.SpawnZombie();
+            eventZombies.Add(zombie);
+            SetZombieState(zombie);
+        }
+    }
+
+    /// <summary>
+    /// Spawn the appropriate number of zombies for the event according to the count specified within the class instance
+    /// </summary>
+    public void SpawnZombies()
     {
         for (int i = 0; i < count; i++)
         {
-            var zombie = zombieSpawner.SpawnZombie();
-            SetZombieState(zombie);
+            zombieSpawner.SpawnZombie();
         }
     }
     /// <summary>
@@ -45,7 +61,15 @@ public class EventZombieSpawner
     private void SetZombieState(GameObject zombie)
     {
         var aiAgent = zombie.GetComponent<AiAgent>();
-        aiAgent.EventTarget = targetPos;
-        aiAgent.StateMachine.ChangeState(StateId.EventState);
+        aiAgent.Player = targetPos;
+        aiAgent.StateMachine.ChangeState(StateId.ChasePlayer);
+    }
+
+    public void ClearEventZombiesTarget()
+    {
+        foreach (var go in eventZombies)
+        {
+            go.GetComponent<AiAgent>().Player = GameManager.instance.PlayerTransform;
+        }
     }
 }

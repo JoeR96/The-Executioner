@@ -35,36 +35,54 @@ public class EventManager : MonoBehaviour
     {
         activeEventGameObjects.Add(go);
     }
-
+    /// <summary>
+    /// Play a random event
+    /// </summary>
     public void PlayEvent()
     {
         if (Random.value < 0.5)
         {
             PlaySacrificeEvent();
+            Debug.Log("Sacr");
         }
         else
         {
             PlayHeartEscortEvent();
+            Debug.Log("Esco");
         }
     }
+    /// <summary>
+    /// Play the Sacrifice event
+    /// </summary>
     public void PlaySacrificeEvent()
     {
         Instantiate(SacrificeEvent);
     }
-
-
+    /// <summary>
+    /// Play the escort event
+    /// </summary>
     public void PlayHeartEscortEvent()
     {
         Instantiate(HeartEscortEvent);
     }
-
+    /// <summary>
+    /// Add an event to master event list
+    /// </summary>
+    /// <param name="newEvent"></param>
     public void AddEvent(Event newEvent)
     {
         ActiveEvents.Add(newEvent);
     }
-
-    public void RemoveEvent(Event completedEvent)
+    /// <summary>
+    /// Clear all event gameobjects
+    /// </summary>
+    public void ClearEventObjects()
     {
-        ActiveEvents.Remove(completedEvent);
+        foreach (var go in activeEventGameObjects)
+        {
+            activeEventGameObjects.Remove(go);
+            go.gameObject.SetActive(false);
+        }
     }
+
 }

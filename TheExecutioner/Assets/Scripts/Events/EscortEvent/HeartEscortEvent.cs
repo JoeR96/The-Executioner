@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
+public class HeartEscortEvent : Event, ITakeDamage
 {
     
     [SerializeField] private GameObject targetAltar;
@@ -11,11 +11,19 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
     private int LimbsSacrificed { get; set; }
     private float startDistance;
     private GameObject altar;
+    private HealthSystem healthSystem;
     
+    public override void Awake()
+    {
+        waveSpawnTotal = 2 * GameManager.instance.roundManager.CurrentRound + 1;
+        eventZombieSpawner = new EventZombieSpawner(waveSpawnTotal,transform);
+        base.Awake();
+    }
     private void OnEnable()
     {
+        healthSystem = new HealthSystem(250, 250);
+        waveSpawnTotal = 3 * GameManager.instance.roundManager.CurrentRound;
         EventTargetKillCountMultiplier = 5;
-        waveSpawnTotal = 8;
         StartHeartEvent();
         
     }
@@ -26,15 +34,13 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
     public void StartHeartEvent()
     {
         SetEventDestination();
+        StartCoroutine(eventZombieSpawner.SpawnZombiesTargetingEvent());
         altar = Instantiate(targetAltar,EventTargetDestination.position,quaternion.identity);
-        eventZombieSpawner = new EventZombieSpawner(waveSpawnTotal,transform);
+        EventManager.AddEventTransformObjectToList(altar);
         transform.position = EventManager.ReturnAvailableEventLocation().position;
         activeEventGameObject = gameObject;
-        eventZombieSpawner.SpawnZombiesTargetingEvent();
         SetHeart();
         AddEventTransformsToMaster();
-        
-        
     }
     private void SetHeart()
     {
@@ -44,15 +50,12 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
     }
     public void EventComplete(Heart heart)
     {
-
-        
         EventTargetDestination = ReturnHeartTargetPosition(altar);
         heart.EventComplete = true;
         heart.transform.rotation = EventTargetDestination.rotation;
         
         heart.DisableNavmeshAgent();
-        StartCoroutine(LerpHeartTransform(heart.gameObject, EventTargetDestination.position));
-        SpawnReward();
+        StartCoroutine(LerpHeartTransform(heart.gameObject, altar.transform.position));
     }
     public Transform ReturnHeartTargetPosition(GameObject altar)
     {
@@ -61,7 +64,7 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
     }
     private IEnumerator LerpHeartTransform(GameObject heart,Vector3 targetPosition)
     {
-        Transform startRotation = heart.transform;
+        eventZombieSpawner.ClearEventZombiesTarget();
         Vector3 startPosition = heart.transform.position;
         float timer = 0f;
         float duration = 0.5f;
@@ -71,36 +74,19 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
             float percentage = Mathf.Min(timer / duration, 1);
             timer += Time.deltaTime;
             heart.transform.position = Vector3.Lerp(startPosition,targetPosition,percentage);
-             heart.transform.rotation = Quaternion.Slerp(heart.transform.rotation, EventTargetDestination.rotation, percentage);
+            heart.transform.rotation = Quaternion.Slerp(heart.transform.rotation, EventTargetDestination.rotation, percentage);
+            heart.transform.localScale = Vector3.Lerp(Vector3.one, Vector3.zero, percentage);
             yield return null;
         }
+        base.EventComplete();
     }
     public void TakeDamage(float damage, Vector3 direction)
     {
-        
+        healthSystem.TakeDamage(damage);
+        if(healthSystem.BelowPercent(1))
+            gameObject.SetActive(false);
     }
-    public void CollectLimb(GameObject limb)
-    {
-        StartCoroutine(LerpHeartTransform(limb, transform.position));
-        LimbsSacrificed++;
-    }
-    public override void OnTriggerEnter(Component other)
-    {
-        //base.OnTriggerEnter(other);
-        if (other.CompareTag("Limb"))
-        {
-            ReturnLimb(other.gameObject);
-        }
-            
-    }
-    private void ReturnLimb(GameObject other)
-    {
-       // CollectLimb(other.gameObject);
-    }
+  
 }
 
 
-public interface ICollectLimb
-{
-    void CollectLimb(GameObject limb);
-}

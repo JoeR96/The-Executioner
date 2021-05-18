@@ -52,6 +52,10 @@ public class ChaseState : IState
         {
             agent.StateMachine.ChangeState(StateId.Attack);
         }
+        if (Vector3.Distance(agent.transform.position, agent.Player.transform.position) >= attackRange)
+        {
+            agent.StateMachine.ChangeState(StateId.ChasePlayer);
+        }
     }
 
     public bool IsAgentOnNavMesh(AiAgent agent)

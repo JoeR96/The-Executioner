@@ -15797,9 +15797,11 @@ MonoBehaviour:
   _explosionScaleSize: {x: 2, y: 2, z: 2}
   _explosionScaleTime: 0.25
   _maxHealth: 125
+  dropTable:
+  - {fileID: 5943511792393772429, guid: f42e92c66ffd49847999cd67e968cb8b, type: 3}
   ActiveSkin: {fileID: 0}
   _aiAgent: {fileID: 3025747335874322056}
-  <Damage>k__BackingField: 7.5
+  <Damage>k__BackingField: 35
   InEvent: 0
 --- !u!195 &3025747335874322057
 NavMeshAgent:

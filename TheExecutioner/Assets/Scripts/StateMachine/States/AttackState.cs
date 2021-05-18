@@ -60,6 +60,12 @@ public class AttackState : IState
         agent.transform.LookAt(agent.Player);
         randomNumber = Random.Range(1, 4);
         agent.Animator.SetBool("Attack" + randomNumber,true);
-        agent.Player.GetComponent<CharacterManager>().TakeDamage(agent.EnemyBase.Damage);
+        var target = agent.Player.GetComponent<ITakeDamage>();
+        if (target != null)
+        {
+            target.TakeDamage(agent.EnemyBase.Damage,Vector3.up);
+        }
+        
+        
     }
 }

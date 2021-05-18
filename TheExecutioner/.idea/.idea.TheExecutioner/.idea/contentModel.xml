@@ -71,6 +71,7 @@
         <e p="Fonts" t="Include">
           <e p="Zombie_Holocaust_Font_Read_Me.txt" t="Include" />
         </e>
+        <e p="HealthPickup.cs" t="Include" />
         <e p="Imported" t="Include">
           <e p="EffectExamples" t="Include">
             <e p="Magic Effects" t="Include">
@@ -183,6 +184,13 @@
           </e>
         </e>
         <e p="MenuCameraController.cs" t="Include" />
+        <e p="Polygonal Particles" t="Include">
+          <e p="Assets" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="GradientBackgroundShader.shader" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="AltarEventCompleteTrigger.cs" t="Include" />
           <e p="Audio" t="Include">

@@ -7,6 +7,7 @@ public class EventState : IState
 {
     private Transform eventTarget;
     private float timer = 1f;
+    private float attackRange = 2;
     public StateId GetId()
     {
         return StateId.EventState;
@@ -14,9 +15,7 @@ public class EventState : IState
 
     public void Enter(AiAgent agent)
     {
-        //var go = GameManager.instance.EventManager.ReturnActiveRandomEventTransform();
-        // agent.EventTarget = go.transform;
-        // agent.SetEventDestination();
+        
     }
 
     public void Update(AiAgent agent)
@@ -28,28 +27,31 @@ public class EventState : IState
             
             timer -= Time.deltaTime;
             if (!agent.navMeshAgent.hasPath)
-            {
-                agent.navMeshAgent.destination = agent.EventTarget.position;
-            }
+                agent.navMeshAgent.destination = agent.Player.position;
 
             if (timer < 0.0f)
             {
-                Vector3 direction = agent.EventTarget.position - agent.navMeshAgent.destination;
+                Vector3 direction = (agent.Player.position - agent.navMeshAgent.destination);
                 direction.y = 0;
-                if (direction.sqrMagnitude > agent.AgentConfig.MaxDistance * agent.AgentConfig.MaxDistance) 
+                if (direction.sqrMagnitude > agent.AgentConfig.MaxDistance * agent.AgentConfig.MaxDistance)
                 {
                     if (agent.navMeshAgent.pathStatus != NavMeshPathStatus.PathPartial)
-                    {
-                        agent.navMeshAgent.destination = agent.EventTarget.position;
-                    }
+                        agent.navMeshAgent.destination = agent.Player.position;
                 }
+                if (agent.navMeshAgent.pathStatus != NavMeshPathStatus.PathPartial)
+                {
+                    agent.navMeshAgent.destination = agent.Player.position;
+
+                }
+
                 timer = agent.AgentConfig.MaxTime;
             }
+        
         }
 
-         if (Vector3.Distance(agent.transform.position, agent.Player.transform.position) <= 1.25f)
-         {
-             agent.StateMachine.ChangeState(StateId.ChasePlayer);
+        if (Vector3.Distance(agent.transform.position, agent.Player.transform.position) <= attackRange)
+        {
+            agent.StateMachine.ChangeState(StateId.Attack);
         }
     }
 

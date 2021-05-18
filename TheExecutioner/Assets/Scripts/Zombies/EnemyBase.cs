@@ -1,5 +1,6 @@
 ﻿
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -12,7 +13,7 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     [SerializeField] protected Vector3 _explosionScaleSize;
     [SerializeField] protected float _explosionScaleTime;
     [SerializeField] protected float _maxHealth;
-
+    [SerializeField] private GameObject[] dropTable;
     
     public LimbManager LimbManager { get; private set; }
     public PoolObjectType ZombieType { get;  }
@@ -129,6 +130,11 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
                     }
                 }
             }
+
+            if (Random.value < 0.95)
+            {
+                DropRandomItem();
+            }
         }
     }
     //Scale the limb to size 0 so it is removed from the body and the animation still functions
@@ -219,6 +225,12 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
         {
             child.transform.localScale = Vector3.one;
         }
+    }
+
+    public void DropRandomItem()
+    {
+        var random = Random.Range(0, dropTable.Length);
+        Instantiate(dropTable[random], transform.position, quaternion.identity);
     }
 }
 public interface ITakeDamage

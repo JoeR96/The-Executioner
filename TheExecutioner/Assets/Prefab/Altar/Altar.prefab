@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 8848713536378696644}
   - component: {fileID: 8848713536378696647}
   - component: {fileID: 1757884209}
-  m_Layer: 18
+  m_Layer: 17
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1630,7 +1630,7 @@ MonoBehaviour:
   eventKillTransformPositions:
   - {fileID: 8848713536378696650}
   - {fileID: 3747297692084342013}
-  Fog: {fileID: 198291468728840716}
+  LightningStrike: {fileID: 198963655962512457}
 --- !u!1001 &385208517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1931,12 +1931,6 @@ PrefabInstance:
 --- !u!4 &4776193337214390 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4776194311396480, guid: b72bef528f099a14d8eab50350452f58,
-    type: 3}
-  m_PrefabInstance: {fileID: 1316051254}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &198291468728840716 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198291467559758650, guid: b72bef528f099a14d8eab50350452f58,
     type: 3}
   m_PrefabInstance: {fileID: 1316051254}
   m_PrefabAsset: {fileID: 0}

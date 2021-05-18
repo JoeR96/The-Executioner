@@ -11,7 +11,7 @@ public class RoundManager : MonoBehaviour
     public int CurrentRound { get; set; }
     public int CurrentRoundZombieSpawnCount { get; set; }
     public int CurrentRoundZombieEliteSpawnCount { get; set; }
-    private int currentEventSpawnCount;
+    private int currentEventSpawnCount = 1;
     private bool roundActive;
 
     private void Start()
@@ -58,16 +58,15 @@ public class RoundManager : MonoBehaviour
          SetNewRound();
         if (CurrentRound % 1 == 0)
         {
-            areaLight.intensity = 225;
+            areaLight.intensity = 125;
         }
         if (CurrentRound % 2 == 0)
         {
             StartCoroutine(StartEvents());
-            areaLight.intensity = 600;
         }
         if (CurrentRound % 3 == 0 && CurrentRound % 3 != 0)
         {
-            areaLight.intensity = 354;
+            areaLight.intensity = 250;
         }
         
         StartCoroutine(SpawnWave());
@@ -164,7 +163,7 @@ public class RoundManager : MonoBehaviour
     /// </summary>
     private void CheckForRoundCompletion()
     {
-        if (AllZombiesDead() && CheckEventStatus())
+        if (AllZombiesDead())
         {
             GameManager.instance.NextRoundSequence();
             roundActive = false;

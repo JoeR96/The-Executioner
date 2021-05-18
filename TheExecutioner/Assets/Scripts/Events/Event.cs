@@ -13,6 +13,7 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     public GameObject EventText;
     [SerializeField] private ParticleSystem destroyParticle;
     [SerializeField] private Transform[] eventKillTransformPositions;
+    [SerializeField] protected ParticleSystem LightningStrike;
     private SpawnPointManager spawnPointManager;
     protected GameObject eventDestroyTrigger;
     protected GameObject activeEventGameObject;
@@ -20,26 +21,19 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     protected int waveSpawnTotal;
     protected bool eventComplete;
     protected bool rewardSpawned;
-    private void Awake()
+
+    public virtual void Awake()
     {
         spawnPointManager = GameManager.instance.GetComponentInChildren<SpawnPointManager>();
         EventManager = GameManager.instance.EventManager;
+       
     }
-    private void Start()
+
+    protected virtual void Start()
     {
         EventTargetKillCountManager = new EventTargetKillCount(EventTargetKillCountMultiplier,GameManager.instance.roundManager.CurrentRound);
     }
-    protected virtual void Update()
-    {
-        if (EventTargetKillCountManager.CurrentKillCount >= EventTargetKillCountManager.TargetKillCount && eventComplete == false)
-        {
-            eventComplete = true;
-            StartCoroutine(CompleteEvent());
-            DestroyText();
-        }
-        if (eventDestroyTrigger == null && rewardSpawned)
-            Destroy(gameObject);
-    }
+
     /// <summary>
     /// Play the destroy text animation to destroy the text
     /// Wait 1 second
@@ -47,15 +41,11 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     /// Spawnn a reward
     /// </summary>
     /// <returns></returns>
-    protected virtual IEnumerator CompleteEvent()
+    protected virtual void EventComplete()
     {
-        
-        yield return new WaitForSeconds(2.5f);
-        DisableColliderAndMesh();
         SpawnReward();
-        EventManager.RemoveEvent(this);
-        yield return new WaitForSeconds(2.5f);
-        destroyParticle.Play();
+        LightningStrike.Play();
+        AudioManager.Instance.PlaySound("Lightning");
     }
     /// <summary>
     /// Get the mesh render and disable it
@@ -74,7 +64,7 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     /// </summary>
     protected void SpawnReward()
     {
-        eventDestroyTrigger = spawnPointManager.SpawnWeapon(3, transform,true);
+        eventDestroyTrigger = spawnPointManager.SpawnWeapon(3, EventTargetDestination,true);
         rewardSpawned = true;
     }
     public int progress { get; set; }
@@ -85,8 +75,8 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
         transform.position = EventTargetDestination.position;
         AddEventTransformsToMaster();
         AddEventToList();
-        eventZombieSpawner = new EventZombieSpawner(waveSpawnTotal,transform);
-        eventZombieSpawner.SpawnZombiesTargetingEvent();
+        
+        
     }
     private void AddEventToList()
     {
@@ -113,7 +103,10 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     }
     private IEnumerator ScaleComponent( )
     {
-        var target = EventText.GetComponent<RectTransform>();
+        RectTransform target;
+        target = EventText.GetComponent<RectTransform>();
+        if (target == null)
+            yield break;
         var startSize = transform.localScale;
         float timer = 0;
         float duration = 1;
