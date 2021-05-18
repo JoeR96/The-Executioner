@@ -5588,7 +5588,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19138
+  m_Name: pb_Mesh215170
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20499,7 +20499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   _playerRB: {fileID: 1846586486253753434}
   _playerAudio: {fileID: 1846586486253753431}
   _moveSpeed: 6
@@ -41580,6 +41580,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8271040859741350112, guid: 70e5b7544ca128f4ea61692472c54ebb,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.175
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271040859741350112, guid: 70e5b7544ca128f4ea61692472c54ebb,
+        type: 3}
+      propertyPath: Priority
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271040859741350112, guid: 70e5b7544ca128f4ea61692472c54ebb,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271040859741350112, guid: 70e5b7544ca128f4ea61692472c54ebb,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 0.83
+      objectReference: {fileID: 0}
     - target: {fileID: 8271040859741350113, guid: 70e5b7544ca128f4ea61692472c54ebb,
         type: 3}
       propertyPath: _gameClips.Array.size
@@ -41605,5 +41625,20 @@ PrefabInstance:
       propertyPath: _gameClips.Array.data[1].audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 13df004749c429c4d8e9f5091e2c34e3, type: 3}
+    - target: {fileID: 8271040859741350114, guid: 70e5b7544ca128f4ea61692472c54ebb,
+        type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271040859741350114, guid: 70e5b7544ca128f4ea61692472c54ebb,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271040859741350114, guid: 70e5b7544ca128f4ea61692472c54ebb,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70e5b7544ca128f4ea61692472c54ebb, type: 3}

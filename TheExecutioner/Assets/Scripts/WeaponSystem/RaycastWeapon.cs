@@ -30,7 +30,7 @@ public abstract class RaycastWeapon : MonoBehaviour
 
    
     [field: SerializeField] public bool WeaponIsReloading { get; set; }
-    public bool WeaponIsLoaded { get; protected set; }
+    public bool WeaponIsLoaded { get; set; }
     
     protected float weaponReloadTimer;
 

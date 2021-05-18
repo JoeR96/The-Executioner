@@ -14,7 +14,6 @@ public class RPG : RaycastWeapon
         fireWeapon = "RpgFire";
         reloadWeapon = "RpgReload";
         TracerEffect = null;
-        WeaponIsLoaded = false;
     }
 
     public override void FireWeapon()
@@ -28,6 +27,9 @@ public class RPG : RaycastWeapon
             activeRocket.transform.SetParent(null);
             activeRocket.GetComponent<Rocket>().SetActiveRocket();
             MuzzleFlash.Play();
+            StartCoroutine(ReloadWeapon());
+            WeaponIsLoaded = false;
+            
         }
     }
 
@@ -35,10 +37,19 @@ public class RPG : RaycastWeapon
     {
         if (WeaponIsSet == false)
         {
+            GameManager.instance.PrintGameUi.SetWeaponColour(weaponSlot,quality);
+            Quality = quality;
+            weaponSpareAmmo *= quality + 1;
             weaponCurrentammo = 1;
-            SpawnRocket();
         }
-        base.SetWeaponState(quality);
+
+        if (WeaponIsLoaded == false)
+        {
+            SpawnRocket();
+            WeaponIsLoaded = true;
+        }
+        WeaponIsSet = true;
+        
     }
     private void SetRocketRigidBodyVariables()
     {
@@ -47,21 +58,24 @@ public class RPG : RaycastWeapon
         rb.constraints = RigidbodyConstraints.None;
         rb.velocity = rocketPosition.forward * rocketForce;
     }
-
     public override void Reload()
     {
         if(weaponSpareAmmo <= 0)
             return;
         
+        weaponCurrentammo++;
+        weaponSpareAmmo--;
+        
         AudioManager.Instance.PlaySound(reloadWeapon);
-        base.Reload();
         WeaponIsReloading = false;
         SpawnRocket();
+        WeaponIsLoaded = true;
+        
     }
-
-    private void SpawnRocket()
+    public void SpawnRocket()
     {
-        activeRocket = Instantiate(rocketPrefab, rocketPosition);
+        if(rocketPosition.transform.childCount == 0)
+            activeRocket = Instantiate(rocketPrefab, rocketPosition);
     }
 
     protected override void SetWeaponProperties()

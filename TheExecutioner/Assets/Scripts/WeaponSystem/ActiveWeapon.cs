@@ -13,22 +13,26 @@ public class ActiveWeapon : MonoBehaviour
 
     public CharacterAiming CharacterAiming;
     public Transform CrossHairTarget;
-   [SerializeField] private RaycastWeapon[] _equippedWeapons = new RaycastWeapon[2];
+   [SerializeField] public RaycastWeapon[] _equippedWeapons = new RaycastWeapon[2];
     private int activeWeaponIndex;
     public RaycastWeapon CurrentRaycastWeapon;
     public Transform[] WeaponSlots;
     public Animator RigController;
     
-    // Start is called before the first frame update
+    /// <summary>
+    /// Initialize weapons
+    /// </summary>
     void Start()
     {
-        //CurrentRaycastWeapon = GetComponentInChildren<RaycastWeapon>();
-        if (CurrentRaycastWeapon)
+        for (int i = 2 ; i >= 0 ; i--)
         {
-            EquipWeapon(CurrentRaycastWeapon);
+            EquipWeapon(_equippedWeapons[i]);
         }
     }
-
+    /// <summary>
+    /// Use scroll wheel up or down
+    /// to increase or decrease an index
+    /// </summary>
     public void SelectWeapon()
     {
         if (Input.GetAxis("Mouse ScrollWheel") < 0f)
@@ -42,12 +46,12 @@ public class ActiveWeapon : MonoBehaviour
             activeWeaponIndex++;
             SetWeaponWheelIndex();
             EquipWeapon(_equippedWeapons[activeWeaponIndex]);
-        } 
-            
-        
-        
+        }
     }
-
+    /// <summary>
+    /// set the weapon accordingly
+    /// reset the index if required
+    /// </summary>
     private void SetWeaponWheelIndex()
     {
         if (activeWeaponIndex == 3)
@@ -93,49 +97,15 @@ public class ActiveWeapon : MonoBehaviour
             EquipWeapon(_equippedWeapons[2]);
         }
     }
-    
+    /// <summary>
+    /// Activate weapon with an input parameter
+    /// </summary>
+    /// <param name="weaponSlot"></param>
     private void SetActiveWeapon(WeaponSlot weaponSlot)
     {
         CurrentRaycastWeapon = _equippedWeapons[(int) weaponSlot];
     }
-    
-    IEnumerator SwitchWeapon(int holsterIndex, int activeIndex)
-    {
-        yield return StartCoroutine(HolsterWeapon(holsterIndex));
-        yield return StartCoroutine(ActivateWeapon(activeIndex));
-        activeWeaponIndex = activeIndex;
-    }
-    IEnumerator HolsterWeapon(int index)
-    {
-        var weapon = GetWeapon(index);
-        yield return null;
-    }
 
-    IEnumerator ActivateWeapon(int index)
-    {
-        Debug.Log(index);
-        SetActiveWeapon((WeaponSlot) index);
-        _equippedWeapons[index].gameObject.SetActive(true);
-        var weapon = GetWeapon(index);
-        if (weapon)
-        {
-
-            RigController.Play("equip_" + weapon.WeaponName);
-            do
-            {
-                yield return new WaitForEndOfFrame();
-            } while (RigController.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f);
-        }
-        yield break;
-    }
-    
-    RaycastWeapon GetWeapon(int index)
-    {
-        if (index < 0 || index >= _equippedWeapons.Length)
-            return null;
-        return _equippedWeapons[index];
-        
-    }
     public void EquipWeapon(RaycastWeapon weapon)
     {
         AudioManager.Instance.PlaySound("EquipWeapon");

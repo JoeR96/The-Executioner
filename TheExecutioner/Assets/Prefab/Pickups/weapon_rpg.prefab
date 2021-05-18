@@ -10079,7 +10079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponMaxAmmo: 1
-  weaponSpareAmmo: 5
+  weaponSpareAmmo: 3
   weaponReloadTime: 1
   weaponDamage: 49.4
   weaponFireRate: 0.125

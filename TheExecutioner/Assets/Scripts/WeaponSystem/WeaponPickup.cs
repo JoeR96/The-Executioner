@@ -33,6 +33,7 @@ public class WeaponPickup : MonoBehaviour
         }
         weapon.Quality = quality;
         weapon.WeaponIsSet = false;
+        weapon.WeaponIsLoaded = false;
 
     }
     private void Update()
@@ -76,12 +77,6 @@ public class WeaponPickup : MonoBehaviour
                 if(!weapon.WeaponIsLoaded)
                     weapon.Reload();
 
-                if (weapon.GetComponent<RPG>())
-                {
-                    weapon.Reload();
-                    weapon.gameObject.SetActive(false);
-                }
-                    
             }
             Destroy(gameObject);
         }
