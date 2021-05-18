@@ -13,51 +13,26 @@ public class Heart : MonoBehaviour
     private void Awake()
     {
         navmeshAgent = GetComponent<NavMeshAgent>();
-        navmeshAgent.speed = Random.Range(1.5f, 3f);
+        navmeshAgent.speed = Random.Range(1.5f, 2f);
     }
-    
-    private void Update()
-    {
-        if (HasReachedDestination() && EventComplete != true)
-        {
-            // EventComplete = true;
-            // Debug.Log(EventComplete);
-            // heartEscortEvent.EventComplete(this);
-        }
-    }
+
     public void SetTargetPosition(Transform altarLocation)
     {
         
         navmeshAgent.destination = altarLocation.position;
         Destination = altarLocation;
     }
-
-    public void StartEvent(Transform target)
-    {
-        EnableNavMeshAgent();
-        SetTargetPosition(target);
-    }
-    public bool HasReachedDestination()
-    {
-        if (!navmeshAgent.pathPending && navmeshAgent.isOnNavMesh)
-        {
-            if (navmeshAgent.remainingDistance <= navmeshAgent.stoppingDistance)
-            {
-                if (!navmeshAgent.hasPath || navmeshAgent.velocity.sqrMagnitude == 0f)
-                {
-                    return true;
-                }
-            }
-        }
-
-        return false;
-    }
-
+    
+    /// <summary>
+    /// Enable the navmesh agent
+    /// </summary>
     public void DisableNavmeshAgent()
     {
         navmeshAgent.enabled = false;
     }
-    
+    /// <summary>
+    /// Disable the navmesh agent
+    /// </summary>
     public void EnableNavMeshAgent()
     {
         navmeshAgent.enabled = true;

@@ -36,6 +36,7 @@ public class RoundManager : MonoBehaviour
     public void StartNewRound()
     {
         //levelManager.LoadLevel();
+        AudioManager.Instance.PlaySound("StoneGrinding");
         levelManager.LoadStage();
         StartCoroutine(NewRound());
         Invoke("TriggerBoolChange", 10f);
@@ -50,7 +51,6 @@ public class RoundManager : MonoBehaviour
     /// <returns></returns>
     public IEnumerator NewRound()
     {
-        
         yield return new WaitForSeconds(3.25f);
          levelManager.BuildNavMesh();
          yield return new WaitForSeconds(4f);

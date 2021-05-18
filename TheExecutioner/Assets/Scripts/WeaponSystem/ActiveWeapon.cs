@@ -10,15 +10,13 @@ public class ActiveWeapon : MonoBehaviour
         SuperWeapon = 2,
         Grenade = 3
     }
-
+    [SerializeField] public RaycastWeapon[] _equippedWeapons = new RaycastWeapon[2];
     public CharacterAiming CharacterAiming;
     public Transform CrossHairTarget;
-   [SerializeField] public RaycastWeapon[] _equippedWeapons = new RaycastWeapon[2];
     private int activeWeaponIndex;
     public RaycastWeapon CurrentRaycastWeapon;
     public Transform[] WeaponSlots;
     public Animator RigController;
-    
     /// <summary>
     /// Initialize weapons
     /// </summary>
@@ -64,7 +62,6 @@ public class ActiveWeapon : MonoBehaviour
             activeWeaponIndex = 2;
         }
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -105,7 +102,6 @@ public class ActiveWeapon : MonoBehaviour
     {
         CurrentRaycastWeapon = _equippedWeapons[(int) weaponSlot];
     }
-
     public void EquipWeapon(RaycastWeapon weapon)
     {
         AudioManager.Instance.PlaySound("EquipWeapon");

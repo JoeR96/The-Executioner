@@ -4,50 +4,28 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    
-    public ZombieSpawner zombieSpawner;
-    
     [SerializeField]
     private EnemySpawnPoints enemySpawnPoints;
-
     [SerializeField] 
     private GameObject SacrificeEvent;
-
     [SerializeField]
     private GameObject HeartEscortEvent;
 
     private List<Transform> activeEventTargetDestinations = new List<Transform>();
     [SerializeField] private List<GameObject> activeEventGameObjects = new List<GameObject>();
-
     public List<Event> ActiveEvents { get; } = new List<Event>();
-
-    private void Start()
-    {
-       
-    }
-
-
-    public Transform ReturnActiveRandomEventLocation()
-    {
-        var random = Random.Range(0, activeEventGameObjects.Count);
-        var _ = activeEventGameObjects[random];
-        activeEventGameObjects.RemoveAt(random);
-        return _.transform;
-    }
-    
-    public GameObject ReturnActiveRandomEventTransform()
-    {
-        var random = Random.Range(0, activeEventGameObjects.Count);
-        var _ = activeEventGameObjects[random];
-        return _.gameObject;
-    }
-
+    /// <summary>
+    /// Return an available spawn point for an event
+    /// </summary>
+    /// <returns></returns>
     public Transform ReturnAvailableEventLocation()
     {
         return enemySpawnPoints.ReturnEventSpawnPoint();
     }
-
-
+    /// <summary>
+    /// Add an event destination to the list
+    /// </summary>
+    /// <param name="destination"></param>
     public void AddEventDestinationToList(Transform destination)
     {
         activeEventTargetDestinations.Add(destination);

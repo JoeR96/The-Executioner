@@ -16,6 +16,7 @@ public class SacrificeEvent : Event
         waveSpawnTotal = 10;
         StartEvent();
         Fog.Play();
+        AudioManager.Instance.PlaySound("Lightning");
     }
     
 

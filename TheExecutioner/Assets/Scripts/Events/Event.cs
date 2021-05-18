@@ -9,7 +9,7 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     public EventTargetKillCount EventTargetKillCountManager { get; private set; }
     public int EventTargetKillCountMultiplier { get; set; }
     protected EventManager EventManager;
-    protected Transform EventTargetDestination{ get; private set; }
+    protected Transform EventTargetDestination{ get; set; }
     public GameObject EventText;
     [SerializeField] private ParticleSystem destroyParticle;
     [SerializeField] private Transform[] eventKillTransformPositions;
@@ -35,6 +35,7 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
         {
             eventComplete = true;
             StartCoroutine(CompleteEvent());
+            DestroyText();
         }
         if (eventDestroyTrigger == null && rewardSpawned)
             Destroy(gameObject);
@@ -48,7 +49,7 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     /// <returns></returns>
     protected virtual IEnumerator CompleteEvent()
     {
-        DestroyText();
+        
         yield return new WaitForSeconds(2.5f);
         DisableColliderAndMesh();
         SpawnReward();
@@ -99,7 +100,6 @@ public class Event : MonoBehaviour, IStartEvent, IReturnEvent, IDisplayEventText
     {
         EventManager.AddEventDestinationToList(EventTargetDestination);
         EventManager.AddEventTransformObjectToList(activeEventGameObject);
-        Debug.Log("Event should add");
     }
     public virtual void OnTriggerEnter(Component other)
     {

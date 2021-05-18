@@ -7,40 +7,31 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
 {
     
     [SerializeField] private GameObject targetAltar;
-
     public float percent;
     private int LimbsSacrificed { get; set; }
-    private Transform targetPos;
     private float startDistance;
+    private GameObject altar;
     
     private void OnEnable()
     {
         EventTargetKillCountMultiplier = 5;
         waveSpawnTotal = 8;
         StartHeartEvent();
+        
     }
-
-    protected override void Update()
-    {
-        if (EventTargetKillCountManager.CurrentKillCount >= EventTargetKillCountManager.TargetKillCount && eventComplete == false)
-        {
-            eventComplete = true;
-            StartCoroutine(CompleteEvent());
-        }
-        if (eventDestroyTrigger == null && rewardSpawned)
-            Destroy(gameObject);
-    }
-
-    
+    /// <summary>
+    /// Start the heart event
+    /// 
+    /// </summary>
     public void StartHeartEvent()
     {
         SetEventDestination();
+        altar = Instantiate(targetAltar,EventTargetDestination.position,quaternion.identity);
         eventZombieSpawner = new EventZombieSpawner(waveSpawnTotal,transform);
         transform.position = EventManager.ReturnAvailableEventLocation().position;
-        
+        activeEventGameObject = gameObject;
         eventZombieSpawner.SpawnZombiesTargetingEvent();
         SetHeart();
-        
         AddEventTransformsToMaster();
         
         
@@ -53,16 +44,14 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
     }
     public void EventComplete(Heart heart)
     {
-        if(heart.Destination == null)
-            return;
+
         
-        var altar = Instantiate(targetAltar,heart.Destination.position,quaternion.identity);
-        targetPos = ReturnHeartTargetPosition(altar);
+        EventTargetDestination = ReturnHeartTargetPosition(altar);
         heart.EventComplete = true;
-        heart.transform.rotation = targetPos.rotation;
+        heart.transform.rotation = EventTargetDestination.rotation;
         
         heart.DisableNavmeshAgent();
-        StartCoroutine(LerpHeartTransform(heart.gameObject, targetPos.position));
+        StartCoroutine(LerpHeartTransform(heart.gameObject, EventTargetDestination.position));
         SpawnReward();
     }
     public Transform ReturnHeartTargetPosition(GameObject altar)
@@ -82,7 +71,7 @@ public class HeartEscortEvent : Event, ITakeDamage, ICollectLimb
             float percentage = Mathf.Min(timer / duration, 1);
             timer += Time.deltaTime;
             heart.transform.position = Vector3.Lerp(startPosition,targetPosition,percentage);
-             heart.transform.rotation = Quaternion.Slerp(heart.transform.rotation, targetPos.rotation, percentage);
+             heart.transform.rotation = Quaternion.Slerp(heart.transform.rotation, EventTargetDestination.rotation, percentage);
             yield return null;
         }
     }

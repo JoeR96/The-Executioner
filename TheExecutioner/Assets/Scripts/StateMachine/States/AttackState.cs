@@ -14,17 +14,20 @@ public class AttackState : IState
 
     public void Enter(AiAgent agent)
     {
-        timer = new Timer(1f);
+        timer = new Timer(2f);
        Attack(agent);
     }
-
+    /// <summary>
+    /// attack the player if the attack timer is over
+    /// if the player is further away now, change to chase player state
+    /// </summary>
+    /// <param name="agent"></param>
     public void Update(AiAgent agent)
     {
         agent.transform.LookAt(agent.Player);
         if(!agent.enabled )
             return;
-
-     
+        
         if (timer.TimerIsOver())
         {
             agent.Animator.SetBool("Attack" + randomNumber,false);
@@ -35,17 +38,23 @@ public class AttackState : IState
             agent.StateMachine.ChangeState(StateId.ChasePlayer);
         }
         
-   
-        
     }
-
+    /// <summary>
+    /// exit the attack state
+    /// </summary>
+    /// <param name="agent"></param>
     public void Exit(AiAgent agent)
     {
         foreach(AnimatorControllerParameter parameter in agent.Animator.parameters) {            
             agent.Animator.SetBool(parameter.name, false);            
         }
     }
-    
+    /// <summary>
+    /// Look at the player
+    /// choose a random attack animation
+    /// Attack the player
+    /// </summary>
+    /// <param name="agent"></param>
     void Attack(AiAgent agent)
     {
         agent.transform.LookAt(agent.Player);

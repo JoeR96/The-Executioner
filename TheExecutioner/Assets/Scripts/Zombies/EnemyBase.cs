@@ -116,6 +116,19 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
             IsDead = true;
             _aiAgent.StateMachine.ChangeState(StateId.DeathState);
             Invoke("KillZombie",2.5f);
+            if (InEvent)
+            {
+                var x = Physics.OverlapSphere(transform.position, 5f);
+                foreach (var events in x)
+                {
+                    var eventRef = events.gameObject.GetComponent<Event>();
+                    if (eventRef != null)
+                    {
+                        eventRef.EventTargetKillCountManager.IncreaseKillCount();
+                        break;
+                    }
+                }
+            }
         }
     }
     //Scale the limb to size 0 so it is removed from the body and the animation still functions
@@ -161,6 +174,14 @@ public class EnemyBase : MonoBehaviour, ITakeDamage, IDestroyLimb, IIsInEventAre
     {
         InEvent = state;
     }
+    /// <summary>
+    /// Scale the root component destroyed to 0 so animations still work
+    /// instantiate a limb at the destroyed limb location
+    /// add force to the limb
+    /// if the hit was a headshot have a random chance to kill the enemy
+    /// </summary>
+    /// <param name="limbName"></param>
+    /// <param name="direction"></param>
     public void DestroyLimb(string limbName,Vector3 direction)
     {
         var transformTarget = LimbManager.DestructibleLimbs[limbName];
